@@ -1,0 +1,12 @@
+*.py
+*.pyc
+__pycache__/
+_publish/
+backup_*/
+*.md
+*.toml
+sources_*.json
+collectors/
+*.log
+.DS_Store
+Thumbs.db

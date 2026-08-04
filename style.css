@@ -269,6 +269,16 @@ details.fold-sec[open]>summary .fold-hint::before{content:"▾ 收起"}
 .mu-links a:hover{border-color:var(--blue);background:var(--panel2)}
 .mu-links em{font-size:var(--text-xs);color:var(--sub);font-style:normal;font-weight:600}
 
+/* ===== 内容风向：子板块容器 ===== */
+.mu-intro{font-size:var(--text-sm);color:var(--sub);line-height:1.65;margin-bottom:var(--space-sm);padding-bottom:var(--space-sm);border-bottom:1px solid var(--border)}
+.mu-block{padding:var(--space-xs) 0;border-bottom:1px solid var(--border)}
+.mu-block:last-child{border-bottom:none}
+.mu-block-title{font-size:var(--text-sm);font-weight:800;color:var(--txt);margin-bottom:var(--space-2xs);display:flex;align-items:center;gap:var(--space-xs)}
+.mu-block-title span{font-weight:400;font-size:var(--text-xs);color:var(--sub);margin-left:auto}
+.mu-block-risk{background:rgba(255,176,32,.04);border:1px solid rgba(255,176,32,.2);border-radius:var(--radius-sm);padding:var(--space-xs) var(--space-sm);margin-top:var(--space-2xs)}
+.mu-block-risk .mu-block-title{color:var(--gold);margin-bottom:var(--space-xs)}
+.mu-badge{font-size:9px;font-weight:700;padding:1px 5px;border-radius:99px;background:rgba(77,163,255,.12);color:var(--blue);border:1px solid rgba(77,163,255,.18);margin:0 var(--space-3xs);white-space:nowrap;vertical-align:middle}
+
 /* ===== 来源状态：精简底栏 ===== */
 .src-mini{margin-top:var(--space-xl) !important}
 .src-mini .sec-title{margin-bottom:var(--space-2xs) !important}
@@ -276,8 +286,7 @@ details.fold-sec[open]>summary .fold-hint::before{content:"▾ 收起"}
 .src-bar b{color:var(--txt);font-weight:700;font-size:var(--text-xs)}
 
 @media(max-width:640px){
-  .mu-row{flex-direction:column;gap:var(--space-2xs)}
-  .mu-label{min-width:auto;width:fit-content}
+  .mu-block{padding:var(--space-2xs) 0}
   .mu-links{width:100%}
 }
 

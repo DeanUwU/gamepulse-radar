@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>历史回顾 — GamePulse 游戏日报雷达站</title>
+<style>
+:root {
+  --bg:#0d1117;--panel:#161b22;--panel2:#1c2330;--border:#2d333f;
+  --txt:#e6e9ef;--sub:#9aa4b2;--dim:#6b7685;
+  --accent:#ff5c39;--gold:#ffb020;--blue:#4da3ff;--green:#3fd68f;--purple:#c792ea;
+  --pulse:#ff5c39;--shadow-color:13,17,23;
+  --radius-sm:6px;--radius-md:10px;--radius-lg:14px;
+  --text-xs:0.688rem;--text-sm:0.75rem;--text-base:0.875rem;
+  --text-md:1rem;--text-lg:1.125rem;--text-xl:1.25rem;
+  --text-2xl:1.5rem;--text-3xl:2rem;
+  --ease-out-expo:cubic-bezier(0.16,1,0.3,1);
+  --ease-out-quart:cubic-bezier(0.25,1,0.5,1);
+  --ease-in-out:cubic-bezier(0.65,0,0.35,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body {
+  background:var(--bg);color:var(--txt);
+  font-family:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  font-size:var(--text-base);line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+body::after{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.022;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+
+/* ---- 导航 ---- */
+header{position:sticky;top:0;z-index:9;background:rgba(13,17,23,.94);backdrop-filter:blur(9px);border-bottom:1px solid var(--border)}
+.hbar{max-width:1280px;margin:auto;padding:12px 20px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.logo{font-size:var(--text-xl);font-weight:800;letter-spacing:-.01em}
+.logo em{font-style:normal;color:var(--pulse)}
+.chip2{font-size:var(--text-xs);border:1px solid var(--border);background:var(--panel2);color:var(--sub);padding:2px 8px;border-radius:99px}
+nav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
+nav a{font-size:var(--text-sm);color:var(--sub);padding:4px 8px;border-radius:var(--radius-sm);transition:background .15s,color .15s}
+nav a:hover{background:var(--panel2);color:var(--txt);text-decoration:none}
+nav a.active{color:var(--accent);background:rgba(255,92,57,.12);font-weight:700}
+
+/* ---- 英雄区 ---- */
+.hero{padding:24px 0 16px;max-width:1280px;margin:auto;padding-left:20px;padding-right:20px}
+.hero h1{font-size:var(--text-3xl);letter-spacing:-.02em}
+.hero p{font-size:var(--text-base);color:var(--sub);margin-top:8px;max-width:700px}
+
+/* ---- 双栏布局 ---- */
+.main-grid{display:grid;grid-template-columns:340px 1fr;gap:24px;max-width:1280px;margin:auto;padding:0 20px 80px;align-items:start}
+
+/* ---- 左栏：日期列表 ---- */
+.date-panel{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden}
+.dp-header{padding:16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}
+.dp-header h3{font-size:var(--text-lg);font-weight:800}
+.dp-header .bar{display:inline-block;width:4px;height:20px;border-radius:4px;background:var(--accent)}
+.dp-count{font-size:var(--text-xs);color:var(--sub);margin-left:auto}
+.dp-list{max-height:calc(100vh - 260px);overflow-y:auto}
+.dp-list::-webkit-scrollbar{width:5px}
+.dp-list::-webkit-scrollbar-thumb{background:var(--border);border-radius:99px}
+
+/* 日期条目 */
+.dp-item{cursor:pointer;border-bottom:1px solid rgba(45,51,63,.5);transition:background .15s;position:relative}
+.dp-item:hover{background:rgba(77,163,255,.06)}
+.dp-item.active{background:rgba(77,163,255,.12);border-left:3px solid var(--blue)}
+.dp-item-head{padding:12px 16px;display:flex;align-items:center;gap:12px}
+.dp-date{font-size:var(--text-md);font-weight:700;color:var(--gold);min-width:56px}
+.dp-stats{display:flex;gap:16px;font-size:var(--text-xs);color:var(--sub)}
+.dp-stats span{white-space:nowrap}
+.dp-stat-num{font-weight:700;color:var(--txt)}
+.dp-expand{padding:0 16px 12px 84px;display:none;font-size:var(--text-sm)}
+.dp-item.open .dp-expand{display:block}
+.dp-mini-title{color:var(--txt);font-size:var(--text-sm);line-height:1.5;margin-bottom:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dp-mini-tags{display:flex;gap:6px;flex-wrap:wrap}
+.dp-mini-tag{font-size:var(--text-xs);border:1px solid var(--border);border-radius:99px;padding:1px 8px;color:var(--sub);background:var(--panel2)}
+.dp-mini-tag.hot{border-color:rgba(255,92,57,.35);color:var(--accent);background:rgba(255,92,57,.08)}
+.dp-mini-tag.game{border-color:rgba(199,146,234,.35);color:var(--purple);background:rgba(199,146,234,.08)}
+.dp-gap{display:flex;align-items:center;justify-content:center;padding:6px 0;color:var(--dim);font-size:var(--text-xs);border-bottom:1px solid rgba(45,51,63,.5);background:rgba(13,17,23,.5)}
+.dp-gap::before,.dp-gap::after{content:"";flex:1;height:1px;background:var(--border);margin:0 12px}
+.dp-item.highlight{border-left:3px solid var(--gold);background:rgba(255,176,32,.06)}
+.dp-item.highlight .dp-date{text-shadow:0 0 8px rgba(255,176,32,.3)}
+
+/* ---- 右栏：内容详情 ---- */
+.detail-panel{display:flex;flex-direction:column;gap:24px}
+
+/* 默认视图切换 */
+.view-tabs{display:flex;gap:4px;margin-bottom:0}
+.vtab{font-size:var(--text-sm);padding:8px 16px;border:1px solid var(--border);background:var(--panel);color:var(--sub);border-radius:var(--radius-sm) var(--radius-sm) 0 0;cursor:pointer;transition:all .15s}
+.vtab:hover{color:var(--txt)}
+.vtab.active{color:var(--txt);background:var(--panel2);border-bottom-color:var(--panel2);font-weight:700}
+
+.detail-card{background:var(--panel);border:1px solid var(--border);border-radius:0 var(--radius-lg) var(--radius-lg) var(--radius-lg);padding:24px;min-height:400px}
+.detail-card .empty-state{text-align:center;padding:80px 20px;color:var(--dim);font-size:var(--text-base)}
+.detail-card .empty-state svg{margin-bottom:16px;opacity:.3}
+
+/* 日详情 */
+.day-detail{}
+.day-detail .dd-head{display:flex;align-items:baseline;gap:12px;margin-bottom:20px}
+.day-detail .dd-head h2{font-size:var(--text-2xl);font-weight:800}
+.day-detail .dd-head .dd-chip{font-size:var(--text-xs);border:1px solid var(--border);border-radius:99px;padding:2px 10px;color:var(--sub);background:var(--panel2)}
+.dd-stats-row{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:24px;padding:16px;background:var(--panel2);border-radius:var(--radius-md);border:1px solid var(--border)}
+.dd-stat{text-align:center;min-width:80px}
+.dd-stat .dd-num{font-size:var(--text-2xl);font-weight:800;color:var(--txt);line-height:1.2}
+.dd-stat .dd-label{font-size:var(--text-xs);color:var(--sub);margin-top:2px}
+.dd-stat .dd-num.gold{color:var(--gold)}
+.dd-stat .dd-num.green{color:var(--green)}
+.dd-stat .dd-num.accent{color:var(--accent)}
+
+/* 区块 */
+.dd-section{margin-bottom:24px}
+.dd-section h4{font-size:var(--text-md);font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.dd-section h4 .sec-dot{width:8px;height:8px;border-radius:2px;background:var(--accent)}
+.dd-section h4 .sec-dot.gold{background:var(--gold)}
+.dd-section h4 .sec-dot.purple{background:var(--purple)}
+
+/* 迷你视频列表 */
+.vlist{display:flex;flex-direction:column;gap:4px}
+.vitem{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:var(--radius-sm);transition:background .15s;font-size:var(--text-sm)}
+.vitem:hover{background:var(--panel2)}
+.vitem .vn{width:22px;height:22px;background:var(--accent);color:#fff;border-radius:var(--radius-sm);display:grid;place-items:center;font-size:var(--text-xs);font-weight:800;flex-shrink:0}
+.vitem .vn.top3{background:var(--gold);color:#0d1117}
+.vitem .vt{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--txt)}
+.vitem .vt:hover{color:var(--blue)}
+.vitem .vh{font-size:var(--text-xs);color:var(--sub);white-space:nowrap;font-variant-numeric:tabular-nums}
+.vitem .vz{font-size:var(--text-xs);padding:1px 6px;border-radius:99px;white-space:nowrap}
+.vitem .vz.meme{color:var(--purple);border:1px solid rgba(199,146,234,.35);background:rgba(199,146,234,.1)}
+.vitem .vz.hot{color:var(--accent);border:1px solid rgba(255,92,57,.35);background:rgba(255,92,57,.08)}
+
+/* 热词 */
+.kw-list{display:flex;flex-wrap:wrap;gap:6px}
+.kw-item{font-size:var(--text-sm);border:1px solid var(--border);border-radius:99px;padding:4px 12px;background:var(--panel2);color:var(--sub);white-space:nowrap}
+.kw-item .kw-num{font-size:var(--text-xs);color:var(--dim);margin-left:4px;font-variant-numeric:tabular-nums}
+
+/* 贴吧 */
+.tb-list{display:flex;flex-direction:column;gap:6px}
+.tb-item{display:flex;align-items:center;gap:8px;font-size:var(--text-sm);padding:6px 0}
+.tb-item .tb-dot{width:5px;height:5px;border-radius:99px;background:var(--blue);flex-shrink:0;opacity:.6}
+.tb-item a{color:var(--txt)}
+.tb-item a:hover{color:var(--blue)}
+.tb-extra{font-size:var(--text-xs);color:var(--dim);margin-left:4px}
+
+/* ---- 周汇总卡片 ---- */
+.week-timeline{display:flex;flex-direction:column;gap:16px}
+.week-card{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;cursor:pointer;transition:border-color .2s,transform .2s,box-shadow .2s}
+.week-card:hover{border-color:var(--blue);transform:translateX(4px);box-shadow:0 4px 14px rgba(13,17,23,.4)}
+.week-card .wc-head{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.week-card .wc-period{font-size:var(--text-lg);font-weight:800;color:var(--gold);letter-spacing:-.01em}
+.week-card .wc-trend{font-size:var(--text-lg)}
+.week-card .wc-trend.up{color:var(--green)}
+.week-card .wc-trend.down{color:var(--accent)}
+.week-card .wc-badge{font-size:var(--text-xs);border:1px solid var(--border);border-radius:99px;padding:2px 8px;color:var(--sub)}
+.week-card .wc-stats{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:12px}
+.week-card .wc-stat{font-size:var(--text-sm)}
+.week-card .wc-stat-num{font-weight:700;color:var(--txt)}
+.week-card .wc-stat-label{color:var(--sub)}
+.week-card .wc-top-title{font-size:var(--text-xs);color:var(--dim);margin-bottom:4px}
+.week-card .wc-video-pills{display:flex;flex-wrap:wrap;gap:6px}
+.week-card .wc-pill{font-size:var(--text-xs);padding:3px 10px;border:1px solid var(--border);border-radius:99px;background:var(--panel2);color:var(--sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:220px}
+.week-card .wc-pill:hover{color:var(--txt);border-color:var(--blue)}
+
+/* 无数据 */
+.no-data{text-align:center;padding:60px 20px;color:var(--dim)}
+.no-data p{margin-top:8px;font-size:var(--text-sm)}
+
+/* 响应式 */
+@media (max-width:900px){
+  .main-grid{grid-template-columns:1fr}
+  .dp-list{max-height:320px}
+  .dp-item-head{padding:10px 12px}
+}
+
+/* 动画 */
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.day-detail,.week-card{animation:fadeIn .35s var(--ease-out-expo)}
+</style>
+</head>
+<body>
+<header>
+  <div class="hbar">
+    <span class="logo">Game<em>Pulse</em></span>
+    <span class="chip2">历史回顾</span>
+    <nav>
+      <a href="index.html">主站</a>
+      <a href="history.html" class="active">历史</a>
+      <a href="wordcloud.html">词云</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <h1>往期回顾</h1>
+  <p>回看每日内容脉动，追溯七日光影轮转。点击任意日期查看当天详情，或在周汇总中把握趋势变化。</p>
+</div>
+
+<div class="main-grid">
+  <!-- 左栏：日期列表 -->
+  <div class="date-panel" id="datePanel">
+    <div class="dp-header">
+      <span class="bar"></span>
+      <h3>过往日期</h3>
+      <span class="dp-count" id="dpCount">加载中…</span>
+    </div>
+    <div class="dp-list" id="dpList">
+      <div class="no-data"><p>加载中…</p></div>
+    </div>
+  </div>
+
+  <!-- 右栏：内容详情 -->
+  <div class="detail-panel" id="detailPanel">
+    <div class="view-tabs">
+      <button class="vtab active" data-view="weekly" id="vtabWeekly">每七天回顾</button>
+      <button class="vtab" data-view="daily" id="vtabDaily">日详情</button>
+    </div>
+    <div class="detail-card" id="detailCard">
+      <div class="empty-state">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="9"/></svg>
+        <p>在左侧选择日期查看详情</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ==================== 数据加载 ====================
+let HISTORY_DATA = null;
+let activeDate = null;
+let activeWeekIdx = null;
+
+function fmt(n){return n >= 1e8? (n/1e8).toFixed(1)+'亿': n>=1e4? (n/1e4).toFixed(0)+'万': n.toLocaleString()}
+function fmtH(v){if(v>=80)return'high';if(v>=40)return'mid';return'low'}
+
+async function loadData(){
+  try{
+    const resp = await fetch('collectors/history_data.json');
+    if(!resp.ok) throw new Error('HTTP '+resp.status);
+    HISTORY_DATA = await resp.json();
+    document.getElementById('dpCount').textContent = HISTORY_DATA.daily_count+' 天';
+    buildDateList();
+    showWeeklyView();
+  }catch(e){
+    document.getElementById('dpList').innerHTML = '<div class="no-data"><p>数据加载失败: '+e.message+'</p></div>';
+    document.getElementById('detailCard').innerHTML = '<div class="empty-state"><p>无法加载历史数据。请先运行 build_history.py。</p></div>';
+  }
+}
+
+// ==================== 左栏：日期列表 ====================
+function buildDateList(){
+  const list = document.getElementById('dpList');
+  let html = '';
+  let prevMonth = '';
+
+  for(const d of HISTORY_DATA.daily){
+    const month = d.date_ymd.substring(4,6);
+    if(month !== prevMonth){
+      prevMonth = month;
+      html += '<div class="dp-gap"><span>'+parseInt(month)+'月</span></div>';
+    }
+
+    html += ''
+    + '<div class="dp-item" data-date="'+d.date_ymd+'" onclick="selectDate(\''+d.date_ymd+'\')">'
+    + '<div class="dp-item-head">'
+    + '<span class="dp-date">'+d.date+'</span>'
+    + '<div class="dp-stats">'
+    + '<span><span class="dp-stat-num">'+d.total_videos+'</span> 视频</span>'
+    + '<span><span class="dp-stat-num">'+fmt(d.total_views)+'</span> 播放</span>'
+    + '<span style="color:var(--accent)">'+d.high_heat_count+' 高热</span>'
+    + '</div>'
+    + '</div>'
+    + '<div class="dp-expand">'
+    + '<div class="dp-mini-title">🔥 '+escHtml(d.max_view_title)+'</div>'
+    + '<div class="dp-mini-tags">'
+    + '<span class="dp-mini-tag hot">🔥 顶流 H='+d.top_popular[0]?.H?.toFixed(0)+'</span>'
+    + '<span class="dp-mini-tag game">🎮 '+d.top_games.length+'款游戏</span>'
+    + '<span class="dp-mini-tag">💬 '+d.top_hotwords.length+'热词</span>'
+    + (d.hotlist_counts && Object.values(d.hotlist_counts).some(v=>v>0)
+      ? '<span class="dp-mini-tag">📡 热榜</span>' : '')
+    + '</div>'
+    + '</div>'
+    + '</div>';
+  }
+
+  list.innerHTML = html;
+}
+
+// ==================== 日期选择 ====================
+function selectDate(ymd){
+  activeDate = ymd;
+  activeWeekIdx = null;
+
+  // 高亮
+  document.querySelectorAll('.dp-item').forEach(el=>el.classList.remove('active','highlight','open'));
+  const item = document.querySelector('[data-date="'+ymd+'"]');
+  if(item){item.classList.add('active','open');}
+
+  // 切换到日详情 tab
+  document.getElementById('vtabDaily').classList.add('active');
+  document.getElementById('vtabWeekly').classList.remove('active');
+  showDailyDetail(ymd);
+}
+
+function showDailyDetail(ymd){
+  const d = HISTORY_DATA.daily.find(x=>x.date_ymd===ymd);
+  if(!d) return;
+
+  const card = document.getElementById('detailCard');
+  let html = '<div class="day-detail">';
+
+  // 头
+  html += '<div class="dd-head">'
+    + '<h2>'+d.date+'</h2>'
+    + '<span class="dd-chip">'+d.date_ymd+'</span>'
+    + '</div>';
+
+  // 统计条
+  html += '<div class="dd-stats-row">'
+    + '<div class="dd-stat"><div class="dd-num">'+d.total_videos+'</div><div class="dd-label">热门视频</div></div>'
+    + '<div class="dd-stat"><div class="dd-num gold">'+fmt(d.total_views)+'</div><div class="dd-label">总播放</div></div>'
+    + '<div class="dd-stat"><div class="dd-num green">'+d.high_heat_count+'</div><div class="dd-label">🔥 高热 (>300万)</div></div>'
+    + '<div class="dd-stat"><div class="dd-num accent">'+d.meme_zone_count+'</div><div class="dd-label">梗区视频</div></div>'
+    + '</div>';
+
+  // 热门视频
+  html += '<div class="dd-section"><h4><span class="sec-dot gold"></span>热门视频 Top 8</h4><div class="vlist">';
+  d.top_popular.forEach((v,i)=>{
+    const cls = i<3?' top3':'';
+    const zoneCls = v.zone==='梗区'?' meme':'';
+    const title = escHtml(v.title);
+    html += '<a class="vitem" href="'+escHtml(v.url)+'" target="_blank" rel="noopener">'
+      + '<span class="vn'+cls+'">'+(i+1)+'</span>'
+      + '<span class="vt">'+title+'</span>'
+      + (v.zone==='梗区'?'<span class="vz meme">梗</span>':'')
+      + '<span class="vh">H='+v.H+' · '+fmt(v.view)+'</span>'
+      + '</a>';
+  });
+  html += '</div></div>';
+
+  // 游戏精选
+  if(d.top_games.length){
+    html += '<div class="dd-section"><h4><span class="sec-dot purple"></span>游戏精选</h4><div class="vlist">';
+    d.top_games.forEach((v,i)=>{
+      html += '<a class="vitem" href="'+escHtml(v.url)+'" target="_blank" rel="noopener">'
+        + '<span class="vn" style="background:var(--purple)">'+(i+1)+'</span>'
+        + '<span class="vt">'+escHtml(v.title)+'</span>'
+        + '<span class="vz game" style="color:var(--purple);border-color:rgba(199,146,234,.35);background:rgba(199,146,234,.1)">'+escHtml(v.tname)+'</span>'
+        + '<span class="vh">'+fmt(v.view)+'</span>'
+        + '</a>';
+    });
+    html += '</div></div>';
+  }
+
+  // 热词
+  if(d.top_hotwords.length){
+    html += '<div class="dd-section"><h4><span class="sec-dot"></span>热词</h4><div class="kw-list">';
+    d.top_hotwords.forEach(hw=>{
+      html += '<span class="kw-item">'+escHtml(hw.kw)+'<span class="kw-num">'+fmt(hw.heat)+'</span></span>';
+    });
+    html += '</div></div>';
+  }
+
+  // 贴吧
+  if(d.top_tieba.length){
+    html += '<div class="dd-section"><h4><span class="sec-dot gold"></span>贴吧热议</h4><div class="tb-list">';
+    d.top_tieba.forEach(tb=>{
+      html += '<div class="tb-item"><span class="tb-dot"></span><a href="'+escHtml(tb.url)+'" target="_blank" rel="noopener">'+escHtml(tb.name)+'</a></div>';
+    });
+    html += '</div></div>';
+  }
+
+  // 热榜覆盖
+  if(d.hotlist_counts && Object.values(d.hotlist_counts).some(v=>v>0)){
+    html += '<div class="dd-section"><h4><span class="sec-dot"></span>全网热榜</h4><div class="kw-list">';
+    for(const [plat,cnt] of Object.entries(d.hotlist_counts)){
+      if(cnt>0) html += '<span class="kw-item" style="border-color:rgba(77,163,255,.3);background:rgba(77,163,255,.08)">'+plat+' · '+cnt+'条</span>';
+    }
+    html += '</div></div>';
+  }
+
+  html += '</div>';
+  card.innerHTML = html;
+}
+
+// ==================== 周汇总视图 ====================
+function showWeeklyView(){
+  activeDate = null;
+  activeWeekIdx = null;
+
+  document.querySelectorAll('.dp-item').forEach(el=>el.classList.remove('active','highlight','open'));
+
+  document.getElementById('vtabWeekly').classList.add('active');
+  document.getElementById('vtabDaily').classList.remove('active');
+
+  const card = document.getElementById('detailCard');
+  if(!HISTORY_DATA || !HISTORY_DATA.weekly.length){
+    card.innerHTML = '<div class="empty-state"><p>暂无周期汇总数据</p></div>';
+    return;
+  }
+
+  let html = '<div class="week-timeline">';
+  HISTORY_DATA.weekly.forEach((w,idx)=>{
+    html += hourglassSeparator(idx, w);
+    const trendCls = w.trend==='↑'?'up':w.trend==='↓'?'down':'';
+    const trendIcon = w.trend==='↑'?'↗':w.trend==='↓'?'↘':'→';
+
+    html += '<div class="week-card" data-week-idx="'+idx+'" onclick="selectWeek('+idx+')">'
+      + '<div class="wc-head">'
+      + '<span class="wc-period">'+w.period+'</span>'
+      + '<span class="wc-trend '+trendCls+'">'+trendIcon+'</span>'
+      + '<span class="wc-badge">'+w.days_in_window+'天</span>'
+      + '</div>'
+      + '<div class="wc-stats">'
+      + '<div class="wc-stat"><span class="wc-stat-num">'+w.total_videos+'</span> <span class="wc-stat-label">视频</span></div>'
+      + '<div class="wc-stat"><span class="wc-stat-num">'+fmt(w.total_views)+'</span> <span class="wc-stat-label">播放</span></div>'
+      + '<div class="wc-stat"><span class="wc-stat-num" style="color:var(--accent)">'+w.high_heat_count+'</span> <span class="wc-stat-label">高热</span></div>'
+      + '<div class="wc-stat"><span class="wc-stat-num" style="color:var(--purple)">'+w.meme_zone_count+'</span> <span class="wc-stat-label">梗区</span></div>'
+      + '</div>';
+
+    // 顶部视频预览
+    if(w.top_videos && w.top_videos.length){
+      html += '<div class="wc-top-title">周期热门</div><div class="wc-video-pills">';
+      w.top_videos.slice(0,6).forEach(v=>{
+        const t = escHtml(v.title).substring(0,28);
+        html += '<span class="wc-pill" title="'+escHtml(v.title)+' · '+v.date+' · H='+v.H+'">'+t+'</span>';
+      });
+      html += '</div>';
+    }
+
+    html += '</div>';
+  });
+  html += '</div>';
+  card.innerHTML = html;
+}
+
+function hourglassSeparator(idx, w){
+  // 在相邻周卡间插入日期条
+  let s = '';
+  if(idx>0){
+    const prev = HISTORY_DATA.weekly[idx-1];
+    const dayDiff = diffDays(prev.end_date, w.end_date);
+    if(dayDiff>1){
+      s = '<div style="text-align:center;padding:8px 0;color:var(--dim);font-size:var(--text-xs)">'
+        + '<span style="border:1px solid var(--border);padding:4px 16px;border-radius:99px;background:var(--panel2)">'
+        + '间隔 '+dayDiff+' 天</span></div>';
+    }
+  }
+  return s;
+}
+function diffDays(a,b){
+  try{
+    const da=new Date(a.substring(0,4),a.substring(4,6)-1,a.substring(6,8));
+    const db=new Date(b.substring(0,4),b.substring(4,6)-1,b.substring(6,8));
+    return Math.round((db-da)/86400000);
+  }catch(e){return 0;}
+}
+
+function selectWeek(idx){
+  activeWeekIdx = idx;
+  activeDate = null;
+  const w = HISTORY_DATA.weekly[idx];
+  if(!w) return;
+
+  // 高亮相关日期
+  document.querySelectorAll('.dp-item').forEach(el=>el.classList.remove('active','highlight','open'));
+  HISTORY_DATA.daily.forEach(d=>{
+    if(d.date_ymd>=w.start_date && d.date_ymd<=w.end_date){
+      const el = document.querySelector('[data-date="'+d.date_ymd+'"]');
+      if(el) el.classList.add('highlight');
+    }
+  });
+
+  // 切换到日详情
+  document.getElementById('vtabDaily').classList.add('active');
+  document.getElementById('vtabWeekly').classList.remove('active');
+
+  // 在详情区显示周期范围内的聚合概览
+  buildWeekDetail(w);
+}
+
+function buildWeekDetail(w){
+  const card = document.getElementById('detailCard');
+  let html = '<div class="day-detail">';
+
+  html += '<div class="dd-head">'
+    + '<h2>'+w.period+'</h2>'
+    + '<span class="dd-chip">'+w.days_in_window+'天周期</span>'
+    + '</div>';
+
+  html += '<div class="dd-stats-row">'
+    + '<div class="dd-stat"><div class="dd-num">'+w.total_videos+'</div><div class="dd-label">总视频</div></div>'
+    + '<div class="dd-stat"><div class="dd-num gold">'+fmt(w.total_views)+'</div><div class="dd-label">总播放</div></div>'
+    + '<div class="dd-stat"><div class="dd-num green">'+w.high_heat_count+'</div><div class="dd-label">🔥 高热</div></div>'
+    + '<div class="dd-stat"><div class="dd-num accent">'+w.meme_zone_count+'</div><div class="dd-label">梗区</div></div>'
+    + '</div>';
+
+  // 逐日视频数
+  html += '<div class="dd-section"><h4><span class="sec-dot gold"></span>逐日视频量</h4>';
+  html += '<div style="display:flex;gap:12px;flex-wrap:wrap">';
+  for(const [dt,cnt] of Object.entries(w.per_day_videos||{})){
+    const high = w.per_day_high?.[dt]||0;
+    html += '<div style="background:var(--panel2);border:1px solid var(--border);border-radius:var(--radius-md);padding:10px 14px;text-align:center;min-width:72px">'
+      + '<div style="font-size:var(--text-xs);color:var(--sub)">'+dt+'</div>'
+      + '<div style="font-size:var(--text-xl);font-weight:800;color:var(--txt)">'+cnt+'</div>'
+      + '<div style="font-size:var(--text-xs);color:var(--accent)">🔥'+high+'</div>'
+      + '</div>';
+  }
+  html += '</div></div>';
+
+  // 周期热门视频
+  if(w.top_videos && w.top_videos.length){
+    html += '<div class="dd-section"><h4><span class="sec-dot purple"></span>周期热门 Top 8</h4><div class="vlist">';
+    w.top_videos.forEach((v,i)=>{
+      const cls = i<3?' top3':'';
+      html += '<div class="vitem">'
+        + '<span class="vn'+cls+'">'+(i+1)+'</span>'
+        + '<span class="vt">'+escHtml(v.title)+'</span>'
+        + '<span style="font-size:var(--text-xs);color:var(--dim)">'+v.date+'</span>'
+        + '<span class="vh">H='+v.H+' · '+fmt(v.view)+'</span>'
+        + '</div>';
+    });
+    html += '</div></div>';
+  }
+
+  // 周期热门词
+  if(w.top_hotwords && w.top_hotwords.length){
+    html += '<div class="dd-section"><h4><span class="sec-dot"></span>周期热词</h4><div class="kw-list">';
+    w.top_hotwords.forEach(hw=>{
+      html += '<span class="kw-item">'+escHtml(hw.kw)+'<span class="kw-num">'+fmt(hw.heat)+'</span></span>';
+    });
+    html += '</div></div>';
+  }
+
+  html += '</div>';
+  card.innerHTML = html;
+}
+
+// ==================== Tab 切换 ====================
+document.addEventListener('click',function(e){
+  const tab = e.target.closest('.vtab');
+  if(!tab) return;
+
+  document.querySelectorAll('.vtab').forEach(t=>t.classList.remove('active'));
+  tab.classList.add('active');
+
+  if(tab.dataset.view==='weekly'){
+    showWeeklyView();
+  }else if(tab.dataset.view==='daily'){
+    if(activeDate) selectDate(activeDate);
+    else if(activeWeekIdx!==null) selectWeek(activeWeekIdx);
+    else{
+      // 默认选最新
+      if(HISTORY_DATA && HISTORY_DATA.daily.length){
+        selectDate(HISTORY_DATA.daily[HISTORY_DATA.daily.length-1].date_ymd);
+      }
+    }
+  }
+});
+
+// ==================== 工具 ====================
+function escHtml(s){
+  if(!s) return '';
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ==================== 启动 ====================
+loadData();
+</script>
+</body>
+</html>

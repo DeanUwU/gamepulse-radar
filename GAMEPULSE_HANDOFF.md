@@ -1,15 +1,21 @@
 # GamePulse 游戏日报雷达站 · 完整项目移交文档
 
-> **移交日期**：2026-08-05  
+> **移交日期**：2026-08-05（v1.2 架构合并版）  
 > **目标读者**：接手迭代的 AI / 开发者  
 > **工作目录**：`C:\Users\shudizhao\WorkBuddy\Claw\雷达站`  
 > **在线站点**：https://dd2095965283-lgtm.github.io/gamepulse-radar/
+> **架构变更**：v1.2 全站统一为 `index.html`，wordcloud.html 降级为补充分析页，history.html 独立保留。不再有 daily.html/calendar.html/rebuild_main.py。
 
 ---
 
 ## 一、项目概览
 
 GamePulse 是一个**游戏行业每日内容雷达站**，自动采集 B站/贴吧/微博/知乎/抖音/小红书/Steam/Reddit/行业媒体 等 20+ 信源，生成包含 8 大板块的日报页面。
+
+**当前页面**（3 个）：
+- `index.html` — **唯一日报页**，包含 masthead/速览/视觉/榜单/TOP10/社区/情报/日历/词云/源覆盖
+- `wordcloud.html` — 热词分析补充页（TOP8 详解 + 趋势图，不重复展示词云主体）
+- `history.html` — 历史回顾页（日期列表 + 7 天滚动周汇总）
 
 **核心能力**：
 - 六路梗雷达采集（B站热门/热搜/每周必看/梗解读/梗百科/贴吧热议）
@@ -30,10 +36,8 @@ GamePulse 是一个**游戏行业每日内容雷达站**，自动采集 B站/贴
 雷达站/
 │
 # ===== 生产页面（由脚本生成，勿手工编辑） =====
-├── daily.html              ← 日报页（8板块）
-├── calendar.html           ← 版本日历·前瞻哨
-├── wordcloud.html          ← 词云页
-├── index.html              ← 主站唯一入口
+├── index.html              ← **唯一日报页**（8板块全内嵌：masthead/速览/视觉/榜单/TOP10/社区/情报/日历/词云/源覆盖）
+├── wordcloud.html          ← 热词分析补充页（TOP8详解 + 趋势图）
 ├── history.html            ← 历史回顾页（7天滑窗）
 │
 # ===== 静态资源 =====
@@ -53,11 +57,10 @@ GamePulse 是一个**游戏行业每日内容雷达站**，自动采集 B站/贴
 ├── collector_tgmeng.py     ← 糖果梦 AI 日报采集 → collectors/tgmeng_daily_日期.json
 ├── boost_hotlist.py        ← 热榜→词云交叉加权
 ├── boost_tgmeng.py         ← 糖果梦 AI 日报→站内 6 路交叉验证
-├── cross_words.py          ← 词云渲染 → wordcloud.html
-├── gen_calendar.py         ← 日历渲染 → calendar.html
-├── refresh_content.py      ← 内容板块自动刷新（梗雷达/TOP10/视觉焦点/头图/速览）
+├── cross_words.py          ← 词云渲染 → index.html #glance + wordcloud.html 补充页
+├── gen_calendar.py         ← 日历渲染 → index.html #cal section
+├── refresh_content.py      ← 内容板块自动刷新（梗雷达/TOP10/视觉焦点/头图/速览）→ index.html
 ├── unify_heat.py           ← 热度口径统一（原始→H 0-100）
-├── rebuild_main.py         ← 子页拼装 → index.html
 │
 # ===== 信源管线（Phase 2-5） =====
 ├── collect_sources.py      ← 信源采集
@@ -102,13 +105,12 @@ GamePulse 是一个**游戏行业每日内容雷达站**，自动采集 B站/贴
 ③-  准入安检            → inbox → 死链/错配剔除
 ③-  策展晋升            → adopt → events.json 信源快报
 ③-  信源自发现          → 7天节流扫描
-③-  内容刷新            → refresh_content（梗雷达/TOP10/视觉焦点/头图/速览）
+③-  内容刷新            → refresh_content（梗雷达/TOP10/视觉焦点/头图/速览）→ index.html
 ③-  热度统一            → unify_heat（原始→H 0-100）
-③-  糖果梦日报          → collector_tgmeng → daily.html #tgmeng 区块
-④   gen_calendar        → events.json → calendar.html
-⑤   rebuild_main        → 子页拼装 → index.html
-⑥   自洽校验            → 9项检查
-⑦   写日志              → 自洽日志_当天.md
+③-  糖果梦日报          → tgmeng 卡片 → index.html #tgmeng 区块
+③-  gen_calendar        → events.json → index.html #cal section
+④   自洽校验            → 9项检查
+⑤   写日志              → 自洽日志_当天.md
 ```
 
 **Python 运行时**：
@@ -275,7 +277,7 @@ python refresh_content.py
 
 ### 部署到 GitHub Pages
 ```bash
-git add daily.html calendar.html wordcloud.html index.html
+git add index.html wordcloud.html history.html
 git commit -m "每日刷新 YYYY-MM-DD"
 git push origin main
 ```
@@ -286,12 +288,12 @@ git push origin main
 3. 运行 `collect_sources.py` 验证
 4. 运行 `admit_sources.py` 验证准入
 
-### 新增板块
-1. 在 `daily.html` 添加 `<section id="板块id">`
-2. 在 `rebuild_main.py` 的 `DAILY_ORDER` 加入板块 id
-3. 在 `style.css` 添加样式（含三档移动端适配）
-4. 在 `refresh_content.py` 添加内容生成函数
-5. 在 `daily_refresh.py` 自洽校验中补充检查项
+### 新增板块（所有板块在 index.html 内）
+1. 在 `index.html` 添加 `<section id="板块id">`
+2. 在 `style.css` 添加样式（含三档移动端适配）
+3. 在 `refresh_content.py` 添加内容生成函数 + `replace_` 函数
+4. 在 `daily_refresh.py` 自洽校验中补充检查项
+5. 各脚本通过 regex 替换对应 section：读写同一个 index.html，不互相覆盖
 
 ---
 

@@ -13,9 +13,7 @@ TODAY = date.today().strftime("%Y%m%d")
 
 # 白名单：精确文件
 EXACT_FILES = [
-    # HTML 页面
-    "daily.html",
-    "calendar.html",
+    # HTML 页面（2026-08-05 架构合并：全站统一为 index.html）
     "wordcloud.html",
     "index.html",
     "history.html",

@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 """daily_refresh.py — GamePulse 每日刷新 + 自洽校验 + 日志（按"自洽提示词体系"）
 流程：① meme_radar 采集 ② 按真实失败源更新源覆盖报告 ③ cross_words 重生词云(H)
-      ④ rebuild_main 重建主站 ⑤ 自洽校验 ⑥ 写日志
+      ④ refresh_content 重刷内容板块 ⑤ gen_calendar 重建日历 ⑥ 自洽校验 ⑦ 写日志
+
+2026-08-05 架构合并：全站统一为 index.html，不再生成 daily.html/calendar.html 独立页；
+各脚本直写 index.html 对应 section，无需 rebuild_main 拼装步骤。
 """
 import re, io, os, sys, json, datetime, subprocess, ast, urllib.parse
 
@@ -191,7 +194,7 @@ else:
     log("【③内容】跳过 refresh_content：当天采集未就绪，拒绝用历史内容冒充今日刷新")
 
 # ③-5 热度口径统一（跨板块 H）：把 TOP10/梗雷达/视觉焦点 的原始播放量换算成 H
-# 必须排在 meme_radar 采集之后（采集会写回原始播放量）、rebuild_main 之前（主站从 daily.html 取材）。
+# 必须排在 meme_radar 采集之后（采集会写回原始播放量）。全站统一为 index.html。
 try:
     log("【③热度】运行 unify_heat.py（原始播放量 -> 统一 H）...")
     rheat = subprocess.run([PY, 'unify_heat.py'], cwd=BASE,
@@ -219,9 +222,9 @@ try:
     import glob as _g, re as _re
     tg_files = sorted(_g.glob(os.path.join(BASE, "collectors", "tgmeng_daily_*.json")), reverse=True)
     bt_files = sorted(_g.glob(os.path.join(BASE, "collectors", "tgmeng_boost_*.json")), reverse=True)
-    _daily_path = os.path.join(BASE, "daily.html")
+    _daily_path = os.path.join(BASE, "index.html")
     if not os.path.exists(_daily_path):
-        log("    daily.html 不存在，跳过 tgmeng 卡片+badge 注入")
+        log("    index.html 不存在，跳过 tgmeng 卡片+badge 注入")
     elif not tg_files:
         log("    未找到 tgmeng_daily_*.json，跳过")
     else:
@@ -295,13 +298,13 @@ try:
                 _daily_content = _re.sub(
                     r'<section id="tgmeng">.*?</section>',
                     _card_html, _daily_content, flags=_re.S)
-                log("    daily.html 已含旧 tgmeng 卡片，已替换为新版（概念信号）")
+                log("    index.html 已含旧 tgmeng 卡片，已替换为新版（概念信号）")
             try:
                 with open(_daily_path, "w", encoding="utf-8") as _fh:
                     _fh.write(_daily_content)
-                log("    AI 趋势信号卡片已注入 daily.html（" + str(len(_concepts)) + " 概念）")
+                log("    AI 趋势信号卡片已注入 index.html（" + str(len(_concepts)) + " 概念）")
             except PermissionError:
-                log("    daily.html 被锁定（IDE 预览窗口），跳过写入")
+                log("    index.html 被锁定（IDE 预览窗口），跳过写入")
         else:
             log("    tgmeng 数据不可用，跳过卡片+badge 注入")
 except Exception as _e:
@@ -341,8 +344,8 @@ try:
                 _card_html += f'<div class="tgmeng-tags">{_tags_html}</div>'
             _card_html += f'''<div class="tgmeng-meta"><span>{_ai_meta_str}</span><a class="tgmeng-source" target="_blank" href="https://tgmeng.com/daily/game">查看完整日报 &#8594;</a></div></div></section>'''
 
-            # 插入到 daily.html: 在 <section id="source" 之前
-            _daily_path = os.path.join(BASE, "daily.html")
+            # 插入到 index.html: 在 <section id="source" 之前
+            _daily_path = os.path.join(BASE, "index.html")
             if os.path.exists(_daily_path):
                 _daily_content = io.open(_daily_path, encoding="utf-8").read()
                 if 'id="tgmeng"' not in _daily_content:
@@ -350,11 +353,11 @@ try:
                                                             '\n' + _card_html + '\n<section id="source"')
                     with open(_daily_path, "w", encoding="utf-8") as _fh:
                         _fh.write(_daily_content)
-                    log("    ✓ AI 日报卡片已注入 daily.html")
+                    log("    ✓ AI 日报卡片已注入 index.html")
                 else:
-                    log("    ⚠ daily.html 已含 tgmeng 卡片（可能是重复注入），跳过")
+                    log("    ⚠ index.html 已含 tgmeng 卡片（可能是重复注入），跳过")
             else:
-                log("    ⚠ daily.html 不存在，跳过卡片注入")
+                log("    ⚠ index.html 不存在，跳过卡片注入")
         else:
             log("    ⚠ tgmeng 数据不可用（缺失/近期失败/无 entry），跳过卡片注入")
     else:
@@ -362,28 +365,24 @@ try:
 except Exception as _e:
     log("    ⚠ tgmeng 卡片注入跳过（非阻断）：" + repr(_e)[:160])
 
-# ---------- ④ 重建主站 ----------
-# ④-0 先由 events.json 重建 calendar.html（Phase 1 信源优先：日历真源在 events.json）
+# ---------- ④-0 由 events.json 重建日历 section（注入 index.html） ----------
+# 注意：本步必须在 refresh_content（③-4.5）之后运行，因为两者都读/写 index.html；
+# gen_calendar 替换 #cal/#forward 区块，refresh_content 替换 masthead/brief/visual/TOP10/hot，
+# 区块不重叠，按序写入互不影响。
 if os.path.exists(os.path.join(BASE, "events.json")):
-    log("【④ 重建】运行 gen_calendar.py（events.json -> calendar.html）...")
+    log("【④ 日历】运行 gen_calendar.py（events.json -> index.html #cal section）...")
     r0 = subprocess.run([PY, "gen_calendar.py"], cwd=BASE, capture_output=True, text=True, encoding="utf-8", env=ENV)
     if r0.returncode != 0:
         problems.append(("日历", "events.json 生成失败", r0.stderr.strip()[:200], "红线③链接必匹配内容", "阻断", "检查 events.json 占位符/__SRC__ 是否完整"))
     else:
         log("    " + r0.stdout.strip())
 else:
-    log("【④ 重建】未找到 events.json，拒绝沿用现有 calendar.html")
-    problems.append(("日历", "events.json 缺失", "无法从日历真源生成 calendar.html", "构建完整性", "阻断",
+    log("【④ 日历】未找到 events.json，无法重建日历 section")
+    problems.append(("日历", "events.json 缺失", "无法从日历真源生成日历区块", "构建完整性", "阻断",
                      "恢复 events.json 后重新生成，禁止沿用旧日历"))
-log("【④ 重建】运行 rebuild_main.py ...")
-r3 = subprocess.run([PY, "rebuild_main.py"], cwd=BASE, capture_output=True, text=True, encoding="utf-8", env=ENV)
-log("    " + (r3.stdout.strip() or r3.stderr.strip()[:200]))
-if r3.returncode != 0:
-    problems.append(("主站", "rebuild_main.py", f"非零退出：{(r3.stderr or r3.stdout).strip()[:200]}",
-                     "构建完整性", "阻断", "修复子页结构/构建错误后重跑；不要发布旧主站"))
 
-# ================= ⑤ 自洽校验 =================
-log("\n================= ⑤ 自洽校验 =================")
+# ================= ④ 自洽校验 =================
+log("\n================= ④ 自洽校验 =================")
 
 def roots_of(fn):
     """返回外部站点根页链接；带具体 query/fragment 路由的页面不当作根页。"""
@@ -407,7 +406,7 @@ else:
 
 # (b) GameLook 主页占位
 gamelook_roots = []
-for f in ["daily.html", "wordcloud.html", "index.html"]:
+for f in ["index.html", "wordcloud.html"]:
     gamelook_roots += [u for u in roots_of(f) if "gamelook.com.cn" in u]
 if gamelook_roots:
     problems.append(("全局", "GameLook 链接", f"仍存在 {len(gamelook_roots)} 个 GameLook 主页占位链接", "红线③禁主页占位", "阻断", "深抓到具体文章 URL（形如 /2026/07/598608/），禁填 gamelook.com.cn/"))
@@ -416,7 +415,7 @@ else:
 
 # (b2) 任意外部根页占位：不能只盯 GameLook，游戏官网/展会官网根页同样不承载具体事件。
 root_links = []
-for f in ["daily.html", "calendar.html", "wordcloud.html", "index.html"]:
+for f in ["index.html", "wordcloud.html"]:
     root_links += [(f, u) for u in roots_of(f)]
 if root_links:
     problems.append(("全局", "外部根页链接", f"存在 {len(root_links)} 个主页占位链接：{root_links[:5]}",
@@ -426,7 +425,7 @@ else:
     log("(b2) 外部根页占位：✅ 0 个")
 
 # (c) 待接入源告警占位
-src = io.open(os.path.join(BASE, "daily.html"), encoding="utf-8").read()
+src = io.open(os.path.join(BASE, "index.html"), encoding="utf-8").read()
 m_src = re.search(r'<section id="source" class="src-mini">.*?</section>', src, re.S)
 src_txt = m_src.group(0) if m_src else ""
 # 触乐/竞核/手游那点事已于 Phase 5/7 接入 sources.toml（信源快报出具体文章 URL），从待接入清单移除
@@ -440,7 +439,7 @@ else:
 
 # (c2) 搜索链接 / 可疑编造详情ID（全站，含日历）
 bad_search, bad_fakeid = [], []
-for f in ["daily.html", "calendar.html", "wordcloud.html", "index.html"]:
+for f in ["index.html", "wordcloud.html"]:
     hh = io.open(os.path.join(BASE, f), encoding="utf-8").read()
     bad_search += [(f, u) for u in re.findall(r'https://search\.bilibili\.com[^"]*', hh)]
     bad_fakeid += [(f, u) for u in re.findall(r'https?://[^"]*mihoyo\.com[^"]*news[/a-z]*/\d{4,}[^"]*', hh)]
@@ -474,7 +473,11 @@ GAME_DOMAIN = {
     '主机/PC新作': ['steampowered', 'xbox.com'],
     '主机/PC 大作': ['steampowered', 'xbox.com'],
 }
-cal_h = io.open(os.path.join(BASE, "calendar.html"), encoding="utf-8").read()
+# 从 index.html 中提取日历区域进行校验（架构合并后日历内嵌在 index 中）
+idx_h = io.open(os.path.join(BASE, "index.html"), encoding="utf-8").read()
+# 提取 #cal + #forward 区块
+_cal_match = re.search(r'<section id="cal">.*?</section>.*?<section id="source"', idx_h, re.S)
+cal_h = _cal_match.group(0) if _cal_match else idx_h
 mismatches = []
 for mm2 in re.finditer(r'<a[^>]*href="(https?://[^"]+)"[^>]*>(.*?)</a>', cal_h, re.S):
     _url = mm2.group(1)
@@ -617,8 +620,8 @@ else:
     _mk = sorted(set(curated_marks)) or ["（无策展块标记）"]
     log(f"(e) 人工策展过期：✅ 策展块均在 {CURATED_MAX_AGE} 天内（标记于 {_mk}）")
 
-# ================= ⑥ 写日志 =================
-log("\n================= ⑥ 自洽日志 =================")
+# ================= ⑤ 写日志 =================
+log("\n================= ⑤ 自洽日志 =================")
 blocking = [p for p in problems if p[4] == "阻断"]
 optimizing = [p for p in problems if p[4] == "优化"]
 if not problems:

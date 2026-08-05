@@ -1,293 +1,377 @@
 {
- "date": "2026-08-04",
- "terms": [
-  {
-   "term": "抵抗者2026实机演示",
-   "href": "https://www.bilibili.com/video/BV1rW326hEKe",
-   "cat": "游戏/新品",
-   "heat": 95,
-   "sources": [
-    "B站每周必看"
-   ]
-  },
-  {
-   "term": "抽烟抽得慢也得死吗",
-   "href": "https://www.bilibili.com/video/BV126GG62E9G",
-   "cat": "梗/社区",
-   "heat": 91,
-   "sources": [
-    "B站热门·网络游戏"
-   ]
-  },
-  {
-   "term": "闪暖七周年CG首曝",
-   "href": "https://www.bilibili.com/video/BV1xS396ZEUz",
-   "cat": "游戏/新品",
-   "heat": 85,
-   "sources": [
-    "B站热门"
-   ]
-  },
-  {
-   "term": "海绵宝宝大战僵尸",
-   "href": "https://www.bilibili.com/video/BV14HGV6UESe",
-   "cat": "梗/社区",
-   "heat": 84,
-   "sources": [
-    "B站热门·单机游戏"
-   ]
-  },
-  {
-   "term": "八尺大人",
-   "href": "https://www.bilibili.com/video/BV1Hz3R6sEJ2",
-   "cat": "梗/社区",
-   "heat": 82,
-   "sources": [
-    "B站热门·单机游戏"
-   ]
-  },
-  {
-   "term": "三角洲大运",
-   "href": "https://www.bilibili.com/video/BV1yU3Q6DE3S",
-   "cat": "梗/社区",
-   "heat": 82,
-   "sources": [
-    "B站热门·网络游戏"
-   ]
-  },
-  {
-   "term": "FGO宝具库古法琉璃",
-   "href": "https://www.bilibili.com/video/BV1Te3s6jEuR",
-   "cat": "梗/社区",
-   "heat": 80,
-   "sources": [
-    "B站热门·手机游戏"
-   ]
-  },
-  {
-   "term": "原神至冬交响音乐现场",
-   "href": "https://www.bilibili.com/video/BV1riGw6zELu",
-   "cat": "游戏/新品",
-   "heat": 79,
-   "sources": [
-    "B站热门·手机游戏"
-   ]
-  },
-  {
-   "term": "Jiejie重返EDG",
-   "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356757&amp;topic_name=%E5%9B%BE%E5%95%A5%E5%91%A2%3FJiejie%E7%A1%AE%E8%AE%A4%E9%87%8D%E8%BF%94EDG",
-   "cat": "梗/社区",
-   "heat": 78,
-   "sources": [
-    "贴吧热议"
-   ]
-  },
-  {
-   "term": "王者无尽之局皮肤CG",
-   "href": "https://www.bilibili.com/video/BV1z33f6FEri",
-   "cat": "游戏/新品",
-   "heat": 76,
-   "sources": [
-    "B站热门·手机游戏"
-   ]
-  },
-  {
-   "term": "MC赛博朋克RPG地图",
-   "href": "https://www.bilibili.com/video/BV1pt3x6gErU",
-   "cat": "梗/社区",
-   "heat": 74,
-   "sources": [
-    "B站热门·单机游戏"
-   ]
-  },
-  {
-   "term": "腾讯减持牧场物语厂商",
-   "href": "https://www.baijing.cn/article/56215",
-   "cat": "行业/数据",
-   "heat": 74,
-   "sources": [
-    "白鲸出海"
-   ]
-  },
-  {
-   "term": "明末制作人回应网暴",
-   "href": "https://news.17173.com/content/08032026/100931101.shtml",
-   "cat": "事件/风险",
-   "heat": 72,
-   "sources": [
-    "17173 网游资讯"
-   ]
-  },
-  {
-   "term": "网易仙侠单机项目组解散",
-   "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356759&amp;topic_name=%E9%A1%B9%E7%9B%AE%E7%BB%84%E8%A7%A3%E6%95%A3%2C%E7%BD%91%E6%98%93%E4%BB%99%E4%BE%A0%E5%8D%95%E6%9C%BA%E6%9A%B4%E6%AD%BB",
-   "cat": "事件/风险",
-   "heat": 70,
-   "sources": [
-    "贴吧热议"
-   ]
-  },
-  {
-   "term": "鹰角嘉年华包下4馆",
-   "href": "https://www.youxituoluo.com/534738.html",
-   "cat": "行业/数据",
-   "heat": 70,
-   "sources": [
-    "游戏陀螺"
-   ]
-  },
-  {
-   "term": "中国游戏产业半年报",
-   "href": "https://www.youxituoluo.com/534722.html",
-   "cat": "行业/数据",
-   "heat": 68,
-   "sources": [
-    "游戏陀螺"
-   ]
-  },
-  {
-   "term": "8月13款新游上线",
-   "href": "http://www.gamelook.com.cn/2026/08/598971/",
-   "cat": "行业/数据",
-   "heat": 66,
-   "sources": [
-    "GameLook"
-   ]
-  },
-  {
-   "term": "T1男团出道",
-   "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356752&amp;topic_name=T1%E7%94%B7%E5%9B%A2%E5%87%BA%E9%81%93%2CFaker%E9%A2%86%E8%A1%94%E5%85%AD%E7%94%B7%E4%B8%80",
-   "cat": "梗/社区",
-   "heat": 62,
-   "sources": [
-    "贴吧热议"
-   ]
-  },
-  {
-   "term": "雾影猎人登顶Steam畅销榜",
-   "href": "http://www.gamelook.com.cn/2026/07/598819/",
-   "cat": "行业/数据",
-   "heat": 62,
-   "sources": [
-    "GameLook"
-   ]
-  },
-  {
-   "term": "仁王3独眼剑豪DLC",
-   "href": "https://www.gamersky.com/news/202608/2181745.shtml",
-   "cat": "游戏/新品",
-   "heat": 60,
-   "sources": [
-    "游民星空"
-   ]
-  },
-  {
-   "term": "GTA5夏日抢劫活动",
-   "href": "https://www.gcores.com/articles/217869",
-   "cat": "游戏/新品",
-   "heat": 58,
-   "sources": [
-    "机核 GCORES"
-   ]
-  },
-  {
-   "term": "永劫无间叶修千机伞",
-   "href": "https://store.steampowered.com/news/app/1203220/view/694267484078867228",
-   "cat": "游戏/新品",
-   "heat": 57,
-   "sources": [
-    "永劫无间 Steam 官方新闻"
-   ]
-  },
-  {
-   "term": "异度之刃2 NS2版",
-   "href": "https://www.gamersky.com/news/202608/2181641.shtml",
-   "cat": "游戏/新品",
-   "heat": 56,
-   "sources": [
-    "游民星空"
-   ]
-  },
-  {
-   "term": "DOTA2 7.41e版本",
-   "href": "https://store.steampowered.com/news/app/570/view/678505520073540065",
-   "cat": "游戏/新品",
-   "heat": 55,
-   "sources": [
-    "DOTA2 Steam 官方新闻"
-   ]
-  },
-  {
-   "term": "BanG Dream Ave Mujica剧场版",
-   "href": "https://www.gcores.com/articles/217821",
-   "cat": "游戏/新品",
-   "heat": 54,
-   "sources": [
-    "机核 GCORES"
-   ]
-  },
-  {
-   "term": "KSG零封AG",
-   "href": "https://www.bilibili.com/video/BV1LV3R6GEBj",
-   "cat": "梗/社区",
-   "heat": 53,
-   "sources": [
-    "梗百科账号·KPL发明人"
-   ]
-  },
-  {
-   "term": "QUIET开启游戏测试",
-   "href": "https://www.gcores.com/articles/217919",
-   "cat": "游戏/新品",
-   "heat": 52,
-   "sources": [
-    "机核 GCORES"
-   ]
-  },
-  {
-   "term": "PS4摊煎饼",
-   "href": "https://www.gamersky.com/news/202608/2181716.shtml",
-   "cat": "梗/社区",
-   "heat": 48,
-   "sources": [
-    "游民星空"
-   ]
-  },
-  {
-   "term": "Rookie拒绝采访",
-   "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356742&amp;topic_name=%E5%88%86%E6%89%8B%E8%BA%B2%E5%89%8D%E4%BB%BB%2CRookie%E6%8B%92%E7%BB%9D%E9%87%87%E8%AE%BF",
-   "cat": "梗/社区",
-   "heat": 45,
-   "sources": [
-    "贴吧热议"
-   ]
-  },
-  {
-   "term": "一诺人形白起",
-   "href": "https://www.bilibili.com/video/BV1k7396SEML",
-   "cat": "梗/社区",
-   "heat": 43,
-   "sources": [
-    "梗百科账号·KPL发明人"
-   ]
-  },
-  {
-   "term": "暗区突围CPU虚拟化指引",
-   "href": "https://store.steampowered.com/news/app/2073620/view/669498320818800325",
-   "cat": "厂商/平台",
-   "heat": 40,
-   "sources": [
-    "暗区突围 Steam 官方新闻"
-   ]
-  },
-  {
-   "term": "清清老夫子6中6",
-   "href": "https://www.bilibili.com/video/BV1QwGT6ME9T",
-   "cat": "梗/社区",
-   "heat": 35,
-   "sources": [
-    "梗百科账号·KPL发明人"
-   ]
-  }
- ]
+  "date": "2026-08-05",
+  "terms": [
+    {
+      "term": "FGO十周年×上美影PV",
+      "href": "https://www.bilibili.com/video/BV1xAK865ESF",
+      "cat": "游戏/新品",
+      "heat": 92,
+      "sources": [
+        "B站每周必看第384期"
+      ]
+    },
+    {
+      "term": "抵抗者2026实机演示",
+      "href": "https://www.bilibili.com/video/BV1rW326hEKe",
+      "cat": "游戏/新品",
+      "heat": 90,
+      "sources": [
+        "B站每周必看第384期"
+      ]
+    },
+    {
+      "term": "原神至冬交响音乐现场",
+      "href": "https://b23.tv/BV1riGw6zELu",
+      "cat": "游戏/新品",
+      "heat": 88,
+      "sources": [
+        "B站热榜#9"
+      ]
+    },
+    {
+      "term": "王者无尽之局皮肤CG",
+      "href": "https://b23.tv/BV1z33f6FEri",
+      "cat": "游戏/新品",
+      "heat": 86,
+      "sources": [
+        "B站热榜#75",
+        "抖音热榜#22"
+      ]
+    },
+    {
+      "term": "三角洲三选一赏金赛",
+      "href": "https://www.bilibili.com/video/BV1rhMX63Ejg",
+      "cat": "梗/社区",
+      "heat": 82,
+      "sources": [
+        "B站全站排行·电子竞技"
+      ]
+    },
+    {
+      "term": "澜·雾影狼魂皮肤爆料",
+      "href": "https://www.bilibili.com/video/BV1uguw62EBv",
+      "cat": "游戏/新品",
+      "heat": 78,
+      "sources": [
+        "B站全站排行·手机游戏"
+      ]
+    },
+    {
+      "term": "绝区零蕾米埃尔EP",
+      "href": "https://www.bilibili.com/video/BV1jhgf6pEJw",
+      "cat": "游戏/新品",
+      "heat": 76,
+      "sources": [
+        "B站每周必看第384期"
+      ]
+    },
+    {
+      "term": "火影手游百战虎皮爆料",
+      "href": "https://www.douyin.com/hot/2597531",
+      "cat": "游戏/新品",
+      "heat": 74,
+      "sources": [
+        "抖音热榜#11"
+      ]
+    },
+    {
+      "term": "奇怪的玩具工厂第五章",
+      "href": "https://www.bilibili.com/video/BV1dz356wEgr",
+      "cat": "游戏/新品",
+      "heat": 72,
+      "sources": [
+        "B站每周必看第384期"
+      ]
+    },
+    {
+      "term": "明日方舟酸橙色信笺EP",
+      "href": "https://www.bilibili.com/video/BV1nB3u6tEHD",
+      "cat": "游戏/新品",
+      "heat": 70,
+      "sources": [
+        "B站每周必看第384期"
+      ]
+    },
+    {
+      "term": "明末制作人回应网暴",
+      "href": "https://news.17173.com/content/08032026/100931101.shtml",
+      "cat": "事件/风险",
+      "heat": 68,
+      "sources": [
+        "17173（2026-08-03）"
+      ]
+    },
+    {
+      "term": "腾讯减持牧场物语厂商",
+      "href": "https://www.baijing.cn/article/56215",
+      "cat": "厂商/平台",
+      "heat": 66,
+      "sources": [
+        "白鲸出海（2026-08-03）"
+      ]
+    },
+    {
+      "term": "丧尸下乡",
+      "href": "https://www.bilibili.com/video/BV1yD376HEKM",
+      "cat": "梗/社区",
+      "heat": 64,
+      "sources": [
+        "B站每周必看第384期"
+      ]
+    },
+    {
+      "term": "终末地向渊行前传",
+      "href": "https://www.bilibili.com/video/BV1A33J6oEST",
+      "cat": "游戏/新品",
+      "heat": 63,
+      "sources": [
+        "B站每周必看第384期"
+      ]
+    },
+    {
+      "term": "雾影猎人畅销榜报道",
+      "href": "http://www.gamelook.com.cn/2026/07/598819/",
+      "cat": "行业/数据",
+      "heat": 62,
+      "sources": [
+        "GameLook（2026-07-31）"
+      ]
+    },
+    {
+      "term": "抖音手瓦选秀大会",
+      "href": "https://www.douyin.com/hot/2597698",
+      "cat": "梗/社区",
+      "heat": 67,
+      "sources": [
+        "抖音热榜#17"
+      ],
+      "hotlist_boost": 7,
+      "hotlist_platforms": 1,
+      "hotlist_sources": [
+        "douyin:抖音手瓦选秀大会"
+      ]
+    },
+    {
+      "term": "第五人格监管者心兽",
+      "href": "https://www.bilibili.com/video/BV1XE3e6EE12",
+      "cat": "游戏/新品",
+      "heat": 59,
+      "sources": [
+        "B站每周必看第384期"
+      ]
+    },
+    {
+      "term": "鸣潮泳装PV",
+      "href": "https://b23.tv/BV1gRG36EEmP",
+      "cat": "游戏/新品",
+      "heat": 64,
+      "sources": [
+        "B站热榜#90"
+      ],
+      "hotlist_boost": 6,
+      "hotlist_platforms": 1,
+      "hotlist_sources": [
+        "bilibili:胜者才有资格享受阿漂【鸣潮泳装PV】"
+      ]
+    },
+    {
+      "term": "鹰角嘉年华包下4馆",
+      "href": "https://www.youxituoluo.com/534738.html",
+      "cat": "行业/数据",
+      "heat": 56,
+      "sources": [
+        "游戏陀螺（2026-08-03）"
+      ]
+    },
+    {
+      "term": "蔚蓝档案三周年MV",
+      "href": "https://b23.tv/BV1mj3t6sERy",
+      "cat": "游戏/新品",
+      "heat": 54,
+      "sources": [
+        "B站热榜#85"
+      ]
+    },
+    {
+      "term": "8月13款新游上线",
+      "href": "http://www.gamelook.com.cn/2026/08/598971/",
+      "cat": "行业/数据",
+      "heat": 52,
+      "sources": [
+        "GameLook（2026-08-03）"
+      ]
+    },
+    {
+      "term": "MC赛博朋克RPG地图",
+      "href": "https://www.bilibili.com/video/BV1pt3x6gErU",
+      "cat": "梗/社区",
+      "heat": 51,
+      "sources": [
+        "B站全站排行·单机游戏",
+        "B站热榜#77"
+      ]
+    },
+    {
+      "term": "仁王3独眼剑豪DLC",
+      "href": "https://www.gamersky.com/news/202608/2181745.shtml",
+      "cat": "游戏/新品",
+      "heat": 50,
+      "sources": [
+        "游民星空（2026-08-03）"
+      ]
+    },
+    {
+      "term": "异度之刃2 NS2版",
+      "href": "https://www.gamersky.com/news/202608/2181641.shtml",
+      "cat": "游戏/新品",
+      "heat": 48,
+      "sources": [
+        "游民星空（2026-08-02）"
+      ]
+    },
+    {
+      "term": "Re0魔法少女夏美同人动画",
+      "href": "https://b23.tv/BV1iSMo6yEcy",
+      "cat": "梗/社区",
+      "heat": 47,
+      "sources": [
+        "B站热榜#39"
+      ]
+    },
+    {
+      "term": "GTA5夏日抢劫活动",
+      "href": "https://www.gcores.com/articles/217869",
+      "cat": "游戏/新品",
+      "heat": 46,
+      "sources": [
+        "机核（2026-08-03）"
+      ]
+    },
+    {
+      "term": "QUIET合作恐怖新作测试",
+      "href": "https://www.gcores.com/articles/217919",
+      "cat": "游戏/新品",
+      "heat": 44,
+      "sources": [
+        "机核（2026-08-04）"
+      ]
+    },
+    {
+      "term": "KSG零封AG(0649)",
+      "href": "https://www.bilibili.com/video/BV1LV3R6GEBj",
+      "cat": "梗/社区",
+      "heat": 43,
+      "sources": [
+        "KPL梗指南"
+      ]
+    },
+    {
+      "term": "轮回之兽瘴气管理指南",
+      "href": "https://news.17173.com/content/08042026/084147744.shtml",
+      "cat": "游戏/新品",
+      "heat": 42,
+      "sources": [
+        "17173（2026-08-04）"
+      ]
+    },
+    {
+      "term": "LOL纯肉装性价比争议",
+      "href": "https://www.zhihu.com/question/533106223",
+      "cat": "梗/社区",
+      "heat": 41,
+      "sources": [
+        "知乎热榜#18"
+      ]
+    },
+    {
+      "term": "CS2版本更新",
+      "href": "https://store.steampowered.com/news/app/730/view/692016318956701712",
+      "cat": "游戏/新品",
+      "heat": 40,
+      "sources": [
+        "CS2 Steam 官方新闻（2026-08-03）"
+      ]
+    },
+    {
+      "term": "后室破圈解读",
+      "href": "https://www.bilibili.com/video/BV1T53q62EU3",
+      "cat": "梗/社区",
+      "heat": 39,
+      "sources": [
+        "梗外之音第17期"
+      ]
+    },
+    {
+      "term": "三角洲违规处罚通知",
+      "href": "https://store.steampowered.com/news/app/2507950/view/681883219789875639",
+      "cat": "事件/风险",
+      "heat": 38,
+      "sources": [
+        "三角洲行动 Steam 官方新闻（2026-08-03）"
+      ]
+    },
+    {
+      "term": "PS4摊煎饼",
+      "href": "https://www.gamersky.com/news/202608/2181716.shtml",
+      "cat": "梗/社区",
+      "heat": 37,
+      "sources": [
+        "游民星空（2026-08-03）"
+      ]
+    },
+    {
+      "term": "一诺人形白起玩白起",
+      "href": "https://www.bilibili.com/video/BV1k7396SEML",
+      "cat": "梗/社区",
+      "heat": 35,
+      "sources": [
+        "KPL梗指南"
+      ]
+    },
+    {
+      "term": "小川CS2练枪图伪装BOT",
+      "href": "https://www.bilibili.com/video/BV1V93r6qERD",
+      "cat": "梗/社区",
+      "heat": 33,
+      "sources": [
+        "梗百科追更·小川CS2"
+      ]
+    },
+    {
+      "term": "梗王P勇闯瓦罗兰特",
+      "href": "https://www.bilibili.com/video/BV1nEgo6XEJY",
+      "cat": "梗/社区",
+      "heat": 31,
+      "sources": [
+        "梗百科追更·梗王P"
+      ]
+    },
+    {
+      "term": "孙悟空为何杀沙鲁",
+      "href": "https://www.zhihu.com/question/3228654638",
+      "cat": "梗/社区",
+      "heat": 29,
+      "sources": [
+        "知乎热榜#24"
+      ]
+    },
+    {
+      "term": "KG渗透皇室战争",
+      "href": "https://www.bilibili.com/video/BV1Fauw6aEEk",
+      "cat": "梗/社区",
+      "heat": 26,
+      "sources": [
+        "皇室梗指南"
+      ]
+    },
+    {
+      "term": "清清老夫子捆绑play",
+      "href": "https://www.bilibili.com/video/BV1QwGT6ME9T",
+      "cat": "梗/社区",
+      "heat": 24,
+      "sources": [
+        "KPL梗指南"
+      ]
+    }
+  ]
 }

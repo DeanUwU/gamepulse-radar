@@ -448,3 +448,31 @@ details.fold-sec[open]>summary .fold-hint::before{content:"▾ 收起"}
   .t10-img{width:32px;height:20px}
   .t10-body b{font-size:var(--text-xs)}
 }
+/* ===== 糖果梦 AI 日报卡片 ===== */
+#tgmeng{margin-top:var(--space-lg)}
+.tgmeng-card{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius-lg);padding:var(--space-lg);transition:border-color .2s var(--ease-out-quart)}
+.tgmeng-card:hover{border-color:var(--purple)}
+.tgmeng-head{display:flex;align-items:flex-start;justify-content:space-between;gap:var(--space-sm);color:var(--txt);text-decoration:none;margin-bottom:var(--space-md)}
+.tgmeng-head:hover{text-decoration:none}
+.tgmeng-head h3{font-size:var(--text-lg);font-weight:700;line-height:1.4;color:var(--txt);margin:0;transition:color .2s var(--ease-out-quart)}
+.tgmeng-head:hover h3{color:var(--purple)}
+.tgmeng-date{flex-shrink:0;font-size:var(--text-xs);color:var(--sub);border:1px solid var(--border);border-radius:99px;padding:var(--space-3xs) var(--space-xs);background:var(--panel2);white-space:nowrap}
+.tgmeng-summary{font-size:var(--text-base);color:#c4ccd8;line-height:1.7;margin-bottom:var(--space-md)}
+.tgmeng-tags{display:flex;flex-wrap:wrap;gap:var(--space-2xs);margin-bottom:var(--space-md)}
+.tgmeng-tag{display:inline-block;font-size:var(--text-xs);color:var(--purple);border:1px solid rgba(199,146,234,.35);background:rgba(199,146,234,.1);border-radius:99px;padding:var(--space-3xs) var(--space-xs);white-space:nowrap}
+.tgmeng-meta{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-sm);font-size:var(--text-xs);color:var(--dim);padding-top:var(--space-sm);border-top:1px solid var(--border)}
+.tgmeng-source{color:var(--blue);text-decoration:none;font-weight:600;margin-left:auto;transition:color .15s var(--ease-out-quart)}
+.tgmeng-source:hover{color:var(--purple);text-decoration:underline}
+.tgmeng-concept-bar{display:flex;flex-wrap:wrap;gap:var(--space-2xs);margin-bottom:var(--space-md)}
+.tgmeng-concept-matched,.tgmeng-concept-trend{display:inline-flex;align-items:center;gap:4px;font-size:var(--text-xs);border-radius:99px;padding:var(--space-3xs) var(--space-xs);white-space:nowrap}
+.tgmeng-concept-matched{color:var(--green);border:1px solid rgba(63,214,143,.35);background:rgba(63,214,143,.1)}
+.tgmeng-concept-trend{color:var(--gold);border:1px solid rgba(255,176,32,.35);background:rgba(255,176,32,.1)}
+.tgmeng-signal-note{font-size:var(--text-xs);color:var(--dim);margin-left:auto}
+/* AI确认标记：在 TOP10/梗雷达中标记已被日报概念确认的条目 */
+[data-tgmeng]{position:relative}
+[data-tgmeng]::after{content:attr(data-tgmeng);position:absolute;top:-6px;right:-4px;font-size:9px;color:var(--purple);background:rgba(199,146,234,.18);border:1px solid rgba(199,146,234,.4);border-radius:99px;padding:0 6px;line-height:16px;white-space:nowrap;pointer-events:none;z-index:1}
+@media(max-width:768px){
+  .tgmeng-head{flex-direction:column;gap:var(--space-xs)}
+  .tgmeng-meta{gap:var(--space-xs)}
+  .tgmeng-source{margin-left:0}
+}

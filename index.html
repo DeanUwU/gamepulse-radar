@@ -123,7 +123,7 @@ section.v2-sec{margin:0 auto 20px;max-width:1100px;padding:0 12px}
 .sec-title-v2 small{font-size:11px;color:var(--text-muted);margin-left:4px}
 
 /* ---- #brief 速览卡片 ---- */
-.brief-grid-v2{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.brief-grid-v2{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
 .brief-card-v2{background:var(--bg-card);border:1px solid var(--border-v2);border-radius:10px;padding:14px;text-decoration:none;color:var(--text-primary);transition:border-color .15s}
 .brief-card-v2:hover{text-decoration:none;border-color:var(--border-active)}
 .brief-card-v2 .label{display:inline-block;padding:2px 8px;border-radius:8px;font-size:10px;font-weight:700;margin-bottom:6px}
@@ -159,6 +159,7 @@ footer a{color:var(--signal-blue);text-decoration:none}
 
 /* ---- 响应式 ---- */
 @media(max-width:900px){
+  .brief-grid-v2{grid-template-columns:repeat(2,1fr)}
   .masthead img{height:200px}
   .masthead .mh-txt h1{font-size:18px}
   .trend-hub{grid-template-columns:1fr}
@@ -503,6 +504,12 @@ footer a{color:var(--signal-blue);text-decoration:none}
 <span class="label" style="background:#3fd68f;color:#fff">&#128206; 信号</span>
 <b>《QUIET》Steam测试</b>
 <small>LINE Games 1~4人合作搞笑恐怖新作，目标年内全球上市（机核 08-04）</small>
+</div>
+<div class="brief-card-v2">
+<div class="img-preview" style="background:linear-gradient(135deg,#ff5c39,#4da3ff)">GTA 6</div>
+<span class="label" style="background:#ff5c39;color:#fff">&#127917; 主线</span>
+<b>《GTA 6》11月19日定档</b>
+<small>标准版 79.99 美元 · Take-Two Q1 净预订 13.9 亿美元超预期（白鲸出海 08-10）</small>
 </div>
 </div>
 </section>

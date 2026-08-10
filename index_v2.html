@@ -123,7 +123,7 @@ section.v2-sec{margin:0 auto 20px;max-width:1100px;padding:0 12px}
 .sec-title-v2 small{font-size:11px;color:var(--text-muted);margin-left:4px}
 
 /* ---- #brief 速览卡片 ---- */
-.brief-grid-v2{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.brief-grid-v2{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
 .brief-card-v2{background:var(--bg-card);border:1px solid var(--border-v2);border-radius:10px;padding:14px;text-decoration:none;color:var(--text-primary);transition:border-color .15s}
 .brief-card-v2:hover{text-decoration:none;border-color:var(--border-active)}
 .brief-card-v2 .label{display:inline-block;padding:2px 8px;border-radius:8px;font-size:10px;font-weight:700;margin-bottom:6px}
@@ -159,6 +159,7 @@ footer a{color:var(--signal-blue);text-decoration:none}
 
 /* ---- 响应式 ---- */
 @media(max-width:900px){
+  .brief-grid-v2{grid-template-columns:repeat(2,1fr)}
   .masthead img{height:200px}
   .masthead .mh-txt h1{font-size:18px}
   .trend-hub{grid-template-columns:1fr}
@@ -180,36 +181,52 @@ footer a{color:var(--signal-blue);text-decoration:none}
 
 /* 动画 */
 @keyframes breathe{0%,100%{opacity:.6}50%{opacity:1}}
-/* ---- 头图旁 GamePulse 标题 (3D tilt) ---- */
-.hero-wrap{max-width:1100px;margin:0 auto 16px;display:flex;gap:20px;align-items:stretch}
-.hero-title{flex:0 0 260px;perspective:800px}
-.hero-title-inner{height:260px;background:linear-gradient(145deg,#0b0f15 0%,#111820 40%,#0d121c 100%);border:1px solid var(--border-v2);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;transform-style:preserve-3d;transition:transform .18s ease-out,box-shadow .18s ease-out;cursor:default;user-select:none}
-.hero-title-inner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 50%,rgba(63,214,143,.04) 0%,transparent 70%);pointer-events:none}
-.hero-title-inner::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(63,214,143,.25),transparent)}
-.hero-title .gp-logo{font-family:'Inter','PingFang SC','Microsoft YaHei',sans-serif;font-weight:900;font-size:42px;letter-spacing:-.03em;color:#fff;text-shadow:0 0 40px rgba(63,214,143,.25);transform:translateZ(30px);line-height:1;margin-bottom:2px}
-.hero-title .gp-subtitle{font-size:13px;font-weight:600;color:var(--signal-green);letter-spacing:.12em;transform:translateZ(20px)}
-.hero-title .gp-byline{font-size:10px;font-weight:500;color:rgba(255,255,255,.45);letter-spacing:.1em;margin-top:10px;transform:translateZ(10px)}
-.hero-title .gp-glow{position:absolute;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,rgba(63,214,143,.12),transparent 70%);pointer-events:none;transform:translate(-50%,-50%) translateZ(5px);transition:left .12s ease-out,top .12s ease-out}
-/* masthead 塞进 hero-wrap */
-.hero-wrap .masthead{flex:1;min-width:0;margin:0}
-@media(max-width:900px){.hero-wrap{flex-direction:column}.hero-title{flex:0 0 auto}.hero-title-inner{height:140px}.hero-title .gp-logo{font-size:30px;transform:translateZ(15px)}.hero-title .gp-subtitle{transform:translateZ(10px)}.hero-title .gp-byline{transform:translateZ(5px)}}
-@media(max-width:640px){.hero-title-inner{height:110px}.hero-title .gp-logo{font-size:24px}}
+/* ===== 全站跟随鼠标的 GamePulse 字样 (v1 风格) ===== */
+.gp-cursor{position:fixed;top:0;left:0;width:240px;height:120px;margin:-60px 0 0 -120px;pointer-events:none;z-index:9999;opacity:0;transition:opacity .35s ease;will-change:transform}
+.gp-cursor.is-active{opacity:1}
+.gp-cursor .gp-ellipse{position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(8,11,15,.55) 0%,rgba(8,11,15,.35) 50%,rgba(8,11,15,0) 75%);filter:blur(8px)}
+.gp-cursor .gp-text{position:absolute;left:50%;top:42%;transform:translate(-50%,-50%);font-family:'Inter','PingFang SC','Microsoft YaHei',sans-serif;font-weight:900;font-size:46px;letter-spacing:-.02em;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.6),0 0 32px rgba(63,214,143,.3);white-space:nowrap;line-height:1}
+.gp-cursor .gp-sub{position:absolute;left:calc(50% + 88px);top:54%;font-size:14px;font-weight:700;color:var(--signal-green);text-shadow:0 1px 4px rgba(0,0,0,.5);letter-spacing:.04em;line-height:1}
+.gp-cursor .gp-tip{position:absolute;left:50%;top:78%;transform:translate(-50%,-50%);font-size:11px;font-weight:500;color:rgba(255,255,255,.75);letter-spacing:.08em;text-shadow:0 1px 3px rgba(0,0,0,.5);white-space:nowrap}
+/* hover 到可点击元素时变目标锁定 */
+.gp-cursor.is-target .gp-text{color:#ff5c39;text-shadow:0 2px 12px rgba(0,0,0,.6),0 0 32px rgba(255,92,57,.4)}
+.gp-cursor.is-target .gp-sub{color:#ff5c39}
+.gp-cursor.is-target .gp-ellipse{background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(40,8,8,.6) 0%,rgba(40,8,8,.35) 50%,rgba(40,8,8,0) 75%);filter:blur(8px)}
+/* 移动端隐藏 */
+@media(hover:none){.gp-cursor{display:none}}
 .breathe{animation:breathe 4s ease-in-out infinite}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/wordcloud@1.2.2/src/wordcloud2.min.js"></script>
 </head>
 <body>
 
-<!-- ===== HERO TITLE + MASTHEAD ===== -->
-<div class="hero-wrap">
-<div class="hero-title" id="hero-title">
-<div class="hero-title-inner">
-<div class="gp-glow" id="gp-glow"></div>
-<div class="gp-logo">GamePulse</div>
-<div class="gp-subtitle">· 游戏日报雷达站 ·</div>
-<div class="gp-byline">@DeanOvO</div>
+<!-- ===== 全站跟随鼠标的 GamePulse 字样 (v1 风格) ===== -->
+<div class="gp-cursor" id="gp-cursor" aria-hidden="true">
+<div class="gp-ellipse"></div>
+<div class="gp-text">GamePulse</div>
+<div class="gp-sub">· 雷达</div>
+<div class="gp-tip">@DeanOvO</div>
 </div>
+
+<!-- ===== HEADER ===== -->
+<header>
+<div class="hbar">
+<div class="logo">&#127918; GamePulse<em>·雷达</em></div>
+<span class="chip">&#127968; 游戏日报 v2</span>
+<span class="chip fresh">2026-08-10</span>
+<nav class="nav-btns-v2">
+<a href="#glance">&#128293; 热词</a>
+<a href="#trend">&#128200; 趋势</a>
+<a href="#brief">&#128240; 速览</a>
+<a href="#media">&#128240; 情报</a>
+<a href="#cal">&#128197; 日历</a>
+<a href="wordcloud.html" target="_blank">词云详情 &#8599;</a>
+<a href="history.html" target="_blank">历史 &#8599;</a>
+</nav>
 </div>
+</header>
+
+<!-- ===== MASTHEAD ===== -->
 <div class="masthead">
 <span class="mh-badge"><span class="dot"></span>头条 · S级信号</span>
 <img src="http://i2.hdslb.com/bfs/archive/22c3c42a17f32a69847e9a00e3e24016d985c9df.jpg" alt="抵抗者2026实机演示" referrerpolicy="no-referrer" onerror="this.style.display='none'">
@@ -221,7 +238,6 @@ footer a{color:var(--signal-blue);text-decoration:none}
 </div>
 </div>
 </div>
-</div><!-- /hero-wrap -->
 
 <!-- ===== SIGNAL BAR ===== -->
 <div class="signal-bar">
@@ -504,6 +520,12 @@ footer a{color:var(--signal-blue);text-decoration:none}
 <b>《QUIET》Steam测试</b>
 <small>LINE Games 1~4人合作搞笑恐怖新作，目标年内全球上市（机核 08-04）</small>
 </div>
+<div class="brief-card-v2">
+<div class="img-preview" style="background:linear-gradient(135deg,#ff5c39,#4da3ff)">GTA 6</div>
+<span class="label" style="background:#ff5c39;color:#fff">&#127917; 主线</span>
+<b>《GTA 6》11月19日定档</b>
+<small>标准版 79.99 美元 · Take-Two Q1 净预订 13.9 亿美元超预期（白鲸出海 08-10）</small>
+</div>
 </div>
 </section>
 
@@ -631,44 +653,81 @@ GamePulse 游戏日报雷达站 · v2 三层架构 · 板块合并设计<br>
 <script>
 function toggleFold(id){var el=document.getElementById(id);if(!el)return;var btn=el.parentElement.querySelector('.fold-btn');if(el.style.display==='none'){el.style.display='block';if(btn)btn.textContent='▾ 收起'}else{el.style.display='none';if(btn)btn.textContent='▸ 展开'}}
 
-/* ===== 头图旁 GamePulse 标题 3D tilt ===== */
+/* ===== 全站跟随鼠标的 GamePulse 雷达光标 ===== */
 (function(){
-  var card = document.getElementById('hero-title');
-  if (!card) return;
-  var inner = card.querySelector('.hero-title-inner');
-  var glow = document.getElementById('gp-glow');
-  if (!inner) return;
+  // 移动端直接不启动
+  if (window.matchMedia && window.matchMedia('(hover:none)').matches) return;
+  if (!window.requestAnimationFrame) return;
 
+  var cursor = document.getElementById('gp-cursor');
+  if (!cursor) return;
+
+  var mx = window.innerWidth / 2, my = window.innerHeight / 2;
+  var tx = mx, ty = my;
+  var visible = false;
   var rafId = null;
 
-  function reset(){
-    inner.style.transform = 'rotateX(0deg) rotateY(0deg)';
-    inner.style.boxShadow = '';
-    if (glow) { glow.style.left = '50%'; glow.style.top = '50%'; }
+  function loop(){
+    // 缓动跟随（lerp），避免抖动
+    mx += (tx - mx) * 0.35;
+    my += (ty - my) * 0.35;
+    cursor.style.transform = 'translate3d(' + mx.toFixed(2) + 'px,' + my.toFixed(2) + 'px,0)';
+    if (Math.abs(tx - mx) > 0.1 || Math.abs(ty - my) > 0.1) {
+      rafId = requestAnimationFrame(loop);
+    } else {
+      rafId = null;
+    }
   }
 
-  card.addEventListener('mousemove', function(e){
-    if (rafId) return;
-    rafId = requestAnimationFrame(function(){
-      rafId = null;
-      var rect = card.getBoundingClientRect();
-      var x = e.clientX - rect.left;
-      var y = e.clientY - rect.top;
-      var rx = ((y / rect.height) - 0.5) * -16; // -8 ~ +8 deg
-      var ry = ((x / rect.width) - 0.5) * 14;   // -7 ~ +7 deg
-      inner.style.transform = 'rotateX(' + rx.toFixed(1) + 'deg) rotateY(' + ry.toFixed(1) + 'deg)';
-      inner.style.boxShadow = (ry * 0.8).toFixed(1) + 'px ' + (rx * 0.8).toFixed(1) + 'px 24px rgba(63,214,143,.08)';
-      if (glow) {
-        glow.style.left = (x / rect.width * 100).toFixed(0) + '%';
-        glow.style.top = (y / rect.height * 100).toFixed(0) + '%';
-      }
-    });
+  function startLoop(){
+    if (rafId === null) rafId = requestAnimationFrame(loop);
+  }
+
+  document.addEventListener('mousemove', function(e){
+    tx = e.clientX;
+    ty = e.clientY;
+    if (!visible) {
+      visible = true;
+      cursor.classList.add('is-active');
+      // 首次出现时跳到目标位置，避免从 0,0 滑入
+      mx = tx; my = ty;
+      cursor.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0)';
+    }
+    startLoop();
+  }, { passive: true });
+
+  document.addEventListener('mouseleave', function(){
+    visible = false;
+    cursor.classList.remove('is-active');
+  });
+  document.addEventListener('mouseenter', function(){
+    // 重新进入立刻显示
+    visible = true;
+    cursor.classList.add('is-active');
   });
 
-  card.addEventListener('mouseleave', reset);
+  // hover 到 a/button 时变"目标锁定"模式
+  document.addEventListener('mouseover', function(e){
+    var t = e.target;
+    while (t && t !== document) {
+      if (t.tagName === 'A' || t.tagName === 'BUTTON' || t.classList && t.classList.contains('top10-v2-item')) {
+        cursor.classList.add('is-target');
+        return;
+      }
+      t = t.parentElement;
+    }
+    cursor.classList.remove('is-target');
+  });
 
-  // 触摸设备跳过
-  if (window.matchMedia && window.matchMedia('(hover:none)').matches) reset();
+  // 离开整个文档时彻底隐藏
+  window.addEventListener('blur', function(){
+    visible = false;
+    cursor.classList.remove('is-active');
+  });
+  window.addEventListener('focus', function(){
+    visible = true;
+    cursor.classList.add('is-active');
+  });
 })();
 </script>
 </body>

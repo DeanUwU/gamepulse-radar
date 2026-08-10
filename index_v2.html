@@ -179,34 +179,67 @@ footer a{color:var(--signal-blue);text-decoration:none}
   .nav-btns-v2 a{font-size:10px;padding:3px 6px}
 }
 
+/* ---- hero-wrap: 3D tilt 标题 + Masthead ---- */
+.hero-wrap{display:flex;gap:16px;margin:0 auto 16px;max-width:1100px;padding:0 12px;align-items:stretch;position:relative;z-index:1}
+.tilt-scene{perspective:1000px;perspective-origin:center;width:320px;flex:none}
+.tilt-card{position:relative;width:100%;height:260px;border-radius:12px;background:linear-gradient(155deg,#111927 0%,#0a0f17 40%,#080c12 100%);border:1px solid var(--border-v2);transform-style:preserve-3d;transition:transform .65s cubic-bezier(.22,1,.3,1),box-shadow .65s cubic-bezier(.22,1,.3,1);cursor:default;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.tilt-card.is-tilting{transition:transform .12s linear,box-shadow .12s linear}
+/* 内发光 */
+.tilt-card::before{content:"";position:absolute;inset:0;border-radius:12px;background:radial-gradient(ellipse 70% 50% at 50% 50%,rgba(110,86,207,.04),transparent 70%);transform:translateZ(1px);pointer-events:none}
+/* glow 光斑 */
+.tilt-card .gp-glow{position:absolute;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(110,86,207,.22) 0%,rgba(61,214,143,.08) 40%,transparent 70%);pointer-events:none;transform:translate(-50%,-50%) translateZ(5px);opacity:0;transition:opacity .4s}
+/* radar scope 装饰环 */
+.tilt-card .gp-ring{position:absolute;width:130px;height:130px;border:1px solid rgba(110,86,207,.1);border-radius:50%;transform:translateZ(10px);pointer-events:none;opacity:.35}
+.tilt-card .gp-ring::after{content:"";position:absolute;inset:15px;border:1px solid rgba(61,214,143,.06);border-radius:50%}
+/* 十字准星 */
+.tilt-card .gp-ring::before{content:"";position:absolute;top:50%;left:50%;width:40px;height:1px;background:linear-gradient(90deg,transparent,rgba(110,86,207,.2),transparent);transform:translate(-50%,-50%)}
+/* logo */
+.tilt-card .gp-logo{font-family:'Inter','PingFang SC','Microsoft YaHei',sans-serif;font-size:46px;font-weight:900;color:#fff;transform:translateZ(42px);letter-spacing:-.025em;line-height:1;text-shadow:0 0 48px rgba(110,86,207,.25),0 2px 4px rgba(0,0,0,.5)}
+.tilt-card .gp-logo em{font-weight:300;color:var(--signal-green);font-style:normal;font-size:28px;vertical-align:middle;margin-left:2px}
+/* subtitle */
+.tilt-card .gp-subtitle{transform:translateZ(30px);font-size:14px;font-weight:700;color:var(--text-secondary);margin-top:8px;letter-spacing:.08em}
+/* byline */
+.tilt-card .gp-byline{transform:translateZ(20px);font-size:11px;color:var(--text-muted);margin-top:4px;letter-spacing:.04em}
+/* date chip */
+.tilt-card .gp-date{transform:translateZ(14px);margin-top:10px;padding:2px 10px;border-radius:99px;font-size:10px;font-weight:700;color:var(--signal-green);background:rgba(61,214,143,.1);border:1px solid rgba(61,214,143,.18);letter-spacing:.04em}
+/* 阴影随 tilt 移位 */
+.tilt-card::after{content:"";position:absolute;inset:10px;border-radius:10px;box-shadow:0 22px 55px rgba(0,0,0,.55);transform:translateZ(-2px);pointer-events:none;opacity:.55;transition:opacity .4s}
+.tilt-card:hover::after{opacity:.35}
+
+/* masthead 适配 hero-wrap */
+.hero-masthead{flex:1;min-width:0}
+.hero-masthead .masthead{margin:0;width:100%;height:100%;border-radius:12px;overflow:hidden}
+.hero-masthead .masthead img{height:260px}
+
+/* 响应式 */
+@media(max-width:900px){
+  .hero-wrap{flex-direction:column}
+  .tilt-scene{width:100%;height:auto}
+  .tilt-card{height:200px}
+  .tilt-card .gp-logo{font-size:36px}
+  .tilt-card .gp-ring{width:100px;height:100px}
+  .hero-masthead .masthead img{height:200px}
+}
+@media(max-width:640px){
+  .tilt-card{height:160px}
+  .tilt-card .gp-logo{font-size:28px}
+  .tilt-card .gp-subtitle{font-size:12px}
+  .tilt-card .gp-ring{width:80px;height:80px}
+  .hero-masthead .masthead img{height:160px}
+}
+/* 移动端无 hover 时不启动 tilt，直接显示平面 */
+@media(hover:none){
+  .tilt-card{transform:none!important;transition:none!important}
+  .tilt-card .gp-glow{display:none}
+}
+
 /* 动画 */
 @keyframes breathe{0%,100%{opacity:.6}50%{opacity:1}}
-/* ===== 全站跟随鼠标的 GamePulse 字样 (v1 风格) ===== */
-.gp-cursor{position:fixed;top:0;left:0;width:240px;height:120px;margin:-60px 0 0 -120px;pointer-events:none;z-index:9999;opacity:0;transition:opacity .35s ease;will-change:transform}
-.gp-cursor.is-active{opacity:1}
-.gp-cursor .gp-ellipse{position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(8,11,15,.55) 0%,rgba(8,11,15,.35) 50%,rgba(8,11,15,0) 75%);filter:blur(8px)}
-.gp-cursor .gp-text{position:absolute;left:50%;top:42%;transform:translate(-50%,-50%);font-family:'Inter','PingFang SC','Microsoft YaHei',sans-serif;font-weight:900;font-size:46px;letter-spacing:-.02em;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.6),0 0 32px rgba(63,214,143,.3);white-space:nowrap;line-height:1}
-.gp-cursor .gp-sub{position:absolute;left:calc(50% + 88px);top:54%;font-size:14px;font-weight:700;color:var(--signal-green);text-shadow:0 1px 4px rgba(0,0,0,.5);letter-spacing:.04em;line-height:1}
-.gp-cursor .gp-tip{position:absolute;left:50%;top:78%;transform:translate(-50%,-50%);font-size:11px;font-weight:500;color:rgba(255,255,255,.75);letter-spacing:.08em;text-shadow:0 1px 3px rgba(0,0,0,.5);white-space:nowrap}
-/* hover 到可点击元素时变目标锁定 */
-.gp-cursor.is-target .gp-text{color:#ff5c39;text-shadow:0 2px 12px rgba(0,0,0,.6),0 0 32px rgba(255,92,57,.4)}
-.gp-cursor.is-target .gp-sub{color:#ff5c39}
-.gp-cursor.is-target .gp-ellipse{background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(40,8,8,.6) 0%,rgba(40,8,8,.35) 50%,rgba(40,8,8,0) 75%);filter:blur(8px)}
-/* 移动端隐藏 */
-@media(hover:none){.gp-cursor{display:none}}
 .breathe{animation:breathe 4s ease-in-out infinite}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/wordcloud@1.2.2/src/wordcloud2.min.js"></script>
 </head>
 <body>
-
-<!-- ===== 全站跟随鼠标的 GamePulse 字样 (v1 风格) ===== -->
-<div class="gp-cursor" id="gp-cursor" aria-hidden="true">
-<div class="gp-ellipse"></div>
-<div class="gp-text">GamePulse</div>
-<div class="gp-sub">· 雷达</div>
-<div class="gp-tip">@DeanOvO</div>
-</div>
 
 <!-- ===== HEADER ===== -->
 <header>
@@ -226,17 +259,33 @@ footer a{color:var(--signal-blue);text-decoration:none}
 </div>
 </header>
 
-<!-- ===== MASTHEAD ===== -->
-<div class="masthead">
-<span class="mh-badge"><span class="dot"></span>头条 · S级信号</span>
-<img src="http://i2.hdslb.com/bfs/archive/22c3c42a17f32a69847e9a00e3e24016d985c9df.jpg" alt="抵抗者2026实机演示" referrerpolicy="no-referrer" onerror="this.style.display='none'">
-<div class="mh-inner">
-<div class="mh-txt">
-<h1><a target="_blank" href="https://www.bilibili.com/video/BV1rW326hEKe">抵抗者2026实机演示</a></h1>
-<p>单机游戏 · B站每周必看</p>
-<p class="mh-sub">次条：FGO十周年×上美影 · 雾海之下首曝PV</p>
-</div>
-</div>
+<!-- ===== HERO: 3D Tilt 标题 + Masthead ===== -->
+<div class="hero-wrap">
+  <!-- 左：3D Tilt 标题卡 -->
+  <div class="tilt-scene">
+    <div class="tilt-card" id="tilt-card">
+      <div class="gp-glow" id="gp-glow"></div>
+      <div class="gp-ring"></div>
+      <div class="gp-logo">GamePulse<em>·</em></div>
+      <div class="gp-subtitle">游戏日报 · 雷达站</div>
+      <div class="gp-byline">ACG 行业情报中枢</div>
+      <div class="gp-date">2026-08-10</div>
+    </div>
+  </div>
+  <!-- 右：Masthead -->
+  <div class="hero-masthead">
+    <div class="masthead">
+      <span class="mh-badge"><span class="dot"></span>头条 · S级信号</span>
+      <img src="http://i2.hdslb.com/bfs/archive/22c3c42a17f32a69847e9a00e3e24016d985c9df.jpg" alt="抵抗者2026实机演示" referrerpolicy="no-referrer" onerror="this.style.display='none'">
+      <div class="mh-inner">
+        <div class="mh-txt">
+          <h1><a target="_blank" href="https://www.bilibili.com/video/BV1rW326hEKe">抵抗者2026实机演示</a></h1>
+          <p>单机游戏 · B站每周必看</p>
+          <p class="mh-sub">次条：FGO十周年×上美影 · 雾海之下首曝PV</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- ===== SIGNAL BAR ===== -->
@@ -653,80 +702,60 @@ GamePulse 游戏日报雷达站 · v2 三层架构 · 板块合并设计<br>
 <script>
 function toggleFold(id){var el=document.getElementById(id);if(!el)return;var btn=el.parentElement.querySelector('.fold-btn');if(el.style.display==='none'){el.style.display='block';if(btn)btn.textContent='▾ 收起'}else{el.style.display='none';if(btn)btn.textContent='▸ 展开'}}
 
-/* ===== 全站跟随鼠标的 GamePulse 雷达光标 ===== */
+/* ===== 3D Tilt 标题 (GreenSock CodePen 风格) ===== */
 (function(){
-  // 移动端直接不启动
   if (window.matchMedia && window.matchMedia('(hover:none)').matches) return;
-  if (!window.requestAnimationFrame) return;
+  var card = document.getElementById('tilt-card');
+  var glow = document.getElementById('gp-glow');
+  if (!card) return;
 
-  var cursor = document.getElementById('gp-cursor');
-  if (!cursor) return;
-
-  var mx = window.innerWidth / 2, my = window.innerHeight / 2;
-  var tx = mx, ty = my;
-  var visible = false;
-  var rafId = null;
+  var tx = 0, ty = 0;     // target rotation
+  var rx = 0, ry = 0;     // current rotation (lerped)
+  var gx = 50, gy = 50;   // glow target %
+  var cx = 50, cy = 50;   // glow current % (lerped)
+  var hovering = false;
+  var raf = null;
 
   function loop(){
-    // 缓动跟随（lerp），避免抖动
-    mx += (tx - mx) * 0.35;
-    my += (ty - my) * 0.35;
-    cursor.style.transform = 'translate3d(' + mx.toFixed(2) + 'px,' + my.toFixed(2) + 'px,0)';
-    if (Math.abs(tx - mx) > 0.1 || Math.abs(ty - my) > 0.1) {
-      rafId = requestAnimationFrame(loop);
-    } else {
-      rafId = null;
+    rx += (tx - rx) * 0.16;
+    ry += (ty - ry) * 0.16;
+    cx += (gx - cx) * 0.14;
+    cy += (gy - cy) * 0.14;
+    card.style.transform = 'rotateX(' + rx.toFixed(3) + 'deg) rotateY(' + ry.toFixed(3) + 'deg)';
+    if (glow) {
+      glow.style.left = cx.toFixed(1) + '%';
+      glow.style.top  = cy.toFixed(1) + '%';
     }
+    if (hovering || Math.abs(tx - rx) > 0.005 || Math.abs(ty - ry) > 0.005 || Math.abs(gx - cx) > 0.05) {
+      raf = requestAnimationFrame(loop);
+    } else { raf = null; }
   }
 
-  function startLoop(){
-    if (rafId === null) rafId = requestAnimationFrame(loop);
-  }
+  function startLoop(){ if (raf === null) raf = requestAnimationFrame(loop); }
 
-  document.addEventListener('mousemove', function(e){
-    tx = e.clientX;
-    ty = e.clientY;
-    if (!visible) {
-      visible = true;
-      cursor.classList.add('is-active');
-      // 首次出现时跳到目标位置，避免从 0,0 滑入
-      mx = tx; my = ty;
-      cursor.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0)';
+  card.addEventListener('mousemove', function(e){
+    var r = card.getBoundingClientRect();
+    var xPct = ((e.clientX - r.left) / r.width  - 0.5) * 2;  // [-1, 1]
+    var yPct = ((e.clientY - r.top)  / r.height - 0.5) * 2;
+    tx = -yPct * 16;   // rotateX: 鼠标在上则前倾
+    ty =  xPct * 16;   // rotateY: 鼠标在右则右旋
+    gx = (e.clientX - r.left) / r.width  * 100;
+    gy = (e.clientY - r.top)  / r.height * 100;
+
+    if (!hovering) {
+      hovering = true;
+      card.classList.add('is-tilting');
+      if (glow) glow.style.opacity = '1';
     }
     startLoop();
-  }, { passive: true });
-
-  document.addEventListener('mouseleave', function(){
-    visible = false;
-    cursor.classList.remove('is-active');
-  });
-  document.addEventListener('mouseenter', function(){
-    // 重新进入立刻显示
-    visible = true;
-    cursor.classList.add('is-active');
   });
 
-  // hover 到 a/button 时变"目标锁定"模式
-  document.addEventListener('mouseover', function(e){
-    var t = e.target;
-    while (t && t !== document) {
-      if (t.tagName === 'A' || t.tagName === 'BUTTON' || t.classList && t.classList.contains('top10-v2-item')) {
-        cursor.classList.add('is-target');
-        return;
-      }
-      t = t.parentElement;
-    }
-    cursor.classList.remove('is-target');
-  });
-
-  // 离开整个文档时彻底隐藏
-  window.addEventListener('blur', function(){
-    visible = false;
-    cursor.classList.remove('is-active');
-  });
-  window.addEventListener('focus', function(){
-    visible = true;
-    cursor.classList.add('is-active');
+  card.addEventListener('mouseleave', function(){
+    hovering = false;
+    tx = 0; ty = 0;
+    card.classList.remove('is-tilting');
+    if (glow) glow.style.opacity = '0';
+    startLoop();
   });
 })();
 </script>

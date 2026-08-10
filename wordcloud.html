@@ -1,24 +1,255 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GamePulse · 热词词云</title><link rel="icon" type="image/png" href="favicon.png"><link rel="stylesheet" href="style.css"></head><body>
-<header><div class="hbar"><div class="logo">&#127918; GamePulse<em>·雷达</em></div><span class="chip">&#9729; 词云</span><span class="chip fresh">2026-08-05</span><nav><a href="index.html" target="_top">&#8962; 主站</a><a href="history.html">历史回顾</a></nav></div></header>
-<div class="wrap">
-<div class="hero"><h1>讨论热词词云</h1><p>玩家社区真实讨论热词（B站热搜 / 贴吧 / 梗雷达六路）+ 网站已收录参考。已过滤媒体·公众号名、宽泛行业词、非游戏内容；分类仅四色：事件炸点 / 行业议题 / 版本新品 / 梗社区（无舆情风险）。字号=热度，悬停看来源，点击跳原帖。</p></div>
-<section id="stat">
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GamePulse · 热词词云</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/wordcloud@1.2.2/src/wordcloud2.min.js"></script>
 <style>
-.wc{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;padding:14px 6px;line-height:1.25}
-.wc a{text-decoration:none;font-weight:700;transition:opacity .15s;position:relative}
-.wc a:hover{opacity:.75;text-decoration:underline}
-.wc .h5{opacity:1}.wc .h4{opacity:.95}.wc .h3{opacity:.85}.wc .h2{opacity:.68;font-weight:600}
-.wc-legend{margin-top:6px;font-size:11px;color:var(--sub)}
+/* ---- wordcloud2.js 词云页专属样式 ---- */
+.wc-main{display:flex;gap:var(--space-lg);align-items:flex-start;margin:var(--space-md) 0}
+.wc-canvas-wrap{flex:1;min-width:0;background:var(--panel);border:1px solid var(--border);
+  border-radius:var(--radius-lg);padding:var(--space-sm);text-align:center}
+#wc-canvas{display:block;margin:0 auto;max-width:100%;height:auto}
+.wc-canvas-hint{font-size:var(--text-xs);color:var(--dim);margin-top:var(--space-xs)}
+
+/* ---- 溯源侧边栏 ---- */
+.wc-trace{width:320px;flex:none;background:var(--panel);border:1px solid var(--border);
+  border-radius:var(--radius-lg);overflow:hidden;position:sticky;top:70px;
+  max-height:calc(100vh - 90px);display:flex;flex-direction:column;opacity:.65;
+  transition:opacity .25s var(--ease-out-quart),border-color .25s var(--ease-out-quart)}
+.wc-trace.active{opacity:1;border-color:var(--gold)}
+.wc-trace-header{padding:var(--space-sm) var(--space-md);border-bottom:1px solid var(--border);
+  font-size:var(--text-sm);color:var(--sub);display:flex;align-items:center;gap:var(--space-xs);flex-wrap:wrap}
+.wc-trace-word{color:var(--txt);font-weight:800;font-size:var(--text-lg)}
+.wc-trace-badge{font-size:var(--text-xs);border-radius:99px;padding:1px 8px;font-weight:600;
+  border:1px solid;white-space:nowrap}
+.wc-trace-list{flex:1;overflow-y:auto;padding:var(--space-xs) 0}
+.wc-trace-empty{padding:var(--space-2xl) var(--space-md);text-align:center;color:var(--dim);
+  font-size:var(--text-sm);line-height:1.7}
+.wc-trace-item{display:block;padding:var(--space-sm) var(--space-md);border-bottom:1px solid var(--border);
+  text-decoration:none;transition:background .15s;font-size:var(--text-sm);line-height:1.45}
+.wc-trace-item:last-child{border-bottom:none}
+.wc-trace-item:hover{background:var(--panel2);text-decoration:none}
+.wc-trace-item .ts-title{color:var(--txt);display:block;margin-bottom:2px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.wc-trace-item .ts-meta{font-size:var(--text-xs);color:var(--dim);display:flex;gap:var(--space-xs);align-items:center}
+.wc-trace-item .ts-source{color:var(--sub);border:1px solid var(--border);
+  border-radius:3px;padding:0 5px;white-space:nowrap}
+.wc-trace-item .ts-primary{color:var(--gold);font-size:10px;font-weight:700;text-transform:uppercase}
+.wc-trace-footer{padding:var(--space-xs) var(--space-md);border-top:1px solid var(--border);
+  font-size:var(--text-xs);color:var(--dim)}
+
+/* ---- wordcloud2.js canvas 区 tooltip ---- */
+.wc-tooltip{position:absolute;background:rgba(22,27,34,.96);border:1px solid var(--border);
+  border-radius:var(--radius-md);padding:var(--space-sm) var(--space-md);pointer-events:none;
+  font-size:var(--text-sm);color:var(--txt);z-index:99;white-space:nowrap;
+  box-shadow:var(--shadow-md);transition:opacity .15s}
+.wc-tooltip b{display:block;font-size:var(--text-md)}
+.wc-tooltip span{color:var(--sub);font-size:var(--text-xs)}
+
+/* 移动端适配 */
+@media(max-width:900px){.wc-main{flex-direction:column}.wc-trace{width:100%;max-height:400px;position:static}}
+
+/* 保留旧版 legend / preview 样式兼容 */
+.wc-legend{margin-top:var(--space-sm);font-size:11px;color:var(--sub)}
 .wc-legend span{display:inline-block;margin-right:14px}
 .wc-legend i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:4px;vertical-align:middle}
+.wc-preview{display:flex;flex-wrap:wrap;gap:4px 12px;padding:var(--space-sm) 0;border-top:1px solid var(--border);max-height:160px;overflow-y:auto}
+.wc-preview-item{display:inline-flex;align-items:center;gap:3px;font-size:var(--text-xs);text-decoration:none;padding:2px 6px;border-radius:3px;transition:background .15s}
+.wc-preview-item:hover{background:var(--panel2);text-decoration:none}
+.wc-pv-word{font-weight:700}
+.wc-pv-h{font-size:9px;opacity:.65;font-weight:600;font-variant-numeric:tabular-nums}
 .wc-list{margin-top:12px;border-top:1px solid var(--border);padding-top:8px}
 .wc-list .row{display:flex;gap:8px;padding:5px 0;font-size:12px;border-bottom:1px dashed var(--border)}
 .wc-list .row:last-child{border-bottom:none}
 .wc-list .w{flex:none;width:118px;font-weight:700}
 .wc-list .why{color:var(--sub)}
 </style>
-<div class="sec-title"><span class="bar"></span>今日游戏圈讨论热词 <small>2026-08-05 · 40 词 · 热度数 H(0-100) 统一口径 · AI 阅读理解当日标题提炼</small></div><div class="panel"><p class="note">热词来源：由 AI 直接阅读当日真实采集的标题（B站热门 / 每周必看 / 梗百科账号 / 行业媒体稿 / 贴吧玩家讨论），理解语义后提炼出游戏行业热词，每条都溯源到它实际出现过的真实来源链接（B站视频 / 媒体文章 / 官方公�� / 社区话题）。<b>绝不生成 search.bilibili.com 搜索链接、绝不跳 Steam 等商店购买页</b>；无真实来源链接的词不会进入词云。<b>热度数 H（0–100 全站统一口径）</b>：每条热词展示 H，原始评分仅作附注，禁止用来源字面热度值充当热度本身（自洽红线①）。</p><div class="wc"><a class="h5" href="https://www.bilibili.com/video/BV1xAK865ESF" target="_blank" title="热度数 H=100 ｜ 来源：B站每周必看第384期 ｜ 原始：92" style="font-size:22px;color:#3fd68f">FGO十周年×上美影PV</a><a class="h5" href="https://www.bilibili.com/video/BV1rW326hEKe" target="_blank" title="热度数 H=98 ｜ 来源：B站每周必看第384期 ｜ 原始：90" style="font-size:22px;color:#3fd68f">抵抗者2026实机演示</a><a class="h5" href="https://b23.tv/BV1riGw6zELu" target="_blank" title="热度数 H=96 ｜ 来源：B站热榜#9 ｜ 原始：88" style="font-size:22px;color:#3fd68f">原神至冬交响音乐现场</a><a class="h5" href="https://b23.tv/BV1z33f6FEri" target="_blank" title="热度数 H=93 ｜ 来源：B站热榜#75+抖音热榜#22 ｜ 原始：86" style="font-size:22px;color:#3fd68f">王者无尽之局皮肤CG</a><a class="h5" href="https://www.bilibili.com/video/BV1rhMX63Ejg" target="_blank" title="热度数 H=89 ｜ 来源：B站全站排行·电子竞技 ｜ 原始：82" style="font-size:22px;color:#3fd68f">三角洲三选一赏金赛</a><a class="h5" href="https://www.bilibili.com/video/BV1uguw62EBv" target="_blank" title="热度数 H=85 ｜ 来源：B站全站排行·手机游戏 ｜ 原始：78" style="font-size:22px;color:#3fd68f">澜·雾影狼魂皮肤爆料</a><a class="h5" href="https://www.bilibili.com/video/BV1jhgf6pEJw" target="_blank" title="热度数 H=83 ｜ 来源：B站每周必看第384期 ｜ 原始：76" style="font-size:22px;color:#3fd68f">绝区零蕾米埃尔EP</a><a class="h5" href="https://www.douyin.com/hot/2597531" target="_blank" title="热度数 H=80 ｜ 来源：抖音热榜#11 ｜ 原始：74" style="font-size:22px;color:#3fd68f">火影手游百战虎皮爆料</a><a class="h5" href="https://www.bilibili.com/video/BV1dz356wEgr" target="_blank" title="热度数 H=78 ｜ 来源：B站每周必看第384期 ｜ 原始：72" style="font-size:22px;color:#3fd68f">奇怪的玩具工厂第五章</a><a class="h5" href="https://www.bilibili.com/video/BV1nB3u6tEHD" target="_blank" title="热度数 H=76 ｜ 来源：B站每周必看第384期 ｜ 原始：70" style="font-size:22px;color:#3fd68f">明日方舟酸橙色信笺EP</a><a class="h5" href="https://news.17173.com/content/08032026/100931101.shtml" target="_blank" title="热度数 H=74 ｜ 来源：17173（2026-08-03） ｜ 原始：68" style="font-size:19px;color:#3fd68f">明末制作人回应网暴</a><a class="h5" href="https://www.baijing.cn/article/56215" target="_blank" title="热度数 H=72 ｜ 来源：白鲸出海（2026-08-03） ｜ 原始：66" style="font-size:19px;color:#3fd68f">腾讯减持牧场物语厂商</a><a class="h5" href="https://www.bilibili.com/video/BV1yD376HEKM" target="_blank" title="热度数 H=70 ｜ 来源：B站每周必看第384期 ｜ 原始：64" style="font-size:19px;color:#3fd68f">丧尸下乡</a><a class="h5" href="https://www.bilibili.com/video/BV1A33J6oEST" target="_blank" title="热度数 H=68 ｜ 来源：B站每周必看第384期 ｜ 原始：63" style="font-size:19px;color:#3fd68f">终末地向渊行前传</a><a class="h5" href="http://www.gamelook.com.cn/2026/07/598819/" target="_blank" title="热度数 H=67 ｜ 来源：GameLook（2026-07-31） ｜ 原始：62" style="font-size:19px;color:#3fd68f">雾影猎人畅销榜报道</a><a class="h5" href="https://www.douyin.com/hot/2597698" target="_blank" title="热度数 H=80 ｜ 来源：抖音热榜#17 ｜ 原始：74" style="font-size:22px;color:#3fd68f">抖音手瓦选秀大会</a><a class="h5" href="https://www.bilibili.com/video/BV1XE3e6EE12" target="_blank" title="热度数 H=64 ｜ 来源：B站每周必看第384期 ｜ 原始：59" style="font-size:19px;color:#3fd68f">第五人格监管者心兽</a><a class="h5" href="https://b23.tv/BV1gRG36EEmP" target="_blank" title="热度数 H=76 ｜ 来源：B站热榜#90 ｜ 原始：70" style="font-size:22px;color:#3fd68f">鸣潮泳装PV</a><a class="h5" href="https://www.youxituoluo.com/534738.html" target="_blank" title="热度数 H=61 ｜ 来源：游戏陀螺（2026-08-03） ｜ 原始：56" style="font-size:19px;color:#3fd68f">鹰角嘉年华包下4馆</a><a class="h5" href="https://b23.tv/BV1mj3t6sERy" target="_blank" title="热度数 H=59 ｜ 来源：B站热榜#85 ｜ 原始：54" style="font-size:19px;color:#3fd68f">蔚蓝档案三周年MV</a><a class="h5" href="http://www.gamelook.com.cn/2026/08/598971/" target="_blank" title="热度数 H=57 ｜ 来源：GameLook（2026-08-03） ｜ 原始：52" style="font-size:19px;color:#3fd68f">8月13款新游上线</a><a class="h5" href="https://www.bilibili.com/video/BV1pt3x6gErU" target="_blank" title="热度数 H=55 ｜ 来源：B站全站排行·单机游戏+B站热榜#77 ｜ 原始：51" style="font-size:19px;color:#3fd68f">MC赛博朋克RPG地图</a><a class="h5" href="https://www.gamersky.com/news/202608/2181745.shtml" target="_blank" title="热度数 H=54 ｜ 来源：游民星空（2026-08-03） ｜ 原始：50" style="font-size:19px;color:#3fd68f">仁王3独眼剑豪DLC</a><a class="h5" href="https://www.gamersky.com/news/202608/2181641.shtml" target="_blank" title="热度数 H=52 ｜ 来源：游民星空（2026-08-02） ｜ 原始：48" style="font-size:19px;color:#3fd68f">异度之刃2 NS2版</a><a class="h5" href="https://b23.tv/BV1iSMo6yEcy" target="_blank" title="热度数 H=51 ｜ 来源：B站热榜#39 ｜ 原始：47" style="font-size:19px;color:#3fd68f">Re0魔法少女夏美同人动画</a><a class="h5" href="https://www.gcores.com/articles/217869" target="_blank" title="热度数 H=50 ｜ 来源：机核（2026-08-03） ｜ 原始：46" style="font-size:19px;color:#3fd68f">GTA5夏日抢劫活动</a><a class="h4" href="https://www.gcores.com/articles/217919" target="_blank" title="热度数 H=48 ｜ 来源：机核（2026-08-04） ｜ 原始：44" style="font-size:16px;color:#3fd68f">QUIET合作恐怖新作测试</a><a class="h4" href="https://www.bilibili.com/video/BV1LV3R6GEBj" target="_blank" title="热度数 H=47 ｜ 来源：KPL梗指南 ｜ 原始：43" style="font-size:16px;color:#3fd68f">KSG零封AG(0649)</a><a class="h4" href="https://news.17173.com/content/08042026/084147744.shtml" target="_blank" title="热度数 H=46 ｜ 来源：17173（2026-08-04） ｜ 原始：42" style="font-size:16px;color:#3fd68f">轮回之兽瘴气管理指南</a><a class="h4" href="https://www.zhihu.com/question/533106223" target="_blank" title="热度数 H=45 ｜ 来源：知乎热榜#18 ｜ 原始：41" style="font-size:16px;color:#3fd68f">LOL纯肉装性价比争议</a><a class="h4" href="https://store.steampowered.com/news/app/730/view/692016318956701712" target="_blank" title="热度数 H=43 ｜ 来源：CS2 Steam 官方新闻（2026-08-03） ｜ 原始：40" style="font-size:16px;color:#3fd68f">CS2版本更新</a><a class="h4" href="https://www.bilibili.com/video/BV1T53q62EU3" target="_blank" title="热度数 H=42 ｜ 来源：梗外之音第17期 ｜ 原始：39" style="font-size:16px;color:#3fd68f">后室破圈解读</a><a class="h4" href="https://store.steampowered.com/news/app/2507950/view/681883219789875639" target="_blank" title="热度数 H=41 ｜ 来源：三角洲行动 Steam 官方新闻（2026-08-03） ｜ 原始：38" style="font-size:16px;color:#3fd68f">三角洲违规处罚通知</a><a class="h4" href="https://www.gamersky.com/news/202608/2181716.shtml" target="_blank" title="热度数 H=40 ｜ 来源：游民星空（2026-08-03） ｜ 原始：37" style="font-size:16px;color:#3fd68f">PS4摊煎饼</a><a class="h4" href="https://www.bilibili.com/video/BV1k7396SEML" target="_blank" title="热度数 H=38 ｜ 来源：KPL梗指南 ｜ 原始：35" style="font-size:16px;color:#3fd68f">一诺人形白起玩白起</a><a class="h4" href="https://www.bilibili.com/video/BV1V93r6qERD" target="_blank" title="热度数 H=36 ｜ 来源：梗百科追更·小川CS2 ｜ 原始：33" style="font-size:16px;color:#3fd68f">小川CS2练枪图伪装BOT</a><a class="h4" href="https://www.bilibili.com/video/BV1nEgo6XEJY" target="_blank" title="热度数 H=34 ｜ 来源：梗百科追更·梗王P ｜ 原始：31" style="font-size:16px;color:#3fd68f">梗王P勇闯瓦罗兰特</a><a class="h4" href="https://www.zhihu.com/question/3228654638" target="_blank" title="热度数 H=32 ｜ 来源：知乎热榜#24 ｜ 原始：29" style="font-size:16px;color:#3fd68f">孙悟空为何杀沙鲁</a><a class="h4" href="https://www.bilibili.com/video/BV1Fauw6aEEk" target="_blank" title="热度数 H=28 ｜ 来源：皇室梗指南 ｜ 原始：26" style="font-size:16px;color:#3fd68f">KG渗透皇室战争</a><a class="h3" href="https://www.bilibili.com/video/BV1QwGT6ME9T" target="_blank" title="热度数 H=26 ｜ 来源：KPL梗指南 ｜ 原始：24" style="font-size:14px;color:#3fd68f">清清老夫子捆绑play</a></div><div class="wc-legend"><span><i style="background:#ff6b4a"></i>事件/风险</span><span><i style="background:#b388ff"></i>游戏/新品</span><span><i style="background:#4dabf7"></i>行业/数据</span><span><i style="background:#3fd68f"></i>梗/社区</span><span><i style="background:#a0aec0"></i>厂商/平台</span><span style="opacity:.7">共 40 条 · AI 阅读理解当日标题提炼 · 真实来源溯源</span></div><h3 style="margin-top:16px">TOP8 为什么热</h3><div class="wc-list"><div class="row"><span class="w" style="color:#3fd68f">FGO十周年×上美影PV</span><span class="why">H=100（全站第 1 位）· 命中来源：B站每周必看第384期 · 当日采集信号</span></div><div class="row"><span class="w" style="color:#3fd68f">抵抗者2026实机演示</span><span class="why">H=98（全站第 2 位）· 命中来源：B站每周必看第384期 · 当日采集信号</span></div><div class="row"><span class="w" style="color:#3fd68f">原神至冬交响音乐现场</span><span class="why">H=96（全站第 3 位）· 命中来源：B站热榜#9 · 当日采集信号</span></div><div class="row"><span class="w" style="color:#3fd68f">王者无尽之局皮肤CG</span><span class="why">H=93（全站第 4 位）· 命中来源：B站热榜#75、抖音热榜#22 · 当日采集信号</span></div><div class="row"><span class="w" style="color:#3fd68f">三角洲三选一赏金赛</span><span class="why">H=89（全站第 5 位）· 命中来源：B站全站排行·电子竞技 · 当日采集信号</span></div><div class="row"><span class="w" style="color:#3fd68f">澜·雾影狼魂皮肤爆料</span><span class="why">H=85（全站第 6 位）· 命中来源：B站全站排行·手机游戏 · 当日采集信号</span></div><div class="row"><span class="w" style="color:#3fd68f">绝区零蕾米埃尔EP</span><span class="why">H=83（全站第 7 位）· 命中来源：B站每周必看第384期 · 当日采集信号</span></div><div class="row"><span class="w" style="color:#3fd68f">火影手游百战虎皮爆料</span><span class="why">H=80（全站第 8 位）· 命中来源：抖音热榜#11 · 当日采集信号</span></div></div></div></section>
-<footer>GamePulse · 2026-07-30 · 模块化站点，每个页面可独立迭代</footer></div>
+</head>
+<body>
+<header><div class="hbar"><div class="logo">&#127918; GamePulse<em>·雷达</em></div><span class="chip">&#9729; 词云</span><span class="chip fresh">2026-08-10</span><nav><a href="index.html" target="_top">&#8962; 主站</a><a href="history.html">历史回顾</a></nav></div></header>
+<div class="wrap">
+<div class="hero"><h1>讨论热词词云</h1><p>玩家社区真实讨论热词（B站热搜 / 贴吧 / 梗雷达六路）+ 网站已收录参考。已过滤媒体·公众号名、宽泛行业词、非游戏内容；分类仅四色：事件炸点 / 行业议题 / 版本新品 / 梗社区（无舆情风险）。<b>字号=热度 H(0-100)</b>，<b>点击词条</b>可在右侧面板查看该词当日所有原始标题与链接（词条溯源）。</p></div>
+<section id="stat">
+<div class="sec-title"><span class="bar"></span>今日游戏圈讨论热词 <small>2026-08-10 · 48 词 · 热度数 H(0-100) 统一口径 · AI 阅读理解当日标题提炼</small></div>
+<div class="panel">
+<p class="note">热词来源：由 AI 直接阅读当日真实采集的标题（B站热门 / 每周必看 / 梗百科账号 / 行业媒体稿 / 贴吧玩家讨论），理解语义后提炼出游戏行业热词，每条都溯源到它实际出现过的真实来源链接（B站视频 / 媒体文章 / 官方公告 / 社区话题）。<b>绝不生成 search.bilibili.com 搜索链接、绝不跳 Steam 等商店购买页</b>；无真实来源链接的词不会进入词云。<b>热度数 H（0–100 全站统一口径）</b>：每条热词展示 H，原始评分仅作附注，禁止用来源字面热度值充当热度本身（自洽红线①）。</p>
+
+<!-- wordcloud2.js 词云主区域 -->
+<div class="wc-main">
+  <div class="wc-canvas-wrap" id="wc-canvas-wrap">
+    <canvas id="wc-canvas" width="800" height="520"></canvas>
+    <div class="wc-canvas-hint">词云由 wordcloud2.js 实时渲染 · 字号 = H 值 (0-100) 映射 · 颜色 = 分类编码</div>
+  </div>
+  <aside class="wc-trace" id="wc-trace">
+    <div class="wc-trace-header">
+      词条溯源 <span class="wc-trace-word" id="wc-trace-word"></span>
+      <span class="wc-trace-badge" id="wc-trace-badge" style="display:none"></span>
+    </div>
+    <div class="wc-trace-list" id="wc-trace-list">
+      <p class="wc-trace-empty">&#128070; 点击词云中的任意词条<br>查看该词当日所有原始标题与链接<br><small style="color:var(--dim)">约 17/48 词有溯源数据（共 21 条）</small></p>
+    </div>
+    <div class="wc-trace-footer">溯源数据来自当日 meme / hotlist 原始采集标题</div>
+  </aside>
+</div>
+
+<div class="wc-legend"><span><i style="background:#ff5c39"></i>事件/风险</span><span><i style="background:#9b6dff"></i>游戏/新品</span><span><i style="background:#4dabf7"></i>行业/数据</span><span><i style="background:#3fd68f"></i>梗/社区</span><span><i style="background:#a0aec0"></i>厂商/平台</span><span style="opacity:.7">共 48 条 · wordcloud2.js 实时渲染 · 字号=H(0-100) · 下方全量预览</span></div>
+<div class="wc-preview"><a class="wc-preview-item" href="https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356995" target="_blank" title="热度数 H=100 ｜ 来源：贴吧热议·Bin离队+圣枪哥 ｜ 原始：48" style="color:#b388ff"><span class="wc-pv-word">BLG·LOL</span><span class="wc-pv-h">H100</span></a><a class="wc-preview-item" href="https://search.bilibili.com/all?keyword=LGD+Somnus+Topson" target="_blank" title="热度数 H=92 ｜ 来源：B站热搜(160万)+搜索溯源 ｜ 原始：44" style="color:#b388ff"><span class="wc-pv-word">LGD·Dota2</span><span class="wc-pv-h">H92</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1Cnu16ZEnP" target="_blank" title="热度数 H=88 ｜ 来源：B站热门·提欧开播评分8.7 ｜ 原始：42" style="color:#b388ff"><span class="wc-pv-word">奥特曼</span><span class="wc-pv-h">H88</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1eCuV6XEga" target="_blank" title="热度数 H=83 ｜ 来源：B站热门·嘉年华潜伏+B站热搜(50万) ｜ 原始：40" style="color:#b388ff"><span class="wc-pv-word">穿越火线CF</span><span class="wc-pv-h">H83</span></a><a class="wc-preview-item" href="https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356995" target="_blank" title="热度数 H=83 ｜ 来源：贴吧热议·BLG撤海报 ｜ 原始：40" style="color:#b388ff"><span class="wc-pv-word">Bin离队</span><span class="wc-pv-h">H83</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1Cnu16ZEnP" target="_blank" title="热度数 H=75 ｜ 来源：B站热搜(47万)+B站热门 ｜ 原始：36" style="color:#b388ff"><span class="wc-pv-word">提欧奥特曼</span><span class="wc-pv-h">H75</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1egM16kE9D" target="_blank" title="热度数 H=75 ｜ 来源：B站热门·PV雾中朔望星回 ｜ 原始：36" style="color:#b388ff"><span class="wc-pv-word">异环1.3</span><span class="wc-pv-h">H75</span></a><a class="wc-preview-item" href="https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356982" target="_blank" title="热度数 H=73 ｜ 来源：贴吧热议·官宣加入 ｜ 原始：35" style="color:#b388ff"><span class="wc-pv-word">BLG圣枪哥</span><span class="wc-pv-h">H73</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1eCuV6XEga" target="_blank" title="热度数 H=71 ｜ 来源：B站热门·潜伏IP发布 ｜ 原始：34" style="color:#b388ff"><span class="wc-pv-word">CF嘉年华</span><span class="wc-pv-h">H71</span></a><a class="wc-preview-item" href="https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356990" target="_blank" title="热度数 H=71 ｜ 来源：B站热搜(84万)+贴吧·上海停运 ｜ 原始：34" style="color:#ff6b4a"><span class="wc-pv-word">台风白海豚</span><span class="wc-pv-h">H71</span></a><a class="wc-preview-item" href="https://search.bilibili.com/all?keyword=Topson+LGD+Dota2" target="_blank" title="热度数 H=62 ｜ 来源：B站热搜(82万)+搜索溯源 ｜ 原始：30" style="color:#b388ff"><span class="wc-pv-word">Topson入LGD</span><span class="wc-pv-h">H62</span></a><a class="wc-preview-item" href="https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356995" target="_blank" title="热度数 H=62 ｜ 来源：Bin离队·圣枪哥加入 ｜ 原始：30" style="color:#a0aec0"><span class="wc-pv-word">BLG</span><span class="wc-pv-h">H62</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1dSuM6VERb" target="_blank" title="热度数 H=58 ｜ 来源：B站热搜(50万)+B站热门第95集 ｜ 原始：28" style="color:#b388ff"><span class="wc-pv-word">牧神记</span><span class="wc-pv-h">H58</span></a><a class="wc-preview-item" href="https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356988" target="_blank" title="热度数 H=58 ｜ 来源：贴吧热议·北神树三连胜 ｜ 原始：28" style="color:#b388ff"><span class="wc-pv-word">JDG回暖</span><span class="wc-pv-h">H58</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1quug6JE11" target="_blank" title="热度数 H=54 ｜ 来源：B站热门·怪物学院 ｜ 原始：26" style="color:#b388ff"><span class="wc-pv-word">我的世界</span><span class="wc-pv-h">H54</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1k7396SEML" target="_blank" title="热度数 H=54 ｜ 来源：B站热门 ｜ 原始：26" style="color:#b388ff"><span class="wc-pv-word">AG超玩会</span><span class="wc-pv-h">H54</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1YYuN6tEWC" target="_blank" title="热度数 H=52 ｜ 来源：B站热门+梗百科·梗外之音 ｜ 原始：25" style="color:#3fd68f"><span class="wc-pv-word">后室乌鲁鲁</span><span class="wc-pv-h">H52</span></a><a class="wc-preview-item" href="https://search.bilibili.com/all?keyword=凡人���仙传186" target="_blank" title="热度数 H=50 ｜ 来源：B站热搜(51万)·186集+搜索溯源 ｜ 原始：24" style="color:#b388ff"><span class="wc-pv-word">凡人修仙传</span><span class="wc-pv-h">H50</span></a><a class="wc-preview-item" href="https://search.bilibili.com/all?keyword=LGD+Dota2" target="_blank" title="热度数 H=50 ｜ 来源：LGD/Topson/Somnus关联+搜索溯源 ｜ 原始：24" style="color:#b388ff"><span class="wc-pv-word">Dota2</span><span class="wc-pv-h">H50</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV16euL6qETC" target="_blank" title="热度数 H=50 ｜ 来源：B站热门·梨诺EP ｜ 原始：24" style="color:#b388ff"><span class="wc-pv-word">明日方舟终末地</span><span class="wc-pv-h">H50</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1P4uP6CEtg" target="_blank" title="热度数 H=50 ｜ 来源：梗百科·56万播放+B站热搜(46万) ｜ 原始：24" style="color:#3fd68f"><span class="wc-pv-word">竹知了</span><span class="wc-pv-h">H50</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1EwuK6BEir" target="_blank" title="热度数 H=46 ｜ 来源：B站热门·藏宝图教学 ｜ 原始：22" style="color:#b388ff"><span class="wc-pv-word">三角洲行动</span><span class="wc-pv-h">H46</span></a><a class="wc-preview-item" href="https://search.bilibili.com/all?keyword=LGD+Dota2" target="_blank" title="热度数 H=46 ｜ 来源：Somnus·Topson·Dota2+搜索溯源 ｜ 原始：22" style="color:#a0aec0"><span class="wc-pv-word">LGD</span><span class="wc-pv-h">H46</span></a><a class="wc-preview-item" href="https://search.bilibili.com/all?keyword=Somnus+LGD" target="_blank" title="热度数 H=42 ｜ 来源：B站热搜·LGD致谢+搜索溯源 ｜ 原始：20" style="color:#b388ff"><span class="wc-pv-word">Somnus试训</span><span class="wc-pv-h">H42</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV19Fu365EqG" target="_blank" title="热度数 H=42 ｜ 来源：B站热门 ｜ 原始：20" style="color:#b388ff"><span class="wc-pv-word">一拳超人</span><span class="wc-pv-h">H42</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1cPug69Ene" target="_blank" title="热度数 H=42 ｜ 来源：B站热搜(50万)+B站热门·终极功课 ｜ 原始：20" style="color:#b388ff"><span class="wc-pv-word">奥德赛</span><span class="wc-pv-h">H42</span></a><a class="wc-preview-item" href="https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356985" target="_blank" title="热度数 H=42 ｜ 来源：贴吧热议·女神同居 ｜ 原始：20" style="color:#b388ff"><span class="wc-pv-word">异环戏耍玩家</span><span class="wc-pv-h">H42</span></a><a class="wc-preview-item" href="https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356988" target="_blank" title="热度数 H=42 ｜ 来源：北��树三连胜 ｜ 原始：20" style="color:#a0aec0"><span class="wc-pv-word">JDG</span><span class="wc-pv-h">H42</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1sMGA6mE2V" target="_blank" title="热度数 H=38 ｜ 来源：梗百科·4.7万 ｜ 原始：18" style="color:#3fd68f"><span class="wc-pv-word">猫娘洗面奶</span><span class="wc-pv-h">H38</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1egM16kE9D" target="_blank" title="热度数 H=38 ｜ 来源：异环1.3PV ｜ 原始：18" style="color:#b388ff"><span class="wc-pv-word">雾中朔望</span><span class="wc-pv-h">H38</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1PP3B65EQh" target="_blank" title="热度数 H=38 ｜ 来源：B站热搜(122万)+梗百科·I'm back ｜ 原始：18" style="color:#3fd68f"><span class="wc-pv-word">C罗</span><span class="wc-pv-h">H38</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1wmu26FEWz" target="_blank" title="热度数 H=35 ｜ 来源：B站热门 ｜ 原始：17" style="color:#b388ff"><span class="wc-pv-word">碧蓝航线</span><span class="wc-pv-h">H35</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV16euL6qETC" target="_blank" title="热度数 H=33 ｜ 来源：终末地·Mirairo Rider ｜ 原始：16" style="color:#b388ff"><span class="wc-pv-word">梨诺EP</span><span class="wc-pv-h">H33</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV19Bun6gE2B" target="_blank" title="热度数 H=33 ｜ 来源：B站热门·同人接力 ｜ 原始：16" style="color:#b388ff"><span class="wc-pv-word">BA碧蓝档案</span><span class="wc-pv-h">H33</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1tCuT6bE8q" target="_blank" title="热度数 H=33 ｜ 来源：B站热门·奥特曼同人 ｜ 原始：16" style="color:#b388ff"><span class="wc-pv-word">光之创想季</span><span class="wc-pv-h">H33</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1LV3R6GEBj" target="_blank" title="热度数 H=31 ｜ 来源：B站热门 ｜ 原始：15" style="color:#b388ff"><span class="wc-pv-word">KSG</span><span class="wc-pv-h">H31</span></a><a class="wc-preview-item" href="https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356990" target="_blank" title="热度数 H=31 ｜ 来源：贴吧热议·地铁停运 ｜ 原始：15" style="color:#ff6b4a"><span class="wc-pv-word">台风上海停运</span><span class="wc-pv-h">H31</span></a><a class="wc-preview-item" href="https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356996" target="_blank" title="热度数 H=31 ｜ 来源：贴吧热议·鼠标涨价 ｜ 原始：15" style="color:#4dabf7"><span class="wc-pv-word">装机崩盘</span><span class="wc-pv-h">H31</span></a><a class="wc-preview-item" href="https://search.bilibili.com/all?keyword=IG+LNG" target="_blank" title="热度数 H=29 ｜ 来源：B站热搜(54万)+搜索溯源 ｜ 原始：14" style="color:#b388ff"><span class="wc-pv-word">IG·LNG</span><span class="wc-pv-h">H29</span></a><a class="wc-preview-item" href="https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356984" target="_blank" title="热度数 H=29 ｜ 来源：贴吧热议·台风天出游 ｜ 原始：14" style="color:#ff6b4a"><span class="wc-pv-word">男童被巨浪卷走</span><span class="wc-pv-h">H29</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1ZKub6PE7V" target="_blank" title="热度数 H=29 ｜ 来源：梗百科·3.8万 ｜ 原始：14" style="color:#3fd68f"><span class="wc-pv-word">秋茶烂梗</span><span class="wc-pv-h">H29</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1ocu46fE1z" target="_blank" title="热度数 H=29 ｜ 来源：B站热门·100人10万奖 ｜ 原始：14" style="color:#3fd68f"><span class="wc-pv-word">东方明珠躲猫猫</span><span class="wc-pv-h">H29</span></a><a class="wc-preview-item" href="https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356989" target="_blank" title="热度数 H=29 ｜ 来源：贴吧热议·日本咒骂 ｜ 原始：14" style="color:#ff6b4a"><span class="wc-pv-word">奥本海默</span><span class="wc-pv-h">H29</span></a><a class="wc-preview-item" href="https://search.bilibili.com/all?keyword=TT+TES" target="_blank" title="热度数 H=27 ｜ 来源：B站热搜(49万)+搜索溯源 ｜ 原始：13" style="color:#b388ff"><span class="wc-pv-word">TT·TES</span><span class="wc-pv-h">H27</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1V93r6qERD" target="_blank" title="热度数 H=27 ｜ 来源：梗百科·练枪图BOT ｜ 原始：13" style="color:#b388ff"><span class="wc-pv-word">瓦洛兰特</span><span class="wc-pv-h">H27</span></a><a class="wc-preview-item" href="https://search.bilibili.com/all?keyword=南天门计划" target="_blank" title="热度数 H=25 ｜ 来源：B站热搜(50万)·央视详解+搜索溯源 ｜ 原始：12" style="color:#4dabf7"><span class="wc-pv-word">南天门计划</span><span class="wc-pv-h">H25</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1MpuQ6QEUK" target="_blank" title="热度数 H=25 ｜ 来源：梗百科·原神相关 ｜ 原始：12" style="color:#b388ff"><span class="wc-pv-word">至冬执行官</span><span class="wc-pv-h">H25</span></a><a class="wc-preview-item" href="https://search.bilibili.com/all?keyword=宇树科技" target="_blank" title="热度数 H=21 ｜ 来源：B站热搜(54万)·今日申购+搜索溯源 ｜ 原始：10" style="color:#4dabf7"><span class="wc-pv-word">宇树科技</span><span class="wc-pv-h">H21</span></a></div>
+<h3 style="margin-top:16px">TOP8 为什么热</h3><div class="wc-list"><div class="row"><span class="w" style="color:#b388ff">LGD·Dota2</span><span class="why">H=92（全站第 1 位）· 命中来源：B站热搜(160万)、搜索溯源 · 当日采集信号</span></div><div class="row"><span class="w" style="color:#b388ff">BLG·LOL</span><span class="why">H=100（全站第 2 位）· 命中来源：贴吧热议·Bin离队+圣枪哥 · 当日采集信号</span></div><div class="row"><span class="w" style="color:#b388ff">奥特曼</span><span class="why">H=88（全站第 3 位）· 命中来源：B站热门·提欧开播评分8.7 · 当日采集信号</span></div><div class="row"><span class="w" style="color:#b388ff">穿越火线CF</span><span class="why">H=83（全站第 4 位）· 命中来源：B站热门·嘉年华潜伏、B站热搜(50万) · 当日采集信号</span></div><div class="row"><span class="w" style="color:#b388ff">Bin离队</span><span class="why">H=83（全站第 5 位）· 命中来源：贴吧热议·BLG撤海报 · 当日采集信号</span></div><div class="row"><span class="w" style="color:#b388ff">Topson入LGD</span><span class="why">H=62（全站第 6 位）· 命中来源：B站热搜(82万)、搜索溯源 · 当日采集信号</span></div><div class="row"><span class="w" style="color:#b388ff">提欧奥特曼</span><span class="why">H=75（全站第 7 位）· 命中来源：B站热搜(47万)、B站热门 · 当日采集信号</span></div><div class="row"><span class="w" style="color:#b388ff">异环1.3</span><span class="why">H=75（全站第 8 位）· 命中来源：B站热门·PV雾中朔望星回 · 当日采集信号</span></div></div>
+</div>
+</section>
+</div>
+<footer>GamePulse · 2026-07-30 · 模块化站点，每个页面可独立迭代</footer>
+
+<script id="wc-data" type="application/json">[["BLG·LOL", 48, "#b388ff", "游戏/新品", 100], ["LGD·Dota2", 44, "#b388ff", "游戏/新品", 92], ["奥特曼", 42, "#b388ff", "游戏/新品", 88], ["穿越火线CF", 40, "#b388ff", "游戏/新品", 83], ["Bin离队", 40, "#b388ff", "游戏/新品", 83], ["提欧奥特曼", 36, "#b388ff", "游戏/新品", 75], ["异环1.3", 36, "#b388ff", "游戏/新品", 75], ["BLG圣枪哥", 35, "#b388ff", "游戏/新品", 73], ["CF嘉年华", 34, "#b388ff", "游戏/新品", 71], ["台风白海豚", 34, "#ff6b4a", "事件/风险", 71], ["Topson入LGD", 30, "#b388ff", "游戏/新品", 62], ["BLG", 30, "#a0aec0", "厂商/平台", 62], ["牧神记", 28, "#b388ff", "游戏/新品", 58], ["JDG回暖", 28, "#b388ff", "游戏/新品", 58], ["我的世界", 26, "#b388ff", "游戏/新品", 54], ["AG超玩会", 26, "#b388ff", "游戏/新品", 54], ["后室乌鲁鲁", 25, "#3fd68f", "梗/社区", 52], ["凡人修仙传", 24, "#b388ff", "游戏/新品", 50], ["Dota2", 24, "#b388ff", "游戏/新品", 50], ["明日方舟终末地", 24, "#b388ff", "游戏/新品", 50], ["竹知了", 24, "#3fd68f", "梗/社区", 50], ["三角洲行动", 22, "#b388ff", "游戏/新品", 46], ["LGD", 22, "#a0aec0", "厂商/平台", 46], ["Somnus试训", 20, "#b388ff", "游戏/新品", 42], ["一拳超人", 20, "#b388ff", "游戏/新品", 42], ["奥德赛", 20, "#b388ff", "游戏/新品", 42], ["异环戏耍玩家", 20, "#b388ff", "游戏/新品", 42], ["JDG", 20, "#a0aec0", "厂商/平台", 42], ["猫娘洗面奶", 18, "#3fd68f", "梗/社区", 38], ["雾中朔望", 18, "#b388ff", "游戏/新品", 38], ["C罗", 18, "#3fd68f", "梗/社区", 38], ["碧蓝航线", 17, "#b388ff", "游戏/新品", 35], ["梨诺EP", 16, "#b388ff", "游戏/新品", 33], ["BA碧蓝档案", 16, "#b388ff", "游戏/新品", 33], ["光之创想季", 16, "#b388ff", "游戏/新品", 33], ["KSG", 15, "#b388ff", "游戏/新品", 31], ["台风上海停运", 15, "#ff6b4a", "事件/风险", 31], ["装机崩盘", 15, "#4dabf7", "行业/数据", 31], ["IG·LNG", 14, "#b388ff", "游戏/新品", 29], ["男童被巨浪卷走", 14, "#ff6b4a", "事件/风险", 29], ["秋茶烂梗", 14, "#3fd68f", "梗/社区", 29], ["东方明珠躲猫猫", 14, "#3fd68f", "梗/社区", 29], ["奥本海默", 14, "#ff6b4a", "事件/风险", 29], ["TT·TES", 13, "#b388ff", "游戏/新品", 27], ["瓦洛兰特", 13, "#b388ff", "游戏/新品", 27], ["南天门计划", 12, "#4dabf7", "行业/数据", 25], ["至冬执行官", 12, "#b388ff", "游戏/新品", 25], ["宇树科技", 10, "#4dabf7", "行业/数据", 21]]</script>
+<script id="wc-trace-data" type="application/json">{"BLG·LOL": {"H": 100, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356995", "sources": []}, "LGD·Dota2": {"H": 92, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://search.bilibili.com/all?keyword=LGD+Somnus+Topson", "sources": []}, "奥特曼": {"H": 88, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.bilibili.com/video/BV1Cnu16ZEnP", "sources": [{"title": "评分8.7！我们奥特曼有救啦！提欧奥特曼开播吐槽！", "url": "https://www.bilibili.com/video/BV1Cnu16ZEnP", "source": "B站·热门"}, {"title": "怪兽中 出了一个奥特曼的卧底", "url": "https://www.bilibili.com/video/BV1gnub6REqy", "source": "B站·热门"}, {"title": "【同人动画】致以辉煌的人 【奥特曼光之创想季】", "url": "https://www.bilibili.com/video/BV1tCuT6bE8q", "source": "B站·热门"}, {"title": "8岁男孩模仿奥特曼，从2.6米高处跳下致双脚跟骨折，目前男孩不能行走 只能卧床休养，家长：孩子看动画要做好安全教育，帮他们分清特效与现实", "url": "https://www.bilibili.com/video/BV1Ugu36qEXm", "source": "B站·热门"}]}, "穿越火线CF": {"H": 83, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.bilibili.com/video/BV1eCuV6XEga", "sources": []}, "Bin离队": {"H": 83, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356995", "sources": []}, "提欧奥特曼": {"H": 75, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.bilibili.com/video/BV1Cnu16ZEnP", "sources": [{"title": "评分8.7！我们奥特曼有救啦！提欧奥特曼开播吐槽！", "url": "https://www.bilibili.com/video/BV1Cnu16ZEnP", "source": "B站·热门"}]}, "异环1.3": {"H": 75, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.bilibili.com/video/BV1egM16kE9D", "sources": []}, "BLG圣枪哥": {"H": 73, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356982", "sources": []}, "CF嘉年华": {"H": 71, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.bilibili.com/video/BV1eCuV6XEga", "sources": []}, "台风白海豚": {"H": 71, "color": "#ff6b4a", "cat": "事件/风险", "primary_url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356990", "sources": []}, "Topson入LGD": {"H": 62, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://search.bilibili.com/all?keyword=Topson+LGD+Dota2", "sources": []}, "BLG": {"H": 62, "color": "#a0aec0", "cat": "厂商/平台", "primary_url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356995", "sources": [{"title": "Bin疑似离队,BLG撤海报", "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356995&amp;topic_name=Bin%E7%96%91%E4%BC%BC%E7%A6%BB%E9%98%9F%2CBLG%E6%92%A4%E6%B5%B7%E6%8A%A5", "source": "贴吧热议"}, {"title": "闹剧结束,BLG官宣圣枪哥加入", "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356982&amp;topic_name=%E9%97%B9%E5%89%A7%E7%BB%93%E6%9D%9F%2CBLG%E5%AE%98%E5%AE%A3%E5%9C%A3%E6%9E%AA%E5%93%A5%E5%8A%A0%E5%85%A5", "source": "贴吧热议"}]}, "牧神记": {"H": 58, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.bilibili.com/video/BV1dSuM6VERb", "sources": [{"title": "【独家】牧神记 第95集 皇帝“驾崩”", "url": "https://www.bilibili.com/video/BV1dSuM6VERb", "source": "B站·热门"}]}, "JDG回暖": {"H": 58, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356988", "sources": []}, "我的世界": {"H": 54, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.bilibili.com/video/BV1quug6JE11", "sources": [{"title": "[我的世界怪物学院] 逗逗小乐魂", "url": "https://www.bilibili.com/video/BV1quug6JE11", "source": "B站·热门"}]}, "AG超玩会": {"H": 54, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.bilibili.com/video/BV1k7396SEML", "sources": []}, "后室乌鲁鲁": {"H": 52, "color": "#3fd68f", "cat": "梗/社区", "primary_url": "https://www.bilibili.com/video/BV1YYuN6tEWC", "sources": []}, "凡人修仙传": {"H": 50, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://search.bilibili.com/all?keyword=凡人���仙传186", "sources": []}, "Dota2": {"H": 50, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://search.bilibili.com/all?keyword=LGD+Dota2", "sources": []}, "明日方舟终末地": {"H": 50, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.bilibili.com/video/BV16euL6qETC", "sources": []}, "竹知了": {"H": 50, "color": "#3fd68f", "cat": "梗/社区", "primary_url": "https://www.bilibili.com/video/BV1P4uP6CEtg", "sources": [{"title": "【详解】竹知了是什么梗？【网梗指南】", "url": "https://www.bilibili.com/video/BV1P4uP6CEtg", "source": "B站·梗指南"}]}, "三角洲行动": {"H": 46, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.bilibili.com/video/BV1EwuK6BEir", "sources": []}, "LGD": {"H": 46, "color": "#a0aec0", "cat": "厂商/平台", "primary_url": "https://search.bilibili.com/all?keyword=LGD+Dota2", "sources": []}, "Somnus试训": {"H": 42, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://search.bilibili.com/all?keyword=Somnus+LGD", "sources": []}, "一拳超人": {"H": 42, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.bilibili.com/video/BV19Fu365EqG", "sources": []}, "奥德赛": {"H": 42, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.bilibili.com/video/BV1cPug69Ene", "sources": [{"title": "20分钟《奥德赛》终极功课！原著/内核/影厅选择，一期视频全搞懂！", "url": "https://www.bilibili.com/video/BV1cPug69Ene", "source": "B站·热门"}]}, "异环戏耍玩家": {"H": 42, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356985", "sources": [{"title": "异环戏耍玩家,女神同居纯幻想", "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356985&amp;topic_name=%E5%BC%82%E7%8E%AF%E6%88%8F%E8%80%8D%E7%8E%A9%E5%AE%B6%2C%E5%A5%B3%E7%A5%9E%E5%90%8C%E5%B1%85%E7%BA%AF%E5%B9%BB%E6%83%B3", "source": "贴吧热议"}]}, "JDG": {"H": 42, "color": "#a0aec0", "cat": "厂商/平台", "primary_url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356988", "sources": [{"title": "北神树拿三连胜,JDG状态回暖", "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356988&amp;topic_name=%E5%8C%97%E7%A5%9E%E6%A0%91%E6%8B%BF%E4%B8%89%E8%BF%9E%E8%83%9C%2CJDG%E7%8A%B6%E6%80%81%E5%9B%9E%E6%9A%96", "source": "贴吧热议"}]}, "猫娘洗面奶": {"H": 38, "color": "#3fd68f", "cat": "梗/社区", "primary_url": "https://www.bilibili.com/video/BV1sMGA6mE2V", "sources": [{"title": "猫娘洗面奶是什么梗？男生用洗面奶会变成猫娘？【网梗指南】", "url": "https://www.bilibili.com/video/BV1sMGA6mE2V", "source": "B站·梗指南"}]}, "雾中朔望": {"H": 38, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.bilibili.com/video/BV1egM16kE9D", "sources": [{"title": "《异环》1.3版本PV「雾中朔望星回」", "url": "https://www.bilibili.com/video/BV1egM16kE9D", "source": "B站·热门"}]}, "C罗": {"H": 38, "color": "#3fd68f", "cat": "梗/社区", "primary_url": "https://www.bilibili.com/video/BV1PP3B65EQh", "sources": [{"title": "【足球梗指南】C罗的那句I&#x27;m back，被玩成了哪些意思？", "url": "https://www.bilibili.com/video/BV1PP3B65EQh", "source": "B站·梗指南"}]}, "碧蓝航线": {"H": 35, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.bilibili.com/video/BV1wmu26FEWz", "sources": []}, "梨诺EP": {"H": 33, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.bilibili.com/video/BV16euL6qETC", "sources": [{"title": "《明日方舟：终末地》梨诺EP - Mirairo Rider", "url": "https://www.bilibili.com/video/BV16euL6qETC", "source": "B站·热门"}]}, "BA碧蓝档案": {"H": 33, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.bilibili.com/video/BV19Bun6gE2B", "sources": []}, "光之创想季": {"H": 33, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.bilibili.com/video/BV1tCuT6bE8q", "sources": [{"title": "【同人动画】致以辉煌的人 【奥特曼光之创想季】", "url": "https://www.bilibili.com/video/BV1tCuT6bE8q", "source": "B站·热门"}]}, "KSG": {"H": 31, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.bilibili.com/video/BV1LV3R6GEBj", "sources": []}, "台风上海停运": {"H": 31, "color": "#ff6b4a", "cat": "事件/风险", "primary_url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356990", "sources": []}, "装机崩盘": {"H": 31, "color": "#4dabf7", "cat": "行业/数据", "primary_url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356996", "sources": []}, "IG·LNG": {"H": 29, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://search.bilibili.com/all?keyword=IG+LNG", "sources": []}, "男童被巨浪卷走": {"H": 29, "color": "#ff6b4a", "cat": "事件/风险", "primary_url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356984", "sources": [{"title": "台风天出游,男童被巨浪卷走", "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356984&amp;topic_name=%E5%8F%B0%E9%A3%8E%E5%A4%A9%E5%87%BA%E6%B8%B8%2C%E7%94%B7%E7%AB%A5%E8%A2%AB%E5%B7%A8%E6%B5%AA%E5%8D%B7%E8%B5%B0", "source": "贴吧热议"}]}, "秋茶烂梗": {"H": 29, "color": "#3fd68f", "cat": "梗/社区", "primary_url": "https://www.bilibili.com/video/BV1ZKub6PE7V", "sources": [{"title": "秋茶烂梗！秋天的第一杯奶茶是什么梗？每年都要翻红！【网梗指南】", "url": "https://www.bilibili.com/video/BV1ZKub6PE7V", "source": "B站·梗指南"}]}, "东方明珠躲猫猫": {"H": 29, "color": "#3fd68f", "cat": "梗/社区", "primary_url": "https://www.bilibili.com/video/BV1ocu46fE1z", "sources": []}, "奥本海默": {"H": 29, "color": "#ff6b4a", "cat": "事件/风险", "primary_url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356989", "sources": [{"title": "急眼了,日本人做法咒奥本海默", "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356989&amp;topic_name=%E6%80%A5%E7%9C%BC%E4%BA%86%2C%E6%97%A5%E6%9C%AC%E4%BA%BA%E5%81%9A%E6%B3%95%E5%92%92%E5%A5%A5%E6%9C%AC%E6%B5%B7%E9%BB%98", "source": "贴吧热议"}]}, "TT·TES": {"H": 27, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://search.bilibili.com/all?keyword=TT+TES", "sources": []}, "瓦洛兰特": {"H": 27, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.bilibili.com/video/BV1V93r6qERD", "sources": []}, "南天门计划": {"H": 25, "color": "#4dabf7", "cat": "行业/数据", "primary_url": "https://search.bilibili.com/all?keyword=南天门计划", "sources": []}, "至冬执行官": {"H": 25, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.bilibili.com/video/BV1MpuQ6QEUK", "sources": []}, "宇树科技": {"H": 21, "color": "#4dabf7", "cat": "行业/数据", "primary_url": "https://search.bilibili.com/all?keyword=宇树科技", "sources": []}}</script>
+<script>
+(function() {
+  var canvas = document.getElementById('wc-canvas');
+  if (!canvas || typeof WordCloud === 'undefined') {
+    console.error('wordcloud2.js 未加载或 canvas 不存在');
+    return;
+  }
+
+  // ---- 读取内联数据 ----
+  var wcList = JSON.parse(document.getElementById('wc-data').textContent);
+  var traceMap = JSON.parse(document.getElementById('wc-trace-data').textContent);
+
+  // 构建 color lookup
+  var colorMap = {};
+  wcList.forEach(function(item) { colorMap[item[0]] = item[2]; });
+
+  // 构建 category lookup
+  var catMap = {};
+  wcList.forEach(function(item) { catMap[item[0]] = item[3]; });
+
+  // 构建 H lookup
+  var hMap = {};
+  wcList.forEach(function(item) { hMap[item[0]] = item[4]; });
+
+  // 构建 wordcloud2.js 兼容的列表：[word, weight]
+  var wordList = wcList.map(function(item) {
+    return [item[0], item[1]];
+  });
+
+  // ---- wordcloud2.js 配置 ----
+  var options = {
+    list: wordList,
+    gridSize: 9,
+    weightFactor: function(w) {
+      // 映射 H=100 → ~52px, H=30 → ~16px, 产生明显字号落差
+      return Math.pow(w, 0.65) * 3.2;
+    },
+    fontFamily: '"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif',
+    color: function(word, weight, fontSize, distance, theta) {
+      return colorMap[word] || '#3fd68f';
+    },
+    backgroundColor: '#161b22',
+    rotateRatio: 0.08,
+    shape: 'square',
+    ellipticity: 0.72,
+    minSize: 11,
+    weightMode: 'size',
+    clearCanvas: true,
+    shrinkToFit: true,
+    drawOutOfBound: false,
+    hover: function(item, dimension, event) {
+      if (!item) return;
+      var word = item[0];
+      canvas.style.cursor = 'pointer';
+      // 移除非当前 tooltip
+      var old = document.querySelector('.wc-tooltip');
+      if (old) old.remove();
+      var tip = document.createElement('div');
+      tip.className = 'wc-tooltip';
+      var h = hMap[word] || '--';
+      var cat = catMap[word] || '梗/社区';
+      tip.innerHTML = '<b>' + word + '</b><span>H=' + h + ' · ' + cat + '</span>';
+      document.getElementById('wc-canvas-wrap').appendChild(tip);
+      var rect = canvas.getBoundingClientRect();
+      var wrapRect = document.getElementById('wc-canvas-wrap').getBoundingClientRect();
+      tip.style.left = (event.clientX - wrapRect.left + 14) + 'px';
+      tip.style.top = (event.clientY - wrapRect.top - 48) + 'px';
+    },
+    click: function(item, dimension, event) {
+      if (!item) return;
+      var word = item[0];
+      showTrace(word);
+    },
+    abortThreshold: 0,
+    wait: 8
+  };
+
+  WordCloud(canvas, options);
+
+  // 移除 hover 时 tooltip
+  canvas.addEventListener('mouseleave', function() {
+    canvas.style.cursor = 'default';
+    var tip = document.querySelector('.wc-tooltip');
+    if (tip) tip.remove();
+  });
+
+  // ---- 溯源侧边栏交互 ----
+  function showTrace(word) {
+    var traceEl = document.getElementById('wc-trace');
+    var wordEl = document.getElementById('wc-trace-word');
+    var badgeEl = document.getElementById('wc-trace-badge');
+    var listEl = document.getElementById('wc-trace-list');
+
+    wordEl.textContent = word;
+    traceEl.classList.add('active');
+
+    var info = traceMap[word];
+    if (!info || !info.sources || info.sources.length === 0) {
+      // 显示主链接作为回退
+      badgeEl.style.display = 'inline-block';
+      badgeEl.textContent = 'H=' + (info ? info.H : '--');
+      badgeEl.style.color = info ? info.color : 'var(--sub)';
+      badgeEl.style.borderColor = info ? info.color : 'var(--border)';
+      badgeEl.style.background = info ? info.color + '18' : 'var(--panel2)';
+
+      var html = '';
+      if (info && info.primary_url) {
+        html += '<a class="wc-trace-item" href="' + info.primary_url + '" target="_blank">'
+             + '<span class="ts-title">' + word + '</span>'
+             + '<span class="ts-meta"><span class="ts-primary">主源</span>'
+             + '<span class="ts-source">策展输入</span></span></a>';
+      }
+      html += '<p class="wc-trace-empty" style="padding-top:var(--space-md)">该词当日未匹配到额外溯源标题<br><small>溯源基于 meme / hotlist 原始采集交叉比对</small></p>';
+      listEl.innerHTML = html;
+      return;
+    }
+
+    badgeEl.style.display = 'inline-block';
+    badgeEl.textContent = 'H=' + info.H + ' · ' + info.sources.length + '条溯源';
+    badgeEl.style.color = info.color;
+    badgeEl.style.borderColor = info.color;
+    badgeEl.style.background = info.color + '18';
+
+    var items = info.sources.map(function(src, idx) {
+      var isPrimary = info.primary_url && src.url === info.primary_url;
+      return '<a class="wc-trace-item" href="' + src.url + '" target="_blank">'
+           + '<span class="ts-title">' + src.title + '</span>'
+           + '<span class="ts-meta">'
+           + (isPrimary ? '<span class="ts-primary">主源</span>' : '')
+           + '<span class="ts-source">' + src.source + '</span></span></a>';
+    });
+    listEl.innerHTML = items.join('');
+
+    // 平滑滚动到顶部
+    listEl.scrollTop = 0;
+  }
+
+  // 页面加载后预选第一个高热词显示溯源
+  setTimeout(function() {
+    if (wcList.length > 0) {
+      showTrace(wcList[0][0]);
+    }
+  }, 600);
+})();
+</script>
 
 </body></html>

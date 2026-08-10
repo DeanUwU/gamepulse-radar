@@ -10,7 +10,7 @@
 import json, io, os, sys, datetime, re
 
 BASE = os.path.dirname(os.path.abspath(__file__))
-INDEX_PATH = os.path.join(BASE, "index.html")
+INDEX_PATH = os.path.join(BASE, "index_v2.html")
 
 doc = json.load(io.open(os.path.join(BASE, 'events.json'), encoding='utf-8'))
 scaffold = doc['scaffold']
@@ -56,9 +56,33 @@ m_fwd = re.search(r'(<section id="forward">.*?</section>)', out, re.S)
 m_feed = re.search(
     r'(<div style="margin:\s*\d+px[^"]*信源快报.*?</table>)', out, re.S)
 
+# --- 增强日历 CSS（2026-08-06 放大单元格 + 更多品类覆盖） ---
+CAL_ENHANCED_CSS = r"""<style>
+/* ===== 日历视觉优化 v3（2026-08-06 放大） ===== */
+.cal-grid{border-collapse:collapse;width:100%;table-layout:fixed}
+.cal-grid th{font-size:12px;color:var(--sub);font-weight:700;padding:10px 4px;border-bottom:2px solid var(--border);text-transform:uppercase;letter-spacing:.06em}
+.cal-grid td{border:1px solid var(--border);vertical-align:top;min-height:110px;padding:8px 9px;font-size:12.5px;background:var(--panel)}
+.cal-cell .cd{font-weight:800;color:var(--accent);font-size:13px;margin-bottom:5px;display:inline-block;padding:2px 7px;border-radius:4px;background:rgba(255,92,57,.1)}
+.cal-cell.today{background:rgba(255,92,57,.08);box-shadow:inset 0 0 0 2px var(--accent)}
+.cal-cell.today .cd{background:var(--accent);color:#fff}
+.cal-ev{display:block;margin-bottom:4px;padding:5px 8px;border-radius:7px;background:linear-gradient(135deg,var(--panel2),rgba(77,163,255,.04));
+  border-left:3px solid var(--blue);color:var(--txt);font-size:11.5px;line-height:1.5;
+  white-space:normal;overflow:hidden;text-overflow:ellipsis;transition:all .15s}
+.cal-ev:hover{text-decoration:none;color:#fff;background:linear-gradient(135deg,rgba(77,163,255,.15),var(--panel2));border-left-color:var(--gold);transform:translateX(2px)}
+.cal-ev b{color:var(--gold);font-weight:700}
+.cal-ev.guess{border-left-style:dashed;opacity:.78;background:repeating-linear-gradient(-45deg,var(--panel2),var(--panel2) 3px,rgba(255,176,32,.03) 3px,rgba(255,176,32,.03) 6px)}
+.cal-legend{margin-top:10px;font-size:11px;color:var(--sub)}
+.cal-legend span{display:inline-block;margin-right:12px}
+.cal-legend i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:4px;vertical-align:middle}
+@media(max-width:640px){.cal-grid td{min-height:90px;padding:5px 6px;font-size:11px}.cal-ev{font-size:10px;padding:3px 5px}.cal-cell .cd{font-size:11px}}
+</style>"""
+
 cal_section = ""
 if m_cal:
-    cal_section += m_cal.group(1)
+    cal_sec = m_cal.group(1)
+    # 替换日历 CSS 为增强版
+    cal_sec = re.sub(r'<style>.*?</style>', CAL_ENHANCED_CSS, cal_sec, flags=re.S)
+    cal_section += cal_sec
 if m_fwd:
     cal_section += "\n" + m_fwd.group(1)
 if m_feed:
@@ -68,13 +92,36 @@ if not cal_section:
     print("ERROR: 未能从 scaffold 中提取日历区块", file=sys.stderr)
     sys.exit(1)
 
+# --- 动态覆盖游戏列表（2026-08-06：从 events 实算，不写死） ---
+active_games = []
+seen_gs = set()
+for ev in events:
+    g = ev.get("game", "")
+    if g and g not in seen_gs and ev.get("anchor", "").strip():
+        seen_gs.add(g)
+        active_games.append(g)
+skip_note = {"全行业", "主机/PC 大作", "主机/PC新作", "ChinaJoy 2026", "和平精英 / 王者荣耀", "蛋仔派对 × 永劫无间"}
+core_games = [g for g in active_games if g not in skip_note]
+extra_cats = [g for g in active_games if g in skip_note]
+game_list_str = " / ".join(core_games[:35])
+if len(core_games) > 35:
+    game_list_str += f" + {len(core_games) - 35} 款"
+if extra_cats:
+    game_list_str += "；" + " / ".join(extra_cats)
+coverage_note = (
+    f'覆盖：{game_list_str}。只保留：新版本 / 新角色 / 联动 / 前瞻 / 大型活动 / 电竞赛事。'
+    '实线=官方已官宣，<b>虚线边=前瞻情报（待官方确认）</b>。')
+cal_section = re.sub(
+    r'覆盖：.*?(?=。只保留)', coverage_note,
+    cal_section, flags=re.S)
+
 # --- 注入 index.html ---
 index_html = io.open(INDEX_PATH, encoding="utf-8").read()
 
 # 找到 index.html 中日历区块的边界：
 # 从 <section id="cal"> 开始，到信源快报 </table> 结束
 # 后面紧接 <section id="source">
-m_cal_start = re.search(r'<section id="cal">', index_html)
+m_cal_start = re.search(r'<section id="cal"', index_html)
 m_source_start = re.search(r'<section id="source"', index_html)
 
 if not m_cal_start:

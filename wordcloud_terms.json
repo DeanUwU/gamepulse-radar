@@ -1,53 +1,457 @@
 {
   "date": "2026-08-10",
+  "generated": "2026-08-10T15:00:00",
   "terms": [
-    {"term":"LGD·Dota2","href":"https://search.bilibili.com/all?keyword=LGD+Somnus+Topson","cat":"游戏/新品","heat":55,"sources":["B站热搜(160万)"]},
-    {"term":"BLG·LOL","href":"https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356995","cat":"游戏/新品","heat":48,"sources":["贴吧热议·Bin离队+圣枪哥"]},
-    {"term":"奥特曼","href":"https://www.bilibili.com/video/BV1Cnu16ZEnP","cat":"游戏/新品","heat":42,"sources":["B站热门·提欧开播评分8.7"]},
-    {"term":"穿越火线CF","href":"https://www.bilibili.com/video/BV1eCuV6XEga","cat":"游戏/新品","heat":40,"sources":["B站热门·嘉年华潜伏","B站热搜(50万)"]},
-    {"term":"Bin离队","href":"https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356995","cat":"游戏/新品","heat":40,"sources":["贴吧热议·BLG撤海报"]},
-    {"term":"Topson入LGD","href":"https://search.bilibili.com/all?keyword=Topson+LGD+Dota2","cat":"游戏/新品","heat":38,"sources":["B站热搜(82万)"]},
-    {"term":"提欧奥特曼","href":"https://www.bilibili.com/video/BV1Cnu16ZEnP","cat":"游戏/新品","heat":36,"sources":["B站热搜(47万)","B站热门"]},
-    {"term":"异环1.3","href":"https://www.bilibili.com/video/BV1egM16kE9D","cat":"游戏/新品","heat":36,"sources":["B站热门·PV雾中朔望星回"]},
-    {"term":"BLG圣枪哥","href":"https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356982","cat":"游戏/新品","heat":35,"sources":["贴吧热议·官宣加入"]},
-    {"term":"CF嘉年华","href":"https://www.bilibili.com/video/BV1eCuV6XEga","cat":"游戏/新品","heat":34,"sources":["B站热门·潜伏IP发布"]},
-    {"term":"台风白海豚","href":"https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356990","cat":"事件/风险","heat":34,"sources":["B站热搜(84万)","贴吧·上海停运"]},
-    {"term":"凡人修仙传","href":"https://search.bilibili.com/all?keyword=凡人���仙传186","cat":"游戏/新品","heat":30,"sources":["B站热搜(51万)·186集"]},
-    {"term":"Dota2","href":"https://search.bilibili.com/all?keyword=LGD+Dota2","cat":"游戏/新品","heat":30,"sources":["LGD/Topson/Somnus关联"]},
-    {"term":"牧神记","href":"https://www.bilibili.com/video/BV1dSuM6VERb","cat":"游戏/新品","heat":28,"sources":["B站热搜(50万)","B站热门第95集"]},
-    {"term":"JDG回暖","href":"https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356988","cat":"游戏/新品","heat":28,"sources":["贴吧热议·北神树三连胜"]},
-    {"term":"Somnus试训","href":"https://search.bilibili.com/all?keyword=Somnus+LGD","cat":"游戏/新品","heat":26,"sources":["B站热搜·LGD致谢"]},
-    {"term":"我的世界","href":"https://www.bilibili.com/video/BV1quug6JE11","cat":"游戏/新品","heat":26,"sources":["B站热门·怪物学院"]},
-    {"term":"AG超玩会","href":"https://www.bilibili.com/video/BV1k7396SEML","cat":"游戏/新品","heat":26,"sources":["B站热门"]},
-    {"term":"后室乌鲁鲁","href":"https://www.bilibili.com/video/BV1YYuN6tEWC","cat":"梗/社区","heat":25,"sources":["B站热门","梗百科·梗外之音"]},
-    {"term":"明日方舟终末地","href":"https://www.bilibili.com/video/BV16euL6qETC","cat":"游戏/新品","heat":24,"sources":["B站热门·梨诺EP"]},
-    {"term":"竹知了","href":"https://www.bilibili.com/video/BV1P4uP6CEtg","cat":"梗/社区","heat":24,"sources":["梗百科·56万播放","B站热搜(46万)"]},
-    {"term":"三角洲行动","href":"https://www.bilibili.com/video/BV1EwuK6BEir","cat":"游戏/新品","heat":22,"sources":["B站热门·藏宝图教学"]},
-    {"term":"一拳超人","href":"https://www.bilibili.com/video/BV19Fu365EqG","cat":"游戏/新品","heat":20,"sources":["B站热门"]},
-    {"term":"奥德赛","href":"https://www.bilibili.com/video/BV1cPug69Ene","cat":"游戏/新品","heat":20,"sources":["B站热搜(50万)","B站热门·终极功课"]},
-    {"term":"异环戏耍玩家","href":"https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356985","cat":"游戏/新品","heat":20,"sources":["贴吧热议·女神同居"]},
-    {"term":"猫娘洗面奶","href":"https://www.bilibili.com/video/BV1sMGA6mE2V","cat":"梗/社区","heat":18,"sources":["梗百科·4.7万"]},
-    {"term":"雾中朔望","href":"https://www.bilibili.com/video/BV1egM16kE9D","cat":"游戏/新品","heat":18,"sources":["异环1.3PV"]},
-    {"term":"C罗","href":"https://www.bilibili.com/video/BV1PP3B65EQh","cat":"梗/社区","heat":18,"sources":["B站热搜(122万)","梗百科·I'm back"]},
-    {"term":"IG·LNG","href":"https://search.bilibili.com/all?keyword=IG+LNG","cat":"游戏/新品","heat":18,"sources":["B站热搜(54万)"]},
-    {"term":"碧蓝航线","href":"https://www.bilibili.com/video/BV1wmu26FEWz","cat":"游戏/新品","heat":17,"sources":["B站热门"]},
-    {"term":"TT·TES","href":"https://search.bilibili.com/all?keyword=TT+TES","cat":"游戏/新品","heat":17,"sources":["B站热搜(49万)"]},
-    {"term":"梨诺EP","href":"https://www.bilibili.com/video/BV16euL6qETC","cat":"游戏/新品","heat":16,"sources":["终末地·Mirairo Rider"]},
-    {"term":"BA碧蓝档案","href":"https://www.bilibili.com/video/BV19Bun6gE2B","cat":"游戏/新品","heat":16,"sources":["B站热门·同人接力"]},
-    {"term":"光之创想季","href":"https://www.bilibili.com/video/BV1tCuT6bE8q","cat":"游戏/新品","heat":16,"sources":["B站热门·奥特曼同人"]},
-    {"term":"KSG","href":"https://www.bilibili.com/video/BV1LV3R6GEBj","cat":"游戏/新品","heat":15,"sources":["B站热门"]},
-    {"term":"南天门计划","href":"https://search.bilibili.com/all?keyword=南天门计划","cat":"行业/数据","heat":15,"sources":["B站热搜(50万)·央视详解"]},
-    {"term":"台风上海停运","href":"https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356990","cat":"事件/风险","heat":15,"sources":["贴吧热议·地铁停运"]},
-    {"term":"装机崩盘","href":"https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356996","cat":"行业/数据","heat":15,"sources":["贴吧热议·鼠标涨价"]},
-    {"term":"男童被巨浪卷走","href":"https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356984","cat":"事件/风险","heat":14,"sources":["贴吧热议·台风天出游"]},
-    {"term":"秋茶烂梗","href":"https://www.bilibili.com/video/BV1ZKub6PE7V","cat":"梗/社区","heat":14,"sources":["梗百科·3.8万"]},
-    {"term":"东方明珠躲猫猫","href":"https://www.bilibili.com/video/BV1ocu46fE1z","cat":"梗/社区","heat":14,"sources":["B站热门·100人10万奖"]},
-    {"term":"奥本海默","href":"https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356989","cat":"事件/风险","heat":14,"sources":["贴吧热议·日本咒骂"]},
-    {"term":"宇树科技","href":"https://search.bilibili.com/all?keyword=宇树科技","cat":"行业/数据","heat":13,"sources":["B站热搜(54万)·今日申购"]},
-    {"term":"瓦洛兰特","href":"https://www.bilibili.com/video/BV1V93r6qERD","cat":"游戏/新品","heat":13,"sources":["梗百科·练枪图BOT"]},
-    {"term":"至冬执行官","href":"https://www.bilibili.com/video/BV1MpuQ6QEUK","cat":"游戏/新品","heat":12,"sources":["梗百科·原神相关"]},
-    {"term":"BLG","href":"https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356995","cat":"厂商/平台","heat":30,"sources":["Bin离队·圣枪哥加入"]},
-    {"term":"LGD","href":"https://search.bilibili.com/all?keyword=LGD+Dota2","cat":"厂商/平台","heat":28,"sources":["Somnus·Topson·Dota2"]},
-    {"term":"JDG","href":"https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356988","cat":"厂商/平台","heat":20,"sources":["北��树三连胜"]}
+    {
+      "term": "异环1.3",
+      "href": "https://www.bilibili.com/video/BV1egM16kE9D",
+      "heat": 55,
+      "sources": [
+        "B站热门"
+      ],
+      "cat": "game"
+    },
+    {
+      "term": "雾海之下",
+      "href": "https://www.bilibili.com/video/BV17vuw68E58",
+      "heat": 82,
+      "sources": [
+        "B站每周必看"
+      ],
+      "cat": "game"
+    },
+    {
+      "term": "原神至冬",
+      "href": "https://www.bilibili.com/video/BV1riGw6zELu",
+      "heat": 58,
+      "sources": [
+        "B站每周必看"
+      ],
+      "cat": "game"
+    },
+    {
+      "term": "���者荣耀皮肤",
+      "href": "https://www.bilibili.com/video/BV1z33f6FEri",
+      "heat": 52,
+      "sources": [
+        "B站每周必看"
+      ],
+      "cat": "game"
+    },
+    {
+      "term": "FGO十周年",
+      "href": "https://www.bilibili.com/video/BV1Te3s6jEuR",
+      "heat": 50,
+      "sources": [
+        "B站每周必看"
+      ],
+      "cat": "game"
+    },
+    {
+      "term": "幻兽帕鲁手游",
+      "href": "https://www.bilibili.com/video/BV1q4uT6gE71",
+      "heat": 56,
+      "sources": [
+        "B站热门"
+      ],
+      "cat": "game"
+    },
+    {
+      "term": "达摩JOJO皮肤",
+      "href": "https://www.bilibili.com/video/BV19Yut6oEp7",
+      "heat": 60,
+      "sources": [
+        "B站热门"
+      ],
+      "cat": "game"
+    },
+    {
+      "term": "匹诺曹的谎言",
+      "href": "https://www.gamersky.com/news/202608/2183946.shtml",
+      "heat": 45,
+      "sources": [
+        "游民星空"
+      ],
+      "cat": "game"
+    },
+    {
+      "term": "我不是魔王",
+      "href": "https://www.gcores.com/articles/218037",
+      "heat": 38,
+      "sources": [
+        "机核"
+      ],
+      "cat": "game"
+    },
+    {
+      "term": "影之刃零",
+      "href": "https://www.gamersky.com/news/202608/2185920.shtml",
+      "heat": 48,
+      "sources": [
+        "游民星空"
+      ],
+      "cat": "game"
+    },
+    {
+      "term": "GTA 6",
+      "href": "https://www.baijing.cn/article/56289",
+      "heat": 72,
+      "sources": [
+        "白鲸��海"
+      ],
+      "cat": "game"
+    },
+    {
+      "term": "Palworld Online",
+      "href": "https://tgmeng.com/daily/game",
+      "heat": 65,
+      "sources": [
+        "糖果梦AI日报"
+      ],
+      "cat": "game"
+    },
+    {
+      "term": "王者IP新作",
+      "href": "https://www.youxituoluo.com/534773.html",
+      "heat": 54,
+      "sources": [
+        "游戏陀螺"
+      ],
+      "cat": "game"
+    },
+    {
+      "term": "生化危机降价",
+      "href": "https://www.gamersky.com/news/202608/2185941.shtml",
+      "heat": 40,
+      "sources": [
+        "游民星空"
+      ],
+      "cat": "game"
+    },
+    {
+      "term": "至冬陨落三执行官",
+      "href": "https://www.bilibili.com/video/BV1MpuQ6QEUK",
+      "heat": 42,
+      "sources": [
+        "B站梗百科"
+      ],
+      "cat": "game"
+    },
+    {
+      "term": "BLG Bin离队",
+      "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356995",
+      "heat": 55,
+      "sources": [
+        "贴吧热议"
+      ],
+      "cat": "esports"
+    },
+    {
+      "term": "JDG三连胜",
+      "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356988",
+      "heat": 45,
+      "sources": [
+        "贴吧热议"
+      ],
+      "cat": "esports"
+    },
+    {
+      "term": "永劫无间秋季赛",
+      "href": "https://www.yjwujian.cn/news/official/20260806/32319",
+      "heat": 35,
+      "sources": [
+        "永劫无间官网"
+      ],
+      "cat": "esports"
+    },
+    {
+      "term": "研究生世界",
+      "href": "https://www.bilibili.com/video/BV1R53R6rE7a",
+      "heat": 90,
+      "sources": [
+        "B站热门",
+        "B站每周必看"
+      ],
+      "cat": "meme"
+    },
+    {
+      "term": "竹知了是什么梗",
+      "href": "https://www.bilibili.com/video/BV1P4uP6CEtg",
+      "heat": 38,
+      "sources": [
+        "B站梗指南"
+      ],
+      "cat": "meme"
+    },
+    {
+      "term": "后室乌噜噜",
+      "href": "https://www.bilibili.com/video/BV1YYuN6tEWC",
+      "heat": 50,
+      "sources": [
+        "B站热门"
+      ],
+      "cat": "meme"
+    },
+    {
+      "term": "寄生兽",
+      "href": "https://www.bilibili.com/video/BV1gnub6REqy",
+      "heat": 80,
+      "sources": [
+        "B站热门"
+      ],
+      "cat": "meme"
+    },
+    {
+      "term": "周��除三害",
+      "href": "https://www.bilibili.com/video/BV1bpM16eEAk",
+      "heat": 78,
+      "sources": [
+        "B站热门"
+      ],
+      "cat": "meme"
+    },
+    {
+      "term": "王从天降",
+      "href": "https://www.bilibili.com/video/BV1vtMy63E4G",
+      "heat": 76,
+      "sources": [
+        "B站热门"
+      ],
+      "cat": "meme"
+    },
+    {
+      "term": "100人躲猫猫",
+      "href": "https://www.bilibili.com/video/BV1ocu46fE1z",
+      "heat": 72,
+      "sources": [
+        "B站热门"
+      ],
+      "cat": "meme"
+    },
+    {
+      "term": "Asaki躲猫猫",
+      "href": "https://www.bilibili.com/video/BV1FfuU68EK8",
+      "heat": 40,
+      "sources": [
+        "B站梗百科"
+      ],
+      "cat": "meme"
+    },
+    {
+      "term": "秋茶烂梗",
+      "href": "https://www.bilibili.com/video/BV1ZKub6PE7V",
+      "heat": 36,
+      "sources": [
+        "B站梗指南"
+      ],
+      "cat": "meme"
+    },
+    {
+      "term": "龙餐馆",
+      "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28357003",
+      "heat": 42,
+      "sources": [
+        "贴吧热议"
+      ],
+      "cat": "meme"
+    },
+    {
+      "term": "DeepSeek招游戏开发",
+      "href": "http://www.gamelook.com.cn/2026/08/599",
+      "heat": 48,
+      "sources": [
+        "GameLook"
+      ],
+      "cat": "industry"
+    },
+    {
+      "term": "Roblox市值蒸发",
+      "href": "http://www.gamelook.com.cn/2026/08/",
+      "heat": 44,
+      "sources": [
+        "GameLook"
+      ],
+      "cat": "industry"
+    },
+    {
+      "term": "Meta Muse Code",
+      "href": "https://www.baijing.cn/article/",
+      "heat": 40,
+      "sources": [
+        "白鲸出海"
+      ],
+      "cat": "industry"
+    },
+    {
+      "term": "杨奇盛赞诺兰",
+      "href": "https://www.gamersky.com/news/202608/2185825.shtml",
+      "heat": 46,
+      "sources": [
+        "游民星空"
+      ],
+      "cat": "industry"
+    },
+    {
+      "term": "小米澎程",
+      "href": "https://www.bilibili.com/video/BV1iFMX6aE9b",
+      "heat": 75,
+      "sources": [
+        "B站每周必看"
+      ],
+      "cat": "industry"
+    },
+    {
+      "term": "穿越火线嘉年华",
+      "href": "https://tgmeng.com/daily/game",
+      "heat": 50,
+      "sources": [
+        "糖果梦AI日报"
+      ],
+      "cat": "industry"
+    },
+    {
+      "term": "奥本海默",
+      "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28356989",
+      "heat": 38,
+      "sources": [
+        "贴吧热议"
+      ],
+      "cat": "acg"
+    },
+    {
+      "term": "猫娘洗面奶",
+      "href": "https://www.bilibili.com/video/BV1sMGA6mE2V",
+      "heat": 36,
+      "sources": [
+        "B站梗指南"
+      ],
+      "cat": "acg"
+    },
+    {
+      "term": "暗区突围",
+      "href": "https://store.steampowered.com/news/app/2073620/view/6694983208188",
+      "heat": 35,
+      "sources": [
+        "Steam公告"
+      ],
+      "cat": "game"
+    },
+    {
+      "term": "萤火突击",
+      "href": "https://store.steampowered.com/app/1797880/Lost_Light/",
+      "heat": 33,
+      "sources": [
+        "Steam公告"
+      ],
+      "cat": "game"
+    },
+    {
+      "term": "8月定档手游",
+      "href": "https://www.youxituoluo.com/534757.html",
+      "heat": 42,
+      "sources": [
+        "游戏陀螺"
+      ],
+      "cat": "game"
+    },
+    {
+      "term": "三角洲行动",
+      "href": "https://store.steampowered.com/news/app/2507950",
+      "heat": 36,
+      "sources": [
+        "Steam公告"
+      ],
+      "cat": "game"
+    },
+    {
+      "term": "东百顶上战争",
+      "href": "https://www.bilibili.com/video/BV1xz3m63EgP",
+      "heat": 52,
+      "sources": [
+        "B站每周必看"
+      ],
+      "cat": "meme"
+    },
+    {
+      "term": "华强买瓜",
+      "href": "https://www.bilibili.com/video/BV1eH3m6XEhN",
+      "heat": 55,
+      "sources": [
+        "B站每周必看"
+      ],
+      "cat": "meme"
+    },
+    {
+      "term": "奇葩酒店兵马俑",
+      "href": "https://www.bilibili.com/video/BV1qyu76BE7F",
+      "heat": 46,
+      "sources": [
+        "B站每周必看"
+      ],
+      "cat": "meme"
+    },
+    {
+      "term": "老旧世界4",
+      "href": "https://www.bilibili.com/video/BV1eKu46xENm",
+      "heat": 60,
+      "sources": [
+        "B站热门"
+      ],
+      "cat": "meme"
+    },
+    {
+      "term": "不要做挑战",
+      "href": "https://www.bilibili.com/video/BV18Jub6sECJ",
+      "heat": 55,
+      "sources": [
+        "B站热门"
+      ],
+      "cat": "meme"
+    },
+    {
+      "term": "死亡是什么",
+      "href": "https://www.bilibili.com/video/BV115un6dE9a",
+      "heat": 48,
+      "sources": [
+        "B站热门"
+      ],
+      "cat": "meme"
+    },
+    {
+      "term": "奥特曼骨折",
+      "href": "https://www.bilibili.com/video/BV1Ugu36qEXm",
+      "heat": 45,
+      "sources": [
+        "B站热门"
+      ],
+      "cat": "meme"
+    },
+    {
+      "term": "蜜雪冰城",
+      "href": "https://www.bilibili.com/video/BV1rRut6rEGS",
+      "heat": 56,
+      "sources": [
+        "B站热门"
+      ],
+      "cat": "meme"
+    },
+    {
+      "term": "东方明珠躲猫猫",
+      "href": "https://www.bilibili.com/video/BV1ocu46fE1z",
+      "heat": 70,
+      "sources": [
+        "B站热门"
+      ],
+      "cat": "meme"
+    },
+    {
+      "term": "面包车直达拉萨",
+      "href": "https://www.bilibili.com/video/BV1CLuE67Ep9",
+      "heat": 55,
+      "sources": [
+        "B站热门"
+      ],
+      "cat": "meme"
+    }
   ]
 }

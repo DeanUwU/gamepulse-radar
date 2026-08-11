@@ -574,3 +574,13 @@ details.fold-sec[open]>summary .fold-hint::before{content:"▾ 收起"}
   transition:color .22s var(--ease-out-quart)}
 .intel-meta{font-size:var(--text-xs);color:var(--sub);margin-top:3px}
 @media(max-width:700px){.intel-grid{grid-template-columns:1fr}}
+/* 头条区：事件·风险 + 政策·资本（视觉权重最高） */
+.intel-top-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xs);margin-top:var(--space-xs)}
+.intel-top{display:flex;align-items:flex-start;gap:var(--space-xs);padding:var(--space-md) var(--space-lg);
+  background:linear-gradient(135deg,var(--panel) 0%,var(--panel2) 100%);
+  border:1px solid rgba(255,176,32,.2);border-left:3px solid var(--gold);
+  border-radius:var(--radius-md);transition:border-color .2s var(--ease-out-quart),transform .2s var(--ease-out-quart)}
+.intel-top:hover{text-decoration:none;border-color:rgba(255,176,32,.45);transform:translateY(-1px)}
+.intel-top:hover .intel-title{color:var(--gold)}
+.intel-top .intel-title{font-size:var(--text-base);font-weight:700;line-height:1.5}
+@media(max-width:700px){.intel-top-grid{grid-template-columns:1fr}}

@@ -39,12 +39,13 @@ CAT_PLAYER = ["玩家", "社区", "平台", "Steam", "直播", "赛事", "主播
               "同人", "吐槽", "争议", "bug", "外挂", "封禁", "Mod", "模组", "攻略"]
 
 CAT_CSS = {  # #media 分类 -> cat-* 配色
+    "事件·风险": "cat-gold",
     "政策·资本": "cat-gold",
     "产品·研发": "cat-blue",
     "出海·买量": "cat-green",
     "玩家·平台": "cat-purple",
 }
-MEDIA_CATS = ["政策·资本", "产品·研发", "出海·买量", "玩家·平台"]
+MEDIA_CATS = ["事件·风险", "政策·资本", "产品·研发", "出海·买量", "玩家·平台"]
 
 
 def esc(s):
@@ -134,7 +135,47 @@ def fmt_md(p):
         return ""
 
 
+# B站交叉验证：返回 {游戏关键词: 最大view}，用于给 #media 打 🔥
+def load_bili_heat():
+    out = {}
+    p = os.path.join(BASE, "collectors", "meme_%s.json" % today().strftime("%Y%m%d"))
+    if not os.path.exists(p):
+        # 回退到最新一份 meme 文件
+        import glob
+        fs = sorted(glob.glob(os.path.join(BASE, "collectors", "meme_*.json")))
+        if not fs:
+            return out
+        p = fs[-1]
+    try:
+        d = json.load(io.open(p, encoding="utf-8"))
+    except Exception:
+        return out
+    entries = (d.get("popular") or []) + (d.get("meme_ups") or [])
+    # 游戏关键词表（与 #media 标题匹配）
+    GAME_KW = ["gta", "无人深空", "no man", "塔科夫", "逃离塔科夫", "三国", "剑心雕龙",
+               "王者荣耀", "opus", "unity", "roblox", "steam", "永劫", "萤火", "阴阳师",
+               "dota", "三角洲", "原神", "鸣潮", "恋与", "海猫", "卡厄思", "穿越火线",
+               "无畏契约", "valorant", "影之刃", "卡拉彼丘", "coin master", "tga"]
+    for e in entries:
+        t = (e.get("title") or "").lower()
+        view = e.get("view") or 0
+        for kw in GAME_KW:
+            if kw in t:
+                out[kw] = max(out.get(kw, 0), view)
+    return out
+
+
+def bili_hot_flag(title, bili_heat):
+    """命中 B站百万播放则返回 🔥 标记，否则空串"""
+    t = (title or "").lower()
+    for kw, view in bili_heat.items():
+        if kw in t and view >= 1_000_000:
+            return " 🔥"
+    return ""
+
+
 def build_media(items, td):
+    bili_heat = load_bili_heat()
     # items: 近7天、非信号的常规情报
     buckets = {c: [] for c in MEDIA_CATS}
     for it in items:
@@ -145,33 +186,76 @@ def build_media(items, td):
     # 排序：日期倒序
     for c in buckets:
         buckets[c].sort(key=lambda x: x.get("pubdate") or "", reverse=True)
+
     chips = "".join(
         '<span class="chip %s">%s %d</span>' % (CAT_CSS[c], c, len(buckets[c]))
         for c in MEDIA_CATS
     )
-    cards = []
-    dates = []
-    for c in MEDIA_CATS:
+
+    # ===== B+C：视觉分层 =====
+    # 头条区：事件·风险 + 政策·资本（用户最关心的硬新闻）
+    top_cats = ["事件·风险", "政策·资本"]
+    top_items = []
+    for c in top_cats:
         for it in buckets[c]:
-            url = clean_url(it.get("url"))
-            if not url:
-                continue
-            title = esc(it.get("title") or it.get("game") or "（无标题）")
-            src = esc(it.get("src_name") or it.get("source") or "未知来源")
-            md = fmt_md(it.get("pubdate"))
-            dates.append(it.get("pubdate"))
-            cards.append(
-                '<a class="intel-item" target="_blank" href="%s">'
-                '<span class="intel-cat %s">%s</span>'
-                '<div class="intel-body">'
-                '<div class="intel-title">%s</div>'
-                '<div class="intel-meta">%s · %s</div>'
-                '</div></a>' % (esc(url), CAT_CSS[c], c, title, src, md)
-            )
-    if not cards:
+            top_items.append((c, it))
+    # 常规区：其余分类
+    reg_items = []
+    for c in MEDIA_CATS:
+        if c in top_cats:
+            continue
+        for it in buckets[c]:
+            reg_items.append((c, it))
+
+    dates = []
+    # 头条卡片（大卡，带分类色条）
+    top_cards = []
+    for c, it in top_items:
+        url = clean_url(it.get("url"))
+        if not url:
+            continue
+        title = esc(it.get("title") or it.get("game") or "（无标题）")
+        src = esc(it.get("src_name") or it.get("source") or "未知来源")
+        md = fmt_md(it.get("pubdate"))
+        dates.append(it.get("pubdate"))
+        flag = bili_hot_flag(title, bili_heat)
+        top_cards.append(
+            '<a class="intel-top" target="_blank" href="%s">'
+            '<span class="intel-cat %s">%s</span>'
+            '<div class="intel-body"><div class="intel-title">%s%s</div>'
+            '<div class="intel-meta">%s · %s</div></div></a>'
+            % (esc(url), CAT_CSS[c], c, title, flag, src, md)
+        )
+
+    # 常规卡片（两列小卡）
+    reg_cards = []
+    for c, it in reg_items:
+        url = clean_url(it.get("url"))
+        if not url:
+            continue
+        title = esc(it.get("title") or it.get("game") or "（无标题）")
+        src = esc(it.get("src_name") or it.get("source") or "未知来源")
+        md = fmt_md(it.get("pubdate"))
+        dates.append(it.get("pubdate"))
+        flag = bili_hot_flag(title, bili_heat)
+        reg_cards.append(
+            '<a class="intel-item" target="_blank" href="%s">'
+            '<span class="intel-cat %s">%s</span>'
+            '<div class="intel-body"><div class="intel-title">%s%s</div>'
+            '<div class="intel-meta">%s · %s</div></div></a>'
+            % (esc(url), CAT_CSS[c], c, title, flag, src, md)
+        )
+
+    parts = []
+    if top_cards:
+        parts.append('<div class="intel-top-grid">%s</div>' % "".join(top_cards))
+    if reg_cards:
+        parts.append('<div class="intel-grid">%s</div>' % "".join(reg_cards))
+    if not parts:
         grid = '<div class="empty">近 7 天暂无已准入信源条目，明日刷新后自动更新。</div>'
     else:
-        grid = '<div class="intel-grid">%s</div>' % "".join(cards)
+        grid = "".join(parts)
+
     # 日期范围 chip
     valid = [d for d in dates if d]
     if valid:
@@ -180,7 +264,7 @@ def build_media(items, td):
     else:
         rng = fmt_md(td.isoformat())
     head = ('<div class="sec-title"><span class="bar" style="background:var(--blue)"></span>'
-            '行业情报站 <small>已注册信源 · 近7天 · 按内容分类 · 标题即原文标题</small>'
+            '行业情报站 <small>已注册信源 · 近3天 · 按内容分类 · 🔥=B站百万播放</small>'
             '<span class="chip" style="margin-left:auto">%s</span></div>' % rng)
     return ('<section id="media">%s<div class="intel-chips">%s</div>%s</section>'
             % (head, chips, grid))

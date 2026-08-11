@@ -21,7 +21,7 @@ SRC_PATH = os.environ.get("GEN_INTEL_SRC", os.path.join(BASE, "inbox", "sources_
 EVENTS_PATH = os.environ.get("GEN_INTEL_EVENTS", os.path.join(BASE, "events.json"))
 TODAY_ENV = os.environ.get("TODAY")  # 允许流水线统一传入运行日期
 
-WINDOW_DAYS = 7
+WINDOW_DAYS = 3
 
 # ---- 分类关键词 ----
 CAT_RISK = ["官宣", "登顶", "破纪录", "创纪录", "夺冠", "下架", "停服", "暴雷",

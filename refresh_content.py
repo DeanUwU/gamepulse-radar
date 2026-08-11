@@ -507,7 +507,7 @@ def load_hotlist(date_s):
 
 
 def build_top10(data, date_s):
-    """TOP10 的 B站条目位（第 2~10 位）。第 1 位是人工头条事件位，不动。
+    """TOP10 的 B站条目位（第 2~10 位）。第 1 位是头条事件位，由当日最新事件类内容生成。
     排序用 top10_score（播放量 × 游戏/发售信号权重），而非裸播放量——
     让登顶 Steam、正式发售这类大作不被泛圈巨量视频淹没。"""
     pool = {}
@@ -544,6 +544,55 @@ def build_top10(data, date_s):
             f'background:{color}18">{tag}</span></div></a>'
         )
     return out
+
+
+def build_top10_head(data, date_s):
+    """生成 TOP10 第 1 位头条事件卡（当日最新事件类内容，红线②：近3天）。
+    来源优先级：events.json feed_events（当日）→ meme 事件类 → 降级为空（不写旧内容）。"""
+    # 1) events.json feed_events 中当日/近3天条目
+    ev_path = os.path.join(BASE, "events.json")
+    try:
+        ev = json.load(io.open(ev_path, encoding="utf-8"))
+        for fe in (ev.get("feed_events") or []):
+            pd = fe.get("pubdate") or fe.get("first_seen") or ""
+            if not pd:
+                continue
+            try:
+                d = datetime.date.fromisoformat(str(pd)[:10])
+            except Exception:
+                continue
+            if (datetime.date.today() - d).days <= 3:
+                title = fe.get("title") or fe.get("game") or "（无标题）"
+                url = fe.get("source_url") or fe.get("url") or "#"
+                src = fe.get("source_name") or fe.get("source") or "未知来源"
+                md = str(pd)[5:10]
+                return (f'<a class="top10-item" target="_blank" href="{esc(url)}">'
+                        f'<span class="t10-rank">1</span>'
+                        f'<span class="t10-img" style="background:linear-gradient(135deg,#ff5c39,#ffb020)" '
+                        f'title="{esc(clip(title, 40))}"></span>'
+                        f'<div class="t10-body"><b>{esc(clip(title, 40))}</b>'
+                        f'<span class="t10-meta">{esc(src)} · {md}</span>'
+                        f'<span class="t10-tag" style="color:#ff5c39;border-color:#ff5c3933;'
+                        f'background:#ff5c3918">事件</span></div></a>')
+    except Exception:
+        pass
+    # 2) meme 里最新的事件类视频（标题含事件关键词）
+    RISK_KW = ["处罚", "封禁", "下架", "暴雷", "维权", "约谈", "整改", "泄露", "泄密",
+               "收购", "减持", "停服", "跳票", "官宣", "定档"]
+    for v in (data.get("popular", []) + data.get("weekly", [])):
+        if fresh_bili(v) and any(k in (v.get("title") or "") for k in RISK_KW):
+            pic = v.get("pic") or ""
+            img = (f'<span class="t10-img" style="background-image:url({esc(pic)})" '
+                   f'title="{esc(clip(v["title"], 40))}"></span>') if pic else \
+                  '<span class="t10-img" style="background:linear-gradient(135deg,#ff5c39,#ffb020)"></span>'
+            return (f'<a class="top10-item" target="_blank" href="{esc(v["url"])}">'
+                    f'<span class="t10-rank">1</span>{img}'
+                    f'<div class="t10-body"><b>{esc(clip(v["title"], 26))}</b>'
+                    f'<span class="t10-meta">{wan(v.get("view", 0))} · {esc(v.get("tname") or "")}</span>'
+                    f'<span class="t10-tag" style="color:#ff5c39;border-color:#ff5c3933;'
+                    f'background:#ff5c3918">事件</span></div></a>')
+    # 3) 降级：无当日事件内容则不写头条（避免陈旧继承）
+    return None
 
 
 def _cat_of(title, tname):
@@ -1119,7 +1168,7 @@ def replace_hot(src, body, intro, date_s):
     return src[:m.start()] + new_sec + src[m.end():], 1
 
 
-def replace_top10(src, items):
+def replace_top10(src, items, head=None):
     m = re.search(r'<section id="radar">.*?</section>', src, re.S)
     if not m:
         return src, 0
@@ -1127,8 +1176,11 @@ def replace_top10(src, items):
     cards = re.findall(r'<a class="top10-item".*?</a>', sec, re.S)
     if not cards:
         return src, 0
-    head = cards[0]      # 第 1 位＝人工头条事件位，保留
-    new_list = "\n".join([head] + items)
+    # 头条事件位：优先用当日生成的 head；无则降级为第 2~10 位直接上位（不继承陈旧旧头条）
+    if head:
+        new_list = "\n".join([head] + items)
+    else:
+        new_list = "\n".join(items)
     start = sec.find(cards[0])
     end = sec.rfind("</a>") + len("</a>")
     new_sec = sec[:start] + new_list + sec[end:]
@@ -1159,7 +1211,8 @@ def main():
     body, intro, _ = build_hot(data, date_s)
     src, ok1 = replace_hot(src, body, intro, date_s)
     items = build_top10(data, date_s)
-    src, n2 = replace_top10(src, items)
+    head = build_top10_head(data, date_s)
+    src, n2 = replace_top10(src, items, head)
     src, n3 = stamp_curated(src, date_s)
     # 今日速览·卡片网格增强（注入封面图，无匹配用渐变占位）
     brief_cards = build_brief_cards(src, data)

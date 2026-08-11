@@ -636,7 +636,7 @@ else:
     _mk = sorted(set(curated_marks)) or ["（无策展块标记）"]
     log(f"(e) 人工策展过期：✅ 策展块均在 {CURATED_MAX_AGE} 天内（标记于 {_mk}）")
 
-# (f) 行业情报站/榜单瞭望塔 时效闸门（本雷达站时效性强，静态陈旧内容零容忍）：
+# (f) 行业情报站 时效闸门（本雷达站时效性强，静态陈旧内容零容忍）：
 #     #media 必须被 gen_intel 动态重写，其日期范围末端须在近 7 天内；
 #     若末端停在旧值（如 07-31 ~ 08-05），说明静态陈旧内容回潮 / gen_intel 未运行。
 _m = re.search(r'<section id="media">.*?<span class="chip"[^>]*>([^<]*)</span>', src, re.S)

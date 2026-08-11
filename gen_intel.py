@@ -37,10 +37,6 @@ CAT_OVERSEA = ["出海", "买量", "海外", "东南亚", "欧美", "全球", "�
                "港澳台", "日韩", "国际服", "外服", "全球化"]
 CAT_PLAYER = ["玩家", "社区", "平台", "Steam", "直播", "赛事", "主播", "二创",
               "同人", "吐槽", "争议", "bug", "外挂", "封禁", "Mod", "模组", "攻略"]
-# 强信号词：命中则归入 #board（事件&排位信号）而非 #media
-SIGNAL_KW = ["官宣", "定档", "首发", "登顶", "破纪录", "创纪录", "减持", "收购",
-             "并购", "处罚", "下架", "停服", "夺冠", "暴雷", "维权", "约谈",
-             "整改", "诉讼", "侵权", "泄密", "泄露", "跳票", "暂停", "取消"]
 
 CAT_CSS = {  # #media 分类 -> cat-* 配色
     "政策·资本": "cat-gold",
@@ -131,13 +127,6 @@ def classify(it):
     return "产品·研发"
 
 
-def is_signal(it):
-    if classify(it) == "事件·风险":
-        return True
-    t = it.get("title") or ""
-    return any(kw in t for kw in SIGNAL_KW)
-
-
 def fmt_md(p):
     try:
         return str(p)[:10][5:]  # MM-DD
@@ -195,30 +184,6 @@ def build_media(items, td):
             '<span class="chip" style="margin-left:auto">%s</span></div>' % rng)
     return ('<section id="media">%s<div class="intel-chips">%s</div>%s</section>'
             % (head, chips, grid))
-
-
-def build_board(items, td):
-    # 信号层：事件·风险 + 强信号词条目
-    sig = [it for it in items if is_signal(it)]
-    sig.sort(key=lambda x: x.get("pubdate") or "", reverse=True)
-    cards = []
-    for it in sig:
-        url = clean_url(it.get("url"))
-        if not url:
-            continue
-        title = esc(it.get("title") or it.get("game") or "（无标题）")
-        src = esc(it.get("src_name") or it.get("source") or "未知来源")
-        md = fmt_md(it.get("pubdate"))
-        cards.append('<a class="hl-item" target="_blank" href="%s"><b>%s</b>'
-                     '<small>%s · %s</small></a>' % (esc(url), title, src, md))
-    if not cards:
-        grid = '<div class="empty">近 7 天暂无显著事件 / 排位信号，明日刷新后自动更新。</div>'
-    else:
-        grid = '<div class="hl-grid">%s</div>' % "".join(cards)
-    head = ('<div class="sec-title"><span class="bar" style="background:var(--gold)"></span>'
-            '榜单瞭望塔 <small>事件 &amp; 排位信号 · 近7天信源快报 · 标题即原文标题</small></div>')
-    return ('<section id="board">%s<div class="panel"><h3>&#11088; 事件 &amp; 排位信号</h3>'
-            '%s</div></section>' % (head, grid))
 
 
 def atomic_write(path, html):
@@ -280,18 +245,14 @@ def main():
     html = io.open(INDEX_PATH, encoding="utf-8").read()
 
     media_html = build_media([it for it in dedup if not is_signal(it)], td)
-    board_html = build_board(dedup, td)
 
     html, ok_m = replace_section(html, "media", media_html)
-    html, ok_b = replace_section(html, "board", board_html)
-    if not (ok_m and ok_b):
-        log("⚠ 未找到 %s section，跳过（仅替换不插入）" %
-            ("#media" if not ok_m else "#board"))
+    if not ok_m:
+        log("⚠ 未找到 #media section，跳过（仅替换不插入）")
         return 1
 
     atomic_write(INDEX_PATH, html)
-    log("✓ #board / #media 已动态重写（media 卡=%d，board 卡=%d）" %
-        (html.count('class="intel-item"'), html.count('class="hl-item"')))
+    log("✓ #media 已动态重写（media 卡=%d）" % html.count('class="intel-item"'))
     return 0
 
 

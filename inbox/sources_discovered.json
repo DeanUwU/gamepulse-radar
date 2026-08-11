@@ -1,0 +1,768 @@
+{
+ "generated_at": "2026-08-05T11:26:13",
+ "summary": {
+  "candidates": 54,
+  "suggest": 22,
+  "maybe": 31,
+  "dead": 1,
+  "registered": 65
+ },
+ "items": [
+  {
+   "kind": "seed",
+   "game": "全行业",
+   "url": "https://indienova.com/indie-game-news/",
+   "from": "seed",
+   "status": 200,
+   "type": "static",
+   "verdict": "suggest",
+   "reasons": [
+    "行业追踪器种子，探活通过"
+   ],
+   "suggest_id": "indienova_indie",
+   "toml": "[[sources]]\nid = \"indienova_indie\"\ngame = \"全行业\"\nname = \"indienova 独立游戏\"\ntype = \"static\"\nurl = \"https://indienova.com/indie-game-news/\"\nenabled = true\nmax_items = 5\n"
+  },
+  {
+   "kind": "seed",
+   "game": "全行业",
+   "url": "https://www.taptap.cn/",
+   "from": "seed",
+   "status": 200,
+   "type": "static",
+   "verdict": "suggest",
+   "reasons": [
+    "行业追踪器种子，探活通过"
+   ],
+   "suggest_id": "taptap",
+   "toml": "[[sources]]\nid = \"taptap\"\ngame = \"全行业\"\nname = \"TapTap 新品\"\ntype = \"static\"\nurl = \"https://www.taptap.cn/\"\nenabled = true\nmax_items = 5\n"
+  },
+  {
+   "kind": "section",
+   "game": "火影忍者",
+   "url": "https://hyrz.qq.com/web202003/newsList.html?tab=4",
+   "from": "hyrz",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "maybe",
+   "reasons": [
+    "栏目页带查询参数，需人工确认是否稳定"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "section",
+   "game": "火影忍者",
+   "url": "https://hyrz.qq.com/web202003/newsList.html?tab=2",
+   "from": "hyrz",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "maybe",
+   "reasons": [
+    "栏目页带查询参数，需人工确认是否稳定"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "section",
+   "game": "三国志·战略版",
+   "url": "https://sgz.ejoy.com/news/index-2.html",
+   "from": "sgz",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "suggest",
+   "reasons": [
+    "已登记源[sgz]的同域栏目页，可直接入库"
+   ],
+   "suggest_id": "sgz_ejoy_news",
+   "toml": "[[sources]]\nid = \"sgz_ejoy_news\"\ngame = \"三国志·战略版\"\nname = \"三国志·战略版·news_list\"\ntype = \"news_list\"\nurl = \"https://sgz.ejoy.com/news/index-2.html\"\nenabled = true\nmax_items = 5\n"
+  },
+  {
+   "kind": "section",
+   "game": "三国志·战略版",
+   "url": "https://sgz.ejoy.com/news/index-3.html",
+   "from": "sgz",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "suggest",
+   "reasons": [
+    "已登记源[sgz]的同域栏目页，可直接入库"
+   ],
+   "suggest_id": "sgz_ejoy_news2",
+   "toml": "[[sources]]\nid = \"sgz_ejoy_news2\"\ngame = \"三国志·战略版\"\nname = \"三国志·战略版·news_list\"\ntype = \"news_list\"\nurl = \"https://sgz.ejoy.com/news/index-3.html\"\nenabled = true\nmax_items = 5\n"
+  },
+  {
+   "kind": "section",
+   "game": "永劫无间",
+   "url": "https://www.yjwujian.cn/news/guide/index.html",
+   "from": "yjwujian",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "suggest",
+   "reasons": [
+    "已登记源[yjwujian]的同域栏目页，可直接入库"
+   ],
+   "suggest_id": "yjwujian_news",
+   "toml": "[[sources]]\nid = \"yjwujian_news\"\ngame = \"永劫无间\"\nname = \"永劫无间·news_list\"\ntype = \"news_list\"\nurl = \"https://www.yjwujian.cn/news/guide/index.html\"\nenabled = true\nmax_items = 5\n"
+  },
+  {
+   "kind": "section",
+   "game": "永劫无间",
+   "url": "https://www.yjwujian.cn/match/",
+   "from": "yjwujian",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "suggest",
+   "reasons": [
+    "已登记源[yjwujian]的同域栏目页，可直接入库"
+   ],
+   "suggest_id": "yjwujian_match2",
+   "toml": "[[sources]]\nid = \"yjwujian_match2\"\ngame = \"永劫无间\"\nname = \"永劫无间·news_list\"\ntype = \"news_list\"\nurl = \"https://www.yjwujian.cn/match/\"\nenabled = true\nmax_items = 5\n"
+  },
+  {
+   "kind": "section",
+   "game": "萤火突击",
+   "url": "https://yhtj.163.com/news/",
+   "from": "yhtj",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "suggest",
+   "reasons": [
+    "已登记源[yhtj]的同域栏目页，可直接入库"
+   ],
+   "suggest_id": "yhtj_163_news",
+   "toml": "[[sources]]\nid = \"yhtj_163_news\"\ngame = \"萤火突击\"\nname = \"萤火突击·news_list\"\ntype = \"news_list\"\nurl = \"https://yhtj.163.com/news/\"\nenabled = true\nmax_items = 5\n"
+  },
+  {
+   "kind": "section",
+   "game": "第五人格",
+   "url": "https://id5.163.com/news/media/",
+   "from": "id5",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "suggest",
+   "reasons": [
+    "已登记源[id5]的同域栏目页，可直接入库"
+   ],
+   "suggest_id": "id5_163_news",
+   "toml": "[[sources]]\nid = \"id5_163_news\"\ngame = \"第五人格\"\nname = \"第五人格·news_list\"\ntype = \"news_list\"\nurl = \"https://id5.163.com/news/media/\"\nenabled = true\nmax_items = 5\n"
+  },
+  {
+   "kind": "section",
+   "game": "第五人格",
+   "url": "https://id5.163.com/news/activity/",
+   "from": "id5",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "suggest",
+   "reasons": [
+    "已登记源[id5]的同域栏目页，可直接入库"
+   ],
+   "suggest_id": "id5_163_news2",
+   "toml": "[[sources]]\nid = \"id5_163_news2\"\ngame = \"第五人格\"\nname = \"第五人格·news_list\"\ntype = \"news_list\"\nurl = \"https://id5.163.com/news/activity/\"\nenabled = true\nmax_items = 5\n"
+  },
+  {
+   "kind": "section",
+   "game": "阴阳师",
+   "url": "https://yys.163.com/news/index.html",
+   "from": "yys",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "suggest",
+   "reasons": [
+    "已登记源[yys]的同域栏目页，可直接入库"
+   ],
+   "suggest_id": "yys_163_news",
+   "toml": "[[sources]]\nid = \"yys_163_news\"\ngame = \"阴阳师\"\nname = \"阴阳师·news_list\"\ntype = \"news_list\"\nurl = \"https://yys.163.com/news/index.html\"\nenabled = true\nmax_items = 5\n"
+  },
+  {
+   "kind": "section",
+   "game": "阴阳师",
+   "url": "https://yys.163.com/news/huodong/index.html",
+   "from": "yys",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "suggest",
+   "reasons": [
+    "已登记源[yys]的同域栏目页，可直接入库"
+   ],
+   "suggest_id": "yys_163_news2",
+   "toml": "[[sources]]\nid = \"yys_163_news2\"\ngame = \"阴阳师\"\nname = \"阴阳师·news_list\"\ntype = \"news_list\"\nurl = \"https://yys.163.com/news/huodong/index.html\"\nenabled = true\nmax_items = 5\n"
+  },
+  {
+   "kind": "section",
+   "game": "三角洲行动",
+   "url": "https://df.qq.com/cp/a20240906main/activity.html",
+   "from": "df",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "suggest",
+   "reasons": [
+    "已登记源[df]的同域栏目页，可直接入库"
+   ],
+   "suggest_id": "df_qq_cp",
+   "toml": "[[sources]]\nid = \"df_qq_cp\"\ngame = \"三角洲行动\"\nname = \"三角洲行动·news_list\"\ntype = \"news_list\"\nurl = \"https://df.qq.com/cp/a20240906main/activity.html\"\nenabled = true\nmax_items = 5\n"
+  },
+  {
+   "kind": "section",
+   "game": "主机/PC 大作",
+   "url": "https://store.steampowered.com/news/",
+   "from": "steam_new",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "suggest",
+   "reasons": [
+    "已登记源[steam_new]的同域栏目页，可直接入库"
+   ],
+   "suggest_id": "store_steampowered_news",
+   "toml": "[[sources]]\nid = \"store_steampowered_news\"\ngame = \"主机/PC 大作\"\nname = \"主机/PC 大作·news_list\"\ntype = \"news_list\"\nurl = \"https://store.steampowered.com/news/\"\nenabled = true\nmax_items = 5\n"
+  },
+  {
+   "kind": "section",
+   "game": "全行业",
+   "url": "https://www.gamersky.com/news/tv/hd/",
+   "from": "gamersky",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "suggest",
+   "reasons": [
+    "已登记源[gamersky]的同域栏目页，可直接入库"
+   ],
+   "suggest_id": "gamersky_news",
+   "toml": "[[sources]]\nid = \"gamersky_news\"\ngame = \"全行业\"\nname = \"全行业·news_list\"\ntype = \"news_list\"\nurl = \"https://www.gamersky.com/news/tv/hd/\"\nenabled = true\nmax_items = 5\n"
+  },
+  {
+   "kind": "section",
+   "game": "阴阳师",
+   "url": "https://yys.163.com/news/media/index.html",
+   "from": "yys_update",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "suggest",
+   "reasons": [
+    "已登记源[yys_update]的同域栏目页，可直接入库"
+   ],
+   "suggest_id": "yys_163_news3",
+   "toml": "[[sources]]\nid = \"yys_163_news3\"\ngame = \"阴阳师\"\nname = \"阴阳师·news_list\"\ntype = \"news_list\"\nurl = \"https://yys.163.com/news/media/index.html\"\nenabled = true\nmax_items = 5\n"
+  },
+  {
+   "kind": "section",
+   "game": "阴阳师",
+   "url": "https://yys.163.com/news/zhiliaopian/index.html",
+   "from": "yys_update",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "suggest",
+   "reasons": [
+    "已登记源[yys_update]的同域栏目页，可直接入库"
+   ],
+   "suggest_id": "yys_163_news4",
+   "toml": "[[sources]]\nid = \"yys_163_news4\"\ngame = \"阴阳师\"\nname = \"阴阳师·news_list\"\ntype = \"news_list\"\nurl = \"https://yys.163.com/news/zhiliaopian/index.html\"\nenabled = true\nmax_items = 5\n"
+  },
+  {
+   "kind": "section",
+   "game": "暗区突围",
+   "url": "https://aqtw.qq.com/web202206/sub/match/news.html",
+   "from": "aqtw_match",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "suggest",
+   "reasons": [
+    "已登记源[aqtw_match]的同域栏目页，可直接入库"
+   ],
+   "suggest_id": "aqtw_qq_web202206",
+   "toml": "[[sources]]\nid = \"aqtw_qq_web202206\"\ngame = \"暗区突围\"\nname = \"暗区突围·news_list\"\ntype = \"news_list\"\nurl = \"https://aqtw.qq.com/web202206/sub/match/news.html\"\nenabled = true\nmax_items = 5\n"
+  },
+  {
+   "kind": "section",
+   "game": "暗区突围",
+   "url": "https://aqtw.qq.com/web202206/sub/match/video.html",
+   "from": "aqtw_match",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "suggest",
+   "reasons": [
+    "已登记源[aqtw_match]的同域栏目页，可直接入库"
+   ],
+   "suggest_id": "aqtw_qq_web2022062",
+   "toml": "[[sources]]\nid = \"aqtw_qq_web2022062\"\ngame = \"暗区突围\"\nname = \"暗区突围·news_list\"\ntype = \"news_list\"\nurl = \"https://aqtw.qq.com/web202206/sub/match/video.html\"\nenabled = true\nmax_items = 5\n"
+  },
+  {
+   "kind": "section",
+   "game": "全行业",
+   "url": "http://www.chuapp.com/category/news",
+   "from": "chuapp_category",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "suggest",
+   "reasons": [
+    "已登记源[chuapp_category]的同域栏目页，可直接入库"
+   ],
+   "suggest_id": "chuapp_category2",
+   "toml": "[[sources]]\nid = \"chuapp_category2\"\ngame = \"全行业\"\nname = \"全行业·news_list\"\ntype = \"news_list\"\nurl = \"http://www.chuapp.com/category/news\"\nenabled = true\nmax_items = 5\n"
+  },
+  {
+   "kind": "section",
+   "game": "全行业",
+   "url": "https://www.dataeye.com/media-center.html",
+   "from": "dataeye",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "suggest",
+   "reasons": [
+    "已登记源[dataeye]的同域栏目页，可直接入库"
+   ],
+   "suggest_id": "dataeye_media",
+   "toml": "[[sources]]\nid = \"dataeye_media\"\ngame = \"全行业\"\nname = \"全行业·news_list\"\ntype = \"news_list\"\nurl = \"https://www.dataeye.com/media-center.html\"\nenabled = true\nmax_items = 5\n"
+  },
+  {
+   "kind": "section",
+   "game": "全行业",
+   "url": "https://tgmeng.com/news",
+   "from": "tgmeng",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "suggest",
+   "reasons": [
+    "已登记源[tgmeng]的同域栏目页，可直接入库"
+   ],
+   "suggest_id": "tgmeng_news",
+   "toml": "[[sources]]\nid = \"tgmeng_news\"\ngame = \"全行业\"\nname = \"全行业·news_list\"\ntype = \"news_list\"\nurl = \"https://tgmeng.com/news\"\nenabled = true\nmax_items = 5\n"
+  },
+  {
+   "kind": "section",
+   "game": "全行业",
+   "url": "https://tgmeng.com/daily/news",
+   "from": "tgmeng",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "suggest",
+   "reasons": [
+    "已登记源[tgmeng]的同域栏目页，可直接入库"
+   ],
+   "suggest_id": "tgmeng_daily",
+   "toml": "[[sources]]\nid = \"tgmeng_daily\"\ngame = \"全行业\"\nname = \"全行业·news_list\"\ntype = \"news_list\"\nurl = \"https://tgmeng.com/daily/news\"\nenabled = true\nmax_items = 5\n"
+  },
+  {
+   "kind": "external",
+   "game": "火影忍者",
+   "url": "https://morefun.qq.com/",
+   "from": "hyrz",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "火影忍者",
+   "url": "https://www.bandainamcoent.co.jp/",
+   "from": "hyrz",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "永劫无间",
+   "url": "https://lhyh.163.com/",
+   "from": "yjwujian",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "萤火突击",
+   "url": "http://game.163.com/",
+   "from": "yhtj",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "萤火突击",
+   "url": "http://gm.163.com",
+   "from": "yhtj",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "第五人格",
+   "url": "https://ivl.163.com/",
+   "from": "id5",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "暗区突围",
+   "url": "https://aqtwwx.qq.com",
+   "from": "aqtw",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "晶核",
+   "url": "https://www.nvsgames.cn/",
+   "from": "coa",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://ryzachat-ai.go-spiral.ai/",
+   "from": "gcores",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://ol.gamersky.com/",
+   "from": "gamersky",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "http://shouyou.gamersky.com/",
+   "from": "gamersky",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "http://www.97973.com",
+   "from": "chuapp",
+   "status": null,
+   "type": "static",
+   "verdict": "dead",
+   "reasons": [
+    "探活失败(HTTP None)"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "http://youxiputao.com",
+   "from": "chuapp",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://www.tgbus.com/",
+   "from": "vgtime",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://game.china.com/",
+   "from": "vgtime",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://www.shouyou.com/",
+   "from": "news17173",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://www.17173.com/",
+   "from": "news17173",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "萤火突击",
+   "url": "https://xyq.163.com/",
+   "from": "yhtj_official",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "萤火突击",
+   "url": "https://xy2.163.com/",
+   "from": "yhtj_official",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "主机/PC 大作",
+   "url": "https://www.gearsofwar.com/news/multiplayer/",
+   "from": "xbox_wire",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "http://ku.gamersky.com/",
+   "from": "gamersky_pc",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "http://pic.gamersky.com/",
+   "from": "gamersky_pc",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "主机/PC 大作",
+   "url": "https://brigandine-abyss.happinet-games.com/",
+   "from": "ps_blog_ja",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "http://games.qq.com",
+   "from": "chuapp_category",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "http://www.pingwest.com/",
+   "from": "chuapp_category",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://ol.gamersky.com/news/game/",
+   "from": "gamersky_zx",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://ol.gamersky.com/news/inds/",
+   "from": "gamersky_zx",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "http://sykong.nadianshi.com/",
+   "from": "nadianshi",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "http://www.aliyun.com",
+   "from": "nadianshi",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://status.tgmeng.com",
+   "from": "tgmeng",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  }
+ ]
+}

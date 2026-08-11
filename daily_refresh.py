@@ -193,6 +193,22 @@ if meme_ready:
 else:
     log("【③内容】跳过 refresh_content：当天采集未就绪，拒绝用历史内容冒充今日刷新")
 
+# ③-6 行业情报站 / 榜单瞭望塔 动态渲染（gen_intel.py）
+# 读 sources_curated.json（每日采集+准入）近7天 -> #media(4分类) / #board(事件&排位信号)
+# 非阻断：信源数据缺失时板块显示空态提示，不阻断整体刷新；脚本本身仅替换已有 section。
+try:
+    log("【③情报】运行 gen_intel.py（sources_curated 近7天 -> #media/#board）...")
+    rintel = subprocess.run([PY, 'gen_intel.py'], cwd=BASE,
+                            capture_output=True, text=True, encoding='utf-8', env=ENV, timeout=60)
+    for line in rintel.stdout.strip().splitlines()[-4:]:
+        log("    " + line)
+    if rintel.returncode != 0:
+        problems.append(("刷新", "gen_intel.py", f"非零退出：{(rintel.stderr or rintel.stdout).strip()[:200]}",
+                         "行业情报动态渲染", "优化", "修复后重跑；缺失仅影响 #media/#board 动态性，不阻断发布"))
+except Exception as e:
+    problems.append(("刷新", "gen_intel.py", repr(e)[:200], "行业情报动态渲染", "优化",
+                     "修复执行异常后重新运行"))
+
 # ③-5 热度口径统一（跨板块 H）：把 TOP10/梗雷达/视觉焦点 的原始播放量换算成 H
 # 必须排在 meme_radar 采集之后（采集会写回原始播放量）。全站统一为 index.html。
 try:
@@ -619,6 +635,27 @@ if stale:
 else:
     _mk = sorted(set(curated_marks)) or ["（无策展块标记）"]
     log(f"(e) 人工策展过期：✅ 策展块均在 {CURATED_MAX_AGE} 天内（标记于 {_mk}）")
+
+# (f) 行业情报站/榜单瞭望塔 时效闸门（本雷达站时效性强，静态陈旧内容零容忍）：
+#     #media 必须被 gen_intel 动态重写，其日期范围末端须在近 7 天内；
+#     若末端停在旧值（如 07-31 ~ 08-05），说明静态陈旧内容回潮 / gen_intel 未运行。
+_m = re.search(r'<section id="media">.*?<span class="chip"[^>]*>([^<]*)</span>', src, re.S)
+if _m:
+    _chip = _m.group(1).strip()
+    _end = _chip.split("~")[-1].strip()
+    try:
+        _ed = _dt.date.fromisoformat("%d-%s" % (_dt.date.today().year, _end.replace(" ", "")))
+        _age = (_dt.date.today() - _ed).days
+        if _age > 7:
+            problems.append(("刷新", "行业情报站", f"#media 日期范围末端 {_end} 距今 {_age} 天，疑似静态陈旧内容未刷新",
+                             "内容时效", "阻断", "运行 gen_intel.py 重建 #media/#board，禁止发布陈旧静态内容"))
+            log(f"(f) 行业情报站时效：❌ 末端 {_end} 超 7 天（{_age} 天），疑似静态回潮")
+        else:
+            log(f"(f) 行业情报站时效：✅ 末端 {_end}（{_age} 天内）")
+    except Exception:
+        log(f"(f) 行业情报站时效：⚠ 无法解析 chip 日期 {_chip!r}")
+else:
+    log("(f) 行业情报站时效：⚠ 未找到 #media chip（板块可能被删除，跳过）")
 
 # ================= ⑤ 写日志 =================
 log("\n================= ⑤ 自洽日志 =================")

@@ -27,7 +27,7 @@ import datetime as dt
 EVENTS_JSON = os.path.join(os.path.dirname(os.path.abspath(__file__)), "events.json")
 
 BASE = os.path.dirname(os.path.abspath(__file__))
-TARGET = os.environ.get("RC_TARGET", os.path.join(BASE, "index.html"))
+TARGET = os.environ.get("RC_TARGET", os.path.join(BASE, "index_v2.html"))
 COLLECTORS = os.environ.get("RC_COLLECTORS", os.path.join(BASE, "collectors"))
 
 # 鬼畜/破圈的分区归类
@@ -334,7 +334,7 @@ def build_community_block(data):
         return ""
 
     links = []
-    for it in items[:12]:  # 最多 12 条
+    for it in items[:16]:  # 最多 16 条（2026-08-06 扩容：原 12 条）
         badge = it.get("_src", "B站")
         if badge == "B站热门" or badge == "B站鬼畜" or badge == "梗百科UP主":
             links.append(community_link_html(it, badge, wan(it.get("view", 0))))
@@ -404,7 +404,7 @@ def build_hotlist_block(date_s):
                     continue
                 h["_href"] = href
                 hotword_items.append(h)
-                if len(hotword_items) >= 5:
+                if len(hotword_items) >= 8:
                     break
             for h in hotword_items:
                 parts.append(hotword_link_html(h))
@@ -424,9 +424,13 @@ def build_hotlist_block(date_s):
 HW_GAME = re.compile(
     r'《[^》]+》|游戏|Steam|手游|端游|主机|Switch|PS5|Xbox|'
     r'联动|皮肤|版本|赛季|公测|首发|发售|上线|定档|开服|新游|'
-    r'电竞|动画|番|声优|cos|二游|抽卡|氪|直播'
-    r'|EDG|BLG|TES|JDG|WBG|T1|WE|LGD|RW|TTG|IVL'
-    r'|完蛋|EVA|火影|海贼|柯洁|LOL')
+    r'电竞|动画|番|声优|cos|二游|抽卡|氪|直播|同人|连载|漫画|'
+    r'原神|崩铁|崩坏|星穹|铁道|王者|和平|光遇|第五|明日|方舟|'
+    r'EDG|BLG|TES|JDG|WBG|T1|WE|LGD|RW|TTG|IVL|LPL|LCK|'
+    r'完蛋|EVA|火影|海贼|柯洁|LOL|英雄联盟|无畏|契约|瓦洛|'
+    r'三角洲|暗区|永劫|蛋仔|阴阳师|FGO|崩坏3|三战|'
+    r'金铲铲|自走棋|棋魂|梗图|恐怖梗|B萌|Re0|'
+    r'蜘蛛侠|鬼泣|仁王|雾海|猎人|怪猎')
 
 
 def build_risk_block(risk_html):
@@ -489,7 +493,7 @@ _PLAT_LABEL = {
     "weibo": "微博", "zhihu": "知乎", "douyin": "抖音",
     "bilibili": "B站", "xiaohongshu": "小红书",
 }
-_HL_MAX_ITEMS = 8   # 最多展示 8 条交叉信号
+_HL_MAX_ITEMS = 15  # 最多展示 15 条交叉信号（2026-08-06 扩容：原 8 条太少）
 
 
 def load_hotlist(date_s):
@@ -783,69 +787,97 @@ def replace_visual_focus(src, grid):
 # ---------------- 今日速览·文字墙→卡片化 ----------------
 # 2026-07-31：原 #brief 是一段 <p> 把所有标题用 ；连成文字墙，
 # 不可扫读。改为卡片网格——每行一个信号，保留原 HTML 粗体标题。
-def build_brief_cards(src):
-    """解析现存 #brief 段落文本，拆成卡片网格。"""
-    m = re.search(r'(<p class="sub-t"[^>]*>)(.*?)(</p>)', src, re.S)
+# 2026-08-06：为每条速览匹配当日 meme 封面图，无匹配用渐变占位。
+def _match_brief_thumb(title, data, seen):
+    """为速览标题匹配 meme 数据中的缩略图。返回 (url, '' )或 None。"""
+    gm = re.search(r'《([^》]+)》', title)
+    gname = gm.group(1) if gm else ''
+    # 从标题提取关键游戏/厂商名
+    kws = set()
+    if gname:
+        kws.add(gname.lower())
+    for w in re.findall(r'[\w\u4e00-\u9fff]{2,}', title):
+        kws.add(w.lower())
+    # 在 popular + weekly 中找匹配
+    pool = list(data.get("weekly", [])) + list(data.get("popular", []))
+    for v in pool:
+        vt = (v.get("title") or "").lower()
+        pic = v.get("pic") or ""
+        if not pic or pic in seen:
+            continue
+        for kw in kws:
+            if len(kw) >= 3 and kw in vt:
+                seen.add(pic)
+                return (pic, v.get("url") or "")
+    # fallback：书名号内关键词
+    if gname:
+        for v in pool:
+            vt = (v.get("title") or "").lower()
+            pic = v.get("pic") or ""
+            if not pic or pic in seen:
+                continue
+            if gname.lower() in vt:
+                seen.add(pic)
+                return (pic, v.get("url") or "")
+    return None
+
+def build_brief_cards(src, data=None):
+    """解析现存 #brief 的卡片网格，为每条速览注入封面图。"""
+    # 查找已有的 brief-grid
+    m = re.search(r'(<div class="brief-grid">)(.*?)(</div>\s*<div class="nav-btns")', src, re.S)
     if not m:
         return None
-    inner = m.group(2)
-
-    # 按 ； 拆分（跳转标签内不拆）
-    parts = []
-    depth = 0
-    buf = []
-    for ch in inner:
-        if ch == '<':
-            depth += 1
-        elif ch == '>':
-            depth -= 1
-        if ch == '；' and depth == 0:
-            parts.append(''.join(buf).strip())
-            buf = []
-        else:
-            buf.append(ch)
-    if buf:
-        parts.append(''.join(buf).strip())
-
-    if len(parts) < 2:
+    grid_content = m.group(2)
+    # 提取每张 brief-card
+    cards = re.findall(r'<div class="brief-card">.*?</div>', grid_content, re.S)
+    if not cards:
         return None
 
-    cards = []
-    for i, seg in enumerate(parts):
-        if not seg.strip():
-            continue
-        # 提取 <b> 内容做主标题
-        bm = re.search(r'<b>(.*?)</b>', seg)
-        heading = bm.group(1) if bm else ''
-        # <b> 之后的文本做副行
-        if bm:
-            desc = re.sub(r'<[^>]+>', '', seg[bm.end():]).strip('（），、。 ')[:120]
+    seen = set()
+    enhanced = []
+    for card in cards:
+        # 提取标题中的游戏名
+        bm = re.search(r'<b>(.*?)</b>', card)
+        title = bm.group(1) if bm else ''
+        # 添加 brief-body 包装
+        inner = re.sub(r'(<span class="brief-label"[^>]*>.*?</span>)', r'<div class="brief-body">\1', card, count=1)
+        inner = inner.replace('</div>', '</div></div>', 1) if inner.endswith('</div>') else inner + '</div>'
+        # 尝试匹配缩略图
+        thumb = None
+        if data and title:
+            thumb = _match_brief_thumb(title, data, seen)
+        if thumb:
+            img_html = (f'<div class="brief-img-wrap"><img src="{esc(thumb[0])}" '
+                       f'alt="{esc(title)}" loading="lazy" referrerpolicy="no-referrer" '
+                       f'onerror="this.parentElement.style.display=\'none\'"></div>')
+            inner = inner.replace('<div class="brief-body">', img_html + '<div class="brief-body">', 1)
+            inner = inner.replace('class="brief-card"', 'class="brief-card brief-card-img"')
         else:
-            desc = re.sub(r'<[^>]+>', '', seg).strip('，、。 ')[:120]
+            # 无图时用渐变占位
+            grad_colors = ['#ff5c39,#ffb020', '#4da3ff,#c792ea', '#3fd68f,#4da3ff',
+                          '#c792ea,#ff5c39', '#ffb020,#3fd68f', '#4da3ff,#3fd68f']
+            gi = hash(title) % len(grad_colors)
+            grad_placeholder = (f'<div class="brief-img-wrap brief-img-grad" '
+                              f'style="background:linear-gradient(135deg,{grad_colors[gi]})">'
+                              f'<span>{esc(title[:4])}</span></div>')
+            inner = inner.replace('<div class="brief-body">', grad_placeholder + '<div class="brief-body">', 1)
+            inner = inner.replace('class="brief-card"', 'class="brief-card brief-card-img"')
+        enhanced.append(inner)
 
-        # 卡片标签
-        if i == 0:
-            lbl = '<span class="brief-label" style="background:#ff5c39">&#127917; 主线</span>'
-        elif '早参' in seg:
-            lbl = '<span class="brief-label" style="background:#ffb020">&#128240; 早参</span>'
-        elif heading:
-            lbl = '<span class="brief-label">&#128206; 信号</span>'
-        else:
-            lbl = '<span class="brief-label">&#128206; 信号</span>'
-
-        cards.append(
-            f'<div class="brief-card">{lbl}<b>{heading}</b>'
-            f'<small>{esc(desc)}</small></div>' if heading else
-            f'<div class="brief-card">{lbl}<small>{esc(desc)}</small></div>'
-        )
-
-    return '<div class="brief-grid">' + ''.join(cards) + '</div>'
+    return '<div class="brief-grid brief-grid-img">' + ''.join(enhanced) + '</div>'
 
 
 def replace_brief(src, grid):
-    """把 #brief 里的 <p class="sub-t"> 整段换成卡片网格。"""
+    """把 #brief 里的旧卡片网格整段换成带图增强版。兼容 sub-t 旧格式。"""
     if not grid:
         return src, 0
+    # 优先匹配 brief-grid
+    m = re.search(r'<div class="brief-grid">.*?</div>\s*<div class="nav-btns"', src, re.S)
+    if m:
+        # 保留后面的 nav-btns
+        end_tag = '<div class="nav-btns"'
+        return src[:m.start()] + grid + '\n' + end_tag + src[m.end() + len(end_tag):], 1
+    # fallback: 旧 sub-t 格式
     m = re.search(r'<p class="sub-t"[^>]*>.*?</p>', src, re.S)
     if not m:
         return src, 0
@@ -1129,8 +1161,8 @@ def main():
     items = build_top10(data, date_s)
     src, n2 = replace_top10(src, items)
     src, n3 = stamp_curated(src, date_s)
-    # 今日速览·文字墙→卡片化（拆分 <p class="sub-t"> 为卡片网格）
-    brief_cards = build_brief_cards(src)
+    # 今日速览·卡片网格增强（注入封面图，无匹配用渐变占位）
+    brief_cards = build_brief_cards(src, data)
     src, n_brief = replace_brief(src, brief_cards)
     # 视觉焦点·全自动定稿（无人工编辑，脚本直接选稿上版）
     # 这里刻意「不」排除 TOP10 的链接：两个板块选材维度本就不同——

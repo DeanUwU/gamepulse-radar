@@ -10,7 +10,8 @@
 import json, io, os, sys, datetime, re
 
 BASE = os.path.dirname(os.path.abspath(__file__))
-INDEX_PATH = os.path.join(BASE, "index_v2.html")
+INDEX_PATH = os.environ.get("GC_INDEX",
+                            os.path.join(BASE, "index_v2.html"))
 
 doc = json.load(io.open(os.path.join(BASE, 'events.json'), encoding='utf-8'))
 scaffold = doc['scaffold']

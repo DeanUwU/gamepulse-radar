@@ -547,3 +547,30 @@ details.fold-sec[open]>summary .fold-hint::before{content:"▾ 收起"}
   .tgmeng-meta{gap:var(--space-xs)}
   .tgmeng-source{margin-left:0}
 }
+
+/* ===== 行业情报站：两列+标签卡片（intel-grid） ===== */
+.intel-chips{display:flex;flex-wrap:wrap;gap:var(--space-2xs);margin-top:var(--space-sm);margin-bottom:var(--space-xs)}
+.intel-chips .chip.cat-gold{background:rgba(255,176,32,.12);color:var(--gold);border-color:rgba(255,176,32,.3)}
+.intel-chips .chip.cat-blue{background:rgba(77,163,255,.1);color:var(--blue);border-color:rgba(77,163,255,.28)}
+.intel-chips .chip.cat-green{background:rgba(63,214,143,.1);color:var(--green);border-color:rgba(63,214,143,.28)}
+.intel-chips .chip.cat-purple{background:rgba(179,136,255,.1);color:#b388ff;border-color:rgba(179,136,255,.28)}
+.intel-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xs);margin-top:var(--space-xs)}
+.intel-item{display:flex;align-items:flex-start;gap:var(--space-xs);padding:var(--space-sm) var(--space-md);
+  background:var(--panel2);border:1px solid transparent;border-radius:var(--radius-md);
+  color:var(--txt);text-decoration:none;transition:all .22s var(--ease-out-quart)}
+.intel-item:hover{background:var(--panel);border-color:rgba(77,163,255,.25);
+  transform:translateX(2px);text-decoration:none}
+.intel-item:hover .intel-title{color:var(--blue)}
+.intel-cat{flex-shrink:0;display:inline-block;font-size:10px;font-weight:800;
+  letter-spacing:.02em;padding:2px 7px;border-radius:99px;line-height:1.6;
+  white-space:nowrap;margin-top:2px}
+.intel-cat.cat-gold{background:rgba(255,176,32,.14);color:var(--gold);border:1px solid rgba(255,176,32,.35)}
+.intel-cat.cat-blue{background:rgba(77,163,255,.12);color:var(--blue);border:1px solid rgba(77,163,255,.30)}
+.intel-cat.cat-green{background:rgba(63,214,143,.12);color:var(--green);border:1px solid rgba(63,214,143,.30)}
+.intel-cat.cat-purple{background:rgba(179,136,255,.15);color:#b388ff;border:1px solid rgba(179,136,255,.30)}
+.intel-body{min-width:0;flex:1}
+.intel-title{font-size:var(--text-sm);font-weight:600;line-height:1.5;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  transition:color .22s var(--ease-out-quart)}
+.intel-meta{font-size:var(--text-xs);color:var(--sub);margin-top:3px}
+@media(max-width:700px){.intel-grid{grid-template-columns:1fr}}

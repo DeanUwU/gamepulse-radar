@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""cross_words.py — 读 wordcloud_terms.json → 渲染词云到 index_v2.html #trend 区块，
+"""cross_words.py — 读 wordcloud_terms.json → 渲染词云到 index.html #trend 区块，
 并单独生成 wordcloud.html 作为热词分析补充页（wordcloud2.js 紧致排版 + 词条溯源侧边栏）。
 
 2026-08-10 改版：golden-angle spiral → wordcloud2.js canvas 紧致矩形排版
@@ -18,7 +18,7 @@ TERMS_PATH = os.environ.get("WC_TERMS_PATH",
 WC_PATH = os.environ.get("WC_OUT_PATH",
                          os.path.join(BASE, "wordcloud.html"))
 INDEX_PATH = os.environ.get("CW_INDEX",
-                            os.path.join(BASE, "index_v2.html"))
+                            os.path.join(BASE, "index.html"))
 
 CAT_COLOR = {
     "游戏/新品": "#b388ff",
@@ -230,7 +230,7 @@ total_source_hits = sum(len(v["sources"]) for v in trace_data.values())
 print(f"溯源统计: {trace_count}/{len(sorted_rows)} 词有原始标题匹配, 共 {total_source_hits} 条溯源链接")
 
 
-# ===================== 球状词云 HTML（index_v2.html mini 版保留 golden-angle spiral） =====================
+# ===================== 球状词云 HTML（index.html mini 版保留 golden-angle spiral） =====================
 
 GOLDEN_ANGLE = math.radians(137.50776405)
 MAX_R = 230
@@ -264,7 +264,7 @@ WC2_CDN = "https://cdn.jsdelivr.net/npm/wordcloud@1.2.2/src/wordcloud2.min.js"
 
 
 def build_main_wordcloud():
-    """生成 index_v2.html #glance 用的 wordcloud2.js canvas + 内联数据 + 渲染脚本。
+    """生成 index.html #glance 用的 wordcloud2.js canvas + 内联数据 + 渲染脚本。
     跟 wordcloud.html 共用同一引擎；省掉主站溯源侧边栏（只在 wordcloud.html 展示）。"""
     # canvas 像素尺寸（CSS 会再 fit 到容器宽度）
     CW, CH = 880, 280
@@ -701,8 +701,8 @@ def _atomic_write(path, content):
             print('WARN: cannot overwrite', path, '(locked), content in', _tmp)
 
 
-# ---- A. 注入 index_v2.html 的 #glance 词云区块（wordcloud2.js canvas 紧致排版） ----
-# 注意：模板 index_v2.html 的 #glance 使用 <!--WC2_INJECT-->...<!--/WC2_INJECT--> 稳定标记；
+# ---- A. 注入 index.html 的 #glance 词云区块（wordcloud2.js canvas 紧致排版） ----
+# 注意：模板 index.html 的 #glance 使用 <!--WC2_INJECT-->...<!--/WC2_INJECT--> 稳定标记；
 # style.css 已包含 .wc-cloud / #wc-canvas / .wc-cloud-tip 完整样式，无需此处再注入 CSS。
 index_html = io.open(INDEX_PATH, encoding="utf-8").read()
 
@@ -720,7 +720,7 @@ if inj_start > 0 and inj_end > inj_start:
     wc_full = main_wc_html + legend + preview_html
     index_html = index_html[:cut] + wc_full + index_html[inj_end:]
 else:
-    print("WARN: WC2_INJECT markers not found in index_v2.html, wordcloud injection skipped")
+    print("WARN: WC2_INJECT markers not found in index.html, wordcloud injection skipped")
 
 # 3) 更新 #glance <small> 里的日期（2026-08-10 修复：id 从 trend 改为 glance）
 index_html = re.sub(
@@ -741,4 +741,4 @@ print("Top10:")
 for r in rows[:10]:
     print(f"  H={r['H']:>3} [{r['cat']}] {r['word']}")
 print(f"溯源: {trace_count}/{len(sorted_rows)} 词可溯源, 共 {total_source_hits} 条")
-print(f"\n词云已注入 index_v2.html #glance (wordcloud2.js canvas 紧致排版) + wordcloud.html (canvas + 溯源侧边栏)")
+print(f"\n词云已注入 index.html #glance (wordcloud2.js canvas 紧致排版) + wordcloud.html (canvas + 溯源侧边栏)")

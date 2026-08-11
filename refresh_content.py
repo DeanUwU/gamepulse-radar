@@ -27,7 +27,7 @@ import datetime as dt
 EVENTS_JSON = os.path.join(os.path.dirname(os.path.abspath(__file__)), "events.json")
 
 BASE = os.path.dirname(os.path.abspath(__file__))
-TARGET = os.environ.get("RC_TARGET", os.path.join(BASE, "index_v2.html"))
+TARGET = os.environ.get("RC_TARGET", os.path.join(BASE, "index.html"))
 COLLECTORS = os.environ.get("RC_COLLECTORS", os.path.join(BASE, "collectors"))
 
 # 鬼畜/破圈的分区归类

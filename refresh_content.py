@@ -1013,12 +1013,17 @@ def _masthead_pick(data):
         v = dict(v); v["_origin"] = "B 站全站排行"; pool.append(v)
     for v in data.get("weekly", []) or []:
         v = dict(v); v["_origin"] = "B 站每周必看"; pool.append(v)
-    # 限游戏/ACG 语境（B站游戏分区 + 标题硬锚点）
+    # 限游戏/ACG 语境（B站游戏分区 + 标题硬锚点）+ 时效闸 ≤MAX_AGE_DAYS 天
     candidates = []
+    now_ts = time.time()
     for v in pool:
         t = v.get("tname", "") or ""
         title = v.get("title", "") or ""
         if not v.get("pic"):
+            continue
+        # 时效过滤（2026-08-12：头图与 TOP10 统一为近 3 天，避免周更/每周必看陈视频霸屏）
+        a = _pub_age(v)
+        if a is not None and a > MAX_AGE_DAYS:
             continue
         # 游戏分区直接入选；其他分区需硬锚点
         if t in GAME_TNAME or (GAME_KW.search(title) and re.search(r'《[^》]+》|Steam|手游|端游|主机|新作|新游', title)):

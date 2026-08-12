@@ -40,18 +40,16 @@
   var payload = JSON.parse(document.getElementById('wc-cloud-data').textContent);
 
   // ---- 响应式：物理像素 × devicePixelRatio，避免高分屏模糊（2026-08-12） ----
-  // 2026-08-12 修复竖排 bug：CSS 高度从 280 提到 360，给词云留出余地
+// 2026-08-12 修复竖排 bug：CSS 高度从 280 提到 360，给词云留出余地
+// 2026-08-12 修复截断 bug：取消宽度自适应，canvas 始终 CSS_W×CSS_H 完整渲染，
+// 容器窄时由 .wc-cloud overflow:auto 提供横向滚动条
   var CSS_W = 880, CSS_H = 360;
   function fitCanvas() {
-    var wrap = canvas.parentElement;
     var dpr = Math.max(1, Math.min(3, window.devicePixelRatio || 1));
-    if (canvas.width !== CSS_W * dpr || canvas.height !== CSS_H * dpr) {
-      canvas.width = CSS_W * dpr;
-      canvas.height = CSS_H * dpr;
-    }
-    var targetW = Math.min(CSS_W, wrap.clientWidth);
-    canvas.style.width = targetW + 'px';
-    canvas.style.height = (CSS_H * targetW / CSS_W) + 'px';
+    canvas.width = CSS_W * dpr;
+    canvas.height = CSS_H * dpr;
+    canvas.style.width = CSS_W + 'px';
+    canvas.style.height = CSS_H + 'px';
     var ctx = canvas.getContext('2d');
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   }

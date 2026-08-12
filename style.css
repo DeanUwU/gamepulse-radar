@@ -173,9 +173,10 @@ details.fold-sec[open]>summary .fold-hint::before{content:"▾ 收起"}
 
 /* ===== 主站：wordcloud2.js canvas 紧致排版 (2026-08-10 升级) ===== */
 /* 2026-08-12 修复竖排 bug：min-height 280 → 360 */
-.wc-cloud{position:relative;width:100%;min-height:360px;display:block;margin:0 auto var(--space-md)}
+/* 2026-08-12 修复截断 bug：宽度恒定 880，容器窄时横向滚动 */
+.wc-cloud{position:relative;width:100%;min-height:360px;overflow-x:auto;overflow-y:hidden;display:block;margin:0 auto var(--space-md)}
 #wc-canvas{
-  display:block;margin:0 auto;max-width:100%;height:auto;border-radius:var(--radius-md);
+  display:block;margin:0;max-width:none;width:880px;height:360px;border-radius:var(--radius-md);
   /* 字体清晰度：2026-08-12 升级——物理像素×DPR + 最优字体栈 + 几何精度 */
   image-rendering:auto;
   -webkit-font-smoothing:antialiased;

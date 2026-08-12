@@ -1,13 +1,13 @@
 {
- "generated_at": "2026-08-12T09:02:15",
+ "generated_at": "2026-08-12T12:03:36",
  "summary": {
   "total": 113,
-  "adopt": 35,
-  "review": 39,
-  "reject": 39,
+  "adopt": 57,
+  "review": 6,
+  "reject": 50,
   "stale_rejected": 37,
   "dated": 81,
-  "new_reject": 2
+  "new_reject": 13
  },
  "new_rejects": [
   "https://store.steampowered.com/news/app/2507950/view/674002554701480324",

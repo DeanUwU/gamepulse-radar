@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-08-12T14:56:39",
+ "generated_at": "2026-08-12T17:05:47",
  "summary": {
   "total": 113,
-  "adopt": 36,
-  "review": 38,
+  "adopt": 37,
+  "review": 37,
   "reject": 39,
   "stale_rejected": 36,
   "dated": 81,
@@ -353,34 +353,8 @@
   },
   {
    "game": "全行业",
-   "title": "《伊尔姆水晶》公布最新预告，将于年内发售",
-   "url": "https://www.gcores.com/articles/218257",
-   "status": 200,
-   "src_id": "gcores",
-   "src_name": "机核 GCORES",
-   "pubdate": "2026-08-12",
-   "age_days": 0,
-   "date_src": "feed",
-   "verdict": "adopt",
-   "reasons": []
-  },
-  {
-   "game": "全行业",
-   "title": "全战式百人三方战术FPS新作《WARDOGS》将于9月11日凌晨开启 Steam抢先体验",
-   "url": "https://www.gcores.com/articles/218239",
-   "status": 200,
-   "src_id": "gcores",
-   "src_name": "机核 GCORES",
-   "pubdate": "2026-08-12",
-   "age_days": 0,
-   "date_src": "feed",
-   "verdict": "adopt",
-   "reasons": []
-  },
-  {
-   "game": "全行业",
-   "title": "致敬经典：微星尊爵14 Flip AI+ 梵高限定版大师套装3期免息热卖中",
-   "url": "https://www.gcores.com/articles/218253",
+   "title": "我为什么喜欢玩PVP，录音笔VOL.762",
+   "url": "https://www.gcores.com/radios/218264",
    "status": 200,
    "src_id": "gcores",
    "src_name": "机核 GCORES",
@@ -391,6 +365,32 @@
    "reasons": [
     "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
    ]
+  },
+  {
+   "game": "全行业",
+   "title": "《影之刃零》登顶Steam全球和国区热销榜",
+   "url": "https://www.gcores.com/articles/218263",
+   "status": 200,
+   "src_id": "gcores",
+   "src_name": "机核 GCORES",
+   "pubdate": "2026-08-12",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "adopt",
+   "reasons": []
+  },
+  {
+   "game": "全行业",
+   "title": "《独立游戏进化指南》 | 暴造分享会活动介绍",
+   "url": "https://www.gcores.com/articles/218252",
+   "status": 200,
+   "src_id": "gcores",
+   "src_name": "机核 GCORES",
+   "pubdate": "2026-08-12",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "adopt",
+   "reasons": []
   },
   {
    "game": "全行业",
@@ -409,8 +409,8 @@
   },
   {
    "game": "全行业",
-   "title": "《完蛋男同学》团队账号全部清空 被LGBT人群抵制",
-   "url": "https://www.gamersky.com/news/202608/2187587.shtml",
+   "title": "《影之刃零》PS5主机独占一年！Xbox玩家：问了吗？",
+   "url": "https://www.gamersky.com/news/202608/2187618.shtml",
    "status": 200,
    "src_id": "gamersky",
    "src_name": "游民星空新闻",
@@ -422,8 +422,8 @@
   },
   {
    "game": "全行业",
-   "title": "剑星制作人爆赞《影之刃零》新实机：要跟甄子丹过招",
-   "url": "https://www.gamersky.com/news/202608/2187447.shtml",
+   "title": "甄子丹并非简单挂名《影之刃》！深度参与 定期开会",
+   "url": "https://www.gamersky.com/news/202608/2187581.shtml",
    "status": 200,
    "src_id": "gamersky",
    "src_name": "游民星空新闻",
@@ -552,8 +552,8 @@
   },
   {
    "game": "全行业",
-   "title": "MMO《诡秘之主》最新动态：3A动捕团队操刀，海外顶尖大师助阵！",
-   "url": "https://news.17173.com/content/08122026/135821104.shtml",
+   "title": "《X-Men '97 Season 2》季终集评测与回顾：“适者生存”",
+   "url": "https://news.17173.com/content/08122026/160947123.shtml",
    "status": 200,
    "src_id": "news17173",
    "src_name": "17173 网游资讯",
@@ -1059,6 +1059,21 @@
   },
   {
    "game": "全行业",
+   "title": "周年庆交出重磅答卷：3A单机登场，CF从国民网游迈向全球化射击IP",
+   "url": "https://www.youxituoluo.com/534788.html",
+   "status": 200,
+   "src_id": "youxituoluo",
+   "src_name": "游戏陀螺",
+   "pubdate": "2026-08-12",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "review",
+   "reasons": [
+    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
+   ]
+  },
+  {
+   "game": "全行业",
    "title": "《影之刃零》预购268元，甄子丹已担任3年监制和动捕",
    "url": "https://www.youxituoluo.com/534787.html",
    "status": 200,
@@ -1108,21 +1123,6 @@
    "date_src": "feed",
    "verdict": "adopt",
    "reasons": []
-  },
-  {
-   "game": "全行业",
-   "title": "35亿买入、7.5亿卖出：昆仑万维拟出售「闲徕互娱」",
-   "url": "https://www.youxituoluo.com/534782.html",
-   "status": 200,
-   "src_id": "youxituoluo",
-   "src_name": "游戏陀螺",
-   "pubdate": "2026-08-11",
-   "age_days": 1,
-   "date_src": "feed",
-   "verdict": "review",
-   "reasons": [
-    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
-   ]
   },
   {
    "game": "主机/PC 大作",
@@ -1332,7 +1332,7 @@
   },
   {
    "game": "全行业",
-   "title": "许艺丹20小时前0条评论 触乐怪话：玩桌游，想要黑化 苦恼",
+   "title": "许艺丹22小时前0条评论 触乐怪话：玩桌游，想要黑化 苦恼",
    "url": "http://www.chuapp.com/article/291552.html",
    "status": 200,
    "src_id": "chuapp_category",
@@ -1347,7 +1347,7 @@
   },
   {
    "game": "全行业",
-   "title": "等等20小时前0条评论 买不起房的年轻人，在房屋装修游戏里缓解愁苦 当我们聊装修游戏，也许聊的是一种苦闷。",
+   "title": "等等22小时前0条评论 买不起房的年轻人，在房屋装修游戏里缓解愁苦 当我们聊装修游戏，也许聊的是一种苦闷。",
    "url": "http://www.chuapp.com/article/291551.html",
    "status": 200,
    "src_id": "chuapp_category",
@@ -1360,7 +1360,7 @@
   },
   {
    "game": "全行业",
-   "title": "许艺丹22小时前0条评论 和《蔚蓝档案》玩家一起蹦迪 欢迎抵达基沃托斯站。",
+   "title": "许艺丹08月11日0条评论 和《蔚蓝档案》玩家一起蹦迪 欢迎抵达基沃托斯站。",
    "url": "http://www.chuapp.com/article/291550.html",
    "status": 200,
    "src_id": "chuapp_category",
@@ -1446,6 +1446,34 @@
   },
   {
    "game": "全行业",
+   "title": "2026H1海外现金贷报告：Q2海外现金贷应用下载规模回升至3.18亿，印尼下载量居首",
+   "url": "https://www.baijing.cn/article/56329",
+   "status": 200,
+   "src_id": "baijing",
+   "src_name": "白鲸出海",
+   "pubdate": "2026-08-12",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "review",
+   "reasons": [
+    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
+   ]
+  },
+  {
+   "game": "全行业",
+   "title": "从“越南小腾讯”到“AI云”玩家，一家国民级科技公司的二十二年",
+   "url": "https://www.baijing.cn/article/56328",
+   "status": 200,
+   "src_id": "baijing",
+   "src_name": "白鲸出海",
+   "pubdate": "2026-08-12",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "adopt",
+   "reasons": []
+  },
+  {
+   "game": "全行业",
    "title": "三个维度，看懂美国八大互联网巨头Q2财报",
    "url": "https://www.baijing.cn/article/56327",
    "status": 200,
@@ -1526,36 +1554,6 @@
    "src_name": "白鲸出海",
    "pubdate": "2026-08-12",
    "age_days": 0,
-   "date_src": "feed",
-   "verdict": "review",
-   "reasons": [
-    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
-   ]
-  },
-  {
-   "game": "全行业",
-   "title": "人才流失、模型掉队、商业化承压，Gemini用户破10亿难掩谷歌“内忧外患”",
-   "url": "https://www.baijing.cn/article/56321",
-   "status": 200,
-   "src_id": "baijing",
-   "src_name": "白鲸出海",
-   "pubdate": "2026-08-12",
-   "age_days": 0,
-   "date_src": "feed",
-   "verdict": "review",
-   "reasons": [
-    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
-   ]
-  },
-  {
-   "game": "全行业",
-   "title": "TikTok猛追YouTube，视频广告市场迎来变局",
-   "url": "https://www.baijing.cn/article/56320",
-   "status": 200,
-   "src_id": "baijing",
-   "src_name": "白鲸出海",
-   "pubdate": "2026-08-11",
-   "age_days": 1,
    "date_src": "feed",
    "verdict": "review",
    "reasons": [

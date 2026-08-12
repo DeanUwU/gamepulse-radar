@@ -175,7 +175,7 @@ details.fold-sec[open]>summary .fold-hint::before{content:"▾ 收起"}
 .wc-cloud{position:relative;width:100%;min-height:280px;display:block;margin:0 auto var(--space-md)}
 #wc-canvas{
   display:block;margin:0 auto;max-width:100%;height:auto;border-radius:var(--radius-md);
-  /* 字体清晰度：wordcloud2.js 的 canvas 文字会模糊, 用以下属性改善 */
+  /* 字体清晰度：2026-08-12 升级——物理像素×DPR + 最优字体栈 + 几何精度 */
   image-rendering:auto;
   -webkit-font-smoothing:antialiased;
   font-smooth:never;

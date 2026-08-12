@@ -264,7 +264,7 @@ details.fold-sec[open]>summary .fold-hint::before{content:"▾ 收起"}
 /* 光标透视倾斜：gsap 接管 transform，去掉 CSS 过渡避免拖影 */
 .card,.vf-card,.hl-item,.mod-card{transition:border-color .2s var(--ease-out-quart),box-shadow .2s var(--ease-out-quart);will-change:transform}
 /* ===== 头图 masthead：渐变遮罩 + GamePulse logo ===== */
-.masthead{position:relative;height:320px;overflow:hidden;border-bottom:1px solid var(--border)}
+.masthead{position:relative;height:288px;overflow:hidden;border-bottom:1px solid var(--border)}
 .masthead>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 28%}
 .masthead::after{content:"";position:absolute;inset:0;pointer-events:none;
   background:linear-gradient(180deg,rgba(13,17,23,.5) 0%,rgba(13,17,23,.2) 42%,var(--bg) 99%),
@@ -281,7 +281,7 @@ details.fold-sec[open]>summary .fold-hint::before{content:"▾ 收起"}
 .gp-logo{width:100%;height:auto;display:block;filter:drop-shadow(0 6px 22px rgba(0,0,0,.55))}
 .gp-logo path,.gp-logo text{fill:#fff}
 .mh-wm{position:absolute;right:var(--space-md);bottom:6px;font-size:10px;color:rgba(255,255,255,.55);letter-spacing:.04em;pointer-events:none}
-@media(max-width:820px){.mh-logo{display:none}.masthead{height:250px}.mh-txt h1{font-size:1.375rem}}
+@media(max-width:820px){.mh-logo{display:none}.masthead{height:225px}.mh-txt h1{font-size:1.375rem}}
 
 /* ===== 板块导航小按钮 ===== */
 .nav-btns{display:flex;flex-wrap:wrap;gap:var(--space-xs);margin-top:var(--space-2xs)}
@@ -396,7 +396,7 @@ details.fold-sec[open]>summary .fold-hint::before{content:"▾ 收起"}
   .hl-grid{grid-template-columns:1fr}
   .cross-grid{grid-template-columns:1fr}
   .meme-grid{grid-template-columns:1fr}
-  .masthead{height:240px}
+  .masthead{height:216px}
   .mh-txt h1{font-size:1.375rem}
   .mh-txt p{font-size:var(--text-sm)}
   .mh-txt .mh-sub{font-size:var(--text-xs)}
@@ -422,7 +422,7 @@ details.fold-sec[open]>summary .fold-hint::before{content:"▾ 收起"}
   nav{margin-left:0;width:100%}
 
   /* Masthead 头图 */
-  .masthead{height:180px}
+  .masthead{height:162px}
   .masthead>img{object-position:center 15%}
   .mh-inner{padding:0 var(--space-sm);gap:0}
   .mh-txt{flex:1;min-width:0}

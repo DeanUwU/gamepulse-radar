@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-05T11:26:13",
+ "generated_at": "2026-08-12T14:58:05",
  "summary": {
   "candidates": 54,
   "suggest": 22,
@@ -459,7 +459,21 @@
   {
    "kind": "external",
    "game": "全行业",
-   "url": "https://ryzachat-ai.go-spiral.ai/",
+   "url": "https://www.msi.cn/",
+   "from": "gcores",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://store.msi.cn/",
    "from": "gcores",
    "status": 200,
    "type": "static",
@@ -603,20 +617,6 @@
    "from": "yhtj_official",
    "status": 200,
    "type": "static",
-   "verdict": "maybe",
-   "reasons": [
-    "跨域站点，归属游戏待人工确认"
-   ],
-   "suggest_id": "",
-   "toml": ""
-  },
-  {
-   "kind": "external",
-   "game": "主机/PC 大作",
-   "url": "https://www.gearsofwar.com/news/multiplayer/",
-   "from": "xbox_wire",
-   "status": 200,
-   "type": "news_list",
    "verdict": "maybe",
    "reasons": [
     "跨域站点，归属游戏待人工确认"

@@ -1,0 +1,42 @@
+# GamePulse 雷达站 — GitHub Pages 部署工作流
+# 触发：push 到 main 分支时自动构建并发布站点
+# 注意：启用后需在仓库 Settings → Pages → Source 改为 "GitHub Actions"
+#       （此工作流会接管发布，原「从分支直接发布」模式需关闭，否则两者冲突）
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  # 允许在 Actions 页手动触发
+  workflow_dispatch:
+
+# 赋予 GITHUB_TOKEN 发布 Pages 的权限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同一时间只允许一个部署，新 push 取消旧的进行中部署
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 配置 GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: 上传页面产物
+        # 仓库根目录即站点根（index.html / style.css / wordcloud.html 等已在根）
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: 部署到 Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

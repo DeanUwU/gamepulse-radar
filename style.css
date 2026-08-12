@@ -171,19 +171,16 @@ details.fold-sec[open]>summary .fold-hint::before{content:"▾ 收起"}
 .fold-body{animation:foldIn .3s var(--ease-out-quart)}
 @keyframes foldIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
 
-/* ===== 主站：wordcloud2.js canvas 紧致排版 (2026-08-10 升级) ===== */
-/* 2026-08-12 修复竖排 bug：min-height 280 → 360 */
-/* 2026-08-12 修复截断 bug：宽度恒定 880，容器窄时横向滚动 */
+/* ===== 主站：手写 SVG 词云渲染 (2026-08-12 第三次重写) ===== */
+/* 矢量、永不模糊；自写螺旋布局器，从画布中心向外放词；H 大居中，H 小在外 */
 .wc-cloud{position:relative;width:100%;min-height:360px;overflow-x:auto;overflow-y:hidden;display:block;margin:0 auto var(--space-md)}
-#wc-canvas{
-  display:block;margin:0;max-width:none;width:880px;height:360px;border-radius:var(--radius-md);
-  /* 字体清晰度：2026-08-12 升级——物理像素×DPR + 最优字体栈 + 几何精度 */
-  image-rendering:auto;
-  -webkit-font-smoothing:antialiased;
-  font-smooth:never;
+#wc-svg{
+  display:block;margin:0;width:1200px;height:380px;
   text-rendering:geometricPrecision;
+  shape-rendering:geometricPrecision;
+  -webkit-font-smoothing:antialiased;
 }
-.wc-cloud canvas{font-weight:700;letter-spacing:.01em}
+.wc-cloud text{font-weight:600;letter-spacing:.01em}
 .wc-cloud-tip{
   position:absolute;background:rgba(13,17,23,.96);border:1px solid var(--border);
   border-radius:var(--radius-md);padding:var(--space-2xs) var(--space-sm);

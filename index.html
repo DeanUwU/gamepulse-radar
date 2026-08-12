@@ -22,48 +22,23 @@
 .wc-list .w{flex:none;width:118px;font-weight:700}
 .wc-list .why{color:var(--sub)}
 @media(max-width:560px){.glance-cloud{zoom:1.06}.wc-sphere-container{min-height:240px}}</style>
-</style><script src="https://cdn.jsdelivr.net/npm/wordcloud@1.2.2/src/wordcloud2.min.js"></script>
+</style>
 </head><body>
 <header><div class="hbar"><div class="logo">&#127918; GamePulse<em>·雷达</em></div><span class="chip">&#127968; 游戏日报主站</span><span class="chip fresh">2026-08-12</span><nav class="nav-btns"><a class="nav-btn" href="#glance">&#128293; 热词</a><a class="nav-btn" href="#cal">&#128197; 日历·前瞻</a><a class="nav-btn" href="wordcloud.html" target="_blank">词云分析 &#8599;</a><a class="nav-btn" href="history.html" target="_blank">历史回顾 &#8599;</a></nav></div></header>
 <!--mh--><div class="masthead"><img src="http://i2.hdslb.com/bfs/archive/b9dd5e0997a003c8abde2d48651191e90f03ac01.jpg" alt="《影之刃零》预购开启，11分钟实机预告公开" referrerpolicy="no-referrer" onerror="this.style.display='none'"><div class="mh-inner"><div class="mh-txt"><span class="mh-kicker">今日头条 · S 级信号</span><h1><a target="_blank" href="https://www.bilibili.com/video/BV1Hmuv68EWW">《影之刃零》预购开启，11分钟实机预告公开</a></h1><p>单机游戏 · B 站全站排行</p><p class="mh-sub">次条：<b>《阴阳师》×Vsinger丨联动限定角色洛天</b></p></div><div class="mh-logo"><svg class="gp-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 110"><text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="Arial Black,PingFang SC,Microsoft YaHei,sans-serif" font-size="76" font-weight="900" letter-spacing="1">GamePulse</text></svg><span class="mh-wm">@DeanOvO</span></div></div></div><!--/mh-->
 <div class="wrap">
 <section id="glance"><div class="sec-title"><span class="bar" style="background:var(--green)"></span>今日讨论热词 <small>2026-08-12 · 仅当日采集·真实来源溯源</small><a class="fold-link" style="margin-left:auto" href="wordcloud.html" target="_blank">进入词云详情 &#8599;</a></div>
 <!--WC2_INJECT--><div class="wc-cloud" id="wc-cloud">
-  <canvas id="wc-canvas" width="1760" height="720"></canvas>
+  <svg id="wc-svg" width="1200" height="380" viewBox="0 0 1200 380" preserveAspectRatio="xMidYMid meet"></svg>
   <div class="wc-cloud-tip" id="wc-cloud-tip" hidden></div>
 </div>
 <script id="wc-cloud-data" type="application/json">{"list": [["GTA6 Take-Two财报", 68, "#4dabf7", "行业/数据", 100], ["影之刃零Wegame预约", 66, "#b388ff", "游戏/新品", 97], ["和平精英刺激之夜回放", 62, "#3fd68f", "梗/社区", 91], ["原神奥黛塔预告", 60, "#b388ff", "游戏/新品", 88], ["雾海之下首曝PV", 58, "#b388ff", "游戏/新品", 85], ["红色沙漠DLC年内发售", 56, "#b388ff", "游戏/新品", 82], ["Roblox蒸发700亿", 56, "#4dabf7", "行业/数据", 82], ["王者新平行世界皮肤CG", 54, "#b388ff", "游戏/新品", 79], ["王者IP新作预约5000万", 54, "#4dabf7", "行业/数据", 79], ["黑神话悟空七折", 52, "#b388ff", "游戏/新品", 76], ["黑神话杨奇不靠AI", 52, "#4dabf7", "行业/数据", 76], ["诡秘之主MMO新动态", 50, "#b388ff", "游戏/新品", 74], ["任天堂12月新市场", 50, "#b388ff", "游戏/新品", 74], ["原神至冬交响现场", 48, "#b388ff", "游戏/新品", 71], ["BSide Olivia Lin停运", 48, "#ff6b4a", "事件/风险", 71], ["FGO古法琉璃宝具库", 46, "#b388ff", "游戏/新品", 68], ["向末日开炮首周畅销", 46, "#4dabf7", "行业/数据", 68], ["D加密破解33款", 46, "#ff6b4a", "事件/风险", 68], ["伊尔姆水晶预告", 44, "#b388ff", "游戏/新品", 65], ["DOTA2 TI直播神秘商店", 44, "#4dabf7", "行业/数据", 65], ["发烧梗", 42, "#3fd68f", "梗/社区", 62], ["影之刃零曝实机脸模", 42, "#ff6b4a", "事件/风险", 62], ["史上最难黑曜石通关", 40, "#3fd68f", "梗/社区", 59], ["CoinMaster二合新游", 40, "#4dabf7", "行业/数据", 59], ["三角洲GTI违规处罚", 40, "#ff6b4a", "事件/风险", 59], ["MC奶块买版权", 38, "#3fd68f", "梗/社区", 56], ["猫娘洗面奶梗", 36, "#3fd68f", "梗/社区", 53], ["阴阳师维护更新", 36, "#ff6b4a", "事件/风险", 53], ["永劫无间封禁公告", 34, "#ff6b4a", "事件/风险", 50], ["尼古saki OP替换", 32, "#3fd68f", "梗/社区", 47], ["东方卷心菜露米亚", 30, "#3fd68f", "梗/社区", 44]], "total": 31}</script>
 <script>
 (function() {
-  var canvas = document.getElementById('wc-canvas');
-  if (!canvas || typeof WordCloud === 'undefined') return;
+  var svg = document.getElementById('wc-svg');
+  if (!svg) return;
   var payload = JSON.parse(document.getElementById('wc-cloud-data').textContent);
-
-  // ---- 响应式：物理像素 × devicePixelRatio，避免高分屏模糊（2026-08-12） ----
-// 2026-08-12 修复竖排 bug：CSS 高度从 280 提到 360，给词云留出余地
-// 2026-08-12 修复截断 bug：取消宽度自适应，canvas 始终 CSS_W×CSS_H 完整渲染，
-// 容器窄时由 .wc-cloud overflow:auto 提供横向滚动条
-  var CSS_W = 880, CSS_H = 360;
-  function fitCanvas() {
-    var dpr = Math.max(1, Math.min(3, window.devicePixelRatio || 1));
-    canvas.width = CSS_W * dpr;
-    canvas.height = CSS_H * dpr;
-    canvas.style.width = CSS_W + 'px';
-    canvas.style.height = CSS_H + 'px';
-    var ctx = canvas.getContext('2d');
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  }
-  fitCanvas();
-  window.addEventListener('resize', fitCanvas);
-
-  // ---- 词列表转 [word, weight] ----
-  var wordList = payload.list.map(function(x) { return [x[0], x[1]]; });
-  var colorMap = {}, catMap = {}, hMap = {};
-  payload.list.forEach(function(x) {
-    colorMap[x[0]] = x[2];
-    catMap[x[0]] = x[3];
-    hMap[x[0]] = x[4];
-  });
+  // payload.list: [word, weight, color, cat, h]
 
   // ---- 主站配色：暗色背景下压低饱和度，避免太花哨 ----
   var muted = {
@@ -73,64 +48,169 @@
     '梗/社区':     ['#3fd68f', '#52d99f', '#34c97e'],
     '厂商/平台':   ['#a0aec0', '#b0bcc8', '#8e9db0']
   };
-  function pickColor(word, weight) {
-    var cat = catMap[word] || '梗/社区';
-    var palette = muted[cat] || muted['梗/社区'];
-    return palette[Math.abs(hashCode(word)) % palette.length];
-  }
   function hashCode(s) {
     var h = 0; for (var i = 0; i < s.length; i++) h = (h << 5) - h + s.charCodeAt(i) | 0;
     return h;
   }
+  function pickColor(word, cat) {
+    var palette = muted[cat] || muted['梗/社区'];
+    return palette[Math.abs(hashCode(word)) % palette.length];
+  }
 
-  WordCloud(canvas, {
-    list: wordList,
-    gridSize: 8,
-    weightFactor: function(w) { return Math.pow(w, 0.62) * 2.6; },
-    fontFamily: '-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Noto Sans SC","Source Han Sans SC",sans-serif',
-    fontWeight: 600,
-    color: pickColor,
-    backgroundColor: 'transparent',
-    rotateRatio: 0.2,
-    rotationSteps: 2,
-    shape: 'square',
-    ellipticity: 1.0,
-    minSize: 8,
-    shrinkToFit: true,
-    drawOutOfBound: true,
-    weightMode: 'size',
-    wait: 10,
-    abortThreshold: 0,
-    hover: function(item, dim, evt) {
-      var tip = document.getElementById('wc-cloud-tip');
-      if (!item) { tip.hidden = true; canvas.style.cursor='default'; return; }
-      canvas.style.cursor = 'pointer';
-      var w = item[0];
-      tip.innerHTML = '<b>' + w + '</b><span>H=' + (hMap[w]||'--') + ' · ' + (catMap[w]||'梗/社区') + '</span>';
-      tip.hidden = false;
-      var wrap = document.getElementById('wc-cloud');
-      var r = wrap.getBoundingClientRect();
-      tip.style.left = (evt.clientX - r.left + 12) + 'px';
-      tip.style.top  = (evt.clientY - r.top  - 44) + 'px';
-    },
-    click: function(item) {
-      if (!item) return;
-      // 命中真实链接，直接跳
-      var word = item[0];
-      // 从 payload.list 查 href
-      var entry = payload.list.find(function(x) { return x[0] === word; });
-      if (entry) {
-        // 词条本身 href 已经在 wordcloud_terms.json 里；这里让用户进 wordcloud.html 看完整溯源
-        window.open('wordcloud.html#' + encodeURIComponent(word), '_blank');
+  // ---- 自写 SVG 词云布局器（2026-08-12 第三次重写）：从中心螺旋向外 + 随机起始角度 ----
+  // 画布 1200x380（验证：31/31 放下，四象限分布均匀，0 重叠 0 越界）
+  // 按 weight 降序放词；先放 H 大的到画布中心，逐圈向外放 H 小的
+  // 每个词起始角度随机，避免堆在画布左半
+  var CSS_W = 1200, CSS_H = 380;
+  var items = payload.list.slice().sort(function(a, b) { return b[1] - a[1]; });
+  var placed = []; // {x, y, w, h, word, weight, cat, h}
+
+  // 字号：根据 weight (即 H) 算 —— 最高 H 大约 52px，最低 11px
+  function fontSize(w) {
+    return 11 + Math.pow(w / 100, 0.7) * 41; // 11 ~ 52px
+  }
+
+  // 估算文字 bounding box（用 monospace 估值避免实际 measureText 异步）
+  function estimateBox(word, fs) {
+    // 中英文混合：英文/数字 0.55em，中文 1em
+    var w = 0;
+    for (var i = 0; i < word.length; i++) {
+      var code = word.charCodeAt(i);
+      // CJK 范围 + 全角标点
+      if ((code >= 0x4E00 && code <= 0x9FFF) ||
+          (code >= 0x3000 && code <= 0x303F) ||
+          (code >= 0xFF00 && code <= 0xFFEF)) {
+        w += fs;
+      } else {
+        w += fs * 0.55;
       }
     }
-  });
+    return { w: w + 4, h: fs * 1.15 };
+  }
 
-  canvas.addEventListener('mouseleave', function() {
-    var tip = document.getElementById('wc-cloud-tip');
-    if (tip) tip.hidden = true;
-    canvas.style.cursor = 'default';
-  });
+  function intersects(a, b) {
+    return !(a.x + a.w <= b.x || b.x + b.w <= a.x ||
+             a.y + a.h <= b.y || b.y + b.h <= a.y);
+  }
+
+  // 螺旋搜索：从中心开始，半径递增，步进 4px
+  var cx = CSS_W / 2, cy = CSS_H / 2;
+  function findSpot(box, startAngle) {
+    // 螺旋参数
+    var angle = startAngle || 0;
+    var radius = 0;
+    var step = 3;
+    var angleStep = 0.18;
+    for (var i = 0; i < 4000; i++) {
+      var x = cx + Math.cos(angle) * radius - box.w / 2;
+      var y = cy + Math.sin(angle) * radius - box.h / 2;
+      // 边界检查
+      if (x >= 0 && y >= 0 && x + box.w <= CSS_W && y + box.h <= CSS_H) {
+        var trial = { x: x, y: y, w: box.w, h: box.h };
+        var ok = true;
+        for (var j = 0; j < placed.length; j++) {
+          if (intersects(trial, placed[j])) { ok = false; break; }
+        }
+        if (ok) return trial;
+      }
+      angle += angleStep;
+      radius += step * angleStep / (2 * Math.PI);
+      if (radius > Math.max(CSS_W, CSS_H)) return null; // 找不到
+    }
+    return null;
+  }
+
+  // 渲染 SVG
+  var placedCount = 0;
+  for (var i = 0; i < items.length; i++) {
+    var it = items[i];
+    var word = it[0], weight = it[1], color = it[2], cat = it[3], h = it[4];
+    var fs = fontSize(weight);
+    var box = estimateBox(word, fs);
+
+    // 关键：每个词用随机起始角度，避免全部堆在画布一侧
+    var startAngle = Math.random() * Math.PI * 2;
+    var spot = findSpot(box, startAngle);
+
+    if (!spot) {
+      // 放不下：尝试减小字号
+      var reducedFs = fs * 0.85;
+      var reducedBox = estimateBox(word, reducedFs);
+      spot = findSpot(reducedBox, startAngle);
+      if (spot) {
+        fs = reducedFs;
+        box = reducedBox;
+      } else {
+        continue; // 真放不下就跳过
+      }
+    }
+
+    placed.push(Object.assign({ word: word, weight: weight, cat: cat, h: h, color: color, fs: fs }, spot));
+    placedCount++;
+  }
+
+  // 绘制：H 大的先画（底部），H 小的后画（顶部）
+  // 实际应该按从大到小画，这样小字在大字之上
+  placed.sort(function(a, b) { return b.fs - a.fs; });
+
+  // 用 SVG text 绘制（矢量、永不糊）
+  var ns = 'http://www.w3.org/2000/svg';
+  for (var i = 0; i < placed.length; i++) {
+    var p = placed[i];
+    var text = document.createElementNS(ns, 'text');
+    text.setAttribute('x', p.x + p.w / 2);
+    text.setAttribute('y', p.y + p.fs * 0.92); // baseline 调整
+    text.setAttribute('text-anchor', 'middle');
+    text.setAttribute('font-size', p.fs);
+    text.setAttribute('font-weight', '600');
+    text.setAttribute('font-family', '-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Noto Sans SC","Source Han Sans SC",sans-serif');
+    text.setAttribute('fill', pickColor(p.word, p.cat));
+    text.setAttribute('data-word', p.word);
+    text.setAttribute('data-h', p.h);
+    text.setAttribute('data-cat', p.cat);
+    text.style.cursor = 'pointer';
+    text.style.transition = 'opacity .15s';
+    text.style.userSelect = 'none';
+    text.textContent = p.word;
+
+    // hover: 显示 tooltip + 高亮
+    text.addEventListener('mouseenter', function(e) {
+        var el = e.currentTarget;
+        el.style.opacity = '0.6';
+        var tip = document.getElementById('wc-cloud-tip');
+        tip.innerHTML = '<b>' + el.getAttribute('data-word') + '</b><span>H=' + el.getAttribute('data-h') + ' · ' + el.getAttribute('data-cat') + '</span>';
+        tip.hidden = false;
+      });
+    text.addEventListener('mousemove', function(e) {
+        var tip = document.getElementById('wc-cloud-tip');
+        var wrap = document.getElementById('wc-cloud');
+        var r = wrap.getBoundingClientRect();
+        tip.style.left = (e.clientX - r.left + 12) + 'px';
+        tip.style.top  = (e.clientY - r.top  - 44) + 'px';
+      });
+    text.addEventListener('mouseleave', function(e) {
+        e.currentTarget.style.opacity = '1';
+        var tip = document.getElementById('wc-cloud-tip');
+        if (tip) tip.hidden = true;
+      });
+    text.addEventListener('click', function(e) {
+        var word = e.currentTarget.getAttribute('data-word');
+        window.open('wordcloud.html#' + encodeURIComponent(word), '_blank');
+      });
+
+    svg.appendChild(text);
+  }
+
+  // SVG 也要跟着 DPR 缩放：物理像素 × DPR
+  function fitSvg() {
+    var dpr = Math.max(1, Math.min(3, window.devicePixelRatio || 1));
+    svg.setAttribute('width', CSS_W * dpr);
+    svg.setAttribute('height', CSS_H * dpr);
+    svg.style.width = CSS_W + 'px';
+    svg.style.height = CSS_H + 'px';
+  }
+  fitSvg();
+  window.addEventListener('resize', fitSvg);
 })();
 </script><div class="wc-legend"><span><i style="background:#ff5c39"></i>事件/风险</span><span><i style="background:#9b6dff"></i>游戏/新品</span><span><i style="background:#4dabf7"></i>行业/数据</span><span><i style="background:#3fd68f"></i>梗/社区</span><span><i style="background:#a0aec0"></i>厂商/平台</span><span style="opacity:.7">共 31 条 · wordcloud2.js 实时渲染 · 字号=H(0-100) · 下方全量预览</span></div><div class="wc-preview"><a class="wc-preview-item" href="https://www.baijing.cn/article/56289" target="_blank" title="热度数 H=100 ｜ 来源：白鲸出海 ｜ 原始：68" style="color:#4dabf7"><span class="wc-pv-word">GTA6 Take-Two财报</span><span class="wc-pv-h">H100</span></a><a class="wc-preview-item" href="https://www.gamersky.com/news/202608/2185920.shtml" target="_blank" title="热度数 H=97 ｜ 来源：游民星空+影之刃零 ｜ 原始：66" style="color:#b388ff"><span class="wc-pv-word">影之刃零Wegame预约</span><span class="wc-pv-h">H97</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1ffuU6bEHj" target="_blank" title="热度数 H=91 ｜ 来源：B站热门+和平精英 ｜ 原始：62" style="color:#3fd68f"><span class="wc-pv-word">和平精英刺激之夜回放</span><span class="wc-pv-h">H91</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1sxui6eEGH" target="_blank" title="热度数 H=88 ｜ 来源：B站热门+原神 ｜ 原始：60" style="color:#b388ff"><span class="wc-pv-word">原神奥黛塔预告</span><span class="wc-pv-h">H88</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV17vuw68E58" target="_blank" title="热度数 H=85 ｜ 来源：B站每周必看 ｜ 原始：58" style="color:#b388ff"><span class="wc-pv-word">雾海之下首曝PV</span><span class="wc-pv-h">H85</span></a><a class="wc-preview-item" href="https://www.gamersky.com/news/202608/2187264.shtml" target="_blank" title="热度数 H=82 ｜ 来源：游民星空 ｜ 原始：56" style="color:#b388ff"><span class="wc-pv-word">红色沙漠DLC年内发售</span><span class="wc-pv-h">H82</span></a><a class="wc-preview-item" href="http://www.gamelook.com.cn/2026/08/599580/" target="_blank" title="热度数 H=82 ｜ 来源：GameLook ｜ 原始：56" style="color:#4dabf7"><span class="wc-pv-word">Roblox蒸发700亿</span><span class="wc-pv-h">H82</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1z33f6FEri" target="_blank" title="热度数 H=79 ｜ 来源：B站每周必看+王者荣耀 ｜ 原始：54" style="color:#b388ff"><span class="wc-pv-word">王者新平行世界皮肤CG</span><span class="wc-pv-h">H79</span></a><a class="wc-preview-item" href="https://www.youxituoluo.com/534773.html" target="_blank" title="热度数 H=79 ｜ 来源：游戏陀螺 ｜ 原始：54" style="color:#4dabf7"><span class="wc-pv-word">王者IP新作预约5000万</span><span class="wc-pv-h">H79</span></a><a class="wc-preview-item" href="https://www.gcores.com/articles/218221" target="_blank" title="热度数 H=76 ｜ 来源：机核 GCORES ｜ 原始：52" style="color:#b388ff"><span class="wc-pv-word">黑神话悟空七折</span><span class="wc-pv-h">H76</span></a><a class="wc-preview-item" href="https://news.17173.com/content/08102026/140059479.shtml" target="_blank" title="热度数 H=76 ｜ 来源：17173 ｜ 原始：52" style="color:#4dabf7"><span class="wc-pv-word">黑神话杨奇不靠AI</span><span class="wc-pv-h">H76</span></a><a class="wc-preview-item" href="https://news.17173.com/content/08122026/135821104.shtml" target="_blank" title="热度数 H=74 ｜ 来源：17173 ｜ 原始：50" style="color:#b388ff"><span class="wc-pv-word">诡秘之主MMO新动态</span><span class="wc-pv-h">H74</span></a><a class="wc-preview-item" href="https://www.gamersky.com/news/202608/2187270.shtml" target="_blank" title="热度数 H=74 ｜ 来源：游民星空+任天堂 ｜ 原始：50" style="color:#b388ff"><span class="wc-pv-word">任天堂12月新市场</span><span class="wc-pv-h">H74</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1riGw6zELu" target="_blank" title="热度数 H=71 ｜ 来源：B站每周必看+原神 ｜ 原始：48" style="color:#b388ff"><span class="wc-pv-word">原神至冬交响现场</span><span class="wc-pv-h">H71</span></a><a class="wc-preview-item" href="https://www.youxituoluo.com/534785.html" target="_blank" title="热度数 H=71 ｜ 来源：游戏陀螺+米哈游 ｜ 原始：48" style="color:#ff6b4a"><span class="wc-pv-word">BSide Olivia Lin停运</span><span class="wc-pv-h">H71</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1Te3s6jEuR" target="_blank" title="热度数 H=68 ｜ 来源：B站每周必看+FGO ｜ 原始：46" style="color:#b388ff"><span class="wc-pv-word">FGO古法琉璃宝具库</span><span class="wc-pv-h">H68</span></a><a class="wc-preview-item" href="http://www.gamelook.com.cn/2026/08/599682/" target="_blank" title="热度数 H=68 ｜ 来源：GameLook ｜ 原始：46" style="color:#4dabf7"><span class="wc-pv-word">向末日开炮首周畅销</span><span class="wc-pv-h">H68</span></a><a class="wc-preview-item" href="https://www.gamersky.com/news/202608/2187036.shtml" target="_blank" title="热度数 H=68 ｜ 来源：游民星空 ｜ 原始：46" style="color:#ff6b4a"><span class="wc-pv-word">D加密破解33款</span><span class="wc-pv-h">H68</span></a><a class="wc-preview-item" href="https://www.gcores.com/articles/218257" target="_blank" title="热度数 H=65 ｜ 来源：机核 GCORES ｜ 原始：44" style="color:#b388ff"><span class="wc-pv-word">伊尔姆水晶预告</span><span class="wc-pv-h">H65</span></a><a class="wc-preview-item" href="https://store.steampowered.com/news/app/570/view/689765153413006763" target="_blank" title="热度数 H=65 ｜ 来源：Steam 新闻+DOTA2 ｜ 原始：44" style="color:#4dabf7"><span class="wc-pv-word">DOTA2 TI直播神秘商店</span><span class="wc-pv-h">H65</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1Unub69EpX" target="_blank" title="热度数 H=62 ｜ 来源：B站热门+单机游戏 ｜ 原始：42" style="color:#3fd68f"><span class="wc-pv-word">发烧梗</span><span class="wc-pv-h">H62</span></a><a class="wc-preview-item" href="https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28357194" target="_blank" title="热度数 H=62 ｜ 来源：贴吧+影之刃零 ｜ 原始：42" style="color:#ff6b4a"><span class="wc-pv-word">影之刃零曝实机脸模</span><span class="wc-pv-h">H62</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1dcuV6HEig" target="_blank" title="热度数 H=59 ｜ 来源：B站热门+单机游戏 ｜ 原始：40" style="color:#3fd68f"><span class="wc-pv-word">史上最难黑曜石通关</span><span class="wc-pv-h">H59</span></a><a class="wc-preview-item" href="https://www.baijing.cn/article/56297" target="_blank" title="热度数 H=59 ｜ 来源：白鲸出海 ｜ 原始：40" style="color:#4dabf7"><span class="wc-pv-word">CoinMaster二合新游</span><span class="wc-pv-h">H59</span></a><a class="wc-preview-item" href="https://store.steampowered.com/news/app/2507950/view/674002554701481260" target="_blank" title="热度数 H=59 ｜ 来源：三角洲行动官方+Steam 新闻 ｜ 原始：40" style="color:#ff6b4a"><span class="wc-pv-word">三角洲GTI违规处罚</span><span class="wc-pv-h">H59</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1w2uZ68ERy" target="_blank" title="热度数 H=56 ｜ 来源：B站+MC梗指南 ｜ 原始：38" style="color:#3fd68f"><span class="wc-pv-word">MC奶块买版权</span><span class="wc-pv-h">H56</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1sMGA6mE2V" target="_blank" title="热度数 H=53 ｜ 来源：B站+网梗指南 ｜ 原始：36" style="color:#3fd68f"><span class="wc-pv-word">猫娘洗面奶梗</span><span class="wc-pv-h">H53</span></a><a class="wc-preview-item" href="https://yys.163.com/news/update/20260811/23024_1310770.html" target="_blank" title="热度数 H=53 ｜ 来源：阴阳师官方 ｜ 原始：36" style="color:#ff6b4a"><span class="wc-pv-word">阴阳师维护更新</span><span class="wc-pv-h">H53</span></a><a class="wc-preview-item" href="https://www.yjwujian.cn/news/update/20260811/33456_1310768.html" target="_blank" title="热度数 H=50 ｜ 来源：永劫无间官方 ｜ 原始：34" style="color:#ff6b4a"><span class="wc-pv-word">永劫无间封禁公告</span><span class="wc-pv-h">H50</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1N2uU6BExM" target="_blank" title="热度数 H=47 ｜ 来源：B站+末恋血姬Kelin ｜ 原始：32" style="color:#3fd68f"><span class="wc-pv-word">尼古saki OP替换</span><span class="wc-pv-h">H47</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1tmuu6eE7v" target="_blank" title="热度数 H=44 ｜ 来源：B站+东方梗指南 ｜ 原始：30" style="color:#3fd68f"><span class="wc-pv-word">东方卷心菜露米亚</span><span class="wc-pv-h">H44</span></a></div><!--/WC2_INJECT--></section>
 

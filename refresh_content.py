@@ -1229,9 +1229,9 @@ def main():
     # 视觉焦点只剩纯文字卡，图墙名存实亡。重要的事在两处都露出是正常的。
     grid, n4 = build_visual_focus(data, set())
     src, _ = replace_visual_focus(src, grid)
-    # 头图·每日轮换（按当日 B站 游戏区热门自动选）
-    masthead_html = build_masthead(data)
-    src, n_mh = replace_masthead(src, masthead_html)
+    # 头图·每日轮换（2026-08-12 用户要求移除 masthead）
+    # masthead_html = build_masthead(data)
+    # src, n_mh = replace_masthead(src, masthead_html)
 
     # 页面身份日期必须随当天采集同步；只改标题和头部 chip，绝不粗暴替换正文里的事件日期。
     src = re.sub(r'(<title>GamePulse · 游戏内容雷达 )\d{4}-\d{2}-\d{2}(</title>)',

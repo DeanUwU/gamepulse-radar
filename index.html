@@ -29,7 +29,7 @@
 <div class="wrap">
 <section id="glance"><div class="sec-title"><span class="bar" style="background:var(--green)"></span>今日讨论热词 <small>2026-08-12 · 仅当日采集·真实来源溯源</small><a class="fold-link" style="margin-left:auto" href="wordcloud.html" target="_blank">进入词云详情 &#8599;</a></div>
 <!--WC2_INJECT--><div class="wc-cloud" id="wc-cloud">
-  <canvas id="wc-canvas" width="1760" height="560"></canvas>
+  <canvas id="wc-canvas" width="1760" height="720"></canvas>
   <div class="wc-cloud-tip" id="wc-cloud-tip" hidden></div>
 </div>
 <script id="wc-cloud-data" type="application/json">{"list": [["GTA6 Take-Two财报", 68, "#4dabf7", "行业/数据", 100], ["影之刃零Wegame预约", 66, "#b388ff", "游戏/新品", 97], ["和平精英刺激之夜回放", 62, "#3fd68f", "梗/社区", 91], ["原神奥黛塔预告", 60, "#b388ff", "游戏/新品", 88], ["雾海之下首曝PV", 58, "#b388ff", "游戏/新品", 85], ["红色沙漠DLC年内发售", 56, "#b388ff", "游戏/新品", 82], ["Roblox蒸发700亿", 56, "#4dabf7", "行业/数据", 82], ["王者新平行世界皮肤CG", 54, "#b388ff", "游戏/新品", 79], ["王者IP新作预约5000万", 54, "#4dabf7", "行业/数据", 79], ["黑神话悟空七折", 52, "#b388ff", "游戏/新品", 76], ["黑神话杨奇不靠AI", 52, "#4dabf7", "行业/数据", 76], ["诡秘之主MMO新动态", 50, "#b388ff", "游戏/新品", 74], ["任天堂12月新市场", 50, "#b388ff", "游戏/新品", 74], ["原神至冬交响现场", 48, "#b388ff", "游戏/新品", 71], ["BSide Olivia Lin停运", 48, "#ff6b4a", "事件/风险", 71], ["FGO古法琉璃宝具库", 46, "#b388ff", "游戏/新品", 68], ["向末日开炮首周畅销", 46, "#4dabf7", "行业/数据", 68], ["D加密破解33款", 46, "#ff6b4a", "事件/风险", 68], ["伊尔姆水晶预告", 44, "#b388ff", "游戏/新品", 65], ["DOTA2 TI直播神秘商店", 44, "#4dabf7", "行业/数据", 65], ["发烧梗", 42, "#3fd68f", "梗/社区", 62], ["影之刃零曝实机脸模", 42, "#ff6b4a", "事件/风险", 62], ["史上最难黑曜石通关", 40, "#3fd68f", "梗/社区", 59], ["CoinMaster二合新游", 40, "#4dabf7", "行业/数据", 59], ["三角洲GTI违规处罚", 40, "#ff6b4a", "事件/风险", 59], ["MC奶块买版权", 38, "#3fd68f", "梗/社区", 56], ["猫娘洗面奶梗", 36, "#3fd68f", "梗/社区", 53], ["阴阳师维护更新", 36, "#ff6b4a", "事件/风险", 53], ["永劫无间封禁公告", 34, "#ff6b4a", "事件/风险", 50], ["尼古saki OP替换", 32, "#3fd68f", "梗/社区", 47], ["东方卷心菜露米亚", 30, "#3fd68f", "梗/社区", 44]], "total": 31}</script>
@@ -40,7 +40,8 @@
   var payload = JSON.parse(document.getElementById('wc-cloud-data').textContent);
 
   // ---- 响应式：物理像素 × devicePixelRatio，避免高分屏模糊（2026-08-12） ----
-  var CSS_W = 880, CSS_H = 280;
+  // 2026-08-12 修复竖排 bug：CSS 高度从 280 提到 360，给词云留出余地
+  var CSS_W = 880, CSS_H = 360;
   function fitCanvas() {
     var wrap = canvas.parentElement;
     var dpr = Math.max(1, Math.min(3, window.devicePixelRatio || 1));
@@ -92,10 +93,10 @@
     fontWeight: 600,
     color: pickColor,
     backgroundColor: 'transparent',
-    rotateRatio: 0.05,
+    rotateRatio: 0.2,
     rotationSteps: 2,
     shape: 'square',
-    ellipticity: 0.85,
+    ellipticity: 0.7,
     minSize: 10,
     shrinkToFit: true,
     drawOutOfBound: false,

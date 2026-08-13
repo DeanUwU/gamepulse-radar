@@ -529,7 +529,7 @@ def generate_wordcloud_page():
 </div>
 </section>
 </div>
-<footer>GamePulse · 2026-07-30 · 模块化站点，每个页面可独立迭代</footer>
+<footer>GamePulse · {cloud_date} · 模块化站点，每个页面可独立迭代</footer>
 
 <script id="wc-data" type="application/json">{wc2_json}</script>
 <script id="wc-trace-data" type="application/json">{trace_json}</script>

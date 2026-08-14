@@ -331,8 +331,8 @@ def build_main_wordcloud():
     fontFamily: '"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif',
     color: pickColor,
     backgroundColor: 'transparent',
-    rotateRatio: 0.18,
-    rotationSteps: 2,
+    rotateRatio: 0,            /* 2026-08-13 修复：原 0.18 导致部分词旋转 ±90°（"尚未开悬念Top12"等竖排），全员水平排版 */
+    rotationSteps: 1,
     shape: 'square',
     ellipticity: 0.85,
     minSize: 10,
@@ -575,7 +575,7 @@ def generate_wordcloud_page():
       return colorMap[word] || '#3fd68f';
     }},
     backgroundColor: '#161b22',
-    rotateRatio: 0.08,
+    rotateRatio: 0,            /* 2026-08-13 与主站统一：全员水平排版，不再随机竖排 */
     shape: 'square',
     ellipticity: 0.72,
     minSize: 11,

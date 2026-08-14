@@ -507,9 +507,9 @@ def load_hotlist(date_s):
 
 
 def build_top10(data, date_s):
-    """TOP10 的 B站条目位（第 2~10 位）。第 1 位是头条事件位，由当日最新事件类内容生成。
-    排序用 top10_score（播放量 × 游戏/发售信号权重），而非裸播放量——
-    让登顶 Steam、正式发售这类大作不被泛圈巨量视频淹没。"""
+    """兼容旧雷达：保留以防其它脚本引用。新版请用 build_podium()。
+    TOP10 的 B站条目位（第 2~10 位）。第 1 位是头条事件位，由 build_top10_head() 生成。
+    排序用 top10_score（播放量 × 游戏/发售信号权重）。"""
     pool = {}
     for idx, v in enumerate(data.get("popular", [])):
         pool[v["url"]] = dict(v, _src="热门", _rank=idx + 1)
@@ -544,6 +544,240 @@ def build_top10(data, date_s):
             f'background:{color}18">{tag}</span></div></a>'
         )
     return out
+
+
+def _podium_top1(data, date_s):
+    """生成焦点榜 TOP1 头条位（事件类优先）。返回 dict 或 None。
+    来源优先级：events.json feed_events 当日 → meme 风险词视频 → 视频池 H 最高。
+    """
+    # 1) events.json feed_events 近 3 天事件
+    ev_path = os.path.join(BASE, "events.json")
+    try:
+        ev = json.load(io.open(ev_path, encoding="utf-8"))
+        for fe in (ev.get("feed_events") or []):
+            pd = fe.get("pubdate") or fe.get("first_seen") or ""
+            if not pd:
+                continue
+            try:
+                d = datetime.date.fromisoformat(str(pd)[:10])
+            except Exception:
+                continue
+            if (datetime.date.today() - d).days <= 3:
+                return {
+                    "rank": 1,
+                    "url": fe.get("source_url") or fe.get("url") or "#",
+                    "title": fe.get("title") or fe.get("game") or "（无标题）",
+                    "tag": "事件",
+                    "color": "#ff5c39",
+                    "img": "",
+                    "meta": "%s · %s" % (fe.get("source_name") or "未知来源", pd[5:10]),
+                    "is_event": True,
+                }
+    except Exception:
+        pass
+    # 2) meme 风险词视频
+    RISK_KW = ["处罚", "封禁", "下架", "暴雷", "维权", "约谈", "整改", "泄露", "泄密",
+               "收购", "减持", "停服", "跳票", "官宣", "定档", "登顶", "预购", "开启预购",
+               "预售", "正式发售", "上线"]
+    for v in (data.get("popular", []) + data.get("weekly", [])):
+        if fresh_bili(v) and any(k in (v.get("title") or "") for k in RISK_KW):
+            return _podium_video_to_dict(v, 1)
+    # 3) 降级：视频池 top1（按 top10_score）作为头条
+    pool = {}
+    for idx, v in enumerate(data.get("popular", [])):
+        pool[v["url"]] = dict(v, _src="热门", _rank=idx + 1)
+    for v in data.get("weekly", []):
+        if v["url"] not in pool:
+            pool[v["url"]] = dict(v, _src="周必看", _rank=999)
+    rows = sorted([v for v in pool.values() if fresh_bili(v)], key=top10_score, reverse=True)
+    if rows:
+        return _podium_video_to_dict(rows[0], 1)
+    return None
+
+
+def _podium_video_to_dict(v, rank):
+    """把 B 站视频 dict 转换为 podium 条目 dict。"""
+    tname = v.get("tname") or ""
+    if any(t in tname for t in KUSO_TNAMES):
+        tag, color = "鬼畜", "#3fd68f"
+    elif v.get("_src") == "周必看":
+        tag, color = "破圈", "#4da3ff"
+    elif "游戏" in tname:
+        tag, color = "游戏", "#c792ea"
+    else:
+        tag, color = "高热", "#ffb020"
+    return {
+        "rank": rank,
+        "url": v["url"],
+        "title": v.get("title") or "",
+        "tag": tag,
+        "color": color,
+        "img": v.get("pic") or "",
+        "meta": "%s · %s" % (wan(v.get("view", 0)), tname),
+        "is_event": False,
+    }
+
+
+def build_podium(data, date_s):
+    """生成「今日焦点」#podium 板块（金字塔三档）。
+    设计：TOP1 榜首大卡 + TOP2-5 中卡 + TOP6-10 小卡，全部去重自同一 pool。
+    """
+    # 排序视频池：popular + weekly，按 top10_score
+    pool = {}
+    for idx, v in enumerate(data.get("popular", [])):
+        pool[v["url"]] = dict(v, _src="热门", _rank=idx + 1)
+    for v in data.get("weekly", []):
+        if v["url"] not in pool:
+            pool[v["url"]] = dict(v, _src="周必看", _rank=999)
+    ranked_videos = sorted([v for v in pool.values() if fresh_bili(v)],
+                           key=top10_score, reverse=True)
+
+    # TOP1：头条事件（视频或文章），URL 可能跟 ranked_videos[0] 重合
+    top1 = _podium_top1(data, date_s)
+
+    # 排除 TOP1 的 URL（若 TOP1 来自视频池）
+    seen = set()
+    if top1 and top1["url"] in pool:
+        seen.add(top1["url"])
+
+    # TOP2-10：从 ranked_videos 按顺序取 9 条（去重）
+    mids = []
+    smalls = []
+    for v in ranked_videos:
+        if v["url"] in seen:
+            continue
+        seen.add(v["url"])
+        d = _podium_video_to_dict(v, len(mids) + len(smalls) + 2)
+        if len(mids) < 4:
+            mids.append(d)
+        elif len(smalls) < 5:
+            smalls.append(d)
+        else:
+            break
+
+    # 渲染三档
+    cards_html = []
+    if top1:
+        cards_html.append(_podium_render_top1(top1))
+    for e in mids:
+        cards_html.append(_podium_render_mid(e))
+    for e in smalls:
+        cards_html.append(_podium_render_small(e))
+
+    n_total = len(cards_html)
+    sec = (
+        f'<section id="podium"><div class="sec-title">'
+        f'<span class="bar" style="background:var(--accent)"></span>'
+        f'今日焦点 <small>合并「视觉焦点 + 内容 TOP10」· 三档金字塔布局 · '
+        f'TOP1 榜首大图 / TOP2-5 中卡 / TOP6-10 紧凑小卡 · '
+        f'热度数 H(0-100)：组内最热=100，原始播放量仅作附注；事件类按多源证据定序，不计 H</small>'
+        f'</div><div class="pb-grid">'
+        + "".join(cards_html) +
+        '</div></section>'
+    )
+    return sec, n_total
+
+
+def _podium_render_top1(e):
+    """渲染 TOP1 大卡。事件无图 = 渐变底+白字；有图 = 图+叠层文字。"""
+    title = esc(e["title"])
+    meta = esc(e["meta"])
+    tag = esc(e["tag"])
+    color = e["color"]
+    if e.get("is_event") or not e.get("img"):
+        # 事件无图：渐变底 + 大字白标题
+        return (
+            f'<a class="pb-card-1 pb-card-1-event" target="_blank" href="{esc(e["url"])}" '
+            f'style="background:linear-gradient(135deg,#ff5c39 0%,#ffb020 60%,#ff7a3d 100%);">'
+            f'<div class="pb-cap-1">'
+            f'<span class="pb-rank-1">TOP 1 · {tag}</span>'
+            f'<i class="pb-tag-1" style="background:#fff"></i>'
+            f'<div class="pb-title-1">{title}</div>'
+            f'<div class="pb-meta-1">'
+            f'<span class="pb-h-1" style="color:#fff">{tag}</span>'
+            f'<span style="color:#fff">{meta}</span>'
+            f'</div></div></a>'
+        )
+    # 有图：图片背景 + 暗渐变 + 白字
+    img = esc(e["img"])
+    return (
+        f'<a class="pb-card-1" target="_blank" href="{esc(e["url"])}">'
+        f'<img src="{img}" alt="{title}" loading="lazy" referrerpolicy="no-referrer" '
+        f'onerror="this.style.display=\'none\'">'
+        f'<div class="pb-cap-1">'
+        f'<span class="pb-rank-1">TOP 1 · {tag}</span>'
+        f'<i class="pb-tag-1" style="background:{color}"></i>'
+        f'<div class="pb-title-1">{title}</div>'
+        f'<div class="pb-meta-1">'
+        f'<span class="pb-h-1">{tag}</span>'
+        f'<span>{meta}</span>'
+        f'</div></div></a>'
+    )
+
+
+def _podium_render_mid(e):
+    """渲染 TOP2-5 中卡：有图=缩略图+标题+meta；无图=纯文字+大色条。"""
+    title = esc(clip(e["title"], 30))
+    meta = esc(e["meta"])
+    tag = esc(e["tag"])
+    color = e["color"]
+    rank = e["rank"]
+    img_html = ""
+    if e.get("img"):
+        img_html = (f'<img src="{esc(e["img"])}" alt="{title}" loading="lazy" '
+                    f'referrerpolicy="no-referrer" '
+                    f'onerror="this.style.display=\'none\'">')
+    return (
+        f'<a class="pb-card-mid" target="_blank" href="{esc(e["url"])}">'
+        f'{img_html}'
+        f'<div class="pb-mid-body">'
+        f'<div class="pb-mid-head">'
+        f'<span class="pb-rank-mid">#{rank}</span>'
+        f'<span class="pb-tag-mid" style="color:{color};border:1px solid {color}55;background:{color}15;">{tag}</span>'
+        f'</div>'
+        f'<div class="pb-title-mid">{title}</div>'
+        f'<div class="pb-meta-mid">{meta}</div>'
+        f'</div></a>'
+    )
+
+
+def _podium_render_small(e):
+    """渲染 TOP6-10 小卡：上图下文（与中卡同款布局），缩略图全宽 + head(rank+tag) + title(2行clamp) + meta。
+    2026-08-13 v5：用户反馈「不要把文字搞成几个字一行的」→ 从横排改回纵排，
+        标题用 -webkit-line-clamp:2 限制 2 行（~250px 列宽下可读性最优）。
+    """
+    title = esc(clip(e["title"], 40))
+    tag = esc(e["tag"])
+    color = e["color"]
+    rank = e["rank"]
+    meta_short = esc(e["meta"])
+    img_html = ""
+    if e.get("img"):
+        img_html = (f'<img class="pb-thumb-small" src="{esc(e["img"])}" alt="{title}" '
+                    f'loading="lazy" referrerpolicy="no-referrer" '
+                    f'onerror="this.style.display=\'none\'">')
+    return (
+        f'<a class="pb-card-small" target="_blank" href="{esc(e["url"])}">'
+        f'{img_html}'
+        f'<div class="pb-small-body">'
+        f'<div class="pb-small-head">'
+        f'<span class="pb-rank-small">#{rank}</span>'
+        f'<span class="pb-tag-small" style="color:{color};border:1px solid {color}55;background:{color}15;">{tag}</span>'
+        f'</div>'
+        f'<div class="pb-title-small">{title}</div>'
+        f'<div class="pb-meta-small">{meta_short}</div>'
+        f'</div>'
+        f'</a>'
+    )
+
+
+def replace_podium(src, sec_html):
+    """整块替换 #podium section。"""
+    pat = re.compile(r'<section id="podium">.*?</section>', re.S)
+    new_src, n = pat.subn(sec_html, src)
+    if n == 0:
+        return src, 0
+    return new_src, n
 
 
 def build_top10_head(data, date_s):
@@ -1215,20 +1449,15 @@ def main():
 
     body, intro, _ = build_hot(data, date_s)
     src, ok1 = replace_hot(src, body, intro, date_s)
-    items = build_top10(data, date_s)
-    head = build_top10_head(data, date_s)
-    src, n2 = replace_top10(src, items, head)
     src, n3 = stamp_curated(src, date_s)
     # 今日速览·卡片网格增强（注入封面图，无匹配用渐变占位）
     brief_cards = build_brief_cards(src, data)
     src, n_brief = replace_brief(src, brief_cards)
-    # 视觉焦点·全自动定稿（无人工编辑，脚本直接选稿上版）
-    # 这里刻意「不」排除 TOP10 的链接：两个板块选材维度本就不同——
-    # TOP10 是 B站全站热度榜（谁播放高谁上），视觉焦点是今日游戏事件图墙（按事件类型选）。
-    # 之前排除过一轮，结果当天仅有的 3 条带封面图的游戏稿全被 TOP10 吃掉，
-    # 视觉焦点只剩纯文字卡，图墙名存实亡。重要的事在两处都露出是正常的。
-    grid, n4 = build_visual_focus(data, set())
-    src, _ = replace_visual_focus(src, grid)
+    # 今日焦点（#podium）：合并原「视觉焦点 + 内容 TOP10」，三档金字塔布局。
+    #   TOP1 榜首大图（事件/视频） / TOP2-5 中卡（视频+缩略图） / TOP6-10 紧凑小卡（无图）。
+    #   候选同源：popular+weekly → top10_score 排序 + events.json feed_events 当日事件。
+    podium_html, n_podium = build_podium(data, date_s)
+    src, _ = replace_podium(src, podium_html)
     # 头图·每日轮换（按当日 B站 游戏区热门自动选）
     masthead_html = build_masthead(data)
     src, n_mh = replace_masthead(src, masthead_html)
@@ -1245,16 +1474,20 @@ def main():
     # 写临时文件再替换，防止预览窗格锁住目标文件导致 PermissionError
     _tmp = TARGET + "." + dt.datetime.now().strftime("%H%M%S")
     io.open(_tmp, "w", encoding="utf-8").write(src)
+    # 2026-08-13 修复：os.remove 失败被 except 吞掉后，os.rename 在 Windows 上因目标已存在抛 WinError 183，
+    #   且把 TARGET 留下、_tmp 残留 → 下次再跑继续冲突。改为 os.replace 原子替换（覆盖目标，失败即抛错不静默）。
     try:
-        os.remove(TARGET)
-    except OSError:
-        pass
-    os.rename(_tmp, TARGET)
+        os.replace(_tmp, TARGET)
+    except OSError as e:
+        # 目标被 IDE 预览锁住时，保留 _tmp 供人工拼装，明确报错而非静默吞掉
+        print(f"refresh_content: 写入失败（目标被锁？）: {e}；临时文件保留在 {_tmp}")
+        raise
     print(f"refresh_content: 已用 {date_s} 采集结果重刷内容板块"
-          f"（梗雷达 3 子板块 / TOP10 {n2} 条 / 速览 {n_brief} 卡片化 / 视觉焦点 {n4} 张"
+          f"（梗雷达 3 子板块 / 今日焦点 {n_podium} 张（金字塔三档：TOP1 大 + TOP2-5 中 + TOP6-10 小）"
+          f" / 速览 {n_brief} 卡片化"
           f" / 头图轮换 {n_mh} / 新增策展标记 {n3}）")
-    print("  注：视觉焦点已改为脚本全自动定稿（一稿一类 + 行业快报补位），无人工确认环节；")
-    print("      TOP10 头条位与风险观察仍为静态块，由 (e) 校验做过期告警。")
+    print("  注：今日焦点（原视觉焦点+TOP10 合并）脚本全自动定稿，无人工确认环节；")
+    print("      风险观察仍为静态块，由 (e) 校验做过期告警。")
 
 
 if __name__ == "__main__":

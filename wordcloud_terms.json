@@ -1,222 +1,37 @@
 {
-  "date": "2026-08-13",
+  "date": "2026-08-14",
   "terms": [
-    {
-      "term": "影之刃零11分钟实机",
-      "href": "https://www.bilibili.com/video/BV1Hmuv68EWW",
-      "cat": "游戏/新品",
-      "heat": 92,
-      "sources": ["B站热门", "影之刃零"]
-    },
-    {
-      "term": "影之刃零登顶Steam热销",
-      "href": "https://www.gcores.com/articles/218263",
-      "cat": "游戏/新品",
-      "heat": 84,
-      "sources": ["机核GCORES", "影之刃零"]
-    },
-    {
-      "term": "原神奥黛塔",
-      "href": "https://www.bilibili.com/video/BV1sxui6eEGH",
-      "cat": "游戏/新品",
-      "heat": 78,
-      "sources": ["B站热门", "原神"]
-    },
-    {
-      "term": "异环残虹PV",
-      "href": "https://www.bilibili.com/video/BV1y1uq6zEud",
-      "cat": "游戏/新品",
-      "heat": 74,
-      "sources": ["B站热门", "异环"]
-    },
-    {
-      "term": "雾海之下首曝",
-      "href": "https://www.bilibili.com/video/BV17vuw68E58",
-      "cat": "游戏/新品",
-      "heat": 70,
-      "sources": ["B站每周必看", "雾海之下"]
-    },
-    {
-      "term": "发烧梗",
-      "href": "https://www.bilibili.com/video/BV1Unub69EpX",
-      "cat": "梗/社区",
-      "heat": 66,
-      "sources": ["B站热门", "单机游戏区"]
-    },
-    {
-      "term": "宗主连携技",
-      "href": "https://www.bilibili.com/video/BV1Nr3s6rE79",
-      "cat": "梗/社区",
-      "heat": 64,
-      "sources": ["B站每周必看", "鬼畜调教"]
-    },
-    {
-      "term": "一块黑曜石通关",
-      "href": "https://www.bilibili.com/video/BV1dcuV6HEig",
-      "cat": "梗/社区",
-      "heat": 63,
-      "sources": ["B站热门", "我的世界"]
-    },
-    {
-      "term": "王者无尽之局CG",
-      "href": "https://www.bilibili.com/video/BV1z33f6FEri",
-      "cat": "游戏/新品",
-      "heat": 62,
-      "sources": ["B站每周必看", "王者荣耀"]
-    },
-    {
-      "term": "王者IP新作定档9月",
-      "href": "https://www.youxituoluo.com/534773.html",
-      "cat": "游戏/新品",
-      "heat": 60,
-      "sources": ["游戏陀螺", "王者荣耀"]
-    },
-    {
-      "term": "原神至冬交响现场",
-      "href": "https://www.bilibili.com/video/BV1riGw6zELu",
-      "cat": "游戏/新品",
-      "heat": 58,
-      "sources": ["B站每周必看", "原神"]
-    },
-    {
-      "term": "泥肘",
-      "href": "https://www.bilibili.com/video/BV1TiuZ6TEQw",
-      "cat": "梗/社区",
-      "heat": 57,
-      "sources": ["B站热门", "鬼畜调教"]
-    },
-    {
-      "term": "米哈游BSide停运",
-      "href": "https://www.youxituoluo.com/534785.html",
-      "cat": "事件/风险",
-      "heat": 56,
-      "sources": ["游戏陀螺", "米哈游"]
-    },
-    {
-      "term": "任天堂12月新市场",
-      "href": "https://www.gamersky.com/news/202608/2187270.shtml",
-      "cat": "行业/数据",
-      "heat": 55,
-      "sources": ["游民星空", "任天堂"]
-    },
-    {
-      "term": "偷吃零食被发现",
-      "href": "https://www.bilibili.com/video/BV1fGuc6xEmp",
-      "cat": "梗/社区",
-      "heat": 54,
-      "sources": ["B站每周必看", "单机游戏区"]
-    },
-    {
-      "term": "GTA6拉动T2财报",
-      "href": "https://www.baijing.cn/article/56289",
-      "cat": "行业/数据",
-      "heat": 53,
-      "sources": ["白鲸出海", "Take-Two"]
-    },
-    {
-      "term": "红色沙漠DLC年内",
-      "href": "https://www.gamersky.com/news/202608/2187264.shtml",
-      "cat": "游戏/新品",
-      "heat": 52,
-      "sources": ["游民星空", "红色沙漠"]
-    },
-    {
-      "term": "杨奇不赶工期",
-      "href": "https://news.17173.com/content/08102026/140059479.shtml",
-      "cat": "行业/数据",
-      "heat": 51,
-      "sources": ["17173", "黑神话"]
-    },
-    {
-      "term": "D加密一年被攻下33款",
-      "href": "https://www.gamersky.com/news/202608/2187036.shtml",
-      "cat": "事件/风险",
-      "heat": 50,
-      "sources": ["游民星空", "Denuvo"]
-    },
-    {
-      "term": "华强买瓜新手机位",
-      "href": "https://www.bilibili.com/video/BV1eH3m6XEhN",
-      "cat": "梗/社区",
-      "heat": 49,
-      "sources": ["B站每周必看", "鬼畜剧场"]
-    },
-    {
-      "term": "Roblox市值蒸发700亿",
-      "href": "http://www.gamelook.com.cn/2026/08/599580/",
-      "cat": "行业/数据",
-      "heat": 48,
-      "sources": ["GameLook", "Roblox"]
-    },
-    {
-      "term": "东百顶上战争",
-      "href": "https://www.bilibili.com/video/BV1xz3m63EgP",
-      "cat": "梗/社区",
-      "heat": 47,
-      "sources": ["B站每周必看", "鬼畜剧场"]
-    },
-    {
-      "term": "影之刃零脸模争议",
-      "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28357194",
-      "cat": "事件/风险",
-      "heat": 46,
-      "sources": ["百度贴吧热议", "影之刃零"]
-    },
-    {
-      "term": "诡异的论坛",
-      "href": "https://www.bilibili.com/video/BV19wG369Edu",
-      "cat": "梗/社区",
-      "heat": 45,
-      "sources": ["B站每周必看", "单机游戏区"]
-    },
-    {
-      "term": "伊尔姆水晶新预告",
-      "href": "https://www.gcores.com/articles/218257",
-      "cat": "游戏/新品",
-      "heat": 44,
-      "sources": ["机核GCORES", "伊尔姆水晶"]
-    },
-    {
-      "term": "诡秘之主MMO动捕",
-      "href": "https://news.17173.com/content/08122026/135821104.shtml",
-      "cat": "游戏/新品",
-      "heat": 43,
-      "sources": ["17173", "诡秘之主"]
-    },
-    {
-      "term": "向末日开炮杀入Top15",
-      "href": "http://www.gamelook.com.cn/2026/08/599682/",
-      "cat": "行业/数据",
-      "heat": 42,
-      "sources": ["GameLook", "大梦龙途"]
-    },
-    {
-      "term": "FGO古法琉璃复原",
-      "href": "https://www.bilibili.com/video/BV1Te3s6jEuR",
-      "cat": "梗/社区",
-      "heat": 41,
-      "sources": ["B站每周必看", "FGO"]
-    },
-    {
-      "term": "奶块买版权",
-      "href": "https://www.bilibili.com/video/BV1w2uZ68ERy",
-      "cat": "梗/社区",
-      "heat": 39,
-      "sources": ["B站梗百科", "我的世界"]
-    },
-    {
-      "term": "猫娘洗面奶",
-      "href": "https://www.bilibili.com/video/BV1sMGA6mE2V",
-      "cat": "梗/社区",
-      "heat": 37,
-      "sources": ["B站梗百科", "网梗指南"]
-    },
-    {
-      "term": "CoinMaster年流水60亿",
-      "href": "https://www.baijing.cn/article/56297",
-      "cat": "行业/数据",
-      "heat": 35,
-      "sources": ["白鲸出海", "MoonActive"]
-    }
+    { "term": "影之刃零实机", "href": "https://www.bilibili.com/video/BV1Hmuv68EWW", "cat": "游戏/新品", "heat": 92, "sources": ["B站热门"] },
+    { "term": "影之刃零登顶Steam", "href": "https://www.gcores.com/articles/218263", "cat": "行业/数据", "heat": 85, "sources": ["机核网"] },
+    { "term": "至冬7.0全收集", "href": "https://www.bilibili.com/video/BV1BMgj6MEz4", "cat": "游戏/新品", "heat": 80, "sources": ["B站热门"] },
+    { "term": "甄子丹功夫震撼", "href": "http://www.gamelook.com.cn/2026/08/599831/", "cat": "行业/数据", "heat": 78, "sources": ["GameLook"] },
+    { "term": "WasteTheFallen首曝", "href": "https://www.bilibili.com/video/BV1FRgn6pEph", "cat": "游戏/新品", "heat": 74, "sources": ["B站热门"] },
+    { "term": "TI15神秘商店", "href": "https://store.steampowered.com/news/app/570/view/689765153413006763", "cat": "事件/风险", "heat": 72, "sources": ["Steam新闻"] },
+    { "term": "至冬狼人杀", "href": "https://www.bilibili.com/video/BV1J2gj6GE5K", "cat": "游戏/新品", "heat": 70, "sources": ["B站热门"] },
+    { "term": "D加密33款破解", "href": "https://www.gamersky.com/news/202608/2187036.shtml", "cat": "事件/风险", "heat": 69, "sources": ["游民星空"] },
+    { "term": "Wegame预约20万", "href": "https://www.gamersky.com/news/202608/2185920.shtml", "cat": "行业/数据", "heat": 68, "sources": ["游民星空"] },
+    { "term": "米哈游BSide停运", "href": "https://www.youxituoluo.com/534785.html", "cat": "事件/风险", "heat": 67, "sources": ["游戏陀螺"] },
+    { "term": "雪国主线剧情", "href": "https://www.bilibili.com/video/BV1DyuC6eEe1", "cat": "游戏/新品", "heat": 66, "sources": ["B站热门"] },
+    { "term": "GTA6财报", "href": "https://www.baijing.cn/article/56289", "cat": "行业/数据", "heat": 65, "sources": ["白鲸出海"] },
+    { "term": "折纸奥黛塔", "href": "https://www.bilibili.com/video/BV1QRuB6HEnA", "cat": "梗/社区", "heat": 64, "sources": ["B站热门"] },
+    { "term": "黑神话不赶工期", "href": "https://news.17173.com/content/08102026/140059479.shtml", "cat": "行业/数据", "heat": 63, "sources": ["17173"] },
+    { "term": "红色沙漠DLC", "href": "https://www.gamersky.com/news/202608/2187264.shtml", "cat": "游戏/新品", "heat": 62, "sources": ["游民星空"] },
+    { "term": "天命人大圣", "href": "https://www.bilibili.com/video/BV1vquC6uEhg", "cat": "梗/社区", "heat": 61, "sources": ["B站热门"] },
+    { "term": "王者IP新作定档", "href": "https://www.youxituoluo.com/534773.html", "cat": "游戏/新品", "heat": 60, "sources": ["游戏陀螺"] },
+    { "term": "任天堂12月新市场", "href": "https://www.gamersky.com/news/202608/2187270.shtml", "cat": "行业/数据", "heat": 59, "sources": ["游民星空"] },
+    { "term": "三角洲动画", "href": "https://www.bilibili.com/video/BV13Ygn6qEG3", "cat": "梗/社区", "heat": 58, "sources": ["B站热门"] },
+    { "term": "诡秘之主MMO", "href": "https://news.17173.com/content/08122026/135821104.shtml", "cat": "游戏/新品", "heat": 57, "sources": ["17173"] },
+    { "term": "三角洲AI晚会", "href": "https://www.bilibili.com/video/BV1QDui6jEbi", "cat": "梗/社区", "heat": 55, "sources": ["B站热门"] },
+    { "term": "伊尔姆水晶", "href": "https://www.gcores.com/articles/218257", "cat": "游戏/新品", "heat": 52, "sources": ["机核网"] },
+    { "term": "玩家不爽行为", "href": "https://www.bilibili.com/video/BV1rvgG6PE9K", "cat": "梗/社区", "heat": 50, "sources": ["B站热门"] },
+    { "term": "AG五帝陀螺抽", "href": "https://www.bilibili.com/video/BV1xXgs6gEnw", "cat": "梗/社区", "heat": 49, "sources": ["B站梗指南"] },
+    { "term": "蹭空调", "href": "https://www.bilibili.com/video/BV1nngV6YEzr", "cat": "梗/社区", "heat": 47, "sources": ["B站热门"] },
+    { "term": "TES负LGD", "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28357384&topic_name=%E8%BE%93%E4%B8%AA%E5%A4%A7%E7%9A%84%21TES%E7%88%86%E5%86%B7%E8%B4%9FLGD", "cat": "梗/社区", "heat": 46, "sources": ["百度贴吧热议"] },
+    { "term": "MC奶块版权", "href": "https://www.bilibili.com/video/BV1w2uZ68ERy", "cat": "梗/社区", "heat": 45, "sources": ["B站梗指南"] },
+    { "term": "魂系旮旯给木", "href": "https://www.bilibili.com/video/BV1FjgF6ZEvb", "cat": "梗/社区", "heat": 44, "sources": ["B站梗指南"] },
+    { "term": "BLG零封TT", "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28357389&topic_name=%E8%88%92%E6%9C%8D%E4%BA%86%2CBLG%E9%9B%B6%E5%B0%81TT%E6%99%8B%E7%BA%A7S%E8%B5%9B", "cat": "梗/社区", "heat": 43, "sources": ["百度贴吧热议"] },
+    { "term": "NIP骑士之路", "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28357365&topic_name=NIP%E7%99%BB%E9%AA%91%E5%A3%AB%E4%B9%8B%E8%B7%AF%2CWBG%E9%99%B7%E5%85%A5%E7%BB%9D%E5%A2%83", "cat": "梗/社区", "heat": 41, "sources": ["百度贴吧热议"] },
+    { "term": "熊二仰望星空", "href": "https://www.bilibili.com/video/BV1EHgp6XEVJ", "cat": "梗/社区", "heat": 40, "sources": ["B站梗指南"] },
+    { "term": "卷心菜露米亚", "href": "https://www.bilibili.com/video/BV1tmuu6eE7v", "cat": "梗/社区", "heat": 38, "sources": ["B站梗指南"] }
   ]
 }

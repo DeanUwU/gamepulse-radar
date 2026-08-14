@@ -190,10 +190,135 @@ details.fold-sec[open]>summary .fold-hint::before{content:"▾ 收起"}
 .wc-cloud-tip b{display:block;font-size:var(--text-md);margin-bottom:2px}
 .wc-cloud-tip span{color:var(--sub);font-size:var(--text-xs);font-weight:400}
 
+/* 词条详情弹窗（点击词云词条直接展示，不跳转 wordcloud.html） */
+.wc-detail-modal{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center}
+.wc-detail-modal[hidden]{display:none}
+.wc-detail-overlay{position:absolute;inset:0;background:rgba(0,0,0,.55);backdrop-filter:blur(4px)}
+.wc-detail-box{position:relative;z-index:1;background:var(--panel);border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);width:min(560px,90vw);max-height:70vh;display:flex;flex-direction:column;overflow:hidden}
+.wc-detail-head{padding:var(--space-md) var(--space-lg);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.wc-detail-links{padding:var(--space-sm) var(--space-lg);overflow-y:auto;flex:1}
+.wc-detail-link{display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:var(--radius-sm);text-decoration:none;color:var(--txt);transition:background .15s;border:1px solid transparent;margin-bottom:4px}
+.wc-detail-link:hover{background:var(--panel2);border-color:var(--border);text-decoration:none}
+.wc-detail-idx{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--accent);color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.wc-detail-link b{font-size:var(--text-sm);font-weight:600}
+.wc-detail-link small{color:var(--sub);font-size:11px}
+
 .zone-head{display:flex;align-items:center;gap:var(--space-sm);margin-top:var(--space-2xl);padding-top:var(--space-lg);border-top:1px dashed var(--border);flex-wrap:wrap}
 .zone-head h2{font-size:var(--text-2xl);font-weight:800;letter-spacing:-.01em}
 
-/* ===== 视觉焦点图片网格 ===== */
+/* ===== 今日焦点：合并「视觉焦点 + 内容 TOP10」的金字塔三档布局 =====
+   设计：5 列网格，左 2 列×2 行留给 TOP1 大图封面，TOP2-5 各占 1 列×1 行（中卡），
+        TOP6-10 各占 1 列×1 行（小卡，无图紧凑列表）。
+   命名：.pb-grid / .pb-card-1 / .pb-card-mid / .pb-card-small
+*/
+.pb-grid{
+  display:grid;
+  grid-template-columns:1.6fr 1fr 1fr 1fr 1fr;
+  grid-template-rows:auto auto auto;
+  gap:var(--space-sm);
+  margin-top:var(--space-sm);
+}
+.pb-card-1{
+  grid-column:span 2;
+  grid-row:span 2;
+  position:relative;
+  display:block;
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  border:1px solid rgba(255,92,57,.35);
+  background:var(--panel);
+  min-height:420px;
+  transition:border-color .2s var(--ease-out-quart),transform .25s var(--ease-out-quart),box-shadow .25s var(--ease-out-quart);
+  text-decoration:none;color:inherit;
+}
+.pb-card-1:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:var(--shadow-md);text-decoration:none}
+.pb-card-1 img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s var(--ease-out-expo)}
+.pb-card-1:hover img{transform:scale(1.04)}
+.pb-card-1::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(6,9,14,.55) 60%,rgba(6,9,14,.96) 100%);z-index:1;pointer-events:none}
+.pb-cap-1{position:absolute;left:0;right:0;bottom:0;padding:var(--space-xl) var(--space-lg) var(--space-lg);z-index:2;display:flex;flex-direction:column;gap:var(--space-sm)}
+.pb-rank-1{font-size:var(--text-xs);color:#fff;background:var(--accent);border-radius:var(--radius-sm);padding:3px var(--space-xs);font-weight:800;align-self:flex-start;letter-spacing:.04em}
+.pb-tag-1{display:inline-block;width:32px;height:5px;border-radius:3px;margin-bottom:var(--space-2xs);align-self:flex-start}
+.pb-title-1{color:#fff;font-size:var(--text-3xl);font-weight:800;line-height:1.18;text-shadow:0 2px 12px rgba(0,0,0,.75);text-wrap:balance;letter-spacing:-.01em}
+.pb-meta-1{color:#d4dae4;font-size:var(--text-sm);display:flex;flex-wrap:wrap;gap:var(--space-2xs) var(--space-sm);align-items:center}
+.pb-h-1{color:var(--accent);font-weight:700;font-size:var(--text-base)}
+
+/* 中卡 TOP2-5：缩略图 + 标题 + 元数据
+   2026-08-13 v4：标题不强制 line-clamp，让浏览器自然 wrap（信息完全为主），
+        缩略图降到 80px 给文字更多空间，整卡高度由内容决定 */
+.pb-card-mid{
+  position:relative;
+  display:flex;flex-direction:column;
+  border-radius:var(--radius-md);
+  overflow:hidden;
+  border:1px solid var(--border);
+  background:var(--panel);
+  min-height:200px;
+  transition:border-color .2s var(--ease-out-quart),transform .2s var(--ease-out-quart),box-shadow .2s var(--ease-out-quart);
+  text-decoration:none;color:inherit;
+}
+.pb-card-mid:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:var(--shadow-sm);text-decoration:none}
+.pb-card-mid img{width:100%;height:80px;object-fit:cover;display:block;transition:transform .3s var(--ease-out-quart);background:var(--panel2);flex-shrink:0}
+.pb-card-mid:hover img{transform:scale(1.03)}
+.pb-mid-body{padding:var(--space-sm);display:flex;flex-direction:column;gap:var(--space-2xs);flex:1;min-height:0}
+.pb-mid-head{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.pb-rank-mid{font-size:var(--text-xs);font-weight:800;color:var(--gold);font-variant-numeric:tabular-nums;letter-spacing:.04em}
+.pb-tag-mid{font-size:10px;font-weight:700;border-radius:99px;padding:1px 7px;line-height:1.5}
+.pb-title-mid{color:var(--txt);font-size:var(--text-base);font-weight:600;line-height:1.5;
+  display:block;overflow:visible;word-break:break-word;letter-spacing:-.005em;flex:1;min-height:0}
+.pb-meta-mid{color:var(--sub);font-size:var(--text-xs);margin-top:auto;
+  display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;line-height:1.4}
+
+/* 小卡 TOP6-10：纵向堆叠（上图下文），与中卡 pb-card-mid 同款布局逻辑，尺寸更紧凑。
+   2026-08-13 v5：用户反馈「不要把文字搞成几个字一行的」→ 从横排（左图右文）改回纵排（上图下文），
+        标题用 -webkit-line-clamp:2 限制 2 行（在 ~250px 列宽下 2 行可读性最优）；缩略图全宽铺满。 */
+.pb-card-small{
+  position:relative;
+  display:flex;flex-direction:column;
+  padding:0;
+  border:1px solid var(--border);
+  border-left:3px solid var(--dim);
+  border-radius:var(--radius-sm);
+  background:var(--panel2);
+  text-decoration:none;color:var(--txt);
+  transition:border-color .2s var(--ease-out-quart),background .2s var(--ease-out-quart),transform .2s var(--ease-out-quart);
+  min-height:auto;
+  overflow:hidden;
+}
+.pb-card-small:hover{border-color:var(--blue);border-left-color:var(--blue);background:var(--panel);text-decoration:none;transform:translateY(-2px)}
+.pb-card-small:hover .pb-title-small{color:var(--blue)}
+.pb-card-small:hover .pb-thumb-small{transform:scale(1.03)}
+.pb-thumb-small{
+  width:100%;height:72px;object-fit:cover;display:block;
+  background:var(--panel);transition:transform .3s var(--ease-out-quart);
+  flex-shrink:0;
+}
+.pb-small-body{padding:var(--space-xs);display:flex;flex-direction:column;gap:var(--space-2xs);flex:1;min-height:0}
+.pb-small-head{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.pb-rank-small{font-size:var(--text-xs);font-weight:800;color:var(--gold);font-variant-numeric:tabular-nums;letter-spacing:.04em}
+.pb-tag-small{font-size:10px;font-weight:700;border-radius:99px;padding:1px 6px;line-height:1.5;white-space:nowrap}
+.pb-title-small{color:var(--txt);font-size:var(--text-sm);font-weight:600;line-height:1.5;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;
+  letter-spacing:-.005em}
+.pb-meta-small{color:var(--sub);font-size:10px;margin-top:auto;opacity:.75;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.4}
+
+@media(max-width:1080px){
+  .pb-grid{grid-template-columns:1.6fr 1fr 1fr 1fr}
+  .pb-card-1{grid-column:span 2;grid-row:span 2}
+}
+@media(max-width:780px){
+  .pb-grid{grid-template-columns:1fr 1fr}
+  .pb-card-1{grid-column:span 2;grid-row:span 1;min-height:220px}
+  .pb-title-1{font-size:var(--text-xl)}
+  .pb-card-mid{min-height:auto}
+  .pb-card-mid img{height:96px}
+}
+@media(max-width:520px){
+  .pb-grid{grid-template-columns:1fr}
+  .pb-card-1,.pb-card-mid,.pb-card-small{grid-column:span 1;grid-row:span 1}
+  .pb-card-1{min-height:200px}
+}
+
+/* ===== 旧版视觉焦点（保留兼容，新版不输出） ===== */
 .vf-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:150px;gap:var(--space-sm)}
 /* 稀疏模式：≤3 张卡时降为 3 列，避免大片空白 */
 .vf-grid.vf-sparse{grid-template-columns:repeat(3,1fr)}

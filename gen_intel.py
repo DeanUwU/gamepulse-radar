@@ -91,6 +91,18 @@ def in_window(it, td):
     return 0 <= delta <= WINDOW_DAYS
 
 
+def is_signal(it):
+    """信号层判定：feed_events 注入的条目属于 #board 信号层，应从 #media 排除。"""
+    # curated 自身的 src_id/src_name 是站内源，feed 注入条目的 src_name 通常是 events.json 的 source_name
+    src = (it.get("src_name") or it.get("source_name") or "").strip()
+    if src.startswith("信源快报") or src.startswith("信源·"):
+        return True
+    # 兜底：含特定标记
+    if it.get("from_feed"):
+        return True
+    return False
+
+
 def clean_url(u):
     if not u or not str(u).startswith("http"):
         return None

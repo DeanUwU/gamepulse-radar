@@ -1,292 +1,292 @@
 {
-  "date": "2026-08-15",
+  "date": "2026-08-16",
   "terms": [
     {
-      "term": "影之刃零预购实机",
+      "term": "影之刃零 预购开启 11分钟实机",
       "href": "https://www.bilibili.com/video/BV1Hmuv68EWW",
       "cat": "游戏/新品",
       "heat": 92,
       "sources": [
-        "B站"
+        "B站每周必看"
       ]
     },
     {
-      "term": "影之刃零登顶Steam",
-      "href": "http://www.gamelook.com.cn/2026/08/599831/",
-      "cat": "行业/数据",
-      "heat": 80,
-      "sources": [
-        "GameLook"
-      ]
-    },
-    {
-      "term": "影之刃零Steam热销",
+      "term": "影之刃零 登顶Steam热销榜",
       "href": "https://www.gcores.com/articles/218263",
       "cat": "行业/数据",
-      "heat": 78,
+      "heat": 88,
       "sources": [
         "机核GCORES"
       ]
     },
     {
-      "term": "影之刃零Wegame预约20万",
+      "term": "影之刃零 甄子丹 预售登顶Steam畅销",
+      "href": "http://www.gamelook.com.cn/2026/08/599831/",
+      "cat": "事件/风险",
+      "heat": 85,
+      "sources": [
+        "GameLook"
+      ]
+    },
+    {
+      "term": "影之刃零 Wegame预约直逼20万",
       "href": "https://www.gamersky.com/news/202608/2185920.shtml",
-      "cat": "行业/数据",
+      "cat": "游戏/新品",
+      "heat": 80,
+      "sources": [
+        "游民星空"
+      ]
+    },
+    {
+      "term": "原神 奥黛塔 天真的挽歌 角色预告",
+      "href": "https://www.bilibili.com/video/BV1sxui6eEGH",
+      "cat": "游戏/新品",
+      "heat": 78,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "原神 至冬7.0 全收集",
+      "href": "https://www.bilibili.com/video/BV1BMgj6MEz4",
+      "cat": "游戏/新品",
+      "heat": 76,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "红色沙漠 DLC 2026年内发售",
+      "href": "https://www.gamersky.com/news/202608/2187264.shtml",
+      "cat": "游戏/新品",
       "heat": 72,
       "sources": [
         "游民星空"
       ]
     },
     {
-      "term": "原神至冬7.0",
-      "href": "https://www.bilibili.com/video/BV1BMgj6MEz4",
-      "cat": "游戏/新品",
+      "term": "永劫无间 汉堡王联动 8月14日开启",
+      "href": "https://www.yjwujian.cn/news/update/20260814/33456_1311086.html",
+      "cat": "事件/风险",
       "heat": 70,
       "sources": [
-        "B站"
+        "永劫无间官方"
       ]
     },
     {
-      "term": "WasteTheFallen首曝",
-      "href": "https://www.bilibili.com/video/BV1FRgn6pEph",
-      "cat": "游戏/新品",
-      "heat": 66,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "DOTA2 TI国际邀请赛",
-      "href": "https://store.steampowered.com/news/app/570/view/689765153413006763",
-      "cat": "游戏/新品",
-      "heat": 66,
-      "sources": [
-        "Steam官方"
-      ]
-    },
-    {
-      "term": "GTA6 Take-Two财报",
-      "href": "https://www.baijing.cn/article/56289",
-      "cat": "行业/数据",
-      "heat": 68,
-      "sources": [
-        "白鲸出海"
-      ]
-    },
-    {
-      "term": "和平精英刺激之夜",
+      "term": "和平精英 刺激之夜 高清回放",
       "href": "https://www.bilibili.com/video/BV1ffuU6bEHj",
       "cat": "游戏/新品",
-      "heat": 64,
+      "heat": 68,
       "sources": [
         "B站"
       ]
     },
     {
-      "term": "D加密33款被破解",
-      "href": "https://www.gamersky.com/news/202608/2187036.shtml",
-      "cat": "事件/风险",
+      "term": "堡垒之夜X明日方舟终末地 佩丽卡",
+      "href": "https://www.bilibili.com/video/BV1m9gM6eE2r",
+      "cat": "游戏/新品",
+      "heat": 66,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "伊尔姆水晶 公布预告 年内发售",
+      "href": "https://www.gcores.com/articles/218257",
+      "cat": "游戏/新品",
       "heat": 64,
+      "sources": [
+        "机核GCORES"
+      ]
+    },
+    {
+      "term": "诡秘之主 MMO 3A动捕团队",
+      "href": "https://news.17173.com/content/08122026/135821104.shtml",
+      "cat": "游戏/新品",
+      "heat": 62,
+      "sources": [
+        "17173"
+      ]
+    },
+    {
+      "term": "任天堂 12月进军新市场 NS1&2双机型",
+      "href": "https://www.gamersky.com/news/202608/2187270.shtml",
+      "cat": "行业/数据",
+      "heat": 60,
       "sources": [
         "游民星空"
       ]
     },
     {
-      "term": "王者IP新作预约破5000万",
-      "href": "https://www.youxituoluo.com/534773.html",
+      "term": "四海兄弟 PS5 47港币 PS4免费升级",
+      "href": "https://www.gamersky.com/news/202608/2189597.shtml",
       "cat": "游戏/新品",
-      "heat": 62,
+      "heat": 58,
+      "sources": [
+        "游民星空"
+      ]
+    },
+    {
+      "term": "米哈游 BSide Olivia Lin 不足30天关服",
+      "href": "https://www.youxituoluo.com/534785.html",
+      "cat": "事件/风险",
+      "heat": 56,
       "sources": [
         "游戏陀螺"
+      ]
+    },
+    {
+      "term": "I_NORI 独立游戏 AI 陪伴",
+      "href": "https://www.bilibili.com/video/BV1h8uq6SECj",
+      "cat": "游戏/新品",
+      "heat": 55,
+      "sources": [
+        "B站AI创造公开赛"
+      ]
+    },
+    {
+      "term": "DOTA2 国际邀请赛 神秘商店",
+      "href": "https://store.steampowered.com/news/app/570/view/689765153413006763",
+      "cat": "事件/风险",
+      "heat": 54,
+      "sources": [
+        "DOTA2 Steam"
+      ]
+    },
+    {
+      "term": "7月新游数据 时空猎人觉醒 失控进化",
+      "href": "https://www.baijing.cn/article/56361",
+      "cat": "行业/数据",
+      "heat": 52,
+      "sources": [
+        "白鲸出海"
+      ]
+    },
+    {
+      "term": "Peak 之后 多人旅行游戏 6天流水5000万",
+      "href": "https://www.youxituoluo.com/534794.html",
+      "cat": "行业/数据",
+      "heat": 50,
+      "sources": [
+        "游戏陀螺"
+      ]
+    },
+    {
+      "term": "向末日开炮 首周杀入微信畅销Top15",
+      "href": "http://www.gamelook.com.cn/2026/08/599682/",
+      "cat": "行业/数据",
+      "heat": 48,
+      "sources": [
+        "GameLook"
+      ]
+    },
+    {
+      "term": "KPL梗指南 都给我低调点",
+      "href": "https://www.bilibili.com/video/BV1a5uB6SEGo",
+      "cat": "梗/社区",
+      "heat": 47,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "Coin Master Moon Active 年流水60亿",
+      "href": "https://www.baijing.cn/article/56297",
+      "cat": "行业/数据",
+      "heat": 46,
+      "sources": [
+        "白鲸出海"
+      ]
+    },
+    {
+      "term": "MC梗指南 奶块买版权了",
+      "href": "https://www.bilibili.com/video/BV1w2uZ68ERy",
+      "cat": "梗/社区",
+      "heat": 45,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "CS2 Update",
+      "href": "https://store.steampowered.com/news/app/730/view/689765787249934890",
+      "cat": "游戏/新品",
+      "heat": 44,
+      "sources": [
+        "CS2 Steam"
+      ]
+    },
+    {
+      "term": "MC梗指南 生存战争是Mojang子公司",
+      "href": "https://www.bilibili.com/video/BV1UfuB6UEvo",
+      "cat": "梗/社区",
+      "heat": 43,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "三角洲行动 违规处罚 G.T.I.Security",
+      "href": "https://store.steampowered.com/news/app/2507950/view/674002554701481260",
+      "cat": "事件/风险",
+      "heat": 42,
+      "sources": [
+        "三角洲行动 Steam"
+      ]
+    },
+    {
+      "term": "RE0梗图 雷格鲁斯",
+      "href": "https://www.bilibili.com/video/BV1YJbC6nEpM",
+      "cat": "梗/社区",
+      "heat": 42,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "暗区突围无限 违规处罚",
+      "href": "https://store.steampowered.com/news/app/2073620/view/672877288649392262",
+      "cat": "事件/风险",
+      "heat": 40,
+      "sources": [
+        "暗区突围 Steam"
+      ]
+    },
+    {
+      "term": "东方梗指南 卷心菜露米亚",
+      "href": "https://www.bilibili.com/video/BV1tmuu6eE7v",
+      "cat": "梗/社区",
+      "heat": 40,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "回归我荒废6年的游戏服务器",
+      "href": "https://www.bilibili.com/video/BV1Yuu46WENa",
+      "cat": "梗/社区",
+      "heat": 38,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "烂苹果 直到大地变成一颗烂苹果",
+      "href": "https://www.bilibili.com/video/BV1XXu66hEfT",
+      "cat": "梗/社区",
+      "heat": 36,
+      "sources": [
+        "B站"
       ]
     },
     {
       "term": "发烧梗",
       "href": "https://www.bilibili.com/video/BV1Unub69EpX",
       "cat": "梗/社区",
-      "heat": 60,
+      "heat": 34,
       "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "红色沙漠DLC年内发售",
-      "href": "https://www.gamersky.com/news/202608/2187264.shtml",
-      "cat": "游戏/新品",
-      "heat": 60,
-      "sources": [
-        "游民星空"
-      ]
-    },
-    {
-      "term": "原神奥黛塔预告",
-      "href": "https://www.bilibili.com/video/BV1sxui6eEGH",
-      "cat": "游戏/新品",
-      "heat": 58,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "米哈游BSide停运",
-      "href": "https://www.youxituoluo.com/534785.html",
-      "cat": "事件/风险",
-      "heat": 58,
-      "sources": [
-        "游戏陀螺"
-      ]
-    },
-    {
-      "term": "影之刃零乱用成语挨喷",
-      "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28357537",
-      "cat": "梗/社区",
-      "heat": 54,
-      "sources": [
-        "百度贴吧"
-      ]
-    },
-    {
-      "term": "时光代理人第三季",
-      "href": "https://www.bilibili.com/video/BV1hyuC6eEwm",
-      "cat": "游戏/新品",
-      "heat": 55,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "任天堂NS1&2新市场",
-      "href": "https://www.gamersky.com/news/202608/2187270.shtml",
-      "cat": "游戏/新品",
-      "heat": 56,
-      "sources": [
-        "游民星空"
-      ]
-    },
-    {
-      "term": "向末日开炮微信畅销Top15",
-      "href": "http://www.gamelook.com.cn/2026/08/599682/",
-      "cat": "行业/数据",
-      "heat": 52,
-      "sources": [
-        "GameLook"
-      ]
-    },
-    {
-      "term": "诡秘之主MMO新动态",
-      "href": "https://news.17173.com/content/08122026/135821104.shtml",
-      "cat": "游戏/新品",
-      "heat": 50,
-      "sources": [
-        "17173"
-      ]
-    },
-    {
-      "term": "TES遭WE速通",
-      "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28357509",
-      "cat": "梗/社区",
-      "heat": 48,
-      "sources": [
-        "百度贴吧"
-      ]
-    },
-    {
-      "term": "回归荒废6年游戏服务器",
-      "href": "https://www.bilibili.com/video/BV1Yuu46WENa",
-      "cat": "梗/社区",
-      "heat": 48,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "伊尔姆水晶预告",
-      "href": "https://www.gcores.com/articles/218257",
-      "cat": "游戏/新品",
-      "heat": 46,
-      "sources": [
-        "机核GCORES"
-      ]
-    },
-    {
-      "term": "Coin Master Moon Active",
-      "href": "https://www.baijing.cn/article/56297",
-      "cat": "行业/数据",
-      "heat": 45,
-      "sources": [
-        "白鲸出海"
-      ]
-    },
-    {
-      "term": "三角洲行动违规处罚",
-      "href": "https://store.steampowered.com/news/app/2507950/view/674002554701481260",
-      "cat": "事件/风险",
-      "heat": 44,
-      "sources": [
-        "三角洲行动官方"
-      ]
-    },
-    {
-      "term": "武侠新游删后宫玩家炸了",
-      "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28357452",
-      "cat": "事件/风险",
-      "heat": 44,
-      "sources": [
-        "百度贴吧"
-      ]
-    },
-    {
-      "term": "大话西游周星驰嘉宾",
-      "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28357610",
-      "cat": "梗/社区",
-      "heat": 40,
-      "sources": [
-        "百度贴吧"
-      ]
-    },
-    {
-      "term": "永劫无间封禁公告",
-      "href": "https://store.steampowered.com/news/app/1203220/view/711157885482041614",
-      "cat": "事件/风险",
-      "heat": 40,
-      "sources": [
-        "永劫无间官方"
-      ]
-    },
-    {
-      "term": "CS2更新",
-      "href": "https://store.steampowered.com/news/app/730/view/689765787249934890",
-      "cat": "游戏/新品",
-      "heat": 42,
-      "sources": [
-        "Steam官方"
-      ]
-    },
-    {
-      "term": "独立游戏I_NORI",
-      "href": "https://www.bilibili.com/video/BV1h8uq6SECj",
-      "cat": "游戏/新品",
-      "heat": 40,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "直到大地变成烂苹果",
-      "href": "https://www.bilibili.com/video/BV1XXu66hEfT",
-      "cat": "梗/社区",
-      "heat": 42,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "阴阳师维护更新",
-      "href": "https://yys.163.com/news/update/20260811/23024_1310770.html",
-      "cat": "游戏/新品",
-      "heat": 36,
-      "sources": [
-        "阴阳师官方"
+        "B站每周必看"
       ]
     }
   ]

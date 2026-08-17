@@ -147,6 +147,46 @@
     }
   });
 
+  /* 2026-08-17：WordCloud 渲染后居中修正（检测实际内容边界框，平移到画布中心） */
+  (function centerCloud() {
+    try {
+      var ctx = canvas.getContext('2d');
+      if (!ctx) return;
+      var w = canvas.width, h = canvas.height;
+      // 扫描像素找非透明区域边界
+      var imgData = ctx.getImageData(0, 0, w, h);
+      var data = imgData.data;
+      var minX = w, minY = h, maxX = 0, maxY = 0, found = false;
+      for (var y = 0; y < h; y += 2) {
+        for (var x = 0; x < w; x += 2) {
+          var idx = (y * w + x) * 4;
+          if (data[idx + 3] > 10) { // alpha > 10 视为有内容
+            if (!found || x < minX) minX = x;
+            if (!found || x > maxX) maxX = x;
+            if (!found || y < minY) minY = y;
+            if (!found || y > maxY) maxY = y;
+            found = true;
+          }
+        }
+      }
+      if (found && (maxX - minX > 20)) {
+        var contentCX = (minX + maxX) / 2;
+        var contentCY = (minY + maxY) / 2;
+        var targetCX = w / 2, targetCY = h / 2;
+        var offsetX = Math.round(targetCX - contentCX);
+        var offsetY = Math.round(targetCY - contentCY);
+        // 用 drawImage 平移整个画布内容
+        var tmp = document.createElement('canvas');
+        tmp.width = w; tmp.height = h;
+        tmp.getContext('2d').drawImage(canvas, 0, 0);
+        ctx.clearRect(0, 0, w, h);
+        ctx.drawImage(tmp, offsetX, offsetY);
+      }
+    } catch(e) { console.warn('[wc] 居中修正跳过:', e); }
+  })();
+  /* 延迟执行确保 WordCloud 已完成渲染 */
+  setTimeout(centerCloud, 200);
+
   canvas.addEventListener('mouseleave', function() {
     var tip = document.getElementById('wc-cloud-tip');
     if (tip) tip.hidden = true;

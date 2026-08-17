@@ -800,13 +800,16 @@ def _tgmeng_mention_count(title, date_s):
         return 0, []
 
 
-def _heat_score(title, data, date_s):
+def _heat_score(title, data, date_s, age=None):
     """综合多信号计算事件/视频的真实热度分数（越大越热）。
     信号权重：
       · tgmeng 日报提及频次（真热度，权重最高）：每提及一次 +4，上限 +20
       · feed_events 多源命中数：每多一家 +2（弱信号，只作辅助）
       · 强事件信号（登顶/发售/预购/首曝/联动/PV）：+3
       · 事件来源权威度（机核/GameLook/游戏陀螺/游民星空/17173 > Steam 官方公告）：+1
+      · 新鲜度（时效性，2026-08-17 补上）：age 越小加分越多，age=0 +8、1天 +5、
+        2天 +3、3天 +1、4天 -2、5天 -4、≥6天 -8（旧闻持续被提也会被显著拉低，
+        避免 5 天前的影之刃零被 tgmeng 提及硬顶到 TOP1）。
     返回 (score, dict 详情) —— 详情供渲染透明标注用。
     """
     # 1) tgmeng 提及频次（真热度）
@@ -828,12 +831,24 @@ def _heat_score(title, data, date_s):
     if auth_hit:
         score += 1
 
+    # 5) 新鲜度衰减（时效性）—— 越新加分越多，越旧扣分越重
+    fresh_bonus = 0.0
+    if age is not None:
+        try:
+            a = int(age)
+            fresh_bonus = {0: 8, 1: 5, 2: 3, 3: 1, 4: -2, 5: -4}.get(a, -8 if a >= 6 else 0)
+        except Exception:
+            pass
+    score += fresh_bonus
+
     detail = {
         "tgmeng_count": tg_cnt,
         "tgmeng_kws": tg_kws,
         "n_src": n_src,
         "verdict": verdict,
         "hits": hits,
+        "age": age,
+        "fresh_bonus": fresh_bonus,
     }
     return score, detail
 
@@ -846,7 +861,8 @@ def _podium_top1(data, date_s):
       选出含金量最高的事件当头条，弱证据冷门事件不再霸榜。
     """
     # 1) events.json feed_events：按 _heat_score 真实热度排序
-    #    时效闸：默认近 3 天；但若事件在 tgmeng 今日日报中被提及（仍在发酵），放宽到 7 天。
+    #    时效红线：统一「近 3 天」（2026-08-17 收紧——不再因 tgmeng 提及就放宽到 7 天；
+    #    时效性改由 _heat_score 内的 fresh_bonus 连续衰减负责，旧闻即使被日报反复提及也会被扣分）。
     ev_path = os.path.join(BASE, "events.json")
     try:
         ev = json.load(io.open(ev_path, encoding="utf-8"))
@@ -854,17 +870,16 @@ def _podium_top1(data, date_s):
         for fe in (ev.get("feed_events") or []):
             pd = fe.get("pubdate") or fe.get("first_seen") or ""
             title = fe.get("title") or fe.get("game") or "（无标题）"
-            score, detail = _heat_score(title, data, date_s)
-            tg_cnt = detail.get("tgmeng_count", 0)
+            age = None
             if pd:
                 try:
                     d = datetime.date.fromisoformat(str(pd)[:10])
                     age = (datetime.date.today() - d).days
-                    max_age = 7 if tg_cnt > 0 else 3  # tgmeng 提及=今日热点，放宽时效
-                    if age > max_age:
+                    if age > 3:
                         continue
                 except Exception:
-                    pass
+                    age = None
+            score, detail = _heat_score(title, data, date_s, age=age)
             scored.append((score, detail, fe))
         if scored:
             scored.sort(key=lambda x: -x[0])
@@ -1776,18 +1791,17 @@ def _masthead_fallback_event(data, exclude_urls=None):
         # 去重：已在 TOP10 出现的事件不再上头图
         if url in exclude_urls:
             continue
-        # 真实热度评分（tgmeng 提及频次 + 多源 + 强事件信号）
-        score, detail = _heat_score(title, data, datetime.date.today().strftime("%Y-%m-%d"))
-        tg_cnt = detail.get("tgmeng_count", 0)
-        # 时效闸：默认近 3 天；tgmeng 今日提及（仍在发酵）放宽到 7 天
+        # 真实热度评分（tgmeng 提及频次 + 多源 + 强事件信号 + 新鲜度衰减）
+        age = None
         if pd:
             try:
                 d = datetime.date.fromisoformat(str(pd)[:10])
-                max_age = 7 if tg_cnt > 0 else 3
-                if (datetime.date.today() - d).days > max_age:
+                age = (datetime.date.today() - d).days
+                if age > 3:
                     continue
             except Exception:
-                pass
+                age = None
+        score, detail = _heat_score(title, data, datetime.date.today().strftime("%Y-%m-%d"), age=age)
         scored.append((score, detail, fe))
 
     if not scored:

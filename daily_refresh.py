@@ -397,6 +397,19 @@ else:
     problems.append(("日历", "events.json 缺失", "无法从日历真源生成日历区块", "构建完整性", "阻断",
                      "恢复 events.json 后重新生成，禁止沿用旧日历"))
 
+# ---------- ④-1 视觉隐藏兜底（2026-08-17） ----------
+# 用户要求「视觉隐藏」某些臃肿板块（前瞻哨/源覆盖报告/词云32条预览/两个标题栏），
+# 但不删数据。此步必须排在所有生成脚本（gen_calendar/gen_source_report/cross_words 等）
+# 之后运行，否则手动 is-hidden 会被次日重写冲掉。隐藏清单集中在 apply_hide.py 的 HIDE_RULES。
+log("【④隐藏】运行 apply_hide.py（视觉隐藏兜底，防刷新复活）...")
+rh = subprocess.run([PY, "apply_hide.py"], cwd=BASE, capture_output=True, text=True, encoding="utf-8", env=ENV)
+if rh.stdout.strip():
+    for line in rh.stdout.strip().splitlines():
+        log("    " + line)
+if rh.returncode != 0:
+    problems.append(("刷新", "视觉隐藏", "apply_hide.py 非零退出：" + (rh.stderr or "").strip()[:160],
+                     "页面精简", "优化", "检查 apply_hide.py 的 HIDE_RULES 与 index.html 结构是否匹配"))
+
 # ================= ④ 自洽校验 =================
 log("\n================= ④ 自洽校验 =================")
 

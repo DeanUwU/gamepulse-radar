@@ -1582,29 +1582,10 @@ def _masthead_pick(data, exclude_urls=None):
                 # soft 作为降级池（仅当强垂类无候选时才启用）
                 pass  # 在后面 fallback 阶段处理
 
-    # 记录是否走了降级路径（用于渲染标记）
-    is_fallback = False
+    # 2026-08-17 二次治理：禁用 soft 泛娱乐兜底（用户反馈热度太低）
+    #   强垂类不足时回退到 events.json 事件类头条，绝不放低热度泛娱乐上头图。
     if not candidates:
-        # 2026-08-17 降级：强垂类不足时用 soft 兜底（泛娱乐挂游戏分区但至少有图）
-        # 避免"无候选→保留旧版头图"导致连续多天同一条非游戏内容霸屏
-        for v in pool:
-            t = v.get("tname", "") or ""
-            title = v.get("title", "") or ""
-            url = v.get("url") or ""
-            if not v.get("pic"):
-                continue
-            a = _pub_age(v)
-            if a is not None and a > MAX_AGE_DAYS:
-                continue
-            if url in exclude_urls:
-                continue
-            if (t in GAME_TNAME or (GAME_KW.search(title) and re.search(r'《[^》]+》|Steam|手游|端游|主机|新作|新游', title))):
-                if _is_game_vertical(v) == "soft":
-                    candidates.append(v)
-                    is_fallback = True
-
-    if not candidates:
-        return None
+        return _masthead_fallback_event(data)
 
     # 读历史头图 bvid，跳过最近 2 天用过的（避免周更视频连续霸屏）
     history = _load_masthead_history()
@@ -1651,7 +1632,44 @@ def _masthead_pick(data, exclude_urls=None):
         _save_masthead_history(history)
     kicker_lv = "A" if main.get("view", 0) > 1500000 else "B"
     sub_chips = [v.get("title", "")[:22] for v in candidates[1:3]]
-    return (main, kicker_lv, sub_chips, is_fallback)
+    return (main, kicker_lv, sub_chips, False)
+
+
+def _masthead_fallback_event(data):
+    """强垂类 B站 视频不足时，回退到 events.json 事件类头条（无图渐变卡）。
+
+    2026-08-17 新增：用户明确要求「头图以游戏发售/官号PV物料/大事件为主」，
+    当 B站 强垂类有图候选不足时，不应放低热度泛娱乐上头图；
+    改为返回一个 events.json 事件条目作为「事件头条」（无图渐变底+白字），
+    用 dict 结构兼容 build_masthead 的解构。
+    """
+    try:
+        ev = json.load(io.open(os.path.join(BASE, "events.json"), encoding="utf-8"))
+        for fe in (ev.get("feed_events") or []):
+            pd = fe.get("pubdate") or fe.get("first_seen") or ""
+            if not pd:
+                continue
+            try:
+                d = datetime.date.fromisoformat(str(pd)[:10])
+            except Exception:
+                continue
+            if (datetime.date.today() - d).days <= 3:
+                title = fe.get("title") or fe.get("game") or "（无标题）"
+                url = fe.get("source_url") or fe.get("url") or "#"
+                src = fe.get("source_name") or "未知来源"
+                # 返回伪 video dict（无 pic → build_masthead 走事件无图分支）
+                fake_v = {
+                    "title": title,
+                    "url": url,
+                    "pic": "",
+                    "tname": src,
+                    "_origin": "events",
+                    "view": 0,
+                }
+                return (fake_v, "S", [], False)  # S级信号 + 无次条 + 非降级
+    except Exception:
+        pass
+    return None
 
 
 def build_masthead(data, exclude_urls=None):
@@ -1674,6 +1692,31 @@ def build_masthead(data, exclude_urls=None):
         joined = " · ".join(f"<b>{esc(s)}</b>" for s in sub_chips[:2] if s)
         if joined:
             sub_html = f'<p class="mh-sub">次条：{joined}</p>'
+
+    # 2026-08-17：无图时走事件渐变底分支（与 podium TOP1 事件卡风格统一）
+    if not pic:
+        return (
+            '<div class="masthead">'
+            f'<a class="pb-card-1 pb-card-1-event" target="_blank" href="{esc(url)}" '
+            f'style="background:linear-gradient(135deg,#ff5c39 0%,#ffb020 60%,#ff7a3d 100%);">'
+            f'<div class="pb-cap-1">'
+            f'<span class="pb-rank-1">TOP 1 · {esc(kicker)}</span>'
+            f'<i class="pb-tag-1" style="background:#fff"></i>'
+            f'<div class="pb-title-1">{esc(title)}</div>'
+            f'<div class="pb-meta-1">'
+            f'<span style="color:#fff">{esc(tname)} · {esc(main.get("_origin") or "事件源")}</span>'
+            f'{sub_html}'
+            f'</div></div></a>'
+            '<div class="mh-logo">'
+            '<svg class="gp-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 110">'
+            '<text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" '
+            'font-family="Arial Black,PingFang SC,Microsoft YaHei,sans-serif" '
+            'font-size="76" font-weight="900" letter-spacing="1">GamePulse</text>'
+            '</svg>'
+            '<span class="mh-wm">@DeanOvO</span>'
+            '</div>'
+            '</div></div>'
+        )
 
     return (
         '<div class="masthead">'

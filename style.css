@@ -693,6 +693,8 @@ details.fold-sec[open]>summary .fold-hint::before{content:"▾ 收起"}
 .intel-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xs);margin-top:var(--space-xs)}
 /* 2026-08-17：行业情报站「超 2 天」过期条目隐藏（CSS 视觉隐藏，DOM 保留以备恢复） */
 .intel-item.is-stale,.intel-top.is-stale{display:none}
+/* 2026-08-17：折叠整块板块（用户说「太臃肿了，隐藏」） */
+section.is-hidden{display:none}
 .intel-item{display:flex;align-items:flex-start;gap:var(--space-xs);padding:var(--space-sm) var(--space-md);
   background:var(--panel2);border:1px solid transparent;border-radius:var(--radius-md);
   color:var(--txt);text-decoration:none;transition:all .22s var(--ease-out-quart)}

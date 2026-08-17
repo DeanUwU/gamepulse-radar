@@ -1,8 +1,8 @@
 {
-  "date": "2026-08-16",
+  "date": "2026-08-17",
   "terms": [
     {
-      "term": "影之刃零 预购开启 11分钟实机",
+      "term": "影之刃零 11分钟实机 预购开启",
       "href": "https://www.bilibili.com/video/BV1Hmuv68EWW",
       "cat": "游戏/新品",
       "heat": 92,
@@ -11,7 +11,7 @@
       ]
     },
     {
-      "term": "影之刃零 登顶Steam热销榜",
+      "term": "影之刃零 登顶Steam全球热销榜",
       "href": "https://www.gcores.com/articles/218263",
       "cat": "行业/数据",
       "heat": 88,
@@ -47,7 +47,7 @@
       ]
     },
     {
-      "term": "原神 至冬7.0 全收集",
+      "term": "原神 至冬7.0 一条龙全收集",
       "href": "https://www.bilibili.com/video/BV1BMgj6MEz4",
       "cat": "游戏/新品",
       "heat": 76,
@@ -62,15 +62,6 @@
       "heat": 72,
       "sources": [
         "游民星空"
-      ]
-    },
-    {
-      "term": "永劫无间 汉堡王联动 8月14日开启",
-      "href": "https://www.yjwujian.cn/news/update/20260814/33456_1311086.html",
-      "cat": "事件/风险",
-      "heat": 70,
-      "sources": [
-        "永劫无间官方"
       ]
     },
     {
@@ -119,12 +110,30 @@
       ]
     },
     {
+      "term": "异环开盒 玩家齐登封神榜",
+      "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28357916",
+      "cat": "事件/风险",
+      "heat": 58,
+      "sources": [
+        "百度贴吧"
+      ]
+    },
+    {
       "term": "四海兄弟 PS5 47港币 PS4免费升级",
       "href": "https://www.gamersky.com/news/202608/2189597.shtml",
       "cat": "游戏/新品",
       "heat": 58,
       "sources": [
         "游民星空"
+      ]
+    },
+    {
+      "term": "CN刀塔梦碎 首次无缘TI八强",
+      "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28357827",
+      "cat": "事件/风险",
+      "heat": 56,
+      "sources": [
+        "百度贴吧"
       ]
     },
     {
@@ -137,12 +146,30 @@
       ]
     },
     {
+      "term": "2026LPL第三赛段 WBG vs IG",
+      "href": "https://www.bilibili.com/video/BV1ucb96VEXk",
+      "cat": "事件/风险",
+      "heat": 56,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
       "term": "I_NORI 独立游戏 AI 陪伴",
       "href": "https://www.bilibili.com/video/BV1h8uq6SECj",
       "cat": "游戏/新品",
       "heat": 55,
       "sources": [
         "B站AI创造公开赛"
+      ]
+    },
+    {
+      "term": "T1遭GEN横扫 主场两连跪",
+      "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28357837",
+      "cat": "事件/风险",
+      "heat": 54,
+      "sources": [
+        "百度贴吧"
       ]
     },
     {
@@ -164,21 +191,21 @@
       ]
     },
     {
-      "term": "Peak 之后 多人旅行游戏 6天流水5000万",
-      "href": "https://www.youxituoluo.com/534794.html",
-      "cat": "行业/数据",
+      "term": "穿越战锤20年 贵族宝座",
+      "href": "https://www.bilibili.com/video/BV14yg36ME81",
+      "cat": "游戏/新品",
       "heat": 50,
       "sources": [
-        "游戏陀螺"
+        "B站"
       ]
     },
     {
-      "term": "向末日开炮 首周杀入微信畅销Top15",
-      "href": "http://www.gamelook.com.cn/2026/08/599682/",
-      "cat": "行业/数据",
-      "heat": 48,
+      "term": "轮回跑酷",
+      "href": "https://www.bilibili.com/video/BV1EWbk6ZE6d",
+      "cat": "游戏/新品",
+      "heat": 46,
       "sources": [
-        "GameLook"
+        "B站"
       ]
     },
     {
@@ -191,30 +218,12 @@
       ]
     },
     {
-      "term": "Coin Master Moon Active 年流水60亿",
-      "href": "https://www.baijing.cn/article/56297",
-      "cat": "行业/数据",
-      "heat": 46,
-      "sources": [
-        "白鲸出海"
-      ]
-    },
-    {
-      "term": "MC梗指南 奶块买版权了",
-      "href": "https://www.bilibili.com/video/BV1w2uZ68ERy",
+      "term": "老吴撼地掌是什么梗【网梗指南】",
+      "href": "https://www.bilibili.com/video/BV1i8bk69ERr",
       "cat": "梗/社区",
-      "heat": 45,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "CS2 Update",
-      "href": "https://store.steampowered.com/news/app/730/view/689765787249934890",
-      "cat": "游戏/新品",
       "heat": 44,
       "sources": [
-        "CS2 Steam"
+        "B站"
       ]
     },
     {
@@ -227,15 +236,6 @@
       ]
     },
     {
-      "term": "三角洲行动 违规处罚 G.T.I.Security",
-      "href": "https://store.steampowered.com/news/app/2507950/view/674002554701481260",
-      "cat": "事件/风险",
-      "heat": 42,
-      "sources": [
-        "三角洲行动 Steam"
-      ]
-    },
-    {
       "term": "RE0梗图 雷格鲁斯",
       "href": "https://www.bilibili.com/video/BV1YJbC6nEpM",
       "cat": "梗/社区",
@@ -245,12 +245,12 @@
       ]
     },
     {
-      "term": "暗区突围无限 违规处罚",
-      "href": "https://store.steampowered.com/news/app/2073620/view/672877288649392262",
-      "cat": "事件/风险",
-      "heat": 40,
+      "term": "不太想走了是什么梗【KPL梗指南】",
+      "href": "https://www.bilibili.com/video/BV1kcbR6wEzb",
+      "cat": "梗/社区",
+      "heat": 41,
       "sources": [
-        "暗区突围 Steam"
+        "B站"
       ]
     },
     {

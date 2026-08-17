@@ -25,12 +25,12 @@ INDEX_PATH = os.environ.get("AH_INDEX", os.path.join(BASE, "index.html"))
 HIDE_RULES = [
     ("section_id", "#forward"),       # 前瞻哨（臃肿）
     ("section_id", "#source"),        # 源覆盖报告（臃肿）
-    ("section_id", "#cal"),           # 日历正文（标题栏已藏，正文也藏掉，避免半残）
     ("class",     "wc-preview"),      # 词云下方 32 条全量预览（保留上方词云图+图例）
     ("zone_head", "今日日报"),         # 标题栏
     ("zone_head", "版本日历"),         # 标题栏
     ("hide_small", "#podium"),        # 今日焦点 sec-title 内的说明小字（与时效无关）
     ("hide_small", "#media"),         # 行业情报站 sec-title 内的说明小字（与时效无关）
+    ("hide_note",  "#cal"),           # 日历内"覆盖：萤火突击/…"超长说明小字（不藏日历本身）
 ]
 
 
@@ -136,6 +136,24 @@ def hide_small(html, sid):
     return html[:abs_start] + new_block + html[abs_start + len(title_block):], True
 
 
+def hide_note(html, sid):
+    """隐藏指定 section 内首个 <p class="note">...</p> 覆盖说明（加 is-hidden，不删 DOM）。"""
+    m = re.search(r'<section\s+id="%s"[^>]*>' % re.escape(sid.strip('#')), html)
+    if not m:
+        return html, False
+    sec_start = m.end()
+    # 在 section 范围内找第一个 p.note
+    mn = re.search(r'<p class="note">.*?</p>', html[sec_start:], re.S)
+    if not mn:
+        return html, False
+    abs_start = sec_start + mn.start()
+    note = mn.group(0)
+    if "is-hidden" in note:
+        return html, True
+    new_note = note.replace('<p class="note">', '<p class="note is-hidden">', 1)
+    return html[:abs_start] + new_note + html[abs_start + len(note):], True
+
+
 def main():
     if not os.path.exists(INDEX_PATH):
         print("  [apply_hide] index.html 不存在，跳过")
@@ -151,6 +169,8 @@ def main():
             html, ok = hide_zone_head(html, val)
         elif kind == "hide_small":
             html, ok = hide_small(html, val)
+        elif kind == "hide_note":
+            html, ok = hide_note(html, val)
         else:
             ok = False
         if ok:

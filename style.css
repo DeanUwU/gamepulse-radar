@@ -732,6 +732,8 @@ details.fold-sec[open]>summary .fold-hint::before{content:"▾ 收起"}
 .intel-item.is-stale,.intel-top.is-stale{display:none}
 /* 2026-08-17：折叠整块板块（用户说「太臃肿了，隐藏」） */
 section.is-hidden,div.is-hidden{display:none}
+/* 2026-08-17：sec-title 内说明小字视觉隐藏（与时效无关，apply_hide.py 打标） */
+small.is-hidden{display:none}
 .intel-item{display:flex;align-items:flex-start;gap:var(--space-xs);padding:var(--space-sm) var(--space-md);
   background:var(--panel2);border:1px solid transparent;border-radius:var(--radius-md);
   color:var(--txt);text-decoration:none;transition:all .22s var(--ease-out-quart)}

@@ -25,9 +25,12 @@ INDEX_PATH = os.environ.get("AH_INDEX", os.path.join(BASE, "index.html"))
 HIDE_RULES = [
     ("section_id", "#forward"),       # 前瞻哨（臃肿）
     ("section_id", "#source"),        # 源覆盖报告（臃肿）
+    ("section_id", "#cal"),           # 日历正文（标题栏已藏，正文也藏掉，避免半残）
     ("class",     "wc-preview"),      # 词云下方 32 条全量预览（保留上方词云图+图例）
     ("zone_head", "今日日报"),         # 标题栏
     ("zone_head", "版本日历"),         # 标题栏
+    ("hide_small", "#podium"),        # 今日焦点 sec-title 内的说明小字（与时效无关）
+    ("hide_small", "#media"),         # 行业情报站 sec-title 内的说明小字（与时效无关）
 ]
 
 
@@ -108,6 +111,31 @@ def hide_zone_head(html, keyword):
     return html.replace(tag, new_tag, 1), True
 
 
+def hide_small(html, sid):
+    """隐藏指定 section 的 sec-title 内的 <small>...</small> 说明小字（加 is-hidden，可恢复）。"""
+    m = re.search(r'<section\s+id="%s"[^>]*>' % re.escape(sid.strip('#')), html)
+    if not m:
+        return html, False
+    # 在 section 起始后找第一个 sec-title 块
+    sec_start = m.end()
+    mtitle = re.search(r'<div class="sec-title">.*?</div>', html[sec_start:], re.S)
+    if not mtitle:
+        return html, False
+    title_block = mtitle.group(0)
+    abs_start = sec_start + mtitle.start()
+    # 在 title 块内找 <small>...</small>
+    ms = re.search(r'<small>.*?</small>', title_block, re.S)
+    if not ms:
+        return html, False
+    small = ms.group(0)
+    if "is-hidden" in small:
+        # 已隐藏，幂等
+        return html, True
+    new_small = small.replace("<small>", '<small class="is-hidden">', 1)
+    new_block = title_block.replace(small, new_small, 1)
+    return html[:abs_start] + new_block + html[abs_start + len(title_block):], True
+
+
 def main():
     if not os.path.exists(INDEX_PATH):
         print("  [apply_hide] index.html 不存在，跳过")
@@ -121,6 +149,8 @@ def main():
             html, ok = hide_class(html, val)
         elif kind == "zone_head":
             html, ok = hide_zone_head(html, val)
+        elif kind == "hide_small":
+            html, ok = hide_small(html, val)
         else:
             ok = False
         if ok:

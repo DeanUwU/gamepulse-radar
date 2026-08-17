@@ -753,32 +753,50 @@ def _verify_top1(top1, data, date_s):
 
 def _podium_top1(data, date_s):
     """生成焦点榜 TOP1 头条位（事件类优先）。返回 dict 或 None。
-    来源优先级：events.json feed_events 当日 → meme 风险词视频 → 视频池 H 最高。
-    2026-08-17：生成后会交给 _verify_top1 做多源印证判定，弱证据者降级。
+    来源优先级：events.json feed_events 当日 → meme 风险词视�� → 视频池 H 最高。
+    2026-08-17（三轮修复）：事件选择不再按 feed_events 时间顺序取第一条，
+      改为「印证强度(multi>single>weak) + 事件权重(发售/登顶/大事件)」排序，
+      选出含金量最高的事件当头条，弱证据冷门事件不再霸榜。
     """
-    # 1) events.json feed_events 近 3 天事件
+    # 1) events.json feed_events 近 3 天事件：按印证强度 + 事件权重排序
     ev_path = os.path.join(BASE, "events.json")
     try:
         ev = json.load(io.open(ev_path, encoding="utf-8"))
+        _EVENT_MAJOR = re.compile(
+            r'发售|上线|公测|定档|首曝|联动|周年|登顶|夺冠|夺魁|首测|不删档|预约|开服|'
+            r'PV|CG|主题曲|新皮肤|新角|资料片|实机|演示|预告|宣发')
+        scored = []
         for fe in (ev.get("feed_events") or []):
             pd = fe.get("pubdate") or fe.get("first_seen") or ""
-            if not pd:
-                continue
-            try:
-                d = datetime.date.fromisoformat(str(pd)[:10])
-            except Exception:
-                continue
-            if (datetime.date.today() - d).days <= 3:
-                return {
-                    "rank": 1,
-                    "url": fe.get("source_url") or fe.get("url") or "#",
-                    "title": fe.get("title") or fe.get("game") or "（无标题）",
-                    "tag": "事件",
-                    "color": "#ff5c39",
-                    "img": "",
-                    "meta": "%s · %s" % (fe.get("source_name") or "未知来源", pd[5:10]),
-                    "is_event": True,
-                }
+            title = fe.get("title") or fe.get("game") or "（无标题）"
+            if pd:
+                try:
+                    d = datetime.date.fromisoformat(str(pd)[:10])
+                    if (datetime.date.today() - d).days > 3:
+                        continue
+                except Exception:
+                    pass
+            # 多源印证强度
+            verdict, hits, _ = _verify_top1({"title": title}, data, date_s)
+            vrank = {"multi": 3, "single": 2, "weak": 1}.get(verdict, 0)
+            erank = 1 if _EVENT_MAJOR.search(title) else 0
+            scored.append((vrank, erank, fe))
+        if scored:
+            # 印证强度优先 → 事件权重次之 → 时间兜底（feed_events 原序即时间序）
+            scored.sort(key=lambda x: (-x[0], -x[1]))
+            vrank, erank, fe = scored[0]
+            return {
+                "rank": 1,
+                "url": fe.get("source_url") or fe.get("url") or "#",
+                "title": fe.get("title") or fe.get("game") or "（无标题）",
+                "tag": "事件",
+                "color": "#ff5c39",
+                "img": "",
+                "meta": "%s · %s" % (
+                    fe.get("source_name") or "未知来源",
+                    (fe.get("pubdate") or fe.get("first_seen") or "")[5:10]),
+                "is_event": True,
+            }
     except Exception:
         pass
     # 2) meme 风险词视频
@@ -1584,8 +1602,9 @@ def _masthead_pick(data, exclude_urls=None):
 
     # 2026-08-17 二次治理：禁用 soft 泛娱乐兜底（用户反馈热度太低）
     #   强垂类不足时回退到 events.json 事件类头条，绝不放低热度泛娱乐上头图。
+    #   （exclude_urls 一并传入，events 事件与 TOP10 去重）
     if not candidates:
-        return _masthead_fallback_event(data)
+        return _masthead_fallback_event(data, exclude_urls)
 
     # 读历史头图 bvid，跳过最近 2 天用过的（避免周更视频连续霸屏）
     history = _load_masthead_history()
@@ -1635,41 +1654,102 @@ def _masthead_pick(data, exclude_urls=None):
     return (main, kicker_lv, sub_chips, False)
 
 
-def _masthead_fallback_event(data):
+def _masthead_fallback_event(data, exclude_urls=None):
     """强垂类 B站 视频不足时，回退到 events.json 事件类头条（无图渐变卡）。
 
-    2026-08-17 新增：用户明确要求「头图以游戏发售/官号PV物料/大事件为主」，
-    当 B站 强垂类有图候选不足时，不应放低热度泛娱乐上头图；
-    改为返回一个 events.json 事件条目作为「事件头条」（无图渐变底+白字），
-    用 dict 结构兼容 build_masthead 的解构。
+    2026-08-17 治理（三轮）：
+      · 用户明确「头图以游戏发售/官号PV物料/大事件为主」，不放低热度泛娱乐上头图。
+      · 修复热度判断：不再按 feed_events 时间顺序取第一条，改为——
+          1) 先排除 exclude_urls（与 TOP10 去重，events URL 也要参与）；
+          2) 对每条事件做 _verify_top1 多源印证，印证强度高者优先（multi>single>weak）；
+          3) 同强度下按事件权重（发售/登顶/首曝等大事件 > 普通更新公告）。
+      · 只有当近 3 天没有任何一条「有权威印证（multi/single）」的事件时才放弃，
+        返回 None 保留人工版式，绝不硬上一条冷门公告。
     """
+    if not exclude_urls:
+        exclude_urls = set()
+    else:
+        exclude_urls = set(exclude_urls)
+
     try:
         ev = json.load(io.open(os.path.join(BASE, "events.json"), encoding="utf-8"))
-        for fe in (ev.get("feed_events") or []):
-            pd = fe.get("pubdate") or fe.get("first_seen") or ""
-            if not pd:
-                continue
+    except Exception:
+        return None
+
+    # 事件权重两级：强事件（发售/上线/首曝/公测/联动/PV/CG，用户点名优先）=2，
+    #   次事件（登顶/夺冠/流水/业绩/数据盘点）=1，普通公告=0。
+    _EVENT_STRONG = re.compile(
+        r'发售|上线|公测|定档|首曝|联动|周年|首测|不删档|预约|开服|PV|CG|主题曲|新皮肤|新角|资料片|实机|演示|预告')
+    _EVENT_MINOR = re.compile(
+        r'登顶|夺冠|夺魁|流水|净利|业绩|收入|下载|爆款|热销|畅销')
+    scored = []
+    for fe in (ev.get("feed_events") or []):
+        title = fe.get("title") or fe.get("game") or "（无标题）"
+        url = fe.get("source_url") or fe.get("url") or "#"
+        pd = fe.get("pubdate") or fe.get("first_seen") or ""
+        # 去重：已在 TOP10 出现的事件不再上头图
+        if url in exclude_urls:
+            continue
+        # 时效闸：近 3 天
+        if pd:
             try:
                 d = datetime.date.fromisoformat(str(pd)[:10])
+                if (datetime.date.today() - d).days > 3:
+                    continue
             except Exception:
-                continue
-            if (datetime.date.today() - d).days <= 3:
-                title = fe.get("title") or fe.get("game") or "（无标题）"
-                url = fe.get("source_url") or fe.get("url") or "#"
-                src = fe.get("source_name") or "未知来源"
-                # 返回伪 video dict（无 pic → build_masthead 走事件无图分支）
-                fake_v = {
-                    "title": title,
-                    "url": url,
-                    "pic": "",
-                    "tname": src,
-                    "_origin": "events",
-                    "view": 0,
-                }
-                return (fake_v, "S", [], False)  # S级信号 + 无次条 + 非降级
-    except Exception:
-        pass
-    return None
+                pass
+        # 多源印证强度（复用 _verify_top1 的实体抽取+跨源检索）
+        fake = {"title": title}
+        verdict, hits, _ = _verify_top1(fake, data, datetime.date.today().strftime("%Y-%m-%d"))
+        vrank = {"multi": 3, "single": 2, "weak": 1}.get(verdict, 0)
+        # 事件权重：强事件 2 / 次事件 1 / 普通 0
+        if _EVENT_STRONG.search(title):
+            erank = 2
+        elif _EVENT_MINOR.search(title):
+            erank = 1
+        else:
+            erank = 0
+        # 时间：越新越好（age 越小越优先）
+        try:
+            age = (datetime.date.today() - datetime.date.fromisoformat(str(pd)[:10])).days
+        except Exception:
+            age = 99
+        scored.append((vrank, erank, -age, hits, fe))
+
+    if not scored:
+        return None
+
+    # 印证强度优先 → 事件权重次之 → 时间（越新越优先）兜底
+    scored.sort(key=lambda x: (-x[0], -x[1], -x[2]))
+    vrank, erank, age, hits, fe = scored[0]
+    # 降级策略：排除 TOP1 后，优先 multi/single 事件；
+    #   若只剩 weak，则只接受「有事件权重（发售/登顶/联动/突发等）」的事件作头条，
+    #   绝不硬上一条无权重、无印证的冷门公告；两者都无 → 返回 None 保留旧版。
+    if vrank < 2 and not erank:
+        return None
+
+    title = fe.get("title") or fe.get("game") or "（无标题）"
+    url = fe.get("source_url") or fe.get("url") or "#"
+    src = fe.get("source_name") or "未知来源"
+    if vrank >= 3:
+        verdict_label = "多源印证"
+    elif vrank == 2:
+        verdict_label = "双源印证"
+    else:
+        verdict_label = "单源事件"
+    fake_v = {
+        "title": title,
+        "url": url,
+        "pic": "",
+        "tname": src,
+        "_origin": "事件源",
+        "_verdict": verdict_label,
+        "_hits": [h[0] for h in hits],
+        "view": 0,
+    }
+    # 信号等级：强事件（发售/PV/联动等）=S；次事件或多源印证=A；无次条；非降级
+    lv = "S" if erank >= 2 else "A"
+    return (fake_v, lv, [], False)
 
 
 def build_masthead(data, exclude_urls=None):
@@ -1693,20 +1773,33 @@ def build_masthead(data, exclude_urls=None):
         if joined:
             sub_html = f'<p class="mh-sub">次条：{joined}</p>'
 
-    # 2026-08-17：无图时走事件渐变底分支（与 podium TOP1 事件卡风格统一）
+    # 2026-08-17：无图时走事件渐变底分支（复用 masthead 原生 mh-inner/mh-txt 结构，
+    #   仅加 .mh-event 类换橙渐变底，文字样式与有图分支一致，不再混用 podium 的 pb-* 类）。
     if not pic:
+        verdict_html = ""
+        if main.get("_verdict"):
+            hits = " · ".join(main.get("_hits") or [])[:80]
+            vlabel = main.get("_verdict")
+            # 多源/双源=绿勾；单源事件=橙标（透明提示印证不足）
+            cls = "pb-verify-ok" if vlabel in ("多源印证", "双源印证") else "pb-verify-warn"
+            mark = "✓" if cls == "pb-verify-ok" else "⚠"
+            verdict_html = (
+                f'<span class="pb-verify {cls}" '
+                f'title="印证来源：{esc(hits)}">{mark} {esc(vlabel)}</span>'
+            )
         return (
-            '<div class="masthead">'
-            f'<a class="pb-card-1 pb-card-1-event" target="_blank" href="{esc(url)}" '
-            f'style="background:linear-gradient(135deg,#ff5c39 0%,#ffb020 60%,#ff7a3d 100%);">'
-            f'<div class="pb-cap-1">'
-            f'<span class="pb-rank-1">TOP 1 · {esc(kicker)}</span>'
-            f'<i class="pb-tag-1" style="background:#fff"></i>'
-            f'<div class="pb-title-1">{esc(title)}</div>'
-            f'<div class="pb-meta-1">'
-            f'<span style="color:#fff">{esc(tname)} · {esc(main.get("_origin") or "事件源")}</span>'
+            '<div class="masthead mh-event">'
+            '<div class="mh-inner">'
+            '<div class="mh-txt">'
+            f'<span class="mh-kicker">{esc(kicker)} · 游戏大事件</span>'
+            '<h1>'
+            f'<a target="_blank" href="{esc(url)}">{esc(title)}</a>'
+            '</h1>'
+            f'<p>{esc(tname)} · {esc(main.get("_origin") or "事件源")}'
+            + (f' {verdict_html}' if verdict_html else '')
+            + '</p>'
             f'{sub_html}'
-            f'</div></div></a>'
+            '</div>'
             '<div class="mh-logo">'
             '<svg class="gp-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 110">'
             '<text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" '

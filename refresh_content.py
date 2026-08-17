@@ -1535,12 +1535,20 @@ def _bvid_of(v):
     return v.get("title", "")
 
 
-def _masthead_pick(data):
+def _masthead_pick(data, exclude_urls=None):
     """挑出当天的头图候选：(url, title, src_url, kicker_lv, sub_chips)。
 
     2026-08-05 治理：连续多天不要重复同一张头图（每周必看是周更的，
     不避开的话一周都是同一张）。避开最近 2 天用过的 bvid。
+    2026-08-17 治理：
+      · 加 _is_game_vertical 硬过滤：头条必须是强游戏垂类（True），soft/False 一律排除
+      · 接收 exclude_urls 参数（podium TOP1~TOP10 已用 URL），与 TOP10 去重
     """
+    if not exclude_urls:
+        exclude_urls = set()
+    else:
+        exclude_urls = set(exclude_urls)
+
     # 2026-08-05 治理：来源标注必须与条目真实出处一致，不能一律写"B 站热门"。
     # 打上 _origin 标签，渲染时按真实出处显示（全站排行 / 每周必看）。
     pool = []
@@ -1548,21 +1556,52 @@ def _masthead_pick(data):
         v = dict(v); v["_origin"] = "B 站全站排行"; pool.append(v)
     for v in data.get("weekly", []) or []:
         v = dict(v); v["_origin"] = "B 站每周必看"; pool.append(v)
-    # 限游戏/ACG 语境（B站游戏分区 + 标题硬锚点）+ 时效闸 ≤MAX_AGE_DAYS 天
+    # 限游戏垂类（强垂类 True）+ 时效闸 ≤MAX_AGE_DAYS 天 + 与 TOP10 去重
     candidates = []
     now_ts = time.time()
     for v in pool:
         t = v.get("tname", "") or ""
         title = v.get("title", "") or ""
+        url = v.get("url") or ""
         if not v.get("pic"):
             continue
         # 时效过滤（2026-08-12：头图与 TOP10 统一为近 3 天，避免周更/每周必看陈视频霸屏）
         a = _pub_age(v)
         if a is not None and a > MAX_AGE_DAYS:
             continue
+        # 与 TOP10 去重（2026-08-17）
+        if url in exclude_urls:
+            continue
         # 游戏分区直接入选；其他分区需硬锚点
         if t in GAME_TNAME or (GAME_KW.search(title) and re.search(r'《[^》]+》|Steam|手游|端游|主机|新作|新游', title)):
-            candidates.append(v)
+            # 2026-08-17：优先只收强垂类（True），排除 soft/False
+            vert = _is_game_vertical(v)
+            if vert is True:
+                candidates.append(v)
+            elif vert == "soft":
+                # soft 作为降级池（仅当强垂类无候选时才启用）
+                pass  # 在后面 fallback 阶段处理
+
+    # 记录是否走了降级路径（用于渲染标记）
+    is_fallback = False
+    if not candidates:
+        # 2026-08-17 降级：强垂类不足时用 soft 兜底（泛娱乐挂游戏分区但至少有图）
+        # 避免"无候选→保留旧版头图"导致连续多天同一条非游戏内容霸屏
+        for v in pool:
+            t = v.get("tname", "") or ""
+            title = v.get("title", "") or ""
+            url = v.get("url") or ""
+            if not v.get("pic"):
+                continue
+            a = _pub_age(v)
+            if a is not None and a > MAX_AGE_DAYS:
+                continue
+            if url in exclude_urls:
+                continue
+            if (t in GAME_TNAME or (GAME_KW.search(title) and re.search(r'《[^》]+》|Steam|手游|端游|主机|新作|新游', title))):
+                if _is_game_vertical(v) == "soft":
+                    candidates.append(v)
+                    is_fallback = True
 
     if not candidates:
         return None
@@ -1602,7 +1641,7 @@ def _masthead_pick(data):
             _save_masthead_history(history)
         kicker_lv = "S" if main.get("view", 0) > 2000000 else "A"
         sub_chips = [v.get("title", "")[:22] for v in evt[1:3]]
-        return main, kicker_lv, sub_chips
+        return (main, kicker_lv, sub_chips, False)
 
     # 2) 落到游戏区第一（最近用过的大幅降权）
     candidates.sort(key=lambda x: -penalized_view(x))
@@ -1612,15 +1651,17 @@ def _masthead_pick(data):
         _save_masthead_history(history)
     kicker_lv = "A" if main.get("view", 0) > 1500000 else "B"
     sub_chips = [v.get("title", "")[:22] for v in candidates[1:3]]
-    return main, kicker_lv, sub_chips
+    return (main, kicker_lv, sub_chips, is_fallback)
 
 
-def build_masthead(data):
-    """根据当日数据构造头图 HTML。无候选时返回 None（保留原版）。"""
-    pick = _masthead_pick(data)
+def build_masthead(data, exclude_urls=None):
+    """根据当日数据构造头图 HTML。无候选时返回 None（保留原版）。
+    2026-08-17：新增 exclude_urls 参数（podium TOP1~TOP10 已用 URL），与 TOP10 去重。
+    """
+    pick = _masthead_pick(data, exclude_urls=exclude_urls)
     if not pick:
         return None
-    main, lv, sub_chips = pick
+    main, lv, sub_chips, is_fallback = pick
     pic = main.get("pic", "")
     title = main.get("title", "")
     url = main.get("url", "")
@@ -1645,7 +1686,9 @@ def build_masthead(data):
         '<h1>'
         f'<a target="_blank" href="{esc(url)}">{esc(title)}</a>'
         '</h1>'
-        f'<p>{esc(tname)} · {esc(main.get("_origin") or "B 站采集")}</p>'
+        f'<p>{esc(tname)} · {esc(main.get("_origin") or "B 站采集")}'
+        + (f' <span class="pb-verify pb-verify-warn" title="降级候选：今日强垂类已用尽，此为泛娱乐兜底">⚠ 泛娱乐兜底</span>' if is_fallback else '')
+        + '</p>'
         f'{sub_html}'
         '</div>'
         '<div class="mh-logo">'
@@ -1759,8 +1802,16 @@ def main():
     #   候选同源：popular+weekly → top10_score 排序 + events.json feed_events 当日事件。
     podium_html, n_podium = build_podium(data, date_s)
     src, _ = replace_podium(src, podium_html)
-    # 头图·每日轮换（按当日 B站 游戏区热门自动选）
-    masthead_html = build_masthead(data)
+
+    # 2026-08-17：收集 podium 已用 URL，传给 masthead 做去重
+    _podium_urls = set()
+    for m in re.finditer(r'href="([^"]*)"', podium_html or ""):
+        u = m.group(1)
+        if u and u != "#" and not u.startswith("javascript:"):
+            _podium_urls.add(u)
+
+    # 头图·每日轮换（按当日 B站 游戏区热门自动选）——与 TOP10 去重 + 强垂类过滤
+    masthead_html = build_masthead(data, exclude_urls=_podium_urls)
     src, n_mh = replace_masthead(src, masthead_html)
 
     # 页面身份日期必须随当天采集同步；只改标题和头部 chip，绝不粗暴替换正文里的事件日期。

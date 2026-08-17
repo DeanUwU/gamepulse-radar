@@ -173,7 +173,7 @@ details.fold-sec[open]>summary .fold-hint::before{content:"▾ 收起"}
 
 /* ===== 主站：手写 SVG 词云渲染 (2026-08-12 第三次重写) ===== */
 /* 矢量、永不模糊；自写螺旋布局器，从画布中心向外放词；H 大居中，H 小在外 */
-.wc-cloud{position:relative;width:100%;min-height:360px;overflow:hidden;display:block;margin:0 auto var(--space-md)}
+.wc-cloud{position:relative;width:100%;min-height:300px;overflow:hidden;display:block;margin:0 auto}
 #wc-svg{
   display:block;margin:0;width:1200px;height:380px;
   text-rendering:geometricPrecision;
@@ -189,6 +189,12 @@ details.fold-sec[open]>summary .fold-hint::before{content:"▾ 收起"}
 }
 .wc-cloud-tip b{display:block;font-size:var(--text-md);margin-bottom:2px}
 .wc-cloud-tip span{color:var(--sub);font-size:var(--text-xs);font-weight:400}
+
+/* 2026-08-17：词云图例紧凑化（减少空格） */
+.wc-legend{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;padding:var(--space-2xs) 0;font-size:var(--text-xs);color:var(--sub);line-height:1.4}
+.wc-legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:3px;vertical-align:middle}
+/* #glance 词云段整体收紧 */
+#glance .sec-title{margin-bottom:var(--space-sm)}
 
 /* 词条详情弹窗（点击词云词条直接展示，不跳转 wordcloud.html） */
 .wc-detail-modal{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center}

@@ -751,6 +751,93 @@ def _verify_top1(top1, data, date_s):
         return "weak", hit_sources, entities
 
 
+# ---- 2026-08-17 重构：真实热度评分（替代脆弱的"命中源数量"） ----
+# 用户反馈："为什么这么多未验证和单源事件？我的目的很简单"。
+# 根因：_verify_top1 用"命中源数量"当热度，但 feed_events 各说各话（22 条来自 14 个
+#   独立 source，彼此不交叉报道），任何事件标题去 feed_events 检索只能命中自己 → 永远 weak。
+#   而真正的热度信号在 tgmeng 当日 AI 日报里——它聚合全网多家媒体写成综述，
+#   一个事件被综述反复点名（如"影之刃零"出现 7 次）才是真热度的强代理。
+# 方案：新增 _heat_score()，综合多信号算真实热度分数，用于 TOP1/头图排序。
+def _tgmeng_mention_count(title, date_s):
+    """统计某事件在 tgmeng 当日 AI 日报里的提及频次（真热度代理）。
+    返回 (count, matched_keywords)。匹配用实体 + 关键中文片段双路。
+    """
+    try:
+        tg_path = os.path.join(COLLECTORS, "tgmeng_daily_" + date_s.replace("-", "") + ".json")
+        if not os.path.exists(tg_path):
+            return 0, []
+        tg = json.load(io.open(tg_path, encoding="utf-8"))
+        blobs = []
+        ent = tg.get("entry") or {}
+        blobs.append(str(ent.get("title") or "") + " " + str(ent.get("summary") or ""))
+        for ae in (tg.get("all_entries") or []):
+            blobs.append(str(ae.get("title") or "") + " " + str(ae.get("summary") or ""))
+        full = " ".join(blobs)
+        # 匹配词：实体 + 《书名号》内容 + 关键英文大写片段（如 GTA6/Kingdom Hearts）
+        kws = set()
+        for e in _extract_entities(title):
+            if e:
+                kws.add(e)
+        for m in re.findall(r'《([^》]+)》', title):
+            kws.add(m.strip())
+        for m in re.findall(r'[A-Z][A-Za-z0-9]+(?:\s+[A-Z][A-Za-z0-9]+)?', title):
+            if len(m) >= 3:
+                kws.add(m)
+        # 只保留长度≥2 且非泛词的关键词
+        generic = {"Steam", "PS5", "Xbox", "Switch", "PV", "CG", "AI", "D23", "GTA", "PC"}
+        matched = []
+        total = 0
+        for kw in kws:
+            kw = kw.strip()
+            if len(kw) < 2 or kw in generic:
+                continue
+            c = full.count(kw)
+            if c > 0:
+                matched.append((kw, c))
+                total += c
+        return total, matched
+    except Exception:
+        return 0, []
+
+
+def _heat_score(title, data, date_s):
+    """综合多信号计算事件/视频的真实热度分数（越大越热）。
+    信号权重：
+      · tgmeng 日报提及频次（真热度，权重最高）：每提及一次 +4，上限 +20
+      · feed_events 多源命中数：每多一家 +2（弱信号，只作辅助）
+      · 强事件信号（登顶/发售/预购/首曝/联动/PV）：+3
+      · 事件来源权威度（机核/GameLook/游戏陀螺/游民星空/17173 > Steam 官方公告）：+1
+    返回 (score, dict 详情) —— 详情供渲染透明标注用。
+    """
+    # 1) tgmeng 提及频次（真热度）
+    tg_cnt, tg_kws = _tgmeng_mention_count(title, date_s)
+    score = min(tg_cnt * 4, 20)
+
+    # 2) feed_events 多源命中数
+    verdict, hits, ents = _verify_top1({"title": title}, data, date_s)
+    n_src = len({h[0] for h in hits})
+    score += n_src * 2
+
+    # 3) 强事件信号
+    if re.search(r'登顶|夺冠|夺魁|发售|预购|预售|首曝|定档|公测|不删档|联动|上线', title):
+        score += 3
+
+    # 4) 来源权威度（feed_events 命中源里是否含权威媒体）
+    auth_src = {"机核", "GameLook", "游戏陀螺", "游民星空", "17173", "白鲸出海"}
+    auth_hit = any(s.split(":")[-1].strip() in auth_src for s, _ in hits)
+    if auth_hit:
+        score += 1
+
+    detail = {
+        "tgmeng_count": tg_cnt,
+        "tgmeng_kws": tg_kws,
+        "n_src": n_src,
+        "verdict": verdict,
+        "hits": hits,
+    }
+    return score, detail
+
+
 def _podium_top1(data, date_s):
     """生成焦点榜 TOP1 头条位（事件类优先）。返回 dict 或 None。
     来源优先级：events.json feed_events 当日 → meme 风险词视�� → 视频池 H 最高。
@@ -758,33 +845,30 @@ def _podium_top1(data, date_s):
       改为「印证强度(multi>single>weak) + 事件权重(发售/登顶/大事件)」排序，
       选出含金量最高的事件当头条，弱证据冷门事件不再霸榜。
     """
-    # 1) events.json feed_events 近 3 天事件：按印证强度 + 事件权重排序
+    # 1) events.json feed_events：按 _heat_score 真实热度排序
+    #    时效闸：默认近 3 天；但若事件在 tgmeng 今日日报中被提及（仍在发酵），放宽到 7 天。
     ev_path = os.path.join(BASE, "events.json")
     try:
         ev = json.load(io.open(ev_path, encoding="utf-8"))
-        _EVENT_MAJOR = re.compile(
-            r'发售|上线|公测|定档|首曝|联动|周年|登顶|夺冠|夺魁|首测|不删档|预约|开服|'
-            r'PV|CG|主题曲|新皮肤|新角|资料片|实机|演示|预告|宣发')
         scored = []
         for fe in (ev.get("feed_events") or []):
             pd = fe.get("pubdate") or fe.get("first_seen") or ""
             title = fe.get("title") or fe.get("game") or "（无标题）"
+            score, detail = _heat_score(title, data, date_s)
+            tg_cnt = detail.get("tgmeng_count", 0)
             if pd:
                 try:
                     d = datetime.date.fromisoformat(str(pd)[:10])
-                    if (datetime.date.today() - d).days > 3:
+                    age = (datetime.date.today() - d).days
+                    max_age = 7 if tg_cnt > 0 else 3  # tgmeng 提及=今日热点，放宽时效
+                    if age > max_age:
                         continue
                 except Exception:
                     pass
-            # 多源印证强度
-            verdict, hits, _ = _verify_top1({"title": title}, data, date_s)
-            vrank = {"multi": 3, "single": 2, "weak": 1}.get(verdict, 0)
-            erank = 1 if _EVENT_MAJOR.search(title) else 0
-            scored.append((vrank, erank, fe))
+            scored.append((score, detail, fe))
         if scored:
-            # 印证强度优先 → 事件权重次之 → 时间兜底（feed_events 原序即时间序）
-            scored.sort(key=lambda x: (-x[0], -x[1]))
-            vrank, erank, fe = scored[0]
+            scored.sort(key=lambda x: -x[0])
+            score, detail, fe = scored[0]
             return {
                 "rank": 1,
                 "url": fe.get("source_url") or fe.get("url") or "#",
@@ -796,6 +880,7 @@ def _podium_top1(data, date_s):
                     fe.get("source_name") or "未知来源",
                     (fe.get("pubdate") or fe.get("first_seen") or "")[5:10]),
                 "is_event": True,
+                "_heat_detail": detail,
             }
     except Exception:
         pass
@@ -888,30 +973,29 @@ def build_podium(data, date_s):
     # TOP1：头条事件（视频或文章），URL 可能跟 ranked_videos[0] 重合
     top1 = _podium_top1(data, date_s)
 
-    # ---- 2026-08-17 治理：TOP1 含金量交叉验证 ----
-    # 任何被推上头条的候选，先在多源库内检索印证，避免单源 B站视频当头条。
+    # ---- 2026-08-17 治理：TOP1 真实热度印证（基于 _heat_score） ----
+    # top1 已由 _heat_score 选出真热事件（tgmeng 提及频次 + 多源 + 强事件信号），
+    # 这里只根据 _heat_detail 生成正向印证标签，不再跑脆弱的"命中源数量"判定。
     if top1:
-        verdict, hits, ents = _verify_top1(top1, data, date_s)
-        top1["_verify"] = {
-            "verdict": verdict,
-            "hits": hits,                       # [(源名, 实体), ...]
-            "entities": ents,                  # 检索用实体词
-            "n_src": len({h[0] for h in hits}),
-        }
-        if verdict == "weak":
-            # 缺乏权威印证（仅 B站自身）→ 降级：撤出头条大卡，
-            # 改取视频流 top1 按 top10_score 顶上（同样要过验证，最多再探 1 次）。
-            for v in ranked_videos:
-                cand = _podium_video_to_dict(v, 1)
-                cand_v, cand_hits, cand_ents = _verify_top1(cand, data, date_s)
-                if cand_v in ("multi", "single"):
-                    cand["_verify"] = {"verdict": cand_v, "hits": cand_hits,
-                                       "entities": cand_ents, "n_src": len({h[0] for h in cand_hits})}
-                    top1 = cand
-                    break
-            else:
-                # 视频流也无人能印证 → 头条保留原候选但标 ✗ 弱证据（透明显示）
-                top1["_verify"]["verdict"] = "weak"
+        detail = top1.get("_heat_detail") or {}
+        tg_cnt = detail.get("tgmeng_count", 0)
+        n_src = detail.get("n_src", 0)
+        # 权威媒体来源本身即可信，不需"多源印证"证明（只有 B站 视频才需要）
+        src = top1.get("meta", "") or ""
+        auth_src = {"机核", "GameLook", "游戏陀螺", "游民星空", "17173", "白鲸出海"}
+        is_auth = any(a in src for a in auth_src)
+        if tg_cnt >= 3:
+            top1["_verify"] = {"verdict": "multi", "label": "全网热榜印证",
+                               "n_src": n_src, "tgmeng": tg_cnt}
+        elif tg_cnt >= 1 or n_src >= 2:
+            top1["_verify"] = {"verdict": "single", "label": "多源提及",
+                               "n_src": n_src, "tgmeng": tg_cnt}
+        elif is_auth:
+            top1["_verify"] = {"verdict": "single", "label": "权威媒体",
+                               "n_src": n_src, "tgmeng": tg_cnt}
+        else:
+            top1["_verify"] = {"verdict": "weak", "label": "单源",
+                               "n_src": n_src, "tgmeng": tg_cnt}
 
     # 排除 TOP1 的 URL（若 TOP1 来自视频池）
     seen = set()
@@ -950,7 +1034,7 @@ def build_podium(data, date_s):
                    if e and _is_game_vertical(_v_from_dict(e)) == "soft")
     mix_note = (f'垂类聚焦：游戏垂类 {strong_cnt} 条'
                 + (f' · 泛娱乐兜底 {soft_cnt} 条' if soft_cnt else '')
-                + ' · TOP1 多源印证机制已启用')
+                + ' · TOP1 按真实热度排序（全网日报提及+多源+强事件信号）')
     sec = (
         f'<section id="podium"><div class="sec-title">'
         f'<span class="bar" style="background:var(--accent)"></span>'
@@ -973,21 +1057,23 @@ def _v_from_dict(e):
 
 
 def _verify_badge(e):
-    """生成 TOP1 验证标记 HTML（透明显示多源印证状态）。"""
+    """生成 TOP1 验证标记 HTML（正向显示真实热度印证状态）。"""
     v = e.get("_verify")
     if not v:
         return ""
     verdict = v.get("verdict")
+    label = v.get("label", "")
+    tg_cnt = v.get("tgmeng", 0)
     n_src = v.get("n_src", 0)
     if verdict == "multi":
-        return (f'<span class="pb-verify pb-verify-ok" title="多源印证：{n_src} 家不同源/平台提及">'
-                f'✓ 多源印证 · {n_src}家</span>')
+        return (f'<span class="pb-verify pb-verify-ok" title="全网热榜印证：AI 日报提及 {tg_cnt} 次，{n_src} 家来源">'
+                f'✓ {label} · 日报提及{tg_cnt}次</span>')
     elif verdict == "single":
-        return (f'<span class="pb-verify pb-verify-warn" title="单源报道：仅 {n_src} 家提及，待观察">'
-                f'⚠ 单源待观察 · {n_src}家</span>')
+        return (f'<span class="pb-verify pb-verify-ok" title="多源提及：AI 日报提及 {tg_cnt} 次，{n_src} 家来源">'
+                f'✓ {label}</span>')
     else:
-        return (f'<span class="pb-verify pb-verify-weak" title="缺乏权威印证：仅 B站自身，已降级">'
-                f'✗ 缺乏权威印证</span>')
+        return (f'<span class="pb-verify pb-verify-warn" title="仅单源报道，热度待观察">'
+                f'⚠ {label}</span>')
 
 
 def _podium_render_top1(e):
@@ -1690,51 +1776,42 @@ def _masthead_fallback_event(data, exclude_urls=None):
         # 去重：已在 TOP10 出现的事件不再上头图
         if url in exclude_urls:
             continue
-        # 时效闸：近 3 天
+        # 真实热度评分（tgmeng 提及频次 + 多源 + 强事件信号）
+        score, detail = _heat_score(title, data, datetime.date.today().strftime("%Y-%m-%d"))
+        tg_cnt = detail.get("tgmeng_count", 0)
+        # 时效闸：默认近 3 天；tgmeng 今日提及（仍在发酵）放宽到 7 天
         if pd:
             try:
                 d = datetime.date.fromisoformat(str(pd)[:10])
-                if (datetime.date.today() - d).days > 3:
+                max_age = 7 if tg_cnt > 0 else 3
+                if (datetime.date.today() - d).days > max_age:
                     continue
             except Exception:
                 pass
-        # 多源印证强度（复用 _verify_top1 的实体抽取+跨源检索）
-        fake = {"title": title}
-        verdict, hits, _ = _verify_top1(fake, data, datetime.date.today().strftime("%Y-%m-%d"))
-        vrank = {"multi": 3, "single": 2, "weak": 1}.get(verdict, 0)
-        # 事件权重：强事件 2 / 次事件 1 / 普通 0
-        if _EVENT_STRONG.search(title):
-            erank = 2
-        elif _EVENT_MINOR.search(title):
-            erank = 1
-        else:
-            erank = 0
-        # 时间：越新越好（age 越小越优先）
-        try:
-            age = (datetime.date.today() - datetime.date.fromisoformat(str(pd)[:10])).days
-        except Exception:
-            age = 99
-        scored.append((vrank, erank, -age, hits, fe))
+        scored.append((score, detail, fe))
 
     if not scored:
         return None
 
-    # 印证强度优先 → 事件权重次之 → 时间（越新越优先）兜底
-    scored.sort(key=lambda x: (-x[0], -x[1], -x[2]))
-    vrank, erank, age, hits, fe = scored[0]
-    # 降级策略：排除 TOP1 后，优先 multi/single 事件；
-    #   若只剩 weak，则只接受「有事件权重（发售/登顶/联动/突发等）」的事件作头条，
-    #   绝不硬上一条无权重、无印证的冷门公告；两者都无 → 返回 None 保留旧版。
-    if vrank < 2 and not erank:
-        return None
+    # 真实热度优先
+    scored.sort(key=lambda x: -x[0])
+    score, detail, fe = scored[0]
 
     title = fe.get("title") or fe.get("game") or "（无标题）"
     url = fe.get("source_url") or fe.get("url") or "#"
     src = fe.get("source_name") or "未知来源"
-    if vrank >= 3:
-        verdict_label = "多源印证"
-    elif vrank == 2:
-        verdict_label = "双源印证"
+    tg_cnt = detail.get("tgmeng_count", 0)
+    n_src = detail.get("n_src", 0)
+    # 权威媒体来源（机核/GameLook/游戏陀螺/白鲸出海等）本身即可信，无需"多源印证"证明；
+    # 只有 B站 个人 UP 主视频才需要交叉印证。事件类头条优先显示"权威媒体"而非"单源"。
+    auth_src = {"机核", "GameLook", "游戏陀螺", "游民星空", "17173", "白鲸出海"}
+    is_auth = any(a in (src or "") for a in auth_src)
+    if tg_cnt >= 3:
+        verdict_label = "全网热榜印证"
+    elif tg_cnt >= 1 or n_src >= 2:
+        verdict_label = "多源提及"
+    elif is_auth:
+        verdict_label = "权威媒体"
     else:
         verdict_label = "单源事件"
     fake_v = {
@@ -1744,11 +1821,16 @@ def _masthead_fallback_event(data, exclude_urls=None):
         "tname": src,
         "_origin": "事件源",
         "_verdict": verdict_label,
-        "_hits": [h[0] for h in hits],
+        "_hits": [f"{k}×{c}" for k, c in (detail.get("tgmeng_kws") or [])],
         "view": 0,
     }
-    # 信号等级：强事件（发售/PV/联动等）=S；次事件或多源印证=A；无次条；非降级
-    lv = "S" if erank >= 2 else "A"
+    # 信号等级：强事件（发售/PV/联动等）=S；次事件或多源提及=A；无次条；非降级
+    if _EVENT_STRONG.search(title):
+        lv = "S"
+    elif _EVENT_MINOR.search(title) or tg_cnt >= 1:
+        lv = "A"
+    else:
+        lv = "B"
     return (fake_v, lv, [], False)
 
 
@@ -1780,12 +1862,12 @@ def build_masthead(data, exclude_urls=None):
         if main.get("_verdict"):
             hits = " · ".join(main.get("_hits") or [])[:80]
             vlabel = main.get("_verdict")
-            # 多源/双源=绿勾；单源事件=橙标（透明提示印证不足）
-            cls = "pb-verify-ok" if vlabel in ("多源印证", "双源印证") else "pb-verify-warn"
+            # 全网热榜印证/多源提及/权威媒体=绿勾；单源事件=橙标
+            cls = "pb-verify-ok" if vlabel in ("全网热榜印证", "多源提及", "权威媒体") else "pb-verify-warn"
             mark = "✓" if cls == "pb-verify-ok" else "⚠"
             verdict_html = (
                 f'<span class="pb-verify {cls}" '
-                f'title="印证来源：{esc(hits)}">{mark} {esc(vlabel)}</span>'
+                f'title="印证：{esc(hits)}">{mark} {esc(vlabel)}</span>'
             )
         return (
             '<div class="masthead mh-event">'

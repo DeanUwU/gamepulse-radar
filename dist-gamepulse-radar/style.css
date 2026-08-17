@@ -242,13 +242,6 @@ details.fold-sec[open]>summary .fold-hint::before{content:"▾ 收起"}
 .pb-meta-1{color:#d4dae4;font-size:var(--text-sm);display:flex;flex-wrap:wrap;gap:var(--space-2xs) var(--space-sm);align-items:center}
 .pb-h-1{color:var(--accent);font-weight:700;font-size:var(--text-base)}
 
-/* 2026-08-17 新增：TOP1 多源印证验证标记（透明显示头条含金量） */
-.pb-verify{display:inline-flex;align-items:center;font-size:var(--text-xs);font-weight:700;
-  padding:2px 8px;border-radius:999px;letter-spacing:.01em;white-space:nowrap}
-.pb-verify-ok{color:#3fd68f;background:rgba(63,214,143,.14);border:1px solid rgba(63,214,143,.4)}
-.pb-verify-warn{color:#ffb020;background:rgba(255,176,32,.14);border:1px solid rgba(255,176,32,.4)}
-.pb-verify-weak{color:#ff5c39;background:rgba(255,92,57,.16);border:1px solid rgba(255,92,57,.45)}
-
 /* 中卡 TOP2-5：缩略图 + 标题 + 元数据
    2026-08-13 v4：标题不强制 line-clamp，让浏览器自然 wrap（信息完全为主），
         缩略图降到 80px 给文字更多空间，整卡高度由内容决定 */

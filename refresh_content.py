@@ -79,6 +79,45 @@ def is_acg(v):
         return False
     return bool(STRONG_GAME_KW.search(v.get("title") or ""))
 
+def _is_game_vertical(v):
+    """TOP10 垂类硬过滤（2026-08-17）：该视频是否够格进游戏垂类榜单。
+
+    与 is_acg 的区别：is_acg 是红线②「不出现非游戏内容」的最低闸；
+    本函数是「主动聚焦」——即使 is_acg 放行了（如靠关键词兜底的影视/生活类），
+    只要不是游戏分区、也不是强游戏/ACG 标题信号，就排除出 TOP10 候选池，
+    让榜单锁定：新游发售 / 官方 PV-CG 物料 / ACG 爆火热点。
+
+    返回：True（强垂类，保送）/ "soft"（游戏分区但标题无强游戏语义，降权）/ False（排除）
+    """
+    t = v.get("tname") or ""
+    title = v.get("title") or ""
+    # 动画/二次元/虚拟UP主等核心 ACG 分区 → 强收
+    if t in ("动画", "动漫", "二次元", "虚拟UP主", "MAD·AMV",
+             "国创", "番剧", "鬼畜", "唱见", "翻唱"):
+        return True
+    # 游戏分区：再分两级——标题含强游戏语义（具体游戏名/PV/发售/玩法）才强收，
+    #   仅挂游戏分区名但内容是泛娱乐（如「飞机安检模拟器」在单机分区）→ soft 降权
+    if t in GAME_TNAME:
+        if GAME_STRONG_TITLE.search(title):
+            return True
+        return "soft"
+    # 非游戏分区但标题含强游戏/ACG 信号 → 强收（覆盖「游戏内容错投泛分区」）
+    if STRONG_GAME_KW.search(title):
+        return True
+    # 其余（影视/生活/搞笑/知识… 无游戏强信号）→ 排除
+    return False
+
+
+# 游戏垂类「强标题语义」：具体游戏名/官方物料/发售节点/玩法词
+# 用于区分「真游戏内容」与「挂着游戏分区名的泛娱乐」（飞机安检模拟器/自行车被偷等）
+GAME_STRONG_TITLE = re.compile(
+    r'《[^》]+》|Steam|steam|PS5|Xbox|Switch|任天堂|手游|端游|主机|'
+    r'发售|上线|公测|定档|首测|实机|PV|CG|预告|演示|试玩|联动|版本|赛季|'
+    r'抽卡|氪金|氪|皮肤|英雄|角色|关卡|副本|BOSS|boss|攻略|通关|速通|'
+    r'原神|王者|和平精英|第五人格|明日方舟|崩坏|绝区零|鸣潮|恋与深空|'
+    r'影之刃|黑神话|我的世界|MC|LOL|英雄联盟|DOTA|CS2|Valorant|永劫|'
+    r'蛋仔|元梦|逆水寒|梦幻|传奇|三国|塞尔达|王国之泪|GTA|生化危机')
+
 def _pub_age(v):
     """发布距今天数；无 pubdate 返回 None（不可判定）。"""
     ts = int(v.get("pubdate") or 0)
@@ -108,24 +147,37 @@ def is_game_tieba(name):
 CAT_RULES = (
     ("launch",  "新品首发",  r'发售|首发|上线|公测|开测|定档|首测|开服|不删档'),
     ("collab",  "联动/周年", r'联动|周年|返场|复刻|重制|回归'),
-    ("preview", "实机/前瞻", r'实机|演示|前瞻|预告|首曝|试玩|PV|放出'),
+    ("preview", "实机/前瞻", r'实机|演示|前瞻|预告|首曝|试玩|PV|CG|放出'),
     ("chart",   "榜单/爆款", r'登顶|夺冠|夺魁|畅销榜|热销榜|销量|破\d|万销量|好评|口碑'),
     ("esports", "电竞/赛事", r'决赛|季后赛|总决赛|战队|联赛|赛事|夏季赛|春季赛|S\d{2}|MSI|EDG|BLG|JDG|TES|WBG'),
     ("risk",    "行业/风波", r'裁员|停运|下架|致歉|封禁|外挂|炸服|回滚|争议|差评|退款|跑路|维权|诉讼|涉赌'),
 )
 
+# ---- 2026-08-17 治理：TOP10 垂类聚焦加权 ----
+# 用户要求：榜单更聚焦游戏行业垂类，重点锚定
+#   ① 新游发售动态  ② 官方账号发布的 PV/CG 物料  ③ 近期 ACG 领域爆火热点
+# 三类信号给高权重保送；纯泛娱乐（靠 STRONG_GAME_KW 兜底进来的影视/搞笑）降权。
+OFFICIAL_MATERIAL_KW = re.compile(
+    r'PV|CG|预告|实机|首曝|演示|试玩|放出|公开|官宣|定档|发售|上线|公测|首测|宣传片|预告片')
+ACG_BOOM_KW = re.compile(
+    r'番|动画|新番|声优|二游|漫画|cos|手书|MAD|AMV|虚拟UP主|vtuber|VUP|演唱会|主题曲|OP|ED')
+PAN_ENT_KW = re.compile(
+    r'搞笑|影视|综艺|生活|美食|颜值|舞蹈|音乐综合|知识|鬼畜剧场')  # 泛娱乐（非游戏语境）兜底类
 
 def top10_score(v):
-    """TOP10 排序 = 「播放量 × 信号权重 × 新鲜度」
+    """TOP10 排序 = 「播放量 × 信号权重 × 新鲜度 × 垂类聚焦」
 
-    三层因子：
+    四层因子：
       1. 游戏相关性（分区/关键词/发售节点）→ 大作不被泛圈淹没
-      2. 新鲜度加成（来源权重）→ 热门榜靠前 = 当日爆发信号，周必看 = 持续热度
-         解决"老爆款永远占坑"：3天前的 500 万压死今天刚爆的 50 万
-      3. 发售/登顶节点 → 正式发售、定档类大作额外保送
+      2. 垂类聚焦（2026-08-17 新增）：
+         · 官方 PV/CG/实机物料 + 新游发售节点 → ×1.8 强保送
+         · ACG 爆火信号（番/动画/声优/二游爆发）→ ×1.4 上浮
+         · 纯泛娱乐（靠关键词兜底进来的影视/搞笑）→ ×0.4 压底
+      3. 新鲜度加成（来源权重）→ 热门榜靠前 = 当日爆发信号，周必看 = 持续热度
+      4. 发售/登顶节点 → 正式发售、定档类大作额外保送
 
-    2026-07-31 追加：用户反馈视觉焦点和热点总是那几个二游，
-    根因是纯播放量排序天然偏向累积量高的老内容，缺少时间维度。
+    目标：让 TOP10 自然浮现「新游发售 / 官方物料 / ACG 热点」，
+         而非被泛娱乐巨量视频淹没。
     """
     view = v.get("view", 0)
     tname = v.get("tname") or ""
@@ -137,15 +189,23 @@ def top10_score(v):
     launch = bool(LAUNCH_KW.search(title))
     game_boost = 4.0 if (game_rel and launch) else (1.5 if game_rel else 1.0)
 
+    # --- 垂类聚焦（2026-08-17）---
+    focus = 1.0
+    if game_rel and (OFFICIAL_MATERIAL_KW.search(title) or launch):
+        focus = 1.8   # 官方 PV/CG/实机 + 新游发售 → 强保送
+    elif game_rel and ACG_BOOM_KW.search(title):
+        focus = 1.4   # ACG 爆火（番/动画/声优/二游）
+    elif PAN_ENT_KW.search(tname) and not game_rel:
+        focus = 0.4   # 纯泛娱乐分区、无游戏语境 → 压底
+    elif (not game_rel) and PAN_ENT_KW.search(title):
+        focus = 0.4   # 标题也偏泛娱乐、无游戏强信号 → 压底
+
     # --- 新鲜度/增速因子 ---
     # B站热门榜本身按"当日热度"排序（含播放增量），排名越靠前 =
     # 当日爆发力越强。用排名位置近似"增速信号"（无需历史数据对比）。
     # 周必看 = 编辑部精选破圈证据，持续性强但不是"今日突发"。
-    # 赋予热门榜靠前条目一个 freshness multiplier，让新爆点能挑战老爆款。
     freshness = 1.0
     if src == "热门":
-        # 热门榜原始顺序隐含了 B站 的实时热度排名（类似"今日涨幅"）
-        # 排名第 1 ≈ 今日最强爆发，给予最高新鲜度加成
         rank_pos = v.get("_rank", 99)  # 由调用方注入
         if rank_pos <= 3:
             freshness = 1.8   # 前三名 = 今日大爆
@@ -156,7 +216,7 @@ def top10_score(v):
     elif src == "周必看":
         freshness = 1.0   # 持续热度，不额外加成也不 penalize
 
-    return view * game_boost * freshness
+    return view * game_boost * focus * freshness
 
 
 def esc(s):
@@ -546,9 +606,155 @@ def build_top10(data, date_s):
     return out
 
 
+# ---- 2026-08-17 治理：TOP1 含金量交叉验证 ----
+# 用户反馈：今天出现了缺乏权威性的 TOP1（单源 B站视频被推上头条大卡）。
+# 新增机制：任何内容被判定为 top1 时，先在全站多源库内检索，
+#   确认是否有「多家媒体/多平台」报道或该关键词被反复提及，再决定其头条资格。
+# 检索源（按可用性分级）：
+#   · feed_events（events.json，含 source_name 多源）→ 强证据
+#   · tgmeng 当日 AI 综述（全文 + all_entries）→ 强证据（已聚合多家媒体）
+#   · public_hotlist（微博/知乎/抖音/B站/小红书 5 平台话题）→ 可选证据（采集可能为空）
+# 判定阈值：
+#   ≥3 家不同源/平台命中 → 多源印证，保留 TOP1（标 ✓）
+#   2 家命中 → 保留但标 ⚠ 单源待观察
+#   <2 家（仅 B站自身）→ 降级：撤出头条大卡，退回视频流按 top10_score 排（标 ✗）
+
+# 实体提取：优先抓《游戏名》书名号，其次抓英文/中文专有名词（Steam/PS5/Xbox/厂商名等）
+_ENTITY_BOOK = re.compile(r'《([^》]{2,20})》')
+_ENTITY_CAPS = re.compile(r'\b([A-Z][A-Za-z0-9]{2,20})\b')  # 英文专名（Compulsion/South of Midnight 等）
+_ENTITY_GAME = re.compile(
+    r'(Steam|PS5|Xbox|Switch|任天堂|米哈游|腾讯|网易|鹰角|库洛|'
+    r'影之刃零|湮灭之潮|黑神话|原神|王者荣耀|和平精英|第五人格|明日方舟|崩坏|'
+    r'South of Midnight|Compulsion Games|Halo|光环|DOTA2|CS2|英雄联盟|'
+    r'Valorant|绝区零|鸣潮|恋与深空|重返未来|明日方舟)')
+# 泛平台/通用词：命中只能证明"游戏圈在聊"，不能证明"该具体事件被多源报道"，
+# 必须从实体里剔除，否则任何含 Steam 的标题都会被 feed_events 里所有 Steam 官闻虚高命中。
+_VERIFY_GENERIC = re.compile(
+    r'^(Steam|PS5|Xbox|Switch|任天堂|Steam 国区|热销榜|畅销榜|全球|国区)$')
+# 停用词：太泛、匹配不到真实实体的词
+_VERIFY_STOP = re.compile(r'^(的|了|是|在|和|与|为|被|将|一款|这个|正式|首次|公开|上线|发售)$')
+
+
+def _extract_entities(title):
+    """从标题抽取用于跨源检索的实体词列表。
+    2026-08-17 收紧：剔除 Steam/Xbox 等泛平台词，只留具体游戏名/厂商名/书名号实体，
+        避免弱证据标题因含泛词被虚高判为「多源印证」。
+    """
+    if not title:
+        return []
+    ents = []
+    for m in _ENTITY_BOOK.findall(title):
+        ents.append(m.strip())
+    for m in _ENTITY_GAME.findall(title):
+        ents.append(m.strip())
+    for m in _ENTITY_CAPS.findall(title):
+        if m in ("PV", "CG", "ED", "OP", "AI", "B站"):
+            continue
+        ents.append(m.strip())
+    # 去重 + 过滤过短/停用/泛平台词
+    seen, out = set(), []
+    for e in ents:
+        if not e or e in seen or len(e) < 3:
+            continue
+        if _VERIFY_STOP.match(e) or _VERIFY_GENERIC.match(e):
+            continue
+        seen.add(e)
+        out.append(e)
+    return out
+
+
+def _verify_top1(top1, data, date_s):
+    """对 top1 做多源交叉验证。返回 (verdict, sources_hit, detail)
+
+    verdict ∈ {"multi", "single", "weak"}：
+      multi  → ≥3 家不同源/平台命中，含金量足，保留 TOP1
+      single → 2 家命中，保留但标 ⚠
+      weak   → <2 家（仅 B站自身），降级撤出头条
+    sources_hit = 命中源名列表（用于渲染透明标注）
+    """
+    title = top1.get("title") or ""
+    entities = _extract_entities(title)
+    # 若实体为空，退化为用标题里的关键片段（去标点）做宽松匹配
+    if not entities:
+        frag = re.sub(r'[^\w\u4e00-\u9fa5]', '', title)[:12]
+        entities = [frag] if frag else [title[:12]]
+
+    hit_sources = []   # (源名, 命中实体)
+    seen_src = set()
+
+    def _add(src_name, ent):
+        if src_name not in seen_src:
+            seen_src.add(src_name)
+            hit_sources.append((src_name, ent))
+
+    # 1) feed_events（多 source_name）
+    try:
+        ev = json.load(io.open(os.path.join(BASE, "events.json"), encoding="utf-8"))
+        for fe in (ev.get("feed_events") or []):
+            blob = " ".join([
+                str(fe.get("title") or ""), str(fe.get("game") or ""),
+                str(fe.get("source_name") or ""), str(fe.get("anchor") or "")
+            ])
+            for e in entities:
+                if e and e in blob:
+                    _add("events:%s" % (fe.get("source_name") or "事件源"), e)
+                    break
+    except Exception:
+        pass
+
+    # 2) tgmeng 当日 AI 综述（全文 + all_entries 标题/摘要）
+    try:
+        tg_path = os.path.join(
+            COLLECTORS,
+            "tgmeng_daily_" + date_s.replace("-", "") + ".json")
+        if os.path.exists(tg_path):
+            tg = json.load(io.open(tg_path, encoding="utf-8"))
+            blobs = []
+            ent = tg.get("entry") or {}
+            blobs.append(str(ent.get("title") or "") + " " + str(ent.get("summary") or ""))
+            for ae in (tg.get("all_entries") or []):
+                blobs.append(str(ae.get("title") or "") + " " + str(ae.get("summary") or ""))
+            full = " ".join(blobs)
+            for e in entities:
+                if e and e in full:
+                    _add("糖果梦AI日报", e)
+                    break
+    except Exception:
+        pass
+
+    # 3) public_hotlist（5 平台话题，可选证据，可能为空）
+    try:
+        hl_path = os.path.join(
+            COLLECTORS,
+            "public_hotlist_" + date_s.replace("-", "") + ".json")
+        if os.path.exists(hl_path):
+            hl = json.load(io.open(hl_path, encoding="utf-8"))
+            for plat, items in hl.items():
+                if plat == "timestamp" or not isinstance(items, list):
+                    continue
+                for it in items:
+                    topic = str(it.get("topic") or "")
+                    for e in entities:
+                        if e and e in topic:
+                            _add("热榜:%s" % plat, e)
+                            break
+    except Exception:
+        pass
+
+    # 判定
+    n = len(seen_src)
+    if n >= 3:
+        return "multi", hit_sources, entities
+    elif n == 2:
+        return "single", hit_sources, entities
+    else:
+        return "weak", hit_sources, entities
+
+
 def _podium_top1(data, date_s):
     """生成焦点榜 TOP1 头条位（事件类优先）。返回 dict 或 None。
     来源优先级：events.json feed_events 当日 → meme 风险词视频 → 视频池 H 最高。
+    2026-08-17：生成后会交给 _verify_top1 做多源印证判定，弱证据者降级。
     """
     # 1) events.json feed_events 近 3 天事件
     ev_path = os.path.join(BASE, "events.json")
@@ -596,14 +802,31 @@ def _podium_top1(data, date_s):
 
 
 def _podium_video_to_dict(v, rank):
-    """把 B 站视频 dict 转换为 podium 条目 dict。"""
+    """把 B 站视频 dict 转换为 podium 条目 dict。
+    2026-08-17：强化垂类 tag 判定——官方 PV/CG 物料、新游发售独立标签色，
+        让游戏垂类信号在榜单上更可读；soft 项（游戏分区但无强游戏语义的泛娱乐）
+        明确标「泛娱乐」而非伪装成游戏，透明展示垂类纯度。
+    """
     tname = v.get("tname") or ""
+    title = v.get("title") or ""
+    vertical = _is_game_vertical(v)
     if any(t in tname for t in KUSO_TNAMES):
         tag, color = "鬼畜", "#3fd68f"
     elif v.get("_src") == "周必看":
         tag, color = "破圈", "#4da3ff"
-    elif "游戏" in tname:
-        tag, color = "游戏", "#c792ea"
+    elif vertical is True:
+        # 强游戏垂类：再细分官方物料 / 新游发售 / ACG 爆火
+        if re.search(r'PV|CG|预告|实机|首曝|演示|宣传片|预告片', title):
+            tag, color = "官方PV/CG", "#ff7a3d"
+        elif LAUNCH_KW.search(title):
+            tag, color = "新游发售", "#ff5c39"
+        elif ACG_BOOM_KW.search(title):
+            tag, color = "ACG热点", "#c792ea"
+        else:
+            tag, color = "游戏", "#c792ea"
+    elif vertical == "soft":
+        # 游戏分区但内容为泛娱乐（飞机安检/自行车被偷等）→ 透明标「泛娱乐」
+        tag, color = "泛娱乐", "#ffb020"
     else:
         tag, color = "高热", "#ffb020"
     return {
@@ -623,17 +846,54 @@ def build_podium(data, date_s):
     设计：TOP1 榜首大卡 + TOP2-5 中卡 + TOP6-10 小卡，全部去重自同一 pool。
     """
     # 排序视频池：popular + weekly，按 top10_score
+    # 2026-08-17 垂类硬过滤：TOP10 只收「游戏分区」或「标题含强游戏/ACG 信号」的视频，
+    #   纯泛娱乐（影视/生活/搞笑，靠 STRONG_GAME_KW 兜底误进的）一律排除，
+    #   让榜单自然聚焦新游发售 / 官方 PV-CG / ACG 热点。
     pool = {}
     for idx, v in enumerate(data.get("popular", [])):
         pool[v["url"]] = dict(v, _src="热门", _rank=idx + 1)
     for v in data.get("weekly", []):
         if v["url"] not in pool:
             pool[v["url"]] = dict(v, _src="周必看", _rank=999)
-    ranked_videos = sorted([v for v in pool.values() if fresh_bili(v)],
-                           key=top10_score, reverse=True)
+    # 2026-08-17 垂类分层：强垂类(True)优先填满 TOP10；不足 10 条才用
+    #   soft（游戏分区但标题无强游戏语义的泛娱乐）兜底，避免泛娱乐霸榜。
+    strong_pool = sorted(
+        [v for v in pool.values()
+         if fresh_bili(v) and _is_game_vertical(v) is True],
+        key=top10_score, reverse=True)
+    soft_pool = sorted(
+        [v for v in pool.values()
+         if fresh_bili(v) and _is_game_vertical(v) == "soft"],
+        key=top10_score, reverse=True)
+    ranked_videos = (strong_pool + soft_pool)[:10]  # 强垂类优先，soft 仅兜底
 
     # TOP1：头条事件（视频或文章），URL 可能跟 ranked_videos[0] 重合
     top1 = _podium_top1(data, date_s)
+
+    # ---- 2026-08-17 治理：TOP1 含金量交叉验证 ----
+    # 任何被推上头条的候选，先在多源库内检索印证，避免单源 B站视频当头条。
+    if top1:
+        verdict, hits, ents = _verify_top1(top1, data, date_s)
+        top1["_verify"] = {
+            "verdict": verdict,
+            "hits": hits,                       # [(源名, 实体), ...]
+            "entities": ents,                  # 检索用实体词
+            "n_src": len({h[0] for h in hits}),
+        }
+        if verdict == "weak":
+            # 缺乏权威印证（仅 B站自身）→ 降级：撤出头条大卡，
+            # 改取视频流 top1 按 top10_score 顶上（同样要过验证，最多再探 1 次）。
+            for v in ranked_videos:
+                cand = _podium_video_to_dict(v, 1)
+                cand_v, cand_hits, cand_ents = _verify_top1(cand, data, date_s)
+                if cand_v in ("multi", "single"):
+                    cand["_verify"] = {"verdict": cand_v, "hits": cand_hits,
+                                       "entities": cand_ents, "n_src": len({h[0] for h in cand_hits})}
+                    top1 = cand
+                    break
+            else:
+                # 视频流也无人能印证 → 头条保留原候选但标 ✗ 弱证据（透明显示）
+                top1["_verify"]["verdict"] = "weak"
 
     # 排除 TOP1 的 URL（若 TOP1 来自视频池）
     seen = set()
@@ -665,12 +925,20 @@ def build_podium(data, date_s):
         cards_html.append(_podium_render_small(e))
 
     n_total = len(cards_html)
+    # 2026-08-17：统计垂类纯度，透明展示「游戏垂类 / 泛娱乐兜底」占比
+    strong_cnt = sum(1 for e in [top1] + mids + smalls
+                     if e and _is_game_vertical(_v_from_dict(e)) is True)
+    soft_cnt = sum(1 for e in [top1] + mids + smalls
+                   if e and _is_game_vertical(_v_from_dict(e)) == "soft")
+    mix_note = (f'垂类聚焦：游戏垂类 {strong_cnt} 条'
+                + (f' · 泛娱乐兜底 {soft_cnt} 条' if soft_cnt else '')
+                + ' · TOP1 多源印证机制已启用')
     sec = (
         f'<section id="podium"><div class="sec-title">'
         f'<span class="bar" style="background:var(--accent)"></span>'
         f'今日焦点 <small>合并「视觉焦点 + 内容 TOP10」· 三档金字塔布局 · '
         f'TOP1 榜首大图 / TOP2-5 中卡 / TOP6-10 紧凑小卡 · '
-        f'热度数 H(0-100)：组内最热=100，原始播放量仅作附注；事件类按多源证据定序，不计 H</small>'
+        f'热度数 H(0-100)：组内最热=100，原始播放量仅作附注；{esc(mix_note)}</small>'
         f'</div><div class="pb-grid">'
         + "".join(cards_html) +
         '</div></section>'
@@ -678,12 +946,41 @@ def build_podium(data, date_s):
     return sec, n_total
 
 
+def _v_from_dict(e):
+    """从 podium 渲染 dict 反查原始 B站 视频字段（供垂类统计复用）。"""
+    if not e:
+        return {}
+    return {"tname": (e.get("meta") or "").split(" · ")[-1],
+            "title": e.get("title") or ""}
+
+
+def _verify_badge(e):
+    """生成 TOP1 验证标记 HTML（透明显示多源印证状态）。"""
+    v = e.get("_verify")
+    if not v:
+        return ""
+    verdict = v.get("verdict")
+    n_src = v.get("n_src", 0)
+    if verdict == "multi":
+        return (f'<span class="pb-verify pb-verify-ok" title="多源印证：{n_src} 家不同源/平台提及">'
+                f'✓ 多源印证 · {n_src}家</span>')
+    elif verdict == "single":
+        return (f'<span class="pb-verify pb-verify-warn" title="单源报道：仅 {n_src} 家提及，待观察">'
+                f'⚠ 单源待观察 · {n_src}家</span>')
+    else:
+        return (f'<span class="pb-verify pb-verify-weak" title="缺乏权威印证：仅 B站自身，已降级">'
+                f'✗ 缺乏权威印证</span>')
+
+
 def _podium_render_top1(e):
-    """渲染 TOP1 大卡。事件无图 = 渐变底+白字；有图 = 图+叠层文字。"""
+    """渲染 TOP1 大卡。事件无图 = 渐变底+白字；有图 = 图+叠层文字。
+    2026-08-17：追加「多源印证」验证标记（pb-verify），透明显示头条含金量。
+    """
     title = esc(e["title"])
     meta = esc(e["meta"])
     tag = esc(e["tag"])
     color = e["color"]
+    vbadge = _verify_badge(e)
     if e.get("is_event") or not e.get("img"):
         # 事件无图：渐变底 + 大字白标题
         return (
@@ -696,6 +993,7 @@ def _podium_render_top1(e):
             f'<div class="pb-meta-1">'
             f'<span class="pb-h-1" style="color:#fff">{tag}</span>'
             f'<span style="color:#fff">{meta}</span>'
+            f'{vbadge}'
             f'</div></div></a>'
         )
     # 有图：图片背景 + 暗渐变 + 白字
@@ -711,6 +1009,7 @@ def _podium_render_top1(e):
         f'<div class="pb-meta-1">'
         f'<span class="pb-h-1">{tag}</span>'
         f'<span>{meta}</span>'
+        f'{vbadge}'
         f'</div></div></a>'
     )
 
@@ -722,6 +1021,7 @@ def _podium_render_mid(e):
     tag = esc(e["tag"])
     color = e["color"]
     rank = e["rank"]
+    vbadge = _verify_badge(e) if e.get("rank") == 1 else ""
     img_html = ""
     if e.get("img"):
         img_html = (f'<img src="{esc(e["img"])}" alt="{title}" loading="lazy" '
@@ -736,7 +1036,7 @@ def _podium_render_mid(e):
         f'<span class="pb-tag-mid" style="color:{color};border:1px solid {color}55;background:{color}15;">{tag}</span>'
         f'</div>'
         f'<div class="pb-title-mid">{title}</div>'
-        f'<div class="pb-meta-mid">{meta}</div>'
+        f'<div class="pb-meta-mid">{meta}{vbadge}</div>'
         f'</div></a>'
     )
 
@@ -751,6 +1051,7 @@ def _podium_render_small(e):
     color = e["color"]
     rank = e["rank"]
     meta_short = esc(e["meta"])
+    vbadge = _verify_badge(e) if e.get("rank") == 1 else ""
     img_html = ""
     if e.get("img"):
         img_html = (f'<img class="pb-thumb-small" src="{esc(e["img"])}" alt="{title}" '
@@ -765,7 +1066,7 @@ def _podium_render_small(e):
         f'<span class="pb-tag-small" style="color:{color};border:1px solid {color}55;background:{color}15;">{tag}</span>'
         f'</div>'
         f'<div class="pb-title-small">{title}</div>'
-        f'<div class="pb-meta-small">{meta_short}</div>'
+        f'<div class="pb-meta-small">{meta_short}{vbadge}</div>'
         f'</div>'
         f'</a>'
     )

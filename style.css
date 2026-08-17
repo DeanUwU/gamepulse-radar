@@ -181,6 +181,8 @@ details.fold-sec[open]>summary .fold-hint::before{content:"▾ 收起"}
   -webkit-font-smoothing:antialiased;
 }
 .wc-cloud text{font-weight:600;letter-spacing:.01em}
+/* 2026-08-17：确保 canvas 在容器内水平居中（WordCloud 从画布中心放词，但 canvas 元素本身需居中） */
+#wc-canvas{display:block;margin:0 auto}
 .wc-cloud-tip{
   position:absolute;background:rgba(13,17,23,.96);border:1px solid var(--border);
   border-radius:var(--radius-md);padding:var(--space-2xs) var(--space-sm);

@@ -690,6 +690,43 @@ details.fold-sec[open]>summary .fold-hint::before{content:"▾ 收起"}
 .intel-chips .chip.cat-blue{background:rgba(77,163,255,.1);color:var(--blue);border-color:rgba(77,163,255,.28)}
 .intel-chips .chip.cat-green{background:rgba(63,214,143,.1);color:var(--green);border-color:rgba(63,214,143,.28)}
 .intel-chips .chip.cat-purple{background:rgba(179,136,255,.1);color:#b388ff;border-color:rgba(179,136,255,.28)}
+/* 2026-08-17：行业情报站「今日小结」段——数据状态 + 今日 3 件大事 */
+.intel-summary{margin:6px 0 10px;padding:10px 14px;border-left:3px solid var(--blue);
+  background:linear-gradient(90deg,rgba(77,163,255,.06) 0%,rgba(77,163,255,0) 60%);
+  border-radius:0 var(--radius-md) var(--radius-md) 0;
+  font-size:var(--text-sm);color:var(--txt);line-height:1.7}
+.intel-summary .sum-stat{color:var(--blue);font-weight:700}
+.intel-summary .sum-stat.gold{color:var(--gold)}
+.intel-summary .sum-stat.green{color:var(--green)}
+.intel-summary .sum-head{font-weight:700;color:var(--txt);margin-bottom:4px;font-size:var(--text-base)}
+.intel-summary .sum-head i{color:var(--gold);font-style:normal;margin-right:4px}
+.intel-summary ul{margin:4px 0 0;padding-left:20px}
+.intel-summary li{margin:2px 0;color:var(--txt)}
+.intel-summary li b{color:var(--blue)}
+/* 2026-08-17：高热度卡片——左边蓝条 + 🔥 小角标 */
+.intel-item.is-hot{position:relative;border-left:3px solid var(--blue);
+  background:linear-gradient(90deg,rgba(77,163,255,.05) 0%,var(--panel2) 30%)}
+.intel-item.is-hot::before{content:"🔥";position:absolute;top:6px;right:8px;
+  font-size:11px;opacity:.7;line-height:1}
+/* 2026-08-17：行业日常日报折叠（details/summary） */
+.intel-fold{margin-top:var(--space-xs)}
+.intel-fold>summary{list-style:none;cursor:pointer;padding:8px 12px;
+  background:var(--panel2);border:1px dashed var(--border);
+  border-radius:var(--radius-md);font-size:var(--text-sm);color:var(--sub);
+  transition:all .22s var(--ease-out-quart);user-select:none;
+  display:flex;align-items:center;gap:var(--space-2xs)}
+.intel-fold>summary::-webkit-details-marker{display:none}
+.intel-fold>summary::before{content:"▸";color:var(--blue);font-size:10px;
+  transition:transform .22s var(--ease-out-quart);display:inline-block}
+.intel-fold[open]>summary::before{transform:rotate(90deg)}
+.intel-fold>summary:hover{background:var(--panel);color:var(--txt);
+  border-color:rgba(77,163,255,.3)}
+.intel-fold>summary b{color:var(--txt);font-weight:600}
+.intel-fold>summary .fold-count{color:var(--sub);font-size:var(--text-xs);
+  margin-left:auto;background:rgba(255,255,255,.04);padding:2px 8px;border-radius:99px}
+.intel-fold[open]>summary{border-style:solid;border-color:rgba(77,163,255,.25);
+  margin-bottom:var(--space-xs)}
+.intel-fold .intel-grid{margin-top:0}
 .intel-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xs);margin-top:var(--space-xs)}
 /* 2026-08-17：行业情报站「超 2 天」过期条目隐藏（CSS 视觉隐藏，DOM 保留以备恢复） */
 .intel-item.is-stale,.intel-top.is-stale{display:none}

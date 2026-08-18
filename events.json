@@ -4,8 +4,8 @@
   "source_file": "calendar.html",
   "event_count": 100,
   "note": "scaffold 中的 <<EVT_i>> 由 gen_calendar.py 用 events[i].anchor 替换 __SRC__ 回填。",
-  "feed_count": 22,
-  "feed_seq": 216,
+  "feed_count": 17,
+  "feed_seq": 220,
   "last_update": "2026-08-18",
   "date_migrated": "2026-08-18"
  },
@@ -1310,102 +1310,62 @@
    "date_end": "2026-08-12"
   },
   {
-   "id": "news_4e9f1dfb75",
+   "id": "steam_4279130",
    "kind": "cal",
-   "game": "王者荣耀",
-   "title": "王者荣耀：KIC2026 夏季赛总决赛",
-   "source_url": "https://gp.qq.com/",
-   "source_name": "王者荣耀 将于 2026-08-22：KIC2026 夏季赛总决赛（腾讯官网）",
-   "anchor": "<a target=\"_blank\" href=\"https://gp.qq.com/\" title=\"王者荣耀\">KIC2026 夏季赛总决赛</a>",
-   "date_start": "2026-08-22",
-   "date_end": "2026-08-22"
+   "game": "Tower64",
+   "title": "Tower64 Steam 发售",
+   "source_url": "https://store.steampowered.com/app/4279130/",
+   "source_name": "Tower64 将于 2026-08-18 在 Steam 发售（官方商店页）",
+   "anchor": "<a target=\"_blank\" href=\"https://store.steampowered.com/app/4279130/\" title=\"Tower64 Steam 商店页\">Steam 发售</a>",
+   "date_start": "2026-08-18",
+   "date_end": "2026-08-18"
+  },
+  {
+   "id": "steam_4950450",
+   "kind": "cal",
+   "game": "Loop of Agony",
+   "title": "Loop of Agony Steam 发售",
+   "source_url": "https://store.steampowered.com/app/4950450/",
+   "source_name": "Loop of Agony 将于 2026-08-18 在 Steam 发售（官方商店页）",
+   "anchor": "<a target=\"_blank\" href=\"https://store.steampowered.com/app/4950450/\" title=\"Loop of Agony Steam 商店页\">Steam 发售</a>",
+   "date_start": "2026-08-18",
+   "date_end": "2026-08-18"
+  },
+  {
+   "id": "steam_2327640",
+   "kind": "cal",
+   "game": "外星入侵：自走棋",
+   "title": "外星入侵：自走棋 Steam 发售",
+   "source_url": "https://store.steampowered.com/app/2327640/",
+   "source_name": "外星入侵：自走棋 将于 2026-08-19 在 Steam 发售（官方商店页）",
+   "anchor": "<a target=\"_blank\" href=\"https://store.steampowered.com/app/2327640/\" title=\"外星入侵：自走棋 Steam 商店页\">Steam 发售</a>",
+   "date_start": "2026-08-19",
+   "date_end": "2026-08-19"
+  },
+  {
+   "id": "steam_4012810",
+   "kind": "cal",
+   "game": "STEINS;GATE RE:BOOT",
+   "title": "STEINS;GATE RE:BOOT Steam 发售",
+   "source_url": "https://store.steampowered.com/app/4012810/",
+   "source_name": "STEINS;GATE RE:BOOT 将于 2026-08-19 在 Steam 发售（官方商店页）",
+   "anchor": "<a target=\"_blank\" href=\"https://store.steampowered.com/app/4012810/\" title=\"STEINS;GATE RE:BOOT Steam 商店页\">Steam 发售</a>",
+   "date_start": "2026-08-19",
+   "date_end": "2026-08-19"
+  },
+  {
+   "id": "steam_4991410",
+   "kind": "cal",
+   "game": "Tail and Chaos",
+   "title": "Tail and Chaos Steam 发售",
+   "source_url": "https://store.steampowered.com/app/4991410/",
+   "source_name": "Tail and Chaos 将于 2026-08-19 在 Steam 发售（官方商店页）",
+   "anchor": "<a target=\"_blank\" href=\"https://store.steampowered.com/app/4991410/\" title=\"Tail and Chaos Steam 商店页\">Steam 发售</a>",
+   "date_start": "2026-08-19",
+   "date_end": "2026-08-19"
   }
  ],
  "feed_events": [
-  {
-   "id": "F191",
-   "kind": "feed",
-   "game": "DOTA2",
-   "title": "国际邀请赛：直播流、神秘商店等等",
-   "source_url": "https://store.steampowered.com/news/app/570/view/689765153413006763",
-   "source_name": "DOTA2 Steam 官方新闻",
-   "src_id": "dota2_steam",
-   "pubdate": "2026-08-12",
-   "first_seen": "2026-08-12",
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">DOTA2</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"国际邀请赛：直播流、神秘商店等等（来源：DOTA2 Steam 官方新闻）\" style=\"color:#4da3ff;text-decoration:none\">国际邀请赛：直播流、神秘商店等等</a></td><td>DOTA2 Steam 官方新闻</td></tr>"
-  },
-  {
-   "id": "F195",
-   "kind": "feed",
-   "game": "全行业",
-   "title": "《影之刃零》登顶Steam全球和国区热销榜",
-   "source_url": "https://www.gcores.com/articles/218263",
-   "source_name": "机核 GCORES",
-   "src_id": "gcores",
-   "pubdate": "2026-08-12",
-   "first_seen": "2026-08-12",
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"《影之刃零》登顶Steam全球和国区热销榜（来源：机核 GCORES）\" style=\"color:#4da3ff;text-decoration:none\">《影之刃零》登顶Steam全球和国区热销榜</a></td><td>机核 GCORES</td></tr>"
-  },
-  {
-   "id": "F197",
-   "kind": "feed",
-   "game": "萤火突击",
-   "title": "公告 0812 - 更新公告|滑铲战术动作调优、拍卖王卡牌刷新规则优化！ 亲爱的萤火虫特遣队员们： 《萤火突击》将于2026年8月13日06:00（UTC+8）",
-   "source_url": "https://yhtj.163.com/news/update/20260812/36482_1310849.html",
-   "source_name": "萤火突击官方更新",
-   "src_id": "yhtj",
-   "pubdate": "2026-08-12",
-   "first_seen": "2026-08-13",
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">萤火突击</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"公告 0812 - 更新公告|滑铲战术动作调优、拍卖王卡牌刷新规则优化！ 亲爱的萤火虫特遣队员们…（来源：萤火突击官方更新）\" style=\"color:#4da3ff;text-decoration:none\">公告 0812 - 更新公告|滑铲战术动作调优、拍卖王卡牌刷新规则优化！ 亲爱的萤火虫特遣队员们…</a></td><td>萤火突击官方更新</td></tr>"
-  },
-  {
-   "id": "F198",
-   "kind": "feed",
-   "game": "永劫无间",
-   "title": "8月13日《永劫无间》违规玩家封禁公告",
-   "source_url": "https://store.steampowered.com/news/app/1203220/view/711157885482041614",
-   "source_name": "永劫无间 Steam 官方新闻",
-   "src_id": "yjwujian_steam",
-   "pubdate": "2026-08-12",
-   "first_seen": "2026-08-13",
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">永劫无间</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"8月13日《永劫无间》违规玩家封禁公告（来源：永劫无间 Steam 官方新闻）\" style=\"color:#4da3ff;text-decoration:none\">8月13日《永劫无间》违规玩家封禁公告</a></td><td>永劫无间 Steam 官方新闻</td></tr>"
-  },
-  {
-   "id": "F199",
-   "kind": "feed",
-   "game": "永劫无间",
-   "title": "《永劫无间》8月13日更新公告",
-   "source_url": "https://store.steampowered.com/news/app/1203220/view/605297930836902052",
-   "source_name": "永劫无间 Steam 官方新闻",
-   "src_id": "yjwujian_steam",
-   "pubdate": "2026-08-12",
-   "first_seen": "2026-08-13",
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">永劫无间</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"《永劫无间》8月13日更新公告（来源：永劫无间 Steam 官方新闻）\" style=\"color:#4da3ff;text-decoration:none\">《永劫无间》8月13日更新公告</a></td><td>永劫无间 Steam 官方新闻</td></tr>"
-  },
-  {
-   "id": "F200",
-   "kind": "feed",
-   "game": "暗区突围",
-   "title": "《暗区突围：无限》违规行为处罚公告（0727-0809）",
-   "source_url": "https://store.steampowered.com/news/app/2073620/view/672877288649392262",
-   "source_name": "暗区突围 Steam 官方新闻",
-   "src_id": "aqtw_steam",
-   "pubdate": "2026-08-12",
-   "first_seen": "2026-08-13",
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">暗区突围</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"《暗区突围：无限》违规行为处罚公告（0727-0809）（来源：暗区突围 Steam 官方新闻）\" style=\"color:#4da3ff;text-decoration:none\">《暗区突围：无限》违规行为处罚公告（0727-0809）</a></td><td>暗区突围 Steam 官方新闻</td></tr>"
-  },
-  {
-   "id": "F201",
-   "kind": "feed",
-   "game": "CS2",
-   "title": "Counter-Strike 2 Update",
-   "source_url": "https://store.steampowered.com/news/app/730/view/689765787249934890",
-   "source_name": "CS2 Steam 官方新闻",
-   "src_id": "cs2_steam",
-   "pubdate": "2026-08-12",
-   "first_seen": "2026-08-13",
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">CS2</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"Counter-Strike 2 Update（来源：CS2 Steam 官方新闻）\" style=\"color:#4da3ff;text-decoration:none\">Counter-Strike 2 Update</a></td><td>CS2 Steam 官方新闻</td></tr>"
-  },
   {
    "id": "F202",
    "kind": "feed",
@@ -1551,18 +1511,6 @@
    "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"《牛来》零宣发没海报？各地影院整活海报大汇总（来源：游民星空新闻）\" style=\"color:#4da3ff;text-decoration:none\">《牛来》零宣发没海报？各地影院整活海报大汇总</a></td><td>游民星空新闻</td></tr>"
   },
   {
-   "id": "F214",
-   "kind": "feed",
-   "game": "全行业",
-   "title": "突发：信宸资本截胡游戏巨头，15亿美元拿下灵犀互娱？",
-   "source_url": "https://www.youxituoluo.com/534797.html",
-   "source_name": "游戏陀螺",
-   "src_id": "youxituoluo",
-   "pubdate": "2026-08-14",
-   "first_seen": "2026-08-17",
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"突发：信宸资本截胡游戏巨头，15亿美元拿下灵犀互娱？（来源：游戏陀螺）\" style=\"color:#4da3ff;text-decoration:none\">突发：信宸资本截胡游戏巨头，15亿美元拿下灵犀互娱？</a></td><td>游戏陀螺</td></tr>"
-  },
-  {
    "id": "F215",
    "kind": "feed",
    "game": "全行业",
@@ -1575,16 +1523,52 @@
    "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"“香港GTA”《热血无赖》电影进展顺利！正与SE洽谈（来源：游民星空 PC 资讯）\" style=\"color:#4da3ff;text-decoration:none\">“香港GTA”《热血无赖》电影进展顺利！正与SE洽谈</a></td><td>游民星空 PC 资讯</td></tr>"
   },
   {
-   "id": "F216",
+   "id": "F217",
    "kind": "feed",
    "game": "全行业",
-   "title": "你睡觉会关电脑吗？成PC圈激烈讨论话题",
-   "source_url": "https://www.gamersky.com/news/202608/2190089.shtml",
+   "title": "女巫学院RPG游戏《微光维克之歌》将于9月30日发售",
+   "source_url": "https://www.gcores.com/articles/218460",
+   "source_name": "机核 GCORES",
+   "src_id": "gcores",
+   "pubdate": "2026-08-18",
+   "first_seen": "2026-08-18",
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"女巫学院RPG游戏《微光维克之歌》将于9月30日发售（来源：机核 GCORES）\" style=\"color:#4da3ff;text-decoration:none\">女巫学院RPG游戏《微光维克之歌》将于9月30日发售</a></td><td>机核 GCORES</td></tr>"
+  },
+  {
+   "id": "F218",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "灵犀互娱或将易主，《影之刃零》预售登顶Steam，米哈游AI产品上线47天停服丨陀螺周报",
+   "source_url": "https://www.youxituoluo.com/534800.html",
+   "source_name": "游戏陀螺",
+   "src_id": "youxituoluo",
+   "pubdate": "2026-08-17",
+   "first_seen": "2026-08-18",
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"灵犀互娱或将易主，《影之刃零》预售登顶Steam，米哈游AI产品上线47天停服丨陀螺周报（来源：游戏陀螺）\" style=\"color:#4da3ff;text-decoration:none\">灵犀互娱或将易主，《影之刃零》预售登顶Steam，米哈游AI产品上线47天停服丨陀螺周报</a></td><td>游戏陀螺</td></tr>"
+  },
+  {
+   "id": "F219",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "《沉没之城2》M站开分79！克苏鲁侦探重返深渊",
+   "source_url": "https://www.gamersky.com/news/202608/2190712.shtml",
    "source_name": "游民星空 PC 资讯",
    "src_id": "gamersky_pc",
-   "pubdate": "2026-08-16",
-   "first_seen": "2026-08-17",
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"你睡觉会关电脑吗？成PC圈激烈讨论话题（来源：游民星空 PC 资讯）\" style=\"color:#4da3ff;text-decoration:none\">你睡觉会关电脑吗？成PC圈激烈讨论话题</a></td><td>游民星空 PC 资讯</td></tr>"
+   "pubdate": "2026-08-18",
+   "first_seen": "2026-08-18",
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"《沉没之城2》M站开分79！克苏鲁侦探重返深渊（来源：游民星空 PC 资讯）\" style=\"color:#4da3ff;text-decoration:none\">《沉没之城2》M站开分79！克苏鲁侦探重返深渊</a></td><td>游民星空 PC 资讯</td></tr>"
+  },
+  {
+   "id": "F220",
+   "kind": "feed",
+   "game": "三角洲行动",
+   "title": "G.T.I. Security | 违规处罚通知",
+   "source_url": "https://store.steampowered.com/news/app/2507950/view/694269386880454103",
+   "source_name": "三角洲行动 Steam 官方新闻",
+   "src_id": "df_steam",
+   "pubdate": "2026-08-17",
+   "first_seen": "2026-08-18",
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">三角洲行动</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"G.T.I. Security | 违规处罚通知（来源：三角洲行动 Steam 官方新闻）\" style=\"color:#4da3ff;text-decoration:none\">G.T.I. Security | 违规处罚通知</a></td><td>三角洲行动 Steam 官方新闻</td></tr>"
   }
  ]
 }

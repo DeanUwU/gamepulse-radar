@@ -397,6 +397,32 @@ else:
     problems.append(("日历", "events.json 缺失", "无法从日历真源生成日历区块", "构建完整性", "阻断",
                      "恢复 events.json 后重新生成，禁止沿用旧日历"))
 
+# ---------- ④-0 Steam 即将发售（补全 events 未来节点，供日历动态滚动） ----------
+# 非阻断：抓不到不阻塞日历/日报发布
+if os.path.exists(os.path.join(BASE, "events.json")):
+    log("【④Steam】运行 collector_steam_new.py（Steam 即将发售 -> events.json）...")
+    rs = subprocess.run([PY, "collector_steam_new.py"], cwd=BASE, capture_output=True, text=True, encoding="utf-8", env=ENV)
+    if rs.returncode != 0:
+        problems.append(("日历", "collector_steam_new.py 失败", rs.stderr.strip()[:200], "源覆盖", "优化",
+                         "检查 Steam 搜索接口可达性与正则解析"))
+    else:
+        log("    " + rs.stdout.strip())
+else:
+    log("【④Steam】未找到 events.json，跳过 Steam 采集")
+
+# ---------- ④-0b 新闻事件采集（互联网检索 -> events，供日历动态滚动） ----------
+# 非阻断：inbox 不存在/为空时跳过。每日自动化 Agent 负责 WebSearch 整理 inbox。
+if os.path.exists(os.path.join(BASE, "events.json")):
+    log("【④新闻】运行 collector_news_events.py（news_events_inbox.json -> events.json）...")
+    rn = subprocess.run([PY, "collector_news_events.py"], cwd=BASE, capture_output=True, text=True, encoding="utf-8", env=ENV)
+    if rn.returncode != 0:
+        problems.append(("日历", "collector_news_events.py 失败", rn.stderr.strip()[:200], "源覆盖", "优化",
+                         "检查 news_events_inbox.json 格式与日期校验"))
+    else:
+        log("    " + rn.stdout.strip())
+else:
+    log("【④新闻】未找到 events.json，跳过新闻事件采集")
+
 # ---------- ④-1 视觉隐藏兜底（2026-08-17） ----------
 # 用户要求「视觉隐藏」某些臃肿板块（前瞻哨/源覆盖报告/词云32条预览/两个标题栏），
 # 但不删数据。此步必须排在所有生成脚本（gen_calendar/gen_source_report/cross_words 等）

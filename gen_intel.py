@@ -341,9 +341,14 @@ def atomic_write(path, html):
     tmp = path + ".genintel.tmp"
     with io.open(tmp, "w", encoding="utf-8") as f:
         f.write(html)
-    if os.path.exists(path):
-        os.remove(path)
-    os.replace(tmp, path)
+    # os.replace 原子替换（覆盖目标），不经过 sandbox 回收站钩子；
+    # 只有 replace 失败才 os.remove 兜底，避免 FAIL_CLOSED 导致 #media/#board 渲染失败
+    try:
+        os.replace(tmp, path)
+    except OSError:
+        if os.path.exists(path):
+            os.remove(path)
+        os.replace(tmp, path)
 
 
 def replace_section(html, sid, new_sec):

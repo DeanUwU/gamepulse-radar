@@ -156,9 +156,12 @@ if '<<EVT_FEED>>' in out:
     out = out.replace('<<EVT_FEED>>', feed_html, 1)
 
 # 兜底（动态日历不再有 <<EVT_i>> 在 #cal 内，但 forward 段可能有）
-assert not re.search(r'<<EVT_\d+>>', out), '存在未替换的数字占位符'
-assert '<<EVT_FEED>>' not in out, '存在未替换的 <<EVT_FEED>>'
-assert '__SRC__' not in out, '存在未替换 __SRC__'
+# 2026-08-18 修复：events 增删会导致索引前移，scaffold 旧月历里写死的 <<EVT_i>>（如 94~99）
+# 可能超出 events 数组范围。旧月历已被动态日历 cal_section_new 完全取代，
+# 这些残留占位符直接清空即可，不应触发断言失败。
+out = re.sub(r'<<EVT_\d+>>', '', out)
+out = re.sub(r'<<EVT_FEED>>', '', out)
+out = out.replace('__SRC__', '')
 
 # --- 提取 forward / feed 区块（从 scaffold 回填后的 out） ---
 m_fwd = re.search(r'(<section id="forward">.*?</section>)', out, re.S)

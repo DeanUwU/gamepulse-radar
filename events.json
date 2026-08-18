@@ -111,28 +111,6 @@
    "date_end": null
   },
   {
-   "id": "E009",
-   "kind": "cal",
-   "game": "崩坏星穹铁道",
-   "title": "公告 「位面分裂」活动：位面饰…",
-   "source_url": "https://sr.mihoyo.com/news",
-   "source_name": "公告 「位面分裂」活动：位面饰品限时双倍掉落 位面饰品限时双倍掉落！ 2026-07-26",
-   "anchor": "",
-   "date_start": null,
-   "date_end": null
-  },
-  {
-   "id": "E010",
-   "kind": "cal",
-   "game": "崩坏星穹铁道",
-   "title": "公告 「位面分裂」活动：位面饰…",
-   "source_url": "https://sr.mihoyo.com/news",
-   "source_name": "公告 「位面分裂」活动：位面饰品限时双倍掉落 2026-07-26",
-   "anchor": "",
-   "date_start": null,
-   "date_end": null
-  },
-  {
    "id": "E011",
    "kind": "cal",
    "game": "萤火突击",
@@ -298,17 +276,6 @@
    "date_end": "2026-08-04"
   },
   {
-   "id": "E026",
-   "kind": "cal",
-   "game": "主机/PC新作",
-   "title": "Beast of Reinca…",
-   "source_url": "https://store.steampowered.com/news/app/2001760",
-   "source_name": "轮回之兽 发售（Game Freak 新IP动作RPG，PC/PS5/XSX）",
-   "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"轮回之兽 发售（Game Freak 新IP动作RPG，PC/PS5/XSX）\" style=\"border-left-color:#4da3ff\"><b>主机/PC新作</b> Beast of Reinca…</a>",
-   "date_start": null,
-   "date_end": null
-  },
-  {
    "id": "E027",
    "kind": "cal",
    "game": "和平精英",
@@ -349,17 +316,6 @@
    "source_url": "https://hyrz.qq.com/web2026/index.html",
    "source_name": "火影忍者漂泊佩恩",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"火影忍者漂泊佩恩\" style=\"border-left-color:#ff5722\"><b>火影忍者</b> 漂泊佩恩A忍</a>",
-   "date_start": null,
-   "date_end": null
-  },
-  {
-   "id": "E031",
-   "kind": "cal",
-   "game": "主机/PC新作",
-   "title": "Marvel Tokon: F…",
-   "source_url": "https://store.steampowered.com/news/app/3787240",
-   "source_name": "Marvel Tokon: Fighting Souls 发售（漫威格斗，PS5/PC）",
-   "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"Marvel Tokon: Fighting Souls 发售（漫威格斗，PS5/PC）\" style=\"border-left-color:#4da3ff\"><b>主机/PC新作</b> Marvel Tokon: F…</a>",
    "date_start": null,
    "date_end": null
   },
@@ -507,17 +463,6 @@
    "date_end": "2026-08-11"
   },
   {
-   "id": "E045",
-   "kind": "cal",
-   "game": "主机/PC新作",
-   "title": "Grounded 2: Int…",
-   "source_url": "https://store.steampowered.com/news/app/2661300",
-   "source_name": "Grounded 2: Into the Abyss 发售（黑曜石，PC/PS5/XSX）",
-   "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"Grounded 2: Into the Abyss 发售（黑曜石，PC/PS5/XSX）\" style=\"border-left-color:#4da3ff\"><b>主机/PC新作</b> Grounded 2: Int…</a>",
-   "date_start": null,
-   "date_end": null
-  },
-  {
    "id": "E046",
    "kind": "cal",
    "game": "暗黑不朽",
@@ -562,17 +507,6 @@
    "date_end": "2026-08-14"
   },
   {
-   "id": "E050",
-   "kind": "cal",
-   "game": "主机/PC新作",
-   "title": "Hell Let Loose:…",
-   "source_url": "https://store.steampowered.com/news/app/686810",
-   "source_name": "Hell Let Loose: Vietnam / Duskfade / Madden NFL 27 集中发售",
-   "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"Hell Let Loose: Vietnam / Duskfade / Madden NFL 27 集中发售\" style=\"border-left-color:#4da3ff\"><b>主机/PC新作</b> Hell Let Loose:…</a>",
-   "date_start": null,
-   "date_end": null
-  },
-  {
    "id": "E051",
    "kind": "cal",
    "game": "第五人格",
@@ -593,17 +527,6 @@
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"CS2 Major淘汰赛\" style=\"border-left-color:#ff9800\"><b>CS2</b> Major 淘汰赛阶段</a>",
    "date_start": "2026-08-14",
    "date_end": "2026-08-14"
-  },
-  {
-   "id": "E053",
-   "kind": "cal",
-   "game": "主机/PC新作",
-   "title": "黑手党：故乡 DLC「Man …",
-   "source_url": "https://store.steampowered.com/news/app/4492700",
-   "source_name": "黑手党：故乡 DLC「Man of Honor」发售（PC/PS5/XSX）",
-   "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"黑手党：故乡 DLC「Man of Honor」发售（PC/PS5/XSX）\" style=\"border-left-color:#4da3ff\"><b>主机/PC新作</b> 黑手党：故乡 DLC「Man …</a>",
-   "date_start": null,
-   "date_end": null
   },
   {
    "id": "E054",
@@ -1112,182 +1035,6 @@
    "date_end": "2026-08-26"
   },
   {
-   "id": "steam_4749450",
-   "kind": "cal",
-   "game": "Liminal Agent",
-   "title": "Liminal Agent Steam 发售",
-   "source_url": "https://store.steampowered.com/app/4749450/",
-   "source_name": "Liminal Agent 将于 2026-08-18 在 Steam 发售（官方商店页）",
-   "anchor": "<a target=\"_blank\" href=\"https://store.steampowered.com/app/4749450/\" title=\"Liminal Agent Steam 商店页\">Steam 发售</a>",
-   "date_start": "2026-08-18",
-   "date_end": "2026-08-18"
-  },
-  {
-   "id": "steam_2928570",
-   "kind": "cal",
-   "game": "Néro &amp; Sci ∫ Integral Edition",
-   "title": "Néro &amp; Sci ∫ Integral Edition Steam 发售",
-   "source_url": "https://store.steampowered.com/app/2928570/",
-   "source_name": "Néro &amp; Sci ∫ Integral Edition 将于 2026-08-18 在 Steam 发售（官方商店页）",
-   "anchor": "<a target=\"_blank\" href=\"https://store.steampowered.com/app/2928570/\" title=\"Néro &amp; Sci ∫ Integral Edition Steam 商店页\">Steam 发售</a>",
-   "date_start": "2026-08-18",
-   "date_end": "2026-08-18"
-  },
-  {
-   "id": "steam_4385440",
-   "kind": "cal",
-   "game": "Bullet Spell",
-   "title": "Bullet Spell Steam 发售",
-   "source_url": "https://store.steampowered.com/app/4385440/",
-   "source_name": "Bullet Spell 将于 2026-08-18 在 Steam 发售（官方商店页）",
-   "anchor": "<a target=\"_blank\" href=\"https://store.steampowered.com/app/4385440/\" title=\"Bullet Spell Steam 商店页\">Steam 发售</a>",
-   "date_start": "2026-08-18",
-   "date_end": "2026-08-18"
-  },
-  {
-   "id": "steam_2825860",
-   "kind": "cal",
-   "game": "The Sinking City 2",
-   "title": "The Sinking City 2 Steam 发售",
-   "source_url": "https://store.steampowered.com/app/2825860/",
-   "source_name": "The Sinking City 2 将于 2026-08-18 在 Steam 发售（官方商店页）",
-   "anchor": "<a target=\"_blank\" href=\"https://store.steampowered.com/app/2825860/\" title=\"The Sinking City 2 Steam 商店页\">Steam 发售</a>",
-   "date_start": "2026-08-18",
-   "date_end": "2026-08-18"
-  },
-  {
-   "id": "steam_4158610",
-   "kind": "cal",
-   "game": "TFC2: The Fertile Crescent 2 - Collapse of The Bronze Age",
-   "title": "TFC2: The Fertile Crescent 2 - Collapse of The Bronze Age Steam 发售",
-   "source_url": "https://store.steampowered.com/app/4158610/",
-   "source_name": "TFC2: The Fertile Crescent 2 - Collapse of The Bronze Age 将于 2026-08-18 在 Steam 发售（官方商店页）",
-   "anchor": "<a target=\"_blank\" href=\"https://store.steampowered.com/app/4158610/\" title=\"TFC2: The Fertile Crescent 2 - Collapse of The Bronze Age Steam 商店页\">Steam 发售</a>",
-   "date_start": "2026-08-18",
-   "date_end": "2026-08-18"
-  },
-  {
-   "id": "steam_738090",
-   "kind": "cal",
-   "game": "GRIT",
-   "title": "GRIT Steam 发售",
-   "source_url": "https://store.steampowered.com/app/738090/",
-   "source_name": "GRIT 将于 2026-08-18 在 Steam 发售（官方商店页）",
-   "anchor": "<a target=\"_blank\" href=\"https://store.steampowered.com/app/738090/\" title=\"GRIT Steam 商店页\">Steam 发售</a>",
-   "date_start": "2026-08-18",
-   "date_end": "2026-08-18"
-  },
-  {
-   "id": "steam_4959120",
-   "kind": "cal",
-   "game": "The Troma Project - Original Soundtrash Remastered",
-   "title": "The Troma Project - Original Soundtrash Remastered Steam 发售",
-   "source_url": "https://store.steampowered.com/app/4959120/",
-   "source_name": "The Troma Project - Original Soundtrash Remastered 将于 2026-08-18 在 Steam 发售（官方商店页）",
-   "anchor": "<a target=\"_blank\" href=\"https://store.steampowered.com/app/4959120/\" title=\"The Troma Project - Original Soundtrash Remastered Steam 商店页\">Steam 发售</a>",
-   "date_start": "2026-08-18",
-   "date_end": "2026-08-18"
-  },
-  {
-   "id": "steam_3729550",
-   "kind": "cal",
-   "game": "堆叠妖怪",
-   "title": "堆叠妖怪 Steam 发售",
-   "source_url": "https://store.steampowered.com/app/3729550/",
-   "source_name": "堆叠妖怪 将于 2026-08-18 在 Steam 发售（官方商店页）",
-   "anchor": "<a target=\"_blank\" href=\"https://store.steampowered.com/app/3729550/\" title=\"堆叠妖怪 Steam 商店页\">Steam 发售</a>",
-   "date_start": "2026-08-18",
-   "date_end": "2026-08-18"
-  },
-  {
-   "id": "steam_3492150",
-   "kind": "cal",
-   "game": "真理部：虚假记忆",
-   "title": "真理部：虚假记忆 Steam 发售",
-   "source_url": "https://store.steampowered.com/app/3492150/",
-   "source_name": "真理部：虚假记忆 将于 2026-08-19 在 Steam 发售（官方商店页）",
-   "anchor": "<a target=\"_blank\" href=\"https://store.steampowered.com/app/3492150/\" title=\"真理部：虚假记忆 Steam 商店页\">Steam 发售</a>",
-   "date_start": "2026-08-19",
-   "date_end": "2026-08-19"
-  },
-  {
-   "id": "steam_2876050",
-   "kind": "cal",
-   "game": "宠物街金鱼姬 Pet Street Story",
-   "title": "宠物街金鱼姬 Pet Street Story Steam 发售",
-   "source_url": "https://store.steampowered.com/app/2876050/",
-   "source_name": "宠物街金鱼姬 Pet Street Story 将于 2026-08-19 在 Steam 发售（官方商店页）",
-   "anchor": "<a target=\"_blank\" href=\"https://store.steampowered.com/app/2876050/\" title=\"宠物街金鱼姬 Pet Street Story Steam 商店页\">Steam 发售</a>",
-   "date_start": "2026-08-19",
-   "date_end": "2026-08-19"
-  },
-  {
-   "id": "steam_4132330",
-   "kind": "cal",
-   "game": "Pizza House Simulator🍕",
-   "title": "Pizza House Simulator🍕 Steam 发售",
-   "source_url": "https://store.steampowered.com/app/4132330/",
-   "source_name": "Pizza House Simulator🍕 将于 2026-08-19 在 Steam 发售（官方商店页）",
-   "anchor": "<a target=\"_blank\" href=\"https://store.steampowered.com/app/4132330/\" title=\"Pizza House Simulator🍕 Steam 商店页\">Steam 发售</a>",
-   "date_start": "2026-08-19",
-   "date_end": "2026-08-19"
-  },
-  {
-   "id": "steam_4961870",
-   "kind": "cal",
-   "game": "Planet Coaster 2: Silver Screen Pack",
-   "title": "Planet Coaster 2: Silver Screen Pack Steam 发售",
-   "source_url": "https://store.steampowered.com/app/4961870/",
-   "source_name": "Planet Coaster 2: Silver Screen Pack 将于 2026-08-19 在 Steam 发售（官方商店页）",
-   "anchor": "<a target=\"_blank\" href=\"https://store.steampowered.com/app/4961870/\" title=\"Planet Coaster 2: Silver Screen Pack Steam 商店页\">Steam 发售</a>",
-   "date_start": "2026-08-19",
-   "date_end": "2026-08-19"
-  },
-  {
-   "id": "steam_4686470",
-   "kind": "cal",
-   "game": "BPE: Airportoday",
-   "title": "BPE: Airportoday Steam 发售",
-   "source_url": "https://store.steampowered.com/app/4686470/",
-   "source_name": "BPE: Airportoday 将于 2026-08-19 在 Steam 发售（官方商店页）",
-   "anchor": "<a target=\"_blank\" href=\"https://store.steampowered.com/app/4686470/\" title=\"BPE: Airportoday Steam 商店页\">Steam 发售</a>",
-   "date_start": "2026-08-19",
-   "date_end": "2026-08-19"
-  },
-  {
-   "id": "steam_3726730",
-   "kind": "cal",
-   "game": "梦魇牌",
-   "title": "梦魇牌 Steam 发售",
-   "source_url": "https://store.steampowered.com/app/3726730/",
-   "source_name": "梦魇牌 将于 2026-08-19 在 Steam 发售（官方商店页）",
-   "anchor": "<a target=\"_blank\" href=\"https://store.steampowered.com/app/3726730/\" title=\"梦魇牌 Steam 商店页\">Steam 发售</a>",
-   "date_start": "2026-08-19",
-   "date_end": "2026-08-19"
-  },
-  {
-   "id": "steam_4771610",
-   "kind": "cal",
-   "game": "The Hidden Camp",
-   "title": "The Hidden Camp Steam 发售",
-   "source_url": "https://store.steampowered.com/app/4771610/",
-   "source_name": "The Hidden Camp 将于 2026-08-19 在 Steam 发售（官方商店页）",
-   "anchor": "<a target=\"_blank\" href=\"https://store.steampowered.com/app/4771610/\" title=\"The Hidden Camp Steam 商店页\">Steam 发售</a>",
-   "date_start": "2026-08-19",
-   "date_end": "2026-08-19"
-  },
-  {
-   "id": "steam_4458840",
-   "kind": "cal",
-   "game": "T.W.I.R.L.",
-   "title": "T.W.I.R.L. Steam 发售",
-   "source_url": "https://store.steampowered.com/app/4458840/",
-   "source_name": "T.W.I.R.L. 将于 2026-08-19 在 Steam 发售（官方商店页）",
-   "anchor": "<a target=\"_blank\" href=\"https://store.steampowered.com/app/4458840/\" title=\"T.W.I.R.L. Steam 商店页\">Steam 发售</a>",
-   "date_start": "2026-08-19",
-   "date_end": "2026-08-19"
-  },
-  {
    "id": "news_55a735a177",
    "kind": "cal",
    "game": "鸣潮",
@@ -1297,72 +1044,6 @@
    "anchor": "<a target=\"_blank\" href=\"https://m.ali213.net/news/gl2608/1798527.html\" title=\"鸣潮\">3.6版本「蜃云灯影,凡尘剑心」上线,新角色清宵/景燃</a>",
    "date_start": "2026-08-20",
    "date_end": "2026-08-20"
-  },
-  {
-   "id": "news_2b90be6e0b",
-   "kind": "cal",
-   "game": "原神",
-   "title": "原神：7.0「至冬」新国家开放(刚才手工已有,测试去重)",
-   "source_url": "https://www.gamersky.com/news/",
-   "source_name": "原神 将于 2026-08-12：7.0「至冬」新国家开放(刚才手工已有,测试去重)（游民星空）",
-   "anchor": "<a target=\"_blank\" href=\"https://www.gamersky.com/news/\" title=\"原神\">7.0「至冬」新国家开放(刚才手工已有,测试去重)</a>",
-   "date_start": "2026-08-12",
-   "date_end": "2026-08-12"
-  },
-  {
-   "id": "steam_4279130",
-   "kind": "cal",
-   "game": "Tower64",
-   "title": "Tower64 Steam 发售",
-   "source_url": "https://store.steampowered.com/app/4279130/",
-   "source_name": "Tower64 将于 2026-08-18 在 Steam 发售（官方商店页）",
-   "anchor": "<a target=\"_blank\" href=\"https://store.steampowered.com/app/4279130/\" title=\"Tower64 Steam 商店页\">Steam 发售</a>",
-   "date_start": "2026-08-18",
-   "date_end": "2026-08-18"
-  },
-  {
-   "id": "steam_4950450",
-   "kind": "cal",
-   "game": "Loop of Agony",
-   "title": "Loop of Agony Steam 发售",
-   "source_url": "https://store.steampowered.com/app/4950450/",
-   "source_name": "Loop of Agony 将于 2026-08-18 在 Steam 发售（官方商店页）",
-   "anchor": "<a target=\"_blank\" href=\"https://store.steampowered.com/app/4950450/\" title=\"Loop of Agony Steam 商店页\">Steam 发售</a>",
-   "date_start": "2026-08-18",
-   "date_end": "2026-08-18"
-  },
-  {
-   "id": "steam_2327640",
-   "kind": "cal",
-   "game": "外星入侵：自走棋",
-   "title": "外星入侵：自走棋 Steam 发售",
-   "source_url": "https://store.steampowered.com/app/2327640/",
-   "source_name": "外星入侵：自走棋 将于 2026-08-19 在 Steam 发售（官方商店页）",
-   "anchor": "<a target=\"_blank\" href=\"https://store.steampowered.com/app/2327640/\" title=\"外星入侵：自走棋 Steam 商店页\">Steam 发售</a>",
-   "date_start": "2026-08-19",
-   "date_end": "2026-08-19"
-  },
-  {
-   "id": "steam_4012810",
-   "kind": "cal",
-   "game": "STEINS;GATE RE:BOOT",
-   "title": "STEINS;GATE RE:BOOT Steam 发售",
-   "source_url": "https://store.steampowered.com/app/4012810/",
-   "source_name": "STEINS;GATE RE:BOOT 将于 2026-08-19 在 Steam 发售（官方商店页）",
-   "anchor": "<a target=\"_blank\" href=\"https://store.steampowered.com/app/4012810/\" title=\"STEINS;GATE RE:BOOT Steam 商店页\">Steam 发售</a>",
-   "date_start": "2026-08-19",
-   "date_end": "2026-08-19"
-  },
-  {
-   "id": "steam_4991410",
-   "kind": "cal",
-   "game": "Tail and Chaos",
-   "title": "Tail and Chaos Steam 发售",
-   "source_url": "https://store.steampowered.com/app/4991410/",
-   "source_name": "Tail and Chaos 将于 2026-08-19 在 Steam 发售（官方商店页）",
-   "anchor": "<a target=\"_blank\" href=\"https://store.steampowered.com/app/4991410/\" title=\"Tail and Chaos Steam 商店页\">Steam 发售</a>",
-   "date_start": "2026-08-19",
-   "date_end": "2026-08-19"
   }
  ],
  "feed_events": [

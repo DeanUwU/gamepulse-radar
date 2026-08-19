@@ -4,8 +4,8 @@
   "source_file": "calendar.html",
   "event_count": 100,
   "note": "scaffold 中的 <<EVT_i>> 由 gen_calendar.py 用 events[i].anchor 替换 __SRC__ 回填。",
-  "feed_count": 18,
-  "feed_seq": 224,
+  "feed_count": 20,
+  "feed_seq": 226,
   "last_update": "2026-08-19",
   "date_migrated": "2026-08-18"
  },
@@ -1537,6 +1537,30 @@
    "pubdate": "2026-08-18",
    "first_seen": "2026-08-19",
    "anchor": "<tr><td><b style=\"color:var(--gold)\">永劫无间</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"8月18日《永劫无间》违规玩家封禁公告（来源：永劫无间 Steam 官方新闻）\" style=\"color:#4da3ff;text-decoration:none\">8月18日《永劫无间》违规玩家封禁公告</a></td><td>永劫无间 Steam 官方新闻</td></tr>"
+  },
+  {
+   "id": "F225",
+   "kind": "feed",
+   "game": "诡秘之主",
+   "title": "《诡秘之主》手游定档 8月21日10:00 全平台公测（PC/iOS/安卓/鸿蒙互通），8/19 预下载、8/19 12:00 预创角",
+   "source_url": "https://news.17173.com/content/08172026/001342548.shtml",
+   "source_name": "17173 网游资讯",
+   "src_id": "news17173",
+   "pubdate": "2026-08-17",
+   "first_seen": "2026-08-19",
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">诡秘之主</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"《诡秘之主》手游定档 8月21日10:00 全平台公测，8/19 预下载、8/19 12:00 预创角（来源：17173 网游资讯）\" style=\"color:#4da3ff;text-decoration:none\">《诡秘之主》手游定档 8月21日10:00 全平台公测</a></td><td>17173 网游资讯</td></tr>"
+  },
+  {
+   "id": "F226",
+   "kind": "feed",
+   "game": "DOTA2",
+   "title": "国际邀请赛主赛事",
+   "source_url": "https://store.steampowered.com/news/app/570/view/680758587997293716",
+   "source_name": "DOTA2 Steam 官方新闻",
+   "src_id": "dota2_steam",
+   "pubdate": "2026-08-19",
+   "first_seen": "2026-08-19",
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">DOTA2</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"国际邀请赛主赛事（来源：DOTA2 Steam 官方新闻）\" style=\"color:#4da3ff;text-decoration:none\">国际邀请赛主赛事</a></td><td>DOTA2 Steam 官方新闻</td></tr>"
   }
  ]
 }

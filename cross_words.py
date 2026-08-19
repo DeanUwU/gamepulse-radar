@@ -305,12 +305,13 @@ WC2_CDN = "https://cdn.jsdelivr.net/npm/wordcloud@1.2.2/src/wordcloud2.min.js"
 
 def build_main_wordcloud():
     """生成 index.html #glance 用的 wordcloud2.js canvas + 内联数据 + 渲染脚本。
-    跟 wordcloud.html 共用同一引擎；省掉主站溯源侧边栏（只在 wordcloud.html 展示）。"""
+    跟 wordcloud.html 共用同一引擎；点击词条在主站内展开详情面板（不再跳转外站/开新页）。"""
     # canvas 像素尺寸（CSS 会再 fit 到容器宽度）
     CW, CH = 880, 280
     payload = {
         "list": [[r["word"], int(r["heat"]), r["color"], r["cat"], r["H"]]
                  for r in sorted_rows],
+        "trace": trace_data,  # 词条溯源映射（word → {H, color, cat, primary_url, sources}）
         "total": len(sorted_rows),
     }
     payload_json = json.dumps(payload, ensure_ascii=False)
@@ -318,6 +319,14 @@ def build_main_wordcloud():
     return f'''<div class="wc-cloud" id="wc-cloud">
   <canvas id="wc-canvas" width="{CW}" height="{CH}"></canvas>
   <div class="wc-cloud-tip" id="wc-cloud-tip" hidden></div>
+</div>
+<div class="wc-detail" id="wc-detail">
+  <div class="wc-detail-head">
+    <span class="wc-detail-word" id="wc-detail-word"></span>
+    <span class="wc-detail-badge" id="wc-detail-badge"></span>
+    <button class="wc-detail-close" id="wc-detail-close" type="button" aria-label="关闭">&times;</button>
+  </div>
+  <div class="wc-detail-body" id="wc-detail-body"></div>
 </div>
 <script id="wc-cloud-data" type="application/json">{payload_json}</script>
 <script>
@@ -395,14 +404,8 @@ def build_main_wordcloud():
     }},
     click: function(item) {{
       if (!item) return;
-      // 命中真实链接，直接跳
       var word = item[0];
-      // 从 payload.list 查 href
-      var entry = payload.list.find(function(x) {{ return x[0] === word; }});
-      if (entry) {{
-        // 词条本身 href 已经在 wordcloud_terms.json 里；这里让用户进 wordcloud.html 看完整溯源
-        window.open('wordcloud.html#' + encodeURIComponent(word), '_blank');
-      }}
+      showTrace(word);
     }}
   }});
 
@@ -410,6 +413,64 @@ def build_main_wordcloud():
     var tip = document.getElementById('wc-cloud-tip');
     if (tip) tip.hidden = true;
     canvas.style.cursor = 'default';
+  }});
+
+  // ---- 站内详情面板：点击词条直接展开溯源，不跳转外站/不开新页 ----
+  function showTrace(word) {{
+    var panel = document.getElementById('wc-detail');
+    var wordEl = document.getElementById('wc-detail-word');
+    var badgeEl = document.getElementById('wc-detail-badge');
+    var bodyEl = document.getElementById('wc-detail-body');
+    if (!panel || !wordEl || !badgeEl || !bodyEl) return;
+
+    var info = payload.trace[word];
+    wordEl.textContent = word;
+
+    // 分类徽章（H 值 + 分类）
+    badgeEl.textContent = 'H=' + (info ? info.H : (hMap[word] || '--')) + ' · ' + (catMap[word] || '梗/社区');
+    var c = info ? info.color : (colorMap[word] || '#a0aec0');
+    badgeEl.style.color = c;
+    badgeEl.style.borderColor = c;
+    badgeEl.style.background = c + '18';
+
+    var items = [];
+    // 主源链（primary_url）永远排第一，即使没有溯源列表也要给个可点的主链接
+    if (info && info.primary_url) {{
+      items.push('<a class="wc-detail-item" href="' + info.primary_url + '" target="_blank" rel="noopener">'
+               + '<span class="di-title">' + word + '</span>'
+               + '<span class="di-meta"><span class="di-primary">主源</span>'
+               + '<span class="di-source">策展输入</span></span></a>');
+    }}
+    var srcs = info && info.sources ? info.sources : [];
+    for (var i = 0; i < srcs.length; i++) {{
+      var src = srcs[i];
+      if (info.primary_url && src.url === info.primary_url) continue; // 已作为主源显示，避免重复
+      items.push('<a class="wc-detail-item" href="' + src.url + '" target="_blank" rel="noopener">'
+               + '<span class="di-title">' + src.title + '</span>'
+               + '<span class="di-meta"><span class="di-source">' + src.source + '</span></span></a>');
+    }}
+    if (items.length === 0) {{
+      bodyEl.innerHTML = '<p class="wc-detail-empty">该词当日未匹配到可溯源标题<br><small>溯源基于 meme / hotlist 原始采集交叉比对</small></p>';
+    }} else {{
+      bodyEl.innerHTML = items.join('');
+      if (srcs.length === 0) {{
+        bodyEl.innerHTML += '<p class="wc-detail-empty" style="padding-top:var(--space-md)">暂无更多交叉溯源，以上为主策展链接</p>';
+      }}
+    }}
+
+    panel.classList.add('open');
+  }}
+
+  document.getElementById('wc-detail-close').addEventListener('click', function() {{
+    document.getElementById('wc-detail').classList.remove('open');
+  }});
+
+  // 点击面板外部空白处关闭（仅当点击目标不在面板内）
+  document.addEventListener('click', function(e) {{
+    var panel = document.getElementById('wc-detail');
+    if (!panel.classList.contains('open')) return;
+    if (panel.contains(e.target)) return;
+    panel.classList.remove('open');
   }});
 }})();
 </script>'''

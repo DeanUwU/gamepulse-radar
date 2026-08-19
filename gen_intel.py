@@ -292,23 +292,32 @@ def build_media(items, td):
     yesterday_cnt = total_visible - today_cnt
 
     # 今日小结（数据全部实算，不写死）
-    focus_items = "".join('<li><b>%s</b></li>' % esc(t) for t in hot_titles[:4])
+    # 2026-08-19 设计升级：数据状态用 4 块 stat-card 网格 + 焦点事件列表，整体字号增大、卡片化
+    focus_items = "".join('<li><span class="sum-num">%d</span><span class="sum-evt">%s</span></li>'
+                          % (i + 1, esc(t)) for i, t in enumerate(hot_titles[:4]))
     summary = (
         '<div class="intel-summary">'
-        '<div class="sum-head"><i>◆</i>今日小结 · %s</div>'
-        '<span class="sum-stat">%d</span> 条 行业日报（覆盖 <span class="sum-stat">%d</span> 家媒体 · '
-        '<span class="sum-stat">%d</span> 条当日 / <span class="sum-stat">%d</span> 条昨日 · '
-        '<span class="sum-stat">%d</span> 件<span class="sum-stat gold">高热度</span>事件）。'
-        '焦点事件：<ul>%s</ul></div>'
-        % (fmt_md(td.isoformat()), total_visible, n_media, today_cnt,
-           yesterday_cnt, n_hot, focus_items)
+        '<div class="sum-head"><span class="sum-icon">◆</span><span class="sum-title">今日小结</span>'
+        '<span class="sum-date">· %s</span></div>'
+        '<div class="sum-stats">'
+          '<div class="sum-stat"><span class="ss-num">%d</span><span class="ss-lbl">行业日报</span></div>'
+          '<div class="sum-stat"><span class="ss-num">%d</span><span class="ss-lbl">家媒体</span></div>'
+          '<div class="sum-stat"><span class="ss-num">%d<span class="ss-sub"> / %d</span></span><span class="ss-lbl">当日 / 昨日</span></div>'
+          '<div class="sum-stat sum-stat-hot"><span class="ss-num">%d</span><span class="ss-lbl">高热度事件</span></div>'
+        '</div>'
+        '<div class="sum-focus"><span class="sum-focus-tag">焦点事件</span><ul>%s</ul></div>'
+        '</div>'
+        % (fmt_md(td.isoformat()), total_visible, n_media, today_cnt, yesterday_cnt,
+           n_hot, focus_items)
     )
 
-    # 组装 grid
+    # 组装 grid（顺序：小结 → highlight 头条+高亮 → 展开更多日常）
+    # 用户（2026-08-19）反馈：从上到下应是 小结+highlight+展开更多；
+    # 原顺序 top 在最上违反"小结先于 highlight"的阅读节奏，改为 summary 先出。
     parts = []
+    parts.append(summary)
     if top_cards:
         parts.append('<div class="intel-top-grid">%s</div>' % "".join(top_cards))
-    parts.append(summary)
     if hot_cards:
         parts.append('<div class="intel-grid intel-grid-hot">%s</div>' % "".join(hot_cards))
     # 日常条目折叠

@@ -1,16 +1,16 @@
 {
- "generated_at": "2026-08-19T10:38:42",
+ "generated_at": "2026-08-19T11:52:47",
  "summary": {
   "total": 118,
-  "adopt": 37,
-  "review": 41,
-  "reject": 40,
-  "stale_rejected": 35,
+  "adopt": 36,
+  "review": 43,
+  "reject": 39,
+  "stale_rejected": 34,
   "dated": 80,
   "new_reject": 1
  },
  "new_rejects": [
-  "https://store.steampowered.com/news/app/2507950/view/694269386880451845"
+  "https://blog.ja.playstation.com/2026/08/19/20260819-steinsgatere-launch-reminder-s/"
  ],
  "items": [
   {
@@ -420,34 +420,34 @@
   },
   {
    "game": "全行业",
+   "title": "鮎川麻弥为复古双人合作新游《轨道双子星》献唱全新片头曲与片尾曲",
+   "url": "https://www.gcores.com/articles/218522",
+   "status": 200,
+   "src_id": "gcores",
+   "src_name": "机核 GCORES",
+   "pubdate": "2026-08-19",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "adopt",
+   "reasons": []
+  },
+  {
+   "game": "全行业",
+   "title": "《蒸汽世界》将于8月19日登陆Steam及Xbox",
+   "url": "https://www.gcores.com/articles/218517",
+   "status": 200,
+   "src_id": "gcores",
+   "src_name": "机核 GCORES",
+   "pubdate": "2026-08-19",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "adopt",
+   "reasons": []
+  },
+  {
+   "game": "全行业",
    "title": "物理弹珠肉鸽游戏《爆分引擎》正式公布，将于27年发售",
    "url": "https://www.gcores.com/articles/218501",
-   "status": 200,
-   "src_id": "gcores",
-   "src_name": "机核 GCORES",
-   "pubdate": "2026-08-19",
-   "age_days": 0,
-   "date_src": "feed",
-   "verdict": "adopt",
-   "reasons": []
-  },
-  {
-   "game": "全行业",
-   "title": "竞速动作游戏《特技天堂2》现已开启游玩测试",
-   "url": "https://www.gcores.com/articles/218499",
-   "status": 200,
-   "src_id": "gcores",
-   "src_name": "机核 GCORES",
-   "pubdate": "2026-08-19",
-   "age_days": 0,
-   "date_src": "feed",
-   "verdict": "adopt",
-   "reasons": []
-  },
-  {
-   "game": "全行业",
-   "title": "冒险解谜游戏《沉星之序》将于10月9日发售",
-   "url": "https://www.gcores.com/articles/218506",
    "status": 200,
    "src_id": "gcores",
    "src_name": "机核 GCORES",
@@ -474,21 +474,8 @@
   },
   {
    "game": "全行业",
-   "title": "《GTA6》突发泄露！全是30帧：60帧没戏了？",
-   "url": "https://www.gamersky.com/news/202608/2191773.shtml",
-   "status": 200,
-   "src_id": "gamersky",
-   "src_name": "游民星空新闻",
-   "pubdate": "2026-08-19",
-   "age_days": 0,
-   "date_src": "text",
-   "verdict": "adopt",
-   "reasons": []
-  },
-  {
-   "game": "全行业",
-   "title": "反诈老陈宣布停更7天挣生活费 新工作仍在考察期",
-   "url": "https://www.gamersky.com/news/202608/2191774.shtml",
+   "title": "GTA6还有更多猛料！爆料黑客放话：还要发2到4个",
+   "url": "https://www.gamersky.com/news/202608/2191886.shtml",
    "status": 200,
    "src_id": "gamersky",
    "src_name": "游民星空新闻",
@@ -499,6 +486,19 @@
    "reasons": [
     "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
    ]
+  },
+  {
+   "game": "全行业",
+   "title": "曝FS社《黄昏之血》有单人模式！不用被迫联机",
+   "url": "https://www.gamersky.com/news/202608/2191838.shtml",
+   "status": 200,
+   "src_id": "gamersky",
+   "src_name": "游民星空新闻",
+   "pubdate": "2026-08-19",
+   "age_days": 0,
+   "date_src": "text",
+   "verdict": "adopt",
+   "reasons": []
   },
   {
    "game": "全行业",
@@ -619,16 +619,18 @@
   },
   {
    "game": "全行业",
-   "title": "密林燃战赢犒赏《全球使命3》双橙武火力全开",
-   "url": "https://news.17173.com/content/08192026/101243226.shtml",
+   "title": "百花争艳！魔域口袋版花魁赛正式开启",
+   "url": "https://news.17173.com/content/08192026/113754708.shtml",
    "status": 200,
    "src_id": "news17173",
    "src_name": "17173 网游资讯",
    "pubdate": null,
    "age_days": null,
    "date_src": null,
-   "verdict": "adopt",
-   "reasons": []
+   "verdict": "review",
+   "reasons": [
+    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
+   ]
   },
   {
    "game": "永劫无间",
@@ -812,6 +814,19 @@
   },
   {
    "game": "DOTA2",
+   "title": "国际邀请赛主赛事",
+   "url": "https://store.steampowered.com/news/app/570/view/680758587997293716",
+   "status": 200,
+   "src_id": "dota2_steam",
+   "src_name": "DOTA2 Steam 官方新闻",
+   "pubdate": "2026-08-19",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "adopt",
+   "reasons": []
+  },
+  {
+   "game": "DOTA2",
    "title": "国际邀请赛：直播流、神秘商店等等",
    "url": "https://store.steampowered.com/news/app/570/view/689765153413006763",
    "status": 200,
@@ -853,21 +868,6 @@
    "verdict": "reject",
    "reasons": [
     "发布日期已 20 天，超过 5 天保鲜期（时效红线）"
-   ]
-  },
-  {
-   "game": "DOTA2",
-   "title": "Dota 2 2026年7月2日更新",
-   "url": "https://store.steampowered.com/news/app/570/view/670621050832160174",
-   "status": 200,
-   "src_id": "dota2_steam",
-   "src_name": "DOTA2 Steam 官方新闻",
-   "pubdate": "2026-07-01",
-   "age_days": 49,
-   "date_src": "feed",
-   "verdict": "reject",
-   "reasons": [
-    "发布日期已 49 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
@@ -1063,6 +1063,19 @@
   },
   {
    "game": "全行业",
+   "title": "新套路来了！“低配二游”创造月收入3000万奇迹，打通“漫剧+玩游戏”致富路？",
+   "url": "http://www.gamelook.com.cn/2026/08/600168/",
+   "status": 200,
+   "src_id": "gamelook",
+   "src_name": "GameLook",
+   "pubdate": "2026-08-19",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "adopt",
+   "reasons": []
+  },
+  {
+   "game": "全行业",
    "title": "玩家笑翻！10亿美元巨制《星际公民》直播中“游戏Bug不断，团队埋怨互怼”",
    "url": "http://www.gamelook.com.cn/2026/08/600212/",
    "status": 200,
@@ -1104,8 +1117,8 @@
   },
   {
    "game": "全行业",
-   "title": "新套路来了！“低配二游”创造月收入3000万奇迹，打通“漫剧+玩游戏”致富路？",
-   "url": "http://www.gamelook.com.cn/2026/08/600168/",
+   "title": "友谊时光上半年利润大增74%：恋爱小游戏《心跳陷落》发力，在研5款游戏",
+   "url": "http://www.gamelook.com.cn/2026/08/600169/",
    "status": 200,
    "src_id": "gamelook",
    "src_name": "GameLook",
@@ -1117,11 +1130,11 @@
   },
   {
    "game": "全行业",
-   "title": "友谊时光上半年利润大增74%：恋爱小游戏《心跳陷落》发力，在研5款游戏",
-   "url": "http://www.gamelook.com.cn/2026/08/600169/",
+   "title": "DeepSeek百万年薪来游戏圈抢人，盘点七大龙头企业的“AI+游戏”布局",
+   "url": "https://www.youxituoluo.com/534806.html",
    "status": 200,
-   "src_id": "gamelook",
-   "src_name": "GameLook",
+   "src_id": "youxituoluo",
+   "src_name": "游戏陀螺",
    "pubdate": "2026-08-19",
    "age_days": 0,
    "date_src": "feed",
@@ -1171,19 +1184,6 @@
    "game": "全行业",
    "title": "周炳枢发内部信：阿里正式放手，信宸资本接盘《三战》开发商灵犀互娱",
    "url": "https://www.youxituoluo.com/534799.html",
-   "status": 200,
-   "src_id": "youxituoluo",
-   "src_name": "游戏陀螺",
-   "pubdate": "2026-08-17",
-   "age_days": 2,
-   "date_src": "feed",
-   "verdict": "adopt",
-   "reasons": []
-  },
-  {
-   "game": "全行业",
-   "title": "对话《湮灭之潮》主创丨中国动作游戏，真要“支棱”起来了",
-   "url": "https://www.youxituoluo.com/534798.html",
    "status": 200,
    "src_id": "youxituoluo",
    "src_name": "游戏陀螺",
@@ -1333,6 +1333,21 @@
   },
   {
    "game": "主机/PC 大作",
+   "title": "PS5®/PS4®『STEINS;GATE RE:BOOT』明日8月20日発売！ 新シナリオを追加し、現在の技術で再起動",
+   "url": "https://blog.ja.playstation.com/2026/08/19/20260819-steinsgatere-launch-reminder-s/",
+   "status": 200,
+   "src_id": "ps_blog_ja",
+   "src_name": "PlayStation Blog 中文",
+   "pubdate": "2026-08-19",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "reject",
+   "reasons": [
+    "域名与游戏[主机/PC 大作]不符"
+   ]
+  },
+  {
+   "game": "主机/PC 大作",
    "title": "『Phantom Blade Zero』特集の「State of Play」が放送！ 戦闘や“武林”の世界を深掘り",
    "url": "https://blog.ja.playstation.com/2026/08/18/20260818-sop-pbz-o/",
    "status": 200,
@@ -1379,23 +1394,8 @@
    ]
   },
   {
-   "game": "主机/PC 大作",
-   "title": "2026年7月のPS Storeダウンロードランキング！ PS5®とPS4®では『Call of Duty: Black Ops II』が第1位！",
-   "url": "https://blog.ja.playstation.com/2026/08/14/20260814-monthly-ps-store-ranking-s/",
-   "status": 200,
-   "src_id": "ps_blog_ja",
-   "src_name": "PlayStation Blog 中文",
-   "pubdate": "2026-08-14",
-   "age_days": 5,
-   "date_src": "feed",
-   "verdict": "reject",
-   "reasons": [
-    "域名与游戏[主机/PC 大作]不符"
-   ]
-  },
-  {
    "game": "全行业",
-   "title": "周煜博13小时前0条评论 触乐怪话：《杀死比尔》与《堡垒之夜》的6件事 Kill Fortnite.",
+   "title": "周煜博14小时前0条评论 触乐怪话：《杀死比尔》与《堡垒之夜》的6件事 Kill Fortnite.",
    "url": "http://www.chuapp.com/article/291567.html",
    "status": 200,
    "src_id": "chuapp_category",
@@ -1408,7 +1408,7 @@
   },
   {
    "game": "全行业",
-   "title": "林翔13小时前0条评论 《雾海之下》的待机模式，你发现了吗？ 吃饱了，才有力气打架呢。",
+   "title": "林翔14小时前0条评论 《雾海之下》的待机模式，你发现了吗？ 吃饱了，才有力气打架呢。",
    "url": "http://www.chuapp.com/article/291571.html",
    "status": 200,
    "src_id": "chuapp_category",
@@ -1509,6 +1509,66 @@
   },
   {
    "game": "全行业",
+   "title": "销量跌近一半，卖家担心旺季卖不动",
+   "url": "https://www.baijing.cn/article/56401",
+   "status": 200,
+   "src_id": "baijing",
+   "src_name": "白鲸出海",
+   "pubdate": "2026-08-19",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "review",
+   "reasons": [
+    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
+   ]
+  },
+  {
+   "game": "全行业",
+   "title": "TikTok电商2027年Q1拟开沙特、韩国、澳洲三大站点",
+   "url": "https://www.baijing.cn/article/56400",
+   "status": 200,
+   "src_id": "baijing",
+   "src_name": "白鲸出海",
+   "pubdate": "2026-08-19",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "review",
+   "reasons": [
+    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
+   ]
+  },
+  {
+   "game": "全行业",
+   "title": "越南查封多仓，高危敏货正被批量“割席”",
+   "url": "https://www.baijing.cn/article/56399",
+   "status": 200,
+   "src_id": "baijing",
+   "src_name": "白鲸出海",
+   "pubdate": "2026-08-19",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "review",
+   "reasons": [
+    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
+   ]
+  },
+  {
+   "game": "全行业",
+   "title": "成瘾诉讼风暴席卷科技巨头：Meta迎高风险庭审之际，OpenAI推出青少年版ChatGPT",
+   "url": "https://www.baijing.cn/article/56398",
+   "status": 200,
+   "src_id": "baijing",
+   "src_name": "白鲸出海",
+   "pubdate": "2026-08-19",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "review",
+   "reasons": [
+    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
+   ]
+  },
+  {
+   "game": "全行业",
    "title": "斥资9亿美元，「App工厂」收购了全球营收第一的宠物项圈？",
    "url": "https://www.baijing.cn/article/56144",
    "status": 200,
@@ -1562,64 +1622,6 @@
    "reasons": [
     "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
    ]
-  },
-  {
-   "game": "全行业",
-   "title": "TOP6占领3席，点点互动新作能成为下一个SLG爆款吗？",
-   "url": "https://www.baijing.cn/article/56394",
-   "status": 200,
-   "src_id": "baijing",
-   "src_name": "白鲸出海",
-   "pubdate": "2026-08-18",
-   "age_days": 1,
-   "date_src": "feed",
-   "verdict": "review",
-   "reasons": [
-    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
-   ]
-  },
-  {
-   "game": "全行业",
-   "title": "前大疆员工创业，把纺织机做成亿级爆款",
-   "url": "https://www.baijing.cn/article/56393",
-   "status": 200,
-   "src_id": "baijing",
-   "src_name": "白鲸出海",
-   "pubdate": "2026-08-18",
-   "age_days": 1,
-   "date_src": "feed",
-   "verdict": "review",
-   "reasons": [
-    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
-   ]
-  },
-  {
-   "game": "全行业",
-   "title": "1年卖了7.8亿，把一条小小的定位项圈，做成了覆盖全球百万用户的超级单品",
-   "url": "https://www.baijing.cn/article/56392",
-   "status": 200,
-   "src_id": "baijing",
-   "src_name": "白鲸出海",
-   "pubdate": "2026-08-18",
-   "age_days": 1,
-   "date_src": "feed",
-   "verdict": "review",
-   "reasons": [
-    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
-   ]
-  },
-  {
-   "game": "全行业",
-   "title": "上市公司4.3亿收购游戏公司，立下净利润5000万对赌协议",
-   "url": "https://www.baijing.cn/article/56390",
-   "status": 200,
-   "src_id": "baijing",
-   "src_name": "白鲸出海",
-   "pubdate": "2026-08-18",
-   "age_days": 1,
-   "date_src": "feed",
-   "verdict": "adopt",
-   "reasons": []
   },
   {
    "game": "全行业",

@@ -853,6 +853,94 @@ def _heat_score(title, data, date_s, age=None):
     return score, detail
 
 
+# ---- 2026-08-19 升级：S 级判定 = 多源印证 + 跨平台声量 ----
+# 旧口径问题：S 级只靠单一信号（B站播放量>200万 / 标题强事件关键词），
+#   既没交叉印证，也没看跨平台声量，容易把单源冷门内容误抬为 S 级。
+# 新口径：S 级必须同时满足「多源印证」与「跨平台声量」两个维度——
+#   · 多源印证：_verify_top1 命中 ≥3 家不同源/平台（feed_events 多源 + tgmeng 日报 + 热榜）
+#   · 跨平台声量：public_hotlist 的 5 平台（微博/知乎/抖音/B站/小红书）中 ≥2 个平台热榜命中该实体
+# 两条都达标才给 S；只满足一条降 A；都不满足给 B（单源弱证据）。
+
+def _cross_platform_hits(title, date_s):
+    """统计某标题实体在 public_hotlist 5 平台热榜中的命中情况。
+
+    返回 (platforms_hit, n_platforms)：platforms_hit 是命中平台名列表（去重），
+    n_platforms 是命中平台数。跨平台声量就是看有多少个不同平台的热榜
+    独立点名了这个游戏/事件（同一平台多条话题只算 1 个平台，避免灌水虚高）。
+    """
+    entities = _extract_entities(title)
+    if not entities:
+        frag = re.sub(r'[^\w\u4e00-\u9fa5]', '', title)[:12]
+        entities = [frag] if frag else [title[:12]]
+
+    hit_platforms = []
+    seen_plat = set()
+    try:
+        hl_path = os.path.join(
+            COLLECTORS, "public_hotlist_" + date_s.replace("-", "") + ".json")
+        if not os.path.exists(hl_path):
+            return [], 0
+        hl = json.load(io.open(hl_path, encoding="utf-8"))
+        for plat, items in hl.items():
+            if plat == "timestamp" or not isinstance(items, list):
+                continue
+            for it in items:
+                topic = str(it.get("topic") or "")
+                for e in entities:
+                    if e and e in topic:
+                        if plat not in seen_plat:
+                            seen_plat.add(plat)
+                            hit_platforms.append(plat)
+                        break
+    except Exception:
+        pass
+    return hit_platforms, len(hit_platforms)
+
+
+def _signal_grade(title, data, date_s, view=0, age=None):
+    """统一信号分级：S / A / B。返回 (grade, basis_dict)。
+
+    basis_dict 供渲染透明标注，含：
+      · verdict / n_src / hits：多源印证结果（multi/single/weak 与命中源列表）
+      · platforms / n_plat：跨平台声量（命中平台名列表与平台数）
+      · reason：分级理由（人类可读）
+
+    分级规则（2026-08-19 升级）：
+      S 级 = 多源印证（multi，≥3 源）+ 跨平台声量（≥2 平台）同时达标
+      A 级 = 多源印证（multi 或 single）或 单平台热榜声量 或 高播放量（≥150万）任一
+      B 级 = 仅单源 / 无跨平台声量（弱证据）
+    """
+    verdict, hits, _ = _verify_top1({"title": title}, data, date_s)
+    n_src = len({h[0] for h in hits})
+    platforms, n_plat = _cross_platform_hits(title, date_s)
+
+    is_multi = (verdict == "multi") or (n_src >= 3)
+    is_cross = n_plat >= 2
+
+    if is_multi and is_cross:
+        grade = "S"
+        reason = f"多源印证（{n_src} 源）+ 跨平台声量（{n_plat} 平台）"
+    elif is_multi or (verdict == "single") or (n_plat >= 1) or (view >= 1500000):
+        grade = "A"
+        reason = (
+            f"多源印证（{n_src} 源）" if is_multi or verdict == "single"
+            else f"单平台热榜声量（{n_plat} 平台）" if n_plat >= 1
+            else f"高播放量（{view}）"
+        )
+    else:
+        grade = "B"
+        reason = f"单源弱证据（{n_src} 源，跨平台 {n_plat} 平台）"
+
+    return grade, {
+        "verdict": verdict,
+        "n_src": n_src,
+        "hits": hits,
+        "platforms": platforms,
+        "n_plat": n_plat,
+        "reason": reason,
+    }
+
+
 def _podium_top1(data, date_s, exclude_urls=None):
     """生成焦点榜 TOP1 头条位（事件类优先）。返回 dict 或 None。
     来源优先级：events.json feed_events 当日 → meme 风险词视�� → 视频池 H 最高。
@@ -1611,8 +1699,10 @@ def replace_brief(src, grid):
 #   1) 优先选有"发售/上线/联动/登顶"事件关键词的（更接近 S 级信号语义）
 #   2) 否则按播放量选游戏区第一
 #   3) 没有任何带图的候选 → 保留原版不动（不覆盖人工排版）
+# 2026-08-19 升级：S 级判定改为「多源印证 + 跨平台声量」双达标（见 _signal_grade），
+#   不再只看 B站单平台播放量或标题关键词。播放量降为 A 级兜底信号之一。
 MASTHEAD_KICKERS = [
-    ("S", "今日头条 · S 级信号"),
+    ("S", "今日头条 · S 级信号 · 多源印证+跨平台声量"),
     ("A", "今日头条 · A 级信号"),
     ("B", "今日头条 · B 级信号"),
 ]
@@ -1759,7 +1849,11 @@ def _masthead_pick(data, exclude_urls=None):
         if _bvid_of(main):
             history.append({"date": today, "bvid": _bvid_of(main), "title": main.get("title", "")[:60]})
             _save_masthead_history(history)
-        kicker_lv = "S" if main.get("view", 0) > 2000000 else "A"
+        # 2026-08-19 升级：S 级不再只看播放量>200万，改为「多源印证 + 跨平台声量」双达标。
+        #   view 仅作为 A 级兜底信号之一，不再是 S 级唯一门槛。
+        _date_s = datetime.date.today().strftime("%Y-%m-%d")
+        kicker_lv, _basis = _signal_grade(
+            main.get("title", ""), data, _date_s, view=main.get("view", 0))
         sub_chips = [v.get("title", "")[:22] for v in evt[1:3]]
         return (main, kicker_lv, sub_chips, False)
 
@@ -1769,7 +1863,10 @@ def _masthead_pick(data, exclude_urls=None):
     if _bvid_of(main):
         history.append({"date": today, "bvid": _bvid_of(main), "title": main.get("title", "")[:60]})
         _save_masthead_history(history)
-    kicker_lv = "A" if main.get("view", 0) > 1500000 else "B"
+    # 2026-08-19 升级：S 级 = 多源印证 + 跨平台声量，播放量降为 A 级兜底信号。
+    _date_s = datetime.date.today().strftime("%Y-%m-%d")
+    kicker_lv, _basis = _signal_grade(
+        main.get("title", ""), data, _date_s, view=main.get("view", 0))
     sub_chips = [v.get("title", "")[:22] for v in candidates[1:3]]
     return (main, kicker_lv, sub_chips, False)
 
@@ -1796,12 +1893,8 @@ def _masthead_fallback_event(data, exclude_urls=None):
     except Exception:
         return None
 
-    # 事件权重两级：强事件（发售/上线/首曝/公测/联动/PV/CG，用户点名优先）=2，
-    #   次事件（登顶/夺冠/流水/业绩/数据盘点）=1，普通公告=0。
-    _EVENT_STRONG = re.compile(
-        r'发售|上线|公测|定档|首曝|联动|周年|首测|不删档|预约|开服|PV|CG|主题曲|新皮肤|新角|资料片|实机|演示|预告')
-    _EVENT_MINOR = re.compile(
-        r'登顶|夺冠|夺魁|流水|净利|业绩|收入|下载|爆款|热销|畅销')
+    # 事件排序由 _heat_score 真实热度负责（tgmeng 提及 + 多源 + 强事件 + 新鲜度），
+    #   不再单独定义强/次事件正则做分级——分级统一交给 _signal_grade（多源+跨平台）。
     scored = []
     for fe in (ev.get("feed_events") or []):
         title = fe.get("title") or fe.get("game") or "（无标题）"
@@ -1857,13 +1950,13 @@ def _masthead_fallback_event(data, exclude_urls=None):
         "_hits": [f"{k}×{c}" for k, c in (detail.get("tgmeng_kws") or [])],
         "view": 0,
     }
-    # 信号等级：强事件（发售/PV/联动等）=S；次事件或多源提及=A；无次条；非降级
-    if _EVENT_STRONG.search(title):
-        lv = "S"
-    elif _EVENT_MINOR.search(title) or tg_cnt >= 1:
-        lv = "A"
-    else:
-        lv = "B"
+    # 2026-08-19 升级：事件类头条也统一走「多源印证 + 跨平台声量」分级，
+    #   不再因标题含"发售/联动"等强事件关键词就单点给 S——S 必须多源+跨平台双达标。
+    _date_s = datetime.date.today().strftime("%Y-%m-%d")
+    lv, _basis = _signal_grade(title, data, _date_s, view=0)
+    # 跨平台声量作为透明标注补进 _hits（命中平台列出来），供前端展示证据链。
+    if _basis.get("platforms"):
+        fake_v["_platforms"] = _basis["platforms"]
     return (fake_v, lv, [], False)
 
 

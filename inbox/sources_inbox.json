@@ -1,8 +1,8 @@
 {
- "fetched_at": "2026-08-19T10:37:19",
+ "fetched_at": "2026-08-19T11:51:35",
  "summary": {
-  "sources_total": 64,
-  "sources_alive": 61,
+  "sources_total": 65,
+  "sources_alive": 62,
   "items_total": 125,
   "items_dated": 80
  },
@@ -564,22 +564,22 @@
    "error": null,
    "items": [
     {
+     "title": "鮎川麻弥为复古双人合作新游《轨道双子星》献唱全新片头曲与片尾曲",
+     "url": "https://www.gcores.com/articles/218522",
+     "pubdate": "2026-08-19",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
+     "title": "《蒸汽世界》将于8月19日登陆Steam及Xbox",
+     "url": "https://www.gcores.com/articles/218517",
+     "pubdate": "2026-08-19",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
      "title": "物理弹珠肉鸽游戏《爆分引擎》正式公布，将于27年发售",
      "url": "https://www.gcores.com/articles/218501",
-     "pubdate": "2026-08-19",
-     "date_src": "feed",
-     "age_days": 0
-    },
-    {
-     "title": "竞速动作游戏《特技天堂2》现已开启游玩测试",
-     "url": "https://www.gcores.com/articles/218499",
-     "pubdate": "2026-08-19",
-     "date_src": "feed",
-     "age_days": 0
-    },
-    {
-     "title": "冒险解谜游戏《沉星之序》将于10月9日发售",
-     "url": "https://www.gcores.com/articles/218506",
      "pubdate": "2026-08-19",
      "date_src": "feed",
      "age_days": 0
@@ -605,15 +605,15 @@
      "age_days": null
     },
     {
-     "title": "《GTA6》突发泄露！全是30帧：60帧没戏了？",
-     "url": "https://www.gamersky.com/news/202608/2191773.shtml",
+     "title": "GTA6还有更多猛料！爆料黑客放话：还要发2到4个",
+     "url": "https://www.gamersky.com/news/202608/2191886.shtml",
      "pubdate": "2026-08-19",
      "date_src": "text",
      "age_days": 0
     },
     {
-     "title": "反诈老陈宣布停更7天挣生活费 新工作仍在考察期",
-     "url": "https://www.gamersky.com/news/202608/2191774.shtml",
+     "title": "曝FS社《黄昏之血》有单人模式！不用被迫联机",
+     "url": "https://www.gamersky.com/news/202608/2191838.shtml",
      "pubdate": "2026-08-19",
      "date_src": "text",
      "age_days": 0
@@ -714,8 +714,8 @@
      "age_days": null
     },
     {
-     "title": "密林燃战赢犒赏《全球使命3》双橙武火力全开",
-     "url": "https://news.17173.com/content/08192026/101243226.shtml",
+     "title": "百花争艳！魔域口袋版花魁赛正式开启",
+     "url": "https://news.17173.com/content/08192026/113754708.shtml",
      "pubdate": null,
      "date_src": null,
      "age_days": null
@@ -968,6 +968,13 @@
    "error": null,
    "items": [
     {
+     "title": "国际邀请赛主赛事",
+     "url": "https://store.steampowered.com/news/app/570/view/680758587997293716",
+     "pubdate": "2026-08-19",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
      "title": "国际邀请赛：直播流、神秘商店等等",
      "url": "https://store.steampowered.com/news/app/570/view/689765153413006763",
      "pubdate": "2026-08-12",
@@ -987,13 +994,6 @@
      "pubdate": "2026-07-30",
      "date_src": "feed",
      "age_days": 20
-    },
-    {
-     "title": "Dota 2 2026年7月2日更新",
-     "url": "https://store.steampowered.com/news/app/570/view/670621050832160174",
-     "pubdate": "2026-07-01",
-     "date_src": "feed",
-     "age_days": 49
     }
    ],
    "extraction": "rss",
@@ -1152,6 +1152,13 @@
    "error": null,
    "items": [
     {
+     "title": "新套路来了！“低配二游”创造月收入3000万奇迹，打通“漫剧+玩游戏”致富路？",
+     "url": "http://www.gamelook.com.cn/2026/08/600168/",
+     "pubdate": "2026-08-19",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
      "title": "玩家笑翻！10亿美元巨制《星际公民》直播中“游戏Bug不断，团队埋怨互怼”",
      "url": "http://www.gamelook.com.cn/2026/08/600212/",
      "pubdate": "2026-08-19",
@@ -1168,13 +1175,6 @@
     {
      "title": "世纪华通收获“二合大小王”？休闲新作收入环比暴增200%、月流水近3000万",
      "url": "http://www.gamelook.com.cn/2026/08/600193/",
-     "pubdate": "2026-08-19",
-     "date_src": "feed",
-     "age_days": 0
-    },
-    {
-     "title": "新套路来了！“低配二游”创造月收入3000万奇迹，打通“漫剧+玩游戏”致富路？",
-     "url": "http://www.gamelook.com.cn/2026/08/600168/",
      "pubdate": "2026-08-19",
      "date_src": "feed",
      "age_days": 0
@@ -1200,6 +1200,13 @@
    "error": null,
    "items": [
     {
+     "title": "DeepSeek百万年薪来游戏圈抢人，盘点七大龙头企业的“AI+游戏”布局",
+     "url": "https://www.youxituoluo.com/534806.html",
+     "pubdate": "2026-08-19",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
      "title": "《诡秘之主》项目组自曝：游戏总成本12亿，坚持纯手搓，无AI",
      "url": "https://www.youxituoluo.com/534802.html",
      "pubdate": "2026-08-18",
@@ -1223,13 +1230,6 @@
     {
      "title": "周炳枢发内部信：阿里正式放手，信宸资本接盘《三战》开发商灵犀互娱",
      "url": "https://www.youxituoluo.com/534799.html",
-     "pubdate": "2026-08-17",
-     "date_src": "feed",
-     "age_days": 2
-    },
-    {
-     "title": "对话《湮灭之潮》主创丨中国动作游戏，真要“支棱”起来了",
-     "url": "https://www.youxituoluo.com/534798.html",
      "pubdate": "2026-08-17",
      "date_src": "feed",
      "age_days": 2
@@ -1357,6 +1357,13 @@
    "error": null,
    "items": [
     {
+     "title": "PS5®/PS4®『STEINS;GATE RE:BOOT』明日8月20日発売！ 新シナリオを追加し、現在の技術で再起動",
+     "url": "https://blog.ja.playstation.com/2026/08/19/20260819-steinsgatere-launch-reminder-s/",
+     "pubdate": "2026-08-19",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
      "title": "『Phantom Blade Zero』特集の「State of Play」が放送！ 戦闘や“武林”の世界を深掘り",
      "url": "https://blog.ja.playstation.com/2026/08/18/20260818-sop-pbz-o/",
      "pubdate": "2026-08-18",
@@ -1376,13 +1383,6 @@
      "pubdate": "2026-08-14",
      "date_src": "feed",
      "age_days": 5
-    },
-    {
-     "title": "2026年7月のPS Storeダウンロードランキング！ PS5®とPS4®では『Call of Duty: Black Ops II』が第1位！",
-     "url": "https://blog.ja.playstation.com/2026/08/14/20260814-monthly-ps-store-ranking-s/",
-     "pubdate": "2026-08-14",
-     "date_src": "feed",
-     "age_days": 5
     }
    ],
    "extraction": "rss",
@@ -1398,14 +1398,14 @@
    "error": null,
    "items": [
     {
-     "title": "周煜博13小时前0条评论 触乐怪话：《杀死比尔》与《堡垒之夜》的6件事 Kill Fortnite.",
+     "title": "周煜博14小时前0条评论 触乐怪话：《杀死比尔》与《堡垒之夜》的6件事 Kill Fortnite.",
      "url": "http://www.chuapp.com/article/291567.html",
      "pubdate": null,
      "date_src": null,
      "age_days": null
     },
     {
-     "title": "林翔13小时前0条评论 《雾海之下》的待机模式，你发现了吗？ 吃饱了，才有力气打架呢。",
+     "title": "林翔14小时前0条评论 《雾海之下》的待机模式，你发现了吗？ 吃饱了，才有力气打架呢。",
      "url": "http://www.chuapp.com/article/291571.html",
      "pubdate": null,
      "date_src": null,
@@ -1480,12 +1480,60 @@
    "error": null,
    "items": [
     {
+     "title": "销量跌近一半，卖家担心旺季卖不动",
+     "url": "https://www.baijing.cn/article/56401",
+     "pubdate": "2026-08-19",
+     "date_src": "feed",
+     "extra": {
+      "views": 1203,
+      "synopsis": "今年，美国市场传递出来的信号，却多少有些复杂。",
+      "from": "AMZ123跨境电商"
+     },
+     "age_days": 0
+    },
+    {
+     "title": "TikTok电商2027年Q1拟开沙特、韩国、澳洲三大站点",
+     "url": "https://www.baijing.cn/article/56400",
+     "pubdate": "2026-08-19",
+     "date_src": "feed",
+     "extra": {
+      "views": 2712,
+      "synopsis": "卖家们如何抢占高地？",
+      "from": "兔克出海"
+     },
+     "age_days": 0
+    },
+    {
+     "title": "越南查封多仓，高危敏货正被批量“割席”",
+     "url": "https://www.baijing.cn/article/56399",
+     "pubdate": "2026-08-19",
+     "date_src": "feed",
+     "extra": {
+      "views": 3193,
+      "synopsis": "曾经被卖家视为“安全避风港”的海外仓，正决绝地切断高危敏感货业务。",
+      "from": "东南亚电商观察"
+     },
+     "age_days": 0
+    },
+    {
+     "title": "成瘾诉讼风暴席卷科技巨头：Meta迎高风险庭审之际，OpenAI推出青少年版ChatGPT",
+     "url": "https://www.baijing.cn/article/56398",
+     "pubdate": "2026-08-19",
+     "date_src": "feed",
+     "extra": {
+      "views": 3885,
+      "synopsis": "OpenAI 周二宣布推出青少年版 ChatGPT（ChatGPT for Teens），这是专门为 18 岁以下用户打造的聊天机器人体验。",
+      "from": "智通财经App"
+     },
+     "age_days": 0
+    },
+    {
      "title": "斥资9亿美元，「App工厂」收购了全球营收第一的宠物项圈？",
      "url": "https://www.baijing.cn/article/56144",
      "pubdate": "2026-08-18",
      "date_src": "feed",
      "extra": {
-      "views": 34441,
+      "views": 36026,
       "synopsis": "入局宠物项圈的国内厂商越来越多，「Tractive」的退出，或可照亮前方道路。",
       "from": "白鲸出海"
      },
@@ -1497,7 +1545,7 @@
      "pubdate": "2026-08-18",
      "date_src": "feed",
      "extra": {
-      "views": 35657,
+      "views": 37111,
       "synopsis": "同时Yalla还在测试一款“解谜游戏盒子”。",
       "from": "白鲸出海"
      },
@@ -1509,7 +1557,7 @@
      "pubdate": "2026-08-18",
      "date_src": "feed",
      "extra": {
-      "views": 32309,
+      "views": 33483,
       "synopsis": "“墨西哥 RMG”最近悄然成为投手们高频讨论的话题。",
       "from": "大声出海"
      },
@@ -1521,57 +1569,9 @@
      "pubdate": "2026-08-18",
      "date_src": "feed",
      "extra": {
-      "views": 31981,
+      "views": 33306,
       "synopsis": "当 AI 开始进入玄学领域，这门延续千年的古老生意，也正在迎来新的商业想象。",
       "from": "品牌方舟BrandArk"
-     },
-     "age_days": 1
-    },
-    {
-     "title": "TOP6占领3席，点点互动新作能成为下一个SLG爆款吗？",
-     "url": "https://www.baijing.cn/article/56394",
-     "pubdate": "2026-08-18",
-     "date_src": "feed",
-     "extra": {
-      "views": 31991,
-      "synopsis": "《Top Force》到底在玩什么？",
-      "from": "Enjoy出海开发者服务平台"
-     },
-     "age_days": 1
-    },
-    {
-     "title": "前大疆员工创业，把纺织机做成亿级爆款",
-     "url": "https://www.baijing.cn/article/56393",
-     "pubdate": "2026-08-18",
-     "date_src": "feed",
-     "extra": {
-      "views": 31626,
-      "synopsis": "大厂工程师押注纺织赛道。",
-      "from": "品牌方舟BrandArk"
-     },
-     "age_days": 1
-    },
-    {
-     "title": "1年卖了7.8亿，把一条小小的定位项圈，做成了覆盖全球百万用户的超级单品",
-     "url": "https://www.baijing.cn/article/56392",
-     "pubdate": "2026-08-18",
-     "date_src": "feed",
-     "extra": {
-      "views": 33656,
-      "synopsis": "宠物安全需求催生细分赛道。",
-      "from": "兔克出海"
-     },
-     "age_days": 1
-    },
-    {
-     "title": "上市公司4.3亿收购游戏公司，立下净利润5000万对赌协议",
-     "url": "https://www.baijing.cn/article/56390",
-     "pubdate": "2026-08-18",
-     "date_src": "feed",
-     "extra": {
-      "views": 35546,
-      "synopsis": "港股上市公司嘉耀控股发布公告，宣布收购中国香港公司 Ninety Investment Holding Limited 80% 的股权。",
-      "from": "游戏新知"
      },
      "age_days": 1
     }
@@ -1711,6 +1711,18 @@
    "name": "糖果梦 AI 游戏日报",
    "type": "json_api",
    "url": "https://tgmeng.com/daily/game",
+   "status": 200,
+   "error": null,
+   "items": [],
+   "extraction": "json_api (empty)",
+   "dated_items": 0
+  },
+  {
+   "id": "xiaoheihe_hot",
+   "game": "全行业",
+   "name": "小黑盒每日热点",
+   "type": "json_api",
+   "url": "https://api.xiaoheihe.cn/bbs/app/content_collection/menu?collection_id=68c528455c6766e13a7ce675",
    "status": 200,
    "error": null,
    "items": [],

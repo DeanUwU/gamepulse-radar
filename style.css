@@ -712,19 +712,52 @@ details.fold-sec[open]>summary .fold-hint::before{content:"▾ 收起"}
 .intel-chips .chip.cat-blue{background:rgba(77,163,255,.1);color:var(--blue);border-color:rgba(77,163,255,.28)}
 .intel-chips .chip.cat-green{background:rgba(63,214,143,.1);color:var(--green);border-color:rgba(63,214,143,.28)}
 .intel-chips .chip.cat-purple{background:rgba(179,136,255,.1);color:#b388ff;border-color:rgba(179,136,255,.28)}
-/* 2026-08-17：行业情报站「今日小结」段——数据状态 + 今日 3 件大事 */
-.intel-summary{margin:6px 0 10px;padding:10px 14px;border-left:3px solid var(--blue);
-  background:linear-gradient(90deg,rgba(77,163,255,.06) 0%,rgba(77,163,255,0) 60%);
-  border-radius:0 var(--radius-md) var(--radius-md) 0;
-  font-size:var(--text-sm);color:var(--txt);line-height:1.7}
-.intel-summary .sum-stat{color:var(--blue);font-weight:700}
-.intel-summary .sum-stat.gold{color:var(--gold)}
-.intel-summary .sum-stat.green{color:var(--green)}
-.intel-summary .sum-head{font-weight:700;color:var(--txt);margin-bottom:4px;font-size:var(--text-base)}
-.intel-summary .sum-head i{color:var(--gold);font-style:normal;margin-right:4px}
-.intel-summary ul{margin:4px 0 0;padding-left:20px}
-.intel-summary li{margin:2px 0;color:var(--txt)}
-.intel-summary li b{color:var(--blue)}
+/* 2026-08-19 升级：行业情报站「今日小结」——4 块 stat-card + 焦点事件列表，整体放大、卡片化、品牌色驱动 */
+.intel-summary{
+  margin:8px 0 14px;padding:14px 18px 16px;
+  background:linear-gradient(135deg,rgba(77,163,255,.08) 0%,rgba(179,136,255,.04) 50%,rgba(0,0,0,0) 100%);
+  border:1px solid var(--border);
+  border-left:4px solid var(--blue);
+  border-radius:var(--radius-md);
+  color:var(--txt);line-height:1.65;font-size:var(--text-base);
+  position:relative;overflow:hidden}
+.intel-summary::after{content:"";position:absolute;top:0;right:0;width:80px;height:80px;
+  background:radial-gradient(circle at top right,rgba(77,163,255,.12) 0%,transparent 70%);pointer-events:none}
+.intel-summary .sum-head{display:flex;align-items:baseline;gap:var(--space-xs);
+  margin-bottom:var(--space-sm);font-size:var(--text-md);font-weight:800;color:var(--txt)}
+.intel-summary .sum-icon{color:var(--gold);font-style:normal;font-size:18px;line-height:1}
+.intel-summary .sum-title{letter-spacing:.02em}
+.intel-summary .sum-date{color:var(--sub);font-weight:600;font-size:var(--text-sm);
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.intel-summary .sum-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-xs);
+  margin-bottom:var(--space-sm)}
+.intel-summary .sum-stat{
+  display:flex;flex-direction:column;align-items:flex-start;justify-content:center;
+  padding:8px 10px;border-radius:var(--radius-sm);
+  background:rgba(77,163,255,.07);border:1px solid rgba(77,163,255,.18);
+  min-height:46px}
+.intel-summary .sum-stat .ss-num{font-size:var(--text-lg);font-weight:800;color:var(--blue);
+  line-height:1.1;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  letter-spacing:-.02em}
+.intel-summary .sum-stat .ss-sub{font-size:var(--text-sm);font-weight:600;color:var(--sub);opacity:.7}
+.intel-summary .sum-stat .ss-lbl{font-size:11px;color:var(--sub);font-weight:600;
+  letter-spacing:.04em;margin-top:2px;text-transform:uppercase}
+.intel-summary .sum-stat-hot{background:rgba(255,176,32,.08);border-color:rgba(255,176,32,.25)}
+.intel-summary .sum-stat-hot .ss-num{color:var(--gold)}
+/* 焦点事件区 */
+.intel-summary .sum-focus{margin-top:6px;padding-top:10px;border-top:1px dashed var(--border)}
+.intel-summary .sum-focus-tag{display:inline-block;padding:2px 8px;border-radius:99px;
+  background:rgba(255,92,57,.12);color:var(--accent);border:1px solid rgba(255,92,57,.25);
+  font-size:11px;font-weight:700;letter-spacing:.04em;margin-bottom:6px}
+.intel-summary ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.intel-summary li{display:flex;align-items:center;gap:var(--space-sm);
+  font-size:var(--text-base);color:var(--txt);line-height:1.55;padding:2px 0}
+.intel-summary li .sum-num{flex:none;width:18px;height:18px;border-radius:50%;
+  background:rgba(77,163,255,.15);color:var(--blue);font-size:10px;font-weight:800;
+  display:inline-flex;align-items:center;justify-content:center;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.intel-summary li .sum-evt{flex:1;color:var(--txt)}
+/* 移动端：4 列 stat 变 2 列 */
+@media(max-width:720px){.intel-summary .sum-stats{grid-template-columns:repeat(2,1fr)}}
 /* 2026-08-17：高热度卡片——左边蓝条 + 🔥 小角标 */
 .intel-item.is-hot{position:relative;border-left:3px solid var(--blue);
   background:linear-gradient(90deg,rgba(77,163,255,.05) 0%,var(--panel2) 30%)}

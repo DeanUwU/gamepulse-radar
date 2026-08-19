@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "name": "GamePulse 必盯名单（量级告警闸）",
+    "purpose": "高关注 IP / 高预算 / 高量级游戏清单。每日刷新时由 daily_refresh.py 校验：名单内游戏若有「定档 / 公测 / 上线」消息，但 events.json 的 feed_events 或日历节点缺失，则记为阻断级告警，防止大事件漏报。",
+    "updated": "2026-08-19",
+    "rules": [
+      "每个条目含 aliases（别名/关键词，用于在采集标题与词云词条中命中匹配）。",
+      "release_date 为已确认的定档/公测/上线日期（未确认用 null）。",
+      "source_url / source_name 必须指向可溯源的具体文章/公告页，禁止主页占位。",
+      "若条目已有定档日期，daily_refresh 会校验日历是否已收录；缺失则告警。"
+    ]
+  },
+  "watchlist": [
+    {
+      "game": "诡秘之主",
+      "aliases": ["诡秘之主", "诡秘", "Lord of Mysteries"],
+      "type": "手游",
+      "note": "IP 改编、总成本 12 亿、纯手搓无 AI，量级极高",
+      "release_date": "2026-08-21",
+      "release_type": "公测",
+      "release_note": "8/21 10:00 全平台公测（PC/iOS/安卓/鸿蒙互通），8/19 预下载、8/19 12:00 预创角",
+      "source_url": "https://news.17173.com/content/08172026/001342548.shtml",
+      "source_name": "17173 网游资讯",
+      "official_url": "https://lom.sparknexa.com/home?step=6",
+      "verified": true
+    },
+    {
+      "game": "影之刃零",
+      "aliases": ["影之刃零", "影之刃"],
+      "type": "单机",
+      "note": "灵犀互娱出品，Steam 预售登顶，高关注单机",
+      "release_date": null,
+      "release_type": null,
+      "source_url": "https://www.youxituoluo.com/534800.html",
+      "source_name": "游戏陀螺",
+      "verified": false
+    },
+    {
+      "game": "黑神话：悟空",
+      "aliases": ["黑神话", "黑神话悟空", "Black Myth"],
+      "type": "单机",
+      "note": "现象级国产单机，续作/DLC 动态需持续盯",
+      "release_date": null,
+      "release_type": null,
+      "source_url": "",
+      "source_name": "",
+      "verified": false
+    },
+    {
+      "game": "燕云十六声",
+      "aliases": ["燕云十六声", "燕云"],
+      "type": "端游/手游",
+      "note": "网易开放世界武侠，高预算",
+      "release_date": null,
+      "release_type": null,
+      "source_url": "",
+      "source_name": "",
+      "verified": false
+    },
+    {
+      "game": "无限暖暖",
+      "aliases": ["无限暖暖", "暖暖"],
+      "type": "手游",
+      "note": "叠纸开放世界换装，高关注",
+      "release_date": null,
+      "release_type": null,
+      "source_url": "",
+      "source_name": "",
+      "verified": false
+    }
+  ]
+}

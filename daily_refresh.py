@@ -66,7 +66,7 @@ if not os.path.exists(today_meme):
                      "先成功生成当天 meme 文件；refresh_content 已禁止回退到历史文件"))
 
 # ①c 糖果梦 AI 游戏日报（非阻断 → 行业情报增量信号）
-log("【①c tgmeng】运行 collector_tgmeng.py（糖果梦 AI 游戏日报 → 行���综述）...")
+log("【①c tgmeng】运行 collector_tgmeng.py（糖果梦 AI 游戏日报 → 行业综述）...")
 rt = subprocess.run([PY, "collector_tgmeng.py"], cwd=BASE, capture_output=True, text=True, encoding="utf-8", env=ENV)
 if rt.returncode == 0:
     lines = [l for l in (rt.stdout + rt.stderr).split("\n") if l.strip()]
@@ -76,6 +76,28 @@ if rt.returncode == 0:
 else:
     log(f"    ⚠ collector_tgmeng 非零退出（非阻断）：{(rt.stderr or rt.stdout).strip()[:200]}")
 # tgmeng 是 AI 综述信号，非阻断——缺失不影响日报核心板块
+
+# ①d 定档事件采集（防漏报·手段1）：定向盯必盯名单 watchlist.json 的高量级游戏，
+# 产出 release_dates_YYYYMMDD.json 供量级告警闸交叉核对。非阻断——缺失由 (g) 告警兜底。
+log("【①d 定档】运行 collector_release_dates.py（必盯名单定档/公测/上线事件采集）...")
+rd_ = subprocess.run([PY, "collector_release_dates.py"], cwd=BASE, capture_output=True, text=True, encoding="utf-8", env=ENV)
+if rd_.returncode == 0:
+    for l in (rd_.stdout + rd_.stderr).split("\n"):
+        if l.strip() and ("✅" in l or "状态" in l):
+            log(f"    {l.strip()}")
+else:
+    log(f"    ⚠ collector_release_dates 非零退出（非阻断）：{(rd_.stderr or rd_.stdout).strip()[:200]}")
+
+# ①e 小黑盒每日热点采集（Phase 9 接入）：游戏社区热帖榜 TOP20，玩家侧声量信号。
+# 非阻断——缺失不影响日报核心板块。
+log("【①e 小黑盒】运行 collector_xiaoheihe.py（小黑盒每日热点 TOP20 采集）...")
+xh_ = subprocess.run([PY, "collector_xiaoheihe.py"], cwd=BASE, capture_output=True, text=True, encoding="utf-8", env=ENV)
+if xh_.returncode == 0:
+    for l in (xh_.stdout + xh_.stderr).split("\n"):
+        if l.strip() and ("状态" in l or "集合" in l):
+            log(f"    {l.strip()}")
+else:
+    log(f"    ⚠ collector_xiaoheihe 非零退出（非阻断）：{(xh_.stderr or xh_.stdout).strip()[:200]}")
 
 # ---------- ② 重建源覆盖报告 ----------
 # 2026-08-05 治理：原实现是 re.sub(r"本次失败源：[^<]*", ...)，但页面上这句话早已被改写掉，
@@ -231,7 +253,7 @@ try:
     if rb.returncode != 0:
         log("    boost_tgmeng 非零退出（非阻断）：" + (rb.stderr or "").strip()[:160])
 except Exception as e:
-    log("    boost_tgmeng 跳过（非阻断��：" + repr(e)[:160])
+    log("    boost_tgmeng 跳过（非阻断）：" + repr(e)[:160])
 
 # ③-6 糖果梦 AI 日报卡片 + badge 注入（非阻断）：无外链，纯站内概念信号
 try:
@@ -689,6 +711,62 @@ if _m:
         log(f"(f) 行业情报站时效：⚠ 无法解析 chip 日期 {_chip!r}")
 else:
     log("(f) 行业情报站时效：⚠ 未找到 #media chip（板块可能被删除，跳过）")
+
+# (g) 量级告警闸（防漏报·手段2）：读 watchlist.json 必盯名单，凡名单内游戏已确认
+#     定档/公测/上线日期（verified=true），但 events.json 的 feed_events 或日历节点
+#     均未收录该游戏 → 记阻断级告警。防止诡秘之主 8/21 公测这类大事件因两条管线
+#     不同步（词云有、日历无）而漏报。
+try:
+    wl_path = os.path.join(BASE, 'watchlist.json')
+    if os.path.exists(wl_path):
+        wl = json.load(io.open(wl_path, encoding='utf-8'))
+        wlist = wl.get('watchlist', [])
+        # 收集当前 feed_events 与日历节点的游戏名集合（用于命中判断）
+        feed_games = set()
+        cal_games = set()
+        try:
+            ev_doc = json.load(io.open(os.path.join(BASE, 'events.json'), encoding='utf-8'))
+            for fe in ev_doc.get('feed_events', []):
+                g = fe.get('game', '')
+                if g:
+                    feed_games.add(g)
+                # 标题里也可能带游戏名（game 字段为"全行业"时）
+                feed_games.add(fe.get('title', ''))
+            for ce in ev_doc.get('events', []):
+                g = ce.get('game', '')
+                if g:
+                    cal_games.add(g)
+                cal_games.add(ce.get('title', ''))
+        except Exception:
+            pass
+        missing = []
+        for it in wlist:
+            if not it.get('verified'):
+                continue  # 未核实的不判漏报（否则必盯名单里大量 null 会天天误报）
+            game = it.get('game', '')
+            aliases = it.get('aliases', [game])
+            release_date = it.get('release_date')
+            if not release_date:
+                continue
+            # 判断是否已收录：任一别名出现在 feed_events 或日历节点的 game/title 中
+            hit = False
+            for al in aliases:
+                if any(al in s for s in feed_games) or any(al in s for s in cal_games):
+                    hit = True
+                    break
+            if not hit:
+                missing.append(f"{game}({release_date} {it.get('release_type','')})")
+        if missing:
+            problems.append(("日历", "量级告警闸", f"必盯名单 {len(missing)} 款高量级游戏已定档但日历/情报站未收录：{missing}",
+                             "红线④自动化+防漏报", "阻断",
+                             "将定档事件补录进 events.json feed_events（或日历节点），并更新 watchlist source_url 溯源"))
+            log(f"(g) 量级告警闸：❌ {len(missing)} 款已定档未收录 → {missing}")
+        else:
+            log(f"(g) 量级告警闸：✅ 必盯名单 {len(wlist)} 款中，已核实定档的均已收录")
+    else:
+        log("(g) 量级告警闸：⚠ 未找到 watchlist.json（防漏报闸未启用）")
+except Exception as e:
+    log("(g) 量级告警闸：⚠ 读取失败 " + repr(e)[:120])
 
 # ================= ⑤ 写日志 =================
 log("\n================= ⑤ 自洽日志 =================")

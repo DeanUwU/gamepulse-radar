@@ -980,17 +980,28 @@ def _podium_top1(data, date_s, exclude_urls=None):
         if scored:
             scored.sort(key=lambda x: -x[0])
             score, detail, fe = scored[0]
+            # 尝试从 meme 视频池找同事件的相关封面图（feed_events 本身无图片字段）
+            top1_img = ""
+            title_for_match = (fe.get("title") or "") + " " + (fe.get("game") or "")
+            _t1_kw = [k for k in [fe.get("game") or "", (fe.get("title") or "")[:6]] if k]
+            for v in (data.get("popular", []) + data.get("weekly", [])):
+                if not v.get("pic"):
+                    continue
+                vt = v.get("title") or ""
+                if any(k in title_for_match for k in _t1_kw) or any(k in vt for k in _t1_kw):
+                    top1_img = v["pic"]
+                    break
             return {
                 "rank": 1,
                 "url": fe.get("source_url") or fe.get("url") or "#",
                 "title": fe.get("title") or fe.get("game") or "（无标题）",
                 "tag": "事件",
                 "color": "#ff5c39",
-                "img": "",
+                "img": top1_img,
                 "meta": "%s · %s" % (
                     fe.get("source_name") or "未知来源",
                     (fe.get("pubdate") or fe.get("first_seen") or "")[5:10]),
-                "is_event": True,
+                "is_event": bool(not top1_img),  # 有图则不标记 is_event，走有图渲染分支
                 "_heat_detail": detail,
             }
     except Exception:

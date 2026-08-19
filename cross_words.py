@@ -346,6 +346,9 @@ def build_main_wordcloud():
   fitCanvas();
   window.addEventListener('resize', fitCanvas);
 
+  // 记录当前 hover 的词（作为 click 的 fallback，应对 wordcloud2.js 在 zoom/缩放下 click 坐标映射偏差）
+  var lastHoverWord = null;
+
   // ---- 词列表转 [word, weight] ----
   var wordList = payload.list.map(function(x) {{ return [x[0], x[1]]; }});
   var colorMap = {{}}, catMap = {{}}, hMap = {{}};
@@ -392,9 +395,10 @@ def build_main_wordcloud():
     abortThreshold: 0,
     hover: function(item, dim, evt) {{
       var tip = document.getElementById('wc-cloud-tip');
-      if (!item) {{ tip.hidden = true; canvas.style.cursor='default'; return; }}
+      if (!item) {{ tip.hidden = true; canvas.style.cursor='default'; lastHoverWord = null; return; }}
       canvas.style.cursor = 'pointer';
       var w = item[0];
+      lastHoverWord = w;
       tip.innerHTML = '<b>' + w + '</b><span>H=' + (hMap[w]||'--') + ' · ' + (catMap[w]||'梗/社区') + '</span>';
       tip.hidden = false;
       var wrap = document.getElementById('wc-cloud');
@@ -403,10 +407,17 @@ def build_main_wordcloud():
       tip.style.top  = (evt.clientY - r.top  - 44) + 'px';
     }},
     click: function(item) {{
-      if (!item) return;
-      var word = item[0];
+      // wordcloud2.js 内部 click：item 命中则直接用；为 null 时用 hover fallback 兜底
+      var word = item && item[0] ? item[0] : lastHoverWord;
+      if (!word) return;
       showTrace(word);
     }}
+  }});
+
+  // Fallback：wordcloud2.js 在 CSS zoom/缩放下 click 坐标映射可能偏移导致 item=null，
+  // 直接在 canvas 上绑原生 click 作为二次保险（优先用 wordcloud2 内部 click，这里仅兜底）。
+  canvas.addEventListener('click', function() {{
+    if (lastHoverWord) showTrace(lastHoverWord);
   }});
 
   canvas.addEventListener('mouseleave', function() {{
@@ -466,10 +477,13 @@ def build_main_wordcloud():
   }});
 
   // 点击面板外部空白处关闭（仅当点击目标不在面板内）
+  // 注意：canvas 点击会冒泡到这里，但词云点击是"打开"不是"关闭"，
+  // 因此排除 canvas 及其子元素的点击，否则会把刚打开的面板误关。
   document.addEventListener('click', function(e) {{
     var panel = document.getElementById('wc-detail');
     if (!panel.classList.contains('open')) return;
     if (panel.contains(e.target)) return;
+    if (e.target && (e.target.id === 'wc-canvas' || e.target.id === 'wc-cloud-tip' || (e.target.parentElement && e.target.parentElement.id === 'wc-cloud'))) return;
     panel.classList.remove('open');
   }});
 }})();

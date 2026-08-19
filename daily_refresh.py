@@ -88,6 +88,16 @@ if rd_.returncode == 0:
 else:
     log(f"    ⚠ collector_release_dates 非零退出（非阻断）：{(rd_.stderr or rd_.stdout).strip()[:200]}")
 
+# ①d2 定档事件桥接（防漏报·手段1 闭环）：把 collector_release_dates 产出的
+# 已核实定档事件（有 release_date + source_url）写进 events.json 的 events[] 日历主数据，
+# 否则 gen_calendar.py 只遍历 events[]，定档事件永远进不了日历。非阻断。
+log("【①d2 定档桥接】运行 promote_release_dates.py（release_dates -> events[] 日历）...")
+prd_ = subprocess.run([PY, "promote_release_dates.py"], cwd=BASE, capture_output=True, text=True, encoding="utf-8", env=ENV)
+if prd_.returncode == 0 and prd_.stdout.strip():
+    log("    " + prd_.stdout.strip())
+elif prd_.returncode != 0:
+    log(f"    ⚠ promote_release_dates 非零退出（非阻断）：{(prd_.stderr or prd_.stdout).strip()[:200]}")
+
 # ①e 小黑盒每日热点采集（Phase 9 接入）：游戏社区热帖榜 TOP20，玩家侧声量信号。
 # 非阻断——缺失不影响日报核心板块。
 log("【①e 小黑盒】运行 collector_xiaoheihe.py（小黑盒每日热点 TOP20 采集）...")
@@ -347,61 +357,6 @@ try:
             log("    tgmeng 数据不可用，跳过卡片+badge 注入")
 except Exception as _e:
     log("    tgmeng 卡片+badge 注入跳过（非阻断）：" + repr(_e)[:160])
-try:
-    import glob as _g
-    tg_files = sorted(_g.glob(os.path.join(BASE, "collectors", "tgmeng_daily_*.json")), reverse=True)
-    if tg_files:
-        _tdata = json.load(open(tg_files[0], encoding="utf-8"))
-        _entry = _tdata.get("entry")
-        if _entry and isinstance(_entry, dict) and _entry.get("title") and not _entry.get("error"):
-            log("【③AI日报】从 tgmeng 数据构建卡片...")
-            _entry_count = _tdata.get("all_entries_count", 0) or _tdata.get("all_entries_count", 0)
-
-            # 构建标签 chips
-            _tags_html = ""
-            for _t in (_entry.get("tags") or [])[:6]:
-                _tags_html += f'<span class="tgmeng-tag">{_t}</span>'
-
-            # AI 信息行
-            _ai_parts = []
-            if _entry.get("ai_platform"):
-                _ai_parts.append(f'AI: {_entry["ai_platform"]}')
-            if _entry.get("ai_model"):
-                _ai_parts.append(_entry["ai_model"])
-            if _entry.get("token_usage"):
-                _ai_parts.append(f'Token: {_entry["token_usage"]:,}')
-            if _entry.get("generated_at"):
-                _ai_parts.append(f'生成: {_entry["generated_at"]}')
-            _ai_meta_str = " · ".join(_ai_parts)
-
-            _summary = (_entry.get("summary") or "").strip()
-            _card_html = f'''<section id="tgmeng"><div class="sec-title"><span class="bar" style="background:linear-gradient(135deg,#c792ea,#4da3ff)"></span>AI 游戏日报 <small>糖果梦 · AI 自动生成每日行业综述 · {_entry_count} 篇历史归档</small></div><div class="tgmeng-card"><a class="tgmeng-head" target="_blank" href="{_entry['url']}"><h3>{_entry['title']}</h3><span class="tgmeng-date">{_entry['date']}</span></a>'''
-            if _summary:
-                _card_html += f'<p class="tgmeng-summary">{_summary}</p>'
-            if _tags_html:
-                _card_html += f'<div class="tgmeng-tags">{_tags_html}</div>'
-            _card_html += f'''<div class="tgmeng-meta"><span>{_ai_meta_str}</span><a class="tgmeng-source" target="_blank" href="https://tgmeng.com/daily/game">查看完整日报 &#8594;</a></div></div></section>'''
-
-            # 插入到 index.html: 在 <section id="source" 之前
-            _daily_path = os.path.join(BASE, "index.html")
-            if os.path.exists(_daily_path):
-                _daily_content = io.open(_daily_path, encoding="utf-8").read()
-                if 'id="tgmeng"' not in _daily_content:
-                    _daily_content = _daily_content.replace('\n<section id="source"',
-                                                            '\n' + _card_html + '\n<section id="source"')
-                    with open(_daily_path, "w", encoding="utf-8") as _fh:
-                        _fh.write(_daily_content)
-                    log("    ✓ AI 日报卡片已注入 index.html")
-                else:
-                    log("    ⚠ index.html 已含 tgmeng 卡片（可能是重复注入），跳过")
-            else:
-                log("    ⚠ index.html 不存在，跳过卡片注入")
-        else:
-            log("    ⚠ tgmeng 数据不可用（缺失/近期失败/无 entry），跳过卡片注入")
-    else:
-        log("    ⚠ 未找到 tgmeng_daily_*.json，跳过卡片注入")
-except Exception as _e:
-    log("    ⚠ tgmeng 卡片注入跳过（非阻断）：" + repr(_e)[:160])
 
 # ---------- ④-0 由 events.json 重建日历 section（注入 index.html） ----------
 # 注意：本步必须在 refresh_content（③-4.5）之后运行，因为两者都读/写 index.html；
@@ -713,25 +668,22 @@ else:
     log("(f) 行业情报站时效：⚠ 未找到 #media chip（板块可能被删除，跳过）")
 
 # (g) 量级告警闸（防漏报·手段2）：读 watchlist.json 必盯名单，凡名单内游戏已确认
-#     定档/公测/上线日期（verified=true），但 events.json 的 feed_events 或日历节点
-#     均未收录该游戏 → 记阻断级告警。防止诡秘之主 8/21 公测这类大事件因两条管线
-#     不同步（词云有、日历无）而漏报。
+#     定档/公测/上线日期（verified=true），但 events.json 的【日历 events[] 节点】未收录
+#     该游戏 → 记阻断级告警。
+# 2026-08-19 修复两个缺陷：
+#   ① 命中判断不再把 feed_events 的 title 当"已收录"证据——之前 feed 里有但日历无，
+#      子串命中即误判"已收录"，导致诡秘之主 8/21 公测漏报。现在只认日历 events[]。
+#   ② verified=false 但有 release_date 线索的必盯条目，不再静默跳过，改为优化级软告警
+#      （提醒人工核实，而非阻断）——之前燕云十六声 verified=false 直接 continue，连漏了都不知道。
 try:
     wl_path = os.path.join(BASE, 'watchlist.json')
     if os.path.exists(wl_path):
         wl = json.load(io.open(wl_path, encoding='utf-8'))
         wlist = wl.get('watchlist', [])
-        # 收集当前 feed_events 与日历节点的游戏名集合（用于命中判断）
-        feed_games = set()
+        # 只收集【日历 events[] 节点】的游戏名/标题（命中判断的唯一依据，见缺陷①）
         cal_games = set()
         try:
             ev_doc = json.load(io.open(os.path.join(BASE, 'events.json'), encoding='utf-8'))
-            for fe in ev_doc.get('feed_events', []):
-                g = fe.get('game', '')
-                if g:
-                    feed_games.add(g)
-                # 标题里也可能带游戏名（game 字段为"全行业"时）
-                feed_games.add(fe.get('title', ''))
             for ce in ev_doc.get('events', []):
                 g = ce.get('game', '')
                 if g:
@@ -739,30 +691,39 @@ try:
                 cal_games.add(ce.get('title', ''))
         except Exception:
             pass
-        missing = []
+        def _hit_cal(aliases):
+            for al in aliases:
+                if any(al in s for s in cal_games):
+                    return True
+            return False
+        missing = []       # 阻断级：verified + 有定档日期，但日历未收录
+        soft_missing = []  # 优化级：verified=false 但 note/source_url 有线索，建议人工核实
         for it in wlist:
-            if not it.get('verified'):
-                continue  # 未核实的不判漏报（否则必盯名单里大量 null 会天天误报）
             game = it.get('game', '')
             aliases = it.get('aliases', [game])
             release_date = it.get('release_date')
             if not release_date:
                 continue
-            # 判断是否已收录：任一别名出现在 feed_events 或日历节点的 game/title 中
-            hit = False
-            for al in aliases:
-                if any(al in s for s in feed_games) or any(al in s for s in cal_games):
-                    hit = True
-                    break
-            if not hit:
-                missing.append(f"{game}({release_date} {it.get('release_type','')})")
+            if it.get('verified'):
+                # 已核实定档 → 必须进日历，否则阻断（缺陷①：只看 cal_games）
+                if not _hit_cal(aliases):
+                    missing.append(f"{game}({release_date} {it.get('release_type','')})")
+            else:
+                # 未核实但有定档日期线索 → 软告警（缺陷②：不再静默跳过）
+                if not _hit_cal(aliases):
+                    soft_missing.append(f"{game}({release_date} 疑似，待核实)")
         if missing:
-            problems.append(("日历", "量级告警闸", f"必盯名单 {len(missing)} 款高量级游戏已定档但日历/情报站未收录：{missing}",
+            problems.append(("日历", "量级告警闸", f"必盯名单 {len(missing)} 款高量级游戏已核实定档但日历未收录：{missing}",
                              "红线④自动化+防漏报", "阻断",
-                             "将定档事件补录进 events.json feed_events（或日历节点），并更新 watchlist source_url 溯源"))
-            log(f"(g) 量级告警闸：❌ {len(missing)} 款已定档未收录 → {missing}")
+                             "将定档事件补录进 events.json 的 events[] 日历节点，并更新 watchlist source_url 溯源"))
+            log(f"(g) 量级告警闸：❌ {len(missing)} 款已核实定档未收录 → {missing}")
         else:
-            log(f"(g) 量级告警闸：✅ 必盯名单 {len(wlist)} 款中，已核实定档的均已收录")
+            log(f"(g) 量级告警闸：✅ 必盯名单中已核实定档的均已进日历")
+        if soft_missing:
+            problems.append(("日历", "量级告警闸(软)", f"必盯名单 {len(soft_missing)} 款有定档线索但未核实、日历也未收录：{soft_missing}",
+                             "源覆盖", "优化",
+                             "建议人工核实这些游戏的定档活动并补录（如燕云十六声中元节关卡）"))
+            log(f"(g) 量级告警闸(软)：⚠ {len(soft_missing)} 款未核实待确认 → {soft_missing}")
     else:
         log("(g) 量级告警闸：⚠ 未找到 watchlist.json（防漏报闸未启用）")
 except Exception as e:

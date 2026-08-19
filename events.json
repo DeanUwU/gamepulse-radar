@@ -1319,6 +1319,28 @@
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://www.gamersky.com/news/202608/2188172.shtml\" title=\"影之刃零\">灵游坊暗黑武侠动作新作正式发售</a>",
    "date_start": "2026-10-29",
    "date_end": "2026-10-29"
+  },
+  {
+   "id": "news_8ba44ef8c8",
+   "kind": "cal",
+   "game": "诡秘之主",
+   "title": "诡秘之主：手游全平台公测（PC/iOS/安卓/鸿蒙互通），8/19预下载、8/19 12:00预创角",
+   "source_url": "https://news.17173.com/content/08172026/001342548.shtml",
+   "source_name": "诡秘之主 将于 2026-08-21：手游全平台公测（PC/iOS/安卓/鸿蒙互通），8/19预下载、8/19 12:00预创角（17173）",
+   "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://news.17173.com/content/08172026/001342548.shtml\" title=\"诡秘之主\">手游全平台公测（PC/iOS/安卓/鸿蒙互通），8/19预下</a>",
+   "date_start": "2026-08-21",
+   "date_end": "2026-08-21"
+  },
+  {
+   "id": "news_6d4dbc1da2",
+   "kind": "cal",
+   "game": "燕云十六声",
+   "title": "燕云十六声：中元节志怪主题关卡「照影庙」上线，联动《咒》导演柯孟融，规则怪谈逃生",
+   "source_url": "https://news.17173.com/content/07282026/130626038.shtml",
+   "source_name": "燕云十六声 将于 2026-08-27：中元节志怪主题关卡「照影庙」上线，联动《咒》导演柯孟融，规则怪谈逃生（17173）",
+   "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://news.17173.com/content/07282026/130626038.shtml\" title=\"燕云十六声\">中元节志怪主题关卡「照影庙」上线，联动《咒》导演柯孟融，规则</a>",
+   "date_start": "2026-08-27",
+   "date_end": "2026-08-27"
   }
  ],
  "feed_events": [

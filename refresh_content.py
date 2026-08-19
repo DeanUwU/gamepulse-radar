@@ -1597,102 +1597,6 @@ def replace_visual_focus(src, grid):
 # 2026-07-31：原 #brief 是一段 <p> 把所有标题用 ；连成文字墙，
 # 不可扫读。改为卡片网格——每行一个信号，保留原 HTML 粗体标题。
 # 2026-08-06：为每条速览匹配当日 meme 封面图，无匹配用渐变占位。
-def _match_brief_thumb(title, data, seen):
-    """为速览标题匹配 meme 数据中的缩略图。返回 (url, '' )或 None。"""
-    gm = re.search(r'《([^》]+)》', title)
-    gname = gm.group(1) if gm else ''
-    # 从标题提取关键游戏/厂商名
-    kws = set()
-    if gname:
-        kws.add(gname.lower())
-    for w in re.findall(r'[\w\u4e00-\u9fff]{2,}', title):
-        kws.add(w.lower())
-    # 在 popular + weekly 中找匹配
-    pool = list(data.get("weekly", [])) + list(data.get("popular", []))
-    for v in pool:
-        vt = (v.get("title") or "").lower()
-        pic = v.get("pic") or ""
-        if not pic or pic in seen:
-            continue
-        for kw in kws:
-            if len(kw) >= 3 and kw in vt:
-                seen.add(pic)
-                return (pic, v.get("url") or "")
-    # fallback：书名号内关键词
-    if gname:
-        for v in pool:
-            vt = (v.get("title") or "").lower()
-            pic = v.get("pic") or ""
-            if not pic or pic in seen:
-                continue
-            if gname.lower() in vt:
-                seen.add(pic)
-                return (pic, v.get("url") or "")
-    return None
-
-def build_brief_cards(src, data=None):
-    """解析现存 #brief 的卡片网格，为每条速览注入封面图。"""
-    # 查找已有的 brief-grid
-    m = re.search(r'(<div class="brief-grid">)(.*?)(</div>\s*<div class="nav-btns")', src, re.S)
-    if not m:
-        return None
-    grid_content = m.group(2)
-    # 提取每张 brief-card
-    cards = re.findall(r'<div class="brief-card">.*?</div>', grid_content, re.S)
-    if not cards:
-        return None
-
-    seen = set()
-    enhanced = []
-    for card in cards:
-        # 提取标题中的游戏名
-        bm = re.search(r'<b>(.*?)</b>', card)
-        title = bm.group(1) if bm else ''
-        # 添加 brief-body 包装
-        inner = re.sub(r'(<span class="brief-label"[^>]*>.*?</span>)', r'<div class="brief-body">\1', card, count=1)
-        inner = inner.replace('</div>', '</div></div>', 1) if inner.endswith('</div>') else inner + '</div>'
-        # 尝试匹配缩略图
-        thumb = None
-        if data and title:
-            thumb = _match_brief_thumb(title, data, seen)
-        if thumb:
-            img_html = (f'<div class="brief-img-wrap"><img src="{esc(thumb[0])}" '
-                       f'alt="{esc(title)}" loading="lazy" referrerpolicy="no-referrer" '
-                       f'onerror="this.parentElement.style.display=\'none\'"></div>')
-            inner = inner.replace('<div class="brief-body">', img_html + '<div class="brief-body">', 1)
-            inner = inner.replace('class="brief-card"', 'class="brief-card brief-card-img"')
-        else:
-            # 无图时用渐变占位
-            grad_colors = ['#ff5c39,#ffb020', '#4da3ff,#c792ea', '#3fd68f,#4da3ff',
-                          '#c792ea,#ff5c39', '#ffb020,#3fd68f', '#4da3ff,#3fd68f']
-            gi = hash(title) % len(grad_colors)
-            grad_placeholder = (f'<div class="brief-img-wrap brief-img-grad" '
-                              f'style="background:linear-gradient(135deg,{grad_colors[gi]})">'
-                              f'<span>{esc(title[:4])}</span></div>')
-            inner = inner.replace('<div class="brief-body">', grad_placeholder + '<div class="brief-body">', 1)
-            inner = inner.replace('class="brief-card"', 'class="brief-card brief-card-img"')
-        enhanced.append(inner)
-
-    return '<div class="brief-grid brief-grid-img">' + ''.join(enhanced) + '</div>'
-
-
-def replace_brief(src, grid):
-    """把 #brief 里的旧卡片网格整段换成带图增强版。兼容 sub-t 旧格式。"""
-    if not grid:
-        return src, 0
-    # 优先匹配 brief-grid
-    m = re.search(r'<div class="brief-grid">.*?</div>\s*<div class="nav-btns"', src, re.S)
-    if m:
-        # 保留后面的 nav-btns
-        end_tag = '<div class="nav-btns"'
-        return src[:m.start()] + grid + '\n' + end_tag + src[m.end() + len(end_tag):], 1
-    # fallback: 旧 sub-t 格式
-    m = re.search(r'<p class="sub-t"[^>]*>.*?</p>', src, re.S)
-    if not m:
-        return src, 0
-    return src[:m.start()] + grid + src[m.end():], 1
-
-
 # ---------------- 头图 masthead·每日轮换 ----------------
 # 2026-07-31 改：旧版头图硬写一张 Steam 静态图（如轮回之兽），每天刷新后仍是同一张。
 # 改为按当日 B站 游戏区热门自动选：
@@ -1839,8 +1743,11 @@ def _masthead_pick(data, exclude_urls=None):
 
     # 1) 事件优先（发售/上线/登顶/联动/实机/周年/首曝/爆料）
     # 2026-08-05 扩：加 "爆料/新皮肤/时装/资料片" 匹配 popular 池的王者新皮肤
+    # 2026-08-19 扩：补硬核大事件关键词（专场/State of Play/发布会/直面会/PV/前瞻/志怪/中元），
+    #   让"影之刃零专场 State of Play""鸣潮清宵PV"这类硬核游戏大事件优先于 MC 整活视频。
     evt = [v for v in candidates if re.search(
-        r'发售|上线|公测|首发|定档|开测|首测|不删档|联动|周年|登顶|实机|首曝|预约|开服|夺魁|夺冠|爆料|新皮肤|新角|时装|资料片|主题曲|CG',
+        r'发售|上线|公测|首发|定档|开测|首测|不删档|联动|周年|登顶|实机|首曝|预约|开服|夺魁|夺冠|爆料|新皮肤|新角|时装|资料片|主题曲|CG|'
+        r'专场|State\s?of\s?Play|发布会|直面会|前瞻|PV|宣传片|预告片|志怪|中元|鬼节|关卡',
         v.get("title", ""))]
     evt.sort(key=lambda x: -penalized_view(x))
     if evt:
@@ -1857,7 +1764,20 @@ def _masthead_pick(data, exclude_urls=None):
         sub_chips = [v.get("title", "")[:22] for v in evt[1:3]]
         return (main, kicker_lv, sub_chips, False)
 
-    # 2) 落到游戏区第一（最近用过的大幅降权）
+    # 2) 硬核大事件优先（2026-08-19 修复）：B站候选池里没有命中事件关键词时，
+    #    不要急着落到"游戏区第一"（那会把 MC 整活这类泛娱乐视频顶上头图）。
+    #    先尝试从 events.json 找一条近 3 天的硬核游戏大事件（定档/公测/专场/PV/关卡，
+    #    带权威溯源）。有的话优先上头图——符合"头条优先硬核游戏大事件"的诉求。
+    evt_fb = _masthead_fallback_event(data, exclude_urls)
+    if evt_fb:
+        fb_main, fb_lv, fb_sub, fb_fallback = evt_fb
+        # 只当事件有权威印证（非"单源事件"）或带强事件信号时才启用，
+        # 避免把一条冷门公告硬顶掉有热度的 B站视频。
+        if fb_main.get("_verdict") not in ("单源事件",) or re.search(
+                r'公测|定档|首发|发售|专场|发布会|PV|志怪|中元|关卡', fb_main.get("title", "")):
+            return (fb_main, fb_lv, fb_sub, False)
+
+    # 3) 落到游戏区第一（最近用过的大幅降权）
     candidates.sort(key=lambda x: -penalized_view(x))
     main = candidates[0]
     if _bvid_of(main):
@@ -1915,6 +1835,38 @@ def _masthead_fallback_event(data, exclude_urls=None):
                 age = None
         score, detail = _heat_score(title, data, datetime.date.today().strftime("%Y-%m-%d"), age=age)
         scored.append((score, detail, fe))
+
+    # 2026-08-19：把 events[] 里带未来定档日期（date_start 在今天~+30天）的日历节点
+    #   也纳入候选（诡秘之主 8/21、燕云十六声 8/27 这类定档事件只在 events[]，
+    #   不进 feed_events，之前 fallback 永远扫不到它们 → 漏上头图）。
+    #   定档节点是"硬核大事件"，优先级高，给一个正向基础分（不靠新鲜度衰减打压）。
+    try:
+        _today = datetime.date.today()
+        for ce in (ev.get("events") or []):
+            ds = ce.get("date_start")
+            if not ds:
+                continue
+            try:
+                d = datetime.date.fromisoformat(str(ds)[:10])
+            except Exception:
+                continue
+            if not (_today <= d <= _today + datetime.timedelta(days=30)):
+                continue  # 只看未来 30 天内的定档节点
+            title = ce.get("title") or ce.get("game") or "（无标题）"
+            url = ce.get("source_url") or ce.get("url") or "#"
+            if not url or url == "#":
+                continue  # 红线：无溯源链接不上头图
+            if url in exclude_urls:
+                continue
+            # 定档事件按"今天发布的新闻"算新鲜度（age=0 最热），
+            #   其日期是"未来发生日"而非"发布日"，不应被当作旧闻扣分。
+            score, detail = _heat_score(title, data, datetime.date.today().strftime("%Y-%m-%d"), age=0)
+            # 定档/公测/专场/关卡类硬核大事件，额外加权确保优先于普通更新
+            if re.search(r'公测|定档|首发|发售|专场|发布会|PV|志怪|中元|关卡|联动', title):
+                score += 6
+            scored.append((score, detail, ce))
+    except Exception:
+        pass
 
     if not scored:
         return None
@@ -2138,9 +2090,6 @@ def main():
     body, intro, _ = build_hot(data, date_s)
     src, ok1 = replace_hot(src, body, intro, date_s)
     src, n3 = stamp_curated(src, date_s)
-    # 今日速览·卡片网格增强（注入封面图，无匹配用渐变占位）
-    brief_cards = build_brief_cards(src, data)
-    src, n_brief = replace_brief(src, brief_cards)
     # 今日焦点（#podium）：合并原「视觉焦点 + 内容 TOP10」，三档金字塔布局。
     #   TOP1 榜首大图（事件/视频） / TOP2-5 中卡（视频+缩略图） / TOP6-10 紧凑小卡（无图）。
     #   候选同源：popular+weekly → top10_score 排序 + events.json feed_events 当日事件。
@@ -2178,7 +2127,6 @@ def main():
         raise
     print(f"refresh_content: 已用 {date_s} 采集结果重刷内容板块"
           f"（梗雷达 3 子板块 / 今日焦点 {n_podium} 张（金字塔三档：TOP1 大 + TOP2-5 中 + TOP6-10 小）"
-          f" / 速览 {n_brief} 卡片化"
           f" / 头图轮换 {n_mh} / 新增策展标记 {n3}）")
     print("  注：今日焦点（原视觉焦点+TOP10 合并）脚本全自动定稿，无人工确认环节；")
     print("      风险观察仍为静态块，由 (e) 校验做过期告警。")

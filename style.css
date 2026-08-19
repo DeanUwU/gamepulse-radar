@@ -89,12 +89,26 @@ mark{background:rgba(255,176,32,.35);color:#fff;border-radius:3px;padding:0 3px}
 .cal-cell .cd{font-weight:700;color:var(--sub);font-size:var(--text-sm);margin-bottom:var(--space-3xs)}
 .cal-cell.today{background:rgba(255,92,57,.12);box-shadow:inset 0 0 0 2px var(--accent)}
 .cal-cell.today .cd{color:var(--accent)}
-.cal-ev{display:block;margin-top:var(--space-3xs);padding:var(--space-3xs) var(--space-2xs);border-radius:var(--radius-sm);
-  border-left:3px solid var(--blue);color:var(--txt);font-size:var(--text-xs);line-height:1.35;
-  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.cal-ev:hover{text-decoration:none;color:var(--blue)}
-.cal-ev b{color:var(--gold)}
-.cal-ev.guess{border-left-style:dashed;opacity:.85}
+/* ===== 未来动作日程表 v7（2026-08-18）===== */
+.cal-agenda{display:flex;flex-direction:column;border-top:1px solid var(--border)}
+.ag-row{display:flex;align-items:baseline;gap:12px;padding:8px 10px 8px 16px;
+  border-bottom:1px solid var(--border);text-decoration:none;color:var(--txt);
+  position:relative;transition:background .12s}
+.ag-row::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--c,transparent)}
+.ag-row:hover{background:rgba(77,163,255,.06)!important;text-decoration:none!important;color:var(--txt)}
+.ag-row.ag-today-row{background:rgba(255,92,57,.07)!important}
+.ag-row.ag-today-row::before{background:var(--accent)}
+.ag-date{flex:0 0 78px;font-size:12px;font-weight:800;color:var(--sub);white-space:nowrap}
+.ag-date.ag-today{color:var(--accent)}
+.ag-date.ag-date-dim{visibility:hidden}
+.ag-body{flex:1;min-width:0;display:flex;align-items:baseline;gap:6px;font-size:12.5px;line-height:1.45}
+.ag-game{flex-shrink:0;font-weight:700;color:var(--gold)}
+.ag-sep{color:var(--sub);flex-shrink:0}
+.ag-text{color:var(--txt);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;flex:1}
+.ag-type{flex:0 0 auto;font-size:11px;color:var(--sub);display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.ag-type i{width:8px;height:8px;border-radius:50%;background:var(--c,var(--sub));display:inline-block;flex-shrink:0}
+.ag-more{padding:6px 16px;font-size:11px;color:var(--sub)}
+.tl-empty{color:var(--sub);padding:20px;text-align:center;font-size:13px}
 .cal-legend{margin-top:var(--space-xs);font-size:var(--text-xs);color:var(--sub)}
 .cal-legend span{display:inline-block;margin-right:var(--space-sm)}
 .cal-legend i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:var(--space-2xs);vertical-align:middle}

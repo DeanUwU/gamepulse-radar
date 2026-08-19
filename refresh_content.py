@@ -853,13 +853,18 @@ def _heat_score(title, data, date_s, age=None):
     return score, detail
 
 
-def _podium_top1(data, date_s):
+def _podium_top1(data, date_s, exclude_urls=None):
     """生成焦点榜 TOP1 头条位（事件类优先）。返回 dict 或 None。
     来源优先级：events.json feed_events 当日 → meme 风险词视�� → 视频池 H 最高。
     2026-08-17（三轮修复）：事件选择不再按 feed_events 时间顺序取第一条，
       改为「印证强度(multi>single>weak) + 事件权重(发售/登顶/大事件)」排序，
       选出含金量最高的事件当头条，弱证据冷门事件不再霸榜。
+    2026-08-18：加 exclude_urls（masthead 头图已用 URL），让头图优先、焦点榜避让。
     """
+    if not exclude_urls:
+        exclude_urls = set()
+    else:
+        exclude_urls = set(exclude_urls)
     # 1) events.json feed_events：按 _heat_score 真实热度排序
     #    时效红线：统一「近 3 天」（2026-08-17 收紧——不再因 tgmeng 提及就放宽到 7 天；
     #    时效性改由 _heat_score 内的 fresh_bonus 连续衰减负责，旧闻即使被日报反复提及也会被扣分）。
@@ -870,6 +875,9 @@ def _podium_top1(data, date_s):
         for fe in (ev.get("feed_events") or []):
             pd = fe.get("pubdate") or fe.get("first_seen") or ""
             title = fe.get("title") or fe.get("game") or "（无标题）"
+            # 与 masthead 头图去重（2026-08-18：头图优先，焦点榜避让）
+            if (fe.get("source_url") or fe.get("url") or "") in exclude_urls:
+                continue
             age = None
             if pd:
                 try:
@@ -904,6 +912,8 @@ def _podium_top1(data, date_s):
                "收购", "减持", "停服", "跳票", "官宣", "定档", "登顶", "预购", "开启预购",
                "预售", "正式发售", "上线"]
     for v in (data.get("popular", []) + data.get("weekly", [])):
+        if (v.get("url") or "") in exclude_urls:
+            continue
         if fresh_bili(v) and any(k in (v.get("title") or "") for k in RISK_KW):
             return _podium_video_to_dict(v, 1)
     # 3) 降级：视频池 top1（按 top10_score）作为头条
@@ -913,7 +923,8 @@ def _podium_top1(data, date_s):
     for v in data.get("weekly", []):
         if v["url"] not in pool:
             pool[v["url"]] = dict(v, _src="周必看", _rank=999)
-    rows = sorted([v for v in pool.values() if fresh_bili(v)], key=top10_score, reverse=True)
+    rows = sorted([v for v in pool.values() if fresh_bili(v) and v["url"] not in exclude_urls],
+                  key=top10_score, reverse=True)
     if rows:
         return _podium_video_to_dict(rows[0], 1)
     return None
@@ -959,10 +970,15 @@ def _podium_video_to_dict(v, rank):
     }
 
 
-def build_podium(data, date_s):
+def build_podium(data, date_s, exclude_urls=None):
     """生成「今日焦点」#podium 板块（金字塔三档）。
     设计：TOP1 榜首大卡 + TOP2-5 中卡 + TOP6-10 小卡，全部去重自同一 pool。
+    2026-08-18：加 exclude_urls（masthead 头图已用 URL），让头图优先、焦点榜避让。
     """
+    if not exclude_urls:
+        exclude_urls = set()
+    else:
+        exclude_urls = set(exclude_urls)
     # 排序视频池：popular + weekly，按 top10_score
     # 2026-08-17 垂类硬过滤：TOP10 只收「游戏分区」或「标题含强游戏/ACG 信号」的视频，
     #   纯泛娱乐（影视/生活/搞笑，靠 STRONG_GAME_KW 兜底误进的）一律排除，
@@ -977,16 +993,18 @@ def build_podium(data, date_s):
     #   soft（游戏分区但标题无强游戏语义的泛娱乐）兜底，避免泛娱乐霸榜。
     strong_pool = sorted(
         [v for v in pool.values()
-         if fresh_bili(v) and _is_game_vertical(v) is True],
+         if fresh_bili(v) and _is_game_vertical(v) is True
+         and v["url"] not in exclude_urls],
         key=top10_score, reverse=True)
     soft_pool = sorted(
         [v for v in pool.values()
-         if fresh_bili(v) and _is_game_vertical(v) == "soft"],
+         if fresh_bili(v) and _is_game_vertical(v) == "soft"
+         and v["url"] not in exclude_urls],
         key=top10_score, reverse=True)
     ranked_videos = (strong_pool + soft_pool)[:10]  # 强垂类优先，soft 仅兜底
 
     # TOP1：头条事件（视频或文章），URL 可能跟 ranked_videos[0] 重合
-    top1 = _podium_top1(data, date_s)
+    top1 = _podium_top1(data, date_s, exclude_urls=exclude_urls)
 
     # ---- 2026-08-17 治理：TOP1 真实热度印证（基于 _heat_score） ----
     # top1 已由 _heat_score 选出真热事件（tgmeng 提及频次 + 多源 + 强事件信号），
@@ -1684,7 +1702,8 @@ def _masthead_pick(data, exclude_urls=None):
         url = v.get("url") or ""
         if not v.get("pic"):
             continue
-        # 时效过滤（2026-08-12：头图与 TOP10 统一为近 3 天，避免周更/每周必看陈视频霸屏）
+        # 时效过滤：头图与 TOP10 统一为近 3 天（红线：不得出现陈旧内容）。
+        # 每周必看虽是周更，pubdate 天然偏旧，但「旧了就是旧了」，不能因是门面素材破例放宽。
         a = _pub_age(v)
         if a is not None and a > MAX_AGE_DAYS:
             continue
@@ -2032,18 +2051,16 @@ def main():
     # 今日焦点（#podium）：合并原「视觉焦点 + 内容 TOP10」，三档金字塔布局。
     #   TOP1 榜首大图（事件/视频） / TOP2-5 中卡（视频+缩略图） / TOP6-10 紧凑小卡（无图）。
     #   候选同源：popular+weekly → top10_score 排序 + events.json feed_events 当日事件。
-    podium_html, n_podium = build_podium(data, date_s)
-    src, _ = replace_podium(src, podium_html)
-
-    # 2026-08-17：收集 podium 已用 URL，传给 masthead 做去重
-    _podium_urls = set()
-    for m in re.finditer(r'href="([^"]*)"', podium_html or ""):
+    # 2026-08-18 顺序调整：masthead 头图优先选（门面素材），podium 避让头图已用 URL。
+    masthead_html = build_masthead(data)
+    _mh_urls = set()
+    for m in re.finditer(r'href="([^"]*)"', masthead_html or ""):
         u = m.group(1)
         if u and u != "#" and not u.startswith("javascript:"):
-            _podium_urls.add(u)
+            _mh_urls.add(u)
 
-    # 头图·每日轮换（按当日 B站 游戏区热门自动选）——与 TOP10 去重 + 强垂类过滤
-    masthead_html = build_masthead(data, exclude_urls=_podium_urls)
+    podium_html, n_podium = build_podium(data, date_s, exclude_urls=_mh_urls)
+    src, _ = replace_podium(src, podium_html)
     src, n_mh = replace_masthead(src, masthead_html)
 
     # 页面身份日期必须随当天采集同步；只改标题和头部 chip，绝不粗暴替换正文里的事件日期。

@@ -69,6 +69,46 @@ if not terms:
     sys.stderr.write("ERROR: wordcloud_terms.json 中没有词条。\n")
     sys.exit(1)
 
+
+# ---- 词条时效过滤（2026-08-18 新增）：剔除内嵌「X月X日」已过期的历史词条 ----
+# 词云必须反映「当前讨论热词」，不能混入已经过了 3 天的旧事件词
+# （如「三角洲8月13日更新」「永劫无间汉堡王联动8月14开启」在 8/18 已属旧闻）。
+# 规则：从 term 里抽取「N月N日」；与今天比较，若该日期距今 > STALE_DAYS 天则剔除。
+# 阈值与全站时效红线 MAX_AGE_DAYS=3 一致：今日热词只保留今天/昨天/未来预告的事件词。
+STALE_DAYS = 3
+_DATE_WORD = re.compile(r'(\d{1,2})\s*月\s*(\d{1,2})\s*日')
+_y = datetime.date.today().year
+_now_date = datetime.date.today()
+
+def _term_is_stale(term):
+    """词条内嵌日期是否已过期（>STALE_DAYS 天）。无日期字则视为新鲜，不剔除。"""
+    for m in _DATE_WORD.finditer(term):
+        mo, dd = int(m.group(1)), int(m.group(2))
+        try:
+            d = datetime.date(_y, mo, dd)
+        except ValueError:
+            continue
+        # 距今天数（可能为负=未来日期，视为新鲜事件预告，不剔除）
+        age = (_now_date - d).days
+        if age > STALE_DAYS:
+            return True
+    return False
+
+_filtered_terms = []
+_stale_terms = []
+for t in terms:
+    term = (t.get("term") or "").strip()
+    if _term_is_stale(term):
+        _stale_terms.append(term)
+        continue
+    _filtered_terms.append(t)
+if _stale_terms:
+    print(f"时效过滤：剔除 {len(_stale_terms)} 条过期词条 -> {_stale_terms}")
+terms = _filtered_terms
+if not terms:
+    sys.stderr.write("ERROR: 时效过滤后无有效词条。\n")
+    sys.exit(1)
+
 _STORE_PRODUCT = re.compile(r"store\.steampowered\.com/(?:app|sub)/\d+(?!/news)")
 _SEARCH_PAGE = re.compile(
     r"search\.bilibili\.com|s\.weibo\.com|/search[/?]|[?&](?:keyword|q|wd|query)=",
@@ -418,12 +458,30 @@ def _esc(s):
             .replace('"', "&quot;").replace("'", "&#39;"))
 
 
+def _load_masthead_from_index():
+    """从 index.html 读取当前 masthead（<!--mh-->...<!--/mh-->），供 wordcloud.html 复用。
+    2026-08-18：让词云页顶部与主站共用同一张今日头条头图，避免「头图没图」。
+    若 index.html 尚无 masthead（首次/异常），返回空串，页面退回纯 hero 标题。
+    """
+    try:
+        src = io.open(INDEX_PATH, encoding="utf-8").read()
+    except Exception:
+        return ""
+    m = re.search(r'(<!--mh-->)(.*?)(<!--/mh-->)', src, re.S)
+    if not m:
+        return ""
+    return m.group(0)
+
+
 def generate_wordcloud_page():
     """生成 wordcloud.html：wordcloud2.js canvas 紧致排版 + 溯源侧边栏 + TOP8"""
 
     # ---- wordcloud2.js CDN（从 jsdelivr 加载） ----
     # 注：wordcloud2.js 是 timdream/wordcloud2.js 的标准 CDN 路径
     wc2_cdn = "https://cdn.jsdelivr.net/npm/wordcloud@1.2.2/src/wordcloud2.min.js"
+
+    # ---- 复用主站今日头条 masthead（2026-08-18：词云页顶部不再空块/无图） ----
+    masthead_html = _load_masthead_from_index()
 
     page = f'''<!doctype html>
 <html lang="zh-CN">
@@ -498,6 +556,7 @@ def generate_wordcloud_page():
 </head>
 <body>
 <header><div class="hbar"><div class="logo">&#127918; GamePulse<em>·雷达</em></div><span class="chip">&#9729; 词云</span><span class="chip fresh">{cloud_date}</span><nav><a href="index.html" target="_top">&#8962; 主站</a><a href="history.html">历史回顾</a></nav></div></header>
+{masthead_html}
 <div class="wrap">
 <div class="hero"><h1>讨论热词词云</h1><p>玩家社区真实讨论热词（B站热搜 / 贴吧 / 梗雷达六路）+ 网站已收录参考。已过滤媒体·公众号名、宽泛行业词、非游戏内容；分类仅四色：事件炸点 / 行业议题 / 版本新品 / 梗社区（无舆情风险）。<b>字号=热度 H(0-100)</b>，<b>点击词条</b>可在右侧面板查看该词当日所有原始标题与链接（词条溯源）。</p></div>
 <section id="stat">

@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-08-12T14:58:05",
+ "generated_at": "2026-08-19T10:40:19",
  "summary": {
-  "candidates": 54,
+  "candidates": 53,
   "suggest": 22,
-  "maybe": 31,
+  "maybe": 30,
   "dead": 1,
   "registered": 65
  },
@@ -459,21 +459,7 @@
   {
    "kind": "external",
    "game": "全行业",
-   "url": "https://www.msi.cn/",
-   "from": "gcores",
-   "status": 200,
-   "type": "static",
-   "verdict": "maybe",
-   "reasons": [
-    "跨域站点，归属游戏待人工确认"
-   ],
-   "suggest_id": "",
-   "toml": ""
-  },
-  {
-   "kind": "external",
-   "game": "全行业",
-   "url": "https://store.msi.cn/",
+   "url": "https://m.piaoxingqiu.com/?lssId=807c0bd68b28fca2",
    "from": "gcores",
    "status": 200,
    "type": "static",
@@ -626,6 +612,20 @@
   },
   {
    "kind": "external",
+   "game": "主机/PC 大作",
+   "url": "https://www.gearsofwar.com/en-us/news/openbeta/",
+   "from": "xbox_wire",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
    "game": "全行业",
    "url": "http://ku.gamersky.com/",
    "from": "gamersky_pc",
@@ -643,20 +643,6 @@
    "game": "全行业",
    "url": "http://pic.gamersky.com/",
    "from": "gamersky_pc",
-   "status": 200,
-   "type": "static",
-   "verdict": "maybe",
-   "reasons": [
-    "跨域站点，归属游戏待人工确认"
-   ],
-   "suggest_id": "",
-   "toml": ""
-  },
-  {
-   "kind": "external",
-   "game": "主机/PC 大作",
-   "url": "https://brigandine-abyss.happinet-games.com/",
-   "from": "ps_blog_ja",
    "status": 200,
    "type": "static",
    "verdict": "maybe",

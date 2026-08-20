@@ -165,7 +165,7 @@ PAN_ENT_KW = re.compile(
     r'搞笑|影视|综艺|生活|美食|颜值|舞蹈|音乐综合|知识|鬼畜剧场')  # 泛娱乐（非游戏语境）兜底类
 
 def top10_score(v):
-    """TOP10 排序 = 「播放量 × 信号权重 × 新鲜度 × 垂类聚焦」
+    """TOP10 排序 = 「播放量 × 信号权重 × 新鲜度 × 垂类聚焦 × 当日热度数H」
 
     四层因子：
       1. 游戏相关性（分区/关键词/发售节点）→ 大作不被泛圈淹没
@@ -175,9 +175,12 @@ def top10_score(v):
          · 纯泛娱乐（靠关键词兜底进来的影视/搞笑）→ ×0.4 压底
       3. 新鲜度加成（来源权重）→ 热门榜靠前 = 当日爆发信号，周必看 = 持续热度
       4. 发售/登顶节点 → 正式发售、定档类大作额外保送
+      5. 当日热度数 H（2026-08-20 新增）：读 wordcloud_terms.json 的 H(0-100) 统一口径，
+         乘 (0.5 + H/100) 因子——H=100→×1.5 拔高、H=0→×0.5 压底。
+         解决「播放量高但当日词云热度低」的内容霸榜（如旧周必看压住当日黑神话钟馗）。
 
-    目标：让 TOP10 自然浮现「新游发售 / 官方物料 / ACG 热点」，
-         而非被泛娱乐巨量视频淹没。
+    目标：让 TOP10 自然浮现「新游发售 / 官方物料 / ACG 热点 / 当日全网热议」，
+         而非被泛娱乐巨量视频或陈旧周必看淹没。
     """
     view = v.get("view", 0)
     tname = v.get("tname") or ""
@@ -216,7 +219,56 @@ def top10_score(v):
     elif src == "周必看":
         freshness = 1.0   # 持续热度，不额外加成也不 penalize
 
-    return view * game_boost * focus * freshness
+    # --- 当日热度数 H（2026-08-20 新增）---
+    # 读 wordcloud_terms.json 的 H 映射，标题归一化后双向匹配（与 masthead _h_of 同逻辑）。
+    h_factor = 1.0
+    try:
+        import re as _re
+        _norm = lambda s: _re.sub(
+            r'[\s《》〈〉\[\]()（）:：·\-_—,.，。、!！?？]', '', s).lower()
+        _title_n = _norm(title)
+        _hm = _top10_hmap()
+        if _title_n in _hm:
+            h = _hm[_title_n]
+        else:
+            h = 0
+            for _t, _h in _hm.items():
+                _nt = _norm(_t)
+                if _nt and (_nt in _title_n or _title_n in _nt):
+                    h = _h
+                    break
+        h_factor = 0.5 + h / 100.0  # H∈[0,100] → factor∈[0.5,1.5]
+    except Exception:
+        pass
+
+    return view * game_boost * focus * freshness * h_factor
+
+
+# 2026-08-20：词云 H 值映射缓存（模块级，避免每次 top10_score 重读文件）。
+_TOP10_HMAP_CACHE = None
+
+
+def _top10_hmap():
+    """读 wordcloud_terms.json → {归一化标题: H}。带模块级缓存。"""
+    global _TOP10_HMAP_CACHE
+    if _TOP10_HMAP_CACHE is not None:
+        return _TOP10_HMAP_CACHE
+    import re as _re
+    _norm = lambda s: _re.sub(
+        r'[\s《》〈〉\[\]()（）:：·\-_—,.，。、!！?？]', '', s).lower()
+    hmap = {}
+    try:
+        wc = os.path.join(BASE, "wordcloud_terms.json")
+        if os.path.exists(wc):
+            obj = json.load(io.open(wc, encoding="utf-8"))
+            for t in obj.get("terms", []) or []:
+                term = (t.get("term") or "").strip()
+                if term:
+                    hmap[_norm(term)] = int(t.get("heat", 0) or 0)
+    except Exception:
+        pass
+    _TOP10_HMAP_CACHE = hmap
+    return hmap
 
 
 def esc(s):
@@ -981,14 +1033,32 @@ def _podium_top1(data, date_s, exclude_urls=None):
             scored.sort(key=lambda x: -x[0])
             score, detail, fe = scored[0]
             # 尝试从 meme 视频池找同事件的相关封面图（feed_events 本身无图片字段）
+            # 2026-08-20 修复：借图必须"高相关"——game 字段为核心匹配词，且排除
+            #   "全行业"等泛词；标题前6字仅作弱信号。避免事件文章借到不相关视频封面
+            #   （如「灵犀互娱易主」周报借到《黑神话：钟馗》实机图，封面与标题语义不符）。
+            #   借不到高相关图时留空，走无图渐变卡分支（is_event=True），绝不强行错配。
             top1_img = ""
-            title_for_match = (fe.get("title") or "") + " " + (fe.get("game") or "")
-            _t1_kw = [k for k in [fe.get("game") or "", (fe.get("title") or "")[:6]] if k]
+            _game = (fe.get("game") or "").strip()
+            _title = fe.get("title") or ""
+            # 核心匹配词：优先 game 字段（非空且非泛词），其次标题里《》包裹的游戏名
+            _t1_kw = []
+            if _game and _game not in ("全行业", "未知", "其他"):
+                _t1_kw.append(_game)
+            _title_game = re.search(r'《([^》]+)》', _title)
+            if _title_game:
+                _t1_kw.append(_title_game.group(1))
+            # 标题前6字作为弱信号，但排除纯泛词（如"灵犀互娱"无法对应任何视频）
+            _weak = _title[:6]
             for v in (data.get("popular", []) + data.get("weekly", [])):
                 if not v.get("pic"):
                     continue
                 vt = v.get("title") or ""
-                if any(k in title_for_match for k in _t1_kw) or any(k in vt for k in _t1_kw):
+                # 强匹配：视频标题含核心游戏名（game 或《》内游戏名）
+                if _t1_kw and any(k in vt for k in _t1_kw):
+                    top1_img = v["pic"]
+                    break
+                # 弱匹配：仅当核心词为空时，才退而用标题前6字（避免泛词错配）
+                if (not _t1_kw) and _weak and _weak in vt:
                     top1_img = v["pic"]
                     break
             return {

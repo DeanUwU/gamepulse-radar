@@ -1691,6 +1691,48 @@ def _masthead_pick(data, exclude_urls=None):
     else:
         exclude_urls = set(exclude_urls)
 
+    # 2026-08-20 治理：引入词云 H 值作为头图排序的主信号。
+    #   此前 evt/candidates 仅按 play(view) 降序排序，导致今天最热（词云 H=98）但
+    #   播放量非第一的《黑神话：钟馗》(89.8万) 被压在《七界梦谭》(345万) 之后，
+    #   封面/标题与当日热度不符。改为 H 优先、view 次级。
+    def _load_hmap():
+        """读 wordcloud_terms.json，返回 {归一化标题: H} 映射（H∈0-100）。"""
+        hmap = {}
+        try:
+            import glob as _glob
+            wc = os.path.join(BASE, "wordcloud_terms.json")
+            if os.path.exists(wc):
+                obj = json.load(io.open(wc, encoding="utf-8"))
+                for t in obj.get("terms", []) or []:
+                    term = (t.get("term") or "").strip()
+                    if term:
+                        hmap[term] = int(t.get("heat", 0) or 0)
+        except Exception:
+            pass
+        return hmap
+    hmap = _load_hmap()
+
+    def _h_of(v):
+        """取候选视频的当日词云 H 值；无匹配则按 view 估算兜底 H（view/30万 截顶100）。"""
+        title = (v.get("title") or "").strip()
+        if title in hmap:
+            return hmap[title]
+        # 归一化：去《》、空格、中英文标点，便于词云 term 与视频标题跨格式匹配。
+        import re as _re
+        norm = lambda s: _re.sub(r'[\s《》〈〉\[\]()（）:：·\-_—,.，。、!！?？]', '', s).lower()
+        nt = norm(title)
+        # 1) 精确归一化匹配
+        for term, h in hmap.items():
+            if norm(term) == nt:
+                return h
+        # 2) 包含匹配（双向）：标题含 term 核心或 term 含标题核心
+        for term, h in hmap.items():
+            nterm = norm(term)
+            if nterm and (nterm in nt or nt in nterm):
+                return h
+        view = v.get("view", 0) or 0
+        return min(100, int(view / 300000))
+
     # 2026-08-05 治理：来源标注必须与条目真实出处一致，不能一律写"B 站热门"。
     # 打上 _origin 标签，渲染时按真实出处显示（全站排行 / 每周必看）。
     pool = []
@@ -1760,7 +1802,7 @@ def _masthead_pick(data, exclude_urls=None):
         r'发售|上线|公测|首发|定档|开测|首测|不删档|联动|周年|登顶|实机|首曝|预约|开服|夺魁|夺冠|爆料|新皮肤|新角|时装|资料片|主题曲|CG|'
         r'专场|State\s?of\s?Play|发布会|直面会|前瞻|PV|宣传片|预告片|志怪|中元|鬼节|关卡',
         v.get("title", ""))]
-    evt.sort(key=lambda x: -penalized_view(x))
+    evt.sort(key=lambda x: (-_h_of(x), -penalized_view(x)))
     if evt:
         main = evt[0]
         # 记录今天用过的 bvid
@@ -1788,8 +1830,8 @@ def _masthead_pick(data, exclude_urls=None):
                 r'公测|定档|首发|发售|专场|发布会|PV|志怪|中元|关卡', fb_main.get("title", "")):
             return (fb_main, fb_lv, fb_sub, False)
 
-    # 3) 落到游戏区第一（最近用过的大幅降权）
-    candidates.sort(key=lambda x: -penalized_view(x))
+    # 3) 落到游戏区第一（最近用过的大幅降权；H 优先、view 次级）
+    candidates.sort(key=lambda x: (-_h_of(x), -penalized_view(x)))
     main = candidates[0]
     if _bvid_of(main):
         history.append({"date": today, "bvid": _bvid_of(main), "title": main.get("title", "")[:60]})

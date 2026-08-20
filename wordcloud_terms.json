@@ -1,29 +1,25 @@
 {
-  "date": "2026-08-19",
+  "date": "2026-08-20",
   "terms": [
     {
-      "term": "影之刃零专场State of Play",
-      "href": "https://www.bilibili.com/video/BV1Zdbi6rER9",
+      "term": "黑神话钟馗15分钟实机演示",
+      "href": "https://www.bilibili.com/video/BV1kS8H6VERt",
       "cat": "游戏/新品",
-      "heat": 95,
+      "heat": 100,
       "sources": [
         "B站"
+      ],
+      "hotlist_boost": 10,
+      "hotlist_platforms": 1,
+      "hotlist_sources": [
+        "weibo:黑神话"
       ]
     },
     {
-      "term": "GTA6泄露锁30帧",
-      "href": "https://www.gamersky.com/news/202608/2191773.shtml",
-      "cat": "事件/风险",
-      "heat": 90,
-      "sources": [
-        "游民星空"
-      ]
-    },
-    {
-      "term": "鸣潮清宵PV修行",
-      "href": "https://www.bilibili.com/video/BV1GFbk6LEVm",
+      "term": "影之刃零State of Play专场",
+      "href": "https://www.bilibili.com/video/BV1Zdbi6rER9",
       "cat": "游戏/新品",
-      "heat": 88,
+      "heat": 92,
       "sources": [
         "B站"
       ]
@@ -32,32 +28,23 @@
       "term": "影之刃零11分钟实机预购",
       "href": "https://www.bilibili.com/video/BV1Hmuv68EWW",
       "cat": "游戏/新品",
-      "heat": 84,
+      "heat": 85,
       "sources": [
         "B站"
-      ]
-    },
-    {
-      "term": "三角洲S11前瞻爆料",
-      "href": "https://www.bilibili.com/video/BV11Xb96qE97",
-      "cat": "游戏/新品",
-      "heat": 78,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "影之刃零预售登顶Steam",
-      "href": "https://www.youxituoluo.com/534800.html",
-      "cat": "行业/数据",
-      "heat": 74,
-      "sources": [
-        "游戏陀螺"
       ]
     },
     {
       "term": "原神奥黛塔角色预告",
       "href": "https://www.bilibili.com/video/BV1sxui6eEGH",
+      "cat": "游戏/新品",
+      "heat": 80,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "七界梦谭三测PV",
+      "href": "https://www.bilibili.com/video/BV1nZb66oEpX",
       "cat": "游戏/新品",
       "heat": 72,
       "sources": [
@@ -65,35 +52,17 @@
       ]
     },
     {
-      "term": "诡秘之主成本12亿纯手搓",
-      "href": "https://www.youxituoluo.com/534802.html",
-      "cat": "行业/数据",
+      "term": "崩坏星穹铁道知更鸟晴歌",
+      "href": "https://www.bilibili.com/video/BV1GB8j6jEGF",
+      "cat": "游戏/新品",
       "heat": 70,
-      "sources": [
-        "游戏陀螺"
-      ]
-    },
-    {
-      "term": "开炮模拟器首周卖40万套",
-      "href": "http://www.gamelook.com.cn/2026/08/600192/",
-      "cat": "行业/数据",
-      "heat": 68,
-      "sources": [
-        "GameLook"
-      ]
-    },
-    {
-      "term": "鲁来三角洲玩家二创电影",
-      "href": "https://www.bilibili.com/video/BV1eFbY6WEKB",
-      "cat": "梗/社区",
-      "heat": 66,
       "sources": [
         "B站"
       ]
     },
     {
-      "term": "原神至冬7.0全收集",
-      "href": "https://www.bilibili.com/video/BV1BMgj6MEz4",
+      "term": "鸡来超长电影",
+      "href": "https://www.bilibili.com/video/BV1NBbe6jEzz",
       "cat": "游戏/新品",
       "heat": 64,
       "sources": [
@@ -101,26 +70,8 @@
       ]
     },
     {
-      "term": "灵犀互娱易主信宸资本",
-      "href": "https://www.youxituoluo.com/534799.html",
-      "cat": "事件/风险",
-      "heat": 63,
-      "sources": [
-        "游戏陀螺"
-      ]
-    },
-    {
-      "term": "星际公民直播Bug互怼",
-      "href": "http://www.gamelook.com.cn/2026/08/600212/",
-      "cat": "事件/风险",
-      "heat": 60,
-      "sources": [
-        "GameLook"
-      ]
-    },
-    {
-      "term": "和平精英刺激之夜回放",
-      "href": "https://www.bilibili.com/video/BV1ffuU6bEHj",
+      "term": "如常运转灾后重建MV",
+      "href": "https://www.bilibili.com/video/BV1h88g6tEQv",
       "cat": "游戏/新品",
       "heat": 58,
       "sources": [
@@ -128,228 +79,201 @@
       ]
     },
     {
-      "term": "内存价格一年暴涨500%",
-      "href": "https://www.gamersky.com/news/202608/2191607.shtml",
-      "cat": "事件/风险",
-      "heat": 56,
-      "sources": [
-        "游民星空"
-      ]
-    },
-    {
-      "term": "莉莉丝丧尸新游进畅销Top20",
-      "href": "https://www.youxituoluo.com/534801.html",
-      "cat": "行业/数据",
-      "heat": 54,
-      "sources": [
-        "游戏陀螺"
-      ]
-    },
-    {
-      "term": "低配二游月入3000万",
-      "href": "http://www.gamelook.com.cn/2026/08/600168/",
-      "cat": "行业/数据",
-      "heat": 52,
-      "sources": [
-        "GameLook"
-      ]
-    },
-    {
-      "term": "阴阳师维护更新",
-      "href": "https://yys.163.com/news/update/20260818/23024_1311591.html",
+      "term": "岸防炮模拟器",
+      "href": "https://www.bilibili.com/video/BV1b58u6SEu9",
       "cat": "游戏/新品",
-      "heat": 50,
-      "sources": [
-        "阴阳师官方"
-      ]
-    },
-    {
-      "term": "KPL梗不太想走了",
-      "href": "https://www.bilibili.com/video/BV1kcbR6wEzb",
-      "cat": "梗/社区",
-      "heat": 49,
+      "heat": 52,
       "sources": [
         "B站"
       ]
     },
     {
-      "term": "老吴撼地掌",
-      "href": "https://www.bilibili.com/video/BV1i8bk69ERr",
-      "cat": "梗/社区",
+      "term": "出马仙镇东北AI长片",
+      "href": "https://www.bilibili.com/video/BV1gMgM6KEUM",
+      "cat": "游戏/新品",
+      "heat": 50,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "鲁来电影哭5000万三角洲玩家",
+      "href": "https://www.bilibili.com/video/BV1eFbY6WEKB",
+      "cat": "游戏/新品",
       "heat": 48,
       "sources": [
         "B站"
       ]
     },
     {
-      "term": "索尼PS新品官宣定档",
-      "href": "https://www.gamersky.com/news/202608/2191609.shtml",
-      "cat": "游戏/新品",
+      "term": "KPL梗指南",
+      "href": "https://www.bilibili.com/video/BV1vT836AEJf",
+      "cat": "梗/社区",
+      "heat": 76,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "空城计梗骗2.4万亿",
+      "href": "https://www.bilibili.com/video/BV1hY8g6xEwE",
+      "cat": "梗/社区",
+      "heat": 68,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "家长发视频想噶人21万赞",
+      "href": "https://www.bilibili.com/video/BV1bQ8u6WEap",
+      "cat": "梗/社区",
+      "heat": 62,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "梗外之音18",
+      "href": "https://www.bilibili.com/video/BV1rHbY6MEB9",
+      "cat": "梗/社区",
+      "heat": 60,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "七夕本是事业节",
+      "href": "https://www.bilibili.com/video/BV1q28V6VEYU",
+      "cat": "梗/社区",
+      "heat": 54,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "网络热梗科普二期",
+      "href": "https://www.bilibili.com/video/BV1fFbr6sEp9",
+      "cat": "梗/社区",
+      "heat": 55,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "每日一梗119期",
+      "href": "https://www.bilibili.com/video/BV1A7gP6CEab",
+      "cat": "梗/社区",
       "heat": 46,
       "sources": [
-        "游民星空"
+        "B站"
       ]
     },
     {
-      "term": "沉没之城2 M站79分",
-      "href": "https://www.gamersky.com/news/202608/2190712.shtml",
-      "cat": "行业/数据",
-      "heat": 45,
-      "sources": [
-        "游民星空"
-      ]
-    },
-    {
-      "term": "缆车惊变100天",
-      "href": "https://www.bilibili.com/video/BV1gibB6PEih",
+      "term": "东方梗指南卷心菜露米亚",
+      "href": "https://www.bilibili.com/video/BV1GNbv6ZE1N",
       "cat": "梗/社区",
+      "heat": 42,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "忍术回战沉浸式观看",
+      "href": "https://www.bilibili.com/video/BV1GNbv6ZE1N",
+      "cat": "梗/社区",
+      "heat": 40,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "B站AI创造公开赛70亿Token",
+      "href": "https://www.bilibili.com/video/BV1XUgg61E3G",
+      "cat": "行业/数据",
+      "heat": 66,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "AI军官监督学习",
+      "href": "https://www.bilibili.com/video/BV1aSbq6vEgz",
+      "cat": "行业/数据",
+      "heat": 56,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "盲人大哥装眼睛AI",
+      "href": "https://www.bilibili.com/video/BV1aSbq6vEgz",
+      "cat": "行业/数据",
       "heat": 44,
       "sources": [
         "B站"
       ]
     },
     {
-      "term": "沉星之序定档10月9日",
-      "href": "https://www.gcores.com/articles/218506",
-      "cat": "游戏/新品",
-      "heat": 43,
-      "sources": [
-        "机核GCORES"
-      ]
-    },
-    {
-      "term": "永劫无间违规封禁公告",
-      "href": "https://store.steampowered.com/news/app/1203220/view/322722517411170720",
-      "cat": "事件/风险",
-      "heat": 42,
-      "sources": [
-        "Steam新闻"
-      ]
-    },
-    {
-      "term": "回归荒废6年的游戏服务器",
-      "href": "https://www.bilibili.com/video/BV1Yuu46WENa",
-      "cat": "梗/社区",
-      "heat": 41,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "I_NORI AI独立游戏",
-      "href": "https://www.bilibili.com/video/BV1h8uq6SECj",
-      "cat": "游戏/新品",
-      "heat": 40,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "特技天堂2开启测试",
-      "href": "https://www.gcores.com/articles/218499",
-      "cat": "游戏/新品",
-      "heat": 39,
-      "sources": [
-        "机核GCORES"
-      ]
-    },
-    {
-      "term": "友谊时光利润大增74%",
-      "href": "http://www.gamelook.com.cn/2026/08/600169/",
+      "term": "MC铜的逆天想法",
+      "href": "https://www.bilibili.com/video/BV1fFbr6sEp9",
       "cat": "行业/数据",
       "heat": 38,
       "sources": [
-        "GameLook"
+        "B站"
       ]
     },
     {
-      "term": "Yalla游戏流水创6年新高",
-      "href": "https://www.baijing.cn/article/56397",
-      "cat": "行业/数据",
+      "term": "GTA6泄露黑客叫板R星",
+      "href": "https://www.bilibili.com/video/BV18Tby67EG9",
+      "cat": "事件/风险",
+      "heat": 74,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "Bin哥重回首发恭迎世一上",
+      "href": "https://www.bilibili.com/video/BV1u4876CE5w",
+      "cat": "事件/风险",
+      "heat": 57,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "日本灾区假兵偷家",
+      "href": "https://www.bilibili.com/video/BV1Neba63EDK",
+      "cat": "事件/风险",
+      "heat": 50,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "科比整治极端饭圈",
+      "href": "https://www.bilibili.com/video/BV1JP8L6DEbt",
+      "cat": "事件/风险",
+      "heat": 45,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "西方长债收益率飙升",
+      "href": "https://www.bilibili.com/video/BV1RV876HEd5",
+      "cat": "事件/风险",
       "heat": 36,
       "sources": [
-        "白鲸出海"
+        "B站"
       ]
     },
     {
-      "term": "东方梗卷心菜露米亚",
-      "href": "https://www.bilibili.com/video/BV1tmuu6eE7v",
-      "cat": "梗/社区",
+      "term": "韩国黄金到黑铁",
+      "href": "https://www.bilibili.com/video/BV1RV876HEd5",
+      "cat": "事件/风险",
       "heat": 34,
       "sources": [
         "B站"
-      ]
-    },
-    {
-      "term": "发烧梗",
-      "href": "https://www.bilibili.com/video/BV1Unub69EpX",
-      "cat": "梗/社区",
-      "heat": 32,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "影之刃零66天难度模式",
-      "href": "https://www.xiaoheihe.cn/app/bbs/link/188405494",
-      "cat": "游戏/新品",
-      "heat": 47,
-      "sources": [
-        "小黑盒"
-      ]
-    },
-    {
-      "term": "CS2在线人数连跌五月",
-      "href": "https://www.xiaoheihe.cn/app/bbs/link/188423248",
-      "cat": "行业/数据",
-      "heat": 40,
-      "sources": [
-        "小黑盒"
-      ]
-    },
-    {
-      "term": "诡秘之主外国玩家崩溃",
-      "href": "https://www.xiaoheihe.cn/app/bbs/link/188419966",
-      "cat": "梗/社区",
-      "heat": 35,
-      "sources": [
-        "小黑盒"
-      ]
-    },
-    {
-      "term": "Apex手柄辅瞄削弱",
-      "href": "https://www.xiaoheihe.cn/app/bbs/link/188397886",
-      "cat": "事件/风险",
-      "heat": 33,
-      "sources": [
-        "小黑盒"
-      ]
-    },
-    {
-      "term": "明日方舟终末地8月21前瞻",
-      "href": "https://www.xiaoheihe.cn/app/bbs/link/188410583",
-      "cat": "游戏/新品",
-      "heat": 30,
-      "sources": [
-        "小黑盒"
-      ]
-    },
-    {
-      "term": "仁王3 v2.00大更新",
-      "href": "https://www.xiaoheihe.cn/app/bbs/link/188408744",
-      "cat": "游戏/新品",
-      "heat": 28,
-      "sources": [
-        "小黑盒"
-      ]
-    },
-    {
-      "term": "漫威斗魂在线暴跌70%",
-      "href": "https://www.xiaoheihe.cn/app/bbs/link/188400149",
-      "cat": "事件/风险",
-      "heat": 26,
-      "sources": [
-        "小黑盒"
       ]
     }
   ]

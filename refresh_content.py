@@ -1712,13 +1712,25 @@ def _load_masthead_history():
 
 
 def _save_masthead_history(history):
-    """把今天的头图追加到历史尾部，裁剪到 7 天。写失败优雅降级（sandbox 锁时不阻断）。"""
+    """把今天的头图追加到历史尾部，裁剪到 7 天。写失败优雅降级（sandbox 锁时不阻断）。
+
+    2026-08-21 修复：按 date 去重（同一天只保留最后一条）。
+      此前只 append 不去重，导致每日刷新 + 手动测试 + 重跑累积出多条同日期重复记录
+      （如 08-20 同 bvid 出现 4 次），污染 used_recent 集合、文件无谓膨胀。
+    """
     hfile = os.path.join(BASE, ".workbuddy", "masthead_history.json")
     try:
         os.makedirs(os.path.dirname(hfile), exist_ok=True)
+        # 按 date 去重（后写的覆盖先写的，保留当天最新）
+        _dedup = {}
+        for _h in history:
+            if isinstance(_h, dict) and _h.get("date"):
+                _dedup[_h["date"]] = _h
+        _history = [_dedup[_d] for _d in _dedup]
+        _history = _history[-7:]  # 最多保留 7 天
         # 用 temp-file + os.replace 模式（与 daily.html 写入一致）
         _tmp = hfile + ".tmp_" + str(int(dt.datetime.now().timestamp()))
-        io.open(_tmp, "w", encoding="utf-8").write(json.dumps(history[-7:], ensure_ascii=False, indent=1))
+        io.open(_tmp, "w", encoding="utf-8").write(json.dumps(_history, ensure_ascii=False, indent=1))
         try:
             os.replace(_tmp, hfile)
         except OSError:
@@ -1864,6 +1876,16 @@ def _masthead_pick(data, exclude_urls=None):
             return int(view * 0.05)
         return view
 
+    # 2026-08-21 修复：H 值也必须对「最近 2 天用过的 bvid」降权。
+    #   否则 H 优先排序下，连任视频靠高 H 值无视 penalized_view 继续霸榜，
+    #   违反「头图每天都要换，不要死卡排名」的红线（08-20/08-21 钟馗同视频连任即此 bug）。
+    def _h_penalized(v):
+        h = _h_of(v)
+        bvid = _bvid_of(v)
+        if bvid and bvid in used_recent:
+            return h * 0.05
+        return h
+
     # 1) 事件优先（发售/上线/登顶/联动/实机/周年/首曝/爆料）
     # 2026-08-05 扩：加 "爆料/新皮肤/时装/资料片" 匹配 popular 池的王者新皮肤
     # 2026-08-19 扩：补硬核大事件关键词（专场/State of Play/发布会/直面会/PV/前瞻/志怪/中元），
@@ -1872,7 +1894,7 @@ def _masthead_pick(data, exclude_urls=None):
         r'发售|上线|公测|首发|定档|开测|首测|不删档|联动|周年|登顶|实机|首曝|预约|开服|夺魁|夺冠|爆料|新皮肤|新角|时装|资料片|主题曲|CG|'
         r'专场|State\s?of\s?Play|发布会|直面会|前瞻|PV|宣传片|预告片|志怪|中元|鬼节|关卡',
         v.get("title", ""))]
-    evt.sort(key=lambda x: (-_h_of(x), -penalized_view(x)))
+    evt.sort(key=lambda x: (-_h_penalized(x), -penalized_view(x)))
     if evt:
         main = evt[0]
         # 记录今天用过的 bvid
@@ -1900,8 +1922,8 @@ def _masthead_pick(data, exclude_urls=None):
                 r'公测|定档|首发|发售|专场|发布会|PV|志怪|中元|关卡', fb_main.get("title", "")):
             return (fb_main, fb_lv, fb_sub, False)
 
-    # 3) 落到游戏区第一（最近用过的大幅降权；H 优先、view 次级）
-    candidates.sort(key=lambda x: (-_h_of(x), -penalized_view(x)))
+    # 3) 落到游戏区第一（最近用过的大幅降权；H 优先、view 次级，H 同样对连任降权）
+    candidates.sort(key=lambda x: (-_h_penalized(x), -penalized_view(x)))
     main = candidates[0]
     if _bvid_of(main):
         history.append({"date": today, "bvid": _bvid_of(main), "title": main.get("title", "")[:60]})

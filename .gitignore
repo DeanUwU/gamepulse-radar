@@ -5,6 +5,8 @@ _publish/
 backup_*/
 *.md
 *.toml
+# 信源注册表是采集流水线的源头，必须入库跟踪（RSS URL 不含密钥）
+!sources.toml
 sources_*.json
 collectors/
 *.log

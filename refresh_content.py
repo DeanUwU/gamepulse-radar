@@ -138,9 +138,19 @@ TIEBA_GAME_KW = re.compile(
     r'游戏|手游|端游|Steam|steam|单机|主机|任天堂|Switch|PS5|Xbox|联动|皮肤|版本|赛季|'
     r'赛事|战队|选手|LPL|LCK|KPL|EDG|BLG|WBG|TES|JDG|T1|电竞|充值|公测|上线|定档|'
     r'抽卡|氪|退款|外挂|开服|新游|版号|主播|动画|番|漫画|声优|cos|二游|更新|维护')
+# 2026-08-21 补：IP 专名层。原 TIEBA_GAME_KW 只认通用游戏词，不认 IP 专名，
+# 导致「GTA6泄露」「黑神话钟馗」「英雄联盟 S16」等被误判非游戏而漏采。
+# 这里补常见大作/长青 IP 的专名（含中英文与厂商），命中即视为游戏相关。
+TIEBA_GAME_IP = re.compile(
+    r'GTA|侠盗车手|侠盗猎车手|R星|Rockstar|黑神话|钟馗|悟空|英雄联盟|LOL|'
+    r'王者荣耀|原神|米哈游|崩坏|绝区零|星穹铁道|鸣潮|永劫无间|三角洲行动|暗区突围|'
+    r'无畏契约|VALORANT|瓦罗兰特|CS2|CSGO|艾尔登|法环|老头环|怪物猎人|'
+    r'最终幻想|塞尔达|宝可梦|口袋妖怪|Pokemon|蛋仔派对|第五人格|明日方舟|'
+    r'燕云十六声|剑星|赛博朋克|博德之门|Baldur|战神|只狼|对马岛|漫威争锋|'
+    r'暗黑破坏神|魔兽|魔兽世界|炉石|守望先锋|无畏契约|命运2|地平线|大镖客')
 def is_game_tieba(name):
-    """贴吧热议只留游戏/ACG 相关话题（红线②）。"""
-    return bool(TIEBA_GAME_KW.search(name or ""))
+    """贴吧热议只留游戏/ACG 相关话题（红线②）：通用游戏词 或 已知 IP 专名 任一命中即可。"""
+    return bool(TIEBA_GAME_KW.search(name or "") or TIEBA_GAME_IP.search(name or ""))
 
 # 视觉焦点·自动候选的「分类识别」规则：(分类key, 展示文案, 匹配正则)
 # 按优先级从上往下匹配，第一条命中即定类。每类在候选里最多出现 1 条。

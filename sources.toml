@@ -1,0 +1,928 @@
+# GamePulse 雷达站 · 信源注册表（Phase 2）
+# 新增信源 = 在 [[sources]] 下加一段即可，采集器会自动消纳。
+# type: rss(订阅源) | news_list(官网新闻列表页) | static(官网/专题页，仅作探活与人工核对入口)
+# max_items: 每次采集拉取的最新条目数
+
+[[sources]]
+id = "genshin"
+game = "原神"
+name = "原神官方新闻"
+type = "news_list"
+url = "https://ys.mihoyo.com/main/news"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "zzz"
+game = "绝区零"
+name = "绝区零官方新闻"
+type = "news_list"
+url = "https://zzz.mihoyo.com/news"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "sr"
+game = "崩坏星穹铁道"
+name = "崩坏星穹铁道官方新闻"
+type = "news_list"
+url = "https://sr.mihoyo.com/news"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "mc"
+game = "鸣潮"
+name = "鸣潮官方新闻"
+type = "news_list"
+url = "https://mc.kurogames.com/main/news"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "hsr_endfield"
+game = "明日方舟：终末地"
+name = "终末地官方新闻"
+type = "news_list"
+url = "https://endfield.hypergryph.com/news"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "ak"
+game = "明日方舟"
+name = "明日方舟官方新闻"
+type = "news_list"
+url = "https://ak.hypergryph.com/news"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "deepspace"
+game = "恋与深空"
+name = "恋与深空官方新闻"
+type = "news_list"
+url = "https://deepspace.papegames.com/home"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "lolm"
+game = "LOL手游"
+name = "英雄联盟手游官方新闻"
+type = "static"
+url = "https://lolm.qq.com/"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "hyrz"
+game = "火影忍者"
+name = "火影忍者手游官方新闻"
+type = "news_list"
+url = "https://hyrz.qq.com/web2026/index.html"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "sgz"
+game = "三国志·战略版"
+name = "三国志战略版官方新闻"
+type = "news_list"   # 原登记为官网首页(static)，实测 /news 可抽到 detail-*.html 深链
+url = "https://sgz.ejoy.com/news"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "yjwujian"
+game = "永劫无间"
+name = "永劫无间官方更新"
+type = "news_list"
+url = "https://www.yjwujian.cn/news/"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "yhtj"
+game = "萤火突击"
+name = "萤火突击官方更新"
+type = "news_list"
+url = "https://yhtj.163.com/news/update/"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "diablo"
+game = "暗黑不朽"
+name = "暗黑破坏神不朽官方新闻"
+type = "rss"
+url = "https://news.blizzard.com/en-us/feed/diablo-immortal"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "pvp"
+game = "王者荣耀"
+name = "王者荣耀官方新闻"
+section = "第三方聚合 API"
+type = "json_api"   # 原 static：官网 pvp.qq.com 是纯 JS 渲染 SPA，改用第三方聚合 API（返回标题+深链）
+url = "https://www.cunyuapi.top/hero_news?id=1"
+enabled = true
+max_items = 5
+notes = """
+王者荣耀官方新闻（通过第三方聚合 API 间接获取，官网 pvp.qq.com 是 JS 渲染 SPA 无法直接抓）。
+API 返回扁平数组 [{title, url, ...}]。链接域包括 pvp.qq.com 和 new.qq.com（GAME_DOMAIN 已注册）。
+注意：第三方 API 稳定性不如官方源，失败时任其跳过不阻断。
+"""
+
+[[sources]]
+id = "cs2"
+game = "CS2"
+name = "CS2 官方新闻"
+type = "news_list"
+url = "https://www.counter-strike.net/news"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "id5"
+game = "第五人格"
+name = "第五人格官方新闻"
+type = "news_list"
+url = "https://id5.163.com/news/official/"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "yys"
+game = "阴阳师"
+name = "阴阳师官方公告"
+type = "news_list"
+url = "https://yys.163.com/news/official/"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "df"
+game = "三角洲行动"
+name = "三角洲行动官方新闻"
+type = "news_list"
+url = "https://df.qq.com/cp/a20240906main/newslist.html"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "gp"
+game = "和平精英"
+name = "和平精英官方新闻"
+type = "static"
+url = "https://gp.qq.com/main.shtml"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "aqtw"
+game = "暗区突围"
+name = "暗区突围官方资讯"
+type = "news_list"
+url = "https://aqtw.qq.com/web202206/?tv=news"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "jcc"
+game = "金铲铲之战"
+name = "金铲铲之战官方"
+type = "static"
+url = "https://jcc.qq.com/"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "mdnf"
+game = "DNF手游"
+name = "DNF手游官方"
+type = "static"
+url = "https://mdnf.qq.com/"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "dota2"
+game = "DOTA2"
+name = "DOTA2 官方"
+type = "static"
+url = "https://www.dota2.com/"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "coa"
+game = "晶核"
+name = "晶核官方"
+type = "static"   # /main 页新闻列表为 JS 动态渲染（news-content div 由前端脚本填充），urllib 无法抽取
+url = "https://coa.nvsgames.cn/main"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "ds"
+game = "蛋仔派对"
+name = "蛋仔派对官方"
+type = "static"
+url = "https://ds.163.com/"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "valorant"
+game = "无畏契约"
+name = "无畏契约腾讯新闻源"
+type = "news_list"
+url = "https://news.qq.com/omn/author/20614111"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "steam_new"
+game = "主机/PC 大作"
+name = "Steam 即将发售"
+type = "html"
+url = "https://store.steampowered.com/search/?filter=comingsoon&supportedlang=schinese&cc=CN&l=schinese"
+enabled = true
+max_items = 50
+note = "由 collector_steam_new.py 抓取，补动作流未来窗口；非阻断"
+
+[[sources]]
+id = "chinajoy"
+game = "全行业"
+name = "ChinaJoy 官网"
+type = "static"
+url = "https://www.chinajoy.net/"
+enabled = true
+max_items = 5
+
+# ============================================================
+# Phase 5 自发现扩充（2026-07-30）
+# 来源：discover_sources.py 建议 → 人工择优入库（全部 200 探活通过）
+# 未入库的候选仍留在 inbox/新信源建议.md，随时可加
+# ============================================================
+
+# ---- 行业追踪器（中文优先，补足"全行业"视角）----
+[[sources]]
+id = "gcores"
+game = "全行业"
+name = "机核 GCORES"
+section = "RSS 全量"
+type = "rss"
+url = "https://www.gcores.com/rss"
+enabled = true
+max_items = 3
+notes = """
+深度游戏/文化媒体，偏长文评测/播客/ACG 文化。
+文章格式 gcores.com/articles/ID。内容质量高但更新频率低。
+适合「行业情报站·深度/文化」列。
+"""
+
+[[sources]]
+id = "gamersky"
+game = "全行业"
+name = "游民星空新闻"
+section = "首页新闻列表"
+type = "news_list"
+url = "https://www.gamersky.com/news/"
+enabled = true
+max_items = 3
+notes = """
+国内最大游戏资讯站，偏PC/主机/单机 + 国内网游。
+文章格式 gamersky.com/news/YYYYMM/ID.shtml（URL 路径含日期，可作为日期回退源）。
+首页含硬件软文栏目，需注意相关性过滤。与 gamersky_pc、gamersky_zx 互补。
+适合「行业情报站·PC/主机」列与「榜单瞭望塔」引用。
+"""
+
+[[sources]]
+id = "chuapp"
+game = "全行业"
+name = "触乐网"
+section = "首页新闻流"
+type = "news_list"
+url = "https://www.chuapp.com/"
+enabled = true
+max_items = 3
+notes = """
+国内独立游戏媒体，偏深度评测/文化评论/独立游戏。
+文章格式 chuapp.com/article/ID。首页含大量非新闻模块，抽到导航词属正常噪音。
+与 chuapp_category（分类新闻页）互补：首页时效新鲜度更高，分类页更聚焦。
+适合「行业情报站·深度/独立游戏」列。
+"""
+
+[[sources]]
+id = "vgtime"
+game = "全行业"
+name = "VGtime 游戏时光"
+type = "news_list"
+url = "https://www.vgtime.com/"
+enabled = true
+max_items = 3
+
+[[sources]]
+id = "news17173"
+game = "全行业"
+name = "17173 网游资讯"
+type = "news_list"
+url = "https://news.17173.com/"
+enabled = true
+max_items = 3
+
+# Gematsu：RSS 本身 200，但文章页在本机环境探活恒为 None（疑似 CF 拦截），
+# 条目无法通过准入门 → 停用，避免每日产生无意义的"剔除"告警。
+[[sources]]
+id = "gematsu"
+game = "全行业"
+name = "Gematsu 新作情报"
+type = "rss"
+url = "https://www.gematsu.com/feed"
+enabled = true
+max_items = 3
+
+# ---- 官方栏目补强（同域深挖，补现有源抓不到的品类）----
+[[sources]]
+id = "hyrz_news"
+game = "火影忍者"
+name = "火影忍者手游新闻列表"
+type = "news_list"
+url = "https://hyrz.qq.com/web202003/newsList.html"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "yjwujian_match"
+game = "永劫无间"
+name = "永劫无间赛事资讯"
+type = "news_list"
+url = "https://www.yjwujian.cn/news/match/index.html"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "yhtj_official"
+game = "萤火突击"
+name = "萤火突击官方公告"
+type = "news_list"
+url = "https://yhtj.163.com/news/official/"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "id5_update"
+game = "第五人格"
+name = "第五人格版本更新"
+type = "news_list"
+url = "https://id5.163.com/news/update/"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "yys_update"
+game = "阴阳师"
+name = "阴阳师版本更新"
+type = "news_list"
+url = "https://yys.163.com/news/update/index.html"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "df_match"
+game = "三角洲行动"
+name = "三角洲行动赛事"
+type = "news_list"
+url = "https://df.qq.com/match/index.html"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "aqtw_match"
+game = "暗区突围"
+name = "暗区突围赛事"
+type = "news_list"
+url = "https://aqtw.qq.com/web202206/sub/match/page.html"
+enabled = true
+max_items = 5
+
+[[sources]]
+id = "steam_news"
+game = "主机/PC 大作"
+name = "Steam 新闻中心"
+section = "RSS 每日新闻"
+type = "rss"   # 原 static：改用 Steam 官方 RSS（store.steampowered.com/feeds/daily_news.cgi）
+url = "https://store.steampowered.com/feeds/daily_news.cgi"
+enabled = true
+max_items = 3
+notes = """
+Steam 官方每日新闻 RSS，含新游上架/促销/更新/评测推荐。
+文章格式 store.steampowered.com/news/app/ID。注意：RSS 正文含未转义裸 &，解析可能回退到正则。
+适合「榜单瞭望塔·Steam 动态」和 masthead 新游发现。
+"""
+
+# ============================================================
+# Phase 5b：Steam 官方新闻 RSS（2026-07-30）
+# 通用规律：https://store.steampowered.com/feeds/news/app/<appid>/?cc=CN&l=schinese
+# 对任意上架 Steam 的游戏都有效，返回官方公告的中文标题 + 真实深链，
+# 专治那些官网是 JS 渲染、抓不到条目的源。新增一个游戏只需换 appid。
+# ============================================================
+
+[[sources]]
+id = "dota2_steam"
+game = "DOTA2"
+name = "DOTA2 Steam 官方新闻"
+type = "rss"
+url = "https://store.steampowered.com/feeds/news/app/570/?cc=CN&l=schinese"
+enabled = true
+max_items = 4
+
+[[sources]]
+id = "cs2_steam"
+game = "CS2"
+name = "CS2 Steam 官方新闻"
+type = "rss"
+url = "https://store.steampowered.com/feeds/news/app/730/?cc=CN&l=schinese"
+enabled = true
+max_items = 4
+
+[[sources]]
+id = "yjwujian_steam"
+game = "永劫无间"
+name = "永劫无间 Steam 官方新闻"
+type = "rss"
+url = "https://store.steampowered.com/feeds/news/app/1203220/?cc=CN&l=schinese"
+enabled = true
+max_items = 3
+
+[[sources]]
+id = "df_steam"
+game = "三角洲行动"
+name = "三角洲行动 Steam 官方新闻"
+type = "rss"
+url = "https://store.steampowered.com/feeds/news/app/2507950/?cc=CN&l=schinese"
+enabled = true
+max_items = 3
+
+[[sources]]
+id = "aqtw_steam"
+game = "暗区突围"
+name = "暗区突围 Steam 官方新闻"
+type = "rss"
+url = "https://store.steampowered.com/feeds/news/app/2073620/?cc=CN&l=schinese"
+enabled = true
+max_items = 3
+
+# ===== Phase 5 第二批扩源（2026-07-29）=====
+# 前两条是补登记缺口：GameLook / 游戏陀螺 早已被「行业情报」板块引用，
+# 却一直没进注册表，等于有链接没溯源台账。首页抓到的多是栏目名，改用官方 RSS。
+[[sources]]
+id = "gamelook"
+game = "全行业"
+name = "GameLook"
+section = "RSS 全量"
+type = "rss"
+url = "http://www.gamelook.com.cn/feed"
+enabled = true
+max_items = 5
+notes = """
+国内游戏产业核心媒体，偏手游/产业分析/财报解读。
+文章格式 gamelook.com.cn/article/ID。禁止链到主页根 gamelook.com.cn/（链接溯源铁律）。
+适合「行业情报站·国内产业」列。
+"""
+
+[[sources]]
+id = "youxituoluo"
+game = "全行业"
+name = "游戏陀螺"
+section = "RSS 全量"
+type = "rss"
+url = "https://www.youxituoluo.com/feed"
+enabled = true
+max_items = 5
+notes = """
+游戏产业媒体，偏行业动态/投融资/新游报道。
+文章格式 youxituoluo.com/article-ID。内容偏深度分析。
+适合「行业情报站·国内产业」列。
+"""
+
+# Xbox 第一方发布渠道（英文标题含 Xbox/Game Pass 等，可过行业相关性闸）
+[[sources]]
+id = "xbox_wire"
+game = "主机/PC 大作"
+name = "Xbox Wire"
+type = "rss"
+url = "https://news.xbox.com/en-us/feed/"
+enabled = true
+max_items = 3
+
+# 游民星空 PC 资讯栏目（比首页更聚焦，避开硬件软文栏目 tv/hd）
+[[sources]]
+id = "gamersky_pc"
+game = "全行业"
+name = "游民星空 PC 资讯"
+type = "news_list"
+url = "https://www.gamersky.com/news/pc/zx/"
+enabled = true
+max_items = 4
+
+# 和平精英：主站 gp.qq.com/main.shtml 抓不到条目，赛事栏目页可抽 /gicp/news/ 深链
+# （该站是 GBK 编码，需 collect_sources.decode_body 支持，否则标题全乱码）
+[[sources]]
+id = "gp_match"
+game = "和平精英"
+name = "和平精英赛事资讯"
+type = "news_list"
+url = "https://gp.qq.com/act/a20210207match_data/match.html"
+enabled = true
+max_items = 3
+
+# ===== 第二批择优扩源（2026-07-31）=====
+# 原则：只加有增量价值的源，跳过同游戏重复子页面（会产生大量去重）和纯 static 探活源。
+
+# PlayStation Blog 中文 —— 主机/PC 大作第一方发行渠道（中文），RSS 可直接抽取
+[[sources]]
+id = "ps_blog_ja"
+game = "主机/PC 大作"
+name = "PlayStation Blog 中文"
+type = "rss"
+url = "https://blog.ja.playstation.com/feed/"
+enabled = true
+max_items = 4
+
+# 触乐网分类新闻页 —— 比首页更聚焦（首页含大量非新闻模块）
+[[sources]]
+id = "chuapp_category"
+game = "全行业"
+name = "触乐网·分类新闻"
+section = "分类新闻列表"
+type = "news_list"
+url = "http://www.chuapp.com/Category/news/"
+enabled = true
+max_items = 4
+notes = """
+触乐分类新闻页，比首页过滤更干净（无首页非新闻模块噪音）。
+与 chuapp（首页）互补：本页更聚焦，首页时效更新鲜。
+文章格式同 chuapp.com/article/ID。
+"""
+
+# 游民星空专题资讯 —— 比 PC 资讯栏更宽泛的行业信号
+[[sources]]
+id = "gamersky_zx"
+game = "全行业"
+name = "游民星空·最新资讯"
+type = "news_list"
+url = "https://www.gamersky.com/news/tv/zx/"
+enabled = true
+max_items = 4
+
+# ===== Phase 6 扩源（2026-08-03）=====
+# 白鲸出海首页"最新文章"：页面 JS 渲染，但底层是 jQuery AJAX 接口
+#   GET /index/ajax/get_article/ → {data: {article_list: [{id,title,views,add_time,...}]}}
+# 返回真文章链接 article/ID（非论坛 question/），浏览量 2k–80k，带来源/摘要。
+# type=json_api + data_path 导航到嵌套数组，url_prefix + url_field 拼出完整 URL。
+[[sources]]
+id = "baijing"
+game = "全行业"
+name = "白鲸出海"
+section = "首页「最新文章」"
+type = "json_api"
+url = "https://www.baijing.cn/index/ajax/get_article/"
+data_path = "data.article_list"
+url_prefix = "https://www.baijing.cn/article"
+url_field = "id"
+enabled = true
+max_items = 8
+notes = """
+偏出海/跨境/科技，游戏直接相关约 20%。文章格式 /article/ID（非 forum/question/ 论坛）。
+含浏览量(views)、来源(from)、摘要(synopsis)、相对发布时间(add_time)。
+适合「行业情报站·出海/买量/AI」列。禁止编造 forum 或 question 链接。
+"""
+# ============================================================
+# 全网热榜交叉信源（2026-08-03 接入，P3 融合）
+# 实际采集由 collector_public.py 完成，此处仅作探活与注册
+# ============================================================
+[[sources]]
+id = "weibo_hotlist"
+game = "全行业"
+name = "微博热搜"
+section = "热搜榜（game/ACG 过滤）"
+type = "static"
+url = "https://weibo.com/ajax/statuses/hot_band"
+enabled = true
+max_items = 1
+notes = """
+官方 JSON API，collector_public.py 实时拉取并按 game/ACG 关键词过滤。
+输出路径：collectors/public_hotlist_YYYYMMDD.json → weibo 字段。
+static 类型仅探活（HTTP 200 即可），不参与 news_list/RSS 采集。
+"""
+
+[[sources]]
+id = "zhihu_hotlist"
+game = "全行业"
+name = "知乎热榜"
+section = "热榜（game/ACG 过滤）"
+type = "static"
+url = "https://www.zhihu.com/hot"
+enabled = true
+max_items = 1
+notes = """
+洛樱云 API (apiserver.alcex.cn/daily-hot/zhihu) 拉取，collector_public.py 过滤。
+static 类型仅探活，实际数据采集不依赖此 URL。
+"""
+
+[[sources]]
+id = "douyin_hotlist"
+game = "全行业"
+name = "抖音热榜"
+section = "热搜榜（game/ACG 过滤）"
+type = "static"
+url = "https://www.douyin.com/hot"
+enabled = true
+max_items = 1
+notes = """
+洛樱云 API (apiserver.alcex.cn/daily-hot/douyin) 拉取，collector_public.py 过滤。
+static 类型仅探活。
+"""
+
+[[sources]]
+id = "bilibili_hotsearch"
+game = "全行业"
+name = "B站热搜（全网）"
+section = "热搜榜（game/ACG 过滤）"
+type = "static"
+url = "https://search.bilibili.com/all?keyword=游戏"
+enabled = true
+max_items = 1
+notes = """
+洛樱云 API (apiserver.alcex.cn/daily-hot/bilibili) 拉取，collector_public.py 过滤。
+与 meme_radar.py 的 B站搜索不同：本入口是全网热搜（非游戏专区），做交叉校验。
+static 类型仅探活。
+"""
+
+[[sources]]
+id = "xiaohongshu_hotlist"
+game = "全行业"
+name = "小红书热榜"
+section = "热榜（game/ACG 过滤）"
+type = "static"
+url = "https://www.xiaohongshu.com/explore"
+enabled = true
+max_items = 1
+notes = """
+60s API (60s.viki.moe/v2/rednote) 拉取，collector_public.py 过滤。
+static 类型仅探活。
+"""
+
+# ============================================================
+# Phase 7 扩源（2026-08-04）：接入 backlog 待接入源
+# 竞核 + 手游那点事 + DataEye（DataEye 为数据平台，非传统新闻源）
+# ============================================================
+
+# 竞核 —— 国内首家游戏电竞媒体，日更
+# 首页 https://cgames.com/ 文章列表为 JS 动态渲染（urllib 无法抽取条目，html 中无 /contents/ 直链）
+# 无 RSS/feed/API/sitemap。static 类型仅探活与占位；若后续发现 JSON API 或第三方聚合，可升级为 json_api/news_list。
+[[sources]]
+id = "coreesports"
+game = "全行业"
+name = "竞核"
+section = "首页（JS 渲染）"
+type = "static"
+url = "https://cgames.com/"
+enabled = true
+max_items = 1
+notes = """
+国内首家游戏电竞媒体厂牌，偏产业深度/大厂动态/电竞。
+文章格式 cgames.com/contents/ID/ID.html。当前为 static 探活——首页纯 JS 渲染，
+Python urllib 无法抽取文章标题/链接。WebFetch（浏览器引擎）可读到全文但 collect_sources
+不经过浏览器。与 晶核/LOL手游/金铲铲/DNF/蛋仔 同类（JS 渲染 static 源）。
+若有公开 JSON API 或 RSS，可升级类型。短期替代：通过 WebFetch 人工核对后，
+在 events.json feed_events 中手动补入高价值稿件。
+"""
+
+# 手游那点事 —— 垂直手游行业媒体，日更 10-15 篇原创
+[[sources]]
+id = "nadianshi"
+game = "全行业"
+name = "手游那点事"
+section = "新闻列表"
+type = "news_list"
+url = "http://www.nadianshi.com/category/news/"
+enabled = true
+max_items = 5
+notes = """
+国内头部手游行业垂直媒体，偏手游产业/发行/买量/出海。
+文章格式 nadianshi.com/YYYY/MM/ID（URL 路径含日期，可作为日期回退源）。
+日更 10-15 篇原创。注意：该站可能对部分 IP/User-Agent 有限制，
+WebFetch 环境偶发不通，Python urllib 在本地环境下成功率更高。
+若持续采集失败，标记 skip 不阻断。
+适合「行业情报站·手游/出海」列。
+"""
+
+# DataEye —— 游戏营销数据平台，非新闻媒体
+[[sources]]
+id = "dataeye"
+game = "全行业"
+name = "DataEye"
+section = "平台首页"
+type = "static"
+url = "https://www.dataeye.com/"
+enabled = true
+max_items = 1
+notes = """
+DataEye 是游戏营销数据分析 SaaS 平台（ADX 广告情报），非传统新闻媒体。
+官网无 RSS feed / 文章列表 / 新闻资讯板块；其「行业报告」为付费/企业定制内容，
+无法通过 news_list 或 RSS 自动采集。
+static 类型仅探活 + 在源覆盖报告中占位，不参与内容采集。
+若有可公开抓取的报告索引页或第三方聚合，可后续升级类型。
+"""
+
+# ============================================================
+# Phase 8 扩源（2026-08-04）：tgmeng 糖果梦 AI 游戏日报
+# 页面内嵌结构化 JSON（含 title/summary/publishDate/concepts/aiPlatform 等），
+# 由 collector_tgmeng.py 拉取，无需 HTML 解析。
+# ============================================================
+
+[[sources]]
+id = "tgmeng"
+game = "全行业"
+name = "糖果梦 AI 游戏日报"
+section = "AI 日报（每日综述）"
+type = "json_api"
+url = "https://tgmeng.com/daily/game"
+data_path = ""   # 页面直接内嵌顶层 JSON 数组，collector_tgmeng.py 专用解析
+enabled = true
+max_items = 1
+notes = """
+tgmeng.com/daily/game 每日由多个 AI 平台生成一篇游戏行业综述日报。
+页面内嵌完整结构化 JSON 数据（id/title/summary/concepts/aiPlatform/aiModel/tokenUsage/heat 等），
+无需 HTML/DOM 解析，collector_tgmeng.py 直接从 HTML 提取 JSON 数组即可。
+内容偏产业宏观视角（主机数字化转型 / ChinaJoy / 国产游戏创新 / 电竞赛事等），
+适合「行业情报站·AI 摘要」列或 masthead 多源交叉引用。
+实际采集由 collector_tgmeng.py 独立完成（不走 collect_sources），
+daily_refresh.py 步骤 ①c 调用。
+"""
+
+# ============================================================
+# Phase 9 扩源（2026-08-19）：小黑盒「每日热点」热榜
+# 接口：https://api.xiaoheihe.cn/bbs/app/content_collection/menu?collection_id=...
+# 公开 JSON API，无需登录/签名/JS 渲染，返回 result.links[] TOP20。
+# ============================================================
+
+[[sources]]
+id = "xiaoheihe_hot"
+game = "全行业"
+name = "小黑盒每日热点"
+section = "每日热点（游戏社区热帖榜）"
+type = "json_api"
+url = "https://api.xiaoheihe.cn/bbs/app/content_collection/menu?collection_id=68c528455c6766e13a7ce675"
+enabled = true
+max_items = 20
+notes = """
+小黑盒（Heybox）游戏社区「每日热点」榜——玩家侧游戏圈热议 TOP20。
+接口为公开 JSON API（api.xiaoheihe.cn/bbs/app/content_collection/menu），
+返回 result.links[]，字段含 title/topic_name(游戏分区)/view_num(阅读)/comment_num(评论)/
+link_award_num(赞)/linkid/user/thumb/create_at。
+落地链接（网页版可点击）：https://www.xiaoheihe.cn/app/bbs/link/{linkid}。
+
+注意：URL 拼接逻辑非简单 url_prefix+id，且落地链接是 /app/bbs/link/{linkid}
+（非 content_collection 直链），故由专用采集器 collector_xiaoheihe.py 独立完成
+（不走 collect_sources 的 extract_json_api），daily_refresh.py 步骤 ①e 调用。
+topic_name 已是游戏分区（影之刃零/Apex/CS2/Steam/英雄联盟…），无需额外关键词过滤。
+适合「社区风向 / 全网热榜」板块的游戏圈声量交叉印证。
+"""
+
+# ============================================================
+# Phase 10 国际媒体扩源（2026-08-21）：补齐"国际一线媒体"盲区
+# 背景：GTA6 泄露这类全球级新闻首发在 IGN、发酵在海外社区，而此前池子里
+#   国际媒体只有 Gematsu 一个边缘站，IGN/GamesRadar/Eurogamer 全缺，
+#   导致重大国际事件采集不到/靠国内源漏采。本次接入 9 个国际一线游戏媒体 RSS
+#   （均经可达性验证 HTTP 200），覆盖主机/PC/产业/泄露追踪全维度。
+# 注意：这些源为英文标题，进入 feed_events/行业情报站后需翻译或保留英文，
+#   且 _heat_score 的中文突发词（泄露/官宣）需配套英文词（leak/announce）才能命中；
+#   多源印证（n_src）天然受益——GTA6 类事件会有 4+ 家同时报道，直接抬升信号。
+# Reddit/ResetEra 等海外社区因 403 封锁暂不可采，后续若放开再补。
+# ============================================================
+
+[[sources]]
+id = "ign"
+game = "全行业"
+name = "IGN"
+section = "RSS 全量"
+type = "rss"
+url = "https://feeds.feedburner.com/ign/all"
+enabled = true
+max_items = 6
+notes = """
+全球最大游戏媒体，GTA6/大作泄露与官方情报的一线首发源（IGN 首发追踪了 8-18 起的
+GTA6 泄露）。英文标题，进入 feed_events 后保留英文或后续翻译。
+"""
+
+[[sources]]
+id = "gamesradar"
+game = "全行业"
+name = "GamesRadar+"
+section = "RSS 全量"
+type = "rss"
+url = "https://www.gamesradar.com/feeds/all"
+enabled = true
+max_items = 5
+notes = """
+国际综合游戏媒体，覆盖新作情报/评测/行业动态，对泄露与大厂动态报道频繁。
+"""
+
+[[sources]]
+id = "eurogamer"
+game = "全行业"
+name = "Eurogamer"
+section = "RSS 全量"
+type = "rss"
+url = "https://www.eurogamer.net/feed"
+enabled = true
+max_items = 5
+notes = """
+欧洲老牌游戏媒体，偏产业分析与新作报道，欧洲视角互补 IGN。
+"""
+
+[[sources]]
+id = "pcgamer"
+game = "全行业"
+name = "PC Gamer"
+section = "RSS 全量"
+type = "rss"
+url = "https://www.pcgamer.com/feeds/all"
+enabled = true
+max_items = 5
+notes = """
+PC 游戏权威媒体，覆盖 PC 大作/硬件/泄露情报，GTA6（PC 版 2027 发售）相关度高。
+"""
+
+[[sources]]
+id = "vgc"
+game = "全行业"
+name = "Video Games Chronicle"
+section = "RSS 全量"
+type = "rss"
+url = "https://www.videogameschronicle.com/feed/"
+enabled = true
+max_items = 5
+notes = """
+VGC，英国游戏媒体，以独家爆料与厂商动态见长（Take-Two/Rockstar 一举一动常首发）。
+对"泄露/收购/财报"类信号极敏感，是 GTA6 类事件的关键交叉源。
+"""
+
+[[sources]]
+id = "gamespot"
+game = "全行业"
+name = "GameSpot"
+section = "RSS 全量"
+type = "rss"
+url = "https://www.gamespot.com/feeds/mashup/"
+enabled = true
+max_items = 5
+notes = """
+美国老牌综合游戏媒体，覆盖新闻/评测/视频，全球视角。
+"""
+
+[[sources]]
+id = "pushsquare"
+game = "全行业"
+name = "Push Square"
+section = "RSS 全量"
+type = "rss"
+url = "https://www.pushsquare.com/feeds/latest"
+enabled = true
+max_items = 4
+notes = """
+索尼/PlayStation 向媒体。GTA6 为 PS5 首发护航作品，PlayStation 侧动态互补。
+"""
+
+[[sources]]
+id = "rps"
+game = "全行业"
+name = "Rock Paper Shotgun"
+section = "RSS 全量"
+type = "rss"
+url = "https://www.rockpapershotgun.com/feed"
+enabled = true
+max_items = 4
+notes = """
+PC 游戏深度媒体（英国），偏 PC 独家/独立/硬件，与 PC Gamer 互补。
+"""
+
+[[sources]]
+id = "gameinformer"
+game = "全行业"
+name = "Game Informer"
+section = "RSS 全量"
+type = "rss"
+url = "https://www.gameinformer.com/rss.xml"
+enabled = true
+max_items = 4
+notes = """
+美国老牌游戏杂志转型媒体，覆盖大作前瞻/封面故事/产业，对 3A 动态敏锐。
+"""
+

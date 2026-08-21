@@ -729,6 +729,17 @@ try:
 except Exception as e:
     log("(g) 量级告警闸：⚠ 读取失败 " + repr(e)[:120])
 
+# ---------- ④反向质检闸门（治本：漏采自愈） ----------
+# 2026-08-21 新增：每日刷新末尾比对「全采集 vs 最终日报」差集，自动告警漏采高信号事件
+# （GTA6 类"采到了却没上"的根治）。非阻断：任何异常只记日志，不影响发布。
+log("【④质检】运行 qc_leakage.py（采集池 vs 日报差集 → 漏采告警）...")
+rqc = subprocess.run([PY, "qc_leakage.py"], cwd=BASE, capture_output=True, text=True, encoding="utf-8", env=ENV)
+for line in rqc.stdout.strip().splitlines():
+    if line.strip():
+        log("    " + line)
+if rqc.returncode != 0:
+    log("    ⚠ qc_leakage 非零退出（非阻断）：" + rqc.stderr.strip()[:160])
+
 # ================= ⑤ 写日志 =================
 log("\n================= ⑤ 自洽日志 =================")
 blocking = [p for p in problems if p[4] == "阻断"]

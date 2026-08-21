@@ -4,8 +4,8 @@
   "source_file": "calendar.html",
   "event_count": 100,
   "note": "scaffold 中的 <<EVT_i>> 由 gen_calendar.py 用 events[i].anchor 替换 __SRC__ 回填。",
-  "feed_count": 21,
-  "feed_seq": 234,
+  "feed_count": 29,
+  "feed_seq": 251,
   "last_update": "2026-08-21",
   "date_migrated": "2026-08-18"
  },
@@ -1393,18 +1393,6 @@
    "anchor": "<tr><td><b style=\"color:var(--gold)\">萤火突击</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"公告 0819 - 更新公告|暑期流萤活动启程、镭钻工厂返场！ 亲爱的萤火虫特遣队员们： 《萤火…（来源：萤火突击官方更新）\" style=\"color:#4da3ff;text-decoration:none\">公告 0819 - 更新公告|暑期流萤活动启程、镭钻工厂返场！ 亲爱的萤火虫特遣队员们： 《萤火…</a></td><td>萤火突击官方更新</td></tr>"
   },
   {
-   "id": "F229",
-   "kind": "feed",
-   "game": "全行业",
-   "title": "超600万曝光，《牛来》在海外爆火",
-   "source_url": "https://www.baijing.cn/article/56407",
-   "source_name": "白鲸出海",
-   "src_id": "baijing",
-   "pubdate": "2026-08-19",
-   "first_seen": "2026-08-20",
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"超600万曝光，《牛来》在海外爆火（来源：白鲸出海）\" style=\"color:#4da3ff;text-decoration:none\">超600万曝光，《牛来》在海外爆火</a></td><td>白鲸出海</td></tr>"
-  },
-  {
    "id": "F230",
    "kind": "feed",
    "game": "CS2",
@@ -1463,6 +1451,123 @@
    "pubdate": "2026-08-20",
    "first_seen": "2026-08-21",
    "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"鹰角网络投资一家英国工作室，核心成员为《人类一败涂地》老兵（来源：白鲸出海）\" style=\"color:#4da3ff;text-decoration:none\">鹰角网络投资一家英国工作室，核心成员为《人类一败涂地》老兵</a></td><td>白鲸出海</td></tr>"
+  },
+  {
+   "id": "F235",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "国产虚幻5新作公测定档！PC买断制 内含武士小姐姐",
+   "source_url": "https://www.gamersky.com/news/202608/2193803.shtml",
+   "source_name": "游民星空新闻",
+   "src_id": "gamersky",
+   "pubdate": "2026-08-21",
+   "first_seen": "2026-08-21",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"国产虚幻5新作公测定档！PC买断制 内含武士小姐姐（来源：游民星空新闻）\" style=\"color:#4da3ff;text-decoration:none\">国产虚幻5新作公测定档！PC买断制 内含武士小姐姐</a></td><td>游民星空新闻</td></tr>"
+  },
+  {
+   "id": "F236",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "网易游戏业务半年净收入507亿元，《归唐》《无限大》正常推进",
+   "source_url": "https://www.baijing.cn/article/56432",
+   "source_name": "白鲸出海",
+   "src_id": "baijing",
+   "pubdate": "2026-08-21",
+   "first_seen": "2026-08-21",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"网易游戏业务半年净收入507亿元，《归唐》《无限大》正常推进（来源：白鲸出海）\" style=\"color:#4da3ff;text-decoration:none\">网易游戏业务半年净收入507亿元，《归唐》《无限大》正常推进</a></td><td>白鲸出海</td></tr>"
+  },
+  {
+   "id": "F238",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "Riot Games Will Cease Active Development For League Of Legends Fighting Game 2XKO In December",
+   "source_url": "https://gameinformer.com/2026/08/20/riot-games-will-cease-active-development-for-league-of-legends-fighting-game-2xko-in",
+   "source_name": "Game Informer",
+   "src_id": "gameinformer",
+   "pubdate": "2026-08-20",
+   "first_seen": "2026-08-21",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"Riot Games Will Cease Active Development For Lea…（来源：Game Informer）\" style=\"color:#4da3ff;text-decoration:none\">Riot Games Will Cease Active Development For Lea…</a></td><td>Game Informer</td></tr>"
+  },
+  {
+   "id": "F239",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "The Duskbloods: A Hands-On Breakdown Of From Software’s Exciting, Surprising, And Dense Take on Competitive Multiplayer",
+   "source_url": "https://gameinformer.com/preview/2026/08/20/a-hands-on-breakdown-of-from-softwares-exciting-surprising-and-dense-take-on",
+   "source_name": "Game Informer",
+   "src_id": "gameinformer",
+   "pubdate": "2026-08-20",
+   "first_seen": "2026-08-21",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"The Duskbloods: A Hands-On Breakdown Of From Sof…（来源：Game Informer）\" style=\"color:#4da3ff;text-decoration:none\">The Duskbloods: A Hands-On Breakdown Of From Sof…</a></td><td>Game Informer</td></tr>"
+  },
+  {
+   "id": "F240",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "首测硝烟再起 《大航海时代：凯旋航线》“禁忌之海”等你来战",
+   "source_url": "https://news.17173.com/content/08212026/152936221.shtml",
+   "source_name": "17173 网游资讯",
+   "src_id": "news17173",
+   "pubdate": "2026-08-21",
+   "first_seen": "2026-08-21",
+   "date_unverified": true,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"首测硝烟再起 《大航海时代：凯旋航线》“禁忌之海”等你来战（来源：17173 网游资讯）\" style=\"color:#4da3ff;text-decoration:none\">首测硝烟再起 《大航海时代：凯旋航线》“禁忌之海”等你来战</a></td><td>17173 网游资讯</td></tr>"
+  },
+  {
+   "id": "F248",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "周煜博08月19日0条评论 《金铲铲之战》“自然之力”新赛季试玩：峡谷野怪来到棋盘 《金铲铲之战》的新赛季来了！",
+   "source_url": "http://www.chuapp.com/article/291576.html",
+   "source_name": "触乐网·分类新闻",
+   "src_id": "chuapp_category",
+   "pubdate": null,
+   "first_seen": "2026-08-21",
+   "date_unverified": true,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"周煜博08月19日0条评论 《金铲铲之战》“自然之力”新赛季试玩：峡谷野怪来到棋盘 《金铲铲之战…（来源：触乐网·分类新闻）\" style=\"color:#4da3ff;text-decoration:none\">周煜博08月19日0条评论 《金铲铲之战》“自然之力”新赛季试玩：峡谷野怪来到棋盘 《金铲铲之战…</a></td><td>触乐网·分类新闻</td></tr>"
+  },
+  {
+   "id": "F249",
+   "kind": "feed",
+   "game": "永劫无间",
+   "title": "NBPL职业联赛",
+   "source_url": "https://www.yjwujian.cn/match/",
+   "source_name": "永劫无间官方更新",
+   "src_id": "yjwujian",
+   "pubdate": null,
+   "first_seen": "2026-08-21",
+   "date_unverified": true,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">永劫无间</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"NBPL职业联赛（来源：永劫无间官方更新）\" style=\"color:#4da3ff;text-decoration:none\">NBPL职业联赛</a></td><td>永劫无间官方更新</td></tr>"
+  },
+  {
+   "id": "F250",
+   "kind": "feed",
+   "game": "三角洲行动",
+   "title": "烽火职业联赛",
+   "source_url": "https://df.qq.com/cp/DFPL",
+   "source_name": "三角洲行动官方新闻",
+   "src_id": "df",
+   "pubdate": null,
+   "first_seen": "2026-08-21",
+   "date_unverified": true,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">三角洲行动</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"烽火职业联赛（来源：三角洲行动官方新闻）\" style=\"color:#4da3ff;text-decoration:none\">烽火职业联赛</a></td><td>三角洲行动官方新闻</td></tr>"
+  },
+  {
+   "id": "F251",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "祝佳音2小时前0条评论 从冯骥的创作十条谈谈“黑神话”系列和游戏科学 给建议的人往往比较真诚，但是接收者却往往要自己碰到问题之后再想起来才会理解这些话真正在说什",
+   "source_url": "http://www.chuapp.com/article/291578.html",
+   "source_name": "触乐网·分类新闻",
+   "src_id": "chuapp_category",
+   "pubdate": null,
+   "first_seen": "2026-08-21",
+   "date_unverified": true,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"祝佳音2小时前0条评论 从冯骥的创作十条谈谈“黑神话”系列和游戏科学 给建议的人往往比较真诚，但…（来源：触乐网·分类新闻）\" style=\"color:#4da3ff;text-decoration:none\">祝佳音2小时前0条评论 从冯骥的创作十条谈谈“黑神话”系列和游戏科学 给建议的人往往比较真诚，但…</a></td><td>触乐网·分类新闻</td></tr>"
   }
  ]
 }

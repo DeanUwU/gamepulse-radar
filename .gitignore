@@ -1,4 +1,8 @@
 *.py
+# 全站 Python 流水线脚本是采集/渲染核心，必须入库跟踪（纯代码、无密钥）。
+# 原 `*.py` 一刀切导致 promote_sources/collect_sources/meme_radar/qc_leakage 等核心脚本
+# 无法入库 —— 修复（扩源/防漏采）在本机生效、下次部署却丢失，与 sources.toml 同类问题。
+!*.py
 *.pyc
 __pycache__/
 _publish/

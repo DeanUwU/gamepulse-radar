@@ -1000,7 +1000,13 @@ def _podium_top1(data, date_s, exclude_urls=None):
       改为「印证强度(multi>single>weak) + 事件权重(发售/登顶/大事件)」排序，
       选出含金量最高的事件当头条，弱证据冷门事件不再霸榜。
     2026-08-18：加 exclude_urls（masthead 头图已用 URL），让头图优先、焦点榜避让。
+    2026-08-21：例行运维噪音不进 TOP1。封禁/处罚/违规这类"游戏运营处罚"公告
+      虽被多源转载刷出高分，但信息增量≈0，是白噪音不是新闻——直接排除头条候选。
     """
+    # 例行运维噪音关键词（2026-08-21）：封禁/处罚/违规等"运营处罚"类公告。
+    # 注意：不含"停服"——停服是重大事件（暴雷），必须保留；也不含"公告"（太宽）。
+    _routine_noise = re.compile(
+        r'违规|封禁|封号|处罚|禁言|黑名单|外挂|作弊|净化|整治|处罚通知|封禁公告|处罚名单')
     if not exclude_urls:
         exclude_urls = set()
     else:
@@ -1017,6 +1023,9 @@ def _podium_top1(data, date_s, exclude_urls=None):
             title = fe.get("title") or fe.get("game") or "（无标题）"
             # 与 masthead 头图去重（2026-08-18：头图优先，焦点榜避让）
             if (fe.get("source_url") or fe.get("url") or "") in exclude_urls:
+                continue
+            # 例行运维噪音不进 TOP1（2026-08-21）——封禁/处罚/违规公告直接跳过
+            if _routine_noise.search(title):
                 continue
             age = None
             if pd:

@@ -1,19 +1,16 @@
 {
- "generated_at": "2026-08-20T10:50:41",
+ "generated_at": "2026-08-21T10:31:56",
  "summary": {
   "total": 116,
-  "adopt": 36,
-  "review": 44,
-  "reject": 36,
-  "stale_rejected": 32,
-  "dated": 80,
-  "new_reject": 4
+  "adopt": 35,
+  "review": 46,
+  "reject": 35,
+  "stale_rejected": 31,
+  "dated": 79,
+  "new_reject": 1
  },
  "new_rejects": [
-  "https://www.yjwujian.cn/news/update/20260814/33456_1311086.html",
-  "https://blog.ja.playstation.com/2026/08/20/20260820-gt7-post-launch-update-s/",
-  "https://blog.ja.playstation.com/2026/08/19/20260819-ps-plus-game-catalogue-editorial-feature-s/",
-  "https://blog.ja.playstation.com/2026/08/19/20260819-nioh3-post-launch-update-o/"
+  "https://blog.ja.playstation.com/2026/08/20/20260820-ps5-editorial-feature-s/"
  ],
  "items": [
   {
@@ -115,18 +112,16 @@
   },
   {
    "game": "永劫无间",
-   "title": "跟着妙妙去“劫堡”！ 永劫无间汉堡王联动8月14日正式开启 [08-14]",
-   "url": "https://www.yjwujian.cn/news/update/20260814/33456_1311086.html",
+   "title": "8月18日《永劫无间》违规玩家封禁公告 [08-18]",
+   "url": "https://www.yjwujian.cn/news/update/20260821/33456_1311865.html",
    "status": 200,
    "src_id": "yjwujian",
    "src_name": "永劫无间官方更新",
-   "pubdate": "2026-08-14",
-   "age_days": 6,
+   "pubdate": "2026-08-21",
+   "age_days": 0,
    "date_src": "url",
-   "verdict": "reject",
-   "reasons": [
-    "发布日期已 6 天，超过 5 天保鲜期（时效红线）"
-   ]
+   "verdict": "adopt",
+   "reasons": []
   },
   {
    "game": "萤火突击",
@@ -136,7 +131,7 @@
    "src_id": "yhtj",
    "src_name": "萤火突击官方更新",
    "pubdate": "2026-08-19",
-   "age_days": 1,
+   "age_days": 2,
    "date_src": "url",
    "verdict": "adopt",
    "reasons": []
@@ -149,11 +144,11 @@
    "src_id": "yhtj",
    "src_name": "萤火突击官方更新",
    "pubdate": "2026-08-12",
-   "age_days": 8,
+   "age_days": 9,
    "date_src": "url",
    "verdict": "reject",
    "reasons": [
-    "发布日期已 8 天，超过 5 天保鲜期（时效红线）"
+    "发布日期已 9 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
@@ -164,11 +159,11 @@
    "src_id": "yhtj",
    "src_name": "萤火突击官方更新",
    "pubdate": "2026-08-05",
-   "age_days": 15,
+   "age_days": 16,
    "date_src": "url",
    "verdict": "reject",
    "reasons": [
-    "发布日期已 15 天，超过 5 天保鲜期（时效红线）"
+    "发布日期已 16 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
@@ -179,11 +174,11 @@
    "src_id": "yhtj",
    "src_name": "萤火突击官方更新",
    "pubdate": "2026-07-30",
-   "age_days": 21,
+   "age_days": 22,
    "date_src": "url",
    "verdict": "reject",
    "reasons": [
-    "发布日期已 21 天，超过 5 天保鲜期（时效红线）"
+    "发布日期已 22 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
@@ -194,17 +189,30 @@
    "src_id": "yhtj",
    "src_name": "萤火突击官方更新",
    "pubdate": "2026-07-16",
-   "age_days": 35,
+   "age_days": 36,
    "date_src": "url",
    "verdict": "reject",
    "reasons": [
-    "发布日期已 35 天，超过 5 天保鲜期（时效红线）"
+    "发布日期已 36 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
    "game": "王者荣耀",
    "title": "8月20日版本更新公告",
    "url": "https://pvp.qq.com/web201706/newsdetail.shtml?tid=807388",
+   "status": 200,
+   "src_id": "pvp",
+   "src_name": "王者荣耀官方新闻",
+   "pubdate": null,
+   "age_days": null,
+   "date_src": null,
+   "verdict": "review",
+   "reasons": []
+  },
+  {
+   "game": "王者荣耀",
+   "title": "8月20日体验服不停机更新公告",
+   "url": "https://pvp.qq.com/web201706/newsdetail.shtml?tid=807445",
    "status": 200,
    "src_id": "pvp",
    "src_name": "王者荣耀官方新闻",
@@ -254,19 +262,6 @@
    "reasons": []
   },
   {
-   "game": "王者荣耀",
-   "title": "源梦新进展——场景票选活动开启、海报票选结果公示",
-   "url": "https://pvp.qq.com/web201706/newsdetail.shtml?tid=806956",
-   "status": 200,
-   "src_id": "pvp",
-   "src_name": "王者荣耀官方新闻",
-   "pubdate": null,
-   "age_days": null,
-   "date_src": null,
-   "verdict": "review",
-   "reasons": []
-  },
-  {
    "game": "第五人格",
    "title": "COA深渊的呼唤",
    "url": "https://id5.163.com/sshh7/",
@@ -302,11 +297,11 @@
    "src_id": "yys",
    "src_name": "阴阳师官方公告",
    "pubdate": "2026-07-27",
-   "age_days": 24,
+   "age_days": 25,
    "date_src": "url",
    "verdict": "reject",
    "reasons": [
-    "发布日期已 24 天，超过 5 天保鲜期（时效红线）"
+    "发布日期已 25 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
@@ -317,11 +312,11 @@
    "src_id": "yys",
    "src_name": "阴阳师官方公告",
    "pubdate": "2026-07-02",
-   "age_days": 49,
+   "age_days": 50,
    "date_src": "url",
    "verdict": "reject",
    "reasons": [
-    "发布日期已 49 天，超过 5 天保鲜期（时效红线）"
+    "发布日期已 50 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
@@ -332,11 +327,11 @@
    "src_id": "yys",
    "src_name": "阴阳师官方公告",
    "pubdate": "2026-06-05",
-   "age_days": 76,
+   "age_days": 77,
    "date_src": "url",
    "verdict": "reject",
    "reasons": [
-    "发布日期已 76 天，超过 5 天保鲜期（时效红线）"
+    "发布日期已 77 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
@@ -347,11 +342,11 @@
    "src_id": "yys",
    "src_name": "阴阳师官方公告",
    "pubdate": "2026-06-05",
-   "age_days": 76,
+   "age_days": 77,
    "date_src": "url",
    "verdict": "reject",
    "reasons": [
-    "发布日期已 76 天，超过 5 天保鲜期（时效红线）"
+    "发布日期已 77 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
@@ -395,12 +390,12 @@
   },
   {
    "game": "全行业",
-   "title": "《黑神话：钟馗》15分钟实机演示",
-   "url": "https://www.gcores.com/videos/218569",
+   "title": "《时之书：无尽终章》免费体验版今日起于Steam开放下载",
+   "url": "https://www.gcores.com/articles/218622",
    "status": 200,
    "src_id": "gcores",
    "src_name": "机核 GCORES",
-   "pubdate": "2026-08-20",
+   "pubdate": "2026-08-21",
    "age_days": 0,
    "date_src": "feed",
    "verdict": "adopt",
@@ -408,12 +403,12 @@
   },
   {
    "game": "全行业",
-   "title": "《黑神话：钟馗》公布15分钟实机演示",
-   "url": "https://www.gcores.com/articles/218573",
+   "title": "《寂静岭：Townfall》公布最新实机演示，西蒙·奥德尔重返神秘小镇",
+   "url": "https://www.gcores.com/articles/218616",
    "status": 200,
    "src_id": "gcores",
    "src_name": "机核 GCORES",
-   "pubdate": "2026-08-20",
+   "pubdate": "2026-08-21",
    "age_days": 0,
    "date_src": "feed",
    "verdict": "adopt",
@@ -421,12 +416,12 @@
   },
   {
    "game": "全行业",
-   "title": "警惕虚假红信：Steam“壁纸引擎”创意工坊再度出现大规模病毒传播",
-   "url": "https://www.gcores.com/articles/218568",
+   "title": "百人三方战术FPS《WARDOGS》封闭Beta本周末开启，NDA全面解除",
+   "url": "https://www.gcores.com/articles/218605",
    "status": 200,
    "src_id": "gcores",
    "src_name": "机核 GCORES",
-   "pubdate": "2026-08-20",
+   "pubdate": "2026-08-21",
    "age_days": 0,
    "date_src": "feed",
    "verdict": "adopt",
@@ -449,34 +444,36 @@
   },
   {
    "game": "全行业",
-   "title": "《鬼武者》4分钟新片！大量实机及过场 红毛美女亮相",
-   "url": "https://www.gamersky.com/news/202608/2192597.shtml",
+   "title": "顶级黑客泄露GTA6实机画面！居然是因为这个理由？",
+   "url": "https://www.gamersky.com/news/202608/2193412.shtml",
    "status": 200,
    "src_id": "gamersky",
    "src_name": "游民星空新闻",
-   "pubdate": "2026-08-20",
-   "age_days": 0,
-   "date_src": "text",
+   "pubdate": null,
+   "age_days": null,
+   "date_src": null,
    "verdict": "adopt",
    "reasons": []
   },
   {
    "game": "全行业",
-   "title": "《黑神话：钟馗》火速登热搜！15分钟实机引爆期待",
-   "url": "https://www.gamersky.com/news/202608/2192651.shtml",
+   "title": "转转显卡回收价引争议后暴涨：舆论压力太大了？",
+   "url": "https://www.gamersky.com/hardware/202608/2193240.shtml",
    "status": 200,
    "src_id": "gamersky",
    "src_name": "游民星空新闻",
    "pubdate": "2026-08-20",
-   "age_days": 0,
+   "age_days": 1,
    "date_src": "text",
-   "verdict": "adopt",
-   "reasons": []
+   "verdict": "review",
+   "reasons": [
+    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
+   ]
   },
   {
    "game": "全行业",
-   "title": "30年后，“打开”宝可梦的方式还在增加 08.19",
-   "url": "https://www.chuapp.com/article/291566.html",
+   "title": "这款生活模拟新游，治好了我的时间焦虑 08.20",
+   "url": "https://www.chuapp.com/article/291574.html",
    "status": 200,
    "src_id": "chuapp",
    "src_name": "触乐网",
@@ -490,17 +487,18 @@
   },
   {
    "game": "全行业",
-   "title": "《雾海之下》的待机模式，你发现了吗？ 08.18",
-   "url": "https://www.chuapp.com/article/291571.html",
+   "title": "30年后，“打开”宝可梦的方式还在增加 08.19",
+   "url": "https://www.chuapp.com/article/291566.html",
    "status": 200,
    "src_id": "chuapp",
    "src_name": "触乐网",
    "pubdate": "2025-11-10",
-   "age_days": 283,
+   "age_days": 284,
    "date_src": "text",
    "verdict": "review",
    "reasons": [
-    "疑似陈稿：页面文本显示 283 天前（日期非权威来源，待人工确认）"
+    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）",
+    "疑似陈稿：页面文本显示 284 天前（日期非权威来源，待人工确认）"
    ]
   },
   {
@@ -594,16 +592,18 @@
   },
   {
    "game": "全行业",
-   "title": "《RuneScape: Dragonwilds》将于9月15日加入XBOX Game Pass",
-   "url": "https://news.17173.com/content/08202026/094138100.shtml",
+   "title": "第五人格IVL：MRC_Sprintzer四抓破冰，首战告捷挺进下一轮！",
+   "url": "https://news.17173.com/content/08212026/101050076.shtml",
    "status": 200,
    "src_id": "news17173",
    "src_name": "17173 网游资讯",
    "pubdate": null,
    "age_days": null,
    "date_src": null,
-   "verdict": "adopt",
-   "reasons": []
+   "verdict": "review",
+   "reasons": [
+    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
+   ]
   },
   {
    "game": "永劫无间",
@@ -613,11 +613,11 @@
    "src_id": "yjwujian_match",
    "src_name": "永劫无间赛事资讯",
    "pubdate": "2026-08-05",
-   "age_days": 15,
+   "age_days": 16,
    "date_src": "url",
    "verdict": "reject",
    "reasons": [
-    "发布日期已 15 天，超过 5 天保鲜期（时效红线）"
+    "发布日期已 16 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
@@ -628,11 +628,11 @@
    "src_id": "id5_update",
    "src_name": "第五人格版本更新",
    "pubdate": "2026-07-22",
-   "age_days": 29,
+   "age_days": 30,
    "date_src": "url",
    "verdict": "reject",
    "reasons": [
-    "发布日期已 29 天，超过 5 天保鲜期（时效红线）"
+    "发布日期已 30 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
@@ -643,11 +643,11 @@
    "src_id": "id5_update",
    "src_name": "第五人格版本更新",
    "pubdate": "2026-01-08",
-   "age_days": 224,
+   "age_days": 225,
    "date_src": "url",
    "verdict": "reject",
    "reasons": [
-    "发布日期已 224 天，超过 5 天保鲜期（时效红线）"
+    "发布日期已 225 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
@@ -658,11 +658,11 @@
    "src_id": "id5_update",
    "src_name": "第五人格版本更新",
    "pubdate": "2025-12-26",
-   "age_days": 237,
+   "age_days": 238,
    "date_src": "url",
    "verdict": "reject",
    "reasons": [
-    "发布日期已 237 天，超过 5 天保鲜期（时效红线）"
+    "发布日期已 238 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
@@ -673,7 +673,7 @@
    "src_id": "yys_update",
    "src_name": "阴阳师版本更新",
    "pubdate": "2026-08-18",
-   "age_days": 2,
+   "age_days": 3,
    "date_src": "url",
    "verdict": "adopt",
    "reasons": []
@@ -686,11 +686,11 @@
    "src_id": "yys_update",
    "src_name": "阴阳师版本更新",
    "pubdate": "2026-08-11",
-   "age_days": 9,
+   "age_days": 10,
    "date_src": "url",
    "verdict": "reject",
    "reasons": [
-    "发布日期已 9 天，超过 5 天保鲜期（时效红线）"
+    "发布日期已 10 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
@@ -701,11 +701,11 @@
    "src_id": "yys_update",
    "src_name": "阴阳师版本更新",
    "pubdate": "2026-08-04",
-   "age_days": 16,
+   "age_days": 17,
    "date_src": "url",
    "verdict": "reject",
    "reasons": [
-    "发布日期已 16 天，超过 5 天保鲜期（时效红线）"
+    "发布日期已 17 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
@@ -716,11 +716,11 @@
    "src_id": "yys_update",
    "src_name": "阴阳师版本更新",
    "pubdate": "2026-07-28",
-   "age_days": 23,
+   "age_days": 24,
    "date_src": "url",
    "verdict": "reject",
    "reasons": [
-    "发布日期已 23 天，超过 5 天保鲜期（时效红线）"
+    "发布日期已 24 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
@@ -731,11 +731,11 @@
    "src_id": "yys_update",
    "src_name": "阴阳师版本更新",
    "pubdate": "2026-07-28",
-   "age_days": 23,
+   "age_days": 24,
    "date_src": "url",
    "verdict": "reject",
    "reasons": [
-    "发布日期已 23 天，超过 5 天保鲜期（时效红线）"
+    "发布日期已 24 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
@@ -746,12 +746,12 @@
    "src_id": "steam_news",
    "src_name": "Steam 新闻中心",
    "pubdate": "2026-07-16",
-   "age_days": 35,
+   "age_days": 36,
    "date_src": "feed",
    "verdict": "reject",
    "reasons": [
     "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）",
-    "发布日期已 35 天，超过 5 天保鲜期（时效红线）"
+    "发布日期已 36 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
@@ -762,12 +762,12 @@
    "src_id": "steam_news",
    "src_name": "Steam 新闻中心",
    "pubdate": "2026-07-14",
-   "age_days": 37,
+   "age_days": 38,
    "date_src": "feed",
    "verdict": "reject",
    "reasons": [
     "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）",
-    "发布日期已 37 天，超过 5 天保鲜期（时效红线）"
+    "发布日期已 38 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
@@ -778,11 +778,11 @@
    "src_id": "steam_news",
    "src_name": "Steam 新闻中心",
    "pubdate": "2026-07-11",
-   "age_days": 40,
+   "age_days": 41,
    "date_src": "feed",
    "verdict": "reject",
    "reasons": [
-    "发布日期已 40 天，超过 5 天保鲜期（时效红线）"
+    "发布日期已 41 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
@@ -793,7 +793,7 @@
    "src_id": "dota2_steam",
    "src_name": "DOTA2 Steam 官方新闻",
    "pubdate": "2026-08-19",
-   "age_days": 1,
+   "age_days": 2,
    "date_src": "feed",
    "verdict": "adopt",
    "reasons": []
@@ -806,11 +806,11 @@
    "src_id": "dota2_steam",
    "src_name": "DOTA2 Steam 官方新闻",
    "pubdate": "2026-08-12",
-   "age_days": 8,
+   "age_days": 9,
    "date_src": "feed",
    "verdict": "reject",
    "reasons": [
-    "发布日期已 8 天，超过 5 天保鲜期（时效红线）"
+    "发布日期已 9 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
@@ -821,11 +821,11 @@
    "src_id": "dota2_steam",
    "src_name": "DOTA2 Steam 官方新闻",
    "pubdate": "2026-07-30",
-   "age_days": 21,
+   "age_days": 22,
    "date_src": "feed",
    "verdict": "reject",
    "reasons": [
-    "发布日期已 21 天，超过 5 天保鲜期（时效红线）"
+    "发布日期已 22 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
@@ -836,22 +836,22 @@
    "src_id": "dota2_steam",
    "src_name": "DOTA2 Steam 官方新闻",
    "pubdate": "2026-07-30",
-   "age_days": 21,
+   "age_days": 22,
    "date_src": "feed",
    "verdict": "reject",
    "reasons": [
-    "发布日期已 21 天，超过 5 天保鲜期（时效红线）"
+    "发布日期已 22 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
    "game": "CS2",
-   "title": "Counter-Strike 2 Update",
+   "title": "《反恐精英》更新",
    "url": "https://store.steampowered.com/news/app/730/view/717913919982665978",
    "status": 200,
    "src_id": "cs2_steam",
    "src_name": "CS2 Steam 官方新闻",
    "pubdate": "2026-08-19",
-   "age_days": 1,
+   "age_days": 2,
    "date_src": "feed",
    "verdict": "adopt",
    "reasons": []
@@ -864,11 +864,11 @@
    "src_id": "cs2_steam",
    "src_name": "CS2 Steam 官方新闻",
    "pubdate": "2026-08-12",
-   "age_days": 8,
+   "age_days": 9,
    "date_src": "feed",
    "verdict": "reject",
    "reasons": [
-    "发布日期已 8 天，超过 5 天保鲜期（时效红线）"
+    "发布日期已 9 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
@@ -879,26 +879,26 @@
    "src_id": "cs2_steam",
    "src_name": "CS2 Steam 官方新闻",
    "pubdate": "2026-08-03",
-   "age_days": 17,
+   "age_days": 18,
    "date_src": "feed",
    "verdict": "reject",
    "reasons": [
-    "发布日期已 17 天，超过 5 天保鲜期（时效红线）"
+    "发布日期已 18 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
    "game": "CS2",
-   "title": "2026科隆Major排名系列印花",
-   "url": "https://store.steampowered.com/news/app/730/view/676253085555756223",
+   "title": "《反恐精英》更新",
+   "url": "https://store.steampowered.com/news/app/730/view/692016318956699785",
    "status": 200,
    "src_id": "cs2_steam",
    "src_name": "CS2 Steam 官方新闻",
    "pubdate": "2026-07-29",
-   "age_days": 22,
+   "age_days": 23,
    "date_src": "feed",
    "verdict": "reject",
    "reasons": [
-    "发布日期已 22 天，超过 5 天保鲜期（时效红线）"
+    "发布日期已 23 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
@@ -909,7 +909,7 @@
    "src_id": "yjwujian_steam",
    "src_name": "永劫无间 Steam 官方新闻",
    "pubdate": "2026-08-18",
-   "age_days": 2,
+   "age_days": 3,
    "date_src": "feed",
    "verdict": "adopt",
    "reasons": []
@@ -922,11 +922,11 @@
    "src_id": "yjwujian_steam",
    "src_name": "永劫无间 Steam 官方新闻",
    "pubdate": "2026-08-12",
-   "age_days": 8,
+   "age_days": 9,
    "date_src": "feed",
    "verdict": "reject",
    "reasons": [
-    "发布日期已 8 天，超过 5 天保鲜期（时效红线）"
+    "发布日期已 9 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
@@ -937,11 +937,11 @@
    "src_id": "yjwujian_steam",
    "src_name": "永劫无间 Steam 官方新闻",
    "pubdate": "2026-08-12",
-   "age_days": 8,
+   "age_days": 9,
    "date_src": "feed",
    "verdict": "reject",
    "reasons": [
-    "发布日期已 8 天，超过 5 天保鲜期（时效红线）"
+    "发布日期已 9 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
@@ -952,7 +952,7 @@
    "src_id": "df_steam",
    "src_name": "三角洲行动 Steam 官方新闻",
    "pubdate": "2026-08-19",
-   "age_days": 1,
+   "age_days": 2,
    "date_src": "feed",
    "verdict": "adopt",
    "reasons": []
@@ -965,7 +965,7 @@
    "src_id": "df_steam",
    "src_name": "三角洲行动 Steam 官方新闻",
    "pubdate": "2026-08-17",
-   "age_days": 3,
+   "age_days": 4,
    "date_src": "feed",
    "verdict": "adopt",
    "reasons": []
@@ -978,11 +978,11 @@
    "src_id": "df_steam",
    "src_name": "三角洲行动 Steam 官方新闻",
    "pubdate": "2026-08-13",
-   "age_days": 7,
+   "age_days": 8,
    "date_src": "feed",
    "verdict": "reject",
    "reasons": [
-    "发布日期已 7 天，超过 5 天保鲜期（时效红线）"
+    "发布日期已 8 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
@@ -993,11 +993,11 @@
    "src_id": "aqtw_steam",
    "src_name": "暗区突围 Steam 官方新闻",
    "pubdate": "2026-08-07",
-   "age_days": 13,
+   "age_days": 14,
    "date_src": "feed",
    "verdict": "reject",
    "reasons": [
-    "发布日期已 13 天，超过 5 天保鲜期（时效红线）"
+    "发布日期已 14 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
@@ -1008,11 +1008,11 @@
    "src_id": "aqtw_steam",
    "src_name": "暗区突围 Steam 官方新闻",
    "pubdate": "2026-08-12",
-   "age_days": 8,
+   "age_days": 9,
    "date_src": "feed",
    "verdict": "reject",
    "reasons": [
-    "发布日期已 8 天，超过 5 天保鲜期（时效红线）"
+    "发布日期已 9 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
@@ -1023,21 +1023,21 @@
    "src_id": "aqtw_steam",
    "src_name": "暗区突围 Steam 官方新闻",
    "pubdate": "2026-08-05",
-   "age_days": 15,
+   "age_days": 16,
    "date_src": "feed",
    "verdict": "reject",
    "reasons": [
-    "发布日期已 15 天，超过 5 天保鲜期（时效红线）"
+    "发布日期已 16 天，超过 5 天保鲜期（时效红线）"
    ]
   },
   {
    "game": "全行业",
-   "title": "中国厂商“二合大决战”！上海SLG大佬干出“月收入8000万爆款”、环比暴涨300%",
-   "url": "http://www.gamelook.com.cn/2026/08/600264/",
+   "title": "准点相约820！《黑神话：钟馗》新PV又爆了，冯骥杨奇表态",
+   "url": "http://www.gamelook.com.cn/2026/08/600363/",
    "status": 200,
    "src_id": "gamelook",
    "src_name": "GameLook",
-   "pubdate": "2026-08-20",
+   "pubdate": "2026-08-21",
    "age_days": 0,
    "date_src": "feed",
    "verdict": "adopt",
@@ -1045,38 +1045,12 @@
   },
   {
    "game": "全行业",
-   "title": "2026是欧美游戏业最惨的一年！裁员已超1万人，平均每天44人失业",
-   "url": "http://www.gamelook.com.cn/2026/08/600314/",
+   "title": "R星前员工爆料“周末上班长达半年”，加班只为“给高管们作秀”！",
+   "url": "http://www.gamelook.com.cn/2026/08/600381/",
    "status": 200,
    "src_id": "gamelook",
    "src_name": "GameLook",
-   "pubdate": "2026-08-20",
-   "age_days": 0,
-   "date_src": "feed",
-   "verdict": "adopt",
-   "reasons": []
-  },
-  {
-   "game": "全行业",
-   "title": "《深空之眼》停更，勇仕网络上半年亏损478万：4款新游戏研发中",
-   "url": "http://www.gamelook.com.cn/2026/08/600270/",
-   "status": 200,
-   "src_id": "gamelook",
-   "src_name": "GameLook",
-   "pubdate": "2026-08-20",
-   "age_days": 0,
-   "date_src": "feed",
-   "verdict": "adopt",
-   "reasons": []
-  },
-  {
-   "game": "全行业",
-   "title": "苹果向欧盟“投降”！iOS分成比降至26%，跳转官网充值抽成15%",
-   "url": "http://www.gamelook.com.cn/2026/08/600262/",
-   "status": 200,
-   "src_id": "gamelook",
-   "src_name": "GameLook",
-   "pubdate": "2026-08-20",
+   "pubdate": "2026-08-21",
    "age_days": 0,
    "date_src": "feed",
    "verdict": "review",
@@ -1086,13 +1060,67 @@
   },
   {
    "game": "全行业",
-   "title": "索尼开专场“迎娶《影之刃零》”！PS5主机独占一年，老外闹场：“光盘版何在”？",
-   "url": "http://www.gamelook.com.cn/2026/08/600267/",
+   "title": "金山半年净利大增101%，游戏下滑15%：《鹅鸭杀》正成为金山“新王牌”",
+   "url": "http://www.gamelook.com.cn/2026/08/600361/",
    "status": 200,
    "src_id": "gamelook",
    "src_name": "GameLook",
-   "pubdate": "2026-08-20",
+   "pubdate": "2026-08-21",
    "age_days": 0,
+   "date_src": "feed",
+   "verdict": "adopt",
+   "reasons": []
+  },
+  {
+   "game": "全行业",
+   "title": "异环》流水破20亿，完美半年报却亏一个亿？财报要反着看！",
+   "url": "http://www.gamelook.com.cn/2026/08/600353/",
+   "status": 200,
+   "src_id": "gamelook",
+   "src_name": "GameLook",
+   "pubdate": "2026-08-21",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "adopt",
+   "reasons": []
+  },
+  {
+   "game": "全行业",
+   "title": "新团亮相，这款女性向，打开了偶像题材的「新视角」",
+   "url": "http://www.gamelook.com.cn/2026/08/600392/",
+   "status": 200,
+   "src_id": "gamelook",
+   "src_name": "GameLook",
+   "pubdate": "2026-08-21",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "review",
+   "reasons": [
+    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
+   ]
+  },
+  {
+   "game": "全行业",
+   "title": "Spellcaster：让一个不会写代码的人，用AI把脑子里的游戏做出来了",
+   "url": "https://www.youxituoluo.com/534815.html",
+   "status": 200,
+   "src_id": "youxituoluo",
+   "src_name": "游戏陀螺",
+   "pubdate": "2026-08-21",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "adopt",
+   "reasons": []
+  },
+  {
+   "game": "全行业",
+   "title": "《黑神话：钟馗》15分钟实机上热搜，冯骥：“可体验版本胜过满纸雄文”",
+   "url": "https://www.youxituoluo.com/534813.html",
+   "status": 200,
+   "src_id": "youxituoluo",
+   "src_name": "游戏陀螺",
+   "pubdate": "2026-08-20",
+   "age_days": 1,
    "date_src": "feed",
    "verdict": "adopt",
    "reasons": []
@@ -1105,7 +1133,7 @@
    "src_id": "youxituoluo",
    "src_name": "游戏陀螺",
    "pubdate": "2026-08-20",
-   "age_days": 0,
+   "age_days": 1,
    "date_src": "feed",
    "verdict": "review",
    "reasons": [
@@ -1120,7 +1148,7 @@
    "src_id": "youxituoluo",
    "src_name": "游戏陀螺",
    "pubdate": "2026-08-19",
-   "age_days": 1,
+   "age_days": 2,
    "date_src": "feed",
    "verdict": "adopt",
    "reasons": []
@@ -1133,32 +1161,6 @@
    "src_id": "youxituoluo",
    "src_name": "游戏陀螺",
    "pubdate": "2026-08-18",
-   "age_days": 2,
-   "date_src": "feed",
-   "verdict": "adopt",
-   "reasons": []
-  },
-  {
-   "game": "全行业",
-   "title": "联合创始人牵头，连投数个项目：莉莉丝丧尸生存新游，冲入畅销Top20",
-   "url": "https://www.youxituoluo.com/534801.html",
-   "status": 200,
-   "src_id": "youxituoluo",
-   "src_name": "游戏陀螺",
-   "pubdate": "2026-08-18",
-   "age_days": 2,
-   "date_src": "feed",
-   "verdict": "adopt",
-   "reasons": []
-  },
-  {
-   "game": "全行业",
-   "title": "灵犀互娱或将易主，《影之刃零》预售登顶Steam，米哈游AI产品上线47天停服丨陀螺周报",
-   "url": "https://www.youxituoluo.com/534800.html",
-   "status": 200,
-   "src_id": "youxituoluo",
-   "src_name": "游戏陀螺",
-   "pubdate": "2026-08-17",
    "age_days": 3,
    "date_src": "feed",
    "verdict": "adopt",
@@ -1166,44 +1168,46 @@
   },
   {
    "game": "主机/PC 大作",
-   "title": "RuneScape: Dragonwilds is coming to XBOX Game Pass | 15 September",
-   "url": "https://news.xbox.com/en-us/2026/08/19/runescape-dragonwilds-coming-to-game-pass/",
+   "title": "Driving Is Hard: How a Coffee-Break Joke Became a Bathtub Rage Game",
+   "url": "https://news.xbox.com/en-us/2026/08/20/driving-is-hard/",
    "status": 200,
    "src_id": "xbox_wire",
    "src_name": "Xbox Wire",
    "pubdate": "2026-08-20",
-   "age_days": 0,
-   "date_src": "feed",
-   "verdict": "review",
-   "reasons": []
-  },
-  {
-   "game": "主机/PC 大作",
-   "title": "Call of Duty: NEXT and Modern Warfare 4: Early Intel, PC Specs, Pre-loading, and More",
-   "url": "https://news.xbox.com/en-us/2026/08/19/call-of-duty-next-and-modern-warfare-4-early-intel-pc-specs-pre-loading-and-more/",
-   "status": 200,
-   "src_id": "xbox_wire",
-   "src_name": "Xbox Wire",
-   "pubdate": "2026-08-19",
-   "age_days": 1,
-   "date_src": "feed",
-   "verdict": "review",
-   "reasons": []
-  },
-  {
-   "game": "主机/PC 大作",
-   "title": "Gears of War: E-Day and Gibson Unite for a Custom Guitar Collection",
-   "url": "https://news.xbox.com/en-us/2026/08/19/gears-of-war-eday-gibson-guitars-collection-sweepstakes-xbox/",
-   "status": 200,
-   "src_id": "xbox_wire",
-   "src_name": "Xbox Wire",
-   "pubdate": "2026-08-19",
    "age_days": 1,
    "date_src": "feed",
    "verdict": "review",
    "reasons": [
     "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
    ]
+  },
+  {
+   "game": "主机/PC 大作",
+   "title": "Resonance: A Plague Tale Legacy – Why This Is Far More Than A Plague Tale 3",
+   "url": "https://news.xbox.com/en-us/2026/08/20/resonance-a-plague-tale-legacy-interview-details/",
+   "status": 200,
+   "src_id": "xbox_wire",
+   "src_name": "Xbox Wire",
+   "pubdate": "2026-08-20",
+   "age_days": 1,
+   "date_src": "feed",
+   "verdict": "review",
+   "reasons": [
+    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
+   ]
+  },
+  {
+   "game": "主机/PC 大作",
+   "title": "Minecraft Dungeons II: Official Gameplay Trailer & New Dimension",
+   "url": "https://news.xbox.com/en-us/2026/08/20/minecraft-dungeons-ii-official-gameplay-trailer-new-dimension/",
+   "status": 200,
+   "src_id": "xbox_wire",
+   "src_name": "Xbox Wire",
+   "pubdate": "2026-08-20",
+   "age_days": 1,
+   "date_src": "feed",
+   "verdict": "review",
+   "reasons": []
   },
   {
    "game": "全行业",
@@ -1222,27 +1226,12 @@
   },
   {
    "game": "全行业",
-   "title": "“世一上”Bin哥官宣回归！BLG完全体再集结",
-   "url": "https://www.gamersky.com/news/202608/2192585.shtml",
+   "title": "宫崎英高新作发售时间疑似泄露：进度超快 9月就发售",
+   "url": "https://www.gamersky.com/news/202608/2193434.shtml",
    "status": 200,
    "src_id": "gamersky_pc",
    "src_name": "游民星空 PC 资讯",
-   "pubdate": "2026-08-19",
-   "age_days": 1,
-   "date_src": "text",
-   "verdict": "review",
-   "reasons": [
-    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
-   ]
-  },
-  {
-   "game": "全行业",
-   "title": "《GTA6》结局都能泄露！黑客高调威胁：随时开泄",
-   "url": "https://www.gamersky.com/news/202608/2192584.shtml",
-   "status": 200,
-   "src_id": "gamersky_pc",
-   "src_name": "游民星空 PC 资讯",
-   "pubdate": "2026-08-19",
+   "pubdate": "2026-08-20",
    "age_days": 1,
    "date_src": "text",
    "verdict": "adopt",
@@ -1250,12 +1239,25 @@
   },
   {
    "game": "全行业",
-   "title": "买游戏比玩游戏更上瘾！买了难道还要玩？",
-   "url": "https://www.gamersky.com/news/202608/2192579.shtml",
+   "title": "Epic喜加一：特别好评卡牌游戏免费领",
+   "url": "https://www.gamersky.com/news/202608/2193433.shtml",
    "status": 200,
    "src_id": "gamersky_pc",
    "src_name": "游民星空 PC 资讯",
-   "pubdate": "2026-08-19",
+   "pubdate": "2026-08-20",
+   "age_days": 1,
+   "date_src": "text",
+   "verdict": "adopt",
+   "reasons": []
+  },
+  {
+   "game": "全行业",
+   "title": "外媒评测宫崎英高NS2独占新作：质量超高 40帧左右",
+   "url": "https://www.gamersky.com/news/202608/2193432.shtml",
+   "status": 200,
+   "src_id": "gamersky_pc",
+   "src_name": "游民星空 PC 资讯",
+   "pubdate": "2026-08-20",
    "age_days": 1,
    "date_src": "text",
    "verdict": "adopt",
@@ -1304,13 +1306,28 @@
   },
   {
    "game": "主机/PC 大作",
+   "title": "これから発売されるPS5®新作ソフトガイド2026夏①──アクション／ホラー編",
+   "url": "https://blog.ja.playstation.com/2026/08/20/20260820-ps5-editorial-feature-s/",
+   "status": 200,
+   "src_id": "ps_blog_ja",
+   "src_name": "PlayStation Blog 中文",
+   "pubdate": "2026-08-20",
+   "age_days": 1,
+   "date_src": "feed",
+   "verdict": "reject",
+   "reasons": [
+    "域名与游戏[主机/PC 大作]不符"
+   ]
+  },
+  {
+   "game": "主机/PC 大作",
    "title": "『グランツーリスモ７』2026年8月アップデートを本日8月20日15時より配信開始！",
    "url": "https://blog.ja.playstation.com/2026/08/20/20260820-gt7-post-launch-update-s/",
    "status": 200,
    "src_id": "ps_blog_ja",
    "src_name": "PlayStation Blog 中文",
    "pubdate": "2026-08-20",
-   "age_days": 0,
+   "age_days": 1,
    "date_src": "feed",
    "verdict": "reject",
    "reasons": [
@@ -1326,7 +1343,7 @@
    "src_id": "ps_blog_ja",
    "src_name": "PlayStation Blog 中文",
    "pubdate": "2026-08-19",
-   "age_days": 1,
+   "age_days": 2,
    "date_src": "feed",
    "verdict": "reject",
    "reasons": [
@@ -1342,22 +1359,7 @@
    "src_id": "ps_blog_ja",
    "src_name": "PlayStation Blog 中文",
    "pubdate": "2026-08-19",
-   "age_days": 1,
-   "date_src": "feed",
-   "verdict": "reject",
-   "reasons": [
-    "域名与游戏[主机/PC 大作]不符"
-   ]
-  },
-  {
-   "game": "主机/PC 大作",
-   "title": "PS5®/PS4®『STEINS;GATE RE:BOOT』明日8月20日発売！ 新シナリオを追加し、現在の技術で再起動",
-   "url": "https://blog.ja.playstation.com/2026/08/19/20260819-steinsgatere-launch-reminder-s/",
-   "status": 200,
-   "src_id": "ps_blog_ja",
-   "src_name": "PlayStation Blog 中文",
-   "pubdate": "2026-08-19",
-   "age_days": 1,
+   "age_days": 2,
    "date_src": "feed",
    "verdict": "reject",
    "reasons": [
@@ -1366,7 +1368,35 @@
   },
   {
    "game": "全行业",
-   "title": "周煜博16小时前0条评论 《金铲铲之战》“自然之力”新赛季试玩：峡谷野怪来到棋盘 《金铲铲之战》的新赛季来了！",
+   "title": "梅林粉杖15小时前0条评论 触乐怪话：越传越真的索尼新掌机 不管它有没有，我希望它有。",
+   "url": "http://www.chuapp.com/article/291573.html",
+   "status": 200,
+   "src_id": "chuapp_category",
+   "src_name": "触乐网·分类新闻",
+   "pubdate": null,
+   "age_days": null,
+   "date_src": null,
+   "verdict": "adopt",
+   "reasons": []
+  },
+  {
+   "game": "全行业",
+   "title": "许艺丹16小时前0条评论 这款生活模拟新游，治好了我的时间焦虑 找到自己的节奏，重拾平凡又可贵的日常。",
+   "url": "http://www.chuapp.com/article/291574.html",
+   "status": 200,
+   "src_id": "chuapp_category",
+   "src_name": "触乐网·分类新闻",
+   "pubdate": null,
+   "age_days": null,
+   "date_src": null,
+   "verdict": "review",
+   "reasons": [
+    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
+   ]
+  },
+  {
+   "game": "全行业",
+   "title": "周煜博08月19日0条评论 《金铲铲之战》“自然之力”新赛季试玩：峡谷野怪来到棋盘 《金铲铲之战》的新赛季来了！",
    "url": "http://www.chuapp.com/article/291576.html",
    "status": 200,
    "src_id": "chuapp_category",
@@ -1379,7 +1409,7 @@
   },
   {
    "game": "全行业",
-   "title": "陈静17小时前0条评论 30年后，“打开”宝可梦的方式还在增加 是“宝可梦”把人们连接在一起。",
+   "title": "陈静08月19日0条评论 30年后，“打开”宝可梦的方式还在增加 是“宝可梦”把人们连接在一起。",
    "url": "http://www.chuapp.com/article/291566.html",
    "status": 200,
    "src_id": "chuapp_category",
@@ -1394,45 +1424,17 @@
   },
   {
    "game": "全行业",
-   "title": "林翔17小时前0条评论 触乐怪话：闭上眼，大步走 重新思考人与人的沟通。",
-   "url": "http://www.chuapp.com/article/291575.html",
-   "status": 200,
-   "src_id": "chuapp_category",
-   "src_name": "触乐网·分类新闻",
-   "pubdate": null,
-   "age_days": null,
-   "date_src": null,
-   "verdict": "review",
-   "reasons": [
-    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
-   ]
-  },
-  {
-   "game": "全行业",
-   "title": "周煜博08月18日0条评论 触乐怪话：《杀死比尔》与《堡垒之夜》的6件事 Kill Fortnite.",
-   "url": "http://www.chuapp.com/article/291567.html",
-   "status": 200,
-   "src_id": "chuapp_category",
-   "src_name": "触乐网·分类新闻",
-   "pubdate": null,
-   "age_days": null,
-   "date_src": null,
-   "verdict": "adopt",
-   "reasons": []
-  },
-  {
-   "game": "全行业",
    "title": "《对马之魂》采访：有难度选择，所有玩家都可上手",
    "url": "https://www.gamersky.com/news/201809/1103639.shtml",
    "status": 200,
    "src_id": "gamersky_zx",
    "src_name": "游民星空·最新资讯",
    "pubdate": "2018-09-23",
-   "age_days": 2888,
+   "age_days": 2889,
    "date_src": "text",
    "verdict": "review",
    "reasons": [
-    "疑似陈稿：页面文本显示 2888 天前（日期非权威来源，待人工确认）"
+    "疑似陈稿：页面文本显示 2889 天前（日期非权威来源，待人工确认）"
    ]
   },
   {
@@ -1443,11 +1445,11 @@
    "src_id": "gamersky_zx",
    "src_name": "游民星空·最新资讯",
    "pubdate": "2018-09-23",
-   "age_days": 2888,
+   "age_days": 2889,
    "date_src": "text",
    "verdict": "review",
    "reasons": [
-    "疑似陈稿：页面文本显示 2888 天前（日期非权威来源，待人工确认）"
+    "疑似陈稿：页面文本显示 2889 天前（日期非权威来源，待人工确认）"
    ]
   },
   {
@@ -1458,11 +1460,11 @@
    "src_id": "gamersky_zx",
    "src_name": "游民星空·最新资讯",
    "pubdate": "2018-09-21",
-   "age_days": 2890,
+   "age_days": 2891,
    "date_src": "text",
    "verdict": "review",
    "reasons": [
-    "疑似陈稿：页面文本显示 2890 天前（日期非权威来源，待人工确认）"
+    "疑似陈稿：页面文本显示 2891 天前（日期非权威来源，待人工确认）"
    ]
   },
   {
@@ -1473,21 +1475,21 @@
    "src_id": "gamersky_zx",
    "src_name": "游民星空·最新资讯",
    "pubdate": "2018-09-20",
-   "age_days": 2891,
+   "age_days": 2892,
    "date_src": "text",
    "verdict": "review",
    "reasons": [
-    "疑似陈稿：页面文本显示 2891 天前（日期非权威来源，待人工确认）"
+    "疑似陈稿：页面文本显示 2892 天前（日期非权威来源，待人工确认）"
    ]
   },
   {
    "game": "全行业",
-   "title": "麦肯锡报告：2024年全球即时支付规模达22万亿美元，仅占全球支付总量1%",
-   "url": "https://www.baijing.cn/article/56412",
+   "title": "短剧出海，从社媒突围？",
+   "url": "https://www.baijing.cn/article/56427",
    "status": 200,
    "src_id": "baijing",
    "src_name": "白鲸出海",
-   "pubdate": "2026-08-20",
+   "pubdate": "2026-08-21",
    "age_days": 0,
    "date_src": "feed",
    "verdict": "review",
@@ -1497,12 +1499,42 @@
   },
   {
    "game": "全行业",
-   "title": "出海厂商丨2026年7月中国应用/游戏厂商出海收入Top30榜",
-   "url": "https://www.baijing.cn/article/56411",
+   "title": "年化1亿美元的AI陪伴产品下架，撞上了哪堵墙？",
+   "url": "https://www.baijing.cn/article/56385",
    "status": 200,
    "src_id": "baijing",
    "src_name": "白鲸出海",
-   "pubdate": "2026-08-19",
+   "pubdate": "2026-08-21",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "review",
+   "reasons": [
+    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
+   ]
+  },
+  {
+   "game": "全行业",
+   "title": "排名滑落，一直领先的「可灵」掉队了？",
+   "url": "https://www.baijing.cn/article/56425",
+   "status": 200,
+   "src_id": "baijing",
+   "src_name": "白鲸出海",
+   "pubdate": "2026-08-20",
+   "age_days": 1,
+   "date_src": "feed",
+   "verdict": "review",
+   "reasons": [
+    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
+   ]
+  },
+  {
+   "game": "全行业",
+   "title": "鹰角网络投资一家英国工作室，核心成员为《人类一败涂地》老兵",
+   "url": "https://www.baijing.cn/article/56423",
+   "status": 200,
+   "src_id": "baijing",
+   "src_name": "白鲸出海",
+   "pubdate": "2026-08-20",
    "age_days": 1,
    "date_src": "feed",
    "verdict": "adopt",
@@ -1510,57 +1542,12 @@
   },
   {
    "game": "全行业",
-   "title": "海外微短剧&APP周报：畅读MoboReels带球跑题材AI剧登顶热榜，掌阅iDrama素材量大涨2.9万组",
-   "url": "https://www.baijing.cn/article/56410",
+   "title": "《2026年短剧应用市场洞察报告》：2026年第一季度，全球短剧应用下载量延续快速增长态势，突破8.5亿次，同比增长140%",
+   "url": "https://www.baijing.cn/article/56424",
    "status": 200,
    "src_id": "baijing",
    "src_name": "白鲸出海",
-   "pubdate": "2026-08-19",
-   "age_days": 1,
-   "date_src": "feed",
-   "verdict": "review",
-   "reasons": [
-    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
-   ]
-  },
-  {
-   "game": "全行业",
-   "title": "连续7年亚马逊销冠，它靠小插座杀出红海",
-   "url": "https://www.baijing.cn/article/56408",
-   "status": 200,
-   "src_id": "baijing",
-   "src_name": "白鲸出海",
-   "pubdate": "2026-08-19",
-   "age_days": 1,
-   "date_src": "feed",
-   "verdict": "review",
-   "reasons": [
-    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
-   ]
-  },
-  {
-   "game": "全行业",
-   "title": "Agent推理延迟高、AI带宽成本失控？Zenlayer & Equinix联合破解分布式AI难题",
-   "url": "https://www.baijing.cn/article/56409",
-   "status": 200,
-   "src_id": "baijing",
-   "src_name": "白鲸出海",
-   "pubdate": "2026-08-19",
-   "age_days": 1,
-   "date_src": "feed",
-   "verdict": "review",
-   "reasons": [
-    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
-   ]
-  },
-  {
-   "game": "全行业",
-   "title": "超600万曝光，《牛来》在海外爆火",
-   "url": "https://www.baijing.cn/article/56407",
-   "status": 200,
-   "src_id": "baijing",
-   "src_name": "白鲸出海",
-   "pubdate": "2026-08-19",
+   "pubdate": "2026-08-20",
    "age_days": 1,
    "date_src": "feed",
    "verdict": "adopt",
@@ -1568,12 +1555,12 @@
   },
   {
    "game": "全行业",
-   "title": "连测5款新游，SLG与Merge双线出击，巴别时代还在找下一个爆款",
-   "url": "https://www.baijing.cn/article/56406",
+   "title": "12家初创获投，资本抢跑“大疆系”",
+   "url": "https://www.baijing.cn/article/56422",
    "status": 200,
    "src_id": "baijing",
    "src_name": "白鲸出海",
-   "pubdate": "2026-08-19",
+   "pubdate": "2026-08-20",
    "age_days": 1,
    "date_src": "feed",
    "verdict": "review",
@@ -1583,16 +1570,31 @@
   },
   {
    "game": "全行业",
-   "title": "把糖果做成“闯关游戏”，播放量干到20亿，这个美国品牌凭什么让亿滋都追投？",
-   "url": "https://www.baijing.cn/article/56405",
+   "title": "半年亏损超1亿，但完美世界赚麻了",
+   "url": "https://www.baijing.cn/article/56421",
    "status": 200,
    "src_id": "baijing",
    "src_name": "白鲸出海",
-   "pubdate": "2026-08-19",
+   "pubdate": "2026-08-20",
    "age_days": 1,
    "date_src": "feed",
    "verdict": "adopt",
    "reasons": []
+  },
+  {
+   "game": "全行业",
+   "title": "前作狂揽16亿、模仿者接连跑出：111%终于推出王牌IP正统续作，5地首发成绩如何？",
+   "url": "https://www.baijing.cn/article/56420",
+   "status": 200,
+   "src_id": "baijing",
+   "src_name": "白鲸出海",
+   "pubdate": "2026-08-20",
+   "age_days": 1,
+   "date_src": "feed",
+   "verdict": "review",
+   "reasons": [
+    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
+   ]
   },
   {
    "game": "全行业",
@@ -1617,11 +1619,11 @@
    "src_id": "nadianshi",
    "src_name": "手游那点事",
    "pubdate": "2026-07-01",
-   "age_days": 50,
+   "age_days": 51,
    "date_src": "text",
    "verdict": "review",
    "reasons": [
-    "疑似陈稿：页面文本显示 50 天前（日期非权威来源，待人工确认）"
+    "疑似陈稿：页面文本显示 51 天前（日期非权威来源，待人工确认）"
    ]
   },
   {
@@ -1632,11 +1634,11 @@
    "src_id": "nadianshi",
    "src_name": "手游那点事",
    "pubdate": "2026-06-01",
-   "age_days": 80,
+   "age_days": 81,
    "date_src": "text",
    "verdict": "review",
    "reasons": [
-    "疑似陈稿：页面文本显示 80 天前（日期非权威来源，待人工确认）"
+    "疑似陈稿：页面文本显示 81 天前（日期非权威来源，待人工确认）"
    ]
   },
   {
@@ -1663,12 +1665,12 @@
    "src_id": "nadianshi",
    "src_name": "手游那点事",
    "pubdate": "2026-06-01",
-   "age_days": 80,
+   "age_days": 81,
    "date_src": "text",
    "verdict": "review",
    "reasons": [
     "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）",
-    "疑似陈稿：页面文本显示 80 天前（日期非权威来源，待人工确认）"
+    "疑似陈稿：页面文本显示 81 天前（日期非权威来源，待人工确认）"
    ]
   }
  ]

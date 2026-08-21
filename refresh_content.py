@@ -1040,49 +1040,61 @@ def _podium_top1(data, date_s, exclude_urls=None):
             scored.append((score, detail, fe))
         if scored:
             scored.sort(key=lambda x: -x[0])
-            score, detail, fe = scored[0]
-            # 尝试从 meme 视频池找同事件的相关封面图（feed_events 本身无图片字段）
-            # 2026-08-20 修复：借图必须"高相关"——game 字段为核心匹配词，且排除
-            #   "全行业"等泛词；标题前6字仅作弱信号。避免事件文章借到不相关视频封面
-            #   （如「灵犀互娱易主」周报借到《黑神话：钟馗》实机图，封面与标题语义不符）。
-            #   借不到高相关图时留空，走无图渐变卡分支（is_event=True），绝不强行错配。
-            top1_img = ""
-            _game = (fe.get("game") or "").strip()
-            _title = fe.get("title") or ""
-            # 核心匹配词：优先 game 字段（非空且非泛词），其次标题里《》包裹的游戏名
-            _t1_kw = []
-            if _game and _game not in ("全行业", "未知", "其他"):
-                _t1_kw.append(_game)
-            _title_game = re.search(r'《([^》]+)》', _title)
-            if _title_game:
-                _t1_kw.append(_title_game.group(1))
-            # 标题前6字作为弱信号，但排除纯泛词（如"灵犀互娱"无法对应任何视频）
-            _weak = _title[:6]
-            for v in (data.get("popular", []) + data.get("weekly", [])):
-                if not v.get("pic"):
-                    continue
-                vt = v.get("title") or ""
-                # 强匹配：视频标题含核心游戏名（game 或《》内游戏名）
-                if _t1_kw and any(k in vt for k in _t1_kw):
-                    top1_img = v["pic"]
-                    break
-                # 弱匹配：仅当核心词为空时，才退而用标题前6字（避免泛词错配）
-                if (not _t1_kw) and _weak and _weak in vt:
-                    top1_img = v["pic"]
-                    break
-            return {
-                "rank": 1,
-                "url": fe.get("source_url") or fe.get("url") or "#",
-                "title": fe.get("title") or fe.get("game") or "（无标题）",
-                "tag": "事件",
-                "color": "#ff5c39",
-                "img": top1_img,
-                "meta": "%s · %s" % (
-                    fe.get("source_name") or "未知来源",
-                    (fe.get("pubdate") or fe.get("first_seen") or "")[5:10]),
-                "is_event": bool(not top1_img),  # 有图则不标记 is_event，走有图渲染分支
-                "_heat_detail": detail,
-            }
+            # 2026-08-21：头条准入「真实热度底线」——没热度的内容不硬凑头条。
+            #   事件必须满足至少其一：tgmeng 提及≥1（行业媒体当热点）/ 多源≥2
+            #   （多家报道）/ 跨平台热榜≥1 平台命中。只靠「新鲜度+关键词+权威源」
+            #   形式化加分堆出来的冷门新闻（如独立游戏首次公布）一律 continue；
+            #   循环走完无符合者，fall through 到下方降级路径（风险词视频 →
+            #   视频池 top1），让真正有热度的内容占据头条位。
+            for score, detail, fe in scored:
+                tg = detail.get("tgmeng_count", 0)
+                nsrc = detail.get("n_src", 0)
+                if not (tg >= 1 or nsrc >= 2):
+                    # 无行业提及/多源，再查跨平台热榜声量；也无则跳过
+                    if _cross_platform_hits(fe.get("title") or "", date_s)[1] < 1:
+                        continue
+                # 尝试从 meme 视频池找同事件的相关封面图（feed_events 本身无图片字段）
+                # 2026-08-20 修复：借图必须"高相关"——game 字段为核心匹配词，且排除
+                #   "全行业"等泛词；标题前6字仅作弱信号。避免事件文章借到不相关视频封面
+                #   （如「灵犀互娱易主」周报借到《黑神话：钟馗》实机图，封面与标题语义不符）。
+                #   借不到高相关图时留空，走无图渐变卡分支（is_event=True），绝不强行错配。
+                top1_img = ""
+                _game = (fe.get("game") or "").strip()
+                _title = fe.get("title") or ""
+                # 核心匹配词：优先 game 字段（非空且非泛词），其次标题里《》包裹的游戏名
+                _t1_kw = []
+                if _game and _game not in ("全行业", "未知", "其他"):
+                    _t1_kw.append(_game)
+                _title_game = re.search(r'《([^》]+)》', _title)
+                if _title_game:
+                    _t1_kw.append(_title_game.group(1))
+                # 标题前6字作为弱信号，但排除纯泛词（如"灵犀互娱"无法对应任何视频）
+                _weak = _title[:6]
+                for v in (data.get("popular", []) + data.get("weekly", [])):
+                    if not v.get("pic"):
+                        continue
+                    vt = v.get("title") or ""
+                    # 强匹配：视频标题含核心游戏名（game 或《》内游戏名）
+                    if _t1_kw and any(k in vt for k in _t1_kw):
+                        top1_img = v["pic"]
+                        break
+                    # 弱匹配：仅当核心词为空时，才退而用标题前6字（避免泛词错配）
+                    if (not _t1_kw) and _weak and _weak in vt:
+                        top1_img = v["pic"]
+                        break
+                return {
+                    "rank": 1,
+                    "url": fe.get("source_url") or fe.get("url") or "#",
+                    "title": fe.get("title") or fe.get("game") or "（无标题）",
+                    "tag": "事件",
+                    "color": "#ff5c39",
+                    "img": top1_img,
+                    "meta": "%s · %s" % (
+                        fe.get("source_name") or "未知来源",
+                        (fe.get("pubdate") or fe.get("first_seen") or "")[5:10]),
+                    "is_event": bool(not top1_img),  # 有图则不标记 is_event，走有图渲染分支
+                    "_heat_detail": detail,
+                }
     except Exception:
         pass
     # 2) meme 风险词视频

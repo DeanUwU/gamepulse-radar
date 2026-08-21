@@ -57,11 +57,17 @@ STORE_RE = re.compile(r'store\.steampowered\.com/app/|/store/|epicgames\.com/sto
 
 # 行业源（非特定游戏）相关性闸：标题必须带游戏行业信号，否则只当"待复核"。
 # 目的：挡住行业媒体首页混进来的娱乐八卦/硬件广告/栏目名。
+# 2026-08-21 补：原正则只认中文/厂商名，英文游戏标题（"The Duskbloods is a Switch 2
+# exclusive"、"Mortal Shell 2 review"）全被误判 off_topic → 国际源内容几乎零上浮。
+# 现加英文游戏新闻词（leak/trailer/reveal/gameplay/announce/launch/release/review/
+# fromsoftware/rockstar/cyberpunk 等），让国际一线媒体英文稿也能过相关性闸。
 GAME_SIGNAL_RE = re.compile(
     r'(《|》|游戏|手游|端游|页游|主机|电竞|赛事|战队|选手|玩家|开发者|厂商|发行'
     r'|上线|定档|发售|预购|公测|内测|删档|开服|停服|版本|更新|资料片|DLC|联动|皮肤'
     r'|Steam|Epic|PS5|PS4|PSN|Xbox|Switch|NS|PC|VR|Demo|试玩|实机|预告'
-    r'|腾讯|网易|米哈游|鹰角|库洛|叠纸|完美世界|三七|莉莉丝|育碧|暴雪|动视|任天堂|索尼|世嘉|卡普空|SE\b)',
+    r'|腾讯|网易|米哈游|鹰角|库洛|叠纸|完美世界|三七|莉莉丝|育碧|暴雪|动视|任天堂|索尼|世嘉|卡普空|SE\b'
+    r'|leak|trailer|reveal|gameplay|announce|launch|releas\w*|betas?\b|patch|preview\b|exclusive|review\b'
+    r'|fromsoftware|rockstar|cyberpunk|god\s*of\s*war|final\s*fantasy|zelda)',
     re.I)
 # 视为"非特定游戏"的行业源标签
 INDUSTRY_GAMES = {'全行业', '主机/PC 大作', '主机/PC新作'}
@@ -117,6 +123,14 @@ def domain_ok(game, url, src_url=None):
         sh, ch = _host(src_url), _host(url)
         # 同主域即可（允许 news.x.com 与 x.com 互认）
         ok = (ch == sh) or ch.endswith('.' + sh) or sh.endswith('.' + ch)
+        if game in INDUSTRY_GAMES and not ok:
+            # 2026-08-21 补：行业源（IGN/GamesRadar/VGC…）经人工登记为可信游戏媒体，
+            # 其 RSS 深链即视为已溯源；但注册 url 常是 feedburner/feeds 聚合域，
+            # 文章在真实站点域（ign.com / videogameschronicle.com），不能按"同域"误杀。
+            # 只要候选是 http(s) 深链（非根页/搜索/商店）即放行——game=全行业 无特定游戏可错配，张冠李戴风险低。
+            _p = urllib.parse.urlparse(url).path
+            ok = (url.startswith(('http://', 'https://')) and _p not in ('', '/')
+                  and not SEARCH_RE.search(url) and not STORE_RE.search(url))
         return ok, False  # 信源本身经人工登记在 sources.toml，同域深链即视为已溯源
     return False, False
 
@@ -150,9 +164,20 @@ def admit():
             is_search = bool(SEARCH_RE.search(url))
             is_store = bool(STORE_RE.search(url))
             is_article = bool(ARTICLE_HINT.search(path))
+            # 2026-08-21 补：可信游戏媒体（全行业）RSS 的 <item><link> 恒为文章深链，
+            # 其 URL 形态（/games/、/2026/08/ 等）常不匹配中文站向的 ARTICLE_HINT，
+            # 不应误判"栏目/专题页"。深链即视为文章（RSS 条目不可能是栏目聚合页）。
+            if game in INDUSTRY_GAMES and not is_root and not is_search and not is_store:
+                is_article = True
 
             if status != 200:
-                reasons.append('链接不可达(HTTP %s)' % status)
+                if game in INDUSTRY_GAMES and is_article:
+                    # 反爬/超时导致探活失败（如 GameSpot/VGC 对本机 IP 返 403），但链接来自
+                    # 出版方自家 RSS（已在 collect_sources 阶段成功抓取，确认存活）——这种"探活未过"
+                    # 不等于死链，降级为待复核而非硬剔，避免整批国际源内容被误杀。
+                    reasons.append('链接探活未过(疑似反爬/超时，RSS 已确认存活)')
+                else:
+                    reasons.append('链接不可达(HTTP %s)' % status)
             if not ok:
                 reasons.append('域名与游戏[%s]不符' % game)
             if is_root:
@@ -187,7 +212,9 @@ def admit():
             elif stale_soft:
                 reasons.append('疑似陈稿：页面文本显示 %d 天前（日期非权威来源，待人工确认）' % age)
 
-            hard_fail = (status != 200) or (not ok) or is_root or is_search or is_store or stale
+            # 行业源深链探活未过(反爬/超时)不算硬失败——RSS 已确认存活，降级为待复核
+            _soft_unreach = (status != 200) and (game in INDUSTRY_GAMES and is_article)
+            hard_fail = ((status != 200) and not _soft_unreach) or (not ok) or is_root or is_search or is_store or stale
             if hard_fail:
                 verdict = 'reject'
             elif (not is_article) or weak or off_topic or stale_soft:

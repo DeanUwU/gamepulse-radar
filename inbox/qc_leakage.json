@@ -1,0 +1,96 @@
+{
+ "generated_at": "2026-08-21T17:58:16",
+ "adopt_total": 78,
+ "review_total": 49,
+ "leak_total": 6,
+ "leaks": [
+  {
+   "title": "这款生活模拟新游，治好了我的时间焦虑 08.20",
+   "url": "https://www.chuapp.com/article/291574.html",
+   "game": "全行业",
+   "src_name": "触乐网",
+   "verdict": "review",
+   "pubdate": "2025-11-10",
+   "date_unverified": false,
+   "n_src_cluster": 4,
+   "signal": 3,
+   "reasons": [
+    "多源印证(4家)",
+    "准入待复核被卡"
+   ]
+  },
+  {
+   "title": "陈静27分钟前0条评论 触乐怪话：打工是不可能上瘾的！ 游戏品类的成长，大概就是这个样子的了。",
+   "url": "http://www.chuapp.com/article/291572.html",
+   "game": "全行业",
+   "src_name": "触乐网·分类新闻",
+   "verdict": "adopt",
+   "pubdate": null,
+   "date_unverified": false,
+   "n_src_cluster": 4,
+   "signal": 3,
+   "reasons": [
+    "多源印证(4家)"
+   ]
+  },
+  {
+   "title": "梅林粉杖23小时前0条评论 触乐怪话：越传越真的索尼新掌机 不管它有没有，我希望它有。",
+   "url": "http://www.chuapp.com/article/291573.html",
+   "game": "全行业",
+   "src_name": "触乐网·分类新闻",
+   "verdict": "adopt",
+   "pubdate": null,
+   "date_unverified": false,
+   "n_src_cluster": 4,
+   "signal": 3,
+   "reasons": [
+    "多源印证(4家)"
+   ]
+  },
+  {
+   "title": "许艺丹23小时前0条评论 这款生活模拟新游，治好了我的时间焦虑 找到自己的节奏，重拾平凡又可贵的日常。",
+   "url": "http://www.chuapp.com/article/291574.html",
+   "game": "全行业",
+   "src_name": "触乐网·分类新闻",
+   "verdict": "review",
+   "pubdate": null,
+   "date_unverified": false,
+   "n_src_cluster": 4,
+   "signal": 3,
+   "reasons": [
+    "多源印证(4家)",
+    "准入待复核被卡"
+   ]
+  },
+  {
+   "title": "PSVR《揭秘计划2：远古之战》发售 火星之战爆发",
+   "url": "https://www.gamersky.com/news/201809/1102376.shtml",
+   "game": "全行业",
+   "src_name": "游民星空·最新资讯",
+   "verdict": "review",
+   "pubdate": "2018-09-20",
+   "date_unverified": false,
+   "n_src_cluster": 1,
+   "signal": 2,
+   "reasons": [
+    "强事件词",
+    "准入待复核被卡"
+   ]
+  },
+  {
+   "title": "活动 | 三国杀王者之战神王战广州收官 《三国杀：承天之弈》重磅首发",
+   "url": "http://www.nadianshi.com/2026/06/413745",
+   "game": "全行业",
+   "src_name": "手游那点事",
+   "verdict": "review",
+   "pubdate": "2026-06-01",
+   "date_unverified": false,
+   "n_src_cluster": 1,
+   "signal": 2,
+   "reasons": [
+    "强事件词",
+    "准入待复核被卡"
+   ]
+  }
+ ]
+}

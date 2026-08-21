@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-08-19T11:54:04",
+ "generated_at": "2026-08-21T17:18:13",
  "summary": {
-  "candidates": 53,
-  "suggest": 22,
-  "maybe": 30,
-  "dead": 1,
-  "registered": 66
+  "candidates": 75,
+  "suggest": 24,
+  "maybe": 41,
+  "dead": 10,
+  "registered": 75
  },
  "items": [
   {
@@ -345,6 +345,118 @@
    "toml": "[[sources]]\nid = \"tgmeng_daily\"\ngame = \"全行业\"\nname = \"全行业·news_list\"\ntype = \"news_list\"\nurl = \"https://tgmeng.com/daily/news\"\nenabled = true\nmax_items = 5\n"
   },
   {
+   "kind": "section",
+   "game": "全行业",
+   "url": "https://www.gamesradar.com/news/live/san-diego-comic-con-2026-live-coverage-news-everything-announced-sdcc/",
+   "from": "gamesradar",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "suggest",
+   "reasons": [
+    "已登记源[gamesradar]的同域栏目页，可直接入库"
+   ],
+   "suggest_id": "gamesradar_news",
+   "toml": "[[sources]]\nid = \"gamesradar_news\"\ngame = \"全行业\"\nname = \"全行业·news_list\"\ntype = \"news_list\"\nurl = \"https://www.gamesradar.com/news/live/san-diego-comic-con-2026-live-coverage-news-everything-announced-sdcc/\"\nenabled = true\nmax_items = 5\n"
+  },
+  {
+   "kind": "section",
+   "game": "全行业",
+   "url": "https://www.gamesradar.com/news/live/d23-2026-marvel-star-wars-live-coverage-everything-announced/",
+   "from": "gamesradar",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "suggest",
+   "reasons": [
+    "已登记源[gamesradar]的同域栏目页，可直接入库"
+   ],
+   "suggest_id": "gamesradar_news2",
+   "toml": "[[sources]]\nid = \"gamesradar_news2\"\ngame = \"全行业\"\nname = \"全行业·news_list\"\ntype = \"news_list\"\nurl = \"https://www.gamesradar.com/news/live/d23-2026-marvel-star-wars-live-coverage-everything-announced/\"\nenabled = true\nmax_items = 5\n"
+  },
+  {
+   "kind": "section",
+   "game": "全行业",
+   "url": "https://www.videogameschronicle.com/news/dave-bautista-will-now-officially-play-kratos-in-the-god-of-war-tv-series-replacing-the-injured-ryan-hurst/",
+   "from": "vgc",
+   "status": null,
+   "type": "static",
+   "verdict": "dead",
+   "reasons": [
+    "探活失败(HTTP None)"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "section",
+   "game": "全行业",
+   "url": "https://www.videogameschronicle.com/news/riot-fighting-game-2xko-is-officially-ending-development/",
+   "from": "vgc",
+   "status": null,
+   "type": "static",
+   "verdict": "dead",
+   "reasons": [
+    "探活失败(HTTP None)"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "section",
+   "game": "全行业",
+   "url": "https://www.gamespot.com/articles/cyberpunk-2077-pc-playerbase-surges-after-edgerunners-update/1100-6507591/",
+   "from": "gamespot",
+   "status": null,
+   "type": "static",
+   "verdict": "dead",
+   "reasons": [
+    "探活失败(HTTP None)"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "section",
+   "game": "全行业",
+   "url": "https://www.gamespot.com/articles/why-are-video-game-consoles-so-expensive-these-days-and-games-historically-cheap/",
+   "from": "gamespot",
+   "status": null,
+   "type": "static",
+   "verdict": "dead",
+   "reasons": [
+    "探活失败(HTTP None)"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "section",
+   "game": "全行业",
+   "url": "https://www.pushsquare.com/news/2026/07/god-of-war-shows-kratos-to-be-recast-after-ryan-hurst-suffers-injury-during-filming",
+   "from": "pushsquare",
+   "status": null,
+   "type": "static",
+   "verdict": "dead",
+   "reasons": [
+    "探活失败(HTTP None)"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "section",
+   "game": "全行业",
+   "url": "https://www.pushsquare.com/news/2026/08/ex-wrestler-dave-bautista-officially-replaces-ryan-hurst-as-kratos-in-god-of-war-tv-show",
+   "from": "pushsquare",
+   "status": null,
+   "type": "static",
+   "verdict": "dead",
+   "reasons": [
+    "探活失败(HTTP None)"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
    "kind": "external",
    "game": "火影忍者",
    "url": "https://morefun.qq.com/",
@@ -447,20 +559,6 @@
    "game": "晶核",
    "url": "https://www.nvsgames.cn/",
    "from": "coa",
-   "status": 200,
-   "type": "static",
-   "verdict": "maybe",
-   "reasons": [
-    "跨域站点，归属游戏待人工确认"
-   ],
-   "suggest_id": "",
-   "toml": ""
-  },
-  {
-   "kind": "external",
-   "game": "全行业",
-   "url": "https://m.piaoxingqiu.com/?lssId=807c0bd68b28fca2",
-   "from": "gcores",
    "status": 200,
    "type": "static",
    "verdict": "maybe",
@@ -612,20 +710,6 @@
   },
   {
    "kind": "external",
-   "game": "主机/PC 大作",
-   "url": "https://www.gearsofwar.com/en-us/news/openbeta/",
-   "from": "xbox_wire",
-   "status": 200,
-   "type": "news_list",
-   "verdict": "maybe",
-   "reasons": [
-    "跨域站点，归属游戏待人工确认"
-   ],
-   "suggest_id": "",
-   "toml": ""
-  },
-  {
-   "kind": "external",
    "game": "全行业",
    "url": "http://ku.gamersky.com/",
    "from": "gamersky_pc",
@@ -643,6 +727,34 @@
    "game": "全行业",
    "url": "http://pic.gamersky.com/",
    "from": "gamersky_pc",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "主机/PC 大作",
+   "url": "https://dawnwalker.bn-ent.net/",
+   "from": "ps_blog_ja",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "主机/PC 大作",
+   "url": "https://bond.tales-ch.jp/",
+   "from": "ps_blog_ja",
    "status": 200,
    "type": "static",
    "verdict": "maybe",
@@ -746,6 +858,202 @@
    "verdict": "maybe",
    "reasons": [
     "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://www.ign.com/articles/cyberpunk-edgerunners-was-a-tearjerker-but-one-writer-says-it-almost-had-even-worse-endings?_cache=pass",
+   "from": "ign",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://www.ign.com/articles/cyberpunk-edgerunners-2-sets-fall-2026-release-with-first-look-at-4-new-characters?_cache=pass",
+   "from": "ign",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://www.ign.com/articles/hidetaka-miyazaki-interview-fromsoftware-duskbloods-dark-souls-future-nintendo",
+   "from": "gamesradar",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://variety.com/2026/tv/news/dave-bautista-kratos-god-of-war-tv-series-amazon-1236839394/",
+   "from": "gamesradar",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://gamemusic.net/",
+   "from": "eurogamer",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://support.activision.com/articles/trusted-platform-module-and-secure-boot",
+   "from": "eurogamer",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "http://battle.net",
+   "from": "pcgamer",
+   "status": null,
+   "type": "static",
+   "verdict": "dead",
+   "reasons": [
+    "探活失败(HTTP None)"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://www.riotgames.com/en/news/2xko-active-development-ends-december-2026",
+   "from": "pcgamer",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://variety.com/2026/tv/news/god-of-war-dave-bautista-kratos-amazon-series-ryan-hurst-1236826600/",
+   "from": "pushsquare",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://www.ampereanalysis.com/",
+   "from": "pushsquare",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://www.ign.com/articles/cd-projekt-confirms-layoffs-on-the-witcher-multiplayer-spinoff-issues-statement",
+   "from": "rps",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://www.bbc.com/news/articles/cvgk9rqx5kjo",
+   "from": "rps",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://www.bloomberg.com/news/articles/2026-08-19/playstation-reboots-horizon-hunters-gathering-as-live-service-strategy-struggles?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NzE0MjM0MSwiZXhwIjoxNzg3NzQ3MTQxLCJhcnRpY2xlSWQiOiJUSzBOVElSS1YyVjUwMCIsImJjb25uZWN0SWQiOiJCMUVBQkI5NjQ2QUM0REZFQTJBRkI4MjI1MzgyQTJFQSJ9.W2rmW_r4vHOvYW2YsXBRftk6tzRuk5-lCzHVi21wLDU",
+   "from": "gameinformer",
+   "status": null,
+   "type": "static",
+   "verdict": "dead",
+   "reasons": [
+    "探活失败(HTTP None)"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://www.bloomberg.com/news/articles/2025-01-16/sony-cancels-two-more-playstation-projects",
+   "from": "gameinformer",
+   "status": null,
+   "type": "static",
+   "verdict": "dead",
+   "reasons": [
+    "探活失败(HTTP None)"
    ],
    "suggest_id": "",
    "toml": ""

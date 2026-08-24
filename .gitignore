@@ -17,3 +17,8 @@ collectors/
 .DS_Store
 Thumbs.db
 dist-gamepulse-radar/
+
+# 一次性调试/迁移脚本不入库（如 check_wc_age / clean_wc_stale / backfill）
+.workbuddy/check_*.py
+.workbuddy/clean_*.py
+.workbuddy/backfill_wc_pubdate.py

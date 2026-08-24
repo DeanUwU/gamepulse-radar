@@ -148,8 +148,24 @@ for t in terms:
     if not (0 <= t.get("heat", -1) <= 100):
         wbad.append(t.get("term") + "(heat)")
 chk("wordcloud_terms 日期=今天", w.get("date") == TODAY, str(w.get("date")))
-chk("wordcloud_terms 条数 28-32", 28 <= len(terms) <= 32, f"{len(terms)} 条")
+chk("wordcloud_terms 条数 24-32", 24 <= len(terms) <= 32, f"{len(terms)} 条")
 chk("wordcloud_terms 零违规链接", not wbad, str(wbad[:5]) if wbad else "0")
+
+# ⑧b 词条时效（阻断）：wordcloud_terms.json 里 _pubdate 已知的 term 不能 > STALE_DAYS 天
+#   2026-08-24 治理：B 站每周必看 / 梗 UP 等历史视频曾被策展进"今日热词"，
+#   而词云只过滤了字面"X月X日"日期。runtime 已在 cross_words.py 剥除，但数据层必须有兜底——
+#   本红线禁止任何带 _pubdate 的过期词条留在数据文件里（一旦写进 JSON 即阻断）。
+lo3c = (datetime.date.today() - datetime.timedelta(days=3)).strftime("%Y-%m-%d")
+stale_terms = []
+for t in terms:
+    pd = t.get("_pubdate")
+    if pd and re.match(r"20\d{2}-\d{2}-\d{2}", str(pd)):
+        if not (lo3c <= pd <= TODAY):
+            stale_terms.append((t.get("term"), pd, t.get("href", "")[:50]))
+n_pub = sum(1 for t in terms if t.get("_pubdate"))
+chk("wordcloud_terms 已知 _pubdate 全部 ≤3 天",
+    not stale_terms,
+    f"过期 {len(stale_terms)} 条: {stale_terms[:4]}" if stale_terms else f"共 {n_pub} 条带 _pubdate 全 ≤3 天")
 
 # ⑨ 日历只渲染未来
 cal_html = re.search(r'id="cal"(.*?)</section>', idx, re.S)

@@ -1,37 +1,280 @@
 {
-  "date": "2026-08-24",
-  "terms": [
-    { "term": "黑神话钟馗15分钟实机", "href": "https://www.bilibili.com/video/BV1kS8H6VERt", "cat": "游戏/新品", "heat": 95, "sources": ["B站每周必看"] },
-    { "term": "GTA6第9段泄露实机", "href": "https://www.ign.com/articles/gta-6-leaker-releases-more-gameplay-videos-despite-rockstar-owner-take-twos-microsoft-and-discord-subpoenas", "cat": "事件/风险", "heat": 92, "sources": ["IGN"] },
-    { "term": "影之刃零专场回顾", "href": "https://www.bilibili.com/video/BV1Zdbi6rER9", "cat": "游戏/新品", "heat": 84, "sources": ["B站每周必看"] },
-    { "term": "R星对泄露源毫无头绪", "href": "https://www.gcores.com/articles/218696", "cat": "事件/风险", "heat": 82, "sources": ["机核 GCORES"] },
-    { "term": "WasteTheFallen首曝PV", "href": "https://www.bilibili.com/video/BV1FRgn6pEph", "cat": "游戏/新品", "heat": 80, "sources": ["B站每周必看"] },
-    { "term": "雪碧勇夺TI15冠军", "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28360011", "cat": "事件/风险", "heat": 80, "sources": ["百度贴吧热议"] },
-    { "term": "GTA6泄露内容汇总", "href": "https://www.gamersky.com/news/202608/2194565.shtml", "cat": "事件/风险", "heat": 78, "sources": ["游民星空"] },
-    { "term": "诡秘之主首日免费榜第一", "href": "http://www.gamelook.com.cn/2026/08/600487/", "cat": "行业/数据", "heat": 74, "sources": ["GameLook"] },
-    { "term": "钟馗PV逐帧解析", "href": "https://www.bilibili.com/video/BV1Ns8w6fE4k", "cat": "游戏/新品", "heat": 72, "sources": ["B站每周必看"] },
-    { "term": "诡秘之主全平台公测", "href": "https://www.bilibili.com/video/BV1uJ8w6AEm3", "cat": "游戏/新品", "heat": 68, "sources": ["B站每周必看"] },
-    { "term": "网飞按兵不动不改计划", "href": "https://www.gamersky.com/news/202608/2194641.shtml", "cat": "事件/风险", "heat": 66, "sources": ["游民星空"] },
-    { "term": "2XKO年底停更不停运", "href": "http://www.gamelook.com.cn/2026/08/600458/", "cat": "行业/数据", "heat": 66, "sources": ["GameLook"] },
-    { "term": "宫崎英高新作疑似泄露", "href": "https://www.gamersky.com/news/202608/2193434.shtml", "cat": "行业/数据", "heat": 62, "sources": ["游民星空"] },
-    { "term": "BLG完美收官圣枪复仇", "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28360035", "cat": "事件/风险", "heat": 62, "sources": ["百度贴吧热议"] },
-    { "term": "自行车被偷现霸王龙", "href": "https://www.bilibili.com/video/BV18Tby67EG9", "cat": "梗/社区", "heat": 60, "sources": ["B站每周必看"] },
-    { "term": "前R星总监淡化泄露", "href": "https://www.gamesradar.com/games/grand-theft-auto/former-rockstar-games-lead-says-gta-6-leaks-are-a-nothing-burger-because-90-percent-of-future-players-arent-searching-for-the-clips-online/", "cat": "事件/风险", "heat": 60, "sources": ["GamesRadar+"] },
-    { "term": "网易游戏半年净收507亿", "href": "https://www.baijing.cn/article/56432", "cat": "行业/数据", "heat": 60, "sources": ["白鲸出海"] },
-    { "term": "放70个窝瓜僵尸", "href": "https://www.bilibili.com/video/BV1Qc8T6SESo", "cat": "梗/社区", "heat": 58, "sources": ["B站热门"] },
-    { "term": "HLE双杀T1", "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28359953", "cat": "事件/风险", "heat": 58, "sources": ["百度贴吧热议"] },
-    { "term": "战双线上音乐会", "href": "https://www.bilibili.com/video/BV1VH8K67ENH", "cat": "游戏/新品", "heat": 58, "sources": ["B站热门"] },
-    { "term": "空城计梗", "href": "https://www.bilibili.com/video/BV1pp8E6NES6", "cat": "梗/社区", "heat": 56, "sources": ["B站梗UP"] },
-    { "term": "我收容100位粉丝到存档", "href": "https://www.bilibili.com/video/BV1DV8F6bEkz", "cat": "梗/社区", "heat": 55, "sources": ["B站热门"] },
-    { "term": "国产虚幻5新作公测定档", "href": "https://www.gamersky.com/news/202608/2193803.shtml", "cat": "游戏/新品", "heat": 54, "sources": ["游民星空"] },
-    { "term": "停更7年经典玩MC", "href": "https://www.bilibili.com/video/BV1bQ8u6WEtT", "cat": "梗/社区", "heat": 54, "sources": ["B站热门"] },
-    { "term": "复活吧我的", "href": "https://www.bilibili.com/video/BV1G48M6XEBt", "cat": "梗/社区", "heat": 52, "sources": ["B站热门"] },
-    { "term": "祖龙半年营收6.09亿", "href": "https://www.baijing.cn/article/56441", "cat": "行业/数据", "heat": 52, "sources": ["白鲸出海"] },
-    { "term": "微光维克之歌9月30发售", "href": "https://www.gcores.com/articles/218460", "cat": "游戏/新品", "heat": 52, "sources": ["机核 GCORES"] },
-    { "term": "合成赛道单品月入9900万", "href": "https://www.baijing.cn/article/56443", "cat": "行业/数据", "heat": 50, "sources": ["白鲸出海"] },
-    { "term": "大航海时代凯旋航线首测", "href": "https://news.17173.com/content/08212026/152936221.shtml", "cat": "游戏/新品", "heat": 50, "sources": ["17173"] },
-    { "term": "鹰角投资英国工作室", "href": "https://www.baijing.cn/article/56423", "cat": "行业/数据", "heat": 48, "sources": ["白鲸出海"] },
-    { "term": "浑天星途东方科幻IP", "href": "https://www.youxituoluo.com/534821.html", "cat": "行业/数据", "heat": 46, "sources": ["游戏陀螺"] },
-    { "term": "没领到国补KPL梗", "href": "https://www.bilibili.com/video/BV1UX886VEd5", "cat": "梗/社区", "heat": 44, "sources": ["B站梗UP"] }
-  ]
+ "date": "2026-08-24",
+ "terms": [
+  {
+   "term": "GTA6第9段泄露实机",
+   "href": "https://www.ign.com/articles/gta-6-leaker-releases-more-gameplay-videos-despite-rockstar-owner-take-twos-microsoft-and-discord-subpoenas",
+   "cat": "事件/风险",
+   "heat": 92,
+   "sources": [
+    "IGN"
+   ],
+   "_pubdate": "2026-08-22",
+   "_age": 2
+  },
+  {
+   "term": "R星对泄露源毫无头绪",
+   "href": "https://www.gcores.com/articles/218696",
+   "cat": "事件/风险",
+   "heat": 82,
+   "sources": [
+    "机核 GCORES"
+   ],
+   "_pubdate": null,
+   "_age": null
+  },
+  {
+   "term": "雪碧勇夺TI15冠军",
+   "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28360011",
+   "cat": "事件/风险",
+   "heat": 80,
+   "sources": [
+    "百度贴吧热议"
+   ],
+   "_pubdate": null,
+   "_age": null
+  },
+  {
+   "term": "GTA6泄露内容汇总",
+   "href": "https://www.gamersky.com/news/202608/2194565.shtml",
+   "cat": "事件/风险",
+   "heat": 78,
+   "sources": [
+    "游民星空"
+   ],
+   "_pubdate": null,
+   "_age": null
+  },
+  {
+   "term": "诡秘之主首日免费榜第一",
+   "href": "http://www.gamelook.com.cn/2026/08/600487/",
+   "cat": "行业/数据",
+   "heat": 74,
+   "sources": [
+    "GameLook"
+   ],
+   "_pubdate": null,
+   "_age": null
+  },
+  {
+   "term": "诡秘之主全平台公测",
+   "href": "https://www.bilibili.com/video/BV1uJ8w6AEm3",
+   "cat": "游戏/新品",
+   "heat": 68,
+   "sources": [
+    "B站每周必看"
+   ],
+   "_pubdate": "2026-08-21",
+   "_age": 3
+  },
+  {
+   "term": "网飞按兵不动不改计划",
+   "href": "https://www.gamersky.com/news/202608/2194641.shtml",
+   "cat": "事件/风险",
+   "heat": 66,
+   "sources": [
+    "游民星空"
+   ],
+   "_pubdate": null,
+   "_age": null
+  },
+  {
+   "term": "2XKO年底停更不停运",
+   "href": "http://www.gamelook.com.cn/2026/08/600458/",
+   "cat": "行业/数据",
+   "heat": 66,
+   "sources": [
+    "GameLook"
+   ],
+   "_pubdate": null,
+   "_age": null
+  },
+  {
+   "term": "宫崎英高新作疑似泄露",
+   "href": "https://www.gamersky.com/news/202608/2193434.shtml",
+   "cat": "行业/数据",
+   "heat": 62,
+   "sources": [
+    "游民星空"
+   ],
+   "_pubdate": null,
+   "_age": null
+  },
+  {
+   "term": "BLG完美收官圣枪复仇",
+   "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28360035",
+   "cat": "事件/风险",
+   "heat": 62,
+   "sources": [
+    "百度贴吧热议"
+   ],
+   "_pubdate": null,
+   "_age": null
+  },
+  {
+   "term": "前R星总监淡化泄露",
+   "href": "https://www.gamesradar.com/games/grand-theft-auto/former-rockstar-games-lead-says-gta-6-leaks-are-a-nothing-burger-because-90-percent-of-future-players-arent-searching-for-the-clips-online/",
+   "cat": "事件/风险",
+   "heat": 60,
+   "sources": [
+    "GamesRadar+"
+   ],
+   "_pubdate": "2026-08-23",
+   "_age": 1
+  },
+  {
+   "term": "网易游戏半年净收507亿",
+   "href": "https://www.baijing.cn/article/56432",
+   "cat": "行业/数据",
+   "heat": 60,
+   "sources": [
+    "白鲸出海"
+   ],
+   "_pubdate": null,
+   "_age": null
+  },
+  {
+   "term": "放70个窝瓜僵尸",
+   "href": "https://www.bilibili.com/video/BV1Qc8T6SESo",
+   "cat": "梗/社区",
+   "heat": 58,
+   "sources": [
+    "B站热门"
+   ],
+   "_pubdate": "2026-08-21",
+   "_age": 3
+  },
+  {
+   "term": "HLE双杀T1",
+   "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28359953",
+   "cat": "事件/风险",
+   "heat": 58,
+   "sources": [
+    "百度贴吧热议"
+   ],
+   "_pubdate": null,
+   "_age": null
+  },
+  {
+   "term": "战双线上音乐会",
+   "href": "https://www.bilibili.com/video/BV1VH8K67ENH",
+   "cat": "游戏/新品",
+   "heat": 58,
+   "sources": [
+    "B站热门"
+   ],
+   "_pubdate": "2026-08-22",
+   "_age": 2
+  },
+  {
+   "term": "我收容100位粉丝到存档",
+   "href": "https://www.bilibili.com/video/BV1DV8F6bEkz",
+   "cat": "梗/社区",
+   "heat": 55,
+   "sources": [
+    "B站热门"
+   ],
+   "_pubdate": "2026-08-21",
+   "_age": 3
+  },
+  {
+   "term": "国产虚幻5新作公测定档",
+   "href": "https://www.gamersky.com/news/202608/2193803.shtml",
+   "cat": "游戏/新品",
+   "heat": 54,
+   "sources": [
+    "游民星空"
+   ],
+   "_pubdate": null,
+   "_age": null
+  },
+  {
+   "term": "复活吧我的",
+   "href": "https://www.bilibili.com/video/BV1G48M6XEBt",
+   "cat": "梗/社区",
+   "heat": 52,
+   "sources": [
+    "B站热门"
+   ],
+   "_pubdate": "2026-08-21",
+   "_age": 3
+  },
+  {
+   "term": "祖龙半年营收6.09亿",
+   "href": "https://www.baijing.cn/article/56441",
+   "cat": "行业/数据",
+   "heat": 52,
+   "sources": [
+    "白鲸出海"
+   ],
+   "_pubdate": null,
+   "_age": null
+  },
+  {
+   "term": "微光维克之歌9月30发售",
+   "href": "https://www.gcores.com/articles/218460",
+   "cat": "游戏/新品",
+   "heat": 52,
+   "sources": [
+    "机核 GCORES"
+   ],
+   "_pubdate": null,
+   "_age": null
+  },
+  {
+   "term": "合成赛道单品月入9900万",
+   "href": "https://www.baijing.cn/article/56443",
+   "cat": "行业/数据",
+   "heat": 50,
+   "sources": [
+    "白鲸出海"
+   ],
+   "_pubdate": null,
+   "_age": null
+  },
+  {
+   "term": "大航海时代凯旋航线首测",
+   "href": "https://news.17173.com/content/08212026/152936221.shtml",
+   "cat": "游戏/新品",
+   "heat": 50,
+   "sources": [
+    "17173"
+   ],
+   "_pubdate": "2026-08-21",
+   "_age": 3
+  },
+  {
+   "term": "鹰角投资英国工作室",
+   "href": "https://www.baijing.cn/article/56423",
+   "cat": "行业/数据",
+   "heat": 48,
+   "sources": [
+    "白鲸出海"
+   ],
+   "_pubdate": null,
+   "_age": null
+  },
+  {
+   "term": "浑天星途东方科幻IP",
+   "href": "https://www.youxituoluo.com/534821.html",
+   "cat": "行业/数据",
+   "heat": 46,
+   "sources": [
+    "游戏陀螺"
+   ],
+   "_pubdate": null,
+   "_age": null
+  },
+  {
+   "term": "没领到国补KPL梗",
+   "href": "https://www.bilibili.com/video/BV1UX886VEd5",
+   "cat": "梗/社区",
+   "heat": 44,
+   "sources": [
+    "B站梗UP"
+   ],
+   "_pubdate": "2026-08-24",
+   "_age": 0
+  }
+ ]
 }

@@ -101,6 +101,20 @@ for t in terms:
     if _term_is_stale(term):
         _stale_terms.append(term)
         continue
+    # ---- 2026-08-24 新增：链接原始发布时间 _pubdate 已知且 >STALE_DAYS 天直接剔除 ----
+    # 词云必须反映「当前讨论热词」。B站/媒体页会带 _pubdate（如 AI 策展时记录，或 backfill
+    # 抓取），若已记录且 age > 3 视为过期，不得进入今日热词。
+    # _pubdate 缺失（NULL）不剔除——这些是 AI 策展时未填写的，按"未核实"处理，靠红线兜底。
+    _pd = t.get("_pubdate")
+    if _pd and re.match(r"20\d{2}-\d{2}-\d{2}", str(_pd)):
+        try:
+            _pd_date = datetime.date.fromisoformat(str(_pd)[:10])
+            _pd_age = (_now_date - _pd_date).days
+            if _pd_age > STALE_DAYS:
+                _stale_terms.append(f"{term}(pub={_pd},age={_pd_age}d)")
+                continue
+        except Exception:
+            pass
     _filtered_terms.append(t)
 if _stale_terms:
     print(f"时效过滤：剔除 {len(_stale_terms)} 条过期词条 -> {_stale_terms}")

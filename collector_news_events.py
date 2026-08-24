@@ -26,11 +26,29 @@ inbox 格式（collectors/news_events_inbox.json）：
 """
 import json, io, os, sys, datetime, re, hashlib, urllib.parse
 
+try:
+    from backfill_pubdate import resolve_url
+except Exception:
+    resolve_url = None
+
 BASE = os.path.dirname(os.path.abspath(__file__))
 DOC = os.path.join(BASE, "events.json")
 INBOX = os.environ.get(
     "NEWS_INBOX",
     os.path.join(BASE, "collectors", "news_events_inbox.json"))
+
+def _resolve_pubdate(item, url):
+    """源头根治：inbox 显式 pubdate 优先，否则自动从 source_url 抓原始发布时间。"""
+    pd = item.get("pubdate") or None
+    if pd:
+        return pd
+    if resolve_url and url:
+        try:
+            pd, _ = resolve_url(url)
+        except Exception:
+            pd = None
+    return pd
+
 
 def main():
     if not os.path.exists(INBOX):
@@ -94,7 +112,8 @@ def main():
             "date_start": date, "date_end": date,
             # 日历定档节点是"未来发售安排"，非新闻，无新闻原始发布时间；
             # 仅当 inbox 显式提供 pubdate 时透传，否则 null（消费方据此判定"非新闻、不上头条"）。
-            "pubdate": (item.get("pubdate") or None),
+            # 2026-08-24 源头根治：inbox 未带 pubdate 时，自动从 source_url 抓原始发布时间。
+            "pubdate": _resolve_pubdate(item, url),
         }
         events.append(node)
         existing.add(eid)

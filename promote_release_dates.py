@@ -21,6 +21,11 @@
 """
 import json, io, os, sys, datetime, hashlib, urllib.parse
 
+try:
+    from backfill_pubdate import resolve_url
+except Exception:
+    resolve_url = None
+
 BASE = os.path.dirname(os.path.abspath(__file__))
 DOC = os.path.join(BASE, "events.json")
 RD_DIR = os.environ.get("RELEASE_OUT_DIR", os.path.join(BASE, "collectors"))
@@ -32,6 +37,19 @@ def is_root_url(u):
         return True
     p = urllib.parse.urlparse(u)
     return p.path in ("", "/") and not p.query and not p.fragment
+
+
+def _resolve_pubdate(it, url):
+    """源头根治：release_dates 条目显式 pubdate 优先，否则自动从 source_url 抓。"""
+    pd = it.get("pubdate") or None
+    if pd:
+        return pd
+    if resolve_url and url:
+        try:
+            pd, _ = resolve_url(url)
+        except Exception:
+            pd = None
+    return pd
 
 
 def main():
@@ -105,7 +123,8 @@ def main():
             "date_start": release_date, "date_end": release_date,
             # 日历定档节点是"未来发售安排"，非新闻，无新闻原始发布时间；
             # 仅当 release_dates 条目显式提供 pubdate 时透传，否则 null。
-            "pubdate": (it.get("pubdate") or None),
+            # 2026-08-24 源头根治：条目未带 pubdate 时，自动从 source_url 抓原始发布时间。
+            "pubdate": _resolve_pubdate(it, url),
         }
         events.append(node)
         existing.add(eid)

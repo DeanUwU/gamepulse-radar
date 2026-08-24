@@ -5,11 +5,11 @@
   "event_count": 100,
   "note": "scaffold 中的 <<EVT_i>> 由 gen_calendar.py 用 events[i].anchor 替换 __SRC__ 回填。",
   "feed_count": 40,
-  "feed_seq": 281,
-  "last_update": "2026-08-21",
+  "feed_seq": 298,
+  "last_update": "2026-08-24",
   "date_migrated": "2026-08-18"
  },
- "scaffold": "<!doctype html>\n<html lang=\"zh-CN\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>GamePulse · 版本日历 2026-08-21</title><link rel=\"icon\" type=\"image/png\" href=\"favicon.png\"><link rel=\"stylesheet\" href=\"style.css\"></head><body>\n<header><div class=\"hbar\"><div class=\"logo\">&#127918; 游戏内容<em>雷达</em></div><span class=\"chip\">&#128197; 日历·前瞻哨</span><span class=\"chip fresh\">2026-08-21</span><nav><a href=\"%E6%B8%B8%E6%88%8F%E6%97%A5%E6%8A%A5%E4%B8%BB%E7%AB%99.html\" target=\"_top\">&#8962; 主视图</a><a href=\"daily.html\">日报</a><a href=\"calendar.html\">日历·前瞻</a><a href=\"wordcloud.html\">词云</a></nav></div></header>\n<div class=\"wrap\">\n<div class=\"hero\"><h1>版本日历 · 前瞻哨</h1><p>未来 5 周关键节点（07-27 ~ 08-30）：新角色 / 新版本 / 联动 / 活动 / 维护 / 前瞻。虚线边框 = 前瞻情报（未官宣，需跟踪）。前瞻哨每日自动扫描更新（覆盖 07-27 ~ 08-30）。</p></div>\n<section id=\"cal\">\n<style>\n/* ===== 日历视觉优化 v2 ===== */\n.cal-grid{border-collapse:collapse;width:100%;table-layout:fixed}\n.cal-grid th{font-size:11px;color:var(--sub);font-weight:700;padding:8px 4px;border-bottom:2px solid var(--border);text-transform:uppercase;letter-spacing:.06em}\n.cal-grid td{border:1px solid var(--border);vertical-align:top;min-height:90px;padding:6px 7px;font-size:11.5px;background:var(--panel)}\n.cal-cell .cd{font-weight:800;color:var(--accent);font-size:12px;margin-bottom:4px;display:inline-block;padding:1px 6px;border-radius:4px;background:rgba(255,92,57,.1)}\n.cal-cell.today{background:rgba(255,92,57,.08);box-shadow:inset 0 0 0 2px var(--accent)}\n.cal-cell.today .cd{background:var(--accent);color:#fff}\n.cal-ev{display:block;margin-bottom:3px;padding:4px 7px;border-radius:7px;background:linear-gradient(135deg,var(--panel2),rgba(77,163,255,.04));\n  border-left:3px solid var(--blue);color:var(--txt);font-size:11px;line-height:1.45;\n  white-space:normal;overflow:hidden;text-overflow:ellipsis;transition:all .15s}\n.cal-ev:hover{text-decoration:none;color:#fff;background:linear-gradient(135deg,rgba(77,163,255,.15),var(--panel2));border-left-color:var(--gold);transform:translateX(2px)}\n.cal-ev b{color:var(--gold);font-weight:700}\n.cal-ev.guess{border-left-style:dashed;opacity:.78;background:repeating-linear-gradient(-45deg,var(--panel2),var(--panel2) 3px,rgba(255,176,32,.03) 3px,rgba(255,176,32,.03) 6px)}\n.cal-legend{margin-top:10px;font-size:11px;color:var(--sub)}\n.cal-legend span{display:inline-block;margin-right:12px}\n.cal-legend i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:4px;vertical-align:middle}\n\n@media(max-width:640px){\n  }\n</style>\n<div class=\"sec-title\"><span class=\"bar\"></span>持续运营游戏 · 版本更新日历 <small>今天（07-31）前后两周 · 仅玩家关键节点 · 手游+主机PC大作</small></div><div class=\"panel\"><p class=\"note\">覆盖：原神 / 星穹铁道 / 绝区零 / 鸣潮 / 三角洲行动 / 明日方舟 / 金铲铲之战 / 第五人格 / 恋与深空 / 蛋仔派对 / 永劫无间 / 无畏契约 / 终末地 / 王者荣耀 / 和平精英 / 阴阳师 / 暗区突围 / DNF手游 / LOL手游 / 火影忍者 / 三国志·战略版 / 萤火突击 / 晶核 / 暗黑不朽 / CS2 / DOTA2 + 全球主机PC大作。只保留：新版本 / 新角色 / 联动 / 前瞻 / 大型活动 / 电竞赛事。实线=官方已官宣，<b>虚线边=前瞻情报（待官方确认）</b>。</p><table class=\"cal-grid\"><thead><tr><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th><th>日</th></tr></thead><tbody><tr><td class=\"cal-cell\"><div class=\"cd\" data-d=\"07-27\">27</div><<EVT_11>><<EVT_12>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"07-28\">28</div><<EVT_13>><<EVT_14>><<EVT_15>><<EVT_16>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"07-29\">29</div><<EVT_17>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"07-30\">30</div><<EVT_18>><<EVT_19>><<EVT_20>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"07-31\">31</div><<EVT_76>><<EVT_77>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-01\">1</div><<EVT_21>><<EVT_22>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-02\">2</div><<EVT_23>><<EVT_24>></td></tr><tr><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-03\">3</div><<EVT_81>><<EVT_82>><<EVT_83>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-04\">4</div><<EVT_25>><<EVT_26>><<EVT_84>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-05\">5</div><<EVT_27>><<EVT_28>><<EVT_85>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-06\">6</div><<EVT_29>><<EVT_30>><<EVT_31>><<EVT_32>><<EVT_86>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-07\">7</div><<EVT_33>><<EVT_34>><<EVT_78>><<EVT_87>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-08\">8</div><<EVT_35>><<EVT_36>><<EVT_37>><<EVT_38>><<EVT_42>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-09\">9</div><<EVT_39>><<EVT_40>></td></tr><tr><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-10\">10</div><<EVT_41>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-11\">11</div><<EVT_43>><<EVT_44>><<EVT_45>><<EVT_88>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-12\">12</div><<EVT_46>><<EVT_47>><<EVT_48>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-13\">13</div><<EVT_49>><<EVT_50>><<EVT_51>><<EVT_79>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-14\">14</div><<EVT_52>><<EVT_53>><<EVT_89>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-15\">15</div><<EVT_54>><<EVT_55>><<EVT_56>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-16\">16</div><<EVT_57>><<EVT_58>><<EVT_59>><<EVT_60>></td></tr><tr><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-17\">17</div></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-18\">18</div><<EVT_90>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-19\">19</div></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-20\">20</div><<EVT_91>><<EVT_92>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-21\">21</div></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-22\">22</div><<EVT_93>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-23\">23</div><<EVT_94>></td></tr><tr><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-24\">24</div></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-25\">25</div><<EVT_95>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-26\">26</div><<EVT_99>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-27\">27</div><<EVT_96>><<EVT_97>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-28\">28</div><<EVT_98>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-29\">29</div></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-30\">30</div></td></tr></tbody></table><div class=\"cal-legend\"><span><i style=\"background:#c792ea\"></i>新角色</span><span><i style=\"background:#4da3ff\"></i>新版本</span><span><i style=\"background:#ff5c39\"></i>联动</span><span><i style=\"background:#3fd68f\"></i>活动</span><span><i style=\"background:#ffb020\"></i>维护</span><span><i style=\"background:#ffd24d\"></i>前瞻</span><span><i style=\"background:none;border:1px dashed var(--sub)\"></i>前瞻情报（未官宣）</span></div></div></section>\n\n<footer>游戏内容雷达 · 模块化站点 · 日历\"今天\"由JS动态高亮，无需手动更新</footer></div>\n<script>(function(){var d=new Date();var k=(\"0\"+(d.getMonth()+1)).slice(-2)+\"-\"+(\"0\"+d.getDate()).slice(-2);var c=document.querySelector('.cal-cell .cd[data-d=\"'+k+'\"]');if(c)c.closest(\".cal-cell\").classList.add(\"today\");})();</script>\n</body></html>",
+ "scaffold": "<!doctype html>\n<html lang=\"zh-CN\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>GamePulse · 版本日历 2026-08-24</title><link rel=\"icon\" type=\"image/png\" href=\"favicon.png\"><link rel=\"stylesheet\" href=\"style.css\"></head><body>\n<header><div class=\"hbar\"><div class=\"logo\">&#127918; 游戏内容<em>雷达</em></div><span class=\"chip\">&#128197; 日历·前瞻哨</span><span class=\"chip fresh\">2026-08-24</span><nav><a href=\"%E6%B8%B8%E6%88%8F%E6%97%A5%E6%8A%A5%E4%B8%BB%E7%AB%99.html\" target=\"_top\">&#8962; 主视图</a><a href=\"daily.html\">日报</a><a href=\"calendar.html\">日历·前瞻</a><a href=\"wordcloud.html\">词云</a></nav></div></header>\n<div class=\"wrap\">\n<div class=\"hero\"><h1>版本日历 · 前瞻哨</h1><p>未来 5 周关键节点（07-27 ~ 08-30）：新角色 / 新版本 / 联动 / 活动 / 维护 / 前瞻。虚线边框 = 前瞻情报（未官宣，需跟踪）。前瞻哨每日自动扫描更新（覆盖 07-27 ~ 08-30）。</p></div>\n<section id=\"cal\">\n<style>\n/* ===== 日历视觉优化 v2 ===== */\n.cal-grid{border-collapse:collapse;width:100%;table-layout:fixed}\n.cal-grid th{font-size:11px;color:var(--sub);font-weight:700;padding:8px 4px;border-bottom:2px solid var(--border);text-transform:uppercase;letter-spacing:.06em}\n.cal-grid td{border:1px solid var(--border);vertical-align:top;min-height:90px;padding:6px 7px;font-size:11.5px;background:var(--panel)}\n.cal-cell .cd{font-weight:800;color:var(--accent);font-size:12px;margin-bottom:4px;display:inline-block;padding:1px 6px;border-radius:4px;background:rgba(255,92,57,.1)}\n.cal-cell.today{background:rgba(255,92,57,.08);box-shadow:inset 0 0 0 2px var(--accent)}\n.cal-cell.today .cd{background:var(--accent);color:#fff}\n.cal-ev{display:block;margin-bottom:3px;padding:4px 7px;border-radius:7px;background:linear-gradient(135deg,var(--panel2),rgba(77,163,255,.04));\n  border-left:3px solid var(--blue);color:var(--txt);font-size:11px;line-height:1.45;\n  white-space:normal;overflow:hidden;text-overflow:ellipsis;transition:all .15s}\n.cal-ev:hover{text-decoration:none;color:#fff;background:linear-gradient(135deg,rgba(77,163,255,.15),var(--panel2));border-left-color:var(--gold);transform:translateX(2px)}\n.cal-ev b{color:var(--gold);font-weight:700}\n.cal-ev.guess{border-left-style:dashed;opacity:.78;background:repeating-linear-gradient(-45deg,var(--panel2),var(--panel2) 3px,rgba(255,176,32,.03) 3px,rgba(255,176,32,.03) 6px)}\n.cal-legend{margin-top:10px;font-size:11px;color:var(--sub)}\n.cal-legend span{display:inline-block;margin-right:12px}\n.cal-legend i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:4px;vertical-align:middle}\n\n@media(max-width:640px){\n  }\n</style>\n<div class=\"sec-title\"><span class=\"bar\"></span>持续运营游戏 · 版本更新日历 <small>今天（07-31）前后两周 · 仅玩家关键节点 · 手游+主机PC大作</small></div><div class=\"panel\"><p class=\"note\">覆盖：原神 / 星穹铁道 / 绝区零 / 鸣潮 / 三角洲行动 / 明日方舟 / 金铲铲之战 / 第五人格 / 恋与深空 / 蛋仔派对 / 永劫无间 / 无畏契约 / 终末地 / 王者荣耀 / 和平精英 / 阴阳师 / 暗区突围 / DNF手游 / LOL手游 / 火影忍者 / 三国志·战略版 / 萤火突击 / 晶核 / 暗黑不朽 / CS2 / DOTA2 + 全球主机PC大作。只保留：新版本 / 新角色 / 联动 / 前瞻 / 大型活动 / 电竞赛事。实线=官方已官宣，<b>虚线边=前瞻情报（待官方确认）</b>。</p><table class=\"cal-grid\"><thead><tr><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th><th>日</th></tr></thead><tbody><tr><td class=\"cal-cell\"><div class=\"cd\" data-d=\"07-27\">27</div><<EVT_11>><<EVT_12>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"07-28\">28</div><<EVT_13>><<EVT_14>><<EVT_15>><<EVT_16>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"07-29\">29</div><<EVT_17>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"07-30\">30</div><<EVT_18>><<EVT_19>><<EVT_20>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"07-31\">31</div><<EVT_76>><<EVT_77>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-01\">1</div><<EVT_21>><<EVT_22>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-02\">2</div><<EVT_23>><<EVT_24>></td></tr><tr><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-03\">3</div><<EVT_81>><<EVT_82>><<EVT_83>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-04\">4</div><<EVT_25>><<EVT_26>><<EVT_84>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-05\">5</div><<EVT_27>><<EVT_28>><<EVT_85>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-06\">6</div><<EVT_29>><<EVT_30>><<EVT_31>><<EVT_32>><<EVT_86>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-07\">7</div><<EVT_33>><<EVT_34>><<EVT_78>><<EVT_87>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-08\">8</div><<EVT_35>><<EVT_36>><<EVT_37>><<EVT_38>><<EVT_42>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-09\">9</div><<EVT_39>><<EVT_40>></td></tr><tr><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-10\">10</div><<EVT_41>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-11\">11</div><<EVT_43>><<EVT_44>><<EVT_45>><<EVT_88>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-12\">12</div><<EVT_46>><<EVT_47>><<EVT_48>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-13\">13</div><<EVT_49>><<EVT_50>><<EVT_51>><<EVT_79>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-14\">14</div><<EVT_52>><<EVT_53>><<EVT_89>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-15\">15</div><<EVT_54>><<EVT_55>><<EVT_56>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-16\">16</div><<EVT_57>><<EVT_58>><<EVT_59>><<EVT_60>></td></tr><tr><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-17\">17</div></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-18\">18</div><<EVT_90>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-19\">19</div></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-20\">20</div><<EVT_91>><<EVT_92>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-21\">21</div></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-22\">22</div><<EVT_93>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-23\">23</div><<EVT_94>></td></tr><tr><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-24\">24</div></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-25\">25</div><<EVT_95>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-26\">26</div><<EVT_99>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-27\">27</div><<EVT_96>><<EVT_97>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-28\">28</div><<EVT_98>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-29\">29</div></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-30\">30</div></td></tr></tbody></table><div class=\"cal-legend\"><span><i style=\"background:#c792ea\"></i>新角色</span><span><i style=\"background:#4da3ff\"></i>新版本</span><span><i style=\"background:#ff5c39\"></i>联动</span><span><i style=\"background:#3fd68f\"></i>活动</span><span><i style=\"background:#ffb020\"></i>维护</span><span><i style=\"background:#ffd24d\"></i>前瞻</span><span><i style=\"background:none;border:1px dashed var(--sub)\"></i>前瞻情报（未官宣）</span></div></div></section>\n\n<footer>游戏内容雷达 · 模块化站点 · 日历\"今天\"由JS动态高亮，无需手动更新</footer></div>\n<script>(function(){var d=new Date();var k=(\"0\"+(d.getMonth()+1)).slice(-2)+\"-\"+(\"0\"+d.getDate()).slice(-2);var c=document.querySelector('.cal-cell .cd[data-d=\"'+k+'\"]');if(c)c.closest(\".cal-cell\").classList.add(\"today\");})();</script>\n</body></html>",
  "events": [
   {
    "id": "E000",
@@ -1213,54 +1213,6 @@
  ],
  "feed_events": [
   {
-   "id": "F213",
-   "kind": "feed",
-   "game": "全行业",
-   "title": "《牛来》零宣发没海报？各地影院整活海报大汇总",
-   "source_url": "https://www.gamersky.com/news/202608/2190123.shtml",
-   "source_name": "游民星空新闻",
-   "src_id": "gamersky",
-   "pubdate": "2026-08-17",
-   "first_seen": "2026-08-17",
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"《牛来》零宣发没海报？各地影院整活海报大汇总（来源：游民星空新闻）\" style=\"color:#4da3ff;text-decoration:none\">《牛来》零宣发没海报？各地影院整活海报大汇总</a></td><td>游民星空新闻</td></tr>"
-  },
-  {
-   "id": "F217",
-   "kind": "feed",
-   "game": "全行业",
-   "title": "女巫学院RPG游戏《微光维克之歌》将于9月30日发售",
-   "source_url": "https://www.gcores.com/articles/218460",
-   "source_name": "机核 GCORES",
-   "src_id": "gcores",
-   "pubdate": "2026-08-18",
-   "first_seen": "2026-08-18",
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"女巫学院RPG游戏《微光维克之歌》将于9月30日发售（来源：机核 GCORES）\" style=\"color:#4da3ff;text-decoration:none\">女巫学院RPG游戏《微光维克之歌》将于9月30日发售</a></td><td>机核 GCORES</td></tr>"
-  },
-  {
-   "id": "F218",
-   "kind": "feed",
-   "game": "全行业",
-   "title": "灵犀互娱或将易主，《影之刃零》预售登顶Steam，米哈游AI产品上线47天停服丨陀螺周报",
-   "source_url": "https://www.youxituoluo.com/534800.html",
-   "source_name": "游戏陀螺",
-   "src_id": "youxituoluo",
-   "pubdate": "2026-08-17",
-   "first_seen": "2026-08-18",
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"灵犀互娱或将易主，《影之刃零》预售登顶Steam，米哈游AI产品上线47天停服丨陀螺周报（来源：游戏陀螺）\" style=\"color:#4da3ff;text-decoration:none\">灵犀互娱或将易主，《影之刃零》预售登顶Steam，米哈游AI产品上线47天停服丨陀螺周报</a></td><td>游戏陀螺</td></tr>"
-  },
-  {
-   "id": "F220",
-   "kind": "feed",
-   "game": "三角洲行动",
-   "title": "G.T.I. Security | 违规处罚通知",
-   "source_url": "https://store.steampowered.com/news/app/2507950/view/694269386880454103",
-   "source_name": "三角洲行动 Steam 官方新闻",
-   "src_id": "df_steam",
-   "pubdate": "2026-08-17",
-   "first_seen": "2026-08-18",
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">三角洲行动</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"G.T.I. Security | 违规处罚通知（来源：三角洲行动 Steam 官方新闻）\" style=\"color:#4da3ff;text-decoration:none\">G.T.I. Security | 违规处罚通知</a></td><td>三角洲行动 Steam 官方新闻</td></tr>"
-  },
-  {
    "id": "F221",
    "kind": "feed",
    "game": "全行业",
@@ -1273,54 +1225,6 @@
    "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"物理弹珠肉鸽游戏《爆分引擎》正式公布，将于27年发售（来源：机核 GCORES）\" style=\"color:#4da3ff;text-decoration:none\">物理弹珠肉鸽游戏《爆分引擎》正式公布，将于27年发售</a></td><td>机核 GCORES</td></tr>"
   },
   {
-   "id": "F222",
-   "kind": "feed",
-   "game": "全行业",
-   "title": "索尼PS新品官宣定档！PS5玩家好伙伴 上千元买体验",
-   "source_url": "https://www.gamersky.com/news/202608/2191609.shtml",
-   "source_name": "游民星空 PC 资讯",
-   "src_id": "gamersky_pc",
-   "pubdate": "2026-08-18",
-   "first_seen": "2026-08-20",
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"索尼PS新品官宣定档！PS5玩家好伙伴 上千元买体验（来源：游民星空 PC 资讯）\" style=\"color:#4da3ff;text-decoration:none\">索尼PS新品官宣定档！PS5玩家好伙伴 上千元买体验</a></td><td>游民星空 PC 资讯</td></tr>"
-  },
-  {
-   "id": "F223",
-   "kind": "feed",
-   "game": "阴阳师",
-   "title": "08-19 《阴阳师》手游8月19日维护更新公告 ※维护时间 2026年8月19日7:00-9:00 ※亲爱的阴阳师大人： 为了给大家带来更好的游戏体验，服务器",
-   "source_url": "https://yys.163.com/news/update/20260818/23024_1311591.html",
-   "source_name": "阴阳师版本更新",
-   "src_id": "yys_update",
-   "pubdate": "2026-08-18",
-   "first_seen": "2026-08-20",
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">阴阳师</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"08-19 《阴阳师》手游8月19日维护更新公告 ※维护时间 2026年8月19日7:00-9:…（来源：阴阳师版本更新）\" style=\"color:#4da3ff;text-decoration:none\">08-19 《阴阳师》手游8月19日维护更新公告 ※维护时间 2026年8月19日7:00-9:…</a></td><td>阴阳师版本更新</td></tr>"
-  },
-  {
-   "id": "F224",
-   "kind": "feed",
-   "game": "永劫无间",
-   "title": "8月18日《永劫无间》违规玩家封禁公告",
-   "source_url": "https://store.steampowered.com/news/app/1203220/view/322722517411170720",
-   "source_name": "永劫无间 Steam 官方新闻",
-   "src_id": "yjwujian_steam",
-   "pubdate": "2026-08-18",
-   "first_seen": "2026-08-20",
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">永劫无间</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"8月18日《永劫无间》违规玩家封禁公告（来源：永劫无间 Steam 官方新闻）\" style=\"color:#4da3ff;text-decoration:none\">8月18日《永劫无间》违规玩家封禁公告</a></td><td>永劫无间 Steam 官方新闻</td></tr>"
-  },
-  {
-   "id": "F225",
-   "kind": "feed",
-   "game": "诡秘之主",
-   "title": "《诡秘之主》手游定档 8月21日10:00 全平台公测（PC/iOS/安卓/鸿蒙互通），8/19 预下载、8/19 12:00 预创角",
-   "source_url": "https://news.17173.com/content/08172026/001342548.shtml",
-   "source_name": "17173 网游资讯",
-   "src_id": "news17173",
-   "pubdate": "2026-08-17",
-   "first_seen": "2026-08-20",
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">诡秘之主</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"《诡秘之主》手游定档 8月21日10:00 全平台公测，8/19 预下载、8/19 12:00 预创角（来源：17173 网游资讯）\" style=\"color:#4da3ff;text-decoration:none\">《诡秘之主》手游定档 8月21日10:00 全平台公测</a></td><td>17173 网游资讯</td></tr>"
-  },
-  {
    "id": "F226",
    "kind": "feed",
    "game": "DOTA2",
@@ -1331,18 +1235,6 @@
    "pubdate": "2026-08-19",
    "first_seen": "2026-08-20",
    "anchor": "<tr><td><b style=\"color:var(--gold)\">DOTA2</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"国际邀请赛主赛事（来源：DOTA2 Steam 官方新闻）\" style=\"color:#4da3ff;text-decoration:none\">国际邀请赛主赛事</a></td><td>DOTA2 Steam 官方新闻</td></tr>"
-  },
-  {
-   "id": "F227",
-   "kind": "feed",
-   "game": "全行业",
-   "title": "联合创始人牵头，连投数个项目：莉莉丝丧尸生存新游，冲入畅销Top20",
-   "source_url": "https://www.youxituoluo.com/534801.html",
-   "source_name": "游戏陀螺",
-   "src_id": "youxituoluo",
-   "pubdate": "2026-08-18",
-   "first_seen": "2026-08-20",
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"联合创始人牵头，连投数个项目：莉莉丝丧尸生存新游，冲入畅销Top20（来源：游戏陀螺）\" style=\"color:#4da3ff;text-decoration:none\">联合创始人牵头，连投数个项目：莉莉丝丧尸生存新游，冲入畅销Top20</a></td><td>游戏陀螺</td></tr>"
   },
   {
    "id": "F228",
@@ -1547,19 +1439,6 @@
    "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"Dave Bautista will now officially play Kratos in…（来源：Video Games Chronicle）\" style=\"color:#4da3ff;text-decoration:none\">Dave Bautista will now officially play Kratos in…</a></td><td>Video Games Chronicle</td></tr>"
   },
   {
-   "id": "F257",
-   "kind": "feed",
-   "game": "全行业",
-   "title": "Gamescom 2026: Geoff Keighley and organizers reveal what to expect from gaming’s biggest event",
-   "source_url": "https://www.videogameschronicle.com/news/gamescom-2026/",
-   "source_name": "Video Games Chronicle",
-   "src_id": "vgc",
-   "pubdate": "2026-08-20",
-   "first_seen": "2026-08-21",
-   "date_unverified": false,
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"Gamescom 2026: Geoff Keighley and organizers rev…（来源：Video Games Chronicle）\" style=\"color:#4da3ff;text-decoration:none\">Gamescom 2026: Geoff Keighley and organizers rev…</a></td><td>Video Games Chronicle</td></tr>"
-  },
-  {
    "id": "F258",
    "kind": "feed",
    "game": "全行业",
@@ -1571,19 +1450,6 @@
    "first_seen": "2026-08-21",
    "date_unverified": false,
    "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"Cyberpunk: Edgerunners 2 Finally Has A Release D…（来源：GameSpot）\" style=\"color:#4da3ff;text-decoration:none\">Cyberpunk: Edgerunners 2 Finally Has A Release D…</a></td><td>GameSpot</td></tr>"
-  },
-  {
-   "id": "F259",
-   "kind": "feed",
-   "game": "全行业",
-   "title": "Ex-Wrestler Dave Bautista Officially Replaces Ryan Hurst as Kratos in God of War TV Show",
-   "source_url": "https://www.pushsquare.com/news/2026/08/ex-wrestler-dave-bautista-officially-replaces-ryan-hurst-as-kratos-in-god-of-war-tv-show",
-   "source_name": "Push Square",
-   "src_id": "pushsquare",
-   "pubdate": "2026-08-20",
-   "first_seen": "2026-08-21",
-   "date_unverified": false,
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"Ex-Wrestler Dave Bautista Officially Replaces Ry…（来源：Push Square）\" style=\"color:#4da3ff;text-decoration:none\">Ex-Wrestler Dave Bautista Officially Replaces Ry…</a></td><td>Push Square</td></tr>"
   },
   {
    "id": "F260",
@@ -1664,19 +1530,6 @@
    "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"Metal Gear Solid 4: Guns of the Patriots review（来源：PC Gamer）\" style=\"color:#4da3ff;text-decoration:none\">Metal Gear Solid 4: Guns of the Patriots review</a></td><td>PC Gamer</td></tr>"
   },
   {
-   "id": "F270",
-   "kind": "feed",
-   "game": "全行业",
-   "title": "Call of Duty: Modern Warfare 4 beta dates: How to sign up for both MW4 beta weekends",
-   "source_url": "https://www.pcgamer.com/games/call-of-duty/mw4-beta-dates-times/",
-   "source_name": "PC Gamer",
-   "src_id": "pcgamer",
-   "pubdate": "2026-08-20",
-   "first_seen": "2026-08-21",
-   "date_unverified": false,
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"Call of Duty: Modern Warfare 4 beta dates: How t…（来源：PC Gamer）\" style=\"color:#4da3ff;text-decoration:none\">Call of Duty: Modern Warfare 4 beta dates: How t…</a></td><td>PC Gamer</td></tr>"
-  },
-  {
    "id": "F271",
    "kind": "feed",
    "game": "全行业",
@@ -1714,6 +1567,162 @@
    "first_seen": "2026-08-21",
    "date_unverified": false,
    "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"Mortal Shell 2's first balance patch makes its i…（来源：Rock Paper Shotgun）\" style=\"color:#4da3ff;text-decoration:none\">Mortal Shell 2's first balance patch makes its i…</a></td><td>Rock Paper Shotgun</td></tr>"
+  },
+  {
+   "id": "F282",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "《赛博朋克：边缘行者2》公布最新预告，将于10月20日上线",
+   "source_url": "https://www.gcores.com/articles/218635",
+   "source_name": "机核 GCORES",
+   "src_id": "gcores",
+   "pubdate": "2026-08-21",
+   "first_seen": "2026-08-24",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"《赛博朋克：边缘行者2》公布最新预告，将于10月20日上线（来源：机核 GCORES）\" style=\"color:#4da3ff;text-decoration:none\">《赛博朋克：边缘行者2》公布最新预告，将于10月20日上线</a></td><td>机核 GCORES</td></tr>"
+  },
+  {
+   "id": "F283",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "网易Q2游戏同比增9.7%，投资亏损29.5亿令人意外，丁磊：《遗忘之海》口碑改善中",
+   "source_url": "http://www.gamelook.com.cn/2026/08/600412/",
+   "source_name": "GameLook",
+   "src_id": "gamelook",
+   "pubdate": "2026-08-21",
+   "first_seen": "2026-08-24",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"网易Q2游戏同比增9.7%，投资亏损29.5亿令人意外，丁磊：《遗忘之海》口碑改善中（来源：GameLook）\" style=\"color:#4da3ff;text-decoration:none\">网易Q2游戏同比增9.7%，投资亏损29.5亿令人意外，丁磊：《遗忘之海》口碑改善中</a></td><td>GameLook</td></tr>"
+  },
+  {
+   "id": "F284",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "《绝区零》首席美术“阿兔朋友”宣布离开米哈游，将独立开发种田游戏",
+   "source_url": "https://www.youxituoluo.com/534818.html",
+   "source_name": "游戏陀螺",
+   "src_id": "youxituoluo",
+   "pubdate": "2026-08-21",
+   "first_seen": "2026-08-24",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"《绝区零》首席美术“阿兔朋友”宣布离开米哈游，将独立开发种田游戏（来源：游戏陀螺）\" style=\"color:#4da3ff;text-decoration:none\">《绝区零》首席美术“阿兔朋友”宣布离开米哈游，将独立开发种田游戏</a></td><td>游戏陀螺</td></tr>"
+  },
+  {
+   "id": "F285",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "《GTA6》又遭新黑客侵入！R星员工被扒看成人内容",
+   "source_url": "https://www.gamersky.com/news/202608/2193866.shtml",
+   "source_name": "游民星空新闻",
+   "src_id": "gamersky",
+   "pubdate": "2026-08-21",
+   "first_seen": "2026-08-24",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"《GTA6》又遭新黑客侵入！R星员工被扒看成人内容（来源：游民星空新闻）\" style=\"color:#4da3ff;text-decoration:none\">《GTA6》又遭新黑客侵入！R星员工被扒看成人内容</a></td><td>游民星空新闻</td></tr>"
+  },
+  {
+   "id": "F286",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "准点相约820！《黑神话：钟馗》新PV又爆了，冯骥杨奇表态",
+   "source_url": "http://www.gamelook.com.cn/2026/08/600363/",
+   "source_name": "GameLook",
+   "src_id": "gamelook",
+   "pubdate": "2026-08-21",
+   "first_seen": "2026-08-24",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"准点相约820！《黑神话：钟馗》新PV又爆了，冯骥杨奇表态（来源：GameLook）\" style=\"color:#4da3ff;text-decoration:none\">准点相约820！《黑神话：钟馗》新PV又爆了，冯骥杨奇表态</a></td><td>GameLook</td></tr>"
+  },
+  {
+   "id": "F287",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "网易Q2：游戏收入250亿，《诡影藏锋》《雾海之下》等进入密集测试",
+   "source_url": "https://www.youxituoluo.com/534816.html",
+   "source_name": "游戏陀螺",
+   "src_id": "youxituoluo",
+   "pubdate": "2026-08-21",
+   "first_seen": "2026-08-24",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"网易Q2：游戏收入250亿，《诡影藏锋》《雾海之下》等进入密集测试（来源：游戏陀螺）\" style=\"color:#4da3ff;text-decoration:none\">网易Q2：游戏收入250亿，《诡影藏锋》《雾海之下》等进入密集测试</a></td><td>游戏陀螺</td></tr>"
+  },
+  {
+   "id": "F288",
+   "kind": "feed",
+   "game": "阴阳师",
+   "title": "08-19 《阴阳师》手游8月19日维护更新公告 ※维护时间 2026年8月19日7:00-9:00 ※亲爱的阴阳师大人： 为了给大家带来更好的游戏体验，服务器",
+   "source_url": "https://yys.163.com/news/update/20260818/23024_1311591.html",
+   "source_name": "阴阳师版本更新",
+   "src_id": "yys_update",
+   "pubdate": "2026-08-18",
+   "first_seen": "2026-08-24",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">阴阳师</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"08-19 《阴阳师》手游8月19日维护更新公告 ※维护时间 2026年8月19日7:00-9:…（来源：阴阳师版本更新）\" style=\"color:#4da3ff;text-decoration:none\">08-19 《阴阳师》手游8月19日维护更新公告 ※维护时间 2026年8月19日7:00-9:…</a></td><td>阴阳师版本更新</td></tr>"
+  },
+  {
+   "id": "F289",
+   "kind": "feed",
+   "game": "永劫无间",
+   "title": "8月18日《永劫无间》违规玩家封禁公告",
+   "source_url": "https://store.steampowered.com/news/app/1203220/view/322722517411170720",
+   "source_name": "永劫无间 Steam 官方新闻",
+   "src_id": "yjwujian_steam",
+   "pubdate": "2026-08-18",
+   "first_seen": "2026-08-24",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">永劫无间</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"8月18日《永劫无间》违规玩家封禁公告（来源：永劫无间 Steam 官方新闻）\" style=\"color:#4da3ff;text-decoration:none\">8月18日《永劫无间》违规玩家封禁公告</a></td><td>永劫无间 Steam 官方新闻</td></tr>"
+  },
+  {
+   "id": "F290",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "I've just finished reviewing AMD's latest gaming CPU and I would genuinely considering switching back to Intel",
+   "source_url": "https://www.pcgamer.com/hardware/processors/ive-just-finished-reviewing-amds-latest-gaming-cpu-and-i-would-genuinely-considering-switching-back-to-intel/",
+   "source_name": "PC Gamer",
+   "src_id": "pcgamer",
+   "pubdate": "2026-08-21",
+   "first_seen": "2026-08-24",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"I've just finished reviewing AMD's latest gaming…（来源：PC Gamer）\" style=\"color:#4da3ff;text-decoration:none\">I've just finished reviewing AMD's latest gaming…</a></td><td>PC Gamer</td></tr>"
+  },
+  {
+   "id": "F291",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "Fortnite C7S4 Override: All Battle Pass Skins and Outfits in Chapter 7 Season 4",
+   "source_url": "https://www.videogameschronicle.com/guide/fortnite-c7s4-override-all-battle-pass-skins-and-outfits-in-chapter-7-season-4/",
+   "source_name": "Video Games Chronicle",
+   "src_id": "vgc",
+   "pubdate": "2026-08-21",
+   "first_seen": "2026-08-24",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"Fortnite C7S4 Override: All Battle Pass Skins an…（来源：Video Games Chronicle）\" style=\"color:#4da3ff;text-decoration:none\">Fortnite C7S4 Override: All Battle Pass Skins an…</a></td><td>Video Games Chronicle</td></tr>"
+  },
+  {
+   "id": "F292",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "Review: Metal Gear Solid: Master Collection Vol. 2 (PS5) - MGS 4 Is Finally Free from PS3, and It's the Best It's Ever Been",
+   "source_url": "https://www.pushsquare.com/reviews/ps5/metal-gear-solid-master-collection-vol-2",
+   "source_name": "Push Square",
+   "src_id": "pushsquare",
+   "pubdate": "2026-08-21",
+   "first_seen": "2026-08-24",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"Review: Metal Gear Solid: Master Collection Vol.…（来源：Push Square）\" style=\"color:#4da3ff;text-decoration:none\">Review: Metal Gear Solid: Master Collection Vol.…</a></td><td>Push Square</td></tr>"
+  },
+  {
+   "id": "F294",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "Epic喜加一：特别好评卡牌游戏免费领",
+   "source_url": "https://www.gamersky.com/news/202608/2193433.shtml",
+   "source_name": "游民星空 PC 资讯",
+   "src_id": "gamersky_pc",
+   "pubdate": "2026-08-20",
+   "first_seen": "2026-08-24",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"Epic喜加一：特别好评卡牌游戏免费领（来源：游民星空 PC 资讯）\" style=\"color:#4da3ff;text-decoration:none\">Epic喜加一：特别好评卡牌游戏免费领</a></td><td>游民星空 PC 资讯</td></tr>"
   }
  ]
 }

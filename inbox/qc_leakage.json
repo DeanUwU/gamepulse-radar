@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-21T17:58:16",
+ "generated_at": "2026-08-24T11:28:22",
  "adopt_total": 78,
  "review_total": 49,
- "leak_total": 6,
+ "leak_total": 10,
  "leaks": [
   {
    "title": "这款生活模拟新游，治好了我的时间焦虑 08.20",
@@ -16,6 +16,21 @@
    "signal": 3,
    "reasons": [
     "多源印证(4家)",
+    "准入待复核被卡"
+   ]
+  },
+  {
+   "title": "单品月入9900万美元，合成赛道的“寡头化”与“破局战”",
+   "url": "https://www.youxituoluo.com/534817.html",
+   "game": "全行业",
+   "src_name": "游戏陀螺",
+   "verdict": "review",
+   "pubdate": "2026-08-21",
+   "date_unverified": false,
+   "n_src_cluster": 19,
+   "signal": 3,
+   "reasons": [
+    "多源印证(19家)",
     "准入待复核被卡"
    ]
   },
@@ -74,6 +89,50 @@
    "signal": 2,
    "reasons": [
     "强事件词",
+    "准入待复核被卡"
+   ]
+  },
+  {
+   "title": "单月4000万下载之外，这家中国厂商又做出2500万美元二合游戏",
+   "url": "https://www.baijing.cn/article/56436",
+   "game": "全行业",
+   "src_name": "白鲸出海",
+   "verdict": "adopt",
+   "pubdate": "2026-08-21",
+   "date_unverified": false,
+   "n_src_cluster": 19,
+   "signal": 3,
+   "reasons": [
+    "多源印证(19家)"
+   ]
+  },
+  {
+   "title": "30天成交126万美元，国产挂烫机如何靠TikTok打入美国市场？",
+   "url": "https://www.baijing.cn/article/56435",
+   "game": "全行业",
+   "src_name": "白鲸出海",
+   "verdict": "review",
+   "pubdate": "2026-08-21",
+   "date_unverified": false,
+   "n_src_cluster": 19,
+   "signal": 3,
+   "reasons": [
+    "多源印证(19家)",
+    "准入待复核被卡"
+   ]
+  },
+  {
+   "title": "老辈子用的花边剪火上TikTok，2周卖了70万+",
+   "url": "https://www.baijing.cn/article/56434",
+   "game": "全行业",
+   "src_name": "白鲸出海",
+   "verdict": "review",
+   "pubdate": "2026-08-21",
+   "date_unverified": false,
+   "n_src_cluster": 19,
+   "signal": 3,
+   "reasons": [
+    "多源印证(19家)",
     "准入待复核被卡"
    ]
   },

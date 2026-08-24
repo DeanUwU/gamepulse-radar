@@ -5,7 +5,7 @@
   "event_count": 100,
   "note": "scaffold 中的 <<EVT_i>> 由 gen_calendar.py 用 events[i].anchor 替换 __SRC__ 回填。",
   "feed_count": 40,
-  "feed_seq": 298,
+  "feed_seq": 318,
   "last_update": "2026-08-24",
   "date_migrated": "2026-08-18"
  },
@@ -20,7 +20,8 @@
    "source_name": "「盛夏冰沙」夏日活动（7/18-8/8）：限定SSR+四男主夏日剧情（官方）",
    "anchor": "",
    "date_start": null,
-   "date_end": null
+   "date_end": null,
+   "pubdate": null
   },
   {
    "id": "E001",
@@ -31,7 +32,8 @@
    "source_name": "《原神》「影寂天下人」活动祈愿现已开启",
    "anchor": "",
    "date_start": null,
-   "date_end": null
+   "date_end": null,
+   "pubdate": null
   },
   {
    "id": "E002",
@@ -42,7 +44,8 @@
    "source_name": "《原神》「伴月同眠」活动祈愿现已开启",
    "anchor": "",
    "date_start": null,
-   "date_end": null
+   "date_end": null,
+   "pubdate": null
   },
   {
    "id": "E003",
@@ -53,7 +56,8 @@
    "source_name": "3.5「梦州·玄方地界」新地图版本窗口（7/20-8/1，行业预测）",
    "anchor": "",
    "date_start": null,
-   "date_end": null
+   "date_end": null,
+   "pubdate": null
   },
   {
    "id": "E004",
@@ -64,7 +68,8 @@
    "source_name": "LOL手游新英雄梅尔",
    "anchor": "",
    "date_start": null,
-   "date_end": null
+   "date_end": null,
+   "pubdate": null
   },
   {
    "id": "E005",
@@ -75,7 +80,8 @@
    "source_name": "Fate 联动限定卡池「吉尔伽美什」开启（7/24 12:00，官方）",
    "anchor": "",
    "date_start": null,
-   "date_end": null
+   "date_end": null,
+   "pubdate": null
   },
   {
    "id": "E006",
@@ -86,7 +92,8 @@
    "source_name": "火影忍者秽土柱间S忍",
    "anchor": "",
    "date_start": null,
-   "date_end": null
+   "date_end": null,
+   "pubdate": null
   },
   {
    "id": "E007",
@@ -97,7 +104,8 @@
    "source_name": "三国志战略版新剧本",
    "anchor": "",
    "date_start": null,
-   "date_end": null
+   "date_end": null,
+   "pubdate": null
   },
   {
    "id": "E008",
@@ -108,7 +116,8 @@
    "source_name": "永劫无间手游正式上线（7/25，官方）",
    "anchor": "",
    "date_start": null,
-   "date_end": null
+   "date_end": null,
+   "pubdate": null
   },
   {
    "id": "E011",
@@ -119,7 +128,8 @@
    "source_name": "萤火突击新地图",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"萤火突击新地图\" style=\"border-left-color:#8bc34a\"><b>萤火突击</b> 新地图「废弃科伦坡」</a>",
    "date_start": "2026-07-27",
-   "date_end": "2026-07-27"
+   "date_end": "2026-07-27",
+   "pubdate": null
   },
   {
    "id": "E012",
@@ -130,7 +140,8 @@
    "source_name": "丽都修葺漫谈Vol.13丨系统&amp;amp;玩法更新篇 本期为大家带来的是3.1版本「危局强袭战」更新与系统迭代的介绍，一起来看看吧！",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"丽都修葺漫谈Vol.13丨系统&amp;amp;玩法更新篇 本期为大家带来的是3.1版本「危局强袭战」更新与系统迭代的介绍，一起来看看吧！\" style=\"border-left-color:#4da3ff\"><b>绝区零</b> 丽都修葺漫谈Vol.13丨系统…</a>",
    "date_start": "2026-03-01",
-   "date_end": "2026-03-01"
+   "date_end": "2026-03-01",
+   "pubdate": null
   },
   {
    "id": "E013",
@@ -141,7 +152,8 @@
    "source_name": "晶核3.0版本",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"晶核3.0版本\" style=\"border-left-color:#673ab7\"><b>晶核</b> 3.0「深渊回响」版本</a>",
    "date_start": "2026-03-00",
-   "date_end": "2026-03-00"
+   "date_end": "2026-03-00",
+   "pubdate": null
   },
   {
    "id": "E014",
@@ -152,7 +164,8 @@
    "source_name": "3.1版本「丽都城募」说明 活动期间，绳匠可以在「丽都城募」中，通过提升城募等级获取丰厚奖励！",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"3.1版本「丽都城募」说明 活动期间，绳匠可以在「丽都城募」中，通过提升城募等级获取丰厚奖励！\" style=\"border-left-color:#4da3ff\"><b>绝区零</b> 3.1版本「丽都城募」说明 活…</a>",
    "date_start": "2026-03-01",
-   "date_end": "2026-03-01"
+   "date_end": "2026-03-01",
+   "pubdate": null
   },
   {
    "id": "E015",
@@ -163,7 +176,8 @@
    "source_name": "「卓越搭档」上新说明 3.1版本更新后，S级邦布[艾瑞儿]将永久加入邦布频段。",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"「卓越搭档」上新说明 3.1版本更新后，S级邦布[艾瑞儿]将永久加入邦布频段。\" style=\"border-left-color:#4da3ff\"><b>绝区零</b> 「卓越搭档」上新说明 3.1版…</a>",
    "date_start": "2026-03-01",
-   "date_end": "2026-03-01"
+   "date_end": "2026-03-01",
+   "pubdate": null
   },
   {
    "id": "E016",
@@ -174,7 +188,8 @@
    "source_name": "V3.1庆典特惠&amp;amp;周年臻选 本期带来了3.1版本首充双倍重置、限时活动「点映返礼」、全新时装等更新情报，一起来看看吧！",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"V3.1庆典特惠&amp;amp;周年臻选 本期带来了3.1版本首充双倍重置、限时活动「点映返礼」、全新时装等更新情报，一起来看看吧！\" style=\"border-left-color:#c792ea\"><b>绝区零</b> V3.1庆典特惠&amp;amp;周年…</a>",
    "date_start": "2026-03-01",
-   "date_end": "2026-03-01"
+   "date_end": "2026-03-01",
+   "pubdate": null
   },
   {
    "id": "E017",
@@ -185,7 +200,8 @@
    "source_name": "暗黑不朽S10赛季",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"暗黑不朽S10赛季\" style=\"border-left-color:#1a237e\"><b>暗黑不朽</b> S10「幽冥诅咒」</a>",
    "date_start": "2026-07-29",
-   "date_end": "2026-07-29"
+   "date_end": "2026-07-29",
+   "pubdate": null
   },
   {
    "id": "E018",
@@ -196,7 +212,8 @@
    "source_name": "王者万象棋（王者IP自走棋）开启长期不限量体验服，解除保密限制，公测临近（官方）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"王者万象棋（王者IP自走棋）开启长期不限量体验服，解除保密限制，公测临近（官方）\" style=\"border-left-color:#ff9800\"><b>王者万象棋</b> 不限量体验服开启（官方）</a>",
    "date_start": "2026-07-30",
-   "date_end": "2026-07-30"
+   "date_end": "2026-07-30",
+   "pubdate": null
   },
   {
    "id": "E019",
@@ -207,7 +224,8 @@
    "source_name": "CS2 Major Copenhagen",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"CS2 Major Copenhagen\" style=\"border-left-color:#ff9800\"><b>CS2</b> Major Copenhagen 小组赛</a>",
    "date_start": null,
-   "date_end": null
+   "date_end": null,
+   "pubdate": null
   },
   {
    "id": "E020",
@@ -218,7 +236,8 @@
    "source_name": "×请吃红小豆吧！联动开启，火灾调查员-红小豆时装（官方）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"×请吃红小豆吧！联动开启，火灾调查员-红小豆时装（官方）\" style=\"border-left-color:#ff5c39\"><b>第五人格</b> ×请吃红小豆吧！联动开启，火灾…</a>",
    "date_start": null,
-   "date_end": null
+   "date_end": null,
+   "pubdate": null
   },
   {
    "id": "E021",
@@ -229,7 +248,8 @@
    "source_name": "王者荣耀敦煌联动",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"王者荣耀敦煌联动\" style=\"border-left-color:#ff9800\"><b>王者荣耀</b> 敦煌联动皮肤上线</a>",
    "date_start": "2026-08-01",
-   "date_end": "2026-08-01"
+   "date_end": "2026-08-01",
+   "pubdate": null
   },
   {
    "id": "E022",
@@ -240,7 +260,8 @@
    "source_name": "夏活「直到大地变成一颗酸橙」开启+限定六星「予愿安洁莉娜」卡池（8/1 12:00，官方）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"夏活「直到大地变成一颗酸橙」开启+限定六星「予愿安洁莉娜」卡池（8/1 12:00，官方）\" style=\"border-left-color:#c792ea\"><b>明日方舟</b> 夏活「直到大地变成一颗酸橙」开…</a>",
    "date_start": "2026-08-01",
-   "date_end": "2026-08-01"
+   "date_end": "2026-08-01",
+   "pubdate": null
   },
   {
    "id": "E023",
@@ -251,7 +272,8 @@
    "source_name": "DOTA2 TI2026",
    "anchor": "<a class=\"cal-ev guess\" target=\"_blank\" href=\"__SRC__\" title=\"DOTA2 TI2026\" style=\"border-left-color:#c62828\"><b>DOTA2</b> TI2026 外卡赛开打</a>",
    "date_start": "2026-08-02",
-   "date_end": "2026-08-02"
+   "date_end": "2026-08-02",
+   "pubdate": null
   },
   {
    "id": "E024",
@@ -262,7 +284,8 @@
    "source_name": "4.4下半卡池「SP姬子·启行」开启（8/2 12:00，前瞻直播确认）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"4.4下半卡池「SP姬子·启行」开启（8/2 12:00，前瞻直播确认）\" style=\"border-left-color:#ffd24d\"><b>崩坏星穹铁道</b> 4.4下半卡池「SP姬子·启行…</a>",
    "date_start": "2026-04-04",
-   "date_end": "2026-04-04"
+   "date_end": "2026-04-04",
+   "pubdate": null
   },
   {
    "id": "E025",
@@ -273,7 +296,8 @@
    "source_name": "阴阳师夏日祭",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"阴阳师夏日祭\" style=\"border-left-color:#9c27b0\"><b>阴阳师</b> 夏日祭·鬼切炎夏返场</a>",
    "date_start": "2026-08-04",
-   "date_end": "2026-08-04"
+   "date_end": "2026-08-04",
+   "pubdate": null
   },
   {
    "id": "E027",
@@ -284,7 +308,8 @@
    "source_name": "和平精英SS28赛季",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"和平精英SS28赛季\" style=\"border-left-color:#4caf50\"><b>和平精英</b> SS28「特种作战」</a>",
    "date_start": "2026-08-05",
-   "date_end": "2026-08-05"
+   "date_end": "2026-08-05",
+   "pubdate": null
   },
   {
    "id": "E028",
@@ -295,7 +320,8 @@
    "source_name": "烽火职业联赛夏季赛开赛，端内赛事中心上线（官方）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"烽火职业联赛夏季赛开赛，端内赛事中心上线（官方）\" style=\"border-left-color:#4da3ff\"><b>三角洲行动</b> 烽火职业联赛夏季赛开赛，端内赛…</a>",
    "date_start": null,
-   "date_end": null
+   "date_end": null,
+   "pubdate": null
   },
   {
    "id": "E029",
@@ -306,7 +332,8 @@
    "source_name": "已撤下：未找到可核验的具体官方公告页",
    "anchor": "",
    "date_start": null,
-   "date_end": null
+   "date_end": null,
+   "pubdate": null
   },
   {
    "id": "E030",
@@ -317,7 +344,8 @@
    "source_name": "火影忍者漂泊佩恩",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"火影忍者漂泊佩恩\" style=\"border-left-color:#ff5722\"><b>火影忍者</b> 漂泊佩恩A忍</a>",
    "date_start": null,
-   "date_end": null
+   "date_end": null,
+   "pubdate": null
   },
   {
    "id": "E032",
@@ -328,7 +356,8 @@
    "source_name": "×中国极地研究中心公益科普联动，免费领冒险家-穿越冰穹（官方）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"×中国极地研究中心公益科普联动，免费领冒险家-穿越冰穹（官方）\" style=\"border-left-color:#ff5c39\"><b>第五人格</b> ×中国极地研究中心公益科普联动…</a>",
    "date_start": null,
-   "date_end": null
+   "date_end": null,
+   "pubdate": null
   },
   {
    "id": "E033",
@@ -339,7 +368,8 @@
    "source_name": "萤火突击夺金行动",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"萤火突击夺金行动\" style=\"border-left-color:#8bc34a\"><b>萤火突击</b> 夺金行动限时模式</a>",
    "date_start": "2026-08-07",
-   "date_end": "2026-08-07"
+   "date_end": "2026-08-07",
+   "pubdate": null
   },
   {
    "id": "E034",
@@ -350,7 +380,8 @@
    "source_name": "全面战场新玩法「疯狂的盒子」「王牌猎手」上线（官方）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"全面战场新玩法「疯狂的盒子」「王牌猎手」上线（官方）\" style=\"border-left-color:#4da3ff\"><b>三角洲行动</b> 全面战场新玩法「疯狂的盒子」「…</a>",
    "date_start": null,
-   "date_end": null
+   "date_end": null,
+   "pubdate": null
   },
   {
    "id": "E035",
@@ -361,7 +392,8 @@
    "source_name": "暗区突围新Boss",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"暗区突围新Boss\" style=\"border-left-color:#607d8b\"><b>暗区突围</b> 新Boss+藏宝图玩法</a>",
    "date_start": "2026-08-08",
-   "date_end": "2026-08-08"
+   "date_end": "2026-08-08",
+   "pubdate": null
   },
   {
    "id": "E036",
@@ -372,7 +404,8 @@
    "source_name": "王者荣耀KIC淘汰赛",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"王者荣耀KIC淘汰赛\" style=\"border-left-color:#ff9800\"><b>王者荣耀</b> KIC2026 淘汰赛</a>",
    "date_start": null,
-   "date_end": null
+   "date_end": null,
+   "pubdate": null
   },
   {
    "id": "E037",
@@ -383,7 +416,8 @@
    "source_name": "×永劫无间双端联动（8/8-8/23）：免费领「土御门」套装、宁红夜进蛋仔岛（官方）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"×永劫无间双端联动（8/8-8/23）：免费领「土御门」套装、宁红夜进蛋仔岛（官方）\" style=\"border-left-color:#ff5c39\"><b>蛋仔派对</b> ×永劫无间双端联动（8/8-8…</a>",
    "date_start": "2026-08-08",
-   "date_end": "2026-08-23"
+   "date_end": "2026-08-23",
+   "pubdate": null
   },
   {
    "id": "E038",
@@ -394,7 +428,8 @@
    "source_name": "烽火挑战第二阶段开启（8/8-8/21，官方）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"烽火挑战第二阶段开启（8/8-8/21，官方）\" style=\"border-left-color:#3fd68f\"><b>三角洲行动</b> 烽火挑战第二阶段开启（8/8-…</a>",
    "date_start": "2026-08-08",
-   "date_end": "2026-08-21"
+   "date_end": "2026-08-21",
+   "pubdate": null
   },
   {
    "id": "E039",
@@ -405,7 +440,8 @@
    "source_name": "LOL手游峡谷调整",
    "anchor": "<a class=\"cal-ev guess\" target=\"_blank\" href=\"__SRC__\" title=\"LOL手游峡谷调整\" style=\"border-left-color:#00bcd4\"><b>LOL手游</b> 峡谷调整+赛季重置</a>",
    "date_start": "2026-08-09",
-   "date_end": "2026-08-09"
+   "date_end": "2026-08-09",
+   "pubdate": null
   },
   {
    "id": "E040",
@@ -416,7 +452,8 @@
    "source_name": "1.4 版本「向渊行」+ 半周年庆典（社区排期，待官宣）",
    "anchor": "<a class=\"cal-ev guess\" target=\"_blank\" href=\"__SRC__\" title=\"1.4 版本「向渊行」+ 半周年庆典（社区排期，待官宣）\" style=\"border-left-color:#4da3ff\"><b>明日方舟：终末地</b> 1.4 版本「向渊行」+ 半周…</a>",
    "date_start": "2026-01-04",
-   "date_end": "2026-01-04"
+   "date_end": "2026-01-04",
+   "pubdate": null
   },
   {
    "id": "E041",
@@ -427,7 +464,8 @@
    "source_name": "三国志战略版PK赛季",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"三国志战略版PK赛季\" style=\"border-left-color:#795548\"><b>三国志·战略版</b> PK赛季「赤壁之战」</a>",
    "date_start": "2026-08-10",
-   "date_end": "2026-08-10"
+   "date_end": "2026-08-10",
+   "pubdate": null
   },
   {
    "id": "E042",
@@ -438,7 +476,8 @@
    "source_name": "三角洲行动 宝藏月 8/8 重磅回归：免费「拾花」传说武器捆绑包+2600三角券，寻藏宝图必出红，联动景德镇御窑送限定瓷器（官方确认）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"三角洲行动 宝藏月 8/8 重磅回归：免费「拾花」传说武器捆绑包+2600三角券，寻藏宝图必出红，联动景德镇御窑送限定瓷器（官方确认）\" style=\"border-left-color:#ff5c39\"><b>三角洲行动</b> 宝藏月回归 ×景德镇御窑（官宣）</a>",
    "date_start": "2026-08-08",
-   "date_end": "2026-08-08"
+   "date_end": "2026-08-08",
+   "pubdate": null
   },
   {
    "id": "E043",
@@ -449,7 +488,8 @@
    "source_name": "晶核新团本",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"晶核新团本\" style=\"border-left-color:#673ab7\"><b>晶核</b> 团本「熔岩之心」</a>",
    "date_start": "2026-08-11",
-   "date_end": "2026-08-11"
+   "date_end": "2026-08-11",
+   "pubdate": null
   },
   {
    "id": "E044",
@@ -460,7 +500,8 @@
    "source_name": "S17 赛季结束（8/11 23:59），段位/宝典收尾（官方）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"S17 赛季结束（8/11 23:59），段位/宝典收尾（官方）\" style=\"border-left-color:#4da3ff\"><b>金铲铲之战</b> S17 赛季结束（8/11 2…</a>",
    "date_start": "2026-08-11",
-   "date_end": "2026-08-11"
+   "date_end": "2026-08-11",
+   "pubdate": null
   },
   {
    "id": "E046",
@@ -471,7 +512,8 @@
    "source_name": "暗黑不朽PVP赛季",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"暗黑不朽PVP赛季\" style=\"border-left-color:#1a237e\"><b>暗黑不朽</b> PVP赛季第2阶段</a>",
    "date_start": "2026-08-12",
-   "date_end": "2026-08-12"
+   "date_end": "2026-08-12",
+   "pubdate": null
   },
   {
    "id": "E047",
@@ -482,7 +524,8 @@
    "source_name": "原神7.0「至冬国」定档8/12全球同步上线：永恒冻原+至冬主城首批开放（官方前瞻确认）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"原神7.0「至冬国」定档8/12全球同步上线：永恒冻原+至冬主城首批开放（官方前瞻确认）\" style=\"border-left-color:#4da3ff\"><b>原神</b> 7.0「至冬国」定档上线（官方）</a>",
    "date_start": "2026-07-00",
-   "date_end": "2026-07-00"
+   "date_end": "2026-07-00",
+   "pubdate": null
   },
   {
    "id": "E048",
@@ -493,7 +536,8 @@
    "source_name": "S18「自然之力」上线：虚幻引擎重构+峡谷野怪羁绊，史上最大改版（官方）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"S18「自然之力」上线：虚幻引擎重构+峡谷野怪羁绊，史上最大改版（官方）\" style=\"border-left-color:#4da3ff\"><b>金铲铲之战</b> S18「自然之力」上线：虚幻引…</a>",
    "date_start": null,
-   "date_end": null
+   "date_end": null,
+   "pubdate": null
   },
   {
    "id": "E049",
@@ -504,7 +548,8 @@
    "source_name": "腾讯FPS搜打撤新品《代号:R2》保密测试 8/13-8/14，仅PC端，招募7/28-8/10（官方）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"腾讯FPS搜打撤新品《代号:R2》保密测试 8/13-8/14，仅PC端，招募7/28-8/10（官方）\" style=\"border-left-color:#ff5c39\"><b>代号:R2</b> 保密测试（8/13-14，PC）</a>",
    "date_start": "2026-08-13",
-   "date_end": "2026-08-14"
+   "date_end": "2026-08-14",
+   "pubdate": null
   },
   {
    "id": "E051",
@@ -515,7 +560,8 @@
    "source_name": "精华3上线 + 七夕主题时装（蜘蛛/骑士/守夜人，官方）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"精华3上线 + 七夕主题时装（蜘蛛/骑士/守夜人，官方）\" style=\"border-left-color:#c792ea\"><b>第五人格</b> 精华3上线 + 七夕主题时装（…</a>",
    "date_start": null,
-   "date_end": null
+   "date_end": null,
+   "pubdate": null
   },
   {
    "id": "E052",
@@ -526,7 +572,8 @@
    "source_name": "CS2 Major淘汰赛",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"CS2 Major淘汰赛\" style=\"border-left-color:#ff9800\"><b>CS2</b> Major 淘汰赛阶段</a>",
    "date_start": "2026-08-14",
-   "date_end": "2026-08-14"
+   "date_end": "2026-08-14",
+   "pubdate": null
   },
   {
    "id": "E054",
@@ -537,7 +584,8 @@
    "source_name": "王者荣耀KIC总决赛",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"王者荣耀KIC总决赛\" style=\"border-left-color:#ff9800\"><b>王者荣耀</b> KIC 总决赛</a>",
    "date_start": "2026-08-15",
-   "date_end": "2026-08-15"
+   "date_end": "2026-08-15",
+   "pubdate": null
   },
   {
    "id": "E055",
@@ -548,7 +596,8 @@
    "source_name": "和平精英PEI季后赛",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"和平精英PEI季后赛\" style=\"border-left-color:#4caf50\"><b>和平精英</b> PEI 夏季季后赛</a>",
    "date_start": null,
-   "date_end": null
+   "date_end": null,
+   "pubdate": null
   },
   {
    "id": "E056",
@@ -559,7 +608,8 @@
    "source_name": "夏活第三段关卡「眺望待行之路」开放（官方）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"夏活第三段关卡「眺望待行之路」开放（官方）\" style=\"border-left-color:#3fd68f\"><b>明日方舟</b> 夏活第三段关卡「眺望待行之路」…</a>",
    "date_start": null,
-   "date_end": null
+   "date_end": null,
+   "pubdate": null
   },
   {
    "id": "E057",
@@ -570,7 +620,8 @@
    "source_name": "DOTA2 TI主赛事",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"DOTA2 TI主赛事\" style=\"border-left-color:#c62828\"><b>DOTA2</b> TI2026 主赛事</a>",
    "date_start": "2026-08-16",
-   "date_end": "2026-08-16"
+   "date_end": "2026-08-16",
+   "pubdate": null
   },
   {
    "id": "E058",
@@ -581,7 +632,8 @@
    "source_name": "阴阳师新区",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"阴阳师新区\" style=\"border-left-color:#9c27b0\"><b>阴阳师</b> 新区「缘结神域」</a>",
    "date_start": null,
-   "date_end": null
+   "date_end": null,
+   "pubdate": null
   },
   {
    "id": "E059",
@@ -592,7 +644,8 @@
    "source_name": "3.1 版本后半程 → 3.0/3.2 节点观察位（六周一版节奏推算）",
    "anchor": "<a class=\"cal-ev guess\" target=\"_blank\" href=\"__SRC__\" title=\"3.1 版本后半程 → 3.0/3.2 节点观察位（六周一版节奏推算）\" style=\"border-left-color:#4da3ff\"><b>绝区零</b> 3.1 版本后半程 → 3.0…</a>",
    "date_start": "2026-03-01",
-   "date_end": "2026-03-01"
+   "date_end": "2026-03-01",
+   "pubdate": null
   },
   {
    "id": "E060",
@@ -603,7 +656,8 @@
    "source_name": "新赛季约8月中下旬结束：限定奖励冲刺窗口（官方公告提前一周公示）",
    "anchor": "<a class=\"cal-ev guess\" target=\"_blank\" href=\"__SRC__\" title=\"新赛季约8月中下旬结束：限定奖励冲刺窗口（官方公告提前一周公示）\" style=\"border-left-color:#ffd24d\"><b>无畏契约</b> 新赛季约8月中下旬结束：限定奖…</a>",
    "date_start": null,
-   "date_end": null
+   "date_end": null,
+   "pubdate": null
   },
   {
    "id": "E076",
@@ -614,7 +668,8 @@
    "source_name": "ChinaJoy 2026 上海开幕：近900家企业、超1000款游戏，主题「与AI同游」（17173早报）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"ChinaJoy 2026 上海开幕：近900家企业、超1000款游戏，主题「与AI同游」（17173早报）\" style=\"border-left-color:#ff5c39\"><b>ChinaJoy 2026</b> 展会开幕（7/31-8/3）</a>",
    "date_start": "2026-07-31",
-   "date_end": "2026-07-31"
+   "date_end": "2026-07-31",
+   "pubdate": null
   },
   {
    "id": "E077",
@@ -625,7 +680,8 @@
    "source_name": "《雾影猎人》7/31多平台发售：登顶Steam国区热销，好评率59%（B站官方发售PV）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"《雾影猎人》7/31多平台发售：登顶Steam国区热销，好评率59%（B站官方发售PV）\" style=\"border-left-color:#ff9800\"><b>雾影猎人</b> 多平台正式发售</a>",
    "date_start": "2026-07-31",
-   "date_end": "2026-07-31"
+   "date_end": "2026-07-31",
+   "pubdate": null
   },
   {
    "id": "E078",
@@ -636,7 +692,8 @@
    "source_name": "王者荣耀8/7开启夏日庆典：蔷薇珍宝阁、奇幻商店有望回归（7/30更新公告确认）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"王者荣耀8/7开启夏日庆典：蔷薇珍宝阁、奇幻商店有望回归（7/30更新公告确认）\" style=\"border-left-color:#ffb020\"><b>王者荣耀</b> 夏日庆典开启</a>",
    "date_start": "2026-08-07",
-   "date_end": "2026-08-07"
+   "date_end": "2026-08-07",
+   "pubdate": null
   },
   {
    "id": "E079",
@@ -647,7 +704,8 @@
    "source_name": "鸣潮3.5下半卡池8/13开启：新五星冷凝辅助穗穗+爱弥斯复刻，至9/2（前瞻确认）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"鸣潮3.5下半卡池8/13开启：新五星冷凝辅助穗穗+爱弥斯复刻，至9/2（前瞻确认）\" style=\"border-left-color:#4da3ff\"><b>鸣潮</b> 3.5下半卡池：穗穗+爱弥斯复刻</a>",
    "date_start": "2026-03-05",
-   "date_end": "2026-03-05"
+   "date_end": "2026-03-05",
+   "pubdate": null
   },
   {
    "id": "E080",
@@ -658,7 +716,8 @@
    "source_name": "崩铁4.5预计8月下旬：知更鸟·晴歌+砂金·戏浪新形态（社区推测，待官宣）",
    "anchor": "",
    "date_start": null,
-   "date_end": null
+   "date_end": null,
+   "pubdate": null
   },
   {
    "id": "E081",
@@ -669,7 +728,8 @@
    "source_name": "ChinaJoy 2026 最终日（7/31-8/3）：近900家企业、超1000款游戏、14万㎡、39个国家和地区；腾讯AI游戏展区全球首款申遗小游戏《数字景德镇·瓷都小匠》开放线下体验（每经游戏早参 08-03）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"ChinaJoy 2026 最终日（7/31-8/3）：近900家企业、超1000款游戏、14万㎡、39个国家和地区；腾讯AI游戏展区全球首款申遗小游戏《数字景德镇·瓷都小匠》开放线下体验（每经游戏早参 08-03）\" style=\"border-left-color:#3fd68f\"><b>ChinaJoy 2026</b> 展会最终日 · 腾讯AI展区申遗小游戏首曝</a>",
    "date_start": "2026-07-31",
-   "date_end": "2026-08-03"
+   "date_end": "2026-08-03",
+   "pubdate": null
   },
   {
    "id": "E082",
@@ -680,7 +740,8 @@
    "source_name": "《街头霸王6》第四年度首位追加角色「亚思敏」8/3 正式参战，面向 Year4 角色通行证/终极通行证玩家开放（卡普空官方）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"《街头霸王6》第四年度首位追加角色「亚思敏」8/3 正式参战，面向 Year4 角色通行证/终极通行证玩家开放（卡普空官方）\" style=\"border-left-color:#c792ea\"><b>街头霸王6</b> Year4 首位新角色「亚思敏」上线</a>",
    "date_start": "2026-08-03",
-   "date_end": "2026-08-03"
+   "date_end": "2026-08-03",
+   "pubdate": null
   },
   {
    "id": "E083",
@@ -691,7 +752,8 @@
    "source_name": "《冒险岛：怀旧服》国服 8/3 正式开服（17173 热点预告 08-03）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"《冒险岛：怀旧服》国服 8/3 正式开服（17173 热点预告 08-03）\" style=\"border-left-color:#4da3ff\"><b>冒险岛：怀旧服</b> 国服正式开服</a>",
    "date_start": "2026-08-03",
-   "date_end": "2026-08-03"
+   "date_end": "2026-08-03",
+   "pubdate": null
   },
   {
    "id": "E084",
@@ -702,7 +764,8 @@
    "source_name": "《无畏契约：源能行动》手游一周年版本「尽露锋芒」8/4 上线：新控场英雄「海神」、夺还模式（5分制速战）、瓦秀乐园、收藏室系统首次亮相，手瓦节福利同步开启（官方定档）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"《无畏契约：源能行动》手游一周年版本「尽露锋芒」8/4 上线：新控场英雄「海神」、夺还模式（5分制速战）、瓦秀乐园、收藏室系统首次亮相，手瓦节福利同步开启（官方定档）\" style=\"border-left-color:#4da3ff\"><b>无畏契约：源能行动</b> 一周年版本「尽露锋芒」+ 手瓦节</a>",
    "date_start": "2026-08-04",
-   "date_end": "2026-08-04"
+   "date_end": "2026-08-04",
+   "pubdate": null
   },
   {
    "id": "E085",
@@ -713,7 +776,8 @@
    "source_name": "NEXON 发行、devCAT 开发的跨平台 MMORPG《洛奇Mobile》8/5 开放首个团队副本「格里斯贝恩」（官方）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"NEXON 发行、devCAT 开发的跨平台 MMORPG《洛奇Mobile》8/5 开放首个团队副本「格里斯贝恩」（官方）\" style=\"border-left-color:#3fd68f\"><b>洛奇 Mobile</b> 首个 8 人团队副本「格里斯贝恩」</a>",
    "date_start": "2026-08-05",
-   "date_end": "2026-08-05"
+   "date_end": "2026-08-05",
+   "pubdate": null
   },
   {
    "id": "E086",
@@ -724,7 +788,8 @@
    "source_name": "《完美世界：诸神之战》8/6 东方奇遇季上线：小团夺旗战、修真天关，七夕/中秋节日活动（官方）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"《完美世界：诸神之战》8/6 东方奇遇季上线：小团夺旗战、修真天关，七夕/中秋节日活动（官方）\" style=\"border-left-color:#3fd68f\"><b>完美世界：诸神之战</b> 东方奇遇季开启</a>",
    "date_start": "2026-08-06",
-   "date_end": "2026-08-06"
+   "date_end": "2026-08-06",
+   "pubdate": null
   },
   {
    "id": "E087",
@@ -735,7 +800,8 @@
    "source_name": "《九阴真经》八月资料片「山海同袍」8/7 正式公测：南海中国新疆域现身，水下武侠系列玩法（官方定档）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"《九阴真经》八月资料片「山海同袍」8/7 正式公测：南海中国新疆域现身，水下武侠系列玩法（官方定档）\" style=\"border-left-color:#4da3ff\"><b>九阴真经</b> 资料片「山海同袍」公测</a>",
    "date_start": "2026-08-07",
-   "date_end": "2026-08-07"
+   "date_end": "2026-08-07",
+   "pubdate": null
   },
   {
    "id": "E088",
@@ -746,7 +812,8 @@
    "source_name": "《The Elder Scrolls IV: Oblivion Remastered》Switch 2 版 8/11 发售（900p/30fps 掌机，1080p/30fps 底座）；同日《No More Room in Hell 2》多平台发售",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"《The Elder Scrolls IV: Oblivion Remastered》Switch 2 版 8/11 发售（900p/30fps 掌机，1080p/30fps 底座）；同日《No More Room in Hell 2》多平台发售\" style=\"border-left-color:#4da3ff\"><b>主机/PC新作</b> 上古卷轴4：湮灭 重制版 (Switch 2)</a>",
    "date_start": "2026-08-11",
-   "date_end": "2026-08-11"
+   "date_end": "2026-08-11",
+   "pubdate": null
   },
   {
    "id": "E089",
@@ -757,7 +824,8 @@
    "source_name": "《三角洲行动》×《彩虹六号：围攻》联动第二弹预计 8/14：新增联动门禁、联动撤离玩法、第二批典藏皮肤（单源前瞻推测，待官宣）",
    "anchor": "<a class=\"cal-ev guess\" target=\"_blank\" href=\"__SRC__\" title=\"《三角洲行动》×《彩虹六号：围攻》联动第二弹预计 8/14：新增联动门禁、联动撤离玩法、第二批典藏皮肤（单源前瞻推测，待官宣）\" style=\"border-left-color:#ff5c39\"><b>三角洲行动</b> ×彩虹六号 联动第二弹（推测）</a>",
    "date_start": "2026-08-14",
-   "date_end": "2026-08-14"
+   "date_end": "2026-08-14",
+   "pubdate": null
   },
   {
    "id": "E090",
@@ -768,7 +836,8 @@
    "source_name": "8/18 发售：《The Sinking City 2》（PS5/XSX/PC，克苏鲁恐怖续作）、《REKA》1.0 正式版（PC）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"8/18 发售：《The Sinking City 2》（PS5/XSX/PC，克苏鲁恐怖续作）、《REKA》1.0 正式版（PC）\" style=\"border-left-color:#4da3ff\"><b>主机/PC新作</b> 沉没之城2 / REKA 1.0 发售</a>",
    "date_start": "2026-08-18",
-   "date_end": "2026-08-18"
+   "date_end": "2026-08-18",
+   "pubdate": null
   },
   {
    "id": "E091",
@@ -779,7 +848,8 @@
    "source_name": "8/20 发售：《Mortal Shell 2》（魂类续作）、《S.T.A.L.K.E.R. 2: Cost of Hope》资料片、《Gallipoli》",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"8/20 发售：《Mortal Shell 2》（魂类续作）、《S.T.A.L.K.E.R. 2: Cost of Hope》资料片、《Gallipoli》\" style=\"border-left-color:#4da3ff\"><b>主机/PC新作</b> 致命躯壳2 / 潜行者2 资料片</a>",
    "date_start": "2026-08-20",
-   "date_end": "2026-08-20"
+   "date_end": "2026-08-20",
+   "pubdate": null
   },
   {
    "id": "E092",
@@ -790,7 +860,8 @@
    "source_name": "《第五人格》8/20 ×九色鹿（上海美术电影制片厂）联动（暑期前瞻直播确认）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"《第五人格》8/20 ×九色鹿（上海美术电影制片厂）联动（暑期前瞻直播确认）\" style=\"border-left-color:#ff5c39\"><b>第五人格</b> ×九色鹿（上美影）联动</a>",
    "date_start": "2026-08-20",
-   "date_end": "2026-08-20"
+   "date_end": "2026-08-20",
+   "pubdate": null
   },
   {
    "id": "E093",
@@ -801,7 +872,8 @@
    "source_name": "崩铁 4.4「鸣笛于归寂之时」周期收尾：SP姬子·启行卡池 8/22 6:00 下架；4.5 切换日两源冲突（8/22 或 8/26），待官方前瞻直播定档",
    "anchor": "<a class=\"cal-ev guess\" target=\"_blank\" href=\"__SRC__\" title=\"崩铁 4.4「鸣笛于归寂之时」周期收尾：SP姬子·启行卡池 8/22 6:00 下架；4.5 切换日两源冲突（8/22 或 8/26），待官方前瞻直播定档\" style=\"border-left-color:#ffb020\"><b>崩坏星穹铁道</b> 4.4 结束 → 4.5 切换（推测）</a>",
    "date_start": "2026-04-04",
-   "date_end": "2026-04-04"
+   "date_end": "2026-04-04",
+   "pubdate": null
   },
   {
    "id": "E094",
@@ -812,7 +884,8 @@
    "source_name": "《三角洲行动》×《彩虹六号：围攻》联动内容 8/23 结束，短期无返场计划（官方联动周期 7/10-8/23）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"《三角洲行动》×《彩虹六号：围攻》联动内容 8/23 结束，短期无返场计划（官方联动周期 7/10-8/23）\" style=\"border-left-color:#ff5c39\"><b>三角洲行动</b> ×彩虹六号 联动下架绝版</a>",
    "date_start": "2026-07-10",
-   "date_end": "2026-08-23"
+   "date_end": "2026-08-23",
+   "pubdate": null
   },
   {
    "id": "E095",
@@ -823,7 +896,8 @@
    "source_name": "《Once Human 七日世界》主机版 8/25 登陆 PS5 / Xbox Series X|S",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"《Once Human 七日世界》主机版 8/25 登陆 PS5 / Xbox Series X|S\" style=\"border-left-color:#4da3ff\"><b>七日世界</b> 主机版上线（PS5 / XSX）</a>",
    "date_start": "2026-08-25",
-   "date_end": "2026-08-25"
+   "date_end": "2026-08-25",
+   "pubdate": null
   },
   {
    "id": "E096",
@@ -834,7 +908,8 @@
    "source_name": "8/27 三线齐发：《Metal Gear Solid: Master Collection Vol.2》（含MGS4 4K/60）、《Star Wars Zero Company》（克隆人战争战术）、《Resonance: A Plague Tale Legacy》（瘟疫传说前传）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"8/27 三线齐发：《Metal Gear Solid: Master Collection Vol.2》（含MGS4 4K/60）、《Star Wars Zero Company》（克隆人战争战术）、《Resonance: A Plague Tale Legacy》（瘟疫传说前传）\" style=\"border-left-color:#4da3ff\"><b>主机/PC新作</b> 合金装备合集2 / 星战零号连队 / 瘟疫传说前传</a>",
    "date_start": "2026-08-27",
-   "date_end": "2026-08-27"
+   "date_end": "2026-08-27",
+   "pubdate": null
   },
   {
    "id": "E097",
@@ -845,7 +920,8 @@
    "source_name": "《第五人格》8/27 中元节主题版本（暑期前瞻直播确认）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"《第五人格》8/27 中元节主题版本（暑期前瞻直播确认）\" style=\"border-left-color:#3fd68f\"><b>第五人格</b> 中元节版本</a>",
    "date_start": "2026-08-27",
-   "date_end": "2026-08-27"
+   "date_end": "2026-08-27",
+   "pubdate": null
   },
   {
    "id": "E098",
@@ -856,7 +932,8 @@
    "source_name": "《Elden Ring Tarnished Edition》Switch 2 版 8/28 发售；同日《Captain Tsubasa 2: World Fighters》多平台发售",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"《Elden Ring Tarnished Edition》Switch 2 版 8/28 发售；同日《Captain Tsubasa 2: World Fighters》多平台发售\" style=\"border-left-color:#4da3ff\"><b>主机/PC新作</b> 艾尔登法环 褪色者版 (Switch 2)</a>",
    "date_start": "2026-08-28",
-   "date_end": "2026-08-28"
+   "date_end": "2026-08-28",
+   "pubdate": null
   },
   {
    "id": "E099",
@@ -867,7 +944,8 @@
    "source_name": "《Brigandine Abyss》8/26 登陆 PS5 / XSX / Switch 2 / PC",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"__SRC__\" title=\"《Brigandine Abyss》8/26 登陆 PS5 / XSX / Switch 2 / PC\" style=\"border-left-color:#4da3ff\"><b>主机/PC新作</b> Brigandine Abyss 发售</a>",
    "date_start": "2026-08-26",
-   "date_end": "2026-08-26"
+   "date_end": "2026-08-26",
+   "pubdate": null
   },
   {
    "id": "news_55a735a177",
@@ -878,7 +956,8 @@
    "source_name": "鸣潮 将于 2026-08-20：3.6版本「蜃云灯影,凡尘剑心」上线,新角色清宵/景燃（3DM）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://m.ali213.net/news/gl2608/1798527.html\" title=\"鸣潮\">3.6版本「蜃云灯影,凡尘剑心」上线,新角色清宵/景燃</a>",
    "date_start": "2026-08-20",
-   "date_end": "2026-08-20"
+   "date_end": "2026-08-20",
+   "pubdate": null
   },
   {
    "id": "news_090764b608",
@@ -889,7 +968,8 @@
    "source_name": "原神 将于 2026-09-01：7.0「至冬」下半卡池开启：Flins/Ineffa 复刻 + 新四星 Alyosha（Treabar 卡池前瞻）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://treabar.com/zh/blog/10587\" title=\"原神\">7.0「至冬」下半卡池开启：Flins/Ineffa 复刻 </a>",
    "date_start": "2026-09-01",
-   "date_end": "2026-09-01"
+   "date_end": "2026-09-01",
+   "pubdate": null
   },
   {
    "id": "news_a83c6a1451",
@@ -900,7 +980,8 @@
    "source_name": "主机/PC新作 将于 2026-09-03：《黎明行者之血》《轨道双子星》发售（ACGD 下半年盘点）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://www.acgd.net/news/61100.html\" title=\"主机/PC新作\">《黎明行者之血》《轨道双子星》发售</a>",
    "date_start": "2026-09-03",
-   "date_end": "2026-09-03"
+   "date_end": "2026-09-03",
+   "pubdate": null
   },
   {
    "id": "news_c6d3bca63b",
@@ -911,7 +992,8 @@
    "source_name": "主机/PC新作 将于 2026-09-04：《鬼武者：剑之道》发售（PS5/XSX/Switch/PC）（GamesComingOut 发售日历）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://gamescomingout.com/games-coming-out-september-2026\" title=\"主机/PC新作\">《鬼武者：剑之道》发售（PS5/XSX/Switch/PC）</a>",
    "date_start": "2026-09-04",
-   "date_end": "2026-09-04"
+   "date_end": "2026-09-04",
+   "pubdate": null
   },
   {
    "id": "news_a69a2433e3",
@@ -922,7 +1004,8 @@
    "source_name": "主机/PC新作 将于 2026-09-08：《月光光心慌慌》（Halloween: The Game）发售（游民星空）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://wap.gamersky.com/news/Content-2188172.html\" title=\"主机/PC新作\">《月光光心慌慌》（Halloween: The Game）发</a>",
    "date_start": "2026-09-08",
-   "date_end": "2026-09-08"
+   "date_end": "2026-09-08",
+   "pubdate": null
   },
   {
    "id": "news_dfd545234b",
@@ -933,7 +1016,8 @@
    "source_name": "崩坏：星穹铁道 将于 2026-09-12：4.5「挥掷千星的筹码」下半卡池：砂金·戏浪（量子·欢愉）登场（OurPlay 官方公告）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://www.ourplay.net/news/detail/12192\" title=\"崩坏：星穹铁道\">4.5「挥掷千星的筹码」下半卡池：砂金·戏浪（量子·欢愉）登</a>",
    "date_start": "2026-09-12",
-   "date_end": "2026-09-12"
+   "date_end": "2026-09-12",
+   "pubdate": null
   },
   {
    "id": "news_f28c15e81f",
@@ -944,7 +1028,8 @@
    "source_name": "主机/PC新作 将于 2026-09-14：《战锤40K：战争黎明4》发售（PC）（GamesComingOut 发售日历）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://gamescomingout.com/games-coming-out-september-2026\" title=\"主机/PC新作\">《战锤40K：战争黎明4》发售（PC）</a>",
    "date_start": "2026-09-14",
-   "date_end": "2026-09-14"
+   "date_end": "2026-09-14",
+   "pubdate": null
   },
   {
    "id": "news_5b896ba989",
@@ -955,7 +1040,8 @@
    "source_name": "主机/PC新作 将于 2026-09-15：《漫威金刚狼》（PS5）、《符文世界：龙之荒野》双发（ACGD 下半年盘点）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://www.acgd.net/news/61100.html\" title=\"主机/PC新作\">《漫威金刚狼》（PS5）、《符文世界：龙之荒野》双发</a>",
    "date_start": "2026-09-15",
-   "date_end": "2026-09-15"
+   "date_end": "2026-09-15",
+   "pubdate": null
   },
   {
    "id": "news_37ed5ff89a",
@@ -966,7 +1052,8 @@
    "source_name": "主机/PC新作 将于 2026-09-17：《火焰纹章：万缕千丝》《空之轨迹 the 2nd》《战锤40K：战争黎明4》同日上线（游民星空）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://wap.gamersky.com/news/Content-2188172.html\" title=\"主机/PC新作\">《火焰纹章：万缕千丝》《空之轨迹 the 2nd》《战锤40</a>",
    "date_start": "2026-09-17",
-   "date_end": "2026-09-17"
+   "date_end": "2026-09-17",
+   "pubdate": null
   },
   {
    "id": "news_f51ce82447",
@@ -977,7 +1064,8 @@
    "source_name": "碧蓝幻想Versus：崛起 将于 2026-09-17：登陆 Switch 2，同步 Id 角色与 2.60 大更新（中关村在线）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://game.zol.com.cn/1207/12075351.html\" title=\"碧蓝幻想Versus：崛起\">登陆 Switch 2，同步 Id 角色与 2.60 大更新</a>",
    "date_start": "2026-09-17",
-   "date_end": "2026-09-17"
+   "date_end": "2026-09-17",
+   "pubdate": null
   },
   {
    "id": "news_f34b11e321",
@@ -988,7 +1076,8 @@
    "source_name": "东京电玩展 将于 2026-09-17：TGS 2026 开幕，30周年首次5天展期（9/17-21 幕张）（17173）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://news.17173.com/content/05152026/114643685.shtml\" title=\"东京电玩展\">TGS 2026 开幕，30周年首次5天展期（9/17-21</a>",
    "date_start": "2026-09-17",
-   "date_end": "2026-09-17"
+   "date_end": "2026-09-17",
+   "pubdate": null
   },
   {
    "id": "news_98a2a5201a",
@@ -999,7 +1088,8 @@
    "source_name": "沙丘：觉醒 将于 2026-09-22：正式发售，沙丘IP开放世界生存（游民星空）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://www.gamersky.com/news/202608/2188172.shtml\" title=\"沙丘：觉醒\">正式发售，沙丘IP开放世界生存</a>",
    "date_start": "2026-09-22",
-   "date_end": "2026-09-22"
+   "date_end": "2026-09-22",
+   "pubdate": null
   },
   {
    "id": "news_76af34ea1e",
@@ -1010,7 +1100,8 @@
    "source_name": "原神 将于 2026-09-23：7.1版本上线，六周年庆版本接档至冬（7724游戏）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://www.7724.com/ys/news/235513.html\" title=\"原神\">7.1版本上线，六周年庆版本接档至冬</a>",
    "date_start": "2026-09-23",
-   "date_end": "2026-09-23"
+   "date_end": "2026-09-23",
+   "pubdate": null
   },
   {
    "id": "news_91830b51ec",
@@ -1021,7 +1112,8 @@
    "source_name": "控制：共振 将于 2026-09-24：Remedy新作发售，主角换为迪伦转战曼哈顿（游民星空）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://www.gamersky.com/news/202608/2188172.shtml\" title=\"控制：共振\">Remedy新作发售，主角换为迪伦转战曼哈顿</a>",
    "date_start": "2026-09-24",
-   "date_end": "2026-09-24"
+   "date_end": "2026-09-24",
+   "pubdate": null
   },
   {
    "id": "news_965062c081",
@@ -1032,7 +1124,8 @@
    "source_name": "寂静岭：小镇陷落 将于 2026-09-24：第一人称新作发售，防御手段极度受限（腾讯新闻）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://new.qq.com/rain/a/20260818A09REJ00\" title=\"寂静岭：小镇陷落\">第一人称新作发售，防御手段极度受限</a>",
    "date_start": "2026-09-24",
-   "date_end": "2026-09-24"
+   "date_end": "2026-09-24",
+   "pubdate": null
   },
   {
    "id": "news_fba84938ac",
@@ -1043,7 +1136,8 @@
    "source_name": "我的世界：地下城2 将于 2026-09-29：续作发售，登陆PS5/XSX/PC/Switch2（游民星空）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://www.gamersky.com/news/202608/2188172.shtml\" title=\"我的世界：地下城2\">续作发售，登陆PS5/XSX/PC/Switch2</a>",
    "date_start": "2026-09-29",
-   "date_end": "2026-09-29"
+   "date_end": "2026-09-29",
+   "pubdate": null
   },
   {
    "id": "news_cbd799e8a4",
@@ -1054,7 +1148,8 @@
    "source_name": "皇牌空战8 将于 2026-10-02：「希孚之翼」发售，万代空战正统续作（游民星空）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://www.gamersky.com/news/202608/2188172.shtml\" title=\"皇牌空战8\">「希孚之翼」发售，万代空战正统续作</a>",
    "date_start": "2026-10-02",
-   "date_end": "2026-10-02"
+   "date_end": "2026-10-02",
+   "pubdate": null
   },
   {
    "id": "news_b7ccd0ae54",
@@ -1065,7 +1160,8 @@
    "source_name": "战争机器：毁灭日 将于 2026-10-06：前传发售，Xbox主机独占，新增部落围城模式（腾讯新闻）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://new.qq.com/rain/a/20260818A09REJ00\" title=\"战争机器：毁灭日\">前传发售，Xbox主机独占，新增部落围城模式</a>",
    "date_start": "2026-10-06",
-   "date_end": "2026-10-06"
+   "date_end": "2026-10-06",
+   "pubdate": null
   },
   {
    "id": "news_17350f67f3",
@@ -1076,7 +1172,8 @@
    "source_name": "星球大战：银河赛车手 将于 2026-10-06：发售，火爆狂飙式竞速+慢镜碰撞（腾讯新闻）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://new.qq.com/rain/a/20260818A09REJ00\" title=\"星球大战：银河赛车手\">发售，火爆狂飙式竞速+慢镜碰撞</a>",
    "date_start": "2026-10-06",
-   "date_end": "2026-10-06"
+   "date_end": "2026-10-06",
+   "pubdate": null
   },
   {
    "id": "news_4ccca1dc84",
@@ -1087,7 +1184,8 @@
    "source_name": "不朽遗志 将于 2026-10-13：幽灵行者团队第一人称魂系新作发售（腾讯新闻）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://new.qq.com/rain/a/20260818A09REJ00\" title=\"不朽遗志\">幽灵行者团队第一人称魂系新作发售</a>",
    "date_start": "2026-10-13",
-   "date_end": "2026-10-13"
+   "date_end": "2026-10-13",
+   "pubdate": null
   },
   {
    "id": "news_b7a39b1cbc",
@@ -1098,7 +1196,8 @@
    "source_name": "动物园之星2 将于 2026-10-13：续作发售，Frontier模拟经营新作（游民星空）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://www.gamersky.com/news/202608/2188172.shtml\" title=\"动物园之星2\">续作发售，Frontier模拟经营新作</a>",
    "date_start": "2026-10-13",
-   "date_end": "2026-10-13"
+   "date_end": "2026-10-13",
+   "pubdate": null
   },
   {
    "id": "news_e0ac510f41",
@@ -1109,7 +1208,8 @@
    "source_name": "英雄联盟 将于 2026-10-15：S16全球总决赛入围赛揭幕，洛杉矶开打（新浪游戏）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://k.sina.cn/article_5042958097_12c956f1104001x1qk.html\" title=\"英雄联盟\">S16全球总决赛入围赛揭幕，洛杉矶开打</a>",
    "date_start": "2026-10-15",
-   "date_end": "2026-10-15"
+   "date_end": "2026-10-15",
+   "pubdate": null
   },
   {
    "id": "news_f88906e00b",
@@ -1120,7 +1220,8 @@
    "source_name": "恶魔城：贝尔蒙特的诅咒 将于 2026-10-15：系列新作发售，登陆PS5/XSX/PC（游民星空）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://www.gamersky.com/news/202608/2188172.shtml\" title=\"恶魔城：贝尔蒙特的诅咒\">系列新作发售，登陆PS5/XSX/PC</a>",
    "date_start": "2026-10-15",
-   "date_end": "2026-10-15"
+   "date_end": "2026-10-15",
+   "pubdate": null
   },
   {
    "id": "news_c2e750ec1d",
@@ -1131,7 +1232,8 @@
    "source_name": "最终幻想：共鸣 将于 2026-10-22：SE新作发售，全平台同步（游民星空）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://www.gamersky.com/news/202608/2188172.shtml\" title=\"最终幻想：共鸣\">SE新作发售，全平台同步</a>",
    "date_start": "2026-10-22",
-   "date_end": "2026-10-22"
+   "date_end": "2026-10-22",
+   "pubdate": null
   },
   {
    "id": "news_0a578ba456",
@@ -1142,7 +1244,8 @@
    "source_name": "使命召唤23 将于 2026-10-23：「现代战争4」发售，年度射击大作（游民星空）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://www.gamersky.com/news/202608/2188172.shtml\" title=\"使命召唤23\">「现代战争4」发售，年度射击大作</a>",
    "date_start": "2026-10-23",
-   "date_end": "2026-10-23"
+   "date_end": "2026-10-23",
+   "pubdate": null
   },
   {
    "id": "news_46ec88e2fa",
@@ -1153,7 +1256,8 @@
    "source_name": "影之刃零 将于 2026-10-29：灵游坊暗黑武侠动作新作正式发售（游民星空）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://www.gamersky.com/news/202608/2188172.shtml\" title=\"影之刃零\">灵游坊暗黑武侠动作新作正式发售</a>",
    "date_start": "2026-10-29",
-   "date_end": "2026-10-29"
+   "date_end": "2026-10-29",
+   "pubdate": null
   },
   {
    "id": "news_8ba44ef8c8",
@@ -1164,7 +1268,8 @@
    "source_name": "诡秘之主 将于 2026-08-21：手游全平台公测（PC/iOS/安卓/鸿蒙互通），8/19预下载、8/19 12:00预创角（17173）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://news.17173.com/content/08172026/001342548.shtml\" title=\"诡秘之主\">手游全平台公测（PC/iOS/安卓/鸿蒙互通），8/19预下</a>",
    "date_start": "2026-08-21",
-   "date_end": "2026-08-21"
+   "date_end": "2026-08-21",
+   "pubdate": null
   },
   {
    "id": "news_6d4dbc1da2",
@@ -1175,7 +1280,8 @@
    "source_name": "燕云十六声 将于 2026-08-27：中元节志怪主题关卡「照影庙」上线，联动《咒》导演柯孟融，规则怪谈逃生（17173）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://news.17173.com/content/07282026/130626038.shtml\" title=\"燕云十六声\">中元节志怪主题关卡「照影庙」上线，联动《咒》导演柯孟融，规则</a>",
    "date_start": "2026-08-27",
-   "date_end": "2026-08-27"
+   "date_end": "2026-08-27",
+   "pubdate": null
   },
   {
    "id": "news_149755a3d3",
@@ -1186,7 +1292,8 @@
    "source_name": "GTA 6 将于 2026-11-19：全平台发售（PS5/XSX|S），2026年度压轴开放世界巨作（腾讯新闻）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://new.qq.com/rain/a/20260817A0BP9F00\" title=\"GTA 6\">全平台发售（PS5/XSX|S），2026年度压轴开放世界巨</a>",
    "date_start": "2026-11-19",
-   "date_end": "2026-11-19"
+   "date_end": "2026-11-19",
+   "pubdate": null
   },
   {
    "id": "news_6066579ef5",
@@ -1197,7 +1304,8 @@
    "source_name": "命运石之门重制版 将于 2026-10-29：Steins;Gate Re:Boot 重制版发售（Switch/Switch2/PS4/PS5）（Beebom）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://beebom.com/upcoming-new-games-2026-release-calendar/amp/\" title=\"命运石之门重制版\">Steins;Gate Re:Boot 重制版发售（Swit</a>",
    "date_start": "2026-10-29",
-   "date_end": "2026-10-29"
+   "date_end": "2026-10-29",
+   "pubdate": null
   },
   {
    "id": "news_9d78e4567b",
@@ -1208,22 +1316,119 @@
    "source_name": "王国之心收藏集 将于 2026-10-08：Kingdom Hearts Collection 1-3 合集发售（PS5/XSX）（Beebom）",
    "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://beebom.com/upcoming-new-games-2026-release-calendar/amp/\" title=\"王国之心收藏集\">Kingdom Hearts Collection 1-3 </a>",
    "date_start": "2026-10-08",
-   "date_end": "2026-10-08"
+   "date_end": "2026-10-08",
+   "pubdate": null
+  },
+  {
+   "id": "news_db01416315",
+   "kind": "cal",
+   "game": "八方旅人1&2",
+   "title": "八方旅人1&2：SE 双部曲合集登陆 Switch 2 发售",
+   "source_url": "https://www.gamesradar.com/london-pride/",
+   "source_name": "八方旅人1&2 将于 2026-10-01：SE 双部曲合集登陆 Switch 2 发售（GamesRadar+）",
+   "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://www.gamesradar.com/london-pride/\" title=\"八方旅人1&2\">SE 双部曲合集登陆 Switch 2 发售</a>",
+   "date_start": "2026-10-01",
+   "date_end": "2026-10-01",
+   "pubdate": null
+  },
+  {
+   "id": "news_4d672f3b47",
+   "kind": "cal",
+   "game": "龙之信条2：黑暗觉者",
+   "title": "龙之信条2：黑暗觉者：卡普空加强版登陆 Switch 2 发售",
+   "source_url": "https://www.gamesradar.com/london-pride/",
+   "source_name": "龙之信条2：黑暗觉者 将于 2026-10-09：卡普空加强版登陆 Switch 2 发售（GamesRadar+）",
+   "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://www.gamesradar.com/london-pride/\" title=\"龙之信条2：黑暗觉者\">卡普空加强版登陆 Switch 2 发售</a>",
+   "date_start": "2026-10-09",
+   "date_end": "2026-10-09",
+   "pubdate": null
+  },
+  {
+   "id": "news_7abd5b30e6",
+   "kind": "cal",
+   "game": "永恒传说",
+   "title": "永恒传说：万代经典 JRPG 复刻版登陆 Switch 2",
+   "source_url": "https://www.gamesradar.com/london-pride/",
+   "source_name": "永恒传说 将于 2026-10-16：万代经典 JRPG 复刻版登陆 Switch 2（GamesRadar+）",
+   "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://www.gamesradar.com/london-pride/\" title=\"永恒传说\">万代经典 JRPG 复刻版登陆 Switch 2</a>",
+   "date_start": "2026-10-16",
+   "date_end": "2026-10-16",
+   "pubdate": null
+  },
+  {
+   "id": "news_d8f46bbb26",
+   "kind": "cal",
+   "game": "英雄联盟",
+   "title": "英雄联盟：S16 全球总决赛瑞士轮开打，得州艾伦市 18 队角逐 8 强",
+   "source_url": "https://cn.globalgameguide.com/article/2026-h2-global-sports-esports-calendar",
+   "source_name": "英雄联盟 将于 2026-10-23：S16 全球总决赛瑞士轮开打，得州艾伦市 18 队角逐 8 强（全球体育观赛指南）",
+   "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://cn.globalgameguide.com/article/2026-h2-global-sports-esports-calendar\" title=\"英雄联盟\">S16 全球总决赛瑞士轮开打，得州艾伦市 18 队角逐 8 </a>",
+   "date_start": "2026-10-23",
+   "date_end": "2026-10-23",
+   "pubdate": null
+  },
+  {
+   "id": "news_6b2d169d20",
+   "kind": "cal",
+   "game": "任天堂运动：度假胜地",
+   "title": "任天堂运动：度假胜地：任天堂体感新作发售，Switch 2 独占",
+   "source_url": "https://www.gamesradar.com/london-pride/",
+   "source_name": "任天堂运动：度假胜地 将于 2026-10-22：任天堂体感新作发售，Switch 2 独占（GamesRadar+）",
+   "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://www.gamesradar.com/london-pride/\" title=\"任天堂运动：度假胜地\">任天堂体感新作发售，Switch 2 独占</a>",
+   "date_start": "2026-10-22",
+   "date_end": "2026-10-22",
+   "pubdate": null
+  },
+  {
+   "id": "news_a65110a062",
+   "kind": "cal",
+   "game": "我的世界",
+   "title": "我的世界：Switch 2 版发售，画面与性能升级",
+   "source_url": "https://www.gamesradar.com/london-pride/",
+   "source_name": "我的世界 将于 2026-10-27：Switch 2 版发售，画面与性能升级（GamesRadar+）",
+   "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://www.gamesradar.com/london-pride/\" title=\"我的世界\">Switch 2 版发售，画面与性能升级</a>",
+   "date_start": "2026-10-27",
+   "date_end": "2026-10-27",
+   "pubdate": null
+  },
+  {
+   "id": "news_417e12ff8e",
+   "kind": "cal",
+   "game": "鬼灭之刃：火之神血风谭2",
+   "title": "鬼灭之刃：火之神血风谭2：对战动作续作发售，PS5/Switch2/PC 全平台同步",
+   "source_url": "https://gamewith.jp/switch-2/483933",
+   "source_name": "鬼灭之刃：火之神血风谭2 将于 2026-10-29：对战动作续作发售，PS5/Switch2/PC 全平台同步（GameWith 发售日历）",
+   "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://gamewith.jp/switch-2/483933\" title=\"鬼灭之刃：火之神血风谭2\">对战动作续作发售，PS5/Switch2/PC 全平台同步</a>",
+   "date_start": "2026-10-29",
+   "date_end": "2026-10-29",
+   "pubdate": null
+  },
+  {
+   "id": "news_e76d1f9693",
+   "kind": "cal",
+   "game": "暗喻幻想：ReFantazio",
+   "title": "暗喻幻想：ReFantazio：Atlus 幻想 RPG 登陆 Switch 2",
+   "source_url": "https://www.gamesradar.com/london-pride/",
+   "source_name": "暗喻幻想：ReFantazio 将于 2026-11-12：Atlus 幻想 RPG 登陆 Switch 2（GamesRadar+）",
+   "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://www.gamesradar.com/london-pride/\" title=\"暗喻幻想：ReFantazio\">Atlus 幻想 RPG 登陆 Switch 2</a>",
+   "date_start": "2026-11-12",
+   "date_end": "2026-11-12",
+   "pubdate": null
+  },
+  {
+   "id": "news_f5cccb86c3",
+   "kind": "cal",
+   "game": "英雄联盟",
+   "title": "英雄联盟：S16 全球总决赛冠亚军决赛，纽约巴克莱中心",
+   "source_url": "https://new.qq.com/rain/a/20260803A06X8Y00",
+   "source_name": "英雄联盟 将于 2026-11-14：S16 全球总决赛冠亚军决赛，纽约巴克莱中心（腾讯网 LOL 电竞快讯）",
+   "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://new.qq.com/rain/a/20260803A06X8Y00\" title=\"英雄联盟\">S16 全球总决赛冠亚军决赛，纽约巴克莱中心</a>",
+   "date_start": "2026-11-14",
+   "date_end": "2026-11-14",
+   "pubdate": null
   }
  ],
  "feed_events": [
-  {
-   "id": "F221",
-   "kind": "feed",
-   "game": "全行业",
-   "title": "物理弹珠肉鸽游戏《爆分引擎》正式公布，将于27年发售",
-   "source_url": "https://www.gcores.com/articles/218501",
-   "source_name": "机核 GCORES",
-   "src_id": "gcores",
-   "pubdate": "2026-08-20",
-   "first_seen": "2026-08-20",
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"物理弹珠肉鸽游戏《爆分引擎》正式公布，将于27年发售（来源：机核 GCORES）\" style=\"color:#4da3ff;text-decoration:none\">物理弹珠肉鸽游戏《爆分引擎》正式公布，将于27年发售</a></td><td>机核 GCORES</td></tr>"
-  },
   {
    "id": "F226",
    "kind": "feed",
@@ -1297,18 +1502,6 @@
    "anchor": "<tr><td><b style=\"color:var(--gold)\">永劫无间</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"8月18日《永劫无间》违规玩家封禁公告 [08-18]（来源：永劫无间官方更新）\" style=\"color:#4da3ff;text-decoration:none\">8月18日《永劫无间》违规玩家封禁公告 [08-18]</a></td><td>永劫无间官方更新</td></tr>"
   },
   {
-   "id": "F234",
-   "kind": "feed",
-   "game": "全行业",
-   "title": "鹰角网络投资一家英国工作室，核心成员为《人类一败涂地》老兵",
-   "source_url": "https://www.baijing.cn/article/56423",
-   "source_name": "白鲸出海",
-   "src_id": "baijing",
-   "pubdate": "2026-08-20",
-   "first_seen": "2026-08-21",
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"鹰角网络投资一家英国工作室，核心成员为《人类一败涂地》老兵（来源：白鲸出海）\" style=\"color:#4da3ff;text-decoration:none\">鹰角网络投资一家英国工作室，核心成员为《人类一败涂地》老兵</a></td><td>白鲸出海</td></tr>"
-  },
-  {
    "id": "F235",
    "kind": "feed",
    "game": "全行业",
@@ -1333,32 +1526,6 @@
    "first_seen": "2026-08-21",
    "date_unverified": false,
    "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"网易游戏业务半年净收入507亿元，《归唐》《无限大》正常推进（来源：白鲸出海）\" style=\"color:#4da3ff;text-decoration:none\">网易游戏业务半年净收入507亿元，《归唐》《无限大》正常推进</a></td><td>白鲸出海</td></tr>"
-  },
-  {
-   "id": "F238",
-   "kind": "feed",
-   "game": "全行业",
-   "title": "Riot Games Will Cease Active Development For League Of Legends Fighting Game 2XKO In December",
-   "source_url": "https://gameinformer.com/2026/08/20/riot-games-will-cease-active-development-for-league-of-legends-fighting-game-2xko-in",
-   "source_name": "Game Informer",
-   "src_id": "gameinformer",
-   "pubdate": "2026-08-20",
-   "first_seen": "2026-08-21",
-   "date_unverified": false,
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"Riot Games Will Cease Active Development For Lea…（来源：Game Informer）\" style=\"color:#4da3ff;text-decoration:none\">Riot Games Will Cease Active Development For Lea…</a></td><td>Game Informer</td></tr>"
-  },
-  {
-   "id": "F239",
-   "kind": "feed",
-   "game": "全行业",
-   "title": "The Duskbloods: A Hands-On Breakdown Of From Software’s Exciting, Surprising, And Dense Take on Competitive Multiplayer",
-   "source_url": "https://gameinformer.com/preview/2026/08/20/a-hands-on-breakdown-of-from-softwares-exciting-surprising-and-dense-take-on",
-   "source_name": "Game Informer",
-   "src_id": "gameinformer",
-   "pubdate": "2026-08-20",
-   "first_seen": "2026-08-21",
-   "date_unverified": false,
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"The Duskbloods: A Hands-On Breakdown Of From Sof…（来源：Game Informer）\" style=\"color:#4da3ff;text-decoration:none\">The Duskbloods: A Hands-On Breakdown Of From Sof…</a></td><td>Game Informer</td></tr>"
   },
   {
    "id": "F240",
@@ -1452,19 +1619,6 @@
    "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"Cyberpunk: Edgerunners 2 Finally Has A Release D…（来源：GameSpot）\" style=\"color:#4da3ff;text-decoration:none\">Cyberpunk: Edgerunners 2 Finally Has A Release D…</a></td><td>GameSpot</td></tr>"
   },
   {
-   "id": "F260",
-   "kind": "feed",
-   "game": "全行业",
-   "title": "'We Don't Need to Aggressively Sell the Console': Sony CEO Says Timing of Memory Crisis Is 'Lucky' for PS5",
-   "source_url": "https://www.pushsquare.com/news/2026/08/we-dont-need-to-aggressively-sell-the-console-sony-ceo-says-timing-of-memory-crisis-is-lucky-for-ps5",
-   "source_name": "Push Square",
-   "src_id": "pushsquare",
-   "pubdate": "2026-08-20",
-   "first_seen": "2026-08-21",
-   "date_unverified": false,
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"'We Don't Need to Aggressively Sell the Console'…（来源：Push Square）\" style=\"color:#4da3ff;text-decoration:none\">'We Don't Need to Aggressively Sell the Console'…</a></td><td>Push Square</td></tr>"
-  },
-  {
    "id": "F265",
    "kind": "feed",
    "game": "全行业",
@@ -1556,19 +1710,6 @@
    "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"PSA: In the latest GTA 6 leak's aftermath, it's …（来源：Rock Paper Shotgun）\" style=\"color:#4da3ff;text-decoration:none\">PSA: In the latest GTA 6 leak's aftermath, it's …</a></td><td>Rock Paper Shotgun</td></tr>"
   },
   {
-   "id": "F277",
-   "kind": "feed",
-   "game": "全行业",
-   "title": "Mortal Shell 2's first balance patch makes its in-game economy a lot more lenient and nerfs some enemies and bosses for a smoother ride",
-   "source_url": "https://www.rockpapershotgun.com/mortal-shell-2s-first-balance-patch-makes-its-in-game-economy-a-lot-more-lenient-and-nerfs-some-enemies-and-bosses-for-a-smoother-ride",
-   "source_name": "Rock Paper Shotgun",
-   "src_id": "rps",
-   "pubdate": "2026-08-20",
-   "first_seen": "2026-08-21",
-   "date_unverified": false,
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"Mortal Shell 2's first balance patch makes its i…（来源：Rock Paper Shotgun）\" style=\"color:#4da3ff;text-decoration:none\">Mortal Shell 2's first balance patch makes its i…</a></td><td>Rock Paper Shotgun</td></tr>"
-  },
-  {
    "id": "F282",
    "kind": "feed",
    "game": "全行业",
@@ -1580,19 +1721,6 @@
    "first_seen": "2026-08-24",
    "date_unverified": false,
    "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"《赛博朋克：边缘行者2》公布最新预告，将于10月20日上线（来源：机核 GCORES）\" style=\"color:#4da3ff;text-decoration:none\">《赛博朋克：边缘行者2》公布最新预告，将于10月20日上线</a></td><td>机核 GCORES</td></tr>"
-  },
-  {
-   "id": "F283",
-   "kind": "feed",
-   "game": "全行业",
-   "title": "网易Q2游戏同比增9.7%，投资亏损29.5亿令人意外，丁磊：《遗忘之海》口碑改善中",
-   "source_url": "http://www.gamelook.com.cn/2026/08/600412/",
-   "source_name": "GameLook",
-   "src_id": "gamelook",
-   "pubdate": "2026-08-21",
-   "first_seen": "2026-08-24",
-   "date_unverified": false,
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"网易Q2游戏同比增9.7%，投资亏损29.5亿令人意外，丁磊：《遗忘之海》口碑改善中（来源：GameLook）\" style=\"color:#4da3ff;text-decoration:none\">网易Q2游戏同比增9.7%，投资亏损29.5亿令人意外，丁磊：《遗忘之海》口碑改善中</a></td><td>GameLook</td></tr>"
   },
   {
    "id": "F284",
@@ -1621,19 +1749,6 @@
    "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"《GTA6》又遭新黑客侵入！R星员工被扒看成人内容（来源：游民星空新闻）\" style=\"color:#4da3ff;text-decoration:none\">《GTA6》又遭新黑客侵入！R星员工被扒看成人内容</a></td><td>游民星空新闻</td></tr>"
   },
   {
-   "id": "F286",
-   "kind": "feed",
-   "game": "全行业",
-   "title": "准点相约820！《黑神话：钟馗》新PV又爆了，冯骥杨奇表态",
-   "source_url": "http://www.gamelook.com.cn/2026/08/600363/",
-   "source_name": "GameLook",
-   "src_id": "gamelook",
-   "pubdate": "2026-08-21",
-   "first_seen": "2026-08-24",
-   "date_unverified": false,
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"准点相约820！《黑神话：钟馗》新PV又爆了，冯骥杨奇表态（来源：GameLook）\" style=\"color:#4da3ff;text-decoration:none\">准点相约820！《黑神话：钟馗》新PV又爆了，冯骥杨奇表态</a></td><td>GameLook</td></tr>"
-  },
-  {
    "id": "F287",
    "kind": "feed",
    "game": "全行业",
@@ -1645,32 +1760,6 @@
    "first_seen": "2026-08-24",
    "date_unverified": false,
    "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"网易Q2：游戏收入250亿，《诡影藏锋》《雾海之下》等进入密集测试（来源：游戏陀螺）\" style=\"color:#4da3ff;text-decoration:none\">网易Q2：游戏收入250亿，《诡影藏锋》《雾海之下》等进入密集测试</a></td><td>游戏陀螺</td></tr>"
-  },
-  {
-   "id": "F288",
-   "kind": "feed",
-   "game": "阴阳师",
-   "title": "08-19 《阴阳师》手游8月19日维护更新公告 ※维护时间 2026年8月19日7:00-9:00 ※亲爱的阴阳师大人： 为了给大家带来更好的游戏体验，服务器",
-   "source_url": "https://yys.163.com/news/update/20260818/23024_1311591.html",
-   "source_name": "阴阳师版本更新",
-   "src_id": "yys_update",
-   "pubdate": "2026-08-18",
-   "first_seen": "2026-08-24",
-   "date_unverified": false,
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">阴阳师</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"08-19 《阴阳师》手游8月19日维护更新公告 ※维护时间 2026年8月19日7:00-9:…（来源：阴阳师版本更新）\" style=\"color:#4da3ff;text-decoration:none\">08-19 《阴阳师》手游8月19日维护更新公告 ※维护时间 2026年8月19日7:00-9:…</a></td><td>阴阳师版本更新</td></tr>"
-  },
-  {
-   "id": "F289",
-   "kind": "feed",
-   "game": "永劫无间",
-   "title": "8月18日《永劫无间》违规玩家封禁公告",
-   "source_url": "https://store.steampowered.com/news/app/1203220/view/322722517411170720",
-   "source_name": "永劫无间 Steam 官方新闻",
-   "src_id": "yjwujian_steam",
-   "pubdate": "2026-08-18",
-   "first_seen": "2026-08-24",
-   "date_unverified": false,
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">永劫无间</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"8月18日《永劫无间》违规玩家封禁公告（来源：永劫无间 Steam 官方新闻）\" style=\"color:#4da3ff;text-decoration:none\">8月18日《永劫无间》违规玩家封禁公告</a></td><td>永劫无间 Steam 官方新闻</td></tr>"
   },
   {
    "id": "F290",
@@ -1712,17 +1801,147 @@
    "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"Review: Metal Gear Solid: Master Collection Vol.…（来源：Push Square）\" style=\"color:#4da3ff;text-decoration:none\">Review: Metal Gear Solid: Master Collection Vol.…</a></td><td>Push Square</td></tr>"
   },
   {
-   "id": "F294",
+   "id": "F299",
    "kind": "feed",
    "game": "全行业",
-   "title": "Epic喜加一：特别好评卡牌游戏免费领",
-   "source_url": "https://www.gamersky.com/news/202608/2193433.shtml",
-   "source_name": "游民星空 PC 资讯",
-   "src_id": "gamersky_pc",
-   "pubdate": "2026-08-20",
+   "title": "《吸血鬼幸存者》血月DLC将于8月28日发售",
+   "source_url": "https://www.gcores.com/articles/218693",
+   "source_name": "机核 GCORES",
+   "src_id": "gcores",
+   "pubdate": "2026-08-24",
    "first_seen": "2026-08-24",
    "date_unverified": false,
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"Epic喜加一：特别好评卡牌游戏免费领（来源：游民星空 PC 资讯）\" style=\"color:#4da3ff;text-decoration:none\">Epic喜加一：特别好评卡牌游戏免费领</a></td><td>游民星空 PC 资讯</td></tr>"
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"《吸血鬼幸存者》血月DLC将于8月28日发售（来源：机核 GCORES）\" style=\"color:#4da3ff;text-decoration:none\">《吸血鬼幸存者》血月DLC将于8月28日发售</a></td><td>机核 GCORES</td></tr>"
+  },
+  {
+   "id": "F300",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "首日免费榜第一，快手《诡秘之主》到了不能输的一天！",
+   "source_url": "http://www.gamelook.com.cn/2026/08/600487/",
+   "source_name": "GameLook",
+   "src_id": "gamelook",
+   "pubdate": "2026-08-24",
+   "first_seen": "2026-08-24",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"首日免费榜第一，快手《诡秘之主》到了不能输的一天！（来源：GameLook）\" style=\"color:#4da3ff;text-decoration:none\">首日免费榜第一，快手《诡秘之主》到了不能输的一天！</a></td><td>GameLook</td></tr>"
+  },
+  {
+   "id": "F301",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "分析：玩家月留存仅3%，“友尽类游戏”为何成为独游爆款发动机？",
+   "source_url": "http://www.gamelook.com.cn/2026/08/600444/",
+   "source_name": "GameLook",
+   "src_id": "gamelook",
+   "pubdate": "2026-08-24",
+   "first_seen": "2026-08-24",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"分析：玩家月留存仅3%，“友尽类游戏”为何成为独游爆款发动机？（来源：GameLook）\" style=\"color:#4da3ff;text-decoration:none\">分析：玩家月留存仅3%，“友尽类游戏”为何成为独游爆款发动机？</a></td><td>GameLook</td></tr>"
+  },
+  {
+   "id": "F302",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "祖龙半年报营收6.09亿元，一款动作射击游戏计划后年上线",
+   "source_url": "https://www.baijing.cn/article/56441",
+   "source_name": "白鲸出海",
+   "src_id": "baijing",
+   "pubdate": "2026-08-22",
+   "first_seen": "2026-08-24",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"祖龙半年报营收6.09亿元，一款动作射击游戏计划后年上线（来源：白鲸出海）\" style=\"color:#4da3ff;text-decoration:none\">祖龙半年报营收6.09亿元，一款动作射击游戏计划后年上线</a></td><td>白鲸出海</td></tr>"
+  },
+  {
+   "id": "F304",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "《Lanterns》第一季第2集评测与回顾",
+   "source_url": "https://news.17173.com/content/08242026/110814051.shtml",
+   "source_name": "17173 网游资讯",
+   "src_id": "news17173",
+   "pubdate": "2026-08-24",
+   "first_seen": "2026-08-24",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"《Lanterns》第一季第2集评测与回顾（来源：17173 网游资讯）\" style=\"color:#4da3ff;text-decoration:none\">《Lanterns》第一季第2集评测与回顾</a></td><td>17173 网游资讯</td></tr>"
+  },
+  {
+   "id": "F305",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "《GTA6》最新泄露实机中葱哥喊话玩家：该反击了！",
+   "source_url": "https://www.gamersky.com/news/202608/2194570.shtml",
+   "source_name": "游民星空 PC 资讯",
+   "src_id": "gamersky_pc",
+   "pubdate": "2026-08-23",
+   "first_seen": "2026-08-24",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"《GTA6》最新泄露实机中葱哥喊话玩家：该反击了！（来源：游民星空 PC 资讯）\" style=\"color:#4da3ff;text-decoration:none\">《GTA6》最新泄露实机中葱哥喊话玩家：该反击了！</a></td><td>游民星空 PC 资讯</td></tr>"
+  },
+  {
+   "id": "F306",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "Feature: I Searched for Merch from My Fave PS5 Games in Chengdu's Enormous Anime Mall",
+   "source_url": "https://www.pushsquare.com/features/i-searched-for-merch-from-my-fave-ps5-games-in-chengdus-enormous-anime-mall",
+   "source_name": "Push Square",
+   "src_id": "pushsquare",
+   "pubdate": "2026-08-23",
+   "first_seen": "2026-08-24",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"Feature: I Searched for Merch from My Fave PS5 G…（来源：Push Square）\" style=\"color:#4da3ff;text-decoration:none\">Feature: I Searched for Merch from My Fave PS5 G…</a></td><td>Push Square</td></tr>"
+  },
+  {
+   "id": "F307",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "Raise up a mech pilot and make sure she doesn't get Evangelion-level depressed in the sci-fi visual novel Valkyrie Iteration: Mecha Pilot Raising Pocket Simulator",
+   "source_url": "https://www.rockpapershotgun.com/raise-up-a-mech-pilot-and-make-sure-she-doesnt-get-evangelion-level-depressed-in-the-sci-fi-visual-novel-valkyrie-iteration-mecha-pilot-raising-pocket-simulator",
+   "source_name": "Rock Paper Shotgun",
+   "src_id": "rps",
+   "pubdate": "2026-08-22",
+   "first_seen": "2026-08-24",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"Raise up a mech pilot and make sure she doesn't …（来源：Rock Paper Shotgun）\" style=\"color:#4da3ff;text-decoration:none\">Raise up a mech pilot and make sure she doesn't …</a></td><td>Rock Paper Shotgun</td></tr>"
+  },
+  {
+   "id": "F308",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "The Duskbloods Preview | The Game Informer Show",
+   "source_url": "https://gameinformer.com/video-podcast/2026/08/21/the-duskbloods-preview-plus-the-sinking-city-2-the-game-informer-show",
+   "source_name": "Game Informer",
+   "src_id": "gameinformer",
+   "pubdate": "2026-08-21",
+   "first_seen": "2026-08-24",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"The Duskbloods Preview | The Game Informer Show（来源：Game Informer）\" style=\"color:#4da3ff;text-decoration:none\">The Duskbloods Preview | The Game Informer Show</a></td><td>Game Informer</td></tr>"
+  },
+  {
+   "id": "F309",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "You Can Help Decide Double Fine's Next Project In Its Upcoming Game Jam Livestream",
+   "source_url": "https://gameinformer.com/2026/08/21/you-can-help-decide-double-fines-next-project-in-its-upcoming-game-jam-livestream",
+   "source_name": "Game Informer",
+   "src_id": "gameinformer",
+   "pubdate": "2026-08-21",
+   "first_seen": "2026-08-24",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"You Can Help Decide Double Fine's Next Project I…（来源：Game Informer）\" style=\"color:#4da3ff;text-decoration:none\">You Can Help Decide Double Fine's Next Project I…</a></td><td>Game Informer</td></tr>"
+  },
+  {
+   "id": "F318",
+   "kind": "feed",
+   "game": "和平精英",
+   "title": "峡谷争锋，精英制胜！和平精英联手携程旅行、安徽霍山大峡谷漂流打造实景吃鸡新体验 「峡谷争锋?精英制胜」线下挑战赛，创新打造漂流实景吃鸡全新玩法！",
+   "source_url": "https://gp.qq.com/gicp/news/775/18808499.html",
+   "source_name": "和平精英赛事资讯",
+   "src_id": "gp_match",
+   "pubdate": null,
+   "first_seen": "2026-08-24",
+   "date_unverified": true,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">和平精英</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"峡谷争锋，精英制胜！和平精英联手携程旅行、安徽霍山大峡谷漂流打造实景吃鸡新体验 「峡谷争锋?精英…（来源：和平精英赛事资讯）\" style=\"color:#4da3ff;text-decoration:none\">峡谷争锋，精英制胜！和平精英联手携程旅行、安徽霍山大峡谷漂流打造实景吃鸡新体验 「峡谷争锋?精英…</a></td><td>和平精英赛事资讯</td></tr>"
   }
  ]
 }

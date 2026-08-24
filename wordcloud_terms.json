@@ -1,266 +1,37 @@
 {
   "date": "2026-08-24",
   "terms": [
-    {
-      "term": "黑神话钟馗15分钟实机",
-      "href": "https://www.bilibili.com/video/BV1kS8H6VERt",
-      "cat": "游戏/新品",
-      "heat": 95,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "影之刃零State of Play回顾",
-      "href": "https://www.bilibili.com/video/BV1Zdbi6rER9",
-      "cat": "游戏/新品",
-      "heat": 85,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "WasteTheFallen首曝PV实机",
-      "href": "https://www.bilibili.com/video/BV1FRgn6pEph",
-      "cat": "游戏/新品",
-      "heat": 82,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "黑神话钟馗PV逐帧解析",
-      "href": "https://www.bilibili.com/video/BV1Ns8w6fE4k",
-      "cat": "游戏/新品",
-      "heat": 72,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "诡秘之主全平台公测",
-      "href": "https://www.bilibili.com/video/BV1uJ8w6AEm3",
-      "cat": "游戏/新品",
-      "heat": 70,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "微光维克之歌9月30发售",
-      "href": "https://www.gcores.com/articles/218460",
-      "cat": "游戏/新品",
-      "heat": 55,
-      "sources": [
-        "机核"
-      ]
-    },
-    {
-      "term": "爆分引擎27年发售",
-      "href": "https://www.gcores.com/articles/218501",
-      "cat": "游戏/新品",
-      "heat": 50,
-      "sources": [
-        "机核"
-      ]
-    },
-    {
-      "term": "国产虚幻5新作公测定档",
-      "href": "https://www.gamersky.com/news/202608/2193803.shtml",
-      "cat": "游戏/新品",
-      "heat": 55,
-      "sources": [
-        "游民星空"
-      ]
-    },
-    {
-      "term": "大航海时代凯旋航线首测",
-      "href": "https://news.17173.com/content/08212026/152936221.shtml",
-      "cat": "游戏/新品",
-      "heat": 52,
-      "sources": [
-        "17173"
-      ]
-    },
-    {
-      "term": "索尼PS新品官宣定档",
-      "href": "https://www.gamersky.com/news/202608/2191609.shtml",
-      "cat": "行业/数据",
-      "heat": 58,
-      "sources": [
-        "游民星空"
-      ]
-    },
-    {
-      "term": "莉莉丝丧尸生存新游Top20",
-      "href": "https://www.youxituoluo.com/534801.html",
-      "cat": "行业/数据",
-      "heat": 60,
-      "sources": [
-        "游戏陀螺"
-      ]
-    },
-    {
-      "term": "宫崎英高新作发售疑似泄露",
-      "href": "https://www.gamersky.com/news/202608/2193434.shtml",
-      "cat": "行业/数据",
-      "heat": 62,
-      "sources": [
-        "游民星空"
-      ]
-    },
-    {
-      "term": "鹰角网络投资英国工作室",
-      "href": "https://www.baijing.cn/article/56423",
-      "cat": "行业/数据",
-      "heat": 55,
-      "sources": [
-        "白鲸出海"
-      ]
-    },
-    {
-      "term": "网易游戏半年净收入507亿",
-      "href": "https://www.baijing.cn/article/56432",
-      "cat": "行业/数据",
-      "heat": 60,
-      "sources": [
-        "白鲸出海"
-      ]
-    },
-    {
-      "term": "Riot终止2XKO格斗开发",
-      "href": "https://www.eurogamer.net/2xko-development-ending-december-riot-games-issuing-refunds",
-      "cat": "行业/数据",
-      "heat": 58,
-      "sources": [
-        "Eurogamer"
-      ]
-    },
-    {
-      "term": "雪碧勇夺TI15冠军",
-      "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28360011&topic_name=%E4%B8%89%E5%86%A0%E5%8A%A0%E5%86%95%21%E9%9B%AA%E7%A2%A7%E5%8B%87%E5%A4%BATI15%E5%86%A0%E5%86%9B",
-      "cat": "事件/风险",
-      "heat": 80,
-      "sources": [
-        "贴吧"
-      ]
-    },
-    {
-      "term": "DOTA2国际邀请赛主赛事",
-      "href": "https://store.steampowered.com/news/app/570/view/680758587997293716",
-      "cat": "事件/风险",
-      "heat": 72,
-      "sources": [
-        "DOTA2 Steam"
-      ]
-    },
-    {
-      "term": "BLG完美收官圣枪复仇",
-      "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28360035&topic_name=BLG%E5%AE%8C%E7%BE%8E%E6%94%B6%E5%AE%98%2C%E5%9C%A3%E6%9E%AA%E5%A4%8D%E4%BB%87%E6%88%90%E5%8A%9F",
-      "cat": "事件/风险",
-      "heat": 62,
-      "sources": [
-        "贴吧"
-      ]
-    },
-    {
-      "term": "HLE双杀T1速通人机局",
-      "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28359953&topic_name=HLE%E5%8F%8C%E6%9D%80T1%2C%E9%80%9F%E9%80%9A%E4%BA%BA%E6%9C%BA%E5%B1%80",
-      "cat": "事件/风险",
-      "heat": 60,
-      "sources": [
-        "贴吧"
-      ]
-    },
-    {
-      "term": "CS2版本更新",
-      "href": "https://store.steampowered.com/news/app/730/view/717913919982665978",
-      "cat": "事件/风险",
-      "heat": 55,
-      "sources": [
-        "CS2 Steam"
-      ]
-    },
-    {
-      "term": "三角洲行动七夕活动",
-      "href": "https://store.steampowered.com/news/app/2507950/view/690892322235220064",
-      "cat": "事件/风险",
-      "heat": 52,
-      "sources": [
-        "三角洲行动 Steam"
-      ]
-    },
-    {
-      "term": "永劫无间封禁公告",
-      "href": "https://store.steampowered.com/news/app/1203220/view/322722517411170720",
-      "cat": "事件/风险",
-      "heat": 42,
-      "sources": [
-        "永劫无间 Steam"
-      ]
-    },
-    {
-      "term": "空城计梗",
-      "href": "https://www.bilibili.com/video/BV1pp8E6NES6",
-      "cat": "梗/社区",
-      "heat": 56,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "放70个窝瓜僵尸",
-      "href": "https://www.bilibili.com/video/BV1Qc8T6SESo",
-      "cat": "梗/社区",
-      "heat": 58,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "停更7年经典玩MC",
-      "href": "https://www.bilibili.com/video/BV1bQ8u6WEtT",
-      "cat": "梗/社区",
-      "heat": 55,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "复活吧我的",
-      "href": "https://www.bilibili.com/video/BV1G48M6XEBt",
-      "cat": "梗/社区",
-      "heat": 52,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "东方梗指南阎萝王",
-      "href": "https://www.bilibili.com/video/BV1Jb8E6cEGJ",
-      "cat": "梗/社区",
-      "heat": 46,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "我收容100位粉丝到存档",
-      "href": "https://www.bilibili.com/video/BV1DV8F6bEkz",
-      "cat": "梗/社区",
-      "heat": 55,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "自行车被偷保安发现霸王龙",
-      "href": "https://www.bilibili.com/video/BV18Tby67EG9",
-      "cat": "梗/社区",
-      "heat": 60,
-      "sources": [
-        "B站"
-      ]
-    }
+    { "term": "黑神话钟馗15分钟实机", "href": "https://www.bilibili.com/video/BV1kS8H6VERt", "cat": "游戏/新品", "heat": 95, "sources": ["B站每周必看"] },
+    { "term": "GTA6第9段泄露实机", "href": "https://www.ign.com/articles/gta-6-leaker-releases-more-gameplay-videos-despite-rockstar-owner-take-twos-microsoft-and-discord-subpoenas", "cat": "事件/风险", "heat": 92, "sources": ["IGN"] },
+    { "term": "影之刃零专场回顾", "href": "https://www.bilibili.com/video/BV1Zdbi6rER9", "cat": "游戏/新品", "heat": 84, "sources": ["B站每周必看"] },
+    { "term": "R星对泄露源毫无头绪", "href": "https://www.gcores.com/articles/218696", "cat": "事件/风险", "heat": 82, "sources": ["机核 GCORES"] },
+    { "term": "WasteTheFallen首曝PV", "href": "https://www.bilibili.com/video/BV1FRgn6pEph", "cat": "游戏/新品", "heat": 80, "sources": ["B站每周必看"] },
+    { "term": "雪碧勇夺TI15冠军", "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28360011", "cat": "事件/风险", "heat": 80, "sources": ["百度贴吧热议"] },
+    { "term": "GTA6泄露内容汇总", "href": "https://www.gamersky.com/news/202608/2194565.shtml", "cat": "事件/风险", "heat": 78, "sources": ["游民星空"] },
+    { "term": "诡秘之主首日免费榜第一", "href": "http://www.gamelook.com.cn/2026/08/600487/", "cat": "行业/数据", "heat": 74, "sources": ["GameLook"] },
+    { "term": "钟馗PV逐帧解析", "href": "https://www.bilibili.com/video/BV1Ns8w6fE4k", "cat": "游戏/新品", "heat": 72, "sources": ["B站每周必看"] },
+    { "term": "诡秘之主全平台公测", "href": "https://www.bilibili.com/video/BV1uJ8w6AEm3", "cat": "游戏/新品", "heat": 68, "sources": ["B站每周必看"] },
+    { "term": "网飞按兵不动不改计划", "href": "https://www.gamersky.com/news/202608/2194641.shtml", "cat": "事件/风险", "heat": 66, "sources": ["游民星空"] },
+    { "term": "2XKO年底停更不停运", "href": "http://www.gamelook.com.cn/2026/08/600458/", "cat": "行业/数据", "heat": 66, "sources": ["GameLook"] },
+    { "term": "宫崎英高新作疑似泄露", "href": "https://www.gamersky.com/news/202608/2193434.shtml", "cat": "行业/数据", "heat": 62, "sources": ["游民星空"] },
+    { "term": "BLG完美收官圣枪复仇", "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28360035", "cat": "事件/风险", "heat": 62, "sources": ["百度贴吧热议"] },
+    { "term": "自行车被偷现霸王龙", "href": "https://www.bilibili.com/video/BV18Tby67EG9", "cat": "梗/社区", "heat": 60, "sources": ["B站每周必看"] },
+    { "term": "前R星总监淡化泄露", "href": "https://www.gamesradar.com/games/grand-theft-auto/former-rockstar-games-lead-says-gta-6-leaks-are-a-nothing-burger-because-90-percent-of-future-players-arent-searching-for-the-clips-online/", "cat": "事件/风险", "heat": 60, "sources": ["GamesRadar+"] },
+    { "term": "网易游戏半年净收507亿", "href": "https://www.baijing.cn/article/56432", "cat": "行业/数据", "heat": 60, "sources": ["白鲸出海"] },
+    { "term": "放70个窝瓜僵尸", "href": "https://www.bilibili.com/video/BV1Qc8T6SESo", "cat": "梗/社区", "heat": 58, "sources": ["B站热门"] },
+    { "term": "HLE双杀T1", "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28359953", "cat": "事件/风险", "heat": 58, "sources": ["百度贴吧热议"] },
+    { "term": "战双线上音乐会", "href": "https://www.bilibili.com/video/BV1VH8K67ENH", "cat": "游戏/新品", "heat": 58, "sources": ["B站热门"] },
+    { "term": "空城计梗", "href": "https://www.bilibili.com/video/BV1pp8E6NES6", "cat": "梗/社区", "heat": 56, "sources": ["B站梗UP"] },
+    { "term": "我收容100位粉丝到存档", "href": "https://www.bilibili.com/video/BV1DV8F6bEkz", "cat": "梗/社区", "heat": 55, "sources": ["B站热门"] },
+    { "term": "国产虚幻5新作公测定档", "href": "https://www.gamersky.com/news/202608/2193803.shtml", "cat": "游戏/新品", "heat": 54, "sources": ["游民星空"] },
+    { "term": "停更7年经典玩MC", "href": "https://www.bilibili.com/video/BV1bQ8u6WEtT", "cat": "梗/社区", "heat": 54, "sources": ["B站热门"] },
+    { "term": "复活吧我的", "href": "https://www.bilibili.com/video/BV1G48M6XEBt", "cat": "梗/社区", "heat": 52, "sources": ["B站热门"] },
+    { "term": "祖龙半年营收6.09亿", "href": "https://www.baijing.cn/article/56441", "cat": "行业/数据", "heat": 52, "sources": ["白鲸出海"] },
+    { "term": "微光维克之歌9月30发售", "href": "https://www.gcores.com/articles/218460", "cat": "游戏/新品", "heat": 52, "sources": ["机核 GCORES"] },
+    { "term": "合成赛道单品月入9900万", "href": "https://www.baijing.cn/article/56443", "cat": "行业/数据", "heat": 50, "sources": ["白鲸出海"] },
+    { "term": "大航海时代凯旋航线首测", "href": "https://news.17173.com/content/08212026/152936221.shtml", "cat": "游戏/新品", "heat": 50, "sources": ["17173"] },
+    { "term": "鹰角投资英国工作室", "href": "https://www.baijing.cn/article/56423", "cat": "行业/数据", "heat": 48, "sources": ["白鲸出海"] },
+    { "term": "浑天星途东方科幻IP", "href": "https://www.youxituoluo.com/534821.html", "cat": "行业/数据", "heat": 46, "sources": ["游戏陀螺"] },
+    { "term": "没领到国补KPL梗", "href": "https://www.bilibili.com/video/BV1UX886VEd5", "cat": "梗/社区", "heat": 44, "sources": ["B站梗UP"] }
   ]
 }

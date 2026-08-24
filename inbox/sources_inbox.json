@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-08-24T11:30:06",
+ "fetched_at": "2026-08-24T11:42:00",
  "summary": {
   "sources_total": 75,
-  "sources_alive": 71,
-  "items_total": 164,
-  "items_dated": 122
+  "sources_alive": 68,
+  "items_total": 160,
+  "items_dated": 117
  },
  "sources": [
   {
@@ -311,11 +311,9 @@
    "name": "CS2 官方新闻",
    "type": "news_list",
    "url": "https://www.counter-strike.net/news",
-   "status": 200,
-   "error": null,
-   "items": [],
-   "extraction": "js_rendered (manual curation)",
-   "dated_items": 0
+   "status": null,
+   "error": "URLError(TimeoutError('_ssl.c:1015: The handshake operation timed out'))",
+   "items": []
   },
   {
    "id": "id5",
@@ -591,15 +589,15 @@
      "age_days": null
     },
     {
-     "title": "曝网飞很不爽GTA6泄露！但也没招 按兵不动计划不变",
-     "url": "https://www.gamersky.com/news/202608/2194641.shtml",
+     "title": "国产“牛来”耳机保护套外网走红 日本售价1726日元",
+     "url": "https://www.gamersky.com/news/202608/2194651.shtml",
      "pubdate": "2026-08-24",
      "date_src": "text",
      "age_days": 0
     },
     {
-     "title": "张韶涵演唱会突发心脏不适 短暂休整后坚持完成演出",
-     "url": "https://www.gamersky.com/news/202608/2194616.shtml",
+     "title": "曝网飞很不爽GTA6泄露！但也没招 按兵不动计划不变",
+     "url": "https://www.gamersky.com/news/202608/2194641.shtml",
      "pubdate": "2026-08-24",
      "date_src": "text",
      "age_days": 0
@@ -700,15 +698,15 @@
      "age_days": null
     },
     {
-     "title": "《Lanterns》第一季第2集评测与回顾",
-     "url": "https://news.17173.com/content/08242026/110814051.shtml",
-     "pubdate": "2026-08-24",
-     "date_src": "text",
-     "age_days": 0
+     "title": "8月29日《烈焰飞雪》征战版新服开启，以战赴约，以情聚友",
+     "url": "https://news.17173.com/content/08242026/113715451.shtml",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
     }
    ],
    "extraction": "extracted",
-   "dated_items": 1
+   "dated_items": 0
   },
   {
    "id": "gematsu",
@@ -1050,8 +1048,8 @@
      "age_days": 21
     },
     {
-     "title": "《反恐精英》更新",
-     "url": "https://store.steampowered.com/news/app/730/view/692016318956699785",
+     "title": "2026科隆Major排名系列印花",
+     "url": "https://store.steampowered.com/news/app/730/view/676253085555756223",
      "pubdate": "2026-07-29",
      "date_src": "feed",
      "age_days": 26
@@ -1373,40 +1371,9 @@
    "name": "PlayStation Blog 中文",
    "type": "rss",
    "url": "https://blog.ja.playstation.com/feed/",
-   "status": 200,
-   "error": null,
-   "items": [
-    {
-     "title": "『七つの大罪：Origin』で「ハーフアニバーサリー 強奪祭」が8月26日（水）開催！",
-     "url": "https://blog.ja.playstation.com/2026/08/21/20260821-nanaori-post-launch-update-o/",
-     "pubdate": "2026-08-21",
-     "date_src": "feed",
-     "age_days": 3
-    },
-    {
-     "title": "これから発売されるPS5®新作ソフトガイド2026夏②──RPG／シミュレーション／レース編",
-     "url": "https://blog.ja.playstation.com/2026/08/21/20260821-ps5-editorial-feature-s/",
-     "pubdate": "2026-08-21",
-     "date_src": "feed",
-     "age_days": 3
-    },
-    {
-     "title": "これから発売されるPS5®新作ソフトガイド2026夏①──アクション／ホラー編",
-     "url": "https://blog.ja.playstation.com/2026/08/20/20260820-ps5-editorial-feature-s/",
-     "pubdate": "2026-08-20",
-     "date_src": "feed",
-     "age_days": 4
-    },
-    {
-     "title": "『グランツーリスモ７』2026年8月アップデートを本日8月20日15時より配信開始！",
-     "url": "https://blog.ja.playstation.com/2026/08/20/20260820-gt7-post-launch-update-s/",
-     "pubdate": "2026-08-20",
-     "date_src": "feed",
-     "age_days": 4
-    }
-   ],
-   "extraction": "rss",
-   "dated_items": 4
+   "status": null,
+   "error": "TimeoutError('The read operation timed out')",
+   "items": []
   },
   {
    "id": "chuapp_category",
@@ -1500,12 +1467,24 @@
    "error": null,
    "items": [
     {
+     "title": "从扣分制到健康分，再到AI内容追责：TikTok Shop东南亚连出两记重拳",
+     "url": "https://www.baijing.cn/article/56449",
+     "pubdate": "2026-08-24",
+     "date_src": "feed",
+     "extra": {
+      "views": 583,
+      "synopsis": "新政下卖家如何生存？",
+      "from": "兔克出海"
+     },
+     "age_days": 0
+    },
+    {
      "title": "Stripe收购PayPal最新进展：谈判仍在推进",
      "url": "https://www.baijing.cn/article/56448",
      "pubdate": "2026-08-24",
      "date_src": "feed",
      "extra": {
-      "views": 1309,
+      "views": 2369,
       "synopsis": "双方自 7 月首轮报价后持续博弈调价，目前谈判仍在推进，但尚未达成最终协议，能否在短期内落地仍存不确定性。",
       "from": "出海记"
      },
@@ -1517,7 +1496,7 @@
      "pubdate": "2026-08-24",
      "date_src": "feed",
      "extra": {
-      "views": 1200,
+      "views": 1852,
       "synopsis": "根据 Omdia《智能手机功能预测》，随着主要厂商不断推出创新形态的折叠屏产品，折叠屏智能手机市场预计到 2028 年将保持 20% 以上的年增长率，出货量将达到 3,600 万部。",
       "from": "Omdia新消费生态调研-原Canalys"
      },
@@ -1529,7 +1508,7 @@
      "pubdate": "2026-08-24",
      "date_src": "feed",
      "extra": {
-      "views": 3414,
+      "views": 3667,
       "synopsis": "美国零售巨头沃尔玛将在旗下门店推出全新的自有女性服装品牌 Scenario，以吸引年轻消费者。",
       "from": "智通财经App"
      },
@@ -1541,7 +1520,7 @@
      "pubdate": "2026-08-22",
      "date_src": "feed",
      "extra": {
-      "views": 79486,
+      "views": 79540,
       "synopsis": "在全球移动游戏市场进入存量博弈的当下，合成赛道正展现出令人瞩目的增长势头。",
       "from": "游戏陀螺"
      },
@@ -1553,7 +1532,7 @@
      "pubdate": "2026-08-22",
      "date_src": "feed",
      "extra": {
-      "views": 7951,
+      "views": 8149,
       "synopsis": "​突破自身历史最高成绩。",
       "from": "白鲸出海"
      },
@@ -1565,7 +1544,7 @@
      "pubdate": "2026-08-22",
      "date_src": "feed",
      "extra": {
-      "views": 79707,
+      "views": 79756,
       "synopsis": "祖龙娱乐发布了 2026 年的半年报，公司 2026 年 H1 营收约 6.09 亿元，同比下降 4.1%，期内亏损达到 6850 万元，似乎仍处在调整期。",
       "from": "游戏新知"
      },
@@ -1577,21 +1556,9 @@
      "pubdate": "2026-08-22",
      "date_src": "feed",
      "extra": {
-      "views": 65956,
+      "views": 66011,
       "synopsis": "做高性价比奢侈品。",
       "from": "品牌方舟BrandArk"
-     },
-     "age_days": 2
-    },
-    {
-     "title": "近两周收入破100万美元，4个月暴涨超30倍，这一爆款like还能升级？",
-     "url": "https://www.baijing.cn/article/56440",
-     "pubdate": "2026-08-22",
-     "date_src": "feed",
-     "extra": {
-      "views": 64805,
-      "synopsis": "《Bus Traffic Fever!》是怎么改造已经不再新鲜的“挪车”玩法的？",
-      "from": "DataEye游戏观察"
      },
      "age_days": 2
     }
@@ -1731,11 +1698,9 @@
    "name": "糖果梦 AI 游戏日报",
    "type": "json_api",
    "url": "https://tgmeng.com/daily/game",
-   "status": 200,
-   "error": null,
-   "items": [],
-   "extraction": "json_api (empty)",
-   "dated_items": 0
+   "status": null,
+   "error": "TimeoutError('The read operation timed out')",
+   "items": []
   },
   {
    "id": "xiaoheihe_hot",
@@ -1758,6 +1723,20 @@
    "status": 200,
    "error": null,
    "items": [
+    {
+     "title": "Lanterns Showrunner on Episode 2’s Big Ending: ‘When and Where to Use the Ring Is the Whole Ballgame’",
+     "url": "https://www.ign.com/articles/lanterns-showrunner-episode-2-ending-when-and-where-to-use-the-ring-is-the-whole-ballgame",
+     "pubdate": "2026-08-24",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
+     "title": "Lanterns Season 1, Episode 2 Review & Recap",
+     "url": "https://www.ign.com/articles/lanterns-season-1-episode-2-review-recap",
+     "pubdate": "2026-08-24",
+     "date_src": "feed",
+     "age_days": 0
+    },
     {
      "title": "The Best Deals Today: LEGO Animal Crossing, Nintendo Switch 2, Nioh 3, and More",
      "url": "https://www.ign.com/articles/best-deals-for-august-23-2026",
@@ -1782,20 +1761,6 @@
     {
      "title": "[UPDATE] GTA 6 Leaker Shows No Sign of Slowing Down as Ninth Gameplay Video Hits the Internet",
      "url": "https://www.ign.com/articles/gta-6-leaker-releases-more-gameplay-videos-despite-rockstar-owner-take-twos-microsoft-and-discord-subpoenas",
-     "pubdate": "2026-08-22",
-     "date_src": "feed",
-     "age_days": 2
-    },
-    {
-     "title": "The Best PC Gaming Collaboration Collections to Check Out Now",
-     "url": "https://www.ign.com/articles/best-pc-gaming-collaborations",
-     "pubdate": "2026-08-22",
-     "date_src": "feed",
-     "age_days": 2
-    },
-    {
-     "title": "The Best Deals Today: Nintendo Switch 2, LEGO Tropical Aquarium, Final Fantasy VII Rebirth, and More",
-     "url": "https://www.ign.com/articles/best-deals-for-august-22-2026",
      "pubdate": "2026-08-22",
      "date_src": "feed",
      "age_days": 2
@@ -1858,50 +1823,40 @@
    "name": "Eurogamer",
    "type": "rss",
    "url": "https://www.eurogamer.net/feed",
-   "status": null,
-   "error": "TimeoutError('The read operation timed out')",
-   "items": []
-  },
-  {
-   "id": "pcgamer",
-   "game": "全行业",
-   "name": "PC Gamer",
-   "type": "rss",
-   "url": "https://www.pcgamer.com/feeds/all",
    "status": 200,
    "error": null,
    "items": [
     {
-     "title": "Steam Week in Review: A touch of AI is all it takes to trigger backlash, as a promising new indie falls afoul of slop skeptics",
-     "url": "https://www.pcgamer.com/gaming-industry/steam-week-in-review-a-touch-of-ai-is-all-it-takes-to-trigger-backlash-as-a-promising-new-indie-falls-afoul-of-slop-skeptics/",
-     "pubdate": "2026-08-24",
-     "date_src": "feed",
-     "age_days": 0
-    },
-    {
-     "title": "'We didn't have layoffs before, and now all of a sudden we have yearly layoffs': Bethesda artist says 'something has changed' under Microsoft",
-     "url": "https://www.pcgamer.com/gaming-industry/we-didnt-have-layoffs-before-and-now-all-of-a-sudden-we-have-yearly-layoffs-bethesda-artist-says-something-has-changed-under-microsoft/",
+     "title": "Twitch faces a class action lawsuit over using streamers' content to train Amazon's AI",
+     "url": "https://www.eurogamer.net/twitch-amazon-generative-ai-training-lawsuit-streamers",
      "pubdate": "2026-08-23",
      "date_src": "feed",
      "age_days": 1
     },
     {
-     "title": "It's been 25 years and I'm still not over one of the greatest songs to grace JRPGs",
-     "url": "https://www.pcgamer.com/games/final-fantasy/its-been-25-years-and-im-still-not-over-one-of-the-greatest-songs-to-grace-jrpgs/",
+     "title": "Epic Games Store overhaul might be \"too little, too late\", says Newzoo analyst",
+     "url": "https://www.eurogamer.net/epic-games-store-recovery-newzoo-analyst-steam-fortnite",
      "pubdate": "2026-08-23",
      "date_src": "feed",
      "age_days": 1
     },
     {
-     "title": "EverQuest Legends dev says 'I'm sure we would' add new classes, races 'in the longer-term vision of the game'",
-     "url": "https://www.pcgamer.com/games/mmo/everquest-legends-dev-says-im-sure-we-would-add-new-classes-races-in-the-longer-term-vision-of-the-game/",
+     "title": "Miyazaki explains how The Duskbloods plans to protect newcomers from its best players",
+     "url": "https://www.eurogamer.net/the-duskbloods-skill-based-matchmaking-hidetaka-miyazaki",
      "pubdate": "2026-08-23",
      "date_src": "feed",
      "age_days": 1
     },
     {
-     "title": "Ray Chase, the voice of Cyclops in X-Men '97, has '1,000 freaking hours' in Slay the Spire and is running a 'smell build' in Kingdom Come: Deliverance 2: ' I wear perfumes and walk into battle with my fancy boy outfit'",
-     "url": "https://www.pcgamer.com/gaming-industry/ray-chase-the-voice-of-cyclops-in-x-men-97-has-1-000-freaking-hours-in-slay-the-spire-and-is-running-a-smell-build-in-kingdom-come-deliverance-2-i-wear-perfumes-and-walk-into-battle-with-my-fancy-boy-outfit/",
+     "title": "Sony sends PlayStation users a reminder they don't own their digital games just as a fan boycott over ending discs kicks off",
+     "url": "https://www.eurogamer.net/playstation-terms-of-service-reminder-psblackout-protest",
+     "pubdate": "2026-08-23",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "Arc Raiders' fifth Expedition will be its last until early 2027",
+     "url": "https://www.eurogamer.net/arc-raiders-expedition-5-pause-2027-changes",
      "pubdate": "2026-08-23",
      "date_src": "feed",
      "age_days": 1
@@ -1909,6 +1864,16 @@
    ],
    "extraction": "rss",
    "dated_items": 5
+  },
+  {
+   "id": "pcgamer",
+   "game": "全行业",
+   "name": "PC Gamer",
+   "type": "rss",
+   "url": "https://www.pcgamer.com/feeds/all",
+   "status": null,
+   "error": "TimeoutError('The read operation timed out')",
+   "items": []
   },
   {
    "id": "vgc",

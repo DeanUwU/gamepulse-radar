@@ -1,79 +1,36 @@
 {
- "generated_at": "2026-08-24T11:28:22",
- "adopt_total": 78,
- "review_total": 49,
- "leak_total": 10,
+ "generated_at": "2026-08-24T11:43:54",
+ "adopt_total": 67,
+ "review_total": 52,
+ "leak_total": 4,
  "leaks": [
   {
-   "title": "这款生活模拟新游，治好了我的时间焦虑 08.20",
-   "url": "https://www.chuapp.com/article/291574.html",
-   "game": "全行业",
-   "src_name": "触乐网",
-   "verdict": "review",
-   "pubdate": "2025-11-10",
-   "date_unverified": false,
-   "n_src_cluster": 4,
-   "signal": 3,
-   "reasons": [
-    "多源印证(4家)",
-    "准入待复核被卡"
-   ]
-  },
-  {
-   "title": "单品月入9900万美元，合成赛道的“寡头化”与“破局战”",
-   "url": "https://www.youxituoluo.com/534817.html",
-   "game": "全行业",
-   "src_name": "游戏陀螺",
+   "title": "Call of Duty: Modern Warfare 4 – Inside the Maps and Movement of Multiplayer",
+   "url": "https://news.xbox.com/en-us/2026/08/21/call-of-duty-modern-warfare-4-inside-the-maps-and-movement-of-multiplayer/",
+   "game": "主机/PC 大作",
+   "src_name": "Xbox Wire",
    "verdict": "review",
    "pubdate": "2026-08-21",
    "date_unverified": false,
-   "n_src_cluster": 19,
+   "n_src_cluster": 11,
    "signal": 3,
    "reasons": [
-    "多源印证(19家)",
+    "多源印证(11家)",
     "准入待复核被卡"
    ]
   },
   {
-   "title": "陈静27分钟前0条评论 触乐怪话：打工是不可能上瘾的！ 游戏品类的成长，大概就是这个样子的了。",
-   "url": "http://www.chuapp.com/article/291572.html",
-   "game": "全行业",
-   "src_name": "触乐网·分类新闻",
-   "verdict": "adopt",
-   "pubdate": null,
-   "date_unverified": false,
-   "n_src_cluster": 4,
-   "signal": 3,
-   "reasons": [
-    "多源印证(4家)"
-   ]
-  },
-  {
-   "title": "梅林粉杖23小时前0条评论 触乐怪话：越传越真的索尼新掌机 不管它有没有，我希望它有。",
-   "url": "http://www.chuapp.com/article/291573.html",
-   "game": "全行业",
-   "src_name": "触乐网·分类新闻",
-   "verdict": "adopt",
-   "pubdate": null,
-   "date_unverified": false,
-   "n_src_cluster": 4,
-   "signal": 3,
-   "reasons": [
-    "多源印证(4家)"
-   ]
-  },
-  {
-   "title": "许艺丹23小时前0条评论 这款生活模拟新游，治好了我的时间焦虑 找到自己的节奏，重拾平凡又可贵的日常。",
-   "url": "http://www.chuapp.com/article/291574.html",
-   "game": "全行业",
-   "src_name": "触乐网·分类新闻",
+   "title": "Modern Warfare 4 Multiplayer: Movement, Gunplay, Modes, & Maps",
+   "url": "https://news.xbox.com/en-us/2026/08/21/modern-warfare-4-multiplayer-movement-gunplay-modes-maps/",
+   "game": "主机/PC 大作",
+   "src_name": "Xbox Wire",
    "verdict": "review",
-   "pubdate": null,
+   "pubdate": "2026-08-21",
    "date_unverified": false,
-   "n_src_cluster": 4,
+   "n_src_cluster": 11,
    "signal": 3,
    "reasons": [
-    "多源印证(4家)",
+    "多源印证(11家)",
     "准入待复核被卡"
    ]
   },
@@ -89,50 +46,6 @@
    "signal": 2,
    "reasons": [
     "强事件词",
-    "准入待复核被卡"
-   ]
-  },
-  {
-   "title": "单月4000万下载之外，这家中国厂商又做出2500万美元二合游戏",
-   "url": "https://www.baijing.cn/article/56436",
-   "game": "全行业",
-   "src_name": "白鲸出海",
-   "verdict": "adopt",
-   "pubdate": "2026-08-21",
-   "date_unverified": false,
-   "n_src_cluster": 19,
-   "signal": 3,
-   "reasons": [
-    "多源印证(19家)"
-   ]
-  },
-  {
-   "title": "30天成交126万美元，国产挂烫机如何靠TikTok打入美国市场？",
-   "url": "https://www.baijing.cn/article/56435",
-   "game": "全行业",
-   "src_name": "白鲸出海",
-   "verdict": "review",
-   "pubdate": "2026-08-21",
-   "date_unverified": false,
-   "n_src_cluster": 19,
-   "signal": 3,
-   "reasons": [
-    "多源印证(19家)",
-    "准入待复核被卡"
-   ]
-  },
-  {
-   "title": "老辈子用的花边剪火上TikTok，2周卖了70万+",
-   "url": "https://www.baijing.cn/article/56434",
-   "game": "全行业",
-   "src_name": "白鲸出海",
-   "verdict": "review",
-   "pubdate": "2026-08-21",
-   "date_unverified": false,
-   "n_src_cluster": 19,
-   "signal": 3,
-   "reasons": [
-    "多源印证(19家)",
     "准入待复核被卡"
    ]
   },

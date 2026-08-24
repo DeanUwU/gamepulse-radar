@@ -2012,31 +2012,46 @@ def _masthead_fallback_event(data, exclude_urls=None):
         score, detail = _heat_score(title, data, datetime.date.today().strftime("%Y-%m-%d"), age=age)
         scored.append((score, detail, fe))
 
-    # 2026-08-19：把 events[] 里带未来定档日期（date_start 在今天~+30天）的日历节点
-    #   也纳入候选（诡秘之主 8/21、燕云十六声 8/27 这类定档事件只在 events[]，
-    #   不进 feed_events，之前 fallback 永远扫不到它们 → 漏上头图）。
-    #   定档节点是"硬核大事件"，优先级高，给一个正向基础分（不靠新鲜度衰减打压）。
+    # 2026-08-24 治理：events[] 日历定档节点本质是"未来发售安排"，不是新闻，
+    #   多数没有新闻原始发布时间（pubdate=null）。旧逻辑把它们一律当"今天刚发的新闻"
+    #   （age=0 满新鲜度），导致 8-13 发布的旧闻《月光光心慌慌》(9-08 发售)霸了头条。
+    #   新规则：定档节点只有满足「有真实 pubdate 且 ≤3 天」或「今天发售/上线
+    #   (date_start==今天)」之一，才是"今日头条"合法候选；未来定档(预告)与时效未知
+    #   节点一律排除，绝不靠"发售"关键词把预告旧闻顶上头条。
     try:
         _today = datetime.date.today()
+        _today_s = _today.strftime("%Y-%m-%d")
         for ce in (ev.get("events") or []):
-            ds = ce.get("date_start")
-            if not ds:
-                continue
-            try:
-                d = datetime.date.fromisoformat(str(ds)[:10])
-            except Exception:
-                continue
-            if not (_today <= d <= _today + datetime.timedelta(days=30)):
-                continue  # 只看未来 30 天内的定档节点
             title = ce.get("title") or ce.get("game") or "（无标题）"
             url = ce.get("source_url") or ce.get("url") or "#"
             if not url or url == "#":
                 continue  # 红线：无溯源链接不上头图
             if url in exclude_urls:
                 continue
-            # 定档事件按"今天发布的新闻"算新鲜度（age=0 最热），
-            #   其日期是"未来发生日"而非"发布日"，不应被当作旧闻扣分。
-            score, detail = _heat_score(title, data, datetime.date.today().strftime("%Y-%m-%d"), age=0)
+            # ① 有真实新闻发布时间：按真实 age 判定，>3 天排除（与 feed_events 分支同一红线）
+            pd = ce.get("pubdate")
+            if pd:
+                try:
+                    _pd = datetime.date.fromisoformat(str(pd)[:10])
+                    _age = (_today - _pd).days
+                    if _age > MAX_AGE_DAYS:
+                        continue
+                except Exception:
+                    _age = None
+            else:
+                # ② 无 pubdate（日历定档节点）：仅当「今天发售/上线」才是今日大事；
+                #    未来定档是预告，不是今日新闻，不上头条。
+                ds = ce.get("date_start")
+                if not ds:
+                    continue
+                try:
+                    d = datetime.date.fromisoformat(str(ds)[:10])
+                except Exception:
+                    continue
+                if d != _today:
+                    continue  # 非今天发生的定档节点 = 预告，排除
+                _age = 0
+            score, detail = _heat_score(title, data, _today_s, age=_age)
             # 定档/公测/专场/关卡类硬核大事件，额外加权确保优先于普通更新
             if re.search(r'公测|定档|首发|发售|专场|发布会|PV|志怪|中元|关卡|联动', title):
                 score += 6

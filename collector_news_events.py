@@ -92,6 +92,9 @@ def main():
             "anchor": '<a class="cal-ev" target="_blank" href="%s" title="%s">%s</a>'
                       % (url, game, action[:30]),
             "date_start": date, "date_end": date,
+            # 日历定档节点是"未来发售安排"，非新闻，无新闻原始发布时间；
+            # 仅当 inbox 显式提供 pubdate 时透传，否则 null（消费方据此判定"非新闻、不上头条"）。
+            "pubdate": (item.get("pubdate") or None),
         }
         events.append(node)
         existing.add(eid)

@@ -103,6 +103,9 @@ def main():
             "anchor": '<a class="cal-ev" target="_blank" href="%s" title="%s">%s</a>'
                       % (url, game, action[:30]),
             "date_start": release_date, "date_end": release_date,
+            # 日历定档节点是"未来发售安排"，非新闻，无新闻原始发布时间；
+            # 仅当 release_dates 条目显式提供 pubdate 时透传，否则 null。
+            "pubdate": (it.get("pubdate") or None),
         }
         events.append(node)
         existing.add(eid)

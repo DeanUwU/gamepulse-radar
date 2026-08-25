@@ -2030,6 +2030,7 @@ def _masthead_fallback_event(data, exclude_urls=None):
                 continue
             # ① 有真实新闻发布时间：按真实 age 判定，>3 天排除（与 feed_events 分支同一红线）
             pd = ce.get("pubdate")
+            ds = ce.get("date_start")
             if pd:
                 try:
                     _pd = datetime.date.fromisoformat(str(pd)[:10])
@@ -2038,6 +2039,16 @@ def _masthead_fallback_event(data, exclude_urls=None):
                         continue
                 except Exception:
                     _age = None
+                # 2026-08-25 治理：即使 pubdate 新鲜，若 date_start 在未来（定档预告），
+                #   也不是「今日新闻」——不得上头图。此前 8-24 的汇总文《影之刃零
+                #   10-29 发售》(pubdate=08-24 但 date_start=10-29) 正是这样霸了头条。
+                if ds:
+                    try:
+                        _ds = datetime.date.fromisoformat(str(ds)[:10])
+                        if _ds > _today:
+                            continue  # 未来定档 = 预告，排除
+                    except Exception:
+                        pass
             else:
                 # ② 无 pubdate（日历定档节点）：仅当「今天发售/上线」才是今日大事；
                 #    未来定档是预告，不是今日新闻，不上头条。

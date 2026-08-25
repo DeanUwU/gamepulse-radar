@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-08-25T10:50:05",
+ "fetched_at": "2026-08-25T11:18:46",
  "summary": {
   "sources_total": 75,
   "sources_alive": 72,
   "items_total": 169,
-  "items_dated": 127
+  "items_dated": 125
  },
  "sources": [
   {
@@ -591,22 +591,22 @@
      "age_days": null
     },
     {
-     "title": "《红色沙漠》首次打折！PC国区214元 PS港区446港币",
-     "url": "https://www.gamersky.com/news/202608/2195281.shtml",
+     "title": "被腰斩的《钢铁侠》一小时实机泄露！完成度超高",
+     "url": "https://www.gamersky.com/news/202608/2195308.shtml",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    },
+    {
+     "title": "神秘“牛来”大模型冲上榜一！暂无厂商认领",
+     "url": "https://www.gamersky.com/news/202608/2194959.shtml",
      "pubdate": "2026-08-25",
      "date_src": "text",
      "age_days": 0
-    },
-    {
-     "title": "宫崎英高对任天堂赞不绝口!玩家担心新作NS2永久独占",
-     "url": "https://www.gamersky.com/news/202608/2193831.shtml",
-     "pubdate": "2026-08-21",
-     "date_src": "text",
-     "age_days": 4
     }
    ],
    "extraction": "extracted",
-   "dated_items": 2
+   "dated_items": 1
   },
   {
    "id": "chuapp",
@@ -700,15 +700,15 @@
      "age_days": null
     },
     {
-     "title": "对标网易！腾讯生活模拟游戏《粒粒的小人国》测试招募开启",
-     "url": "https://news.17173.com/content/08252026/101417893.shtml",
-     "pubdate": "2026-08-25",
-     "date_src": "text",
-     "age_days": 0
+     "title": "壕炸了！《魔域口袋版》花魁赛夺8000元京东卡？",
+     "url": "https://news.17173.com/content/08252026/110243073.shtml",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
     }
    ],
    "extraction": "extracted",
-   "dated_items": 1
+   "dated_items": 0
   },
   {
    "id": "gematsu",
@@ -1179,15 +1179,15 @@
      "age_days": 0
     },
     {
-     "title": "独立游戏开发者感慨：“陌生人更支持我，亲戚朋友都沉默了”！",
-     "url": "http://www.gamelook.com.cn/2026/08/600560/",
+     "title": "《诡秘之主》赢麻了？周末3天预估流水超6000万，项目组自曝“利润率爆表”！",
+     "url": "http://www.gamelook.com.cn/2026/08/600559/",
      "pubdate": "2026-08-25",
      "date_src": "feed",
      "age_days": 0
     },
     {
-     "title": "《诡秘之主》赢麻了？周末3天预估流水超6000万，项目组自曝“利润率爆表”！",
-     "url": "http://www.gamelook.com.cn/2026/08/600559/",
+     "title": "微信小游戏又来大招！IAP首发新游最高可获170%综合分成",
+     "url": "http://www.gamelook.com.cn/2026/08/600613/",
      "pubdate": "2026-08-25",
      "date_src": "feed",
      "age_days": 0
@@ -1377,6 +1377,13 @@
    "error": null,
    "items": [
     {
+     "title": "『地球防衛軍6.2 INVADERS FROM ANOTHER WORLD』2027年発売。「東京ゲームショウ2026」で先行プレイ可能！",
+     "url": "https://blog.ja.playstation.com/2026/08/25/20260825-edf6-2-title-announcement-o/",
+     "pubdate": "2026-08-25",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
      "title": "『Call of Duty: Modern Warfare 4』ベータ早期アクセスPS5®で配信中！",
      "url": "https://blog.ja.playstation.com/2026/08/24/20260824-codmw4-pre-launch-update-o/",
      "pubdate": "2026-08-24",
@@ -1396,13 +1403,6 @@
      "pubdate": "2026-08-21",
      "date_src": "feed",
      "age_days": 4
-    },
-    {
-     "title": "これから発売されるPS5®新作ソフトガイド2026夏②──RPG／シミュレーション／レース編",
-     "url": "https://blog.ja.playstation.com/2026/08/21/20260821-ps5-editorial-feature-s/",
-     "pubdate": "2026-08-21",
-     "date_src": "feed",
-     "age_days": 4
     }
    ],
    "extraction": "rss",
@@ -1418,14 +1418,14 @@
    "error": null,
    "items": [
     {
-     "title": "祝思齐16小时前0条评论 《诡秘之主》：中规中矩，但万一有用呢？ 快手再次敲开游戏行业的大门？",
+     "title": "祝思齐17小时前0条评论 《诡秘之主》：中规中矩，但万一有用呢？ 快手再次敲开游戏行业的大门？",
      "url": "http://www.chuapp.com/article/291581.html",
      "pubdate": null,
      "date_src": null,
      "age_days": null
     },
     {
-     "title": "许艺丹16小时前0条评论 触乐怪话：宇宙尽头的餐馆 家，就是宇宙尽头的餐馆？",
+     "title": "许艺丹17小时前0条评论 触乐怪话：宇宙尽头的餐馆 家，就是宇宙尽头的餐馆？",
      "url": "http://www.chuapp.com/article/291582.html",
      "pubdate": null,
      "date_src": null,
@@ -1500,12 +1500,36 @@
    "error": null,
    "items": [
     {
+     "title": "2026年全球智能手机市场预计下降14%",
+     "url": "https://www.baijing.cn/article/56464",
+     "pubdate": "2026-08-25",
+     "date_src": "feed",
+     "extra": {
+      "views": 200,
+      "synopsis": "2027 年市场环境预计仍将面临挑战，出货量预计进一步下降 1.4%，随后市场有望于 2028 年开始逐步恢复。",
+      "from": "Counterpoint 咨询"
+     },
+     "age_days": 0
+    },
+    {
+     "title": "告别压货焦虑，TikTok美区MTO新政落地，定制卖家的零库存时代来了",
+     "url": "https://www.baijing.cn/article/56463",
+     "pubdate": "2026-08-25",
+     "date_src": "feed",
+     "extra": {
+      "views": 2337,
+      "synopsis": "TK 美区终于对“慢生意”松绑。",
+      "from": "兔克出海"
+     },
+     "age_days": 0
+    },
+    {
      "title": "毕马威：2026上半年英国金融科技融资跌至十年谷底",
      "url": "https://www.baijing.cn/article/56462",
      "pubdate": "2026-08-25",
      "date_src": "feed",
      "extra": {
-      "views": 806,
+      "views": 3121,
       "synopsis": "2026 年上半年英国金融科技市场融资热度大幅降温，投融资规模创下近十年新低。",
       "from": "出海记"
      },
@@ -1517,7 +1541,7 @@
      "pubdate": "2026-08-24",
      "date_src": "feed",
      "extra": {
-      "views": 34970,
+      "views": 35696,
       "synopsis": "AI 智能硬件如何获得消费者认可？",
       "from": "白鲸出海"
      },
@@ -1529,7 +1553,7 @@
      "pubdate": "2026-08-24",
      "date_src": "feed",
      "extra": {
-      "views": 42377,
+      "views": 43030,
       "synopsis": "《Roblox》的暑期红利推动营收快速攀升，自 2025 年 12 月以来首次突破 1 亿美元大关。",
       "from": "游戏那点事Gamez"
      },
@@ -1541,7 +1565,7 @@
      "pubdate": "2026-08-24",
      "date_src": "feed",
      "extra": {
-      "views": 33190,
+      "views": 33814,
       "synopsis": "这条看似朴素的腕带抓住了什么核心需求，又为何能在拥挤的可穿戴市场里跑出自己的节奏？",
       "from": "品牌方舟BrandArk"
      },
@@ -1553,7 +1577,7 @@
      "pubdate": "2026-08-24",
      "date_src": "feed",
      "extra": {
-      "views": 31775,
+      "views": 32383,
       "synopsis": "国内已有近 300 家品牌专卖店的影石，为何还要去海外开直营店？",
       "from": "增长工场"
      },
@@ -1565,33 +1589,9 @@
      "pubdate": "2026-08-24",
      "date_src": "feed",
      "extra": {
-      "views": 33252,
+      "views": 33847,
       "synopsis": "整体来看，腾讯上半年的财务表现延续了市场预期中的稳健增长。",
       "from": "点点出海"
-     },
-     "age_days": 1
-    },
-    {
-     "title": "把风扇做成“大疆Pocket”？深圳老板又捧出一个“隐形冠军”",
-     "url": "https://www.baijing.cn/article/56456",
-     "pubdate": "2026-08-24",
-     "date_src": "feed",
-     "extra": {
-      "views": 33823,
-      "synopsis": "红海再跑出一匹黑马。",
-      "from": "东南亚品牌观察"
-     },
-     "age_days": 1
-    },
-    {
-     "title": "2026美国返校季观察报告出炉，哪些品类有大爆的机会？",
-     "url": "https://www.baijing.cn/article/56455",
-     "pubdate": "2026-08-24",
-     "date_src": "feed",
-     "extra": {
-      "views": 33160,
-      "synopsis": "2026 年美国 K-12（幼儿园到 12 年级）学生家庭的返校季消费预计达到 433 亿美元，创下历史新高。",
-      "from": "AMZ123跨境电商"
      },
      "age_days": 1
     }

@@ -125,7 +125,10 @@ else:
             ce = ev_by_url[mh_url]
             pd = ce.get("pubdate")
             ds = ce.get("date_start")
-            if pd and lo3 <= pd <= TODAY:
+            # 2026-08-25 治理：即使 pubdate ≤3 天，date_start 在未来仍是定档预告，
+            #   不是「今日新闻」，不得上头图（影之刃零 10-29 发售霸榜即此漏洞）。
+            future_ds = bool(ds) and (str(ds) > TODAY)
+            if pd and lo3 <= pd <= TODAY and not future_ds:
                 ok_mh = True
                 mh_detail = f"events pubdate={pd}"
             elif (not pd) and ds == TODAY:

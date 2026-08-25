@@ -1,9 +1,23 @@
 {
- "generated_at": "2026-08-25T10:51:37",
+ "generated_at": "2026-08-25T11:20:19",
  "adopt_total": 70,
  "review_total": 51,
- "leak_total": 1,
+ "leak_total": 2,
  "leaks": [
+  {
+   "title": "被腰斩的《钢铁侠》一小时实机泄露！完成度超高",
+   "url": "https://www.gamersky.com/news/202608/2195308.shtml",
+   "game": "全行业",
+   "src_name": "游民星空新闻",
+   "verdict": "adopt",
+   "pubdate": null,
+   "date_unverified": false,
+   "n_src_cluster": 1,
+   "signal": 2,
+   "reasons": [
+    "强事件词"
+   ]
+  },
   {
    "title": "PSVR《揭秘计划2：远古之战》发售 火星之战爆发",
    "url": "https://www.gamersky.com/news/201809/1102376.shtml",

@@ -1,15 +1,17 @@
 {
- "generated_at": "2026-08-25T10:51:31",
+ "generated_at": "2026-08-25T11:20:13",
  "summary": {
   "total": 162,
   "adopt": 70,
   "review": 51,
   "reject": 41,
   "stale_rejected": 37,
-  "dated": 127,
-  "new_reject": 0
+  "dated": 125,
+  "new_reject": 1
  },
- "new_rejects": [],
+ "new_rejects": [
+  "https://blog.ja.playstation.com/2026/08/25/20260825-edf6-2-title-announcement-o/"
+ ],
  "items": [
   {
    "game": "三国志·战略版",
@@ -442,26 +444,26 @@
   },
   {
    "game": "全行业",
-   "title": "《红色沙漠》首次打折！PC国区214元 PS港区446港币",
-   "url": "https://www.gamersky.com/news/202608/2195281.shtml",
+   "title": "被腰斩的《钢铁侠》一小时实机泄露！完成度超高",
+   "url": "https://www.gamersky.com/news/202608/2195308.shtml",
    "status": 200,
    "src_id": "gamersky",
    "src_name": "游民星空新闻",
-   "pubdate": "2026-08-25",
-   "age_days": 0,
-   "date_src": "text",
+   "pubdate": null,
+   "age_days": null,
+   "date_src": null,
    "verdict": "adopt",
    "reasons": []
   },
   {
    "game": "全行业",
-   "title": "宫崎英高对任天堂赞不绝口!玩家担心新作NS2永久独占",
-   "url": "https://www.gamersky.com/news/202608/2193831.shtml",
+   "title": "神秘“牛来”大模型冲上榜一！暂无厂商认领",
+   "url": "https://www.gamersky.com/news/202608/2194959.shtml",
    "status": 200,
    "src_id": "gamersky",
    "src_name": "游民星空新闻",
-   "pubdate": "2026-08-21",
-   "age_days": 4,
+   "pubdate": "2026-08-25",
+   "age_days": 0,
    "date_src": "text",
    "verdict": "adopt",
    "reasons": []
@@ -576,14 +578,14 @@
   },
   {
    "game": "全行业",
-   "title": "对标网易！腾讯生活模拟游戏《粒粒的小人国》测试招募开启",
-   "url": "https://news.17173.com/content/08252026/101417893.shtml",
+   "title": "壕炸了！《魔域口袋版》花魁赛夺8000元京东卡？",
+   "url": "https://news.17173.com/content/08252026/110243073.shtml",
    "status": 200,
    "src_id": "news17173",
    "src_name": "17173 网游资讯",
-   "pubdate": "2026-08-25",
-   "age_days": 0,
-   "date_src": "text",
+   "pubdate": null,
+   "age_days": null,
+   "date_src": null,
    "verdict": "adopt",
    "reasons": []
   },
@@ -1078,8 +1080,8 @@
   },
   {
    "game": "全行业",
-   "title": "独立游戏开发者感慨：“陌生人更支持我，亲戚朋友都沉默了”！",
-   "url": "http://www.gamelook.com.cn/2026/08/600560/",
+   "title": "《诡秘之主》赢麻了？周末3天预估流水超6000万，项目组自曝“利润率爆表”！",
+   "url": "http://www.gamelook.com.cn/2026/08/600559/",
    "status": 200,
    "src_id": "gamelook",
    "src_name": "GameLook",
@@ -1091,8 +1093,8 @@
   },
   {
    "game": "全行业",
-   "title": "《诡秘之主》赢麻了？周末3天预估流水超6000万，项目组自曝“利润率爆表”！",
-   "url": "http://www.gamelook.com.cn/2026/08/600559/",
+   "title": "微信小游戏又来大招！IAP首发新游最高可获170%综合分成",
+   "url": "http://www.gamelook.com.cn/2026/08/600613/",
    "status": 200,
    "src_id": "gamelook",
    "src_name": "GameLook",
@@ -1327,6 +1329,22 @@
   },
   {
    "game": "主机/PC 大作",
+   "title": "『地球防衛軍6.2 INVADERS FROM ANOTHER WORLD』2027年発売。「東京ゲームショウ2026」で先行プレイ可能！",
+   "url": "https://blog.ja.playstation.com/2026/08/25/20260825-edf6-2-title-announcement-o/",
+   "status": 200,
+   "src_id": "ps_blog_ja",
+   "src_name": "PlayStation Blog 中文",
+   "pubdate": "2026-08-25",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "reject",
+   "reasons": [
+    "域名与游戏[主机/PC 大作]不符",
+    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
+   ]
+  },
+  {
+   "game": "主机/PC 大作",
    "title": "『Call of Duty: Modern Warfare 4』ベータ早期アクセスPS5®で配信中！",
    "url": "https://blog.ja.playstation.com/2026/08/24/20260824-codmw4-pre-launch-update-o/",
    "status": 200,
@@ -1373,23 +1391,8 @@
    ]
   },
   {
-   "game": "主机/PC 大作",
-   "title": "これから発売されるPS5®新作ソフトガイド2026夏②──RPG／シミュレーション／レース編",
-   "url": "https://blog.ja.playstation.com/2026/08/21/20260821-ps5-editorial-feature-s/",
-   "status": 200,
-   "src_id": "ps_blog_ja",
-   "src_name": "PlayStation Blog 中文",
-   "pubdate": "2026-08-21",
-   "age_days": 4,
-   "date_src": "feed",
-   "verdict": "reject",
-   "reasons": [
-    "域名与游戏[主机/PC 大作]不符"
-   ]
-  },
-  {
    "game": "全行业",
-   "title": "祝思齐16小时前0条评论 《诡秘之主》：中规中矩，但万一有用呢？ 快手再次敲开游戏行业的大门？",
+   "title": "祝思齐17小时前0条评论 《诡秘之主》：中规中矩，但万一有用呢？ 快手再次敲开游戏行业的大门？",
    "url": "http://www.chuapp.com/article/291581.html",
    "status": 200,
    "src_id": "chuapp_category",
@@ -1402,7 +1405,7 @@
   },
   {
    "game": "全行业",
-   "title": "许艺丹16小时前0条评论 触乐怪话：宇宙尽头的餐馆 家，就是宇宙尽头的餐馆？",
+   "title": "许艺丹17小时前0条评论 触乐怪话：宇宙尽头的餐馆 家，就是宇宙尽头的餐馆？",
    "url": "http://www.chuapp.com/article/291582.html",
    "status": 200,
    "src_id": "chuapp_category",
@@ -1503,6 +1506,36 @@
   },
   {
    "game": "全行业",
+   "title": "2026年全球智能手机市场预计下降14%",
+   "url": "https://www.baijing.cn/article/56464",
+   "status": 200,
+   "src_id": "baijing",
+   "src_name": "白鲸出海",
+   "pubdate": "2026-08-25",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "review",
+   "reasons": [
+    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
+   ]
+  },
+  {
+   "game": "全行业",
+   "title": "告别压货焦虑，TikTok美区MTO新政落地，定制卖家的零库存时代来了",
+   "url": "https://www.baijing.cn/article/56463",
+   "status": 200,
+   "src_id": "baijing",
+   "src_name": "白鲸出海",
+   "pubdate": "2026-08-25",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "review",
+   "reasons": [
+    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
+   ]
+  },
+  {
+   "game": "全行业",
    "title": "毕马威：2026上半年英国金融科技融资跌至十年谷底",
    "url": "https://www.baijing.cn/article/56462",
    "status": 200,
@@ -1588,36 +1621,6 @@
    "date_src": "feed",
    "verdict": "adopt",
    "reasons": []
-  },
-  {
-   "game": "全行业",
-   "title": "把风扇做成“大疆Pocket”？深圳老板又捧出一个“隐形冠军”",
-   "url": "https://www.baijing.cn/article/56456",
-   "status": 200,
-   "src_id": "baijing",
-   "src_name": "白鲸出海",
-   "pubdate": "2026-08-24",
-   "age_days": 1,
-   "date_src": "feed",
-   "verdict": "review",
-   "reasons": [
-    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
-   ]
-  },
-  {
-   "game": "全行业",
-   "title": "2026美国返校季观察报告出炉，哪些品类有大爆的机会？",
-   "url": "https://www.baijing.cn/article/56455",
-   "status": 200,
-   "src_id": "baijing",
-   "src_name": "白鲸出海",
-   "pubdate": "2026-08-24",
-   "age_days": 1,
-   "date_src": "feed",
-   "verdict": "review",
-   "reasons": [
-    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
-   ]
   },
   {
    "game": "全行业",
@@ -2081,14 +2084,16 @@
    "game": "全行业",
    "title": "The Best SNES RPG You Likely Never Played Is Getting A Modern Re-release",
    "url": "https://www.gamespot.com/articles/the-best-snes-rpg-you-likely-never-played-is-getting-a-modern-re-release/",
-   "status": 200,
+   "status": null,
    "src_id": "gamespot",
    "src_name": "GameSpot",
    "pubdate": "2026-08-24",
    "age_days": 1,
    "date_src": "feed",
    "verdict": "adopt",
-   "reasons": []
+   "reasons": [
+    "链接探活未过(疑似反爬/超时，RSS 已确认存活)"
+   ]
   },
   {
    "game": "全行业",

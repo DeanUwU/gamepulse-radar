@@ -5,7 +5,7 @@
   "event_count": 100,
   "note": "scaffold 中的 <<EVT_i>> 由 gen_calendar.py 用 events[i].anchor 替换 __SRC__ 回填。",
   "feed_count": 40,
-  "feed_seq": 357,
+  "feed_seq": 366,
   "last_update": "2026-08-25",
   "date_migrated": "2026-08-18"
  },
@@ -1593,19 +1593,6 @@
    "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"首日免费榜第一，快手《诡秘之主》到了不能输的一天！（来源：GameLook）\" style=\"color:#4da3ff;text-decoration:none\">首日免费榜第一，快手《诡秘之主》到了不能输的一天！</a></td><td>GameLook</td></tr>"
   },
   {
-   "id": "F301",
-   "kind": "feed",
-   "game": "全行业",
-   "title": "分析：玩家月留存仅3%，“友尽类游戏”为何成为独游爆款发动机？",
-   "source_url": "http://www.gamelook.com.cn/2026/08/600444/",
-   "source_name": "GameLook",
-   "src_id": "gamelook",
-   "pubdate": "2026-08-24",
-   "first_seen": "2026-08-24",
-   "date_unverified": false,
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"分析：玩家月留存仅3%，“友尽类游戏”为何成为独游爆款发动机？（来源：GameLook）\" style=\"color:#4da3ff;text-decoration:none\">分析：玩家月留存仅3%，“友尽类游戏”为何成为独游爆款发动机？</a></td><td>GameLook</td></tr>"
-  },
-  {
    "id": "F302",
    "kind": "feed",
    "game": "全行业",
@@ -1957,7 +1944,20 @@
    "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"《红色沙漠》首次打折！PC国区214元 PS港区446港币（来源：游民星空新闻）\" style=\"color:#4da3ff;text-decoration:none\">《红色沙漠》首次打折！PC国区214元 PS港区446港币</a></td><td>游民星空新闻</td></tr>"
   },
   {
-   "id": "F355",
+   "id": "F358",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "微信小游戏又来大招！IAP首发新游最高可获170%综合分成",
+   "source_url": "http://www.gamelook.com.cn/2026/08/600613/",
+   "source_name": "GameLook",
+   "src_id": "gamelook",
+   "pubdate": "2026-08-25",
+   "first_seen": "2026-08-25",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"微信小游戏又来大招！IAP首发新游最高可获170%综合分成（来源：GameLook）\" style=\"color:#4da3ff;text-decoration:none\">微信小游戏又来大招！IAP首发新游最高可获170%综合分成</a></td><td>GameLook</td></tr>"
+  },
+  {
+   "id": "F364",
    "kind": "feed",
    "game": "和平精英",
    "title": "和平精英X东北超联动“燃动沈阳”，打造今夏最IN线下盛宴 当电竞的潮流脉搏与东北工业重镇的硬核气质相遇，会碰撞出怎样的火花？",
@@ -1970,7 +1970,7 @@
    "anchor": "<tr><td><b style=\"color:var(--gold)\">和平精英</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"和平精英X东北超联动“燃动沈阳”，打造今夏最IN线下盛宴 当电竞的潮流脉搏与东北工业重镇的硬核气…（来源：和平精英赛事资讯）\" style=\"color:#4da3ff;text-decoration:none\">和平精英X东北超联动“燃动沈阳”，打造今夏最IN线下盛宴 当电竞的潮流脉搏与东北工业重镇的硬核气…</a></td><td>和平精英赛事资讯</td></tr>"
   },
   {
-   "id": "F356",
+   "id": "F365",
    "kind": "feed",
    "game": "和平精英",
    "title": "峡谷争锋，精英制胜！和平精英联手携程旅行、安徽霍山大峡谷漂流打造实景吃鸡新体验 「峡谷争锋?精英制胜」线下挑战赛，创新打造漂流实景吃鸡全新玩法！",
@@ -1983,7 +1983,7 @@
    "anchor": "<tr><td><b style=\"color:var(--gold)\">和平精英</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"峡谷争锋，精英制胜！和平精英联手携程旅行、安徽霍山大峡谷漂流打造实景吃鸡新体验 「峡谷争锋?精英…（来源：和平精英赛事资讯）\" style=\"color:#4da3ff;text-decoration:none\">峡谷争锋，精英制胜！和平精英联手携程旅行、安徽霍山大峡谷漂流打造实景吃鸡新体验 「峡谷争锋?精英…</a></td><td>和平精英赛事资讯</td></tr>"
   },
   {
-   "id": "F357",
+   "id": "F366",
    "kind": "feed",
    "game": "全行业",
    "title": "陈静08月21日0条评论 触乐怪话：打工是不可能上瘾的！ 游戏品类的成长，大概就是这个样子的了。",

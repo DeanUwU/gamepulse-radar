@@ -1,39 +1,9 @@
 {
- "generated_at": "2026-08-24T11:43:54",
- "adopt_total": 67,
- "review_total": 52,
- "leak_total": 4,
+ "generated_at": "2026-08-25T10:50:43",
+ "adopt_total": 70,
+ "review_total": 51,
+ "leak_total": 1,
  "leaks": [
-  {
-   "title": "Call of Duty: Modern Warfare 4 – Inside the Maps and Movement of Multiplayer",
-   "url": "https://news.xbox.com/en-us/2026/08/21/call-of-duty-modern-warfare-4-inside-the-maps-and-movement-of-multiplayer/",
-   "game": "主机/PC 大作",
-   "src_name": "Xbox Wire",
-   "verdict": "review",
-   "pubdate": "2026-08-21",
-   "date_unverified": false,
-   "n_src_cluster": 11,
-   "signal": 3,
-   "reasons": [
-    "多源印证(11家)",
-    "准入待复核被卡"
-   ]
-  },
-  {
-   "title": "Modern Warfare 4 Multiplayer: Movement, Gunplay, Modes, & Maps",
-   "url": "https://news.xbox.com/en-us/2026/08/21/modern-warfare-4-multiplayer-movement-gunplay-modes-maps/",
-   "game": "主机/PC 大作",
-   "src_name": "Xbox Wire",
-   "verdict": "review",
-   "pubdate": "2026-08-21",
-   "date_unverified": false,
-   "n_src_cluster": 11,
-   "signal": 3,
-   "reasons": [
-    "多源印证(11家)",
-    "准入待复核被卡"
-   ]
-  },
   {
    "title": "PSVR《揭秘计划2：远古之战》发售 火星之战爆发",
    "url": "https://www.gamersky.com/news/201809/1102376.shtml",
@@ -41,21 +11,6 @@
    "src_name": "游民星空·最新资讯",
    "verdict": "review",
    "pubdate": "2018-09-20",
-   "date_unverified": false,
-   "n_src_cluster": 1,
-   "signal": 2,
-   "reasons": [
-    "强事件词",
-    "准入待复核被卡"
-   ]
-  },
-  {
-   "title": "活动 | 三国杀王者之战神王战广州收官 《三国杀：承天之弈》重磅首发",
-   "url": "http://www.nadianshi.com/2026/06/413745",
-   "game": "全行业",
-   "src_name": "手游那点事",
-   "verdict": "review",
-   "pubdate": "2026-06-01",
    "date_unverified": false,
    "n_src_cluster": 1,
    "signal": 2,

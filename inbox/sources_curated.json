@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-25T10:50:40",
+ "generated_at": "2026-08-25T10:51:31",
  "summary": {
   "total": 162,
   "adopt": 70,
@@ -7,16 +7,9 @@
   "reject": 41,
   "stale_rejected": 37,
   "dated": 127,
-  "new_reject": 6
+  "new_reject": 0
  },
- "new_rejects": [
-  "https://yhtj.163.com/news/update/20260819/36482_1311689.html",
-  "https://store.steampowered.com/news/app/570/view/680758587997293716",
-  "https://store.steampowered.com/news/app/730/view/717913919982665978",
-  "https://store.steampowered.com/news/app/2507950/view/690892322235220064",
-  "https://blog.ja.playstation.com/2026/08/24/20260824-codmw4-pre-launch-update-o/",
-  "https://blog.ja.playstation.com/2026/08/24/20260824-aliensfe2-release-date-reveal-o/"
- ],
+ "new_rejects": [],
  "items": [
   {
    "game": "三国志·战略版",
@@ -449,6 +442,19 @@
   },
   {
    "game": "全行业",
+   "title": "《红色沙漠》首次打折！PC国区214元 PS港区446港币",
+   "url": "https://www.gamersky.com/news/202608/2195281.shtml",
+   "status": 200,
+   "src_id": "gamersky",
+   "src_name": "游民星空新闻",
+   "pubdate": "2026-08-25",
+   "age_days": 0,
+   "date_src": "text",
+   "verdict": "adopt",
+   "reasons": []
+  },
+  {
+   "game": "全行业",
    "title": "宫崎英高对任天堂赞不绝口!玩家担心新作NS2永久独占",
    "url": "https://www.gamersky.com/news/202608/2193831.shtml",
    "status": 200,
@@ -456,19 +462,6 @@
    "src_name": "游民星空新闻",
    "pubdate": "2026-08-21",
    "age_days": 4,
-   "date_src": "text",
-   "verdict": "adopt",
-   "reasons": []
-  },
-  {
-   "game": "全行业",
-   "title": "GTA6\"正戏\"要来了！葱哥暗示下一条实机公布剧情",
-   "url": "https://www.gamersky.com/news/202608/2195273.shtml",
-   "status": 200,
-   "src_id": "gamersky",
-   "src_name": "游民星空新闻",
-   "pubdate": "2026-08-25",
-   "age_days": 0,
    "date_src": "text",
    "verdict": "adopt",
    "reasons": []
@@ -2088,22 +2081,20 @@
    "game": "全行业",
    "title": "The Best SNES RPG You Likely Never Played Is Getting A Modern Re-release",
    "url": "https://www.gamespot.com/articles/the-best-snes-rpg-you-likely-never-played-is-getting-a-modern-re-release/",
-   "status": null,
+   "status": 200,
    "src_id": "gamespot",
    "src_name": "GameSpot",
    "pubdate": "2026-08-24",
    "age_days": 1,
    "date_src": "feed",
    "verdict": "adopt",
-   "reasons": [
-    "链接探活未过(疑似反爬/超时，RSS 已确认存活)"
-   ]
+   "reasons": []
   },
   {
    "game": "全行业",
    "title": "Welcome To GameSpot Cheap Week",
    "url": "https://www.gamespot.com/articles/welcome-to-gamespot-cheap-week/",
-   "status": 200,
+   "status": null,
    "src_id": "gamespot",
    "src_name": "GameSpot",
    "pubdate": "2026-08-17",
@@ -2111,6 +2102,7 @@
    "date_src": "feed",
    "verdict": "reject",
    "reasons": [
+    "链接探活未过(疑似反爬/超时，RSS 已确认存活)",
     "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）",
     "发布日期已 8 天，超过 5 天保鲜期（时效红线）"
    ]
@@ -2119,6 +2111,21 @@
    "game": "全行业",
    "title": "The Duskbloods Playtest Was Even More Popular Than Elden Ring Nightreign’s",
    "url": "https://www.gamespot.com/articles/the-duskbloods-playtest-was-even-more-popular-than-elden-ring-nightreigns/",
+   "status": 200,
+   "src_id": "gamespot",
+   "src_name": "GameSpot",
+   "pubdate": "2026-08-24",
+   "age_days": 1,
+   "date_src": "feed",
+   "verdict": "review",
+   "reasons": [
+    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
+   ]
+  },
+  {
+   "game": "全行业",
+   "title": "I Can’t Believe I Missed Mortal Shell 2’s Best Item, Silly Me",
+   "url": "https://www.gamespot.com/articles/i-cant-believe-i-missed-mortal-shell-2s-best-item-silly-me/",
    "status": null,
    "src_id": "gamespot",
    "src_name": "GameSpot",
@@ -2128,21 +2135,6 @@
    "verdict": "review",
    "reasons": [
     "链接探活未过(疑似反爬/超时，RSS 已确认存活)",
-    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
-   ]
-  },
-  {
-   "game": "全行业",
-   "title": "I Can’t Believe I Missed Mortal Shell 2’s Best Item, Silly Me",
-   "url": "https://www.gamespot.com/articles/i-cant-believe-i-missed-mortal-shell-2s-best-item-silly-me/",
-   "status": 200,
-   "src_id": "gamespot",
-   "src_name": "GameSpot",
-   "pubdate": "2026-08-24",
-   "age_days": 1,
-   "date_src": "feed",
-   "verdict": "review",
-   "reasons": [
     "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
    ]
   },

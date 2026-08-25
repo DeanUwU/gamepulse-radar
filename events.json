@@ -5,7 +5,7 @@
   "event_count": 100,
   "note": "scaffold 中的 <<EVT_i>> 由 gen_calendar.py 用 events[i].anchor 替换 __SRC__ 回填。",
   "feed_count": 40,
-  "feed_seq": 348,
+  "feed_seq": 357,
   "last_update": "2026-08-25",
   "date_migrated": "2026-08-18"
  },
@@ -1567,19 +1567,6 @@
    "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"《绝区零》首席美术“阿兔朋友”宣布离开米哈游，将独立开发种田游戏（来源：游戏陀螺）\" style=\"color:#4da3ff;text-decoration:none\">《绝区零》首席美术“阿兔朋友”宣布离开米哈游，将独立开发种田游戏</a></td><td>游戏陀螺</td></tr>"
   },
   {
-   "id": "F285",
-   "kind": "feed",
-   "game": "全行业",
-   "title": "《GTA6》又遭新黑客侵入！R星员工被扒看成人内容",
-   "source_url": "https://www.gamersky.com/news/202608/2193866.shtml",
-   "source_name": "游民星空新闻",
-   "src_id": "gamersky",
-   "pubdate": "2026-08-21",
-   "first_seen": "2026-08-24",
-   "date_unverified": false,
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"《GTA6》又遭新黑客侵入！R星员工被扒看成人内容（来源：游民星空新闻）\" style=\"color:#4da3ff;text-decoration:none\">《GTA6》又遭新黑客侵入！R星员工被扒看成人内容</a></td><td>游民星空新闻</td></tr>"
-  },
-  {
    "id": "F299",
    "kind": "feed",
    "game": "全行业",
@@ -1957,7 +1944,20 @@
    "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"Blood Dungeon Review - Skilled Ugly Chaos（来源：Game Informer）\" style=\"color:#4da3ff;text-decoration:none\">Blood Dungeon Review - Skilled Ugly Chaos</a></td><td>Game Informer</td></tr>"
   },
   {
-   "id": "F346",
+   "id": "F350",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "《红色沙漠》首次打折！PC国区214元 PS港区446港币",
+   "source_url": "https://www.gamersky.com/news/202608/2195281.shtml",
+   "source_name": "游民星空新闻",
+   "src_id": "gamersky",
+   "pubdate": "2026-08-25",
+   "first_seen": "2026-08-25",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"《红色沙漠》首次打折！PC国区214元 PS港区446港币（来源：游民星空新闻）\" style=\"color:#4da3ff;text-decoration:none\">《红色沙漠》首次打折！PC国区214元 PS港区446港币</a></td><td>游民星空新闻</td></tr>"
+  },
+  {
+   "id": "F355",
    "kind": "feed",
    "game": "和平精英",
    "title": "和平精英X东北超联动“燃动沈阳”，打造今夏最IN线下盛宴 当电竞的潮流脉搏与东北工业重镇的硬核气质相遇，会碰撞出怎样的火花？",
@@ -1970,7 +1970,7 @@
    "anchor": "<tr><td><b style=\"color:var(--gold)\">和平精英</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"和平精英X东北超联动“燃动沈阳”，打造今夏最IN线下盛宴 当电竞的潮流脉搏与东北工业重镇的硬核气…（来源：和平精英赛事资讯）\" style=\"color:#4da3ff;text-decoration:none\">和平精英X东北超联动“燃动沈阳”，打造今夏最IN线下盛宴 当电竞的潮流脉搏与东北工业重镇的硬核气…</a></td><td>和平精英赛事资讯</td></tr>"
   },
   {
-   "id": "F347",
+   "id": "F356",
    "kind": "feed",
    "game": "和平精英",
    "title": "峡谷争锋，精英制胜！和平精英联手携程旅行、安徽霍山大峡谷漂流打造实景吃鸡新体验 「峡谷争锋?精英制胜」线下挑战赛，创新打造漂流实景吃鸡全新玩法！",
@@ -1983,7 +1983,7 @@
    "anchor": "<tr><td><b style=\"color:var(--gold)\">和平精英</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"峡谷争锋，精英制胜！和平精英联手携程旅行、安徽霍山大峡谷漂流打造实景吃鸡新体验 「峡谷争锋?精英…（来源：和平精英赛事资讯）\" style=\"color:#4da3ff;text-decoration:none\">峡谷争锋，精英制胜！和平精英联手携程旅行、安徽霍山大峡谷漂流打造实景吃鸡新体验 「峡谷争锋?精英…</a></td><td>和平精英赛事资讯</td></tr>"
   },
   {
-   "id": "F348",
+   "id": "F357",
    "kind": "feed",
    "game": "全行业",
    "title": "陈静08月21日0条评论 触乐怪话：打工是不可能上瘾的！ 游戏品类的成长，大概就是这个样子的了。",

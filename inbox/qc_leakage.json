@@ -1,21 +1,51 @@
 {
- "generated_at": "2026-08-25T11:20:19",
- "adopt_total": 70,
- "review_total": 51,
- "leak_total": 2,
+ "generated_at": "2026-08-26T10:53:17",
+ "adopt_total": 75,
+ "review_total": 48,
+ "leak_total": 5,
  "leaks": [
   {
-   "title": "被腰斩的《钢铁侠》一小时实机泄露！完成度超高",
-   "url": "https://www.gamersky.com/news/202608/2195308.shtml",
+   "title": "雨果奖得主推荐的《浑天星途》：一个东方科幻 IP 想讲怎样的未来故事？",
+   "url": "https://www.youxituoluo.com/534821.html",
    "game": "全行业",
-   "src_name": "游民星空新闻",
+   "src_name": "游戏陀螺",
    "verdict": "adopt",
-   "pubdate": null,
+   "pubdate": "2026-08-24",
    "date_unverified": false,
-   "n_src_cluster": 1,
+   "n_src_cluster": 2,
    "signal": 2,
    "reasons": [
-    "强事件词"
+    "多源印证(2家)"
+   ]
+  },
+  {
+   "title": "陈威远16小时前0条评论 触乐怪话：采访了一位AI 我将用最直白最不绕弯子的话回答你。",
+   "url": "http://www.chuapp.com/article/291584.html",
+   "game": "全行业",
+   "src_name": "触乐网·分类新闻",
+   "verdict": "review",
+   "pubdate": null,
+   "date_unverified": false,
+   "n_src_cluster": 20,
+   "signal": 3,
+   "reasons": [
+    "多源印证(20家)",
+    "准入待复核被卡"
+   ]
+  },
+  {
+   "title": "陈威远16小时前0条评论 刚满一周岁的手瓦，追它的人排满了一整个街区 手瓦这次线下活动起到的作用，比我想象中更重要。",
+   "url": "http://www.chuapp.com/article/291586.html",
+   "game": "全行业",
+   "src_name": "触乐网·分类新闻",
+   "verdict": "review",
+   "pubdate": null,
+   "date_unverified": false,
+   "n_src_cluster": 20,
+   "signal": 3,
+   "reasons": [
+    "多源印证(20家)",
+    "准入待复核被卡"
    ]
   },
   {
@@ -25,6 +55,21 @@
    "src_name": "游民星空·最新资讯",
    "verdict": "review",
    "pubdate": "2018-09-20",
+   "date_unverified": false,
+   "n_src_cluster": 1,
+   "signal": 2,
+   "reasons": [
+    "强事件词",
+    "准入待复核被卡"
+   ]
+  },
+  {
+   "title": "活动 | 三国杀王者之战神王战广州收官 《三国杀：承天之弈》重磅首发",
+   "url": "http://www.nadianshi.com/2026/06/413745",
+   "game": "全行业",
+   "src_name": "手游那点事",
+   "verdict": "review",
+   "pubdate": "2026-06-01",
    "date_unverified": false,
    "n_src_cluster": 1,
    "signal": 2,

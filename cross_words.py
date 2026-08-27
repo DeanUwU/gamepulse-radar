@@ -82,6 +82,10 @@ _now_date = datetime.date.today()
 
 def _term_is_stale(term):
     """词条内嵌日期是否已过期（>STALE_DAYS 天）。无日期字则视为新鲜，不剔除。"""
+    # 「定档」类词条内嵌的是未来发售/上线日，属新鲜预告而非已发生的旧事件，
+    # 不按「N月N日」过期规则剔除（如「无限大 定档1月15日」的 1/15 是明年发售日）。
+    if "定档" in term:
+        return False
     for m in _DATE_WORD.finditer(term):
         mo, dd = int(m.group(1)), int(m.group(2))
         try:

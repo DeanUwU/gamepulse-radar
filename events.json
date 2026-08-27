@@ -5,11 +5,11 @@
   "event_count": 100,
   "note": "scaffold 中的 <<EVT_i>> 由 gen_calendar.py 用 events[i].anchor 替换 __SRC__ 回填。",
   "feed_count": 40,
-  "feed_seq": 389,
-  "last_update": "2026-08-26",
+  "feed_seq": 399,
+  "last_update": "2026-08-27",
   "date_migrated": "2026-08-18"
  },
- "scaffold": "<!doctype html>\n<html lang=\"zh-CN\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>GamePulse · 版本日历 2026-08-26</title><link rel=\"icon\" type=\"image/png\" href=\"favicon.png\"><link rel=\"stylesheet\" href=\"style.css\"></head><body>\n<header><div class=\"hbar\"><div class=\"logo\">&#127918; 游戏内容<em>雷达</em></div><span class=\"chip\">&#128197; 日历·前瞻哨</span><span class=\"chip fresh\">2026-08-26</span><nav><a href=\"%E6%B8%B8%E6%88%8F%E6%97%A5%E6%8A%A5%E4%B8%BB%E7%AB%99.html\" target=\"_top\">&#8962; 主视图</a><a href=\"daily.html\">日报</a><a href=\"calendar.html\">日历·前瞻</a><a href=\"wordcloud.html\">词云</a></nav></div></header>\n<div class=\"wrap\">\n<div class=\"hero\"><h1>版本日历 · 前瞻哨</h1><p>未来 5 周关键节点（07-27 ~ 08-30）：新角色 / 新版本 / 联动 / 活动 / 维护 / 前瞻。虚线边框 = 前瞻情报（未官宣，需跟踪）。前瞻哨每日自动扫描更新（覆盖 07-27 ~ 08-30）。</p></div>\n<section id=\"cal\">\n<style>\n/* ===== 日历视觉优化 v2 ===== */\n.cal-grid{border-collapse:collapse;width:100%;table-layout:fixed}\n.cal-grid th{font-size:11px;color:var(--sub);font-weight:700;padding:8px 4px;border-bottom:2px solid var(--border);text-transform:uppercase;letter-spacing:.06em}\n.cal-grid td{border:1px solid var(--border);vertical-align:top;min-height:90px;padding:6px 7px;font-size:11.5px;background:var(--panel)}\n.cal-cell .cd{font-weight:800;color:var(--accent);font-size:12px;margin-bottom:4px;display:inline-block;padding:1px 6px;border-radius:4px;background:rgba(255,92,57,.1)}\n.cal-cell.today{background:rgba(255,92,57,.08);box-shadow:inset 0 0 0 2px var(--accent)}\n.cal-cell.today .cd{background:var(--accent);color:#fff}\n.cal-ev{display:block;margin-bottom:3px;padding:4px 7px;border-radius:7px;background:linear-gradient(135deg,var(--panel2),rgba(77,163,255,.04));\n  border-left:3px solid var(--blue);color:var(--txt);font-size:11px;line-height:1.45;\n  white-space:normal;overflow:hidden;text-overflow:ellipsis;transition:all .15s}\n.cal-ev:hover{text-decoration:none;color:#fff;background:linear-gradient(135deg,rgba(77,163,255,.15),var(--panel2));border-left-color:var(--gold);transform:translateX(2px)}\n.cal-ev b{color:var(--gold);font-weight:700}\n.cal-ev.guess{border-left-style:dashed;opacity:.78;background:repeating-linear-gradient(-45deg,var(--panel2),var(--panel2) 3px,rgba(255,176,32,.03) 3px,rgba(255,176,32,.03) 6px)}\n.cal-legend{margin-top:10px;font-size:11px;color:var(--sub)}\n.cal-legend span{display:inline-block;margin-right:12px}\n.cal-legend i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:4px;vertical-align:middle}\n\n@media(max-width:640px){\n  }\n</style>\n<div class=\"sec-title\"><span class=\"bar\"></span>持续运营游戏 · 版本更新日历 <small>今天（07-31）前后两周 · 仅玩家关键节点 · 手游+主机PC大作</small></div><div class=\"panel\"><p class=\"note\">覆盖：原神 / 星穹铁道 / 绝区零 / 鸣潮 / 三角洲行动 / 明日方舟 / 金铲铲之战 / 第五人格 / 恋与深空 / 蛋仔派对 / 永劫无间 / 无畏契约 / 终末地 / 王者荣耀 / 和平精英 / 阴阳师 / 暗区突围 / DNF手游 / LOL手游 / 火影忍者 / 三国志·战略版 / 萤火突击 / 晶核 / 暗黑不朽 / CS2 / DOTA2 + 全球主机PC大作。只保留：新版本 / 新角色 / 联动 / 前瞻 / 大型活动 / 电竞赛事。实线=官方已官宣，<b>虚线边=前瞻情报（待官方确认）</b>。</p><table class=\"cal-grid\"><thead><tr><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th><th>日</th></tr></thead><tbody><tr><td class=\"cal-cell\"><div class=\"cd\" data-d=\"07-27\">27</div><<EVT_11>><<EVT_12>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"07-28\">28</div><<EVT_13>><<EVT_14>><<EVT_15>><<EVT_16>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"07-29\">29</div><<EVT_17>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"07-30\">30</div><<EVT_18>><<EVT_19>><<EVT_20>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"07-31\">31</div><<EVT_76>><<EVT_77>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-01\">1</div><<EVT_21>><<EVT_22>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-02\">2</div><<EVT_23>><<EVT_24>></td></tr><tr><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-03\">3</div><<EVT_81>><<EVT_82>><<EVT_83>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-04\">4</div><<EVT_25>><<EVT_26>><<EVT_84>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-05\">5</div><<EVT_27>><<EVT_28>><<EVT_85>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-06\">6</div><<EVT_29>><<EVT_30>><<EVT_31>><<EVT_32>><<EVT_86>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-07\">7</div><<EVT_33>><<EVT_34>><<EVT_78>><<EVT_87>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-08\">8</div><<EVT_35>><<EVT_36>><<EVT_37>><<EVT_38>><<EVT_42>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-09\">9</div><<EVT_39>><<EVT_40>></td></tr><tr><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-10\">10</div><<EVT_41>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-11\">11</div><<EVT_43>><<EVT_44>><<EVT_45>><<EVT_88>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-12\">12</div><<EVT_46>><<EVT_47>><<EVT_48>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-13\">13</div><<EVT_49>><<EVT_50>><<EVT_51>><<EVT_79>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-14\">14</div><<EVT_52>><<EVT_53>><<EVT_89>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-15\">15</div><<EVT_54>><<EVT_55>><<EVT_56>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-16\">16</div><<EVT_57>><<EVT_58>><<EVT_59>><<EVT_60>></td></tr><tr><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-17\">17</div></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-18\">18</div><<EVT_90>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-19\">19</div></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-20\">20</div><<EVT_91>><<EVT_92>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-21\">21</div></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-22\">22</div><<EVT_93>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-23\">23</div><<EVT_94>></td></tr><tr><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-24\">24</div></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-25\">25</div><<EVT_95>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-26\">26</div><<EVT_99>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-27\">27</div><<EVT_96>><<EVT_97>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-28\">28</div><<EVT_98>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-29\">29</div></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-30\">30</div></td></tr></tbody></table><div class=\"cal-legend\"><span><i style=\"background:#c792ea\"></i>新角色</span><span><i style=\"background:#4da3ff\"></i>新版本</span><span><i style=\"background:#ff5c39\"></i>联动</span><span><i style=\"background:#3fd68f\"></i>活动</span><span><i style=\"background:#ffb020\"></i>维护</span><span><i style=\"background:#ffd24d\"></i>前瞻</span><span><i style=\"background:none;border:1px dashed var(--sub)\"></i>前瞻情报（未官宣）</span></div></div></section>\n\n<footer>游戏内容雷达 · 模块化站点 · 日历\"今天\"由JS动态高亮，无需手动更新</footer></div>\n<script>(function(){var d=new Date();var k=(\"0\"+(d.getMonth()+1)).slice(-2)+\"-\"+(\"0\"+d.getDate()).slice(-2);var c=document.querySelector('.cal-cell .cd[data-d=\"'+k+'\"]');if(c)c.closest(\".cal-cell\").classList.add(\"today\");})();</script>\n</body></html>",
+ "scaffold": "<!doctype html>\n<html lang=\"zh-CN\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>GamePulse · 版本日历 2026-08-27</title><link rel=\"icon\" type=\"image/png\" href=\"favicon.png\"><link rel=\"stylesheet\" href=\"style.css\"></head><body>\n<header><div class=\"hbar\"><div class=\"logo\">&#127918; 游戏内容<em>雷达</em></div><span class=\"chip\">&#128197; 日历·前瞻哨</span><span class=\"chip fresh\">2026-08-27</span><nav><a href=\"%E6%B8%B8%E6%88%8F%E6%97%A5%E6%8A%A5%E4%B8%BB%E7%AB%99.html\" target=\"_top\">&#8962; 主视图</a><a href=\"daily.html\">日报</a><a href=\"calendar.html\">日历·前瞻</a><a href=\"wordcloud.html\">词云</a></nav></div></header>\n<div class=\"wrap\">\n<div class=\"hero\"><h1>版本日历 · 前瞻哨</h1><p>未来 5 周关键节点（07-27 ~ 08-30）：新角色 / 新版本 / 联动 / 活动 / 维护 / 前瞻。虚线边框 = 前瞻情报（未官宣，需跟踪）。前瞻哨每日自动扫描更新（覆盖 07-27 ~ 08-30）。</p></div>\n<section id=\"cal\">\n<style>\n/* ===== 日历视觉优化 v2 ===== */\n.cal-grid{border-collapse:collapse;width:100%;table-layout:fixed}\n.cal-grid th{font-size:11px;color:var(--sub);font-weight:700;padding:8px 4px;border-bottom:2px solid var(--border);text-transform:uppercase;letter-spacing:.06em}\n.cal-grid td{border:1px solid var(--border);vertical-align:top;min-height:90px;padding:6px 7px;font-size:11.5px;background:var(--panel)}\n.cal-cell .cd{font-weight:800;color:var(--accent);font-size:12px;margin-bottom:4px;display:inline-block;padding:1px 6px;border-radius:4px;background:rgba(255,92,57,.1)}\n.cal-cell.today{background:rgba(255,92,57,.08);box-shadow:inset 0 0 0 2px var(--accent)}\n.cal-cell.today .cd{background:var(--accent);color:#fff}\n.cal-ev{display:block;margin-bottom:3px;padding:4px 7px;border-radius:7px;background:linear-gradient(135deg,var(--panel2),rgba(77,163,255,.04));\n  border-left:3px solid var(--blue);color:var(--txt);font-size:11px;line-height:1.45;\n  white-space:normal;overflow:hidden;text-overflow:ellipsis;transition:all .15s}\n.cal-ev:hover{text-decoration:none;color:#fff;background:linear-gradient(135deg,rgba(77,163,255,.15),var(--panel2));border-left-color:var(--gold);transform:translateX(2px)}\n.cal-ev b{color:var(--gold);font-weight:700}\n.cal-ev.guess{border-left-style:dashed;opacity:.78;background:repeating-linear-gradient(-45deg,var(--panel2),var(--panel2) 3px,rgba(255,176,32,.03) 3px,rgba(255,176,32,.03) 6px)}\n.cal-legend{margin-top:10px;font-size:11px;color:var(--sub)}\n.cal-legend span{display:inline-block;margin-right:12px}\n.cal-legend i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:4px;vertical-align:middle}\n\n@media(max-width:640px){\n  }\n</style>\n<div class=\"sec-title\"><span class=\"bar\"></span>持续运营游戏 · 版本更新日历 <small>今天（07-31）前后两周 · 仅玩家关键节点 · 手游+主机PC大作</small></div><div class=\"panel\"><p class=\"note\">覆盖：原神 / 星穹铁道 / 绝区零 / 鸣潮 / 三角洲行动 / 明日方舟 / 金铲铲之战 / 第五人格 / 恋与深空 / 蛋仔派对 / 永劫无间 / 无畏契约 / 终末地 / 王者荣耀 / 和平精英 / 阴阳师 / 暗区突围 / DNF手游 / LOL手游 / 火影忍者 / 三国志·战略版 / 萤火突击 / 晶核 / 暗黑不朽 / CS2 / DOTA2 + 全球主机PC大作。只保留：新版本 / 新角色 / 联动 / 前瞻 / 大型活动 / 电竞赛事。实线=官方已官宣，<b>虚线边=前瞻情报（待官方确认）</b>。</p><table class=\"cal-grid\"><thead><tr><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th><th>日</th></tr></thead><tbody><tr><td class=\"cal-cell\"><div class=\"cd\" data-d=\"07-27\">27</div><<EVT_11>><<EVT_12>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"07-28\">28</div><<EVT_13>><<EVT_14>><<EVT_15>><<EVT_16>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"07-29\">29</div><<EVT_17>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"07-30\">30</div><<EVT_18>><<EVT_19>><<EVT_20>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"07-31\">31</div><<EVT_76>><<EVT_77>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-01\">1</div><<EVT_21>><<EVT_22>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-02\">2</div><<EVT_23>><<EVT_24>></td></tr><tr><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-03\">3</div><<EVT_81>><<EVT_82>><<EVT_83>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-04\">4</div><<EVT_25>><<EVT_26>><<EVT_84>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-05\">5</div><<EVT_27>><<EVT_28>><<EVT_85>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-06\">6</div><<EVT_29>><<EVT_30>><<EVT_31>><<EVT_32>><<EVT_86>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-07\">7</div><<EVT_33>><<EVT_34>><<EVT_78>><<EVT_87>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-08\">8</div><<EVT_35>><<EVT_36>><<EVT_37>><<EVT_38>><<EVT_42>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-09\">9</div><<EVT_39>><<EVT_40>></td></tr><tr><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-10\">10</div><<EVT_41>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-11\">11</div><<EVT_43>><<EVT_44>><<EVT_45>><<EVT_88>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-12\">12</div><<EVT_46>><<EVT_47>><<EVT_48>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-13\">13</div><<EVT_49>><<EVT_50>><<EVT_51>><<EVT_79>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-14\">14</div><<EVT_52>><<EVT_53>><<EVT_89>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-15\">15</div><<EVT_54>><<EVT_55>><<EVT_56>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-16\">16</div><<EVT_57>><<EVT_58>><<EVT_59>><<EVT_60>></td></tr><tr><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-17\">17</div></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-18\">18</div><<EVT_90>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-19\">19</div></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-20\">20</div><<EVT_91>><<EVT_92>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-21\">21</div></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-22\">22</div><<EVT_93>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-23\">23</div><<EVT_94>></td></tr><tr><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-24\">24</div></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-25\">25</div><<EVT_95>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-26\">26</div><<EVT_99>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-27\">27</div><<EVT_96>><<EVT_97>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-28\">28</div><<EVT_98>></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-29\">29</div></td><td class=\"cal-cell\"><div class=\"cd\" data-d=\"08-30\">30</div></td></tr></tbody></table><div class=\"cal-legend\"><span><i style=\"background:#c792ea\"></i>新角色</span><span><i style=\"background:#4da3ff\"></i>新版本</span><span><i style=\"background:#ff5c39\"></i>联动</span><span><i style=\"background:#3fd68f\"></i>活动</span><span><i style=\"background:#ffb020\"></i>维护</span><span><i style=\"background:#ffd24d\"></i>前瞻</span><span><i style=\"background:none;border:1px dashed var(--sub)\"></i>前瞻情报（未官宣）</span></div></div></section>\n\n<footer>游戏内容雷达 · 模块化站点 · 日历\"今天\"由JS动态高亮，无需手动更新</footer></div>\n<script>(function(){var d=new Date();var k=(\"0\"+(d.getMonth()+1)).slice(-2)+\"-\"+(\"0\"+d.getDate()).slice(-2);var c=document.querySelector('.cal-cell .cd[data-d=\"'+k+'\"]');if(c)c.closest(\".cal-cell\").classList.add(\"today\");})();</script>\n</body></html>",
  "events": [
   {
    "id": "E000",
@@ -1534,47 +1534,57 @@
    "date_start": "2027-01-15",
    "date_end": "2027-01-15",
    "pubdate": "2026-08-26"
+  },
+  {
+   "id": "news_9e7ce6b832",
+   "kind": "cal",
+   "game": "沉星之序",
+   "title": "沉星之序：1.0正式发售登陆Steam/Switch2/PS5（Jonathan Blow/Thekla解谜新作）",
+   "source_url": "https://new.qq.com/rain/a/20260818A0DBJ600",
+   "source_name": "沉星之序 将于 2026-10-09：1.0正式发售登陆Steam/Switch2/PS5（Jonathan Blow/Thekla解谜新作）（腾讯网）",
+   "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://new.qq.com/rain/a/20260818A0DBJ600\" title=\"沉星之序\">1.0正式发售登陆Steam/Switch2/PS5（Jon</a>",
+   "date_start": "2026-10-09",
+   "date_end": "2026-10-09",
+   "pubdate": "2026-08-18"
+  },
+  {
+   "id": "news_53506f5651",
+   "kind": "cal",
+   "game": "霜港迷城",
+   "title": "霜港迷城：1.0正式版登陆Steam/Epic，脱离抢先体验（Cephalofair桌游数字版）",
+   "source_url": "https://www.gamersky.com/news/202607/2165038.shtml",
+   "source_name": "霜港迷城 将于 2026-10-16：1.0正式版登陆Steam/Epic，脱离抢先体验（Cephalofair桌游数字版）（游民星空）",
+   "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://www.gamersky.com/news/202607/2165038.shtml\" title=\"霜港迷城\">1.0正式版登陆Steam/Epic，脱离抢先体验（Ceph</a>",
+   "date_start": "2026-10-16",
+   "date_end": "2026-10-16",
+   "pubdate": null
+  },
+  {
+   "id": "news_d15ae40792",
+   "kind": "cal",
+   "game": "王者荣耀2026周年庆暨KPL十周年",
+   "title": "王者荣耀2026周年庆暨KPL十周年：2026周年庆嘉年华与KPL十周年奇妙日落地深圳（10/24-25）",
+   "source_url": "https://www.163.com/dy/article/L4PB8DHQ051191D6.html",
+   "source_name": "王者荣耀2026周年庆暨KPL十周年 将于 2026-10-24：2026周年庆嘉年华与KPL十周年奇妙日落地深圳（10/24-25）（网易）",
+   "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://www.163.com/dy/article/L4PB8DHQ051191D6.html\" title=\"王者荣耀2026周年庆暨KPL十周年\">2026周年庆嘉年华与KPL十周年奇妙日落地深圳（10/24</a>",
+   "date_start": "2026-10-24",
+   "date_end": "2026-10-24",
+   "pubdate": "2026-08-20"
+  },
+  {
+   "id": "news_5436277522",
+   "kind": "cal",
+   "game": "王者荣耀S45赛季",
+   "title": "王者荣耀S45赛季：S45赛季开启，新英雄王维（中路法师）上线",
+   "source_url": "https://m.ali213.net/news/gl2608/1801715.html",
+   "source_name": "王者荣耀S45赛季 将于 2026-09-24：S45赛季开启，新英雄王维（中路法师）上线（游侠手游）",
+   "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://m.ali213.net/news/gl2608/1801715.html\" title=\"王者荣耀S45赛季\">S45赛季开启，新英雄王维（中路法师）上线</a>",
+   "date_start": "2026-09-24",
+   "date_end": "2026-09-24",
+   "pubdate": "2026-08-03"
   }
  ],
  "feed_events": [
-  {
-   "id": "F233",
-   "kind": "feed",
-   "game": "永劫无间",
-   "title": "8月18日《永劫无间》违规玩家封禁公告 [08-18]",
-   "source_url": "https://www.yjwujian.cn/news/update/20260821/33456_1311865.html",
-   "source_name": "永劫无间官方更新",
-   "src_id": "yjwujian",
-   "pubdate": "2026-08-21",
-   "first_seen": "2026-08-21",
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">永劫无间</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"8月18日《永劫无间》违规玩家封禁公告 [08-18]（来源：永劫无间官方更新）\" style=\"color:#4da3ff;text-decoration:none\">8月18日《永劫无间》违规玩家封禁公告 [08-18]</a></td><td>永劫无间官方更新</td></tr>"
-  },
-  {
-   "id": "F235",
-   "kind": "feed",
-   "game": "全行业",
-   "title": "国产虚幻5新作公测定档！PC买断制 内含武士小姐姐",
-   "source_url": "https://www.gamersky.com/news/202608/2193803.shtml",
-   "source_name": "游民星空新闻",
-   "src_id": "gamersky",
-   "pubdate": "2026-08-21",
-   "first_seen": "2026-08-21",
-   "date_unverified": false,
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"国产虚幻5新作公测定档！PC买断制 内含武士小姐姐（来源：游民星空新闻）\" style=\"color:#4da3ff;text-decoration:none\">国产虚幻5新作公测定档！PC买断制 内含武士小姐姐</a></td><td>游民星空新闻</td></tr>"
-  },
-  {
-   "id": "F236",
-   "kind": "feed",
-   "game": "全行业",
-   "title": "网易游戏业务半年净收入507亿元，《归唐》《无限大》正常推进",
-   "source_url": "https://www.baijing.cn/article/56432",
-   "source_name": "白鲸出海",
-   "src_id": "baijing",
-   "pubdate": "2026-08-21",
-   "first_seen": "2026-08-21",
-   "date_unverified": false,
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"网易游戏业务半年净收入507亿元，《归唐》《无限大》正常推进（来源：白鲸出海）\" style=\"color:#4da3ff;text-decoration:none\">网易游戏业务半年净收入507亿元，《归唐》《无限大》正常推进</a></td><td>白鲸出海</td></tr>"
-  },
   {
    "id": "F299",
    "kind": "feed",
@@ -1602,19 +1612,6 @@
    "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"首日免费榜第一，快手《诡秘之主》到了不能输的一天！（来源：GameLook）\" style=\"color:#4da3ff;text-decoration:none\">首日免费榜第一，快手《诡秘之主》到了不能输的一天！</a></td><td>GameLook</td></tr>"
   },
   {
-   "id": "F302",
-   "kind": "feed",
-   "game": "全行业",
-   "title": "祖龙半年报营收6.09亿元，一款动作射击游戏计划后年上线",
-   "source_url": "https://www.baijing.cn/article/56441",
-   "source_name": "白鲸出海",
-   "src_id": "baijing",
-   "pubdate": "2026-08-22",
-   "first_seen": "2026-08-24",
-   "date_unverified": false,
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"祖龙半年报营收6.09亿元，一款动作射击游戏计划后年上线（来源：白鲸出海）\" style=\"color:#4da3ff;text-decoration:none\">祖龙半年报营收6.09亿元，一款动作射击游戏计划后年上线</a></td><td>白鲸出海</td></tr>"
-  },
-  {
    "id": "F304",
    "kind": "feed",
    "game": "全行业",
@@ -1628,19 +1625,6 @@
    "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"《Lanterns》第一季第2集评测与回顾（来源：17173 网游资讯）\" style=\"color:#4da3ff;text-decoration:none\">《Lanterns》第一季第2集评测与回顾</a></td><td>17173 网游资讯</td></tr>"
   },
   {
-   "id": "F306",
-   "kind": "feed",
-   "game": "全行业",
-   "title": "Feature: I Searched for Merch from My Fave PS5 Games in Chengdu's Enormous Anime Mall",
-   "source_url": "https://www.pushsquare.com/features/i-searched-for-merch-from-my-fave-ps5-games-in-chengdus-enormous-anime-mall",
-   "source_name": "Push Square",
-   "src_id": "pushsquare",
-   "pubdate": "2026-08-23",
-   "first_seen": "2026-08-24",
-   "date_unverified": false,
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"Feature: I Searched for Merch from My Fave PS5 G…（来源：Push Square）\" style=\"color:#4da3ff;text-decoration:none\">Feature: I Searched for Merch from My Fave PS5 G…</a></td><td>Push Square</td></tr>"
-  },
-  {
    "id": "F319",
    "kind": "feed",
    "game": "全行业",
@@ -1652,19 +1636,6 @@
    "first_seen": "2026-08-25",
    "date_unverified": false,
    "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"《巫师4》官宣定档2028！系列新DLC即将亮相科隆（来源：游民星空 PC 资讯）\" style=\"color:#4da3ff;text-decoration:none\">《巫师4》官宣定档2028！系列新DLC即将亮相科隆</a></td><td>游民星空 PC 资讯</td></tr>"
-  },
-  {
-   "id": "F320",
-   "kind": "feed",
-   "game": "全行业",
-   "title": "网易吃打撤首测，2款米哈游新游或将测试，2026游戏业裁员过万 | 陀螺周报",
-   "source_url": "https://www.youxituoluo.com/534822.html",
-   "source_name": "游戏陀螺",
-   "src_id": "youxituoluo",
-   "pubdate": "2026-08-24",
-   "first_seen": "2026-08-25",
-   "date_unverified": false,
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"网易吃打撤首测，2款米哈游新游或将测试，2026游戏业裁员过万 | 陀螺周报（来源：游戏陀螺）\" style=\"color:#4da3ff;text-decoration:none\">网易吃打撤首测，2款米哈游新游或将测试，2026游戏业裁员过万 | 陀螺周报</a></td><td>游戏陀螺</td></tr>"
   },
   {
    "id": "F322",
@@ -2055,6 +2026,84 @@
    "first_seen": "2026-08-26",
    "date_unverified": false,
    "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"CD Projekt Red sweeten the Witcher 3 Songs of th…（来源：Rock Paper Shotgun）\" style=\"color:#4da3ff;text-decoration:none\">CD Projekt Red sweeten the Witcher 3 Songs of th…</a></td><td>Rock Paper Shotgun</td></tr>"
+  },
+  {
+   "id": "F390",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "网易《无限大》定档1月15日，首曝“重霄”都市地图融合杭州与上海地标",
+   "source_url": "https://www.youxituoluo.com/534826.html",
+   "source_name": "游戏陀螺",
+   "src_id": "youxituoluo",
+   "pubdate": "2026-08-26",
+   "first_seen": "2026-08-27",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"网易《无限大》定档1月15日，首曝“重霄”都市地图融合杭州与上海地标（来源：游戏陀螺）\" style=\"color:#4da3ff;text-decoration:none\">网易《无限大》定档1月15日，首曝“重霄”都市地图融合杭州与上海地标</a></td><td>游戏陀螺</td></tr>"
+  },
+  {
+   "id": "F391",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "深圳“翻译神器”上线TikTok美区60天，已卖400万",
+   "source_url": "https://www.baijing.cn/article/56490",
+   "source_name": "白鲸出海",
+   "src_id": "baijing",
+   "pubdate": "2026-08-27",
+   "first_seen": "2026-08-27",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"深圳“翻译神器”上线TikTok美区60天，已卖400万（来源：白鲸出海）\" style=\"color:#4da3ff;text-decoration:none\">深圳“翻译神器”上线TikTok美区60天，已卖400万</a></td><td>白鲸出海</td></tr>"
+  },
+  {
+   "id": "F393",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "《昭和米国物语》首开试玩 科隆现场曝光 超多人抢玩",
+   "source_url": "https://www.gamersky.com/news/202608/2197018.shtml",
+   "source_name": "游民星空新闻",
+   "src_id": "gamersky",
+   "pubdate": "2026-08-27",
+   "first_seen": "2026-08-27",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"《昭和米国物语》首开试玩 科隆现场曝光 超多人抢玩（来源：游民星空新闻）\" style=\"color:#4da3ff;text-decoration:none\">《昭和米国物语》首开试玩 科隆现场曝光 超多人抢玩</a></td><td>游民星空新闻</td></tr>"
+  },
+  {
+   "id": "F394",
+   "kind": "feed",
+   "game": "暗区突围",
+   "title": "《暗区突围：无限》违规行为处罚公告（0810-0823）",
+   "source_url": "https://store.steampowered.com/news/app/2073620/view/672878557433692283",
+   "source_name": "暗区突围 Steam 官方新闻",
+   "src_id": "aqtw_steam",
+   "pubdate": "2026-08-26",
+   "first_seen": "2026-08-27",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">暗区突围</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"《暗区突围：无限》违规行为处罚公告（0810-0823）（来源：暗区突围 Steam 官方新闻）\" style=\"color:#4da3ff;text-decoration:none\">《暗区突围：无限》违规行为处罚公告（0810-0823）</a></td><td>暗区突围 Steam 官方新闻</td></tr>"
+  },
+  {
+   "id": "F395",
+   "kind": "feed",
+   "game": "DOTA2",
+   "title": "2026年国际邀请赛总冠军",
+   "source_url": "https://store.steampowered.com/news/app/570/view/680759856779493378",
+   "source_name": "DOTA2 Steam 官方新闻",
+   "src_id": "dota2_steam",
+   "pubdate": "2026-08-27",
+   "first_seen": "2026-08-27",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">DOTA2</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"2026年国际邀请赛总冠军（来源：DOTA2 Steam 官方新闻）\" style=\"color:#4da3ff;text-decoration:none\">2026年国际邀请赛总冠军</a></td><td>DOTA2 Steam 官方新闻</td></tr>"
+  },
+  {
+   "id": "F396",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "7 PS5 Trailers Worth Watching from the Future Games Show at Gamescom 2026",
+   "source_url": "https://www.pushsquare.com/news/2026/08/7-ps5-trailers-worth-watching-from-the-future-games-show-at-gamescom-2026",
+   "source_name": "Push Square",
+   "src_id": "pushsquare",
+   "pubdate": "2026-08-26",
+   "first_seen": "2026-08-27",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"7 PS5 Trailers Worth Watching from the Future Ga…（来源：Push Square）\" style=\"color:#4da3ff;text-decoration:none\">7 PS5 Trailers Worth Watching from the Future Ga…</a></td><td>Push Square</td></tr>"
   }
  ]
 }

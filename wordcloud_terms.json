@@ -1,275 +1,34 @@
 {
- "date": "2026-08-26",
- "terms": [
-  {
-   "term": "科隆游戏展今日开幕",
-   "href": "https://www.ali213.net/news/html/2026-8/1033817.html",
-   "cat": "行业/数据",
-   "heat": 92,
-   "sources": [
-    "游侠网"
-   ],
-   "_pubdate": "2026-08-26"
-  },
-  {
-   "term": "巫师3旧时曲玩法首秀",
-   "href": "https://www.gamersky.com/news/202608/2196211.shtml",
-   "cat": "游戏/新品",
-   "heat": 90,
-   "sources": [
-    "游民星空"
-   ],
-   "_pubdate": "2026-08-26"
-  },
-  {
-   "term": "无限大定档1月15日全球上线",
-   "href": "https://www.bilibili.com/video/BV15EhG6qEAg",
-   "cat": "游戏/新品",
-   "heat": 88,
-   "sources": [
-    "B站热门"
-   ],
-   "_pubdate": "2026-08-26"
-  },
-  {
-   "term": "GTA6全球首次深度实机",
-   "href": "https://news.17173.com/content/08252026/174935813.shtml",
-   "cat": "游戏/新品",
-   "heat": 86,
-   "sources": [
-    "17173"
-   ],
-   "_pubdate": "2026-08-26"
-  },
-  {
-   "term": "科隆最佳手游提名国产包揽",
-   "href": "https://weibo.com/2660940103/5336093761471100",
-   "cat": "行业/数据",
-   "heat": 82,
-   "sources": [
-    "微博"
-   ],
-   "_pubdate": "2026-08-26"
-  },
-  {
-   "term": "中国厂商50家参展创纪录",
-   "href": "https://new.qq.com/rain/a/20260825A0DJQ700",
-   "cat": "行业/数据",
-   "heat": 80,
-   "sources": [
-    "腾讯新闻"
-   ],
-   "_pubdate": "2026-08-26"
-  },
-  {
-   "term": "巫师3重制版免费升级",
-   "href": "https://www.sohu.com/a/1067619485_628730",
-   "cat": "游戏/新品",
-   "heat": 78,
-   "sources": [
-    "搜狐"
-   ],
-   "_pubdate": "2026-08-26"
-  },
-  {
-   "term": "最终幻想7启示新预告",
-   "href": "https://www.163.com/dy/article/L55VS8FF0526K1KN.html",
-   "cat": "游戏/新品",
-   "heat": 76,
-   "sources": [
-    "网易"
-   ],
-   "_pubdate": "2026-08-26"
-  },
-  {
-   "term": "战争机器E-Day新预告",
-   "href": "https://weibo.com/1969176463/5335748560552655",
-   "cat": "游戏/新品",
-   "heat": 74,
-   "sources": [
-    "微博"
-   ],
-   "_pubdate": "2026-08-26"
-  },
-  {
-   "term": "地铁2039玩法首秀",
-   "href": "https://wap.gamersky.com/news/Content-2194643.html",
-   "cat": "游戏/新品",
-   "heat": 72,
-   "sources": [
-    "游民星空"
-   ],
-   "_pubdate": "2026-08-26"
-  },
-  {
-   "term": "动物朋克登陆科隆展",
-   "href": "https://www.bilibili.com/video/BV1jfhA6EEMw",
-   "cat": "游戏/新品",
-   "heat": 70,
-   "sources": [
-    "B站热门"
-   ],
-   "_pubdate": "2026-08-26"
-  },
-  {
-   "term": "米哈游660平独立展位",
-   "href": "https://weibo.com/7832756163/5335868072002527",
-   "cat": "行业/数据",
-   "heat": 68,
-   "sources": [
-    "微博"
-   ],
-   "_pubdate": "2026-08-26"
-  },
-  {
-   "term": "GTA6实机提前泄12分钟",
-   "href": "https://www.ggamen.com/a83609",
-   "cat": "事件/风险",
-   "heat": 66,
-   "sources": [
-    "GGAMen"
-   ],
-   "_pubdate": "2026-08-26"
-  },
-  {
-   "term": "巫师4计划2028发售",
-   "href": "https://www.163.com/dy/article/L5679QGJ05118EDB.html",
-   "cat": "游戏/新品",
-   "heat": 64,
-   "sources": [
-    "网易"
-   ],
-   "_pubdate": "2026-08-26"
-  },
-  {
-   "term": "腾讯超千平领衔中国展",
-   "href": "https://k.sina.com.cn/article_7880068204_1d5b04c6c06801gg8a.html",
-   "cat": "行业/数据",
-   "heat": 62,
-   "sources": [
-    "新浪新闻"
-   ],
-   "_pubdate": "2026-08-26"
-  },
-  {
-   "term": "湮灭之潮海外线下试玩",
-   "href": "https://www.ali213.net/news/html/2026-8/1033817.html",
-   "cat": "游戏/新品",
-   "heat": 60,
-   "sources": [
-    "游侠网"
-   ],
-   "_pubdate": "2026-08-26"
-  },
-  {
-   "term": "黑神话钟馗15分钟实机",
-   "href": "https://www.bilibili.com/video/BV1kS8H6VERt",
-   "cat": "游戏/新品",
-   "heat": 74,
-   "sources": [
-    "B站每周必看"
-   ],
-   "_pubdate": "2026-08-26"
-  },
-  {
-   "term": "影之刃零State of Play回顾",
-   "href": "https://www.bilibili.com/video/BV1Zdbi6rER9",
-   "cat": "游戏/新品",
-   "heat": 70,
-   "sources": [
-    "B站每周必看"
-   ],
-   "_pubdate": "2026-08-26"
-  },
-  {
-   "term": "崩坏星穹铁道知更鸟PV",
-   "href": "https://www.bilibili.com/video/BV1oyhM6AETw",
-   "cat": "游戏/新品",
-   "heat": 60,
-   "sources": [
-    "B站热门"
-   ],
-   "_pubdate": "2026-08-26"
-  },
-  {
-   "term": "诡秘之主全平台公测",
-   "href": "https://www.bilibili.com/video/BV1uJ8w6AEm3",
-   "cat": "游戏/新品",
-   "heat": 56,
-   "sources": [
-    "B站每周必看"
-   ],
-   "_pubdate": "2026-08-26"
-  },
-  {
-   "term": "源初之结首曝PV",
-   "href": "https://www.bilibili.com/video/BV1erhL6EE6k",
-   "cat": "游戏/新品",
-   "heat": 54,
-   "sources": [
-    "B站热门"
-   ],
-   "_pubdate": "2026-08-26"
-  },
-  {
-   "term": "游戏白买索尼群发邮件补刀",
-   "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28360360",
-   "cat": "事件/风险",
-   "heat": 54,
-   "sources": [
-    "百度贴吧热议"
-   ],
-   "_pubdate": "2026-08-26"
-  },
-  {
-   "term": "贱谍过家家（8）",
-   "href": "https://www.bilibili.com/video/BV1gLhK6LEcb",
-   "cat": "梗/社区",
-   "heat": 50,
-   "sources": [
-    "B站热门"
-   ],
-   "_pubdate": "2026-08-26"
-  },
-  {
-   "term": "昭和米国物语科隆实机",
-   "href": "https://www.ali213.net/news/html/2026-8/1033817.html",
-   "cat": "游戏/新品",
-   "heat": 58,
-   "sources": [
-    "游侠网"
-   ],
-   "_pubdate": "2026-08-26"
-  },
-  {
-   "term": "权力的游戏维斯特洛之战",
-   "href": "https://www.163.com/dy/article/L55VS8FF0526K1KN.html",
-   "cat": "游戏/新品",
-   "heat": 64,
-   "sources": [
-    "网易"
-   ],
-   "_pubdate": "2026-08-26"
-  },
-  {
-   "term": "神鬼寓言科隆亮相",
-   "href": "https://wap.gamersky.com/news/Content-2194643.html",
-   "cat": "游戏/新品",
-   "heat": 60,
-   "sources": [
-    "游民星空"
-   ],
-   "_pubdate": "2026-08-26"
-  },
-  {
-   "term": "科隆独立游戏专区创新高",
-   "href": "https://weibo.com/7832756163/5335868072002527",
-   "cat": "行业/数据",
-   "heat": 56,
-   "sources": [
-    "微博"
-   ],
-   "_pubdate": "2026-08-26"
-  }
- ]
+  "date": "2026-08-27",
+  "terms": [
+    { "term": "黑神话钟馗 15分钟实机", "href": "https://www.gamersky.com/news/202608/2193402.shtml", "cat": "游戏/新品", "heat": 95, "sources": ["游民星空"] },
+    { "term": "无限大 定档1月15日", "href": "https://www.bilibili.com/video/BV15EhG6qEAg", "cat": "游戏/新品", "heat": 86, "sources": ["哔哩哔哩"] },
+    { "term": "巫师4 目标2028发售", "href": "https://new.qq.com/rain/a/20260825A0753R00", "cat": "行业/数据", "heat": 90, "sources": ["腾讯网"] },
+    { "term": "伊莫 全球上线定档", "href": "https://www.bilibili.com/video/BV1wwhG6JEnc", "cat": "游戏/新品", "heat": 88, "sources": ["哔哩哔哩"] },
+    { "term": "动物朋克 科隆实机", "href": "https://www.bilibili.com/video/BV1jfhA6EEMw", "cat": "游戏/新品", "heat": 82, "sources": ["哔哩哔哩"] },
+    { "term": "王者荣耀S45赛季 9/24", "href": "https://m.ali213.net/news/gl2608/1801715.html", "cat": "游戏/新品", "heat": 80, "sources": ["游侠手游"] },
+    { "term": "湮灭之潮 旧日之纱", "href": "https://www.bilibili.com/video/BV1418q6wERg", "cat": "游戏/新品", "heat": 80, "sources": ["哔哩哔哩"] },
+    { "term": "王者周年庆 KPL十周年", "href": "https://www.163.com/dy/article/L4PB8DHQ051191D6.html", "cat": "事件/风险", "heat": 78, "sources": ["网易"] },
+    { "term": "异克斯小队 首曝PV", "href": "https://www.bilibili.com/video/BV1SuhV6aE77", "cat": "游戏/新品", "heat": 78, "sources": ["哔哩哔哩"] },
+    { "term": "昭和米国物语 科隆试玩", "href": "https://www.bilibili.com/video/BV1V18X67ExN", "cat": "游戏/新品", "heat": 76, "sources": ["哔哩哔哩"] },
+    { "term": "霜港迷城 1.0定档10/16", "href": "https://www.gamersky.com/news/202607/2165038.shtml", "cat": "游戏/新品", "heat": 75, "sources": ["游民星空"] },
+    { "term": "源初之结 首曝PV", "href": "https://www.bilibili.com/video/BV1erhL6EE6k", "cat": "游戏/新品", "heat": 72, "sources": ["哔哩哔哩"] },
+    { "term": "沉星之序 10/09发售", "href": "https://new.qq.com/rain/a/20260818A0DBJ600", "cat": "游戏/新品", "heat": 73, "sources": ["腾讯网"] },
+    { "term": "星际外卖员 梗", "href": "https://www.bilibili.com/video/BV1uth56uEz3", "cat": "梗/社区", "heat": 68, "sources": ["哔哩哔哩"] },
+    { "term": "英澈网络破产 游戏关停", "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28360677", "cat": "行业/数据", "heat": 68, "sources": ["百度贴吧"] },
+    { "term": "空城计 梗外之音", "href": "https://www.bilibili.com/video/BV1pp8E6NES6", "cat": "梗/社区", "heat": 66, "sources": ["哔哩哔哩"] },
+    { "term": "燕云十六声 水墨战令", "href": "https://www.yysls.cn/news/official/20260807/37780_1310523.html", "cat": "游戏/新品", "heat": 64, "sources": ["燕云十六声官网"] },
+    { "term": "巫师3 制裁大鹅 梗", "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28360597", "cat": "梗/社区", "heat": 60, "sources": ["百度贴吧"] },
+    { "term": "央视点名 妈见打手办", "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28360598", "cat": "事件/风险", "heat": 62, "sources": ["百度贴吧"] },
+    { "term": "正太扭腰流安琪拉", "href": "https://www.bilibili.com/video/BV19E8S6MEWJ", "cat": "梗/社区", "heat": 58, "sources": ["哔哩哔哩"] },
+    { "term": "国补是什么梗 KPL", "href": "https://www.bilibili.com/video/BV1UX886VEd5", "cat": "梗/社区", "heat": 56, "sources": ["哔哩哔哩"] },
+    { "term": "少司缘削弱回退", "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28360511", "cat": "游戏/新品", "heat": 56, "sources": ["百度贴吧"] },
+    { "term": "醉安恐成背锅位", "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28360693", "cat": "梗/社区", "heat": 55, "sources": ["百度贴吧"] },
+    { "term": "国服孙策是什么梗", "href": "https://www.bilibili.com/video/BV1Lj866UESo", "cat": "梗/社区", "heat": 54, "sources": ["哔哩哔哩"] },
+    { "term": "大必有时代 皇室梗", "href": "https://www.bilibili.com/video/BV1t4hg6WEqw", "cat": "梗/社区", "heat": 52, "sources": ["哔哩哔哩"] },
+    { "term": "肥嘟嘟的是什么梗", "href": "https://www.bilibili.com/video/BV1zy8m6kEGZ", "cat": "梗/社区", "heat": 50, "sources": ["哔哩哔哩"] },
+    { "term": "剑来改诗遭群嘲", "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28360661", "cat": "梗/社区", "heat": 50, "sources": ["百度贴吧"] },
+    { "term": "喵喵的结合 猫名梗", "href": "https://www.bilibili.com/video/BV1Wcb163EXB", "cat": "梗/社区", "heat": 48, "sources": ["哔哩哔哩"] },
+    { "term": "PVZ x MC 同人动画", "href": "https://www.bilibili.com/video/BV1258X6BEoS", "cat": "梗/社区", "heat": 46, "sources": ["哔哩哔哩"] }
+  ]
 }

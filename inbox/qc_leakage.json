@@ -1,51 +1,52 @@
 {
- "generated_at": "2026-08-26T10:53:17",
- "adopt_total": 75,
- "review_total": 48,
+ "generated_at": "2026-08-27T10:47:43",
+ "adopt_total": 77,
+ "review_total": 49,
  "leak_total": 5,
  "leaks": [
   {
-   "title": "雨果奖得主推荐的《浑天星途》：一个东方科幻 IP 想讲怎样的未来故事？",
-   "url": "https://www.youxituoluo.com/534821.html",
+   "title": "科隆开幕夜上最有班味的射击新游，给PvE赛道带来了新的“卷法” 08.26",
+   "url": "https://www.chuapp.com/article/291593.html",
    "game": "全行业",
-   "src_name": "游戏陀螺",
+   "src_name": "触乐网",
+   "verdict": "review",
+   "pubdate": null,
+   "date_unverified": false,
+   "n_src_cluster": 22,
+   "signal": 3,
+   "reasons": [
+    "多源印证(22家)",
+    "准入待复核被卡"
+   ]
+  },
+  {
+   "title": "王琳茜12小时前0条评论 科隆开幕夜上最有班味的射击新游，给PvE赛道带来了新的“卷法” 这次我们去太空打卡上班！",
+   "url": "http://www.chuapp.com/article/291593.html",
+   "game": "全行业",
+   "src_name": "触乐网·分类新闻",
+   "verdict": "review",
+   "pubdate": null,
+   "date_unverified": false,
+   "n_src_cluster": 22,
+   "signal": 3,
+   "reasons": [
+    "多源印证(22家)",
+    "准入待复核被卡"
+   ]
+  },
+  {
+   "title": "林翔18小时前0条评论 玩家坚守20年，这款最佳策略游戏官宣回归 经典重制是情怀，也是新的起点。",
+   "url": "http://www.chuapp.com/article/291590.html",
+   "game": "全行业",
+   "src_name": "触乐网·分类新闻",
    "verdict": "adopt",
-   "pubdate": "2026-08-24",
-   "date_unverified": false,
-   "n_src_cluster": 2,
-   "signal": 2,
-   "reasons": [
-    "多源印证(2家)"
-   ]
-  },
-  {
-   "title": "陈威远16小时前0条评论 触乐怪话：采访了一位AI 我将用最直白最不绕弯子的话回答你。",
-   "url": "http://www.chuapp.com/article/291584.html",
-   "game": "全行业",
-   "src_name": "触乐网·分类新闻",
-   "verdict": "review",
    "pubdate": null,
    "date_unverified": false,
-   "n_src_cluster": 20,
-   "signal": 3,
+   "n_src_cluster": 22,
+   "signal": 5,
    "reasons": [
-    "多源印证(20家)",
-    "准入待复核被卡"
-   ]
-  },
-  {
-   "title": "陈威远16小时前0条评论 刚满一周岁的手瓦，追它的人排满了一整个街区 手瓦这次线下活动起到的作用，比我想象中更重要。",
-   "url": "http://www.chuapp.com/article/291586.html",
-   "game": "全行业",
-   "src_name": "触乐网·分类新闻",
-   "verdict": "review",
-   "pubdate": null,
-   "date_unverified": false,
-   "n_src_cluster": 20,
-   "signal": 3,
-   "reasons": [
-    "多源印证(20家)",
-    "准入待复核被卡"
+    "多源印证(22家)",
+    "强事件词"
    ]
   },
   {

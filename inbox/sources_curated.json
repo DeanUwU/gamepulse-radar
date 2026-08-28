@@ -1,18 +1,15 @@
 {
- "generated_at": "2026-08-28T12:29:15",
+ "generated_at": "2026-08-28T13:45:28",
  "summary": {
   "total": 162,
-  "adopt": 71,
-  "review": 57,
+  "adopt": 70,
+  "review": 58,
   "reject": 34,
   "stale_rejected": 30,
   "dated": 127,
-  "new_reject": 2
+  "new_reject": 0
  },
- "new_rejects": [
-  "https://blog.ja.playstation.com/2026/08/27/20260827-akibalost-title-announcement-o/",
-  "https://blog.ja.playstation.com/2026/08/27/20260827-psplus-freeplay-o/"
- ],
+ "new_rejects": [],
  "items": [
   {
    "game": "三国志·战略版",
@@ -445,8 +442,8 @@
   },
   {
    "game": "全行业",
-   "title": "影之刃零全新联名官宣！4299元 灵感甄子丹武器",
-   "url": "https://www.gamersky.com/news/202608/2197999.shtml",
+   "title": "GTA6里要回对象消息！不然杰森露西娅是\"纯友谊\"",
+   "url": "https://www.gamersky.com/news/202608/2197945.shtml",
    "status": 200,
    "src_id": "gamersky",
    "src_name": "游民星空新闻",
@@ -460,16 +457,18 @@
   },
   {
    "game": "全行业",
-   "title": "心之眼官宣游戏强势回归 玩家数上涨！实际在线18人",
-   "url": "https://www.gamersky.com/news/202608/2197964.shtml",
+   "title": "豆瓣imdb双第1!影史神作内地首映:4K+IMAX全球首秀",
+   "url": "https://www.gamersky.com/news/202608/2198004.shtml",
    "status": 200,
    "src_id": "gamersky",
    "src_name": "游民星空新闻",
    "pubdate": "2026-08-28",
    "age_days": 0,
    "date_src": "text",
-   "verdict": "adopt",
-   "reasons": []
+   "verdict": "review",
+   "reasons": [
+    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
+   ]
   },
   {
    "game": "全行业",
@@ -1389,7 +1388,7 @@
   },
   {
    "game": "全行业",
-   "title": "陈可安14小时前0条评论 触乐怪话：用苹果电脑打游戏 谁会用苹果电脑打游戏啊？",
+   "title": "陈可安15小时前0条评论 触乐怪话：用苹果电脑打游戏 谁会用苹果电脑打游戏啊？",
    "url": "http://www.chuapp.com/article/291591.html",
    "status": 200,
    "src_id": "chuapp_category",
@@ -1402,7 +1401,7 @@
   },
   {
    "game": "全行业",
-   "title": "周煜博14小时前0条评论 令无数玩家“上头”的《王者万象棋》终于定档 “一刷、二养、三炸场”",
+   "title": "周煜博15小时前0条评论 令无数玩家“上头”的《王者万象棋》终于定档 “一刷、二养、三炸场”",
    "url": "http://www.chuapp.com/article/291594.html",
    "status": 200,
    "src_id": "chuapp_category",

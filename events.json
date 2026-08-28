@@ -5,7 +5,7 @@
   "event_count": 100,
   "note": "scaffold 中的 <<EVT_i>> 由 gen_calendar.py 用 events[i].anchor 替换 __SRC__ 回填。",
   "feed_count": 40,
-  "feed_seq": 423,
+  "feed_seq": 430,
   "last_update": "2026-08-28",
   "date_migrated": "2026-08-18"
  },
@@ -1660,32 +1660,6 @@
    "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"对标网易！腾讯生活模拟游戏《粒粒的小人国》测试招募开启（来源：17173 网游资讯）\" style=\"color:#4da3ff;text-decoration:none\">对标网易！腾讯生活模拟游戏《粒粒的小人国》测试招募开启</a></td><td>17173 网游资讯</td></tr>"
   },
   {
-   "id": "F323",
-   "kind": "feed",
-   "game": "CS2",
-   "title": "《反恐精英》更新",
-   "source_url": "https://store.steampowered.com/news/app/730/view/717913919982667304",
-   "source_name": "CS2 Steam 官方新闻",
-   "src_id": "cs2_steam",
-   "pubdate": "2026-08-24",
-   "first_seen": "2026-08-25",
-   "date_unverified": false,
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">CS2</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"《反恐精英》更新（来源：CS2 Steam 官方新闻）\" style=\"color:#4da3ff;text-decoration:none\">《反恐精英》更新</a></td><td>CS2 Steam 官方新闻</td></tr>"
-  },
-  {
-   "id": "F326",
-   "kind": "feed",
-   "game": "三角洲行动",
-   "title": "新干员档案：罗温·沃尔什——代号旅人",
-   "source_url": "https://store.steampowered.com/news/app/2507950/view/690892322235221924",
-   "source_name": "三角洲行动 Steam 官方新闻",
-   "src_id": "df_steam",
-   "pubdate": "2026-08-24",
-   "first_seen": "2026-08-25",
-   "date_unverified": false,
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">三角洲行动</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"新干员档案：罗温·沃尔什——代号旅人（来源：三角洲行动 Steam 官方新闻）\" style=\"color:#4da3ff;text-decoration:none\">新干员档案：罗温·沃尔什——代号旅人</a></td><td>三角洲行动 Steam 官方新闻</td></tr>"
-  },
-  {
    "id": "F329",
    "kind": "feed",
    "game": "全行业",
@@ -2152,6 +2126,32 @@
    "first_seen": "2026-08-28",
    "date_unverified": false,
    "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"Finji's Supernatural Action Game Usual June Gets…（来源：Game Informer）\" style=\"color:#4da3ff;text-decoration:none\">Finji's Supernatural Action Game Usual June Gets…</a></td><td>Game Informer</td></tr>"
+  },
+  {
+   "id": "F424",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "殖民模拟 × 4X 策略游戏《征服纪：臣民之心》正式发表",
+   "source_url": "https://www.gcores.com/articles/218873",
+   "source_name": "机核 GCORES",
+   "src_id": "gcores",
+   "pubdate": "2026-08-28",
+   "first_seen": "2026-08-28",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"殖民模拟 × 4X 策略游戏《征服纪：臣民之心》正式发表（来源：机核 GCORES）\" style=\"color:#4da3ff;text-decoration:none\">殖民模拟 × 4X 策略游戏《征服纪：臣民之心》正式发表</a></td><td>机核 GCORES</td></tr>"
+  },
+  {
+   "id": "F427",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "“游戏禅师”陈星汉要做发行？官宣TGC发行品牌，助力游戏创作者“梦想成真”！",
+   "source_url": "http://www.gamelook.com.cn/2026/08/600894/",
+   "source_name": "GameLook",
+   "src_id": "gamelook",
+   "pubdate": "2026-08-28",
+   "first_seen": "2026-08-28",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"“游戏禅师”陈星汉要做发行？官宣TGC发行品牌，助力游戏创作者“梦想成真”！（来源：GameLook）\" style=\"color:#4da3ff;text-decoration:none\">“游戏禅师”陈星汉要做发行？官宣TGC发行品牌，助力游戏创作者“梦想成真”！</a></td><td>GameLook</td></tr>"
   }
  ]
 }

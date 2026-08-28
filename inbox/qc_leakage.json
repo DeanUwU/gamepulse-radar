@@ -1,7 +1,7 @@
 {
- "generated_at": "2026-08-27T10:47:43",
- "adopt_total": 77,
- "review_total": 49,
+ "generated_at": "2026-08-28T12:29:17",
+ "adopt_total": 71,
+ "review_total": 57,
  "leak_total": 5,
  "leaks": [
   {
@@ -10,43 +10,42 @@
    "game": "全行业",
    "src_name": "触乐网",
    "verdict": "review",
-   "pubdate": null,
+   "pubdate": "2025-11-10",
    "date_unverified": false,
-   "n_src_cluster": 22,
+   "n_src_cluster": 23,
    "signal": 3,
    "reasons": [
-    "多源印证(22家)",
+    "多源印证(23家)",
     "准入待复核被卡"
    ]
   },
   {
-   "title": "王琳茜12小时前0条评论 科隆开幕夜上最有班味的射击新游，给PvE赛道带来了新的“卷法” 这次我们去太空打卡上班！",
+   "title": "陈可安14小时前0条评论 触乐怪话：用苹果电脑打游戏 谁会用苹果电脑打游戏啊？",
+   "url": "http://www.chuapp.com/article/291591.html",
+   "game": "全行业",
+   "src_name": "触乐网·分类新闻",
+   "verdict": "adopt",
+   "pubdate": null,
+   "date_unverified": false,
+   "n_src_cluster": 23,
+   "signal": 3,
+   "reasons": [
+    "多源印证(23家)"
+   ]
+  },
+  {
+   "title": "王琳茜08月26日0条评论 科隆开幕夜上最有班味的射击新游，给PvE赛道带来了新的“卷法” 这次我们去太空打卡上班！",
    "url": "http://www.chuapp.com/article/291593.html",
    "game": "全行业",
    "src_name": "触乐网·分类新闻",
    "verdict": "review",
    "pubdate": null,
    "date_unverified": false,
-   "n_src_cluster": 22,
+   "n_src_cluster": 23,
    "signal": 3,
    "reasons": [
-    "多源印证(22家)",
+    "多源印证(23家)",
     "准入待复核被卡"
-   ]
-  },
-  {
-   "title": "林翔18小时前0条评论 玩家坚守20年，这款最佳策略游戏官宣回归 经典重制是情怀，也是新的起点。",
-   "url": "http://www.chuapp.com/article/291590.html",
-   "game": "全行业",
-   "src_name": "触乐网·分类新闻",
-   "verdict": "adopt",
-   "pubdate": null,
-   "date_unverified": false,
-   "n_src_cluster": 22,
-   "signal": 5,
-   "reasons": [
-    "多源印证(22家)",
-    "强事件词"
    ]
   },
   {

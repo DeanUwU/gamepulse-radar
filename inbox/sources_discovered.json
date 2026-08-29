@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-08-21T17:18:13",
+ "generated_at": "2026-08-29T10:50:50",
  "summary": {
   "candidates": 75,
-  "suggest": 24,
-  "maybe": 41,
-  "dead": 10,
+  "suggest": 25,
+  "maybe": 42,
+  "dead": 8,
   "registered": 75
  },
  "items": [
@@ -319,34 +319,6 @@
   {
    "kind": "section",
    "game": "全行业",
-   "url": "https://tgmeng.com/news",
-   "from": "tgmeng",
-   "status": 200,
-   "type": "news_list",
-   "verdict": "suggest",
-   "reasons": [
-    "已登记源[tgmeng]的同域栏目页，可直接入库"
-   ],
-   "suggest_id": "tgmeng_news",
-   "toml": "[[sources]]\nid = \"tgmeng_news\"\ngame = \"全行业\"\nname = \"全行业·news_list\"\ntype = \"news_list\"\nurl = \"https://tgmeng.com/news\"\nenabled = true\nmax_items = 5\n"
-  },
-  {
-   "kind": "section",
-   "game": "全行业",
-   "url": "https://tgmeng.com/daily/news",
-   "from": "tgmeng",
-   "status": 200,
-   "type": "news_list",
-   "verdict": "suggest",
-   "reasons": [
-    "已登记源[tgmeng]的同域栏目页，可直接入库"
-   ],
-   "suggest_id": "tgmeng_daily",
-   "toml": "[[sources]]\nid = \"tgmeng_daily\"\ngame = \"全行业\"\nname = \"全行业·news_list\"\ntype = \"news_list\"\nurl = \"https://tgmeng.com/daily/news\"\nenabled = true\nmax_items = 5\n"
-  },
-  {
-   "kind": "section",
-   "game": "全行业",
    "url": "https://www.gamesradar.com/news/live/san-diego-comic-con-2026-live-coverage-news-everything-announced-sdcc/",
    "from": "gamesradar",
    "status": 200,
@@ -361,7 +333,7 @@
   {
    "kind": "section",
    "game": "全行业",
-   "url": "https://www.gamesradar.com/news/live/d23-2026-marvel-star-wars-live-coverage-everything-announced/",
+   "url": "https://www.gamesradar.com/news/live/gta-6-extended-look-showcase-live-coverage-2026-everything-announced/",
    "from": "gamesradar",
    "status": 200,
    "type": "news_list",
@@ -370,12 +342,40 @@
     "已登记源[gamesradar]的同域栏目页，可直接入库"
    ],
    "suggest_id": "gamesradar_news2",
-   "toml": "[[sources]]\nid = \"gamesradar_news2\"\ngame = \"全行业\"\nname = \"全行业·news_list\"\ntype = \"news_list\"\nurl = \"https://www.gamesradar.com/news/live/d23-2026-marvel-star-wars-live-coverage-everything-announced/\"\nenabled = true\nmax_items = 5\n"
+   "toml": "[[sources]]\nid = \"gamesradar_news2\"\ngame = \"全行业\"\nname = \"全行业·news_list\"\ntype = \"news_list\"\nurl = \"https://www.gamesradar.com/news/live/gta-6-extended-look-showcase-live-coverage-2026-everything-announced/\"\nenabled = true\nmax_items = 5\n"
   },
   {
    "kind": "section",
    "game": "全行业",
-   "url": "https://www.videogameschronicle.com/news/dave-bautista-will-now-officially-play-kratos-in-the-god-of-war-tv-series-replacing-the-injured-ryan-hurst/",
+   "url": "https://www.pcgamer.com/gaming-industry/live/news/gamescom-2026-live-hub-the-latest-news-and-previews-from-the-biggest-gaming-event-of-the-year/",
+   "from": "pcgamer",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "suggest",
+   "reasons": [
+    "已登记源[pcgamer]的同域栏目页，可直接入库"
+   ],
+   "suggest_id": "pcgamer_gaming",
+   "toml": "[[sources]]\nid = \"pcgamer_gaming\"\ngame = \"全行业\"\nname = \"全行业·news_list\"\ntype = \"news_list\"\nurl = \"https://www.pcgamer.com/gaming-industry/live/news/gamescom-2026-live-hub-the-latest-news-and-previews-from-the-biggest-gaming-event-of-the-year/\"\nenabled = true\nmax_items = 5\n"
+  },
+  {
+   "kind": "section",
+   "game": "全行业",
+   "url": "https://www.pcgamer.com/news/live/grand-theft-auto-6-reveal-live-coverage-breaking-down-the-netflix-extended-look-event/",
+   "from": "pcgamer",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "suggest",
+   "reasons": [
+    "已登记源[pcgamer]的同域栏目页，可直接入库"
+   ],
+   "suggest_id": "pcgamer_news",
+   "toml": "[[sources]]\nid = \"pcgamer_news\"\ngame = \"全行业\"\nname = \"全行业·news_list\"\ntype = \"news_list\"\nurl = \"https://www.pcgamer.com/news/live/grand-theft-auto-6-reveal-live-coverage-breaking-down-the-netflix-extended-look-event/\"\nenabled = true\nmax_items = 5\n"
+  },
+  {
+   "kind": "section",
+   "game": "全行业",
+   "url": "https://www.videogameschronicle.com/news/pokemon-is-coming-to-disney-as-the-misadventures-of-sirfetchd-pichu-debuts-on-disney/",
    "from": "vgc",
    "status": null,
    "type": "static",
@@ -389,7 +389,7 @@
   {
    "kind": "section",
    "game": "全行业",
-   "url": "https://www.videogameschronicle.com/news/riot-fighting-game-2xko-is-officially-ending-development/",
+   "url": "https://www.videogameschronicle.com/news/an-unofficial-pc-port-of-blue-dragon-a-jrpg-from-the-creators-of-final-fantasy-and-dragon-ball-is-now-available/",
    "from": "vgc",
    "status": null,
    "type": "static",
@@ -403,7 +403,21 @@
   {
    "kind": "section",
    "game": "全行业",
-   "url": "https://www.gamespot.com/articles/cyberpunk-2077-pc-playerbase-surges-after-edgerunners-update/1100-6507591/",
+   "url": "https://www.gamespot.com/articles/gta-6-returns-to-six-star-wanted-levels/",
+   "from": "gamespot",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "suggest",
+   "reasons": [
+    "已登记源[gamespot]的同域栏目页，可直接入库"
+   ],
+   "suggest_id": "gamespot_articles",
+   "toml": "[[sources]]\nid = \"gamespot_articles\"\ngame = \"全行业\"\nname = \"全行业·news_list\"\ntype = \"news_list\"\nurl = \"https://www.gamespot.com/articles/gta-6-returns-to-six-star-wanted-levels/\"\nenabled = true\nmax_items = 5\n"
+  },
+  {
+   "kind": "section",
+   "game": "全行业",
+   "url": "https://www.gamespot.com/articles/you-can-pet-and-scold-you-monster-the-dog-in-gta-6/",
    "from": "gamespot",
    "status": null,
    "type": "static",
@@ -417,21 +431,7 @@
   {
    "kind": "section",
    "game": "全行业",
-   "url": "https://www.gamespot.com/articles/why-are-video-game-consoles-so-expensive-these-days-and-games-historically-cheap/",
-   "from": "gamespot",
-   "status": null,
-   "type": "static",
-   "verdict": "dead",
-   "reasons": [
-    "探活失败(HTTP None)"
-   ],
-   "suggest_id": "",
-   "toml": ""
-  },
-  {
-   "kind": "section",
-   "game": "全行业",
-   "url": "https://www.pushsquare.com/news/2026/07/god-of-war-shows-kratos-to-be-recast-after-ryan-hurst-suffers-injury-during-filming",
+   "url": "https://www.pushsquare.com/news/2026/08/see-you-when-were-ready-dev-acknowledges-leaked-iron-man-ps5-trailer",
    "from": "pushsquare",
    "status": null,
    "type": "static",
@@ -445,8 +445,22 @@
   {
    "kind": "section",
    "game": "全行业",
-   "url": "https://www.pushsquare.com/news/2026/08/ex-wrestler-dave-bautista-officially-replaces-ryan-hurst-as-kratos-in-god-of-war-tv-show",
+   "url": "https://www.pushsquare.com/news/2026/08/tech-experts-call-gta-6-the-most-impressive-example-of-real-time-rendering-weve-ever-seen",
    "from": "pushsquare",
+   "status": null,
+   "type": "static",
+   "verdict": "dead",
+   "reasons": [
+    "探活失败(HTTP None)"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "section",
+   "game": "全行业",
+   "url": "https://www.rockpapershotgun.com/events/gamescom-2026",
+   "from": "rps",
    "status": null,
    "type": "static",
    "verdict": "dead",
@@ -851,8 +865,36 @@
   {
    "kind": "external",
    "game": "全行业",
-   "url": "https://status.tgmeng.com",
-   "from": "tgmeng",
+   "url": "https://www.ign.com/articles/resident-evil-welcome-to-raccoon-city-review",
+   "from": "ign",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://www.ign.com/articles/zach-creggers-new-resident-evil-trailer-includes-2-cool-details-fans-of-the-games-will-appreciate?_cache=pass",
+   "from": "ign",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://dazed.games/",
+   "from": "gamesradar",
    "status": 200,
    "type": "static",
    "verdict": "maybe",
@@ -865,35 +907,7 @@
   {
    "kind": "external",
    "game": "全行业",
-   "url": "https://www.ign.com/articles/cyberpunk-edgerunners-was-a-tearjerker-but-one-writer-says-it-almost-had-even-worse-endings?_cache=pass",
-   "from": "ign",
-   "status": 200,
-   "type": "news_list",
-   "verdict": "maybe",
-   "reasons": [
-    "跨域站点，归属游戏待人工确认"
-   ],
-   "suggest_id": "",
-   "toml": ""
-  },
-  {
-   "kind": "external",
-   "game": "全行业",
-   "url": "https://www.ign.com/articles/cyberpunk-edgerunners-2-sets-fall-2026-release-with-first-look-at-4-new-characters?_cache=pass",
-   "from": "ign",
-   "status": 200,
-   "type": "news_list",
-   "verdict": "maybe",
-   "reasons": [
-    "跨域站点，归属游戏待人工确认"
-   ],
-   "suggest_id": "",
-   "toml": ""
-  },
-  {
-   "kind": "external",
-   "game": "全行业",
-   "url": "https://www.ign.com/articles/hidetaka-miyazaki-interview-fromsoftware-duskbloods-dark-souls-future-nintendo",
+   "url": "https://thedirect.com/article/xmen-apocalypse-lana-condor-mcu-xmen-reboot-jubilee",
    "from": "gamesradar",
    "status": 200,
    "type": "news_list",
@@ -907,8 +921,8 @@
   {
    "kind": "external",
    "game": "全行业",
-   "url": "https://variety.com/2026/tv/news/dave-bautista-kratos-god-of-war-tv-series-amazon-1236839394/",
-   "from": "gamesradar",
+   "url": "https://www.bbc.com/news/articles/c17jlngexy9o",
+   "from": "eurogamer",
    "status": 200,
    "type": "news_list",
    "verdict": "maybe",
@@ -935,27 +949,13 @@
   {
    "kind": "external",
    "game": "全行业",
-   "url": "https://support.activision.com/articles/trusted-platform-module-and-secure-boot",
-   "from": "eurogamer",
-   "status": 200,
-   "type": "news_list",
-   "verdict": "maybe",
-   "reasons": [
-    "跨域站点，归属游戏待人工确认"
-   ],
-   "suggest_id": "",
-   "toml": ""
-  },
-  {
-   "kind": "external",
-   "game": "全行业",
-   "url": "http://battle.net",
+   "url": "https://nodusfall.hoyoverse.com/",
    "from": "pcgamer",
-   "status": null,
+   "status": 200,
    "type": "static",
-   "verdict": "dead",
+   "verdict": "maybe",
    "reasons": [
-    "探活失败(HTTP None)"
+    "跨域站点，归属游戏待人工确认"
    ],
    "suggest_id": "",
    "toml": ""
@@ -963,8 +963,22 @@
   {
    "kind": "external",
    "game": "全行业",
-   "url": "https://www.riotgames.com/en/news/2xko-active-development-ends-december-2026",
+   "url": "https://tmog.org/",
    "from": "pcgamer",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://www.ign.com/articles/fable-was-previously-aiming-for-an-october-launch-director-reveals-insisting-that-the-games-delay-wasnt-due-to-being-scared-of-other-big-games",
+   "from": "gamespot",
    "status": 200,
    "type": "news_list",
    "verdict": "maybe",
@@ -977,7 +991,21 @@
   {
    "kind": "external",
    "game": "全行业",
-   "url": "https://variety.com/2026/tv/news/god-of-war-dave-bautista-kratos-amazon-series-ryan-hurst-1236826600/",
+   "url": "https://www.starwars.com/news/smugglers-gambit-millennium-falcon-smugglers-run-fortnite",
+   "from": "gamespot",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://www.bbc.co.uk/news/articles/c17jlngexy9o",
    "from": "pushsquare",
    "status": 200,
    "type": "news_list",
@@ -991,50 +1019,8 @@
   {
    "kind": "external",
    "game": "全行业",
-   "url": "https://www.ampereanalysis.com/",
-   "from": "pushsquare",
-   "status": 200,
-   "type": "static",
-   "verdict": "maybe",
-   "reasons": [
-    "跨域站点，归属游戏待人工确认"
-   ],
-   "suggest_id": "",
-   "toml": ""
-  },
-  {
-   "kind": "external",
-   "game": "全行业",
-   "url": "https://www.ign.com/articles/cd-projekt-confirms-layoffs-on-the-witcher-multiplayer-spinoff-issues-statement",
+   "url": "https://www.timeextension.com/news/2022/09/the-man-behind-segas-blast-processing-gimmick-is-sorry-for-creating-that-ghastly-phrase",
    "from": "rps",
-   "status": 200,
-   "type": "news_list",
-   "verdict": "maybe",
-   "reasons": [
-    "跨域站点，归属游戏待人工确认"
-   ],
-   "suggest_id": "",
-   "toml": ""
-  },
-  {
-   "kind": "external",
-   "game": "全行业",
-   "url": "https://www.bbc.com/news/articles/cvgk9rqx5kjo",
-   "from": "rps",
-   "status": 200,
-   "type": "news_list",
-   "verdict": "maybe",
-   "reasons": [
-    "跨域站点，归属游戏待人工确认"
-   ],
-   "suggest_id": "",
-   "toml": ""
-  },
-  {
-   "kind": "external",
-   "game": "全行业",
-   "url": "https://www.bloomberg.com/news/articles/2026-08-19/playstation-reboots-horizon-hunters-gathering-as-live-service-strategy-struggles?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NzE0MjM0MSwiZXhwIjoxNzg3NzQ3MTQxLCJhcnRpY2xlSWQiOiJUSzBOVElSS1YyVjUwMCIsImJjb25uZWN0SWQiOiJCMUVBQkI5NjQ2QUM0REZFQTJBRkI4MjI1MzgyQTJFQSJ9.W2rmW_r4vHOvYW2YsXBRftk6tzRuk5-lCzHVi21wLDU",
-   "from": "gameinformer",
    "status": null,
    "type": "static",
    "verdict": "dead",
@@ -1047,13 +1033,27 @@
   {
    "kind": "external",
    "game": "全行业",
-   "url": "https://www.bloomberg.com/news/articles/2025-01-16/sony-cancels-two-more-playstation-projects",
+   "url": "https://press.cdprojektred.com/en/news/1839/the-witcher-3-wild-hunt-remastered-announced-songs-of-the-past-gets-first-look",
    "from": "gameinformer",
-   "status": null,
-   "type": "static",
-   "verdict": "dead",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "maybe",
    "reasons": [
-    "探活失败(HTTP None)"
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://stagetour.com/",
+   "from": "gameinformer",
+   "status": 200,
+   "type": "static",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
    ],
    "suggest_id": "",
    "toml": ""

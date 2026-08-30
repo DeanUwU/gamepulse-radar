@@ -1,34 +1,275 @@
 {
-  "date": "2026-08-29",
+  "date": "2026-08-30",
   "terms": [
-    { "term": "洛克王国世界 S4月涌狂想PV", "href": "https://www.bilibili.com/video/BV1notF6GE8F", "cat": "游戏/新品", "heat": 72, "sources": ["B站"] },
-    { "term": "GTA6 加长实机公开", "href": "https://www.bilibili.com/video/BV1vm4f6bETN", "cat": "游戏/新品", "heat": 95, "sources": ["B站"] },
-    { "term": "伊莫 全球定档9/16", "href": "https://www.bilibili.com/video/BV1wwhG6JEnc", "cat": "游戏/新品", "heat": 88, "sources": ["B站"] },
-    { "term": "动物朋克 科隆实机", "href": "https://www.bilibili.com/video/BV1jfhA6EEMw", "cat": "游戏/新品", "heat": 64, "sources": ["B站"] },
-    { "term": "源初之结 首曝PV", "href": "https://www.bilibili.com/video/BV1erhL6EE6k", "cat": "游戏/新品", "heat": 70, "sources": ["B站"] },
-    { "term": "昭和米国物语 科隆试玩", "href": "https://www.gamersky.com/news/202608/2197018.shtml", "cat": "游戏/新品", "heat": 66, "sources": ["游民星空"] },
-    { "term": "巫师4 定档2028+DLC", "href": "https://www.gamersky.com/news/202608/2195272.shtml", "cat": "游戏/新品", "heat": 90, "sources": ["游民星空"] },
-    { "term": "无限大 定档1/15重霄地图", "href": "https://www.youxituoluo.com/534826.html", "cat": "游戏/新品", "heat": 82, "sources": ["游戏陀螺"] },
-    { "term": "湮灭之潮 旧日之纱", "href": "https://www.bilibili.com/video/BV1418q6wERg", "cat": "游戏/新品", "heat": 58, "sources": ["B站"] },
-    { "term": "地牢大出血 全平台发售", "href": "https://www.gcores.com/articles/218784", "cat": "游戏/新品", "heat": 52, "sources": ["机核GCORES"] },
-    { "term": "征服纪臣民之心 发表", "href": "https://www.gcores.com/articles/218873", "cat": "游戏/新品", "heat": 50, "sources": ["机核GCORES"] },
-    { "term": "大迁离 定档2027.4.27", "href": "https://www.gamersky.com/news/202608/2195990.shtml", "cat": "游戏/新品", "heat": 48, "sources": ["游民星空"] },
-    { "term": "明日方舟×P3R 月行水上", "href": "https://www.bilibili.com/video/BV1PLhw6fELK", "cat": "游戏/新品", "heat": 78, "sources": ["B站"] },
-    { "term": "三角洲行动 群星将至更新", "href": "https://store.steampowered.com/news/app/2507950/view/6974013497020685833/", "cat": "游戏/新品", "heat": 60, "sources": ["三角洲行动官方"] },
-    { "term": "The Whisper Man 评测", "href": "https://news.17173.com/content/08282026/100900870.shtml", "cat": "游戏/新品", "heat": 46, "sources": ["17173"] },
-    { "term": "微信小游戏 IAP 170%分成", "href": "http://www.gamelook.com.cn/2026/08/600613/", "cat": "行业/数据", "heat": 55, "sources": ["GameLook"] },
-    { "term": "沙雕游戏 2天流水2000万", "href": "https://www.youxituoluo.com/534825.html", "cat": "行业/数据", "heat": 57, "sources": ["游戏陀螺"] },
-    { "term": "巫师4 定档市值蒸发5亿", "href": "https://www.gamersky.com/news/202608/2196247.shtml", "cat": "行业/数据", "heat": 68, "sources": ["游民星空"] },
-    { "term": "腾讯 粒粒的小人国 测试", "href": "https://news.17173.com/content/08252026/101417893.shtml", "cat": "行业/数据", "heat": 54, "sources": ["17173"] },
-    { "term": "陈星汉 TGC发行品牌", "href": "http://www.gamelook.com.cn/2026/08/600894/", "cat": "行业/数据", "heat": 53, "sources": ["GameLook"] },
-    { "term": "星穹名梗 青雀摸鱼", "href": "https://www.bilibili.com/video/BV15Ytw6iEHq", "cat": "梗/社区", "heat": 62, "sources": ["B站"] },
-    { "term": "友哈巴赫 死神bleach", "href": "https://www.bilibili.com/video/BV1PitA6WExZ", "cat": "梗/社区", "heat": 60, "sources": ["B站"] },
-    { "term": "影之诗 脑梗吸氧", "href": "https://www.bilibili.com/video/BV15itP6GEXw", "cat": "梗/社区", "heat": 65, "sources": ["B站"] },
-    { "term": "PVZ 大果 mod", "href": "https://www.bilibili.com/video/BV1zG4d6dEka", "cat": "梗/社区", "heat": 45, "sources": ["B站"] },
-    { "term": "中式恐怖游戏 废弃楼层", "href": "https://www.bilibili.com/video/BV1fE8d6aECQ", "cat": "梗/社区", "heat": 56, "sources": ["B站"] },
-    { "term": "战双帕弥什 全球音乐会", "href": "https://www.bilibili.com/video/BV1VH8K67ENH", "cat": "事件/风险", "heat": 47, "sources": ["B站"] },
-    { "term": "DOTA2 TI2026 总冠军", "href": "https://store.steampowered.com/news/app/570/view/6807596286982444837/", "cat": "事件/风险", "heat": 75, "sources": ["DOTA2官方"] },
-    { "term": "暗区突围无限 处罚公告", "href": "https://store.steampowered.com/news/app/2073620/view/6704809310210931954/", "cat": "事件/风险", "heat": 44, "sources": ["暗区突围官方"] },
-    { "term": "逃离塔科夫 定制道具", "href": "https://www.bilibili.com/video/BV1Gp4963Egk", "cat": "事件/风险", "heat": 50, "sources": ["B站"] }
+    {
+      "term": "微信小游戏IAP首发170%分成",
+      "href": "http://www.gamelook.com.cn/2026/08/600613/",
+      "cat": "行业/数据",
+      "heat": 48,
+      "sources": [
+        "GameLook"
+      ]
+    },
+    {
+      "term": "地牢大出血 全平台发售",
+      "href": "https://www.gcores.com/articles/218784",
+      "cat": "游戏/新品",
+      "heat": 66,
+      "sources": [
+        "机核GCORES"
+      ]
+    },
+    {
+      "term": "巫师4 定档2028 市值蒸发",
+      "href": "https://www.gamersky.com/news/202608/2196247.shtml",
+      "cat": "游戏/新品",
+      "heat": 88,
+      "sources": [
+        "游民星空"
+      ]
+    },
+    {
+      "term": "大迁离 定档2027.4.27",
+      "href": "https://www.gamersky.com/news/202608/2195990.shtml",
+      "cat": "游戏/新品",
+      "heat": 64,
+      "sources": [
+        "游民星空"
+      ]
+    },
+    {
+      "term": "征服纪：臣民之心 正式发表",
+      "href": "https://www.gcores.com/articles/218873",
+      "cat": "游戏/新品",
+      "heat": 62,
+      "sources": [
+        "机核GCORES"
+      ]
+    },
+    {
+      "term": "陈星汉 TGC发行品牌官宣",
+      "href": "http://www.gamelook.com.cn/2026/08/600894/",
+      "cat": "行业/数据",
+      "heat": 76,
+      "sources": [
+        "GameLook"
+      ]
+    },
+    {
+      "term": "腾讯王者新作 定档9月10日",
+      "href": "https://www.youxituoluo.com/534838.html",
+      "cat": "游戏/新品",
+      "heat": 86,
+      "sources": [
+        "游戏陀螺"
+      ]
+    },
+    {
+      "term": "宝可梦 智能设备联动目标",
+      "href": "https://news.17173.com/content/08292026/100751604.shtml",
+      "cat": "行业/数据",
+      "heat": 46,
+      "sources": [
+        "17173"
+      ]
+    },
+    {
+      "term": "GooglePlay生成式AI游戏审核收紧",
+      "href": "https://www.baijing.cn/article/56517",
+      "cat": "行业/数据",
+      "heat": 44,
+      "sources": [
+        "白鲸出海"
+      ]
+    },
+    {
+      "term": "GTA6 27分钟实机前瞻",
+      "href": "https://www.gematsu.com/2026/08/grand-theft-auto-vi-an-extended-look-27-minutes-of-gameplay",
+      "cat": "游戏/新品",
+      "heat": 95,
+      "sources": [
+        "Gematsu"
+      ]
+    },
+    {
+      "term": "GTA6 动画超GTA5十倍",
+      "href": "https://www.eurogamer.net/gta-6-has-more-than-10-times-the-animations-in-gta-5-and-double-the-amount-in-red-dead-redemption-2-rockstar-confirms",
+      "cat": "事件/风险",
+      "heat": 60,
+      "sources": [
+        "Eurogamer"
+      ]
+    },
+    {
+      "term": "GTA6 PS5 30fps目标",
+      "href": "https://www.pushsquare.com/news/2026/08/gta-6-targeting-30fps-on-ps5-undecided-on-performance-mode",
+      "cat": "事件/风险",
+      "heat": 42,
+      "sources": [
+        "PushSquare"
+      ]
+    },
+    {
+      "term": "宝可梦世界赛2026 Rayquaza Road",
+      "href": "https://www.videogameschronicle.com/news/one-of-san-franciscos-busiest-streets-has-become-rayquaza-road-as-pokemon-worlds-2026-pokemonxp-begins/",
+      "cat": "事件/风险",
+      "heat": 58,
+      "sources": [
+        "VGC"
+      ]
+    },
+    {
+      "term": "The Wolf Among Us Remastered Noir",
+      "href": "https://www.videogameschronicle.com/news/the-wolf-among-us-remastered-gets-a-new-noir-mode-when-it-launches-this-october/",
+      "cat": "游戏/新品",
+      "heat": 56,
+      "sources": [
+        "VGC"
+      ]
+    },
+    {
+      "term": "Usual June(Finji)10月发售",
+      "href": "https://gameinformer.com/2026/08/27/finjis-supernatural-action-game-usual-june-gets-october-launch-date",
+      "cat": "游戏/新品",
+      "heat": 54,
+      "sources": [
+        "GameInformer"
+      ]
+    },
+    {
+      "term": "Hellraiser Revival 7分钟实机",
+      "href": "https://www.gamespot.com/videos/7-minutes-of-new-hellraiser-revival-gameplay-breakdown/",
+      "cat": "游戏/新品",
+      "heat": 52,
+      "sources": [
+        "GameSpot"
+      ]
+    },
+    {
+      "term": "EA钢铁侠 泄露实机",
+      "href": "https://www.rockpapershotgun.com/leaked-footage-of-eas-long-silent-iron-man-game-comes-blasting-onto-the-helicarrier-showing-off-combat-characters-and-customisation",
+      "cat": "事件/风险",
+      "heat": 50,
+      "sources": [
+        "RockPaperShotgun"
+      ]
+    },
+    {
+      "term": "昭和米国物语 科隆试玩",
+      "href": "https://www.gamersky.com/news/202608/2197018.shtml",
+      "cat": "游戏/新品",
+      "heat": 82,
+      "sources": [
+        "游民星空"
+      ]
+    },
+    {
+      "term": "洛克王国世界 S4月涌狂想PV",
+      "href": "https://www.bilibili.com/video/BV1notF6GE8F",
+      "cat": "游戏/新品",
+      "heat": 80,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "明日方舟×P3R 月行水上PV",
+      "href": "https://www.bilibili.com/video/BV1zCtA6mEay",
+      "cat": "联动",
+      "heat": 55,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "终末地动画 小龙欠织烟",
+      "href": "https://www.bilibili.com/video/BV1wwtN6sEVJ",
+      "cat": "梗/社区",
+      "heat": 50,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "我在PVZ加了大果",
+      "href": "https://www.bilibili.com/video/BV1zG4d6dEka",
+      "cat": "梗/社区",
+      "heat": 40,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "招笑版新植物 傻豆射手",
+      "href": "https://www.bilibili.com/video/BV1D58R6jEKA",
+      "cat": "梗/社区",
+      "heat": 38,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "抵抗者 2026科隆演示",
+      "href": "https://www.bilibili.com/video/BV1Gxhj6EE9a",
+      "cat": "游戏/新品",
+      "heat": 70,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "异克斯小队 首曝PV",
+      "href": "https://www.bilibili.com/video/BV1SuhV6aE77",
+      "cat": "游戏/新品",
+      "heat": 78,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "招笑版新植物 朝阳葵",
+      "href": "https://www.bilibili.com/video/BV1P6496fExM",
+      "cat": "梗/社区",
+      "heat": 36,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "三角洲 蜂医平事",
+      "href": "https://www.bilibili.com/video/BV1actP6KEbb",
+      "cat": "梗/社区",
+      "heat": 34,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "源初之结 首曝PV",
+      "href": "https://www.bilibili.com/video/BV1erhL6EE6k",
+      "cat": "游戏/新品",
+      "heat": 68,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "湮灭之潮 旧日之纱",
+      "href": "https://www.bilibili.com/video/BV1418q6wERg",
+      "cat": "游戏/新品",
+      "heat": 74,
+      "sources": [
+        "B站"
+      ]
+    },
+    {
+      "term": "动物朋克 科隆预告",
+      "href": "https://www.bilibili.com/video/BV1jfhA6EEMw",
+      "cat": "游戏/新品",
+      "heat": 72,
+      "sources": [
+        "B站"
+      ]
+    }
   ]
 }

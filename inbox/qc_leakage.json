@@ -1,21 +1,49 @@
 {
- "generated_at": "2026-08-29T10:50:51",
- "adopt_total": 71,
- "review_total": 57,
- "leak_total": 3,
+ "generated_at": "2026-08-30T10:46:02",
+ "adopt_total": 76,
+ "review_total": 50,
+ "leak_total": 5,
  "leaks": [
   {
-   "title": "陈可安08月27日0条评论 触乐怪话：用苹果电脑打游戏 谁会用苹果电脑打游戏啊？",
-   "url": "http://www.chuapp.com/article/291591.html",
+   "title": "漫步在游戏世界 08.29",
+   "url": "https://www.chuapp.com/article/291598.html",
+   "game": "全行业",
+   "src_name": "触乐网",
+   "verdict": "adopt",
+   "pubdate": null,
+   "date_unverified": false,
+   "n_src_cluster": 24,
+   "signal": 3,
+   "reasons": [
+    "多源印证(24家)"
+   ]
+  },
+  {
+   "title": "科隆展国产含量爆表，中国游戏太“狠”了！",
+   "url": "https://www.youxituoluo.com/534830.html",
+   "game": "全行业",
+   "src_name": "游戏陀螺",
+   "verdict": "adopt",
+   "pubdate": "2026-08-27",
+   "date_unverified": false,
+   "n_src_cluster": 4,
+   "signal": 3,
+   "reasons": [
+    "多源印证(4家)"
+   ]
+  },
+  {
+   "title": "祝佳音11小时前0条评论 漫步在游戏世界 我们可以理直气壮地说，游戏就是艺术。",
+   "url": "http://www.chuapp.com/article/291598.html",
    "game": "全行业",
    "src_name": "触乐网·分类新闻",
    "verdict": "adopt",
    "pubdate": null,
    "date_unverified": false,
-   "n_src_cluster": 23,
+   "n_src_cluster": 24,
    "signal": 3,
    "reasons": [
-    "多源印证(23家)"
+    "多源印证(24家)"
    ]
   },
   {

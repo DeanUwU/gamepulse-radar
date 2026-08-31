@@ -1804,6 +1804,18 @@ def _masthead_pick(data, exclude_urls=None):
     else:
         exclude_urls = set(exclude_urls)
 
+    # 2026-08-31 治理：头条最高优先级 = 真实新闻事件（feed_events / events.json 多源权威，近3天）。
+    #   旧逻辑先在 B站视频池里挑「事件关键词」候选，导致「全网首发」类通关视频
+    #   （如《House2》全结局）误命中「首发」并直接 return，真实当日游戏大事件
+    #   （王者新作定档 / GTA6 实机 等 feed_events 新闻）被压住、永远走不到事件回退。
+    #   修正：存在「权威印证 / 多源 / 权威媒体」等级的当日新闻事件时，头条优先用它。
+    _evt_fb = _masthead_fallback_event(data, exclude_urls)
+    if _evt_fb:
+        _fb_main, _fb_lv, _fb_sub, _fb_fb = _evt_fb
+        if _fb_main.get("_verdict") not in ("单源事件",) or re.search(
+                r'公测|定档|首发|发售|专场|发布会|PV|志怪|中元|关卡|实机|联动', _fb_main.get("title", "")):
+            return (_fb_main, _fb_lv, _fb_sub, False)
+
     # 2026-08-20 治理：引入词云 H 值作为头图排序的主信号。
     #   此前 evt/candidates 仅按 play(view) 降序排序，导致今天最热（词云 H=98）但
     #   播放量非第一的《黑神话：钟馗》(89.8万) 被压在《七界梦谭》(345万) 之后，
@@ -1921,10 +1933,13 @@ def _masthead_pick(data, exclude_urls=None):
     # 2026-08-05 扩：加 "爆料/新皮肤/时装/资料片" 匹配 popular 池的王者新皮肤
     # 2026-08-19 扩：补硬核大事件关键词（专场/State of Play/发布会/直面会/PV/前瞻/志怪/中元），
     #   让"影之刃零专场 State of Play""鸣潮清宵PV"这类硬核游戏大事件优先于 MC 整活视频。
-    evt = [v for v in candidates if re.search(
-        r'发售|上线|公测|首发|定档|开测|首测|不删档|联动|周年|登顶|实机|首曝|预约|开服|夺魁|夺冠|爆料|新皮肤|新角|时装|资料片|主题曲|CG|'
-        r'专场|State\s?of\s?Play|发布会|直面会|前瞻|PV|宣传片|预告片|志怪|中元|鬼节|关卡',
-        v.get("title", ""))]
+    _PLAYTHROUGH = re.compile(r'全结局|全通关|通关|流程|实况|攻略|速通|无解说|流程解说|流程攻略')
+    evt = [v for v in candidates
+           if re.search(
+               r'发售|上线|公测|首发|定档|开测|首测|不删档|联动|周年|登顶|实机|首曝|预约|开服|夺魁|夺冠|爆料|新皮肤|新角|时装|资料片|主题曲|CG|'
+               r'专场|State\s?of\s?Play|发布会|直面会|前瞻|PV|宣传片|预告片|志怪|中元|鬼节|关卡',
+               v.get("title", ""))
+           and not _PLAYTHROUGH.search(v.get("title", ""))]
     evt.sort(key=lambda x: (-_h_penalized(x), -penalized_view(x)))
     if evt:
         main = evt[0]

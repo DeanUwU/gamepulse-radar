@@ -1,7 +1,7 @@
 {
- "generated_at": "2026-08-31T11:31:50",
- "adopt_total": 71,
- "review_total": 47,
+ "generated_at": "2026-08-31T11:58:53",
+ "adopt_total": 70,
+ "review_total": 53,
  "leak_total": 5,
  "leaks": [
   {
@@ -12,25 +12,25 @@
    "verdict": "review",
    "pubdate": "2025-11-10",
    "date_unverified": false,
-   "n_src_cluster": 6,
+   "n_src_cluster": 7,
    "signal": 3,
    "reasons": [
-    "多源印证(6家)",
+    "多源印证(7家)",
     "准入待复核被卡"
    ]
   },
   {
-   "title": "科隆展国产含量爆表，中国游戏太“狠”了！",
-   "url": "https://www.youxituoluo.com/534830.html",
+   "title": "上线送齐了！魔域口袋版启示服必冲福利",
+   "url": "https://news.17173.com/content/08312026/113008157.shtml",
    "game": "全行业",
-   "src_name": "游戏陀螺",
+   "src_name": "17173 网游资讯",
    "verdict": "adopt",
-   "pubdate": "2026-08-27",
+   "pubdate": null,
    "date_unverified": false,
-   "n_src_cluster": 6,
-   "signal": 3,
+   "n_src_cluster": 1,
+   "signal": 2,
    "reasons": [
-    "多源印证(6家)"
+    "强事件词"
    ]
   },
   {
@@ -41,10 +41,10 @@
    "verdict": "adopt",
    "pubdate": null,
    "date_unverified": false,
-   "n_src_cluster": 6,
+   "n_src_cluster": 7,
    "signal": 3,
    "reasons": [
-    "多源印证(6家)"
+    "多源印证(7家)"
    ]
   },
   {

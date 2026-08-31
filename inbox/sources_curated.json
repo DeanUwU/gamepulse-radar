@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-08-31T11:31:46",
+ "generated_at": "2026-08-31T11:58:49",
  "summary": {
-  "total": 157,
-  "adopt": 71,
-  "review": 47,
+  "total": 162,
+  "adopt": 70,
+  "review": 53,
   "reject": 39,
   "stale_rejected": 36,
-  "dated": 128,
+  "dated": 127,
   "new_reject": 0
  },
  "new_rejects": [],
@@ -199,6 +199,71 @@
    ]
   },
   {
+   "game": "王者荣耀",
+   "title": "8月27日版本更新公告",
+   "url": "https://pvp.qq.com/web201706/newsdetail.shtml?tid=807732",
+   "status": 200,
+   "src_id": "pvp",
+   "src_name": "王者荣耀官方新闻",
+   "pubdate": null,
+   "age_days": null,
+   "date_src": null,
+   "verdict": "review",
+   "reasons": []
+  },
+  {
+   "game": "王者荣耀",
+   "title": "8月28日体验服不停机更新公告",
+   "url": "https://pvp.qq.com/web201706/newsdetail.shtml?tid=807851",
+   "status": 200,
+   "src_id": "pvp",
+   "src_name": "王者荣耀官方新闻",
+   "pubdate": null,
+   "age_days": null,
+   "date_src": null,
+   "verdict": "review",
+   "reasons": []
+  },
+  {
+   "game": "王者荣耀",
+   "title": "8月27日体验服不停机更新公告",
+   "url": "https://pvp.qq.com/web201706/newsdetail.shtml?tid=807787",
+   "status": 200,
+   "src_id": "pvp",
+   "src_name": "王者荣耀官方新闻",
+   "pubdate": null,
+   "age_days": null,
+   "date_src": null,
+   "verdict": "review",
+   "reasons": []
+  },
+  {
+   "game": "王者荣耀",
+   "title": "8月25日体验服停机更新公告",
+   "url": "https://pvp.qq.com/web201706/newsdetail.shtml?tid=807688",
+   "status": 200,
+   "src_id": "pvp",
+   "src_name": "王者荣耀官方新闻",
+   "pubdate": null,
+   "age_days": null,
+   "date_src": null,
+   "verdict": "review",
+   "reasons": []
+  },
+  {
+   "game": "王者荣耀",
+   "title": "8月25日安卓建议更新公告",
+   "url": "https://pvp.qq.com/web201706/newsdetail.shtml?tid=807654",
+   "status": 200,
+   "src_id": "pvp",
+   "src_name": "王者荣耀官方新闻",
+   "pubdate": null,
+   "age_days": null,
+   "date_src": null,
+   "verdict": "review",
+   "reasons": []
+  },
+  {
    "game": "第五人格",
    "title": "COA深渊的呼唤",
    "url": "https://id5.163.com/sshh7/",
@@ -379,8 +444,8 @@
   },
   {
    "game": "全行业",
-   "title": "网友偶遇刘亦菲妈妈刘晓莉 体态优雅气质绝佳引热议",
-   "url": "https://www.gamersky.com/news/202608/2199362.shtml",
+   "title": "火焰纹章新作泄露！玩了90小时还不腻 最具野心一作",
+   "url": "https://www.gamersky.com/news/202608/2199382.shtml",
    "status": 200,
    "src_id": "gamersky",
    "src_name": "游民星空新闻",
@@ -394,8 +459,8 @@
   },
   {
    "game": "全行业",
-   "title": "DLSS5在RTX 3080上跑出1帧！怪不得老黄不给老卡用",
-   "url": "https://www.gamersky.com/news/202608/2199353.shtml",
+   "title": "大S在演唱会“显灵”？范晓萱现场惊呼阿弥陀佛",
+   "url": "https://www.gamersky.com/news/202608/2199366.shtml",
    "status": 200,
    "src_id": "gamersky",
    "src_name": "游民星空新闻",
@@ -517,16 +582,31 @@
   },
   {
    "game": "全行业",
-   "title": "Lanterns Season 1 第三集评测与回顾：“OutKast”",
-   "url": "https://news.17173.com/content/08312026/110821768.shtml",
+   "title": "上线送齐了！魔域口袋版启示服必冲福利",
+   "url": "https://news.17173.com/content/08312026/113008157.shtml",
    "status": 200,
    "src_id": "news17173",
    "src_name": "17173 网游资讯",
-   "pubdate": "2026-08-31",
-   "age_days": 0,
-   "date_src": "text",
+   "pubdate": null,
+   "age_days": null,
+   "date_src": null,
    "verdict": "adopt",
    "reasons": []
+  },
+  {
+   "game": "全行业",
+   "title": "Stupid Never Dies ‘Wyvern Boss Battle’ gameplay",
+   "url": "https://www.gematsu.com/2026/08/stupid-never-dies-wyvern-boss-battle-gameplay",
+   "status": null,
+   "src_id": "gematsu",
+   "src_name": "Gematsu 新作情报",
+   "pubdate": "2026-08-31",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "adopt",
+   "reasons": [
+    "链接探活未过(疑似反爬/超时，RSS 已确认存活)"
+   ]
   },
   {
    "game": "全行业",
@@ -546,28 +626,13 @@
   },
   {
    "game": "全行业",
-   "title": "TARAE: The Unbound Gamescom 2026 ‘Gameplay Preview’ trailer",
-   "url": "https://www.gematsu.com/2026/08/tarae-the-unbound-gamescom-2026-gameplay-preview-trailer",
+   "title": "Crescent Tower: RISING announced for PC",
+   "url": "https://www.gematsu.com/2026/08/crescent-tower-rising-announced-for-pc",
    "status": null,
    "src_id": "gematsu",
    "src_name": "Gematsu 新作情报",
-   "pubdate": "2026-08-29",
-   "age_days": 2,
-   "date_src": "feed",
-   "verdict": "adopt",
-   "reasons": [
-    "链接探活未过(疑似反爬/超时，RSS 已确认存活)"
-   ]
-  },
-  {
-   "game": "全行业",
-   "title": "Fable Gamescom 2026 ‘Combat’ gameplay",
-   "url": "https://www.gematsu.com/2026/08/fable-gamescom-2026-combat-gameplay",
-   "status": null,
-   "src_id": "gematsu",
-   "src_name": "Gematsu 新作情报",
-   "pubdate": "2026-08-28",
-   "age_days": 3,
+   "pubdate": "2026-08-31",
+   "age_days": 0,
    "date_src": "feed",
    "verdict": "adopt",
    "reasons": [
@@ -1003,8 +1068,8 @@
   },
   {
    "game": "全行业",
-   "title": "“微软干了件人事”！XBOX推出“光盘转数字版”，全球玩家竟然一片叫好？",
-   "url": "http://www.gamelook.com.cn/2026/08/601060/",
+   "title": "科隆游戏展“展台电脑集体被盗”！独游展区成重灾区，玩家痛斥、大厂伸出援手",
+   "url": "http://www.gamelook.com.cn/2026/08/601189/",
    "status": 200,
    "src_id": "gamelook",
    "src_name": "GameLook",
@@ -1016,21 +1081,8 @@
   },
   {
    "game": "全行业",
-   "title": "中年人鼓起勇气发问：“44岁想做游戏是否太老”？同行：“行业艰难，有热情就不晚”",
-   "url": "http://www.gamelook.com.cn/2026/08/601049/",
-   "status": 200,
-   "src_id": "gamelook",
-   "src_name": "GameLook",
-   "pubdate": "2026-08-31",
-   "age_days": 0,
-   "date_src": "feed",
-   "verdict": "adopt",
-   "reasons": []
-  },
-  {
-   "game": "全行业",
-   "title": "“金贵的苹果Appstore推荐位”怎么拿？苹果团队一次讲清楚了！",
-   "url": "http://www.gamelook.com.cn/2026/08/601045/",
+   "title": "“中国油管”正式出海“引老外热议”！B站发布半年报，陈睿：“AI投入聚焦三件事”",
+   "url": "http://www.gamelook.com.cn/2026/08/601107/",
    "status": 200,
    "src_id": "gamelook",
    "src_name": "GameLook",
@@ -1044,8 +1096,8 @@
   },
   {
    "game": "全行业",
-   "title": "从直播间出发走进城市，三角洲民间赛事如何成为地方文旅新势能",
-   "url": "http://www.gamelook.com.cn/2026/08/601067/",
+   "title": "“成都游戏圈又牛了一把”！《湮灭之潮》喜获科隆展“最史诗游戏”大奖",
+   "url": "http://www.gamelook.com.cn/2026/08/601167/",
    "status": 200,
    "src_id": "gamelook",
    "src_name": "GameLook",
@@ -1057,13 +1109,26 @@
   },
   {
    "game": "全行业",
-   "title": "十七岁的《剑网3》，正在思考MMO的新方向",
-   "url": "http://www.gamelook.com.cn/2026/08/601086/",
+   "title": "“A股游戏王”还在狂飙！世纪华通上半年净利润高达45亿，将首次中期分红",
+   "url": "http://www.gamelook.com.cn/2026/08/601169/",
    "status": 200,
    "src_id": "gamelook",
    "src_name": "GameLook",
-   "pubdate": "2026-08-30",
-   "age_days": 1,
+   "pubdate": "2026-08-31",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "adopt",
+   "reasons": []
+  },
+  {
+   "game": "全行业",
+   "title": "“微软干了件人事”！XBOX推出“光盘转数字版”，全球玩家竟然一片叫好？",
+   "url": "http://www.gamelook.com.cn/2026/08/601060/",
+   "status": 200,
+   "src_id": "gamelook",
+   "src_name": "GameLook",
+   "pubdate": "2026-08-31",
+   "age_days": 0,
    "date_src": "feed",
    "verdict": "adopt",
    "reasons": []
@@ -1448,6 +1513,21 @@
   },
   {
    "game": "全行业",
+   "title": "安克上半年狂揽166亿，亚马逊收入77亿仍占半壁江山",
+   "url": "https://www.baijing.cn/article/56521",
+   "status": 200,
+   "src_id": "baijing",
+   "src_name": "白鲸出海",
+   "pubdate": "2026-08-31",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "review",
+   "reasons": [
+    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
+   ]
+  },
+  {
+   "game": "全行业",
    "title": "倒计时开启，TikTok美区黑五拉长至季度战，今年拼的不只是备货速度",
    "url": "https://www.baijing.cn/article/56520",
    "status": 200,
@@ -1551,19 +1631,6 @@
   },
   {
    "game": "全行业",
-   "title": "不看Meta脸色，不投广告也能圈到高质玩家的方法",
-   "url": "https://www.baijing.cn/article/56515",
-   "status": 200,
-   "src_id": "baijing",
-   "src_name": "白鲸出海",
-   "pubdate": "2026-08-29",
-   "age_days": 2,
-   "date_src": "feed",
-   "verdict": "adopt",
-   "reasons": []
-  },
-  {
-   "game": "全行业",
    "title": "VR/AR",
    "url": "https://www.nadianshi.com/category/vr",
    "status": 200,
@@ -1633,6 +1700,19 @@
   },
   {
    "game": "全行业",
+   "title": "Lanterns Season 1, Episode 3 Review & Recap: 'OutKast'",
+   "url": "https://www.ign.com/articles/lanterns-season-1-episode-3-review-recap-outkast",
+   "status": 200,
+   "src_id": "ign",
+   "src_name": "IGN",
+   "pubdate": "2026-08-31",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "adopt",
+   "reasons": []
+  },
+  {
+   "game": "全行业",
    "title": "GTA 5's Michael Actor Defends GTA 6 After Doubters Say Rockstar's Games Look Too Similar",
    "url": "https://www.ign.com/articles/gta-5s-michael-actor-defends-gta-6-after-doubters-say-rockstars-games-look-too-similar",
    "status": 200,
@@ -1676,7 +1756,7 @@
   },
   {
    "game": "全行业",
-   "title": "Star Wars and Jurassic Park VFX Legend Phil Tippett Closes Studio and Auctions Memorabilia",
+   "title": "Star Wars and Jurassic Park VFX Legend Phil Tippett Closes CA Studio and Auctions Memorabilia",
    "url": "https://www.ign.com/articles/phil-tippett-studio-closure-auction",
    "status": 200,
    "src_id": "ign",
@@ -1704,21 +1784,8 @@
   },
   {
    "game": "全行业",
-   "title": "GTA 6 Fans Think They Found Jason and Lucia's Vice City Apartment in Real Life",
-   "url": "https://www.ign.com/articles/gta-6-fans-think-they-found-jason-and-lucias-vice-city-apartment-in-real-life",
-   "status": 200,
-   "src_id": "ign",
-   "src_name": "IGN",
-   "pubdate": "2026-08-30",
-   "age_days": 1,
-   "date_src": "feed",
-   "verdict": "adopt",
-   "reasons": []
-  },
-  {
-   "game": "全行业",
-   "title": "Lanterns' dark new origin story for John Stewart changes DC Comics canon in a big way",
-   "url": "https://www.gamesradar.com/entertainment/dc-tv-shows/lanterns-dark-new-origin-story-for-john-stewart-changes-comics-canon-in-a-big-way/",
+   "title": "Guardians of the Universe explained: the comic book history of the oldest living beings in the DC universe",
+   "url": "https://www.gamesradar.com/entertainment/dc-tv-shows/guardians-of-the-universe-explained/",
    "status": 200,
    "src_id": "gamesradar",
    "src_name": "GamesRadar+",
@@ -1730,8 +1797,8 @@
   },
   {
    "game": "全行业",
-   "title": "Guardians of the Universe explained: the comic book history of the oldest living beings in the DC universe",
-   "url": "https://www.gamesradar.com/entertainment/dc-tv-shows/guardians-of-the-universe-explained/",
+   "title": "Lanterns' dark new origin story for John Stewart changes DC Comics canon in a big way",
+   "url": "https://www.gamesradar.com/entertainment/dc-tv-shows/lanterns-dark-new-origin-story-for-john-stewart-changes-comics-canon-in-a-big-way/",
    "status": 200,
    "src_id": "gamesradar",
    "src_name": "GamesRadar+",
@@ -2014,7 +2081,7 @@
    "game": "全行业",
    "title": "Minecraft Mobs Arrive As Cookie Treats At Crumbl For Limited Time",
    "url": "https://www.gamespot.com/articles/minecraft-mobs-arrive-as-cookie-treats-at-crumbl-for-limited-time/",
-   "status": null,
+   "status": 200,
    "src_id": "gamespot",
    "src_name": "GameSpot",
    "pubdate": "2026-08-30",
@@ -2022,7 +2089,6 @@
    "date_src": "feed",
    "verdict": "review",
    "reasons": [
-    "链接探活未过(疑似反爬/超时，RSS 已确认存活)",
     "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
    ]
   },
@@ -2046,16 +2112,14 @@
    "game": "全行业",
    "title": "Xbox Kept At Least One Big Promise In Its Most Tumultuous Year Ever",
    "url": "https://www.gamespot.com/articles/xbox-kept-at-least-one-big-promise-in-its-most-tumultuous-year-ever/",
-   "status": null,
+   "status": 200,
    "src_id": "gamespot",
    "src_name": "GameSpot",
    "pubdate": "2026-08-29",
    "age_days": 2,
    "date_src": "feed",
    "verdict": "adopt",
-   "reasons": [
-    "链接探活未过(疑似反爬/超时，RSS 已确认存活)"
-   ]
+   "reasons": []
   },
   {
    "game": "全行业",

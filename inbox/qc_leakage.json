@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-08-30T10:46:02",
- "adopt_total": 76,
+ "generated_at": "2026-08-31T10:47:50",
+ "adopt_total": 73,
  "review_total": 50,
  "leak_total": 5,
  "leaks": [
@@ -9,13 +9,14 @@
    "url": "https://www.chuapp.com/article/291598.html",
    "game": "全行业",
    "src_name": "触乐网",
-   "verdict": "adopt",
-   "pubdate": null,
+   "verdict": "review",
+   "pubdate": "2025-11-10",
    "date_unverified": false,
-   "n_src_cluster": 24,
+   "n_src_cluster": 6,
    "signal": 3,
    "reasons": [
-    "多源印证(24家)"
+    "多源印证(6家)",
+    "准入待复核被卡"
    ]
   },
   {
@@ -26,24 +27,24 @@
    "verdict": "adopt",
    "pubdate": "2026-08-27",
    "date_unverified": false,
-   "n_src_cluster": 4,
+   "n_src_cluster": 6,
    "signal": 3,
    "reasons": [
-    "多源印证(4家)"
+    "多源印证(6家)"
    ]
   },
   {
-   "title": "祝佳音11小时前0条评论 漫步在游戏世界 我们可以理直气壮地说，游戏就是艺术。",
+   "title": "祝佳音08月29日0条评论 漫步在游戏世界 我们可以理直气壮地说，游戏就是艺术。",
    "url": "http://www.chuapp.com/article/291598.html",
    "game": "全行业",
    "src_name": "触乐网·分类新闻",
    "verdict": "adopt",
    "pubdate": null,
    "date_unverified": false,
-   "n_src_cluster": 24,
+   "n_src_cluster": 6,
    "signal": 3,
    "reasons": [
-    "多源印证(24家)"
+    "多源印证(6家)"
    ]
   },
   {
@@ -63,11 +64,11 @@
   },
   {
    "title": "活动 | 三国杀王者之战神王战广州收官 《三国杀：承天之弈》重磅首发",
-   "url": "http://www.nadianshi.com/2026/06/413745",
+   "url": "https://www.nadianshi.com/2026/06/1413745",
    "game": "全行业",
    "src_name": "手游那点事",
    "verdict": "review",
-   "pubdate": "2026-06-01",
+   "pubdate": "2026-06-29",
    "date_unverified": false,
    "n_src_cluster": 1,
    "signal": 2,

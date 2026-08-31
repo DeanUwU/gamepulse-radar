@@ -5,7 +5,7 @@
   "event_count": 100,
   "note": "scaffold 中的 <<EVT_i>> 由 gen_calendar.py 用 events[i].anchor 替换 __SRC__ 回填。",
   "feed_count": 40,
-  "feed_seq": 474,
+  "feed_seq": 481,
   "last_update": "2026-08-31",
   "date_migrated": "2026-08-18"
  },

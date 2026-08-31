@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-08-31T10:45:50",
+ "fetched_at": "2026-08-31T11:30:04",
  "summary": {
   "sources_total": 75,
-  "sources_alive": 72,
-  "items_total": 169,
-  "items_dated": 127
+  "sources_alive": 71,
+  "items_total": 164,
+  "items_dated": 128
  },
  "sources": [
   {
@@ -263,47 +263,9 @@
    "name": "王者荣耀官方新闻",
    "type": "json_api",
    "url": "https://www.cunyuapi.top/hero_news?id=1",
-   "status": 200,
-   "error": null,
-   "items": [
-    {
-     "title": "8月27日版本更新公告",
-     "url": "https://pvp.qq.com/web201706/newsdetail.shtml?tid=807732",
-     "pubdate": null,
-     "date_src": null,
-     "age_days": null
-    },
-    {
-     "title": "8月28日体验服不停机更新公告",
-     "url": "https://pvp.qq.com/web201706/newsdetail.shtml?tid=807851",
-     "pubdate": null,
-     "date_src": null,
-     "age_days": null
-    },
-    {
-     "title": "8月27日体验服不停机更新公告",
-     "url": "https://pvp.qq.com/web201706/newsdetail.shtml?tid=807787",
-     "pubdate": null,
-     "date_src": null,
-     "age_days": null
-    },
-    {
-     "title": "8月25日体验服停机更新公告",
-     "url": "https://pvp.qq.com/web201706/newsdetail.shtml?tid=807688",
-     "pubdate": null,
-     "date_src": null,
-     "age_days": null
-    },
-    {
-     "title": "8月25日安卓建议更新公告",
-     "url": "https://pvp.qq.com/web201706/newsdetail.shtml?tid=807654",
-     "pubdate": null,
-     "date_src": null,
-     "age_days": null
-    }
-   ],
-   "extraction": "json_api",
-   "dated_items": 0
+   "status": null,
+   "error": "<HTTPError 525: 'SSL Handshake Failed with Origin Server'>",
+   "items": []
   },
   {
    "id": "cs2",
@@ -591,15 +553,15 @@
      "age_days": null
     },
     {
-     "title": "DLSS5让《GTA4》直接进化！不用再等重制版了",
-     "url": "https://www.gamersky.com/news/202608/2199338.shtml",
+     "title": "网友偶遇刘亦菲妈妈刘晓莉 体态优雅气质绝佳引热议",
+     "url": "https://www.gamersky.com/news/202608/2199362.shtml",
      "pubdate": "2026-08-31",
      "date_src": "text",
      "age_days": 0
     },
     {
-     "title": "\"青筋女神\"走秀社死 短裙卡进大妈内裤 男模全程目睹",
-     "url": "https://www.gamersky.com/news/202608/2199346.shtml",
+     "title": "DLSS5在RTX 3080上跑出1帧！怪不得老黄不给老卡用",
+     "url": "https://www.gamersky.com/news/202608/2199353.shtml",
      "pubdate": "2026-08-31",
      "date_src": "text",
      "age_days": 0
@@ -700,15 +662,15 @@
      "age_days": null
     },
     {
-     "title": "升级解锁丰厚好礼！《无忧》海量福利回馈，实力养成稳步提升！",
-     "url": "https://news.17173.com/content/08312026/095812337.shtml",
-     "pubdate": null,
-     "date_src": null,
-     "age_days": null
+     "title": "Lanterns Season 1 第三集评测与回顾：“OutKast”",
+     "url": "https://news.17173.com/content/08312026/110821768.shtml",
+     "pubdate": "2026-08-31",
+     "date_src": "text",
+     "age_days": 0
     }
    ],
    "extraction": "extracted",
-   "dated_items": 0
+   "dated_items": 1
   },
   {
    "id": "gematsu",
@@ -720,6 +682,13 @@
    "error": null,
    "items": [
     {
+     "title": "Fate/EXTRA Record to be published by Aniplex",
+     "url": "https://www.gematsu.com/2026/08/fate-extra-record-to-be-published-by-aniplex",
+     "pubdate": "2026-08-31",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
      "title": "TARAE: The Unbound Gamescom 2026 ‘Gameplay Preview’ trailer",
      "url": "https://www.gematsu.com/2026/08/tarae-the-unbound-gamescom-2026-gameplay-preview-trailer",
      "pubdate": "2026-08-29",
@@ -729,13 +698,6 @@
     {
      "title": "Fable Gamescom 2026 ‘Combat’ gameplay",
      "url": "https://www.gematsu.com/2026/08/fable-gamescom-2026-combat-gameplay",
-     "pubdate": "2026-08-28",
-     "date_src": "feed",
-     "age_days": 3
-    },
-    {
-     "title": "STRANGER THAN HEAVEN Gamescom 2026 demo playthrough",
-     "url": "https://www.gematsu.com/2026/08/stranger-than-heaven-gamescom-2026-demo-playthrough",
      "pubdate": "2026-08-28",
      "date_src": "feed",
      "age_days": 3
@@ -1418,7 +1380,7 @@
    "error": null,
    "items": [
     {
-     "title": "王琳茜13小时前0条评论 科隆展上最“小”的游戏，是如何用技术打造真实世界的？ 他们都爱和毛茸茸的大号乌帕合照。",
+     "title": "王琳茜14小时前0条评论 科隆展上最“小”的游戏，是如何用技术打造真实世界的？ 他们都爱和毛茸茸的大号乌帕合照。",
      "url": "http://www.chuapp.com/article/291599.html",
      "pubdate": null,
      "date_src": null,
@@ -1500,12 +1462,48 @@
    "error": null,
    "items": [
     {
+     "title": "倒计时开启，TikTok美区黑五拉长至季度战，今年拼的不只是备货速度",
+     "url": "https://www.baijing.cn/article/56520",
+     "pubdate": "2026-08-31",
+     "date_src": "feed",
+     "extra": {
+      "views": 913,
+      "synopsis": "2026 年峰值靠什么冲？",
+      "from": "兔克出海"
+     },
+     "age_days": 0
+    },
+    {
+     "title": "iPhone 17成为2026年第二季度全球最畅销智能手机",
+     "url": "https://www.baijing.cn/article/56519",
+     "pubdate": "2026-08-31",
+     "date_src": "feed",
+     "extra": {
+      "views": 2333,
+      "synopsis": "苹果 iPhone 17 在 2026 年第二季度成为全球最畅销智能手机，占全球智能手机销量的 6%。",
+      "from": "Counterpoint 咨询"
+     },
+     "age_days": 0
+    },
+    {
+     "title": "Stripe已放弃收购PayPal",
+     "url": "https://www.baijing.cn/article/56518",
+     "pubdate": "2026-08-31",
+     "date_src": "feed",
+     "extra": {
+      "views": 4152,
+      "synopsis": "历时数周的收购谈判正式终结，这起堪称金融科技领域规模最大的并购尝试就此告吹。",
+      "from": "出海记"
+     },
+     "age_days": 0
+    },
+    {
      "title": "AI硬件创业者，开始研究黄金和宝石了",
      "url": "https://www.baijing.cn/article/56505",
      "pubdate": "2026-08-31",
      "date_src": "feed",
      "extra": {
-      "views": 8080,
+      "views": 11082,
       "synopsis": "AI 产品最新的「套路」。",
       "from": "Hardwire"
      },
@@ -1517,7 +1515,7 @@
      "pubdate": "2026-08-31",
      "date_src": "feed",
      "extra": {
-      "views": 7327,
+      "views": 10346,
       "synopsis": "用数字化赋能供应链，打破“不可能三角”。",
       "from": "白鲸出海"
      },
@@ -1529,7 +1527,7 @@
      "pubdate": "2026-08-29",
      "date_src": "feed",
      "extra": {
-      "views": 76736,
+      "views": 77417,
       "synopsis": "8 月 25 日，Google Play 发布生成式 AI 应用安全指南，进一步明确非自愿私密影像的审核和处置方式。",
       "from": "Enjoy出海开发者服务平台"
      },
@@ -1541,7 +1539,7 @@
      "pubdate": "2026-08-29",
      "date_src": "feed",
      "extra": {
-      "views": 77379,
+      "views": 78055,
       "synopsis": "FCC 封杀中国扫地机。",
       "from": "品牌方舟BrandArk"
      },
@@ -1553,45 +1551,9 @@
      "pubdate": "2026-08-29",
      "date_src": "feed",
      "extra": {
-      "views": 62778,
+      "views": 63445,
       "synopsis": "当游戏从“走出去”进入真正的全球化运营阶段，本地化的终点不再是语言翻译，而是建立一套玩家真正愿意参与的社区生态。",
       "from": "大声出海"
-     },
-     "age_days": 2
-    },
-    {
-     "title": "韩国最大短剧公司将IPO：上半年狂揽2.66亿，增78%，“出海”贡献6成收入",
-     "url": "https://www.baijing.cn/article/56514",
-     "pubdate": "2026-08-29",
-     "date_src": "feed",
-     "extra": {
-      "views": 63736,
-      "synopsis": "半年营收大涨 78%，海外收入占比突破 60%。",
-      "from": "DataEye文娱财经"
-     },
-     "age_days": 2
-    },
-    {
-     "title": "掌阅科技半年报：收入17.8亿，亏损收窄68%，短剧收入增长41%，盈利拐点将至？",
-     "url": "https://www.baijing.cn/article/56513",
-     "pubdate": "2026-08-29",
-     "date_src": "feed",
-     "extra": {
-      "views": 64847,
-      "synopsis": "2026 年上半年，掌阅科技营业收入 17.84 亿元，同比增长 16.89%。",
-      "from": "DataEye文娱财经"
-     },
-     "age_days": 2
-    },
-    {
-     "title": "巨人网络上半年营收同比增长182%，拟分红15亿元",
-     "url": "https://www.baijing.cn/article/56512",
-     "pubdate": "2026-08-29",
-     "date_src": "feed",
-     "extra": {
-      "views": 64841,
-      "synopsis": "公司上半年实现营业收入 46.89 亿元，同比增长 182%；归母净利润 21.44 亿元，同比增长 176%。",
-      "from": "游戏新知"
      },
      "age_days": 2
     }
@@ -1814,15 +1776,15 @@
    "error": null,
    "items": [
     {
-     "title": "Guardians of the Universe explained: the comic book history of the oldest living beings in the DC universe",
-     "url": "https://www.gamesradar.com/entertainment/dc-tv-shows/guardians-of-the-universe-explained/",
+     "title": "Lanterns' dark new origin story for John Stewart changes DC Comics canon in a big way",
+     "url": "https://www.gamesradar.com/entertainment/dc-tv-shows/lanterns-dark-new-origin-story-for-john-stewart-changes-comics-canon-in-a-big-way/",
      "pubdate": "2026-08-31",
      "date_src": "feed",
      "age_days": 0
     },
     {
-     "title": "Lanterns' dark new origin story for John Stewart changes DC Comics canon in a big way",
-     "url": "https://www.gamesradar.com/entertainment/dc-tv-shows/lanterns-dark-new-origin-story-for-john-stewart-changes-comics-canon-in-a-big-way/",
+     "title": "Guardians of the Universe explained: the comic book history of the oldest living beings in the DC universe",
+     "url": "https://www.gamesradar.com/entertainment/dc-tv-shows/guardians-of-the-universe-explained/",
      "pubdate": "2026-08-31",
      "date_src": "feed",
      "age_days": 0
@@ -1958,6 +1920,13 @@
    "error": null,
    "items": [
     {
+     "title": "2026 Pokémon World Championships: All the winners from VGC to TCG",
+     "url": "https://www.videogameschronicle.com/news/2026-pokemon-world-championships-all-the-winners-from-vgc-to-tcg/",
+     "pubdate": "2026-08-31",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
      "title": "Four new Pokémon confirmed for Pokémon Unite as Zeta Division wins final Championship",
      "url": "https://www.videogameschronicle.com/news/four-new-pokemon-confirmed-for-pokemon-unite-as-zeta-division-wins-final-championship/",
      "pubdate": "2026-08-30",
@@ -1981,13 +1950,6 @@
     {
      "title": "Castlevania: Belmont’s Curse doesn’t seem to raise the stakes, but should still be worth sinking your teeth into",
      "url": "https://www.videogameschronicle.com/features/castlevania-belmonts-curse-doesnt-seem-to-raise-the-stakes-but-should-still-be-worth-sinking-your-teeth-into/",
-     "pubdate": "2026-08-29",
-     "date_src": "feed",
-     "age_days": 2
-    },
-    {
-     "title": "INTERVIEW: Mega Man Dual Override devs discuss Proto Man’s return, and lessons from Mega Man 11",
-     "url": "https://www.videogameschronicle.com/features/interviews/interview-mega-man-dual-override-devs-discuss-proto-mans-return-and-lessons-from-mega-man-11/",
      "pubdate": "2026-08-29",
      "date_src": "feed",
      "age_days": 2

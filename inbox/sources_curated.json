@@ -1,19 +1,15 @@
 {
- "generated_at": "2026-08-31T10:47:48",
+ "generated_at": "2026-08-31T11:31:46",
  "summary": {
-  "total": 162,
-  "adopt": 73,
-  "review": 50,
+  "total": 157,
+  "adopt": 71,
+  "review": 47,
   "reject": 39,
   "stale_rejected": 36,
-  "dated": 127,
-  "new_reject": 3
+  "dated": 128,
+  "new_reject": 0
  },
- "new_rejects": [
-  "https://www.yjwujian.cn/news/update/20260825/33456_1312204.html",
-  "https://yys.163.com/news/update/20260825/23024_1312226.html",
-  "https://store.steampowered.com/news/app/1203220/view/705529021024175812"
- ],
+ "new_rejects": [],
  "items": [
   {
    "game": "三国志·战略版",
@@ -203,71 +199,6 @@
    ]
   },
   {
-   "game": "王者荣耀",
-   "title": "8月27日版本更新公告",
-   "url": "https://pvp.qq.com/web201706/newsdetail.shtml?tid=807732",
-   "status": 200,
-   "src_id": "pvp",
-   "src_name": "王者荣耀官方新闻",
-   "pubdate": null,
-   "age_days": null,
-   "date_src": null,
-   "verdict": "review",
-   "reasons": []
-  },
-  {
-   "game": "王者荣耀",
-   "title": "8月28日体验服不停机更新公告",
-   "url": "https://pvp.qq.com/web201706/newsdetail.shtml?tid=807851",
-   "status": 200,
-   "src_id": "pvp",
-   "src_name": "王者荣耀官方新闻",
-   "pubdate": null,
-   "age_days": null,
-   "date_src": null,
-   "verdict": "review",
-   "reasons": []
-  },
-  {
-   "game": "王者荣耀",
-   "title": "8月27日体验服不停机更新公告",
-   "url": "https://pvp.qq.com/web201706/newsdetail.shtml?tid=807787",
-   "status": 200,
-   "src_id": "pvp",
-   "src_name": "王者荣耀官方新闻",
-   "pubdate": null,
-   "age_days": null,
-   "date_src": null,
-   "verdict": "review",
-   "reasons": []
-  },
-  {
-   "game": "王者荣耀",
-   "title": "8月25日体验服停机更新公告",
-   "url": "https://pvp.qq.com/web201706/newsdetail.shtml?tid=807688",
-   "status": 200,
-   "src_id": "pvp",
-   "src_name": "王者荣耀官方新闻",
-   "pubdate": null,
-   "age_days": null,
-   "date_src": null,
-   "verdict": "review",
-   "reasons": []
-  },
-  {
-   "game": "王者荣耀",
-   "title": "8月25日安卓建议更新公告",
-   "url": "https://pvp.qq.com/web201706/newsdetail.shtml?tid=807654",
-   "status": 200,
-   "src_id": "pvp",
-   "src_name": "王者荣耀官方新闻",
-   "pubdate": null,
-   "age_days": null,
-   "date_src": null,
-   "verdict": "review",
-   "reasons": []
-  },
-  {
    "game": "第五人格",
    "title": "COA深渊的呼唤",
    "url": "https://id5.163.com/sshh7/",
@@ -448,21 +379,23 @@
   },
   {
    "game": "全行业",
-   "title": "DLSS5让《GTA4》直接进化！不用再等重制版了",
-   "url": "https://www.gamersky.com/news/202608/2199338.shtml",
+   "title": "网友偶遇刘亦菲妈妈刘晓莉 体态优雅气质绝佳引热议",
+   "url": "https://www.gamersky.com/news/202608/2199362.shtml",
    "status": 200,
    "src_id": "gamersky",
    "src_name": "游民星空新闻",
    "pubdate": "2026-08-31",
    "age_days": 0,
    "date_src": "text",
-   "verdict": "adopt",
-   "reasons": []
+   "verdict": "review",
+   "reasons": [
+    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
+   ]
   },
   {
    "game": "全行业",
-   "title": "\"青筋女神\"走秀社死 短裙卡进大妈内裤 男模全程目睹",
-   "url": "https://www.gamersky.com/news/202608/2199346.shtml",
+   "title": "DLSS5在RTX 3080上跑出1帧！怪不得老黄不给老卡用",
+   "url": "https://www.gamersky.com/news/202608/2199353.shtml",
    "status": 200,
    "src_id": "gamersky",
    "src_name": "游民星空新闻",
@@ -584,16 +517,32 @@
   },
   {
    "game": "全行业",
-   "title": "升级解锁丰厚好礼！《无忧》海量福利回馈，实力养成稳步提升！",
-   "url": "https://news.17173.com/content/08312026/095812337.shtml",
+   "title": "Lanterns Season 1 第三集评测与回顾：“OutKast”",
+   "url": "https://news.17173.com/content/08312026/110821768.shtml",
    "status": 200,
    "src_id": "news17173",
    "src_name": "17173 网游资讯",
-   "pubdate": null,
-   "age_days": null,
-   "date_src": null,
+   "pubdate": "2026-08-31",
+   "age_days": 0,
+   "date_src": "text",
    "verdict": "adopt",
    "reasons": []
+  },
+  {
+   "game": "全行业",
+   "title": "Fate/EXTRA Record to be published by Aniplex",
+   "url": "https://www.gematsu.com/2026/08/fate-extra-record-to-be-published-by-aniplex",
+   "status": null,
+   "src_id": "gematsu",
+   "src_name": "Gematsu 新作情报",
+   "pubdate": "2026-08-31",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "review",
+   "reasons": [
+    "链接探活未过(疑似反爬/超时，RSS 已确认存活)",
+    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
+   ]
   },
   {
    "game": "全行业",
@@ -614,21 +563,6 @@
    "game": "全行业",
    "title": "Fable Gamescom 2026 ‘Combat’ gameplay",
    "url": "https://www.gematsu.com/2026/08/fable-gamescom-2026-combat-gameplay",
-   "status": null,
-   "src_id": "gematsu",
-   "src_name": "Gematsu 新作情报",
-   "pubdate": "2026-08-28",
-   "age_days": 3,
-   "date_src": "feed",
-   "verdict": "adopt",
-   "reasons": [
-    "链接探活未过(疑似反爬/超时，RSS 已确认存活)"
-   ]
-  },
-  {
-   "game": "全行业",
-   "title": "STRANGER THAN HEAVEN Gamescom 2026 demo playthrough",
-   "url": "https://www.gematsu.com/2026/08/stranger-than-heaven-gamescom-2026-demo-playthrough",
    "status": null,
    "src_id": "gematsu",
    "src_name": "Gematsu 新作情报",
@@ -1402,7 +1336,7 @@
   },
   {
    "game": "全行业",
-   "title": "王琳茜13小时前0条评论 科隆展上最“小”的游戏，是如何用技术打造真实世界的？ 他们都爱和毛茸茸的大号乌帕合照。",
+   "title": "王琳茜14小时前0条评论 科隆展上最“小”的游戏，是如何用技术打造真实世界的？ 他们都爱和毛茸茸的大号乌帕合照。",
    "url": "http://www.chuapp.com/article/291599.html",
    "status": 200,
    "src_id": "chuapp_category",
@@ -1514,6 +1448,51 @@
   },
   {
    "game": "全行业",
+   "title": "倒计时开启，TikTok美区黑五拉长至季度战，今年拼的不只是备货速度",
+   "url": "https://www.baijing.cn/article/56520",
+   "status": 200,
+   "src_id": "baijing",
+   "src_name": "白鲸出海",
+   "pubdate": "2026-08-31",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "review",
+   "reasons": [
+    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
+   ]
+  },
+  {
+   "game": "全行业",
+   "title": "iPhone 17成为2026年第二季度全球最畅销智能手机",
+   "url": "https://www.baijing.cn/article/56519",
+   "status": 200,
+   "src_id": "baijing",
+   "src_name": "白鲸出海",
+   "pubdate": "2026-08-31",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "review",
+   "reasons": [
+    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
+   ]
+  },
+  {
+   "game": "全行业",
+   "title": "Stripe已放弃收购PayPal",
+   "url": "https://www.baijing.cn/article/56518",
+   "status": 200,
+   "src_id": "baijing",
+   "src_name": "白鲸出海",
+   "pubdate": "2026-08-31",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "review",
+   "reasons": [
+    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
+   ]
+  },
+  {
+   "game": "全行业",
    "title": "AI硬件创业者，开始研究黄金和宝石了",
    "url": "https://www.baijing.cn/article/56505",
    "status": 200,
@@ -1582,51 +1561,6 @@
    "date_src": "feed",
    "verdict": "adopt",
    "reasons": []
-  },
-  {
-   "game": "全行业",
-   "title": "韩国最大短剧公司将IPO：上半年狂揽2.66亿，增78%，“出海”贡献6成收入",
-   "url": "https://www.baijing.cn/article/56514",
-   "status": 200,
-   "src_id": "baijing",
-   "src_name": "白鲸出海",
-   "pubdate": "2026-08-29",
-   "age_days": 2,
-   "date_src": "feed",
-   "verdict": "review",
-   "reasons": [
-    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
-   ]
-  },
-  {
-   "game": "全行业",
-   "title": "掌阅科技半年报：收入17.8亿，亏损收窄68%，短剧收入增长41%，盈利拐点将至？",
-   "url": "https://www.baijing.cn/article/56513",
-   "status": 200,
-   "src_id": "baijing",
-   "src_name": "白鲸出海",
-   "pubdate": "2026-08-29",
-   "age_days": 2,
-   "date_src": "feed",
-   "verdict": "review",
-   "reasons": [
-    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
-   ]
-  },
-  {
-   "game": "全行业",
-   "title": "巨人网络上半年营收同比增长182%，拟分红15亿元",
-   "url": "https://www.baijing.cn/article/56512",
-   "status": 200,
-   "src_id": "baijing",
-   "src_name": "白鲸出海",
-   "pubdate": "2026-08-29",
-   "age_days": 2,
-   "date_src": "feed",
-   "verdict": "review",
-   "reasons": [
-    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
-   ]
   },
   {
    "game": "全行业",
@@ -1783,8 +1717,8 @@
   },
   {
    "game": "全行业",
-   "title": "Guardians of the Universe explained: the comic book history of the oldest living beings in the DC universe",
-   "url": "https://www.gamesradar.com/entertainment/dc-tv-shows/guardians-of-the-universe-explained/",
+   "title": "Lanterns' dark new origin story for John Stewart changes DC Comics canon in a big way",
+   "url": "https://www.gamesradar.com/entertainment/dc-tv-shows/lanterns-dark-new-origin-story-for-john-stewart-changes-comics-canon-in-a-big-way/",
    "status": 200,
    "src_id": "gamesradar",
    "src_name": "GamesRadar+",
@@ -1796,8 +1730,8 @@
   },
   {
    "game": "全行业",
-   "title": "Lanterns' dark new origin story for John Stewart changes DC Comics canon in a big way",
-   "url": "https://www.gamesradar.com/entertainment/dc-tv-shows/lanterns-dark-new-origin-story-for-john-stewart-changes-comics-canon-in-a-big-way/",
+   "title": "Guardians of the Universe explained: the comic book history of the oldest living beings in the DC universe",
+   "url": "https://www.gamesradar.com/entertainment/dc-tv-shows/guardians-of-the-universe-explained/",
    "status": 200,
    "src_id": "gamesradar",
    "src_name": "GamesRadar+",
@@ -1988,6 +1922,21 @@
   },
   {
    "game": "全行业",
+   "title": "2026 Pokémon World Championships: All the winners from VGC to TCG",
+   "url": "https://www.videogameschronicle.com/news/2026-pokemon-world-championships-all-the-winners-from-vgc-to-tcg/",
+   "status": null,
+   "src_id": "vgc",
+   "src_name": "Video Games Chronicle",
+   "pubdate": "2026-08-31",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "adopt",
+   "reasons": [
+    "链接探活未过(疑似反爬/超时，RSS 已确认存活)"
+   ]
+  },
+  {
+   "game": "全行业",
    "title": "Four new Pokémon confirmed for Pokémon Unite as Zeta Division wins final Championship",
    "url": "https://www.videogameschronicle.com/news/four-new-pokemon-confirmed-for-pokemon-unite-as-zeta-division-wins-final-championship/",
    "status": null,
@@ -2048,21 +1997,6 @@
   },
   {
    "game": "全行业",
-   "title": "INTERVIEW: Mega Man Dual Override devs discuss Proto Man’s return, and lessons from Mega Man 11",
-   "url": "https://www.videogameschronicle.com/features/interviews/interview-mega-man-dual-override-devs-discuss-proto-mans-return-and-lessons-from-mega-man-11/",
-   "status": null,
-   "src_id": "vgc",
-   "src_name": "Video Games Chronicle",
-   "pubdate": "2026-08-29",
-   "age_days": 2,
-   "date_src": "feed",
-   "verdict": "adopt",
-   "reasons": [
-    "链接探活未过(疑似反爬/超时，RSS 已确认存活)"
-   ]
-  },
-  {
-   "game": "全行业",
    "title": "The Witcher 3: Wild Hunt Songs of the Past – Exploration, Environments and Combat Showcase",
    "url": "https://www.gamespot.com/videos/the-witcher-3-wild-hunt-songs-of-the-past-exploration-environments-and-combat-showcase/",
    "status": null,
@@ -2096,7 +2030,7 @@
    "game": "全行业",
    "title": "The Witcher 3: Songs Of The Past Is A Mystery Centered On Dandelion",
    "url": "https://www.gamespot.com/videos/the-witcher-3-songs-of-the-past-is-a-mystery-centered-on-dandelion/",
-   "status": 200,
+   "status": null,
    "src_id": "gamespot",
    "src_name": "GameSpot",
    "pubdate": "2026-08-29",
@@ -2104,6 +2038,7 @@
    "date_src": "feed",
    "verdict": "review",
    "reasons": [
+    "链接探活未过(疑似反爬/超时，RSS 已确认存活)",
     "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
    ]
   },

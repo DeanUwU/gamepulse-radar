@@ -1,74 +1,16 @@
 {
- "generated_at": "2026-08-31T11:58:53",
- "adopt_total": 70,
- "review_total": 53,
- "leak_total": 5,
+ "generated_at": "2026-09-01T10:49:43",
+ "adopt_total": 71,
+ "review_total": 46,
+ "leak_total": 1,
  "leaks": [
   {
-   "title": "漫步在游戏世界 08.29",
-   "url": "https://www.chuapp.com/article/291598.html",
-   "game": "全行业",
-   "src_name": "触乐网",
-   "verdict": "review",
-   "pubdate": "2025-11-10",
-   "date_unverified": false,
-   "n_src_cluster": 7,
-   "signal": 3,
-   "reasons": [
-    "多源印证(7家)",
-    "准入待复核被卡"
-   ]
-  },
-  {
-   "title": "上线送齐了！魔域口袋版启示服必冲福利",
-   "url": "https://news.17173.com/content/08312026/113008157.shtml",
-   "game": "全行业",
-   "src_name": "17173 网游资讯",
-   "verdict": "adopt",
-   "pubdate": null,
-   "date_unverified": false,
-   "n_src_cluster": 1,
-   "signal": 2,
-   "reasons": [
-    "强事件词"
-   ]
-  },
-  {
-   "title": "祝佳音08月29日0条评论 漫步在游戏世界 我们可以理直气壮地说，游戏就是艺术。",
-   "url": "http://www.chuapp.com/article/291598.html",
-   "game": "全行业",
-   "src_name": "触乐网·分类新闻",
-   "verdict": "adopt",
-   "pubdate": null,
-   "date_unverified": false,
-   "n_src_cluster": 7,
-   "signal": 3,
-   "reasons": [
-    "多源印证(7家)"
-   ]
-  },
-  {
-   "title": "PSVR《揭秘计划2：远古之战》发售 火星之战爆发",
-   "url": "https://www.gamersky.com/news/201809/1102376.shtml",
-   "game": "全行业",
-   "src_name": "游民星空·最新资讯",
-   "verdict": "review",
-   "pubdate": "2018-09-20",
-   "date_unverified": false,
-   "n_src_cluster": 1,
-   "signal": 2,
-   "reasons": [
-    "强事件词",
-    "准入待复核被卡"
-   ]
-  },
-  {
    "title": "活动 | 三国杀王者之战神王战广州收官 《三国杀：承天之弈》重磅首发",
-   "url": "https://www.nadianshi.com/2026/06/1413745",
+   "url": "http://www.nadianshi.com/2026/06/413745",
    "game": "全行业",
    "src_name": "手游那点事",
    "verdict": "review",
-   "pubdate": "2026-06-29",
+   "pubdate": "2026-06-01",
    "date_unverified": false,
    "n_src_cluster": 1,
    "signal": 2,

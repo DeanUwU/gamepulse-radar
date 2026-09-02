@@ -1678,6 +1678,32 @@
    "date_start": "2026-10-01",
    "date_end": "2026-10-01",
    "pubdate": "2026-08-14"
+  },
+  {
+   "id": "news_944b6b347f",
+   "kind": "cal",
+   "game": "伊莫",
+   "title": "伊莫：全球上线定档，PC 端首发",
+   "source_url": "https://www.bilibili.com/video/BV1wwhG6JEnc",
+   "source_name": "伊莫 将于 2026-09-16：全球上线定档，PC 端首发（B站官方 PV）",
+   "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://www.bilibili.com/video/BV1wwhG6JEnc\" title=\"伊莫\">PC 端全球上线</a>",
+   "date_start": "2026-09-16",
+   "date_end": "2026-09-16",
+   "pubdate": "2026-08-26",
+   "date_unverified": false
+  },
+  {
+   "id": "news_8d82aebf82",
+   "kind": "cal",
+   "game": "伊莫",
+   "title": "伊莫：全球上线定档，移动端",
+   "source_url": "https://www.bilibili.com/video/BV1wwhG6JEnc",
+   "source_name": "伊莫 将于 2026-09-23：全球上线定档，移动端（B站官方 PV）",
+   "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://www.bilibili.com/video/BV1wwhG6JEnc\" title=\"伊莫\">移动端全球上线</a>",
+   "date_start": "2026-09-23",
+   "date_end": "2026-09-23",
+   "pubdate": "2026-08-26",
+   "date_unverified": false
   }
  ],
  "feed_events": [

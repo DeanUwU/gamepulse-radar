@@ -1,9 +1,24 @@
 {
- "generated_at": "2026-09-02T11:04:40",
- "adopt_total": 70,
- "review_total": 47,
- "leak_total": 3,
+ "generated_at": "2026-09-02T11:24:51",
+ "adopt_total": 69,
+ "review_total": 48,
+ "leak_total": 4,
  "leaks": [
+  {
+   "title": "包贝尔新剧爆火登顶！此前出轨绯闻缠身",
+   "url": "https://www.gamersky.com/news/202609/2201064.shtml",
+   "game": "全行业",
+   "src_name": "游民星空新闻",
+   "verdict": "review",
+   "pubdate": null,
+   "date_unverified": false,
+   "n_src_cluster": 1,
+   "signal": 2,
+   "reasons": [
+    "强事件词",
+    "准入待复核被卡"
+   ]
+  },
   {
    "title": "陈可安19小时前0条评论 17年后，《剑网3》再出发 《剑网3》的江湖，以及即将在此发生的新故事。",
    "url": "http://www.chuapp.com/article/291602.html",
@@ -12,10 +27,10 @@
    "verdict": "adopt",
    "pubdate": null,
    "date_unverified": false,
-   "n_src_cluster": 19,
+   "n_src_cluster": 20,
    "signal": 3,
    "reasons": [
-    "多源印证(19家)"
+    "多源印证(20家)"
    ]
   },
   {

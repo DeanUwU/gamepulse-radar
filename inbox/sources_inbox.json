@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-09-02T11:03:00",
+ "fetched_at": "2026-09-02T11:23:25",
  "summary": {
   "sources_total": 75,
   "sources_alive": 71,
   "items_total": 164,
-  "items_dated": 126
+  "items_dated": 125
  },
  "sources": [
   {
@@ -512,6 +512,13 @@
    "error": null,
    "items": [
     {
+     "title": "《坦克世界》2.4版本“动力全开”今日上线",
+     "url": "https://www.gcores.com/articles/219119",
+     "pubdate": "2026-09-02",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
      "title": "让熟悉的旋律再次响起，GGG游戏节奏联欢夜正式公布！",
      "url": "https://www.gcores.com/articles/219115",
      "pubdate": "2026-09-02",
@@ -519,15 +526,8 @@
      "age_days": 0
     },
     {
-     "title": "《我是你的野兽》“退出时间”DLC正式公布",
-     "url": "https://www.gcores.com/articles/219113",
-     "pubdate": "2026-09-02",
-     "date_src": "feed",
-     "age_days": 0
-    },
-    {
-     "title": "《链在一起》现已实装2v2竞速模式",
-     "url": "https://www.gcores.com/articles/219111",
+     "title": "Steam周销量排行榜:《星球大战 零号连队》登顶|2026年8月第4周",
+     "url": "https://www.gcores.com/articles/219114",
      "pubdate": "2026-09-02",
      "date_src": "feed",
      "age_days": 0
@@ -553,22 +553,22 @@
      "age_days": null
     },
     {
-     "title": "本部太吹!《黎明行者》IGN西班牙7分:没耐心的玩不了",
-     "url": "https://www.gamersky.com/news/202609/2200322.shtml",
-     "pubdate": "2026-09-01",
-     "date_src": "text",
-     "age_days": 1
+     "title": "包贝尔新剧爆火登顶！此前出轨绯闻缠身",
+     "url": "https://www.gamersky.com/news/202609/2201064.shtml",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
     },
     {
-     "title": "《女神异闻录5》强开多倍DLSS5太猎奇 Joker变小丑",
-     "url": "https://www.gamersky.com/news/202609/2201074.shtml",
+     "title": "《GTA6》道德会玩\"崩\"：杀疯了游戏会彻底放弃管你",
+     "url": "https://www.gamersky.com/news/202609/2201098.shtml",
      "pubdate": "2026-09-02",
      "date_src": "text",
      "age_days": 0
     }
    ],
    "extraction": "extracted",
-   "dated_items": 2
+   "dated_items": 1
   },
   {
    "id": "chuapp",
@@ -682,6 +682,13 @@
    "error": null,
    "items": [
     {
+     "title": "PLAYISM Game Show: TGS 2026 Preview set for September 10",
+     "url": "https://www.gematsu.com/2026/09/playism-game-show-tgs-2026-preview-set-for-september-10",
+     "pubdate": "2026-09-02",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
      "title": "Mario Kart 8 Deluxe version 4.0.0 update now available, adds Switch 2 enhancements",
      "url": "https://www.gematsu.com/2026/09/mario-kart-8-deluxe-version-4-0-0-update-now-available-adds-switch-2-enhancements",
      "pubdate": "2026-09-02",
@@ -691,13 +698,6 @@
     {
      "title": "NES – Nintendo Classics adds Ninja Gaiden III: The Ancient Ship of Doom, R.C. PRO-AM II, and Ikari Warriors",
      "url": "https://www.gematsu.com/2026/09/nes-nintendo-classics-adds-ninja-gaiden-iii-the-ancient-ship-of-doom-r-c-pro-am-ii-and-ikari-warriors",
-     "pubdate": "2026-09-02",
-     "date_src": "feed",
-     "age_days": 0
-    },
-    {
-     "title": "Dragon’s Dogma II: Dark Arisen ‘Relic Expedition Gameplay Overview’ trailer",
-     "url": "https://www.gematsu.com/2026/09/dragons-dogma-ii-dark-arisen-relic-expedition-gameplay-overview-trailer",
      "pubdate": "2026-09-02",
      "date_src": "feed",
      "age_days": 0
@@ -1467,7 +1467,7 @@
      "pubdate": "2026-09-02",
      "date_src": "feed",
      "extra": {
-      "views": 1660,
+      "views": 4533,
       "synopsis": "近日，Meta 旗下超级智能实验室（Superintelligence Labs）正式推出实时语音识别模型 Muse Voice Transcribe。",
       "from": "智通财经App"
      },
@@ -1479,7 +1479,7 @@
      "pubdate": "2026-09-02",
      "date_src": "feed",
      "extra": {
-      "views": 4119,
+      "views": 6908,
       "synopsis": "把水杯做时尚单品需要几步？",
       "from": "兔克出海"
      },
@@ -1491,7 +1491,7 @@
      "pubdate": "2026-09-02",
      "date_src": "feed",
      "extra": {
-      "views": 7094,
+      "views": 9583,
       "synopsis": "电商新风口已至。",
       "from": "兔克出海"
      },
@@ -1503,7 +1503,7 @@
      "pubdate": "2026-09-01",
      "date_src": "feed",
      "extra": {
-      "views": 31937,
+      "views": 33247,
       "synopsis": "免费体验越完整，用户越要付费？",
       "from": "白鲸出海"
      },
@@ -1515,7 +1515,7 @@
      "pubdate": "2026-09-01",
      "date_src": "feed",
      "extra": {
-      "views": 33565,
+      "views": 34874,
       "synopsis": "在这半年里，它到底做了什么？",
       "from": "AMZ123跨境电商"
      },
@@ -1527,7 +1527,7 @@
      "pubdate": "2026-09-01",
      "date_src": "feed",
      "extra": {
-      "views": 24358,
+      "views": 25789,
       "synopsis": "Google 正在把短剧的获客、分发、广告商业化做得越来越完整。",
       "from": "Android GO出海"
      },
@@ -1539,7 +1539,7 @@
      "pubdate": "2026-09-01",
      "date_src": "feed",
      "extra": {
-      "views": 28590,
+      "views": 29950,
       "synopsis": "营收狂涨，利润却几乎“归零”，这份极具反差的财报背后，究竟发生了什么？",
       "from": "品牌方舟BrandArk"
      },
@@ -1551,7 +1551,7 @@
      "pubdate": "2026-09-01",
      "date_src": "feed",
      "extra": {
-      "views": 29144,
+      "views": 30418,
       "synopsis": "Ajaib 重新进入了资本的视野，但还没有真正重新进入行业的视野。",
       "from": "墨腾创投"
      },

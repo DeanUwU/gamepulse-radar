@@ -5,7 +5,7 @@
   "event_count": 100,
   "note": "scaffold 中的 <<EVT_i>> 由 gen_calendar.py 用 events[i].anchor 替换 __SRC__ 回填。",
   "feed_count": 40,
-  "feed_seq": 526,
+  "feed_seq": 535,
   "last_update": "2026-09-02",
   "date_migrated": "2026-08-18"
  },
@@ -1704,22 +1704,34 @@
    "date_end": "2026-09-23",
    "pubdate": "2026-08-26",
    "date_unverified": false
+  },
+  {
+   "id": "release_d0ca3efbba",
+   "kind": "cal",
+   "game": "终极角逐",
+   "title": "终极角逐：上线 11月18日（2026-11-18）（2026-11-18 上线）",
+   "source_url": "https://www.chuapp.com/article/290968.html",
+   "source_name": "终极角逐 2026-11-18 上线（触乐网）",
+   "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://www.chuapp.com/article/290968.html\" title=\"终极角逐\">上线 11月18日（2026-11-18）</a>",
+   "date_start": "2026-11-18",
+   "date_end": "2026-11-18",
+   "pubdate": null
+  },
+  {
+   "id": "release_7599b976bb",
+   "kind": "cal",
+   "game": "王者万象棋",
+   "title": "王者万象棋：正式定档，预约突破 7000 万（2026-09-10 上线）",
+   "source_url": "https://www.youxituoluo.com/534838.html",
+   "source_name": "王者万象棋 2026-09-10 上线（游戏陀螺）",
+   "anchor": "<a class=\"cal-ev\" target=\"_blank\" href=\"https://www.youxituoluo.com/534838.html\" title=\"王者万象棋\">正式定档，预约突破 7000 万</a>",
+   "date_start": "2026-09-10",
+   "date_end": "2026-09-10",
+   "pubdate": "2026-08-28",
+   "date_unverified": false
   }
  ],
  "feed_events": [
-  {
-   "id": "F424",
-   "kind": "feed",
-   "game": "全行业",
-   "title": "殖民模拟 × 4X 策略游戏《征服纪：臣民之心》正式发表",
-   "source_url": "https://www.gcores.com/articles/218873",
-   "source_name": "机核 GCORES",
-   "src_id": "gcores",
-   "pubdate": "2026-08-28",
-   "first_seen": "2026-08-28",
-   "date_unverified": false,
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"殖民模拟 × 4X 策略游戏《征服纪：臣民之心》正式发表（来源：机核 GCORES）\" style=\"color:#4da3ff;text-decoration:none\">殖民模拟 × 4X 策略游戏《征服纪：臣民之心》正式发表</a></td><td>机核 GCORES</td></tr>"
-  },
   {
    "id": "F445",
    "kind": "feed",
@@ -2202,7 +2214,20 @@
    "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"9月预计12款新游上线：腾讯《王者万象棋》领衔，莉莉丝,完美,B站,趣加逐个登场（来源：GameLook）\" style=\"color:#4da3ff;text-decoration:none\">9月预计12款新游上线：腾讯《王者万象棋》领衔，莉莉丝,完美,B站,趣加逐个登场</a></td><td>GameLook</td></tr>"
   },
   {
-   "id": "F525",
+   "id": "F527",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "《坦克世界》2.4版本“动力全开”今日上线",
+   "source_url": "https://www.gcores.com/articles/219119",
+   "source_name": "机核 GCORES",
+   "src_id": "gcores",
+   "pubdate": "2026-09-02",
+   "first_seen": "2026-09-02",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"《坦克世界》2.4版本“动力全开”今日上线（来源：机核 GCORES）\" style=\"color:#4da3ff;text-decoration:none\">《坦克世界》2.4版本“动力全开”今日上线</a></td><td>机核 GCORES</td></tr>"
+  },
+  {
+   "id": "F534",
    "kind": "feed",
    "game": "永劫无间",
    "title": "NBPL职业联赛",
@@ -2215,7 +2240,7 @@
    "anchor": "<tr><td><b style=\"color:var(--gold)\">永劫无间</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"NBPL职业联赛（来源：永劫无间官方更新）\" style=\"color:#4da3ff;text-decoration:none\">NBPL职业联赛</a></td><td>永劫无间官方更新</td></tr>"
   },
   {
-   "id": "F526",
+   "id": "F535",
    "kind": "feed",
    "game": "三角洲行动",
    "title": "烽火职业联赛",

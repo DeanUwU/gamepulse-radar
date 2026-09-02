@@ -358,6 +358,28 @@ try:
 except Exception as _e:
     log("    tgmeng 卡片+badge 注入跳过（非阻断）：" + repr(_e)[:160])
 
+# ---------- ③-9 定档回流（防漏报·手段2）：新闻池/信源快报 -> release_dates -> events[] ----------
+# collector_release_dates.py 只扫 watchlist.json「必盯名单」，名单外的定档消息
+# （如《伊莫》B 站 PV 定档）全站其他板块都看得到，唯独进不了日历 events[]。
+# 此步从近 7 天 feed_events + 已准入信源快报里，用「具体日期 + 定档/公测/发售」句式
+# 回捞定档节点，再复用 promote_release_dates.py 提升进 events[]（去重与红线都在那边把关）。
+# 必须排在 gen_calendar 之前，否则当天回捞的定档要等次日才在日历里出现。
+if os.path.exists(os.path.join(BASE, "events.json")):
+    log("【③-9 定档回流】运行 scan_release_from_feed.py（新闻池/快报 -> release_dates）...")
+    rs = subprocess.run([PY, "scan_release_from_feed.py"], cwd=BASE, capture_output=True, text=True, encoding="utf-8", env=ENV)
+    log("    " + (rs.stdout or "").strip())
+    if rs.returncode != 0:
+        problems.append(("日历", "scan_release_from_feed.py 失败", rs.stderr.strip()[:200], "源覆盖", "优化",
+                         "检查 feed_events / sources_curated 读取与日期解析"))
+    else:
+        log("【③-9 定档提升】运行 promote_release_dates.py（release_dates -> events[] 日历）...")
+        rp = subprocess.run([PY, "promote_release_dates.py"], cwd=BASE, capture_output=True, text=True, encoding="utf-8", env=ENV)
+        if rp.returncode != 0:
+            problems.append(("日历", "promote_release_dates.py 失败", rp.stderr.strip()[:200], "源覆盖", "优化",
+                             "检查 release_dates 条目是否缺 release_date / source_url"))
+        else:
+            log("    " + (rp.stdout or "").strip())
+
 # ---------- ④-0 由 events.json 重建日历 section（注入 index.html） ----------
 # 注意：本步必须在 refresh_content（③-4.5）之后运行，因为两者都读/写 index.html；
 # gen_calendar 替换 #cal/#forward 区块，refresh_content 替换 masthead/brief/visual/TOP10/hot，

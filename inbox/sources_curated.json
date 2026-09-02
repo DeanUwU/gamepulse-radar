@@ -1,17 +1,15 @@
 {
- "generated_at": "2026-09-02T11:04:33",
+ "generated_at": "2026-09-02T11:24:45",
  "summary": {
   "total": 157,
-  "adopt": 70,
-  "review": 47,
+  "adopt": 69,
+  "review": 48,
   "reject": 40,
   "stale_rejected": 36,
-  "dated": 126,
-  "new_reject": 1
+  "dated": 125,
+  "new_reject": 0
  },
- "new_rejects": [
-  "https://blog.ja.playstation.com/2026/09/02/20260902-tbod-launch-reminder-s/"
- ],
+ "new_rejects": [],
  "items": [
   {
    "game": "三国志·战略版",
@@ -327,6 +325,19 @@
   },
   {
    "game": "全行业",
+   "title": "《坦克世界》2.4版本“动力全开”今日上线",
+   "url": "https://www.gcores.com/articles/219119",
+   "status": 200,
+   "src_id": "gcores",
+   "src_name": "机核 GCORES",
+   "pubdate": "2026-09-02",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "adopt",
+   "reasons": []
+  },
+  {
+   "game": "全行业",
    "title": "让熟悉的旋律再次响起，GGG游戏节奏联欢夜正式公布！",
    "url": "https://www.gcores.com/articles/219115",
    "status": 200,
@@ -340,21 +351,8 @@
   },
   {
    "game": "全行业",
-   "title": "《我是你的野兽》“退出时间”DLC正式公布",
-   "url": "https://www.gcores.com/articles/219113",
-   "status": 200,
-   "src_id": "gcores",
-   "src_name": "机核 GCORES",
-   "pubdate": "2026-09-02",
-   "age_days": 0,
-   "date_src": "feed",
-   "verdict": "adopt",
-   "reasons": []
-  },
-  {
-   "game": "全行业",
-   "title": "《链在一起》现已实装2v2竞速模式",
-   "url": "https://www.gcores.com/articles/219111",
+   "title": "Steam周销量排行榜:《星球大战 零号连队》登顶|2026年8月第4周",
+   "url": "https://www.gcores.com/articles/219114",
    "status": 200,
    "src_id": "gcores",
    "src_name": "机核 GCORES",
@@ -379,21 +377,23 @@
   },
   {
    "game": "全行业",
-   "title": "本部太吹!《黎明行者》IGN西班牙7分:没耐心的玩不了",
-   "url": "https://www.gamersky.com/news/202609/2200322.shtml",
+   "title": "包贝尔新剧爆火登顶！此前出轨绯闻缠身",
+   "url": "https://www.gamersky.com/news/202609/2201064.shtml",
    "status": 200,
    "src_id": "gamersky",
    "src_name": "游民星空新闻",
-   "pubdate": "2026-09-01",
-   "age_days": 1,
-   "date_src": "text",
-   "verdict": "adopt",
-   "reasons": []
+   "pubdate": null,
+   "age_days": null,
+   "date_src": null,
+   "verdict": "review",
+   "reasons": [
+    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
+   ]
   },
   {
    "game": "全行业",
-   "title": "《女神异闻录5》强开多倍DLSS5太猎奇 Joker变小丑",
-   "url": "https://www.gamersky.com/news/202609/2201074.shtml",
+   "title": "《GTA6》道德会玩\"崩\"：杀疯了游戏会彻底放弃管你",
+   "url": "https://www.gamersky.com/news/202609/2201098.shtml",
    "status": 200,
    "src_id": "gamersky",
    "src_name": "游民星空新闻",
@@ -527,6 +527,21 @@
   },
   {
    "game": "全行业",
+   "title": "PLAYISM Game Show: TGS 2026 Preview set for September 10",
+   "url": "https://www.gematsu.com/2026/09/playism-game-show-tgs-2026-preview-set-for-september-10",
+   "status": null,
+   "src_id": "gematsu",
+   "src_name": "Gematsu 新作情报",
+   "pubdate": "2026-09-02",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "adopt",
+   "reasons": [
+    "链接探活未过(疑似反爬/超时，RSS 已确认存活)"
+   ]
+  },
+  {
+   "game": "全行业",
    "title": "Mario Kart 8 Deluxe version 4.0.0 update now available, adds Switch 2 enhancements",
    "url": "https://www.gematsu.com/2026/09/mario-kart-8-deluxe-version-4-0-0-update-now-available-adds-switch-2-enhancements",
    "status": null,
@@ -554,21 +569,6 @@
    "reasons": [
     "链接探活未过(疑似反爬/超时，RSS 已确认存活)",
     "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
-   ]
-  },
-  {
-   "game": "全行业",
-   "title": "Dragon’s Dogma II: Dark Arisen ‘Relic Expedition Gameplay Overview’ trailer",
-   "url": "https://www.gematsu.com/2026/09/dragons-dogma-ii-dark-arisen-relic-expedition-gameplay-overview-trailer",
-   "status": null,
-   "src_id": "gematsu",
-   "src_name": "Gematsu 新作情报",
-   "pubdate": "2026-09-02",
-   "age_days": 0,
-   "date_src": "feed",
-   "verdict": "adopt",
-   "reasons": [
-    "链接探活未过(疑似反爬/超时，RSS 已确认存活)"
    ]
   },
   {
@@ -2003,7 +2003,7 @@
    "game": "全行业",
    "title": "Sony To Pay Out Nearly $8 Million In Class-Action Settlement Over Game Prices",
    "url": "https://www.gamespot.com/articles/sony-to-pay-out-nearly-8-million-in-class-action-settlement-over-game-prices/",
-   "status": null,
+   "status": 200,
    "src_id": "gamespot",
    "src_name": "GameSpot",
    "pubdate": "2026-09-01",
@@ -2011,7 +2011,6 @@
    "date_src": "feed",
    "verdict": "review",
    "reasons": [
-    "链接探活未过(疑似反爬/超时，RSS 已确认存活)",
     "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
    ]
   },

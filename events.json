@@ -5,7 +5,7 @@
   "event_count": 100,
   "note": "scaffold 中的 <<EVT_i>> 由 gen_calendar.py 用 events[i].anchor 替换 __SRC__ 回填。",
   "feed_count": 40,
-  "feed_seq": 521,
+  "feed_seq": 526,
   "last_update": "2026-09-02",
   "date_migrated": "2026-08-18"
  },
@@ -1695,19 +1695,6 @@
    "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"殖民模拟 × 4X 策略游戏《征服纪：臣民之心》正式发表（来源：机核 GCORES）\" style=\"color:#4da3ff;text-decoration:none\">殖民模拟 × 4X 策略游戏《征服纪：臣民之心》正式发表</a></td><td>机核 GCORES</td></tr>"
   },
   {
-   "id": "F427",
-   "kind": "feed",
-   "game": "全行业",
-   "title": "“游戏禅师”陈星汉要做发行？官宣TGC发行品牌，助力游戏创作者“梦想成真”！",
-   "source_url": "http://www.gamelook.com.cn/2026/08/600894/",
-   "source_name": "GameLook",
-   "src_id": "gamelook",
-   "pubdate": "2026-08-28",
-   "first_seen": "2026-08-28",
-   "date_unverified": false,
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"“游戏禅师”陈星汉要做发行？官宣TGC发行品牌，助力游戏创作者“梦想成真”！（来源：GameLook）\" style=\"color:#4da3ff;text-decoration:none\">“游戏禅师”陈星汉要做发行？官宣TGC发行品牌，助力游戏创作者“梦想成真”！</a></td><td>GameLook</td></tr>"
-  },
-  {
    "id": "F445",
    "kind": "feed",
    "game": "全行业",
@@ -2176,7 +2163,20 @@
    "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"Turok: Origins Is Not A Live-Service Game, But I…（来源：Game Informer）\" style=\"color:#4da3ff;text-decoration:none\">Turok: Origins Is Not A Live-Service Game, But I…</a></td><td>Game Informer</td></tr>"
   },
   {
-   "id": "F520",
+   "id": "F522",
+   "kind": "feed",
+   "game": "全行业",
+   "title": "9月预计12款新游上线：腾讯《王者万象棋》领衔，莉莉丝,完美,B站,趣加逐个登场",
+   "source_url": "http://www.gamelook.com.cn/2026/09/601320/",
+   "source_name": "GameLook",
+   "src_id": "gamelook",
+   "pubdate": "2026-09-02",
+   "first_seen": "2026-09-02",
+   "date_unverified": false,
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"9月预计12款新游上线：腾讯《王者万象棋》领衔，莉莉丝,完美,B站,趣加逐个登场（来源：GameLook）\" style=\"color:#4da3ff;text-decoration:none\">9月预计12款新游上线：腾讯《王者万象棋》领衔，莉莉丝,完美,B站,趣加逐个登场</a></td><td>GameLook</td></tr>"
+  },
+  {
+   "id": "F525",
    "kind": "feed",
    "game": "永劫无间",
    "title": "NBPL职业联赛",
@@ -2189,7 +2189,7 @@
    "anchor": "<tr><td><b style=\"color:var(--gold)\">永劫无间</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"NBPL职业联赛（来源：永劫无间官方更新）\" style=\"color:#4da3ff;text-decoration:none\">NBPL职业联赛</a></td><td>永劫无间官方更新</td></tr>"
   },
   {
-   "id": "F521",
+   "id": "F526",
    "kind": "feed",
    "game": "三角洲行动",
    "title": "烽火职业联赛",

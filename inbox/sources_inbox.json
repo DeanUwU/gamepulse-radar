@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-09-02T10:46:51",
+ "fetched_at": "2026-09-02T11:03:00",
  "summary": {
   "sources_total": 75,
   "sources_alive": 71,
   "items_total": 164,
-  "items_dated": 127
+  "items_dated": 126
  },
  "sources": [
   {
@@ -553,15 +553,15 @@
      "age_days": null
     },
     {
-     "title": "《女神异闻录5》强开多倍DLSS5太猎奇 Joker变小丑",
-     "url": "https://www.gamersky.com/news/202609/2201074.shtml",
-     "pubdate": "2026-09-02",
+     "title": "本部太吹!《黎明行者》IGN西班牙7分:没耐心的玩不了",
+     "url": "https://www.gamersky.com/news/202609/2200322.shtml",
+     "pubdate": "2026-09-01",
      "date_src": "text",
-     "age_days": 0
+     "age_days": 1
     },
     {
-     "title": "IGN9分的含金量!《黎明行者》Steam全球热销榜登顶",
-     "url": "https://www.gamersky.com/news/202609/2201061.shtml",
+     "title": "《女神异闻录5》强开多倍DLSS5太猎奇 Joker变小丑",
+     "url": "https://www.gamersky.com/news/202609/2201074.shtml",
      "pubdate": "2026-09-02",
      "date_src": "text",
      "age_days": 0
@@ -662,15 +662,15 @@
      "age_days": null
     },
     {
-     "title": "《坦克世界》2.4版本“动力全开”今日上线——2026年度最大规模更新",
-     "url": "https://news.17173.com/content/09022026/102114703.shtml",
-     "pubdate": "2026-09-02",
-     "date_src": "text",
-     "age_days": 0
+     "title": "《蜂巢：异星物语》今日开放Demo试玩，正式发售日期揭晓",
+     "url": "https://news.17173.com/content/09022026/105209402.shtml",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
     }
    ],
    "extraction": "extracted",
-   "dated_items": 1
+   "dated_items": 0
   },
   {
    "id": "gematsu",
@@ -1134,8 +1134,22 @@
    "error": null,
    "items": [
     {
+     "title": "9月预计12款新游上线：腾讯《王者万象棋》领衔，莉莉丝,完美,B站,趣加逐个登场",
+     "url": "http://www.gamelook.com.cn/2026/09/601320/",
+     "pubdate": "2026-09-02",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
      "title": "程序员吐槽：不要给“编故事的作家”做游戏，“5个月大改4次”太折腾人了",
      "url": "http://www.gamelook.com.cn/2026/09/601305/",
+     "pubdate": "2026-09-02",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
+     "title": "“半个游戏圈都投了”！Tripo AI母公司VAST融资30亿元，三七,完美,延趣入局当股东",
+     "url": "http://www.gamelook.com.cn/2026/09/601316/",
      "pubdate": "2026-09-02",
      "date_src": "feed",
      "age_days": 0
@@ -1153,20 +1167,6 @@
      "pubdate": "2026-09-02",
      "date_src": "feed",
      "age_days": 0
-    },
-    {
-     "title": "怪现象热议：为何90年代的“游戏业宗师”，他们之后再无成功游戏？",
-     "url": "http://www.gamelook.com.cn/2026/09/601266/",
-     "pubdate": "2026-09-01",
-     "date_src": "feed",
-     "age_days": 1
-    },
-    {
-     "title": "对话腾讯李纳川：腾讯游戏的使命是什么？",
-     "url": "http://www.gamelook.com.cn/2026/09/601248/",
-     "pubdate": "2026-09-01",
-     "date_src": "feed",
-     "age_days": 1
     }
    ],
    "extraction": "rss",
@@ -1339,6 +1339,13 @@
    "error": null,
    "items": [
     {
+     "title": "『The Blood of Dawnwalker』明日9月3日発売！ 夜と昼の狭間を生きる若者が家族のために運命へ抗う──",
+     "url": "https://blog.ja.playstation.com/2026/09/02/20260902-tbod-launch-reminder-s/",
+     "pubdate": "2026-09-02",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
      "title": "『Marvel’s Wolverine』制作の舞台裏──Insomniac Gamesが日本で行なった現地取材",
      "url": "https://blog.ja.playstation.com/2026/09/02/20260902-marvels-wolverine-bts-o/",
      "pubdate": "2026-09-01",
@@ -1355,13 +1362,6 @@
     {
      "title": "日本時間9月3日（木）午後10時から「State of Play」「State of Play 日本」を連続放送！",
      "url": "https://blog.ja.playstation.com/2026/08/31/20260831-sop-announcement-o/",
-     "pubdate": "2026-08-31",
-     "date_src": "feed",
-     "age_days": 2
-    },
-    {
-     "title": "『Marvel’s Wolverine』の最新トレーラーが公開！ ローガンのミュータント能力や多彩なゲームシステムに迫る",
-     "url": "https://blog.ja.playstation.com/2026/08/31/20260831-marvels-wolverine-pre-launch-update-o/",
      "pubdate": "2026-08-31",
      "date_src": "feed",
      "age_days": 2
@@ -1462,12 +1462,24 @@
    "error": null,
    "items": [
     {
+     "title": "Meta杀入实时语音转写赛道：基准测试力压OpenAI、谷歌，API价格低至每小时0.18美元",
+     "url": "https://www.baijing.cn/article/56551",
+     "pubdate": "2026-09-02",
+     "date_src": "feed",
+     "extra": {
+      "views": 1660,
+      "synopsis": "近日，Meta 旗下超级智能实验室（Superintelligence Labs）正式推出实时语音识别模型 Muse Voice Transcribe。",
+      "from": "智通财经App"
+     },
+     "age_days": 0
+    },
+    {
      "title": "68万件销量、1667万美元GMV，TikTok正在把这个老品类重新做热",
      "url": "https://www.baijing.cn/article/56550",
      "pubdate": "2026-09-02",
      "date_src": "feed",
      "extra": {
-      "views": 1567,
+      "views": 4119,
       "synopsis": "把水杯做时尚单品需要几步？",
       "from": "兔克出海"
      },
@@ -1479,7 +1491,7 @@
      "pubdate": "2026-09-02",
      "date_src": "feed",
      "extra": {
-      "views": 4909,
+      "views": 7094,
       "synopsis": "电商新风口已至。",
       "from": "兔克出海"
      },
@@ -1491,7 +1503,7 @@
      "pubdate": "2026-09-01",
      "date_src": "feed",
      "extra": {
-      "views": 30657,
+      "views": 31937,
       "synopsis": "免费体验越完整，用户越要付费？",
       "from": "白鲸出海"
      },
@@ -1503,7 +1515,7 @@
      "pubdate": "2026-09-01",
      "date_src": "feed",
      "extra": {
-      "views": 32301,
+      "views": 33565,
       "synopsis": "在这半年里，它到底做了什么？",
       "from": "AMZ123跨境电商"
      },
@@ -1515,7 +1527,7 @@
      "pubdate": "2026-09-01",
      "date_src": "feed",
      "extra": {
-      "views": 23151,
+      "views": 24358,
       "synopsis": "Google 正在把短剧的获客、分发、广告商业化做得越来越完整。",
       "from": "Android GO出海"
      },
@@ -1527,7 +1539,7 @@
      "pubdate": "2026-09-01",
      "date_src": "feed",
      "extra": {
-      "views": 27358,
+      "views": 28590,
       "synopsis": "营收狂涨，利润却几乎“归零”，这份极具反差的财报背后，究竟发生了什么？",
       "from": "品牌方舟BrandArk"
      },
@@ -1539,21 +1551,9 @@
      "pubdate": "2026-09-01",
      "date_src": "feed",
      "extra": {
-      "views": 27930,
+      "views": 29144,
       "synopsis": "Ajaib 重新进入了资本的视野，但还没有真正重新进入行业的视野。",
       "from": "墨腾创投"
-     },
-     "age_days": 1
-    },
-    {
-     "title": "三消没跑出来，换成二合后，《Hollywood Merge》冲上月流水Top 1",
-     "url": "https://www.baijing.cn/article/56544",
-     "pubdate": "2026-09-01",
-     "date_src": "feed",
-     "extra": {
-      "views": 27648,
-      "synopsis": "同样的题材，换了一套玩法，结果却明显不同。",
-      "from": "Enjoy出海开发者服务平台"
      },
      "age_days": 1
     }
@@ -1721,43 +1721,43 @@
    "error": null,
    "items": [
     {
-     "title": "The Harry Potter 11-Film 4K Blu-ray Collection Drops to a New Low Price",
-     "url": "https://www.ign.com/articles/the-harry-potter-11-film-4k-blu-ray-collection-drops-to-a-new-low-price",
+     "title": "The 65\" Samsung S90F 4K QD-OLED TV Is Better Than Its 2026 Successor, and It's on Sale for Labor Day",
+     "url": "https://www.ign.com/articles/samsung-s65f-4k-oled-tv-deal-ebay-labor-day-sale",
+     "pubdate": "2026-09-02",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
+     "title": "Star Wars Zero Company Was Originally Pitched as a Titanfall Universe Game",
+     "url": "https://www.ign.com/articles/star-wars-zero-company-was-originally-pitched-as-a-titanfall-universe-game",
      "pubdate": "2026-09-01",
      "date_src": "feed",
      "age_days": 1
     },
     {
-     "title": "Resident Evil Movie Popcorn Bucket Is an Organ Transplant Bag",
-     "url": "https://www.ign.com/articles/resident-evil-popcorn-bucket-organ-transplant-bag",
+     "title": "Stanley Kubrick’s Daughter Responds to Eyes Wide Shut Conspiracy Theories",
+     "url": "https://www.ign.com/articles/stanley-kubrick-daughter-eyes-wide-shut-conspiracy-theories",
      "pubdate": "2026-09-01",
      "date_src": "feed",
      "age_days": 1
     },
     {
-     "title": "Save 45% Off Sony's Pulse Gaming Headsets and Earbuds for the PlayStation 5 Console",
-     "url": "https://www.ign.com/articles/sony-pulse-playstation-gaming-headset-deal-september-2026",
+     "title": "CD Projekt Red Boss 'Isn't Worried' About Delays for Next-Gen Consoles as RAM Prices Soar",
+     "url": "https://www.ign.com/articles/cd-projekt-red-boss-isnt-worried-about-delays-for-next-gen-consoles-as-ram-prices-soar",
      "pubdate": "2026-09-01",
      "date_src": "feed",
      "age_days": 1
     },
     {
-     "title": "The Blood of Dawnwalker Proves Unreal 5 Can Be Done Well",
-     "url": "https://www.ign.com/articles/the-blood-of-dawnwalker-proves-unreal-5-can-be-done-well",
+     "title": "GTA 6's Morality Meter Will Reportedly 'Shatter' and Make You Irredeemable If You Cause Too Much Mayhem",
+     "url": "https://www.ign.com/articles/gta-6s-morality-meter-will-reportedly-shatter-and-make-you-irredeemable-if-you-cause-too-much-mayhem",
      "pubdate": "2026-09-01",
      "date_src": "feed",
      "age_days": 1
     },
     {
-     "title": "Christopher Judge Physically Prepared to Play Kratos in Live-Action God of War Series, but Backed Down for This Reason",
-     "url": "https://www.ign.com/articles/christopher-judge-physically-prepared-to-play-kratos-in-live-action-god-of-war-series-but-backed-down-for-this-reason",
-     "pubdate": "2026-09-01",
-     "date_src": "feed",
-     "age_days": 1
-    },
-    {
-     "title": "15 Studio Ghibli Movies Are Getting Blu-ray Steelbook Reprints – Preorders Are Live",
-     "url": "https://www.ign.com/articles/15-studio-ghibli-movies-are-getting-blu-ray-steelbook-reprints-preorders-are-live",
+     "title": "Get an Asus ROG Xbox Ally X for $899.99, the Least Expensive of the Ultra Premium Handheld Gaming PCs",
+     "url": "https://www.ign.com/articles/asus-rog-xbox-ally-x-handheld-gaming-pc-deal-september-2026",
      "pubdate": "2026-09-01",
      "date_src": "feed",
      "age_days": 1

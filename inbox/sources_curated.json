@@ -1,19 +1,16 @@
 {
- "generated_at": "2026-09-02T10:48:32",
+ "generated_at": "2026-09-02T11:04:33",
  "summary": {
   "total": 157,
-  "adopt": 69,
-  "review": 48,
+  "adopt": 70,
+  "review": 47,
   "reject": 40,
   "stale_rejected": 36,
-  "dated": 127,
-  "new_reject": 4
+  "dated": 126,
+  "new_reject": 1
  },
  "new_rejects": [
-  "https://yys.163.com/news/update/20260827/23024_1312449.html",
-  "https://store.steampowered.com/news/app/570/view/680759856779493378",
-  "https://store.steampowered.com/news/app/2507950/view/694270655661605314",
-  "https://blog.ja.playstation.com/2026/09/02/20260902-marvels-wolverine-bts-o/"
+  "https://blog.ja.playstation.com/2026/09/02/20260902-tbod-launch-reminder-s/"
  ],
  "items": [
   {
@@ -382,21 +379,21 @@
   },
   {
    "game": "全行业",
-   "title": "《女神异闻录5》强开多倍DLSS5太猎奇 Joker变小丑",
-   "url": "https://www.gamersky.com/news/202609/2201074.shtml",
+   "title": "本部太吹!《黎明行者》IGN西班牙7分:没耐心的玩不了",
+   "url": "https://www.gamersky.com/news/202609/2200322.shtml",
    "status": 200,
    "src_id": "gamersky",
    "src_name": "游民星空新闻",
-   "pubdate": "2026-09-02",
-   "age_days": 0,
+   "pubdate": "2026-09-01",
+   "age_days": 1,
    "date_src": "text",
    "verdict": "adopt",
    "reasons": []
   },
   {
    "game": "全行业",
-   "title": "IGN9分的含金量!《黎明行者》Steam全球热销榜登顶",
-   "url": "https://www.gamersky.com/news/202609/2201061.shtml",
+   "title": "《女神异闻录5》强开多倍DLSS5太猎奇 Joker变小丑",
+   "url": "https://www.gamersky.com/news/202609/2201074.shtml",
    "status": 200,
    "src_id": "gamersky",
    "src_name": "游民星空新闻",
@@ -517,14 +514,14 @@
   },
   {
    "game": "全行业",
-   "title": "《坦克世界》2.4版本“动力全开”今日上线——2026年度最大规模更新",
-   "url": "https://news.17173.com/content/09022026/102114703.shtml",
+   "title": "《蜂巢：异星物语》今日开放Demo试玩，正式发售日期揭晓",
+   "url": "https://news.17173.com/content/09022026/105209402.shtml",
    "status": 200,
    "src_id": "news17173",
    "src_name": "17173 网游资讯",
-   "pubdate": "2026-09-02",
-   "age_days": 0,
-   "date_src": "text",
+   "pubdate": null,
+   "age_days": null,
+   "date_src": null,
    "verdict": "adopt",
    "reasons": []
   },
@@ -1007,8 +1004,34 @@
   },
   {
    "game": "全行业",
+   "title": "9月预计12款新游上线：腾讯《王者万象棋》领衔，莉莉丝,完美,B站,趣加逐个登场",
+   "url": "http://www.gamelook.com.cn/2026/09/601320/",
+   "status": 200,
+   "src_id": "gamelook",
+   "src_name": "GameLook",
+   "pubdate": "2026-09-02",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "adopt",
+   "reasons": []
+  },
+  {
+   "game": "全行业",
    "title": "程序员吐槽：不要给“编故事的作家”做游戏，“5个月大改4次”太折腾人了",
    "url": "http://www.gamelook.com.cn/2026/09/601305/",
+   "status": 200,
+   "src_id": "gamelook",
+   "src_name": "GameLook",
+   "pubdate": "2026-09-02",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "adopt",
+   "reasons": []
+  },
+  {
+   "game": "全行业",
+   "title": "“半个游戏圈都投了”！Tripo AI母公司VAST融资30亿元，三七,完美,延趣入局当股东",
+   "url": "http://www.gamelook.com.cn/2026/09/601316/",
    "status": 200,
    "src_id": "gamelook",
    "src_name": "GameLook",
@@ -1040,32 +1063,6 @@
    "src_name": "GameLook",
    "pubdate": "2026-09-02",
    "age_days": 0,
-   "date_src": "feed",
-   "verdict": "adopt",
-   "reasons": []
-  },
-  {
-   "game": "全行业",
-   "title": "怪现象热议：为何90年代的“游戏业宗师”，他们之后再无成功游戏？",
-   "url": "http://www.gamelook.com.cn/2026/09/601266/",
-   "status": 200,
-   "src_id": "gamelook",
-   "src_name": "GameLook",
-   "pubdate": "2026-09-01",
-   "age_days": 1,
-   "date_src": "feed",
-   "verdict": "adopt",
-   "reasons": []
-  },
-  {
-   "game": "全行业",
-   "title": "对话腾讯李纳川：腾讯游戏的使命是什么？",
-   "url": "http://www.gamelook.com.cn/2026/09/601248/",
-   "status": 200,
-   "src_id": "gamelook",
-   "src_name": "GameLook",
-   "pubdate": "2026-09-01",
-   "age_days": 1,
    "date_src": "feed",
    "verdict": "adopt",
    "reasons": []
@@ -1273,6 +1270,22 @@
   },
   {
    "game": "主机/PC 大作",
+   "title": "『The Blood of Dawnwalker』明日9月3日発売！ 夜と昼の狭間を生きる若者が家族のために運命へ抗う──",
+   "url": "https://blog.ja.playstation.com/2026/09/02/20260902-tbod-launch-reminder-s/",
+   "status": 200,
+   "src_id": "ps_blog_ja",
+   "src_name": "PlayStation Blog 中文",
+   "pubdate": "2026-09-02",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "reject",
+   "reasons": [
+    "域名与游戏[主机/PC 大作]不符",
+    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
+   ]
+  },
+  {
+   "game": "主机/PC 大作",
    "title": "『Marvel’s Wolverine』制作の舞台裏──Insomniac Gamesが日本で行なった現地取材",
    "url": "https://blog.ja.playstation.com/2026/09/02/20260902-marvels-wolverine-bts-o/",
    "status": 200,
@@ -1305,22 +1318,6 @@
    "game": "主机/PC 大作",
    "title": "日本時間9月3日（木）午後10時から「State of Play」「State of Play 日本」を連続放送！",
    "url": "https://blog.ja.playstation.com/2026/08/31/20260831-sop-announcement-o/",
-   "status": 200,
-   "src_id": "ps_blog_ja",
-   "src_name": "PlayStation Blog 中文",
-   "pubdate": "2026-08-31",
-   "age_days": 2,
-   "date_src": "feed",
-   "verdict": "reject",
-   "reasons": [
-    "域名与游戏[主机/PC 大作]不符",
-    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
-   ]
-  },
-  {
-   "game": "主机/PC 大作",
-   "title": "『Marvel’s Wolverine』の最新トレーラーが公開！ ローガンのミュータント能力や多彩なゲームシステムに迫る",
-   "url": "https://blog.ja.playstation.com/2026/08/31/20260831-marvels-wolverine-pre-launch-update-o/",
    "status": 200,
    "src_id": "ps_blog_ja",
    "src_name": "PlayStation Blog 中文",
@@ -1447,6 +1444,21 @@
   },
   {
    "game": "全行业",
+   "title": "Meta杀入实时语音转写赛道：基准测试力压OpenAI、谷歌，API价格低至每小时0.18美元",
+   "url": "https://www.baijing.cn/article/56551",
+   "status": 200,
+   "src_id": "baijing",
+   "src_name": "白鲸出海",
+   "pubdate": "2026-09-02",
+   "age_days": 0,
+   "date_src": "feed",
+   "verdict": "review",
+   "reasons": [
+    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
+   ]
+  },
+  {
+   "game": "全行业",
    "title": "68万件销量、1667万美元GMV，TikTok正在把这个老品类重新做热",
    "url": "https://www.baijing.cn/article/56550",
    "status": 200,
@@ -1552,19 +1564,6 @@
   },
   {
    "game": "全行业",
-   "title": "三消没跑出来，换成二合后，《Hollywood Merge》冲上月流水Top 1",
-   "url": "https://www.baijing.cn/article/56544",
-   "status": 200,
-   "src_id": "baijing",
-   "src_name": "白鲸出海",
-   "pubdate": "2026-09-01",
-   "age_days": 1,
-   "date_src": "feed",
-   "verdict": "adopt",
-   "reasons": []
-  },
-  {
-   "game": "全行业",
    "title": "VR/AR",
    "url": "http://www.nadianshi.com/category/vr",
    "status": 200,
@@ -1639,13 +1638,13 @@
   },
   {
    "game": "全行业",
-   "title": "The Harry Potter 11-Film 4K Blu-ray Collection Drops to a New Low Price",
-   "url": "https://www.ign.com/articles/the-harry-potter-11-film-4k-blu-ray-collection-drops-to-a-new-low-price",
+   "title": "The 65\" Samsung S90F 4K QD-OLED TV Is Better Than Its 2026 Successor, and It's on Sale for Labor Day",
+   "url": "https://www.ign.com/articles/samsung-s65f-4k-oled-tv-deal-ebay-labor-day-sale",
    "status": 200,
    "src_id": "ign",
    "src_name": "IGN",
-   "pubdate": "2026-09-01",
-   "age_days": 1,
+   "pubdate": "2026-09-02",
+   "age_days": 0,
    "date_src": "feed",
    "verdict": "review",
    "reasons": [
@@ -1654,8 +1653,8 @@
   },
   {
    "game": "全行业",
-   "title": "Resident Evil Movie Popcorn Bucket Is an Organ Transplant Bag",
-   "url": "https://www.ign.com/articles/resident-evil-popcorn-bucket-organ-transplant-bag",
+   "title": "Star Wars Zero Company Was Originally Pitched as a Titanfall Universe Game",
+   "url": "https://www.ign.com/articles/star-wars-zero-company-was-originally-pitched-as-a-titanfall-universe-game",
    "status": 200,
    "src_id": "ign",
    "src_name": "IGN",
@@ -1667,8 +1666,8 @@
   },
   {
    "game": "全行业",
-   "title": "Save 45% Off Sony's Pulse Gaming Headsets and Earbuds for the PlayStation 5 Console",
-   "url": "https://www.ign.com/articles/sony-pulse-playstation-gaming-headset-deal-september-2026",
+   "title": "Stanley Kubrick’s Daughter Responds to Eyes Wide Shut Conspiracy Theories",
+   "url": "https://www.ign.com/articles/stanley-kubrick-daughter-eyes-wide-shut-conspiracy-theories",
    "status": 200,
    "src_id": "ign",
    "src_name": "IGN",
@@ -1680,23 +1679,8 @@
   },
   {
    "game": "全行业",
-   "title": "The Blood of Dawnwalker Proves Unreal 5 Can Be Done Well",
-   "url": "https://www.ign.com/articles/the-blood-of-dawnwalker-proves-unreal-5-can-be-done-well",
-   "status": 200,
-   "src_id": "ign",
-   "src_name": "IGN",
-   "pubdate": "2026-09-01",
-   "age_days": 1,
-   "date_src": "feed",
-   "verdict": "review",
-   "reasons": [
-    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
-   ]
-  },
-  {
-   "game": "全行业",
-   "title": "Christopher Judge Physically Prepared to Play Kratos in Live-Action God of War Series, but Backed Down for This Reason",
-   "url": "https://www.ign.com/articles/christopher-judge-physically-prepared-to-play-kratos-in-live-action-god-of-war-series-but-backed-down-for-this-reason",
+   "title": "CD Projekt Red Boss 'Isn't Worried' About Delays for Next-Gen Consoles as RAM Prices Soar",
+   "url": "https://www.ign.com/articles/cd-projekt-red-boss-isnt-worried-about-delays-for-next-gen-consoles-as-ram-prices-soar",
    "status": 200,
    "src_id": "ign",
    "src_name": "IGN",
@@ -1708,18 +1692,29 @@
   },
   {
    "game": "全行业",
-   "title": "15 Studio Ghibli Movies Are Getting Blu-ray Steelbook Reprints – Preorders Are Live",
-   "url": "https://www.ign.com/articles/15-studio-ghibli-movies-are-getting-blu-ray-steelbook-reprints-preorders-are-live",
+   "title": "GTA 6's Morality Meter Will Reportedly 'Shatter' and Make You Irredeemable If You Cause Too Much Mayhem",
+   "url": "https://www.ign.com/articles/gta-6s-morality-meter-will-reportedly-shatter-and-make-you-irredeemable-if-you-cause-too-much-mayhem",
    "status": 200,
    "src_id": "ign",
    "src_name": "IGN",
    "pubdate": "2026-09-01",
    "age_days": 1,
    "date_src": "feed",
-   "verdict": "review",
-   "reasons": [
-    "行业源标题无游戏信号（疑似娱乐/硬件/栏目名）"
-   ]
+   "verdict": "adopt",
+   "reasons": []
+  },
+  {
+   "game": "全行业",
+   "title": "Get an Asus ROG Xbox Ally X for $899.99, the Least Expensive of the Ultra Premium Handheld Gaming PCs",
+   "url": "https://www.ign.com/articles/asus-rog-xbox-ally-x-handheld-gaming-pc-deal-september-2026",
+   "status": 200,
+   "src_id": "ign",
+   "src_name": "IGN",
+   "pubdate": "2026-09-01",
+   "age_days": 1,
+   "date_src": "feed",
+   "verdict": "adopt",
+   "reasons": []
   },
   {
    "game": "全行业",
@@ -2054,14 +2049,16 @@
    "game": "全行业",
    "title": "GTA 6’s Extended Look Trailer Seemingly Paid Off For Netflix With Massive Viewership",
    "url": "https://www.gamespot.com/articles/gta-6s-extended-look-trailer-seemingly-paid-off-for-netflix-with-massive-viewership/",
-   "status": 200,
+   "status": null,
    "src_id": "gamespot",
    "src_name": "GameSpot",
    "pubdate": "2026-09-01",
    "age_days": 1,
    "date_src": "feed",
    "verdict": "adopt",
-   "reasons": []
+   "reasons": [
+    "链接探活未过(疑似反爬/超时，RSS 已确认存活)"
+   ]
   },
   {
    "game": "全行业",

@@ -1,7 +1,7 @@
 {
- "generated_at": "2026-09-02T10:48:34",
- "adopt_total": 69,
- "review_total": 48,
+ "generated_at": "2026-09-02T11:04:40",
+ "adopt_total": 70,
+ "review_total": 47,
  "leak_total": 3,
  "leaks": [
   {
@@ -12,10 +12,10 @@
    "verdict": "adopt",
    "pubdate": null,
    "date_unverified": false,
-   "n_src_cluster": 15,
+   "n_src_cluster": 19,
    "signal": 3,
    "reasons": [
-    "多源印证(15家)"
+    "多源印证(19家)"
    ]
   },
   {

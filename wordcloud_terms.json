@@ -1,298 +1,293 @@
 {
-  "date": "2026-09-02",
-  "terms": [
-    {
-      "term": "王者新作定档9月10日",
-      "href": "https://www.youxituoluo.com/534838.html",
-      "cat": "游戏/新品",
-      "heat": 88,
-      "sources": [
-        "游戏陀螺"
-      ]
-    },
-    {
-      "term": "伊莫定档PC9/16·移动9/23",
-      "href": "https://www.bilibili.com/video/BV1wwhG6JEnc",
-      "cat": "游戏/新品",
-      "heat": 90,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "动物朋克科隆实机",
-      "href": "https://www.bilibili.com/video/BV1jfhA6EEMw",
-      "cat": "游戏/新品",
-      "heat": 84,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "源初之结首曝PV",
-      "href": "https://www.bilibili.com/video/BV1erhL6EE6k",
-      "cat": "游戏/新品",
-      "heat": 82,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "湮灭之潮旧日之纱",
-      "href": "https://www.bilibili.com/video/BV1418q6wERg",
-      "cat": "游戏/新品",
-      "heat": 80,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "昭和米国物语科隆实机",
-      "href": "https://www.bilibili.com/video/BV1aUhL6CEBD",
-      "cat": "游戏/新品",
-      "heat": 78,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "神鬼寓言超长实机",
-      "href": "https://www.gamersky.com/news/202608/2197962.shtml",
-      "cat": "游戏/新品",
-      "heat": 70,
-      "sources": [
-        "游民星空"
-      ]
-    },
-    {
-      "term": "黎明行者之血GS8分",
-      "href": "https://www.gamersky.com/news/202608/2199961.shtml",
-      "cat": "游戏/新品",
-      "heat": 66,
-      "sources": [
-        "游民星空"
-      ]
-    },
-    {
-      "term": "腾讯射击科隆首曝",
-      "href": "https://www.nadianshi.com/2026/08/1419108",
-      "cat": "游戏/新品",
-      "heat": 74,
-      "sources": [
-        "那迪斯内"
-      ]
-    },
-    {
-      "term": "征服纪臣民之心发表",
-      "href": "https://www.gcores.com/articles/218873",
-      "cat": "游戏/新品",
-      "heat": 50,
-      "sources": [
-        "机核"
-      ]
-    },
-    {
-      "term": "Pikmin3 Deluxe NS2更新",
-      "href": "https://www.gematsu.com/2026/08/pikmin-3-deluxe-update-for-switch-2-now-available",
-      "cat": "游戏/新品",
-      "heat": 48,
-      "sources": [
-        "Gematsu"
-      ]
-    },
-    {
-      "term": "Konami 9/3发布会(恶魔城/寂静岭)",
-      "href": "https://www.gematsu.com/2026/08/konami-press-start-live-stream-set-for-september-3-featuring-castlevania-belmonts-curse-silent-hill-townfall-and-rev-noir",
-      "cat": "游戏/新品",
-      "heat": 58,
-      "sources": [
-        "Gematsu"
-      ]
-    },
-    {
-      "term": "艾尔登法环DLC新角色",
-      "href": "https://www.pcgamer.com/games/rpg/one-of-elden-rings-top-sleuths-has-already-unmasked-its-new-dlc-characters/",
-      "cat": "游戏/新品",
-      "heat": 60,
-      "sources": [
-        "PCGamer"
-      ]
-    },
-    {
-      "term": "Godzilla重制不惧GTA6",
-      "href": "https://www.gamespot.com/articles/godzilla-remaster-devs-explain-why-they-arent-worried-about-releasing-near-gta-6/",
-      "cat": "游戏/新品",
-      "heat": 52,
-      "sources": [
-        "GameSpot"
-      ]
-    },
-    {
-      "term": "明日方舟终末地干员叙事",
-      "href": "https://www.bilibili.com/video/BV1uht86rEDA",
-      "cat": "游戏/新品",
-      "heat": 60,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "GTA6首发无微交易无AI",
-      "href": "https://news.17173.com/content/08302026/080716715.shtml",
-      "cat": "行业/数据",
-      "heat": 95,
-      "sources": [
-        "17173"
-      ]
-    },
-    {
-      "term": "庄园领主销量破400万",
-      "href": "https://www.gcores.com/articles/219078",
-      "cat": "行业/数据",
-      "heat": 72,
-      "sources": [
-        "机核"
-      ]
-    },
-    {
-      "term": "郭炜炜离职·源初之结·无限大定档",
-      "href": "https://www.youxituoluo.com/534846.html",
-      "cat": "行业/数据",
-      "heat": 80,
-      "sources": [
-        "游戏陀螺"
-      ]
-    },
-    {
-      "term": "陈星汉官宣TGC发行",
-      "href": "http://www.gamelook.com.cn/2026/08/600894/",
-      "cat": "行业/数据",
-      "heat": 62,
-      "sources": [
-        "GameLook"
-      ]
-    },
-    {
-      "term": "宝可梦智能设备联动",
-      "href": "https://news.17173.com/content/08292026/100751604.shtml",
-      "cat": "行业/数据",
-      "heat": 54,
-      "sources": [
-        "17173"
-      ]
-    },
-    {
-      "term": "西山居剑网3 50级采访",
-      "href": "https://www.nadianshi.com/2026/08/1419471",
-      "cat": "行业/数据",
-      "heat": 40,
-      "sources": [
-        "那迪斯内"
-      ]
-    },
-    {
-      "term": "Pokemon Unite 4新宝可梦",
-      "href": "https://www.videogameschronicle.com/news/four-new-pokemon-confirmed-for-pokemon-unite-as-zeta-division-wins-final-championship/",
-      "cat": "行业/数据",
-      "heat": 46,
-      "sources": [
-        "VGC"
-      ]
-    },
-    {
-      "term": "GTA6女主撞墙血迹",
-      "href": "https://www.gamersky.com/news/202608/2198039.shtml",
-      "cat": "事件/风险",
-      "heat": 82,
-      "sources": [
-        "游民星空"
-      ]
-    },
-    {
-      "term": "Valve 12TB存档泄露",
-      "href": "https://www.eurogamer.net/valve-steam2-leak-12tb-portal-2-half-life-episode-three",
-      "cat": "事件/风险",
-      "heat": 78,
-      "sources": [
-        "Eurogamer"
-      ]
-    },
-    {
-      "term": "Take-Two GTA6泄密调查",
-      "href": "https://www.gamesradar.com/games/grand-theft-auto/take-twos-gta-6-leak-investigation-is-heating-up-as-the-publisher-requests-sealed-subpoena-to-avoid-tipping-off-leakers/",
-      "cat": "事件/风险",
-      "heat": 68,
-      "sources": [
-        "GamesRadar"
-      ]
-    },
-    {
-      "term": "PS5 Blackout抗议落幕",
-      "href": "https://www.pushsquare.com/news/2026/08/ps5-blackout-protest-officially-concludes-but-campaigners-encourage-indefinite-participation1",
-      "cat": "事件/风险",
-      "heat": 44,
-      "sources": [
-        "PushSquare"
-      ]
-    },
-    {
-      "term": "阴阳师违规处罚(挂机)",
-      "href": "https://yys.163.com/news/update/20260827/23024_1312449.html",
-      "cat": "事件/风险",
-      "heat": 42,
-      "sources": [
-        "网易阴阳师"
-      ],
-      "hotlist_boost": 6,
-      "hotlist_platforms": 1,
-      "hotlist_sources": [
-        "weibo:阴阳师"
-      ]
-    },
-    {
-      "term": "马斯克拒玩GTA6",
-      "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28361933&topic_name=%E9%A9%AC%E6%96%AF%E5%85%8B%E6%8B%92%E7%8E%A9GTA6%2C%E8%A2%AD%E8%AD%A6%E5%A4%AA%E8%99%90%E5%BF%83",
-      "cat": "梗/社区",
-      "heat": 50,
-      "sources": [
-        "贴吧"
-      ]
-    },
-    {
-      "term": "战双全球线上音乐会",
-      "href": "https://www.bilibili.com/video/BV1VH8K67ENH",
-      "cat": "梗/社区",
-      "heat": 44,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "星穹铁道二创·大明星墨镜",
-      "href": "https://www.bilibili.com/video/BV19gtG6wEeK",
-      "cat": "梗/社区",
-      "heat": 42,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "游戏玩家的真实年龄belike",
-      "href": "https://www.bilibili.com/video/BV1C2t86hEmz",
-      "cat": "梗/社区",
-      "heat": 46,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "动漫谐音梗（4）",
-      "href": "https://www.bilibili.com/video/BV1Twt36UETA",
-      "cat": "梗/社区",
-      "heat": 38,
-      "sources": [
-        "B站"
-      ]
-    }
-  ]
+ "date": "2026-09-02",
+ "terms": [
+  {
+   "term": "黎明行者Steam全球登顶",
+   "href": "https://www.gamersky.com/news/202609/2201061.shtml",
+   "cat": "行业/数据",
+   "heat": 86,
+   "sources": [
+    "游民星空新闻"
+   ]
+  },
+  {
+   "term": "坦克世界2.4动力全开",
+   "href": "https://news.17173.com/content/09022026/102114703.shtml",
+   "cat": "游戏/新品",
+   "heat": 62,
+   "sources": [
+    "17173 网游资讯"
+   ]
+  },
+  {
+   "term": "四海兄弟2原结局曝光",
+   "href": "https://www.gamersky.com/news/202609/2201043.shtml",
+   "cat": "游戏/新品",
+   "heat": 56,
+   "sources": [
+    "游民星空 PC 资讯"
+   ]
+  },
+  {
+   "term": "二合爆改月流水Top1",
+   "href": "https://www.baijing.cn/article/56544",
+   "cat": "行业/数据",
+   "heat": 52,
+   "sources": [
+    "白鲸出海"
+   ]
+  },
+  {
+   "term": "鬼武者评分虚高IGN群嘲",
+   "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28361941&topic_name=%E9%AC%BC%E6%AD%A6%E8%80%85%E8%AF%84%E5%88%86%E8%99%9A%E9%AB%98%2CIGN%E9%81%AD%E7%BE%A4%E5%98%B2",
+   "cat": "事件/风险",
+   "heat": 54,
+   "sources": [
+    "百度贴吧热议"
+   ]
+  },
+  {
+   "term": "王者新作定档9月10日",
+   "href": "https://www.youxituoluo.com/534838.html",
+   "cat": "游戏/新品",
+   "heat": 88,
+   "sources": [
+    "游戏陀螺"
+   ]
+  },
+  {
+   "term": "伊莫定档PC9/16·移动9/23",
+   "href": "https://www.bilibili.com/video/BV1wwhG6JEnc",
+   "cat": "游戏/新品",
+   "heat": 90,
+   "sources": [
+    "B站"
+   ]
+  },
+  {
+   "term": "动物朋克科隆实机",
+   "href": "https://www.bilibili.com/video/BV1jfhA6EEMw",
+   "cat": "游戏/新品",
+   "heat": 84,
+   "sources": [
+    "B站"
+   ]
+  },
+  {
+   "term": "源初之结首曝PV",
+   "href": "https://www.bilibili.com/video/BV1erhL6EE6k",
+   "cat": "游戏/新品",
+   "heat": 82,
+   "sources": [
+    "B站"
+   ]
+  },
+  {
+   "term": "湮灭之潮旧日之纱",
+   "href": "https://www.bilibili.com/video/BV1418q6wERg",
+   "cat": "游戏/新品",
+   "heat": 80,
+   "sources": [
+    "B站"
+   ]
+  },
+  {
+   "term": "昭和米国物语科隆实机",
+   "href": "https://www.bilibili.com/video/BV1aUhL6CEBD",
+   "cat": "游戏/新品",
+   "heat": 78,
+   "sources": [
+    "B站"
+   ]
+  },
+  {
+   "term": "神鬼寓言超长实机",
+   "href": "https://www.gamersky.com/news/202608/2197962.shtml",
+   "cat": "游戏/新品",
+   "heat": 70,
+   "sources": [
+    "游民星空"
+   ]
+  },
+  {
+   "term": "黎明行者之血GS8分",
+   "href": "https://www.gamersky.com/news/202608/2199961.shtml",
+   "cat": "游戏/新品",
+   "heat": 66,
+   "sources": [
+    "游民星空"
+   ]
+  },
+  {
+   "term": "腾讯射击科隆首曝",
+   "href": "https://www.nadianshi.com/2026/08/1419108",
+   "cat": "游戏/新品",
+   "heat": 74,
+   "sources": [
+    "那迪斯内"
+   ]
+  },
+  {
+   "term": "征服纪臣民之心发表",
+   "href": "https://www.gcores.com/articles/218873",
+   "cat": "游戏/新品",
+   "heat": 50,
+   "sources": [
+    "机核"
+   ]
+  },
+  {
+   "term": "Pikmin3 Deluxe NS2更新",
+   "href": "https://www.gematsu.com/2026/08/pikmin-3-deluxe-update-for-switch-2-now-available",
+   "cat": "游戏/新品",
+   "heat": 48,
+   "sources": [
+    "Gematsu"
+   ]
+  },
+  {
+   "term": "Konami 9/3发布会(恶魔城/寂静岭)",
+   "href": "https://www.gematsu.com/2026/08/konami-press-start-live-stream-set-for-september-3-featuring-castlevania-belmonts-curse-silent-hill-townfall-and-rev-noir",
+   "cat": "游戏/新品",
+   "heat": 58,
+   "sources": [
+    "Gematsu"
+   ]
+  },
+  {
+   "term": "艾尔登法环DLC新角色",
+   "href": "https://www.pcgamer.com/games/rpg/one-of-elden-rings-top-sleuths-has-already-unmasked-its-new-dlc-characters/",
+   "cat": "游戏/新品",
+   "heat": 60,
+   "sources": [
+    "PCGamer"
+   ]
+  },
+  {
+   "term": "Godzilla重制不惧GTA6",
+   "href": "https://www.gamespot.com/articles/godzilla-remaster-devs-explain-why-they-arent-worried-about-releasing-near-gta-6/",
+   "cat": "游戏/新品",
+   "heat": 52,
+   "sources": [
+    "GameSpot"
+   ]
+  },
+  {
+   "term": "明日方舟终末地干员叙事",
+   "href": "https://www.bilibili.com/video/BV1uht86rEDA",
+   "cat": "游戏/新品",
+   "heat": 60,
+   "sources": [
+    "B站"
+   ]
+  },
+  {
+   "term": "GTA6首发无微交易无AI",
+   "href": "https://news.17173.com/content/08302026/080716715.shtml",
+   "cat": "行业/数据",
+   "heat": 95,
+   "sources": [
+    "17173"
+   ]
+  },
+  {
+   "term": "庄园领主销量破400万",
+   "href": "https://www.gcores.com/articles/219078",
+   "cat": "行业/数据",
+   "heat": 72,
+   "sources": [
+    "机核"
+   ]
+  },
+  {
+   "term": "郭炜炜离职·源初之结·无限大定档",
+   "href": "https://www.youxituoluo.com/534846.html",
+   "cat": "行业/数据",
+   "heat": 80,
+   "sources": [
+    "游戏陀螺"
+   ]
+  },
+  {
+   "term": "陈星汉官宣TGC发行",
+   "href": "http://www.gamelook.com.cn/2026/08/600894/",
+   "cat": "行业/数据",
+   "heat": 62,
+   "sources": [
+    "GameLook"
+   ]
+  },
+  {
+   "term": "宝可梦智能设备联动",
+   "href": "https://news.17173.com/content/08292026/100751604.shtml",
+   "cat": "行业/数据",
+   "heat": 54,
+   "sources": [
+    "17173"
+   ]
+  },
+  {
+   "term": "GTA6女主撞墙血迹",
+   "href": "https://www.gamersky.com/news/202608/2198039.shtml",
+   "cat": "事件/风险",
+   "heat": 82,
+   "sources": [
+    "游民星空"
+   ]
+  },
+  {
+   "term": "Valve 12TB存档泄露",
+   "href": "https://www.eurogamer.net/valve-steam2-leak-12tb-portal-2-half-life-episode-three",
+   "cat": "事件/风险",
+   "heat": 78,
+   "sources": [
+    "Eurogamer"
+   ]
+  },
+  {
+   "term": "Take-Two GTA6泄密调查",
+   "href": "https://www.gamesradar.com/games/grand-theft-auto/take-twos-gta-6-leak-investigation-is-heating-up-as-the-publisher-requests-sealed-subpoena-to-avoid-tipping-off-leakers/",
+   "cat": "事件/风险",
+   "heat": 68,
+   "sources": [
+    "GamesRadar"
+   ]
+  },
+  {
+   "term": "马斯克拒玩GTA6",
+   "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28361933&topic_name=%E9%A9%AC%E6%96%AF%E5%85%8B%E6%8B%92%E7%8E%A9GTA6%2C%E8%A2%AD%E8%AD%A6%E5%A4%AA%E8%99%90%E5%BF%83",
+   "cat": "梗/社区",
+   "heat": 50,
+   "sources": [
+    "贴吧"
+   ]
+  },
+  {
+   "term": "战双全球线上音乐会",
+   "href": "https://www.bilibili.com/video/BV1VH8K67ENH",
+   "cat": "梗/社区",
+   "heat": 44,
+   "sources": [
+    "B站"
+   ]
+  },
+  {
+   "term": "星穹铁道二创·大明星墨镜",
+   "href": "https://www.bilibili.com/video/BV19gtG6wEeK",
+   "cat": "梗/社区",
+   "heat": 42,
+   "sources": [
+    "B站"
+   ]
+  },
+  {
+   "term": "游戏玩家的真实年龄belike",
+   "href": "https://www.bilibili.com/video/BV1C2t86hEmz",
+   "cat": "梗/社区",
+   "heat": 46,
+   "sources": [
+    "B站"
+   ]
+  }
+ ]
 }

@@ -1,9 +1,24 @@
 {
- "generated_at": "2026-09-03T10:47:30",
- "adopt_total": 67,
- "review_total": 55,
- "leak_total": 2,
+ "generated_at": "2026-09-04T10:47:45",
+ "adopt_total": 73,
+ "review_total": 46,
+ "leak_total": 3,
  "leaks": [
+  {
+   "title": "陈静16小时前0条评论 触乐怪话：既要自由度，又要抄作业 不求大富大贵，只愿潜水养生两不误。",
+   "url": "http://www.chuapp.com/article/291610.html",
+   "game": "全行业",
+   "src_name": "触乐网·分类新闻",
+   "verdict": "review",
+   "pubdate": null,
+   "date_unverified": false,
+   "n_src_cluster": 24,
+   "signal": 3,
+   "reasons": [
+    "多源印证(24家)",
+    "准入待复核被卡"
+   ]
+  },
   {
    "title": "PSVR《揭秘计划2：远古之战》发售 火星之战爆发",
    "url": "https://www.gamersky.com/news/201809/1102376.shtml",

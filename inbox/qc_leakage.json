@@ -1,49 +1,50 @@
 {
- "generated_at": "2026-09-05T10:45:55",
- "adopt_total": 74,
- "review_total": 40,
- "leak_total": 5,
+ "generated_at": "2026-09-06T10:48:01",
+ "adopt_total": 69,
+ "review_total": 51,
+ "leak_total": 7,
  "leaks": [
   {
    "title": "在电影和电视剧里讲游戏故事，这家公司是专业的 09.04",
    "url": "https://www.chuapp.com/article/291570.html",
    "game": "全行业",
    "src_name": "触乐网",
-   "verdict": "adopt",
-   "pubdate": null,
+   "verdict": "review",
+   "pubdate": "2025-11-10",
    "date_unverified": false,
-   "n_src_cluster": 2,
-   "signal": 2,
+   "n_src_cluster": 4,
+   "signal": 3,
    "reasons": [
-    "多源印证(2家)"
+    "多源印证(4家)",
+    "准入待复核被卡"
    ]
   },
   {
-   "title": "等等11小时前0条评论 在电影和电视剧里讲游戏故事，这家公司是专业的 “我们的下一项使命——证明游戏是艺术。”",
+   "title": "等等09月04日0条评论 在电影和电视剧里讲游戏故事，这家公司是专业的 “我们的下一项使命——证明游戏是艺术。”",
    "url": "http://www.chuapp.com/article/291570.html",
    "game": "全行业",
    "src_name": "触乐网·分类新闻",
    "verdict": "adopt",
    "pubdate": null,
    "date_unverified": false,
-   "n_src_cluster": 2,
-   "signal": 2,
+   "n_src_cluster": 4,
+   "signal": 3,
    "reasons": [
-    "多源印证(2家)"
+    "多源印证(4家)"
    ]
   },
   {
-   "title": "许艺丹11小时前0条评论 触乐怪话：播客初体验 如果重来一次……算了，下次吧。",
+   "title": "许艺丹09月04日0条评论 触乐怪话：播客初体验 如果重来一次……算了，下次吧。",
    "url": "http://www.chuapp.com/article/291614.html",
    "game": "全行业",
    "src_name": "触乐网·分类新闻",
    "verdict": "review",
    "pubdate": null,
    "date_unverified": false,
-   "n_src_cluster": 2,
-   "signal": 2,
+   "n_src_cluster": 4,
+   "signal": 3,
    "reasons": [
-    "多源印证(2家)",
+    "多源印证(4家)",
     "准入待复核被卡"
    ]
   },
@@ -55,10 +56,10 @@
    "verdict": "review",
    "pubdate": null,
    "date_unverified": false,
-   "n_src_cluster": 2,
-   "signal": 2,
+   "n_src_cluster": 4,
+   "signal": 3,
    "reasons": [
-    "多源印证(2家)",
+    "多源印证(4家)",
     "准入待复核被卡"
    ]
   },
@@ -69,6 +70,36 @@
    "src_name": "游民星空·最新资讯",
    "verdict": "review",
    "pubdate": "2018-09-20",
+   "date_unverified": false,
+   "n_src_cluster": 1,
+   "signal": 2,
+   "reasons": [
+    "强事件词",
+    "准入待复核被卡"
+   ]
+  },
+  {
+   "title": "原创丨米哈游：一年沉淀，换来「高开神走」",
+   "url": "http://www.nadianshi.com/2026/07/413907",
+   "game": "全行业",
+   "src_name": "手游那点事",
+   "verdict": "review",
+   "pubdate": "2026-07-01",
+   "date_unverified": false,
+   "n_src_cluster": 4,
+   "signal": 3,
+   "reasons": [
+    "多源印证(4家)",
+    "准入待复核被卡"
+   ]
+  },
+  {
+   "title": "活动 | 三国杀王者之战神王战广州收官 《三国杀：承天之弈》重磅首发",
+   "url": "http://www.nadianshi.com/2026/06/413745",
+   "game": "全行业",
+   "src_name": "手游那点事",
+   "verdict": "review",
+   "pubdate": "2026-06-01",
    "date_unverified": false,
    "n_src_cluster": 1,
    "signal": 2,

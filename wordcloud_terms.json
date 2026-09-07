@@ -1,293 +1,37 @@
 {
-  "date": "2026-09-06",
+  "date": "2026-09-07",
   "terms": [
-    {
-      "term": "黎明行者Steam登顶",
-      "href": "https://www.gamersky.com/news/202609/2201061.shtml",
-      "cat": "游戏/新品",
-      "heat": 95,
-      "sources": [
-        "游民星空"
-      ]
-    },
-    {
-      "term": "索尼发布会羊蹄山FF7亮相",
-      "href": "https://www.gamersky.com/news/202609/2202826.shtml",
-      "cat": "游戏/新品",
-      "heat": 92,
-      "sources": [
-        "游民星空"
-      ]
-    },
-    {
-      "term": "GTA6分量十足一瞥",
-      "href": "https://www.bilibili.com/video/BV1vm4f6bETN",
-      "cat": "游戏/新品",
-      "heat": 95,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "星布谷地公测定档2026冬季",
-      "href": "https://www.bilibili.com/video/BV1b4hG6wEqb",
-      "cat": "游戏/新品",
-      "heat": 80,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "鸣潮心锁暝演示",
-      "href": "https://www.bilibili.com/video/BV1Q5tG6bEX3",
-      "cat": "游戏/新品",
-      "heat": 84,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "明日方舟×P3R月行水上",
-      "href": "https://www.bilibili.com/video/BV1zCtA6mEay",
-      "cat": "游戏/新品",
-      "heat": 85,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "绝区零克拉蕾角色展示",
-      "href": "https://www.bilibili.com/video/BV1wote6gEQ1",
-      "cat": "游戏/新品",
-      "heat": 78,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "异环超级体育生",
-      "href": "https://www.bilibili.com/video/BV12PtR6KE1q",
-      "cat": "游戏/新品",
-      "heat": 76,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "地铁2039 4K60光追首发",
-      "href": "https://www.gamersky.com/news/202609/2202827.shtml",
-      "cat": "游戏/新品",
-      "heat": 80,
-      "sources": [
-        "游民星空"
-      ]
-    },
-    {
-      "term": "坦克世界2.4动力全开",
-      "href": "https://news.17173.com/content/09022026/102114703.shtml",
-      "cat": "游戏/新品",
-      "heat": 76,
-      "sources": [
-        "17173"
-      ]
-    },
-    {
-      "term": "凡人修仙传慕兰之战",
-      "href": "https://www.bilibili.com/video/BV1Satr6zETw",
-      "cat": "游戏/新品",
-      "heat": 70,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "Double Fine混沌巴士新作",
-      "href": "https://www.gematsu.com/2026/09/double-fine-productions-announces-chaotic-bus-driving-game",
-      "cat": "游戏/新品",
-      "heat": 68,
-      "sources": [
-        "Gematsu"
-      ]
-    },
-    {
-      "term": "马里奥赛车8 DX Switch2更新",
-      "href": "https://www.eurogamer.net/mario-kart-8-deluxe-gets-a-surprise-switch-2-update-bringing-back-a-beloved-mode/",
-      "cat": "游戏/新品",
-      "heat": 66,
-      "sources": [
-        "Eurogamer"
-      ]
-    },
-    {
-      "term": "龙之信条2补丁3.2",
-      "href": "https://www.pushsquare.com/news/2026/09/colossal-game-changing-dragons-dogma-2-patch-3-2-out-now",
-      "cat": "游戏/新品",
-      "heat": 70,
-      "sources": [
-        "PushSquare"
-      ]
-    },
-    {
-      "term": "9月12款新游王者万象棋领衔",
-      "href": "http://www.gamelook.com.cn/2026/09/601320/",
-      "cat": "行业/数据",
-      "heat": 78,
-      "sources": [
-        "GameLook"
-      ]
-    },
-    {
-      "term": "庄园领主销量破400万",
-      "href": "https://www.gcores.com/articles/219078",
-      "cat": "行业/数据",
-      "heat": 82,
-      "sources": [
-        "机核"
-      ]
-    },
-    {
-      "term": "网易投资CDPR前总监新游夺冠",
-      "href": "http://www.gamelook.com.cn/2026/09/601464/",
-      "cat": "行业/数据",
-      "heat": 84,
-      "sources": [
-        "GameLook"
-      ]
-    },
-    {
-      "term": "GTA6带动PS5Xbox销量跳涨",
-      "href": "https://www.videogameschronicle.com/news/uk-ps5-and-xbox-sales-jumped-by-a-third-following-gta-6/",
-      "cat": "行业/数据",
-      "heat": 88,
-      "sources": [
-        "VGC"
-      ]
-    },
-    {
-      "term": "郭炜炜离职源初之结首曝无限大定档",
-      "href": "https://www.youxituoluo.com/534846.html",
-      "cat": "行业/数据",
-      "heat": 86,
-      "sources": [
-        "游戏陀螺"
-      ]
-    },
-    {
-      "term": "异端先知再缺席发布会",
-      "href": "https://www.gamersky.com/news/202609/2202875.shtml",
-      "cat": "事件/风险",
-      "heat": 75,
-      "sources": [
-        "游民星空"
-      ]
-    },
-    {
-      "term": "Xbox云游戏限15小时收费",
-      "href": "https://www.videogameschronicle.com/news/xbox-is-capping-cloud-gaming-to-15-hours-and-charging-for-it/",
-      "cat": "事件/风险",
-      "heat": 72,
-      "sources": [
-        "VGC"
-      ]
-    },
-    {
-      "term": "三角洲外挂团伙被打掉",
-      "href": "https://store.steampowered.com/news/app/2507950/view/6994563482752243520",
-      "cat": "事件/风险",
-      "heat": 80,
-      "sources": [
-        "Steam新闻"
-      ]
-    },
-    {
-      "term": "三角洲赛伊德核电钓鱼",
-      "href": "https://www.bilibili.com/video/BV1oVtq6KEpq",
-      "cat": "事件/风险",
-      "heat": 74,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "牢玩家李白",
-      "href": "https://www.bilibili.com/video/BV1NAtr68EaE",
-      "cat": "梗/社区",
-      "heat": 88,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "昔涟规则怪谈",
-      "href": "https://www.bilibili.com/video/BV12xbE6uEtT",
-      "cat": "梗/社区",
-      "heat": 82,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "星铁4.5版本梗百科",
-      "href": "https://www.bilibili.com/video/BV15SbE6XEB4",
-      "cat": "梗/社区",
-      "heat": 80,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "碧蓝航线梗指南",
-      "href": "https://www.bilibili.com/video/BV1uebL6TEHN",
-      "cat": "梗/社区",
-      "heat": 72,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "ZZZ美杜莎梗",
-      "href": "https://www.bilibili.com/video/BV1ZJbL61Eer",
-      "cat": "梗/社区",
-      "heat": 76,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "尼古喵喵OP梗",
-      "href": "https://www.bilibili.com/video/BV1Aub76wE8C",
-      "cat": "梗/社区",
-      "heat": 78,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "宇智波鼬全技能爆料",
-      "href": "https://www.bilibili.com/video/BV1j3t268EPc",
-      "cat": "梗/社区",
-      "heat": 74,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "程心威慑度100%",
-      "href": "https://www.bilibili.com/video/BV1p5t366EuM",
-      "cat": "梗/社区",
-      "heat": 70,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "MyGO青春症候群cover",
-      "href": "https://www.bilibili.com/video/BV1gXt66TEqg",
-      "cat": "梗/社区",
-      "heat": 72,
-      "sources": [
-        "B站"
-      ]
-    }
+    { "term": "黎明行者 Steam登顶", "href": "https://www.gamersky.com/news/202609/2201061.shtml", "cat": "游戏/新品", "heat": 92, "sources": ["游民星空"] },
+    { "term": "GTA VI 分量一瞥", "href": "https://www.bilibili.com/video/BV1vm4f6bETN", "cat": "游戏/新品", "heat": 90, "sources": ["B站"] },
+    { "term": "明日方舟×P3R 月行水上", "href": "https://www.bilibili.com/video/BV1zCtA6mEay", "cat": "游戏/新品", "heat": 86, "sources": ["B站"] },
+    { "term": "崩坏星穹铁道 千星纪游PV", "href": "https://www.bilibili.com/video/BV1sAbL6tEEC", "cat": "游戏/新品", "heat": 84, "sources": ["B站"] },
+    { "term": "新星际争霸传闻 BlizzCon", "href": "https://www.pcgamer.com/games/its-really-starting-to-look-like-a-new-starcraft-game-will-be-revealed-at-blizzcon/", "cat": "游戏/新品", "heat": 82, "sources": ["PCGamer"] },
+    { "term": "鸣潮 心/锁暝 IGN演示", "href": "https://www.bilibili.com/video/BV1Q5tG6bEX3", "cat": "游戏/新品", "heat": 82, "sources": ["B站"] },
+    { "term": "鸣潮 景燃战斗演示", "href": "https://www.bilibili.com/video/BV1PTbL6REMT", "cat": "游戏/新品", "heat": 80, "sources": ["B站"] },
+    { "term": "网易投资CDPR前总监新游夺冠", "href": "http://www.gamelook.com.cn/2026/09/601464/", "cat": "行业/数据", "heat": 80, "sources": ["GameLook"] },
+    { "term": "绝区零 克拉蕾EP", "href": "https://www.bilibili.com/video/BV1C9b76cEks", "cat": "游戏/新品", "heat": 70, "sources": ["B站"] },
+    { "term": "星布谷地 连接测试", "href": "https://www.bilibili.com/video/BV1b4hG6wEqb", "cat": "游戏/新品", "heat": 74, "sources": ["B站"] },
+    { "term": "地铁2039 4K60光追", "href": "https://www.gamersky.com/news/202609/2202827.shtml", "cat": "游戏/新品", "heat": 74, "sources": ["游民星空"] },
+    { "term": "9月新游 王者万象棋/伊莫", "href": "https://www.youxituoluo.com/534849.html", "cat": "游戏/新品", "heat": 72, "sources": ["游戏陀螺"] },
+    { "term": "9月12款新游 王者万象棋领衔", "href": "http://www.gamelook.com.cn/2026/09/601320/", "cat": "行业/数据", "heat": 75, "sources": ["GameLook"] },
+    { "term": "GTA6 带飞PS5/Xbox销量", "href": "https://www.videogameschronicle.com/news/uk-ps5-and-xbox-sales-tripled-following-gta-6s-netflix-reveal/", "cat": "行业/数据", "heat": 76, "sources": ["VGC"] },
+    { "term": "庄园领主 销量破400万", "href": "https://www.gcores.com/articles/219078", "cat": "行业/数据", "heat": 78, "sources": ["机核"] },
+    { "term": "坦克世界 2.4动力全开", "href": "https://news.17173.com/content/09022026/102114703.shtml", "cat": "游戏/新品", "heat": 70, "sources": ["17173"] },
+    { "term": "CDPR确认无人逼2077", "href": "https://www.gamersky.com/news/202609/2201253.shtml", "cat": "行业/数据", "heat": 66, "sources": ["游民星空"] },
+    { "term": "异端先知 缺席发布会", "href": "https://www.gamersky.com/news/202609/2202875.shtml", "cat": "事件/风险", "heat": 68, "sources": ["游民星空"] },
+    { "term": "VAST融资50亿 AI 3D", "href": "https://www.youxituoluo.com/534852.html", "cat": "行业/数据", "heat": 64, "sources": ["游戏陀螺"] },
+    { "term": "群星 新赛季更新", "href": "https://store.steampowered.com/news/app/2507950/view/694271289525798626", "cat": "游戏/新品", "heat": 62, "sources": ["Steam"] },
+    { "term": "Double Fine 混乱巴士新游", "href": "https://www.gematsu.com/2026/09/double-fine-productions-announces-chaotic-bus-driving-game-thank-you-bus-driver-for-pc", "cat": "游戏/新品", "heat": 60, "sources": ["Gematsu"] },
+    { "term": "三角洲 超模武器", "href": "https://www.bilibili.com/video/BV1D5ty6UEqR", "cat": "梗/社区", "heat": 60, "sources": ["B站"] },
+    { "term": "Xbox云游戏限15小时", "href": "https://www.videogameschronicle.com/news/xbox-is-capping-cloud-gaming-to-15-hours-and-charging-for-extra-playtime/", "cat": "行业/数据", "heat": 58, "sources": ["VGC"] },
+    { "term": "永劫无间 封禁公告", "href": "https://www.yjwujian.cn/news/update/20260901/33456_1312840.html", "cat": "事件/风险", "heat": 55, "sources": ["永劫无间官方"] },
+    { "term": "蜘蛛侠Noir取消", "href": "https://www.gamesradar.com/entertainment/marvel-tv-shows/spider-noir-canceled-after-one-season-at-prime-video-despite-receiving-11-emmy-nominations/", "cat": "事件/风险", "heat": 56, "sources": ["GamesRadar"] },
+    { "term": "牢玩家李白", "href": "https://www.bilibili.com/video/BV1NAtr68EaE", "cat": "梗/社区", "heat": 54, "sources": ["B站"] },
+    { "term": "MGS4 Super Replay", "href": "https://gameinformer.com/super-replay/2026/09/04/metal-gear-solid-4-guns-of-the-patriots-part-2-old-snake-learns-new-tricks", "cat": "游戏/新品", "heat": 52, "sources": ["GameInformer"] },
+    { "term": "阴阳师 9月维护", "href": "https://yys.163.com/news/update/20260901/23024_1312880.html", "cat": "游戏/新品", "heat": 50, "sources": ["阴阳师官网"] },
+    { "term": "ZZZ 邦布梗", "href": "https://www.bilibili.com/video/BV1kgb46HEuZ", "cat": "梗/社区", "heat": 50, "sources": ["B站"] },
+    { "term": "泛式 ZZZ瓶子梗", "href": "https://www.bilibili.com/video/BV1ZJbL61Eer", "cat": "梗/社区", "heat": 46, "sources": ["B站"] },
+    { "term": "三体 程心威慑度100%", "href": "https://www.bilibili.com/video/BV1p5t366EuM", "cat": "梗/社区", "heat": 48, "sources": ["B站"] },
+    { "term": "GTA6 分量一瞥 reaction", "href": "https://gameinformer.com/video-podcast/2026/09/04/grand-theft-auto-vi-extended-look-reactions-the-game-informer-show", "cat": "游戏/新品", "heat": 88, "sources": ["GameInformer"] }
   ]
 }

@@ -1,68 +1,9 @@
 {
- "generated_at": "2026-09-06T10:48:01",
- "adopt_total": 69,
- "review_total": 51,
- "leak_total": 7,
+ "generated_at": "2026-09-07T10:49:05",
+ "adopt_total": 68,
+ "review_total": 50,
+ "leak_total": 3,
  "leaks": [
-  {
-   "title": "在电影和电视剧里讲游戏故事，这家公司是专业的 09.04",
-   "url": "https://www.chuapp.com/article/291570.html",
-   "game": "全行业",
-   "src_name": "触乐网",
-   "verdict": "review",
-   "pubdate": "2025-11-10",
-   "date_unverified": false,
-   "n_src_cluster": 4,
-   "signal": 3,
-   "reasons": [
-    "多源印证(4家)",
-    "准入待复核被卡"
-   ]
-  },
-  {
-   "title": "等等09月04日0条评论 在电影和电视剧里讲游戏故事，这家公司是专业的 “我们的下一项使命——证明游戏是艺术。”",
-   "url": "http://www.chuapp.com/article/291570.html",
-   "game": "全行业",
-   "src_name": "触乐网·分类新闻",
-   "verdict": "adopt",
-   "pubdate": null,
-   "date_unverified": false,
-   "n_src_cluster": 4,
-   "signal": 3,
-   "reasons": [
-    "多源印证(4家)"
-   ]
-  },
-  {
-   "title": "许艺丹09月04日0条评论 触乐怪话：播客初体验 如果重来一次……算了，下次吧。",
-   "url": "http://www.chuapp.com/article/291614.html",
-   "game": "全行业",
-   "src_name": "触乐网·分类新闻",
-   "verdict": "review",
-   "pubdate": null,
-   "date_unverified": false,
-   "n_src_cluster": 4,
-   "signal": 3,
-   "reasons": [
-    "多源印证(4家)",
-    "准入待复核被卡"
-   ]
-  },
-  {
-   "title": "陈静09月03日0条评论 触乐怪话：既要自由度，又要抄作业 不求大富大贵，只愿潜水养生两不误。",
-   "url": "http://www.chuapp.com/article/291610.html",
-   "game": "全行业",
-   "src_name": "触乐网·分类新闻",
-   "verdict": "review",
-   "pubdate": null,
-   "date_unverified": false,
-   "n_src_cluster": 4,
-   "signal": 3,
-   "reasons": [
-    "多源印证(4家)",
-    "准入待复核被卡"
-   ]
-  },
   {
    "title": "PSVR《揭秘计划2：远古之战》发售 火星之战爆发",
    "url": "https://www.gamersky.com/news/201809/1102376.shtml",
@@ -79,18 +20,17 @@
    ]
   },
   {
-   "title": "原创丨米哈游：一年沉淀，换来「高开神走」",
-   "url": "http://www.nadianshi.com/2026/07/413907",
+   "title": "紫龙代理的《未来战》停运一周后，韩国研发方宣布重启项目",
+   "url": "https://www.baijing.cn/article/56591",
    "game": "全行业",
-   "src_name": "手游那点事",
-   "verdict": "review",
-   "pubdate": "2026-07-01",
+   "src_name": "白鲸出海",
+   "verdict": "adopt",
+   "pubdate": "2026-09-05",
    "date_unverified": false,
-   "n_src_cluster": 4,
-   "signal": 3,
+   "n_src_cluster": 1,
+   "signal": 2,
    "reasons": [
-    "多源印证(4家)",
-    "准入待复核被卡"
+    "强事件词"
    ]
   },
   {

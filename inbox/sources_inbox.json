@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-09-07T10:47:04",
+ "fetched_at": "2026-09-07T15:32:36",
  "summary": {
   "sources_total": 75,
   "sources_alive": 71,
@@ -512,22 +512,22 @@
    "error": null,
    "items": [
     {
+     "title": "GPASS 「回归游戏季」节目单预热 1/3",
+     "url": "https://www.gcores.com/articles/219339",
+     "pubdate": "2026-09-07",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
+     "title": "【传言】《杀戮地带》迎来重启，重制版在路上",
+     "url": "https://www.gcores.com/articles/219343",
+     "pubdate": "2026-09-07",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
      "title": "德国科隆游戏展开发者展机被盗事件持续发酵，官方再次回应",
      "url": "https://www.gcores.com/articles/219327",
-     "pubdate": "2026-09-07",
-     "date_src": "feed",
-     "age_days": 0
-    },
-    {
-     "title": "《西部拓荒纪》将于9月25日开启抢先体验",
-     "url": "https://www.gcores.com/articles/219326",
-     "pubdate": "2026-09-07",
-     "date_src": "feed",
-     "age_days": 0
-    },
-    {
-     "title": "《黎明行者之血》销量突破一百万，开发者发文感谢",
-     "url": "https://www.gcores.com/articles/219325",
      "pubdate": "2026-09-07",
      "date_src": "feed",
      "age_days": 0
@@ -553,15 +553,15 @@
      "age_days": null
     },
     {
-     "title": "最终幻想7启示确认加入D加密！重制三部曲唯一一部",
-     "url": "https://www.gamersky.com/news/202609/2204211.shtml",
+     "title": "小米最高端旗舰今晚发布！发布会有惊喜 雷军讲全场",
+     "url": "https://www.gamersky.com/news/202609/2204497.shtml",
      "pubdate": "2026-09-07",
      "date_src": "text",
      "age_days": 0
     },
     {
-     "title": "曝下代Xbox无光驱！不是微软不想装 是实在买不到",
-     "url": "https://www.gamersky.com/news/202609/2204250.shtml",
+     "title": "《魔兽世界2》疑泄露！当年的兄弟还能凑齐一队吗？",
+     "url": "https://www.gamersky.com/news/202609/2204513.shtml",
      "pubdate": "2026-09-07",
      "date_src": "text",
      "age_days": 0
@@ -662,8 +662,8 @@
      "age_days": null
     },
     {
-     "title": "热点预告：塞尔达传说直面会即将到来！《王者万象棋》9月10日正式上线",
-     "url": "https://news.17173.com/content/09072026/092519154.shtml",
+     "title": "《洛神ol》剑仙以气御剑，万军取首的隐世君子",
+     "url": "https://news.17173.com/content/09072026/132647950.shtml",
      "pubdate": null,
      "date_src": null,
      "age_days": null
@@ -682,25 +682,25 @@
    "error": null,
    "items": [
     {
-     "title": "Monster Hunter Wilds expansion ‘Ascendance’ trailer – ‘Light Bowgun Boosted Action Breakdown’",
-     "url": "https://www.gematsu.com/2026/09/monster-hunter-wilds-expansion-ascendance-trailer-light-bowgun-boosted-action-breakdown",
-     "pubdate": "2026-09-06",
+     "title": "Monster Hunter Wilds expansion ‘Ascendance’ trailer – ‘Charge Blade Boosted Action Breakdown’",
+     "url": "https://www.gematsu.com/2026/09/monster-hunter-wilds-expansion-ascendance-trailer-charge-blade-boosted-action-breakdown",
+     "pubdate": "2026-09-07",
      "date_src": "feed",
-     "age_days": 1
+     "age_days": 0
     },
     {
-     "title": "Sid Meier’s Civilization VII major update ‘Arc of Tomorrow’ and paid expansion ‘Earthrise’ announced",
-     "url": "https://www.gematsu.com/2026/09/sid-meiers-civilization-vii-major-update-arc-of-tomorrow-and-paid-expansion-earthrise-announced",
-     "pubdate": "2026-09-05",
+     "title": "This Week’s Japanese Game Releases: Romance of the Three Kingdoms XIV Complete Edition, Touhou Koumakyou: New Classic – the Embodiment of Scarlet Devil, more",
+     "url": "https://www.gematsu.com/2026/09/this-weeks-japanese-game-releases-romance-of-the-three-kingdoms-xiv-complete-edition-touhou-koumakyou-new-classic-the-embodiment-of-scarlet-devil-more",
+     "pubdate": "2026-09-07",
      "date_src": "feed",
-     "age_days": 2
+     "age_days": 0
     },
     {
-     "title": "Yomawari: The Long Night Collection and Yomawari: Lost in the Dark for PS5 coming west on November 5",
-     "url": "https://www.gematsu.com/2026/09/yomawari-the-long-night-collection-and-yomawari-lost-in-the-dark-for-ps5-coming-west-on-november-5",
-     "pubdate": "2026-09-05",
+     "title": "The Exit 8 sales top three million",
+     "url": "https://www.gematsu.com/2026/09/the-exit-8-sales-top-three-million",
+     "pubdate": "2026-09-07",
      "date_src": "feed",
-     "age_days": 2
+     "age_days": 0
     }
    ],
    "extraction": "rss",
@@ -1134,6 +1134,13 @@
    "error": null,
    "items": [
     {
+     "title": "从“打地鼠”到俯视战场，欧洲游戏厂商MY.GAMES点赞腾讯游戏安全ACE",
+     "url": "http://www.gamelook.com.cn/2026/09/601587/",
+     "pubdate": "2026-09-07",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
      "title": "米哈游要造“AI梦工厂”？《雨之城》内测 AI 视频平台，玩家人人拍大片！",
      "url": "http://www.gamelook.com.cn/2026/09/601520/",
      "pubdate": "2026-09-07",
@@ -1160,13 +1167,6 @@
      "pubdate": "2026-09-07",
      "date_src": "feed",
      "age_days": 0
-    },
-    {
-     "title": "“3只逗比猴的混乱”，600万人试玩的友尽游戏《BOMBANANA!》Steam发售",
-     "url": "http://www.gamelook.com.cn/2026/09/601542/",
-     "pubdate": "2026-09-07",
-     "date_src": "feed",
-     "age_days": 0
     }
    ],
    "extraction": "rss",
@@ -1181,6 +1181,13 @@
    "status": 200,
    "error": null,
    "items": [
+    {
+     "title": "Epic Games CEO：游戏行业面临80年代以来最严重危机",
+     "url": "https://www.youxituoluo.com/534861.html",
+     "pubdate": "2026-09-07",
+     "date_src": "feed",
+     "age_days": 0
+    },
     {
      "title": "网易投资，前《巫师3》总监带队，他们第一款游戏登顶Steam",
      "url": "https://www.youxituoluo.com/534860.html",
@@ -1205,13 +1212,6 @@
     {
      "title": "Supercell 将完成对Metacore的收购，后者二合产品创收达7亿美元",
      "url": "https://www.youxituoluo.com/534854.html",
-     "pubdate": "2026-09-03",
-     "date_src": "feed",
-     "age_days": 4
-    },
-    {
-     "title": "7天超2000万流水：没人看好的慢生活“摆烂”小游戏，悄悄卖疯了",
-     "url": "https://www.youxituoluo.com/534853.html",
      "pubdate": "2026-09-03",
      "date_src": "feed",
      "age_days": 4
@@ -1380,7 +1380,7 @@
    "error": null,
    "items": [
     {
-     "title": "祝佳音12小时前0条评论 2026年科隆游戏展：当中国游戏开始提供经验 许多历史性的转变，都是人们先在行动上接受，过了很久才在观念上承认的。",
+     "title": "祝佳音17小时前0条评论 2026年科隆游戏展：当中国游戏开始提供经验 许多历史性的转变，都是人们先在行动上接受，过了很久才在观念上承认的。",
      "url": "http://www.chuapp.com/article/291616.html",
      "pubdate": null,
      "date_src": null,
@@ -1462,100 +1462,100 @@
    "error": null,
    "items": [
     {
-     "title": "“智能指环王”Oura正式启动IPO：9个月营收超12亿美元，付费会员达500万名",
-     "url": "https://www.baijing.cn/article/56585",
-     "pubdate": "2026-09-06",
+     "title": "Epic Games CEO：游戏行业面临80年代以来最严重危机",
+     "url": "https://www.baijing.cn/article/56603",
+     "pubdate": "2026-09-07",
      "date_src": "feed",
      "extra": {
-      "views": 42628,
-      "synopsis": "估值剑指 1000 亿，已积累约 420 亿小时生物数据。",
-      "from": "独角兽早知道"
-     },
-     "age_days": 1
-    },
-    {
-     "title": "月流水 6000万，把合成做出成绩的厂商，再添一家",
-     "url": "https://www.baijing.cn/article/56594",
-     "pubdate": "2026-09-06",
-     "date_src": "feed",
-     "extra": {
-      "views": 42291,
-      "synopsis": "围绕“比美”设计副玩法和社交内容。",
-      "from": "白鲸出海"
-     },
-     "age_days": 1
-    },
-    {
-     "title": "日活850万，这款“佛系”游戏放弃年入1.4亿美元的广告收入",
-     "url": "https://www.baijing.cn/article/56593",
-     "pubdate": "2026-09-05",
-     "date_src": "feed",
-     "extra": {
-      "views": 73984,
-      "synopsis": "一款在商业化上“不及格”的大 DAU 产品。",
+      "views": 1786,
+      "synopsis": "行业变革在即？",
       "from": "游戏陀螺"
      },
-     "age_days": 2
+     "age_days": 0
     },
     {
-     "title": "市值蒸发百亿，GoPro低价卖身了",
-     "url": "https://www.baijing.cn/article/56592",
-     "pubdate": "2026-09-05",
+     "title": "番糖游戏跑出女性向休闲黑马：国内小游戏稳居TOP15，海外月流连增7个月逼近2700万元",
+     "url": "https://www.baijing.cn/article/56602",
+     "pubdate": "2026-09-07",
      "date_src": "feed",
      "extra": {
-      "views": 73975,
-      "synopsis": "从巅峰到谷底，GoPro 到底经历了什么？",
-      "from": "品牌方舟BrandArk"
-     },
-     "age_days": 2
-    },
-    {
-     "title": "紫龙代理的《未来战》停运一周后，韩国研发方宣布重启项目",
-     "url": "https://www.baijing.cn/article/56591",
-     "pubdate": "2026-09-05",
-     "date_src": "feed",
-     "extra": {
-      "views": 63342,
-      "synopsis": "在 9 月 2 日，一个名为《COUNTERSIDE：A》的游戏首次在外网公开了游戏概念图，并宣布这款游戏将以《COUNTERSIDE》的重启项目形式出现。",
-      "from": "游戏新知"
-     },
-     "age_days": 2
-    },
-    {
-     "title": "海外微短剧&APP周报：MoboReels“带球跑”题材登顶热榜，昆仑万维HotDrama素材量大涨",
-     "url": "https://www.baijing.cn/article/56590",
-     "pubdate": "2026-09-05",
-     "date_src": "feed",
-     "extra": {
-      "views": 64356,
-      "synopsis": "本期（8 月 24 日-8 月 30 日）海外短剧 AI 剧参投新剧数 35205 部，持续环比增长，创下近 8 周新高，并突破 3.5 万部。",
-      "from": "DataEye短剧出海"
-     },
-     "age_days": 2
-    },
-    {
-     "title": "信也科技Q2财报：海外经营利润翻倍，三大市场走出不同节奏",
-     "url": "https://www.baijing.cn/article/56589",
-     "pubdate": "2026-09-05",
-     "date_src": "feed",
-     "extra": {
-      "views": 64036,
-      "synopsis": "印尼、菲律宾、澳洲三国市场，也分别走出了主力贡献、监管适应与新增量扩展的不同节奏。",
+      "views": 3531,
+      "synopsis": "《梦幻消除战／Merge Teahouse》究竟是一款怎样的产品？它经历了怎样的测试历程与平台转换？有着怎样的市场成绩？",
       "from": "点点出海"
      },
-     "age_days": 2
+     "age_days": 0
     },
     {
-     "title": "国产车载收纳再出爆款，上线7天拿下TikTok榜一",
-     "url": "https://www.baijing.cn/article/56588",
-     "pubdate": "2026-09-05",
+     "title": "单日爆卖76万，TikTok一款圣诞盲盒捏捏杀疯了",
+     "url": "https://www.baijing.cn/article/56601",
+     "pubdate": "2026-09-07",
      "date_src": "feed",
      "extra": {
-      "views": 64020,
-      "synopsis": "车门收纳袋 7 日销量上万。",
+      "views": 5717,
+      "synopsis": "美区再现爆款捏捏。",
       "from": "TT123跨境电商"
      },
-     "age_days": 2
+     "age_days": 0
+    },
+    {
+     "title": "美国白宫上线5款小游戏，被人权组织围剿",
+     "url": "https://www.baijing.cn/article/56600",
+     "pubdate": "2026-09-07",
+     "date_src": "feed",
+     "extra": {
+      "views": 10813,
+      "synopsis": "5 款游戏改编自经典街机玩法，且各自精准对应了不同的政务议题。",
+      "from": "游戏茶馆"
+     },
+     "age_days": 0
+    },
+    {
+     "title": "中国品牌进入东南亚，试错成本正在下降",
+     "url": "https://www.baijing.cn/article/56599",
+     "pubdate": "2026-09-07",
+     "date_src": "feed",
+     "extra": {
+      "views": 11382,
+      "synopsis": "搞清楚自己到底该不该进入、该进入哪里，正在变得便宜很多。",
+      "from": "墨腾创投"
+     },
+     "age_days": 0
+    },
+    {
+     "title": "父子两代接力做锁，把一门老生意做成全球第一",
+     "url": "https://www.baijing.cn/article/56598",
+     "pubdate": "2026-09-07",
+     "date_src": "feed",
+     "extra": {
+      "views": 11922,
+      "synopsis": "从深圳工厂到全球货架。",
+      "from": "兔克出海"
+     },
+     "age_days": 0
+    },
+    {
+     "title": "批发价5元卖40美金，DIY“压花器”在TikTok上赚翻了",
+     "url": "https://www.baijing.cn/article/56597",
+     "pubdate": "2026-09-07",
+     "date_src": "feed",
+     "extra": {
+      "views": 12499,
+      "synopsis": "橡皮泥压花器走红 TikTok。",
+      "from": "TT123跨境电商"
+     },
+     "age_days": 0
+    },
+    {
+     "title": "亚马逊更新2025年Q4涉税数据",
+     "url": "https://www.baijing.cn/article/56596",
+     "pubdate": "2026-09-07",
+     "date_src": "feed",
+     "extra": {
+      "views": 13357,
+      "synopsis": "此次并非全量推送，仅针对存在数据统计偏差的相关卖家。",
+      "from": "雨果网"
+     },
+     "age_days": 0
     }
    ],
    "extraction": "json_api",
@@ -1721,6 +1721,13 @@
    "error": null,
    "items": [
     {
+     "title": "Lanterns Season 1, Episode 4 Review & Recap: \"The Weenie\"",
+     "url": "https://www.ign.com/articles/lanterns-season-1-episode-4-review-recap-the-weenie",
+     "pubdate": "2026-09-07",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
      "title": "[UPDATE] Halloween: The Game Patches Out Sex Minigame — Dev Confirms 'Major Oversight'",
      "url": "https://www.ign.com/articles/halloween-the-game-appears-to-patch-out-a-sex-minigame-and-players-think-they-know-why",
      "pubdate": "2026-09-06",
@@ -1751,13 +1758,6 @@
     {
      "title": "Riot Co-Founder Calls League of Legends MMO the 'Grail' Quest, 5 Years After It Was Announced",
      "url": "https://www.ign.com/articles/riot-co-founder-calls-league-of-legends-mmo-the-grail-quest-5-years-after-it-was-announced",
-     "pubdate": "2026-09-06",
-     "date_src": "feed",
-     "age_days": 1
-    },
-    {
-     "title": "Skytech Gaming Blaze 5 Review",
-     "url": "https://www.ign.com/articles/skytech-gaming-blaze-5-review",
      "pubdate": "2026-09-06",
      "date_src": "feed",
      "age_days": 1
@@ -1872,6 +1872,13 @@
    "error": null,
    "items": [
     {
+     "title": "Steam Week in Review: 54 idle games released on Steam last week, and many look eerily similar",
+     "url": "https://www.pcgamer.com/gaming-industry/steam-week-in-review-54-idle-games-released-on-steam-last-week-and-many-look-eerily-similar/",
+     "pubdate": "2026-09-07",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
      "title": "'If you're designing an RPG, you have to go back to the source:' The post-apocalyptic RPG Entropy takes notes from Fallout and a long-abandoned Warhammer spinoff",
      "url": "https://www.pcgamer.com/games/rpg/if-youre-designing-an-rpg-you-have-to-go-back-to-the-source-the-post-apocalyptic-rpg-entropy-takes-notes-from-fallout-and-a-long-abandoned-warhammer-spinoff/",
      "pubdate": "2026-09-07",
@@ -1895,13 +1902,6 @@
     {
      "title": "18 years after Metal Gear Solid 4 first launched, a modder has shown off its first custom map, MGS3's Groznyj Grad",
      "url": "https://www.pcgamer.com/games/action/18-years-after-metal-gear-solid-4-first-launched-a-modder-has-shown-off-its-first-modded-map-mgs3s-groznyj-grad/",
-     "pubdate": "2026-09-06",
-     "date_src": "feed",
-     "age_days": 1
-    },
-    {
-     "title": "The Blood of Dawnwalker sold 1 million copies in just 3 days",
-     "url": "https://www.pcgamer.com/games/rpg/the-blood-of-dawnwalker-sold-1-million-copies-in-just-3-days/",
      "pubdate": "2026-09-06",
      "date_src": "feed",
      "age_days": 1

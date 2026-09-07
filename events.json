@@ -5,7 +5,7 @@
   "event_count": 100,
   "note": "scaffold 中的 <<EVT_i>> 由 gen_calendar.py 用 events[i].anchor 替换 __SRC__ 回填。",
   "feed_count": 40,
-  "feed_seq": 604,
+  "feed_seq": 608,
   "last_update": "2026-09-07",
   "date_migrated": "2026-08-18"
  },
@@ -2226,7 +2226,7 @@
    "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"Deliver packages in foresty mountains and avoid …（来源：Rock Paper Shotgun）\" style=\"color:#4da3ff;text-decoration:none\">Deliver packages in foresty mountains and avoid …</a></td><td>Rock Paper Shotgun</td></tr>"
   },
   {
-   "id": "F602",
+   "id": "F606",
    "kind": "feed",
    "game": "全行业",
    "title": "2026年科隆游戏展：当中国游戏开始提供经验 09.06",
@@ -2239,20 +2239,20 @@
    "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"2026年科隆游戏展：当中国游戏开始提供经验 09.06（来源：触乐网）\" style=\"color:#4da3ff;text-decoration:none\">2026年科隆游戏展：当中国游戏开始提供经验 09.06</a></td><td>触乐网</td></tr>"
   },
   {
-   "id": "F603",
+   "id": "F607",
    "kind": "feed",
    "game": "全行业",
-   "title": "祝佳音12小时前0条评论 2026年科隆游戏展：当中国游戏开始提供经验 许多历史性的转变，都是人们先在行动上接受，过了很久才在观念上承认的。",
+   "title": "祝佳音17小时前0条评论 2026年科隆游戏展：当中国游戏开始提供经验 许多历史性的转变，都是人们先在行动上接受，过了很久才在观念上承认的。",
    "source_url": "http://www.chuapp.com/article/291616.html",
    "source_name": "触乐网·分类新闻",
    "src_id": "chuapp_category",
    "pubdate": null,
    "first_seen": "2026-09-07",
    "date_unverified": true,
-   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"祝佳音12小时前0条评论 2026年科隆游戏展：当中国游戏开始提供经验 许多历史性的转变，都是人…（来源：触乐网·分类新闻）\" style=\"color:#4da3ff;text-decoration:none\">祝佳音12小时前0条评论 2026年科隆游戏展：当中国游戏开始提供经验 许多历史性的转变，都是人…</a></td><td>触乐网·分类新闻</td></tr>"
+   "anchor": "<tr><td><b style=\"color:var(--gold)\">全行业</b></td><td><a target=\"_blank\" href=\"__SRC__\" title=\"祝佳音17小时前0条评论 2026年科隆游戏展：当中国游戏开始提供经验 许多历史性的转变，都是人…（来源：触乐网·分类新闻）\" style=\"color:#4da3ff;text-decoration:none\">祝佳音17小时前0条评论 2026年科隆游戏展：当中国游戏开始提供经验 许多历史性的转变，都是人…</a></td><td>触乐网·分类新闻</td></tr>"
   },
   {
-   "id": "F604",
+   "id": "F608",
    "kind": "feed",
    "game": "全行业",
    "title": "等等09月04日0条评论 在电影和电视剧里讲游戏故事，这家公司是专业的 “我们的下一项使命——证明游戏是艺术。”",

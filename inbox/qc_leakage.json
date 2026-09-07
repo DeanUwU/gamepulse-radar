@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-09-07T10:49:05",
+ "generated_at": "2026-09-07T15:35:17",
  "adopt_total": 68,
  "review_total": 50,
- "leak_total": 3,
+ "leak_total": 2,
  "leaks": [
   {
    "title": "PSVR《揭秘计划2：远古之战》发售 火星之战爆发",
@@ -17,20 +17,6 @@
    "reasons": [
     "强事件词",
     "准入待复核被卡"
-   ]
-  },
-  {
-   "title": "紫龙代理的《未来战》停运一周后，韩国研发方宣布重启项目",
-   "url": "https://www.baijing.cn/article/56591",
-   "game": "全行业",
-   "src_name": "白鲸出海",
-   "verdict": "adopt",
-   "pubdate": "2026-09-05",
-   "date_unverified": false,
-   "n_src_cluster": 1,
-   "signal": 2,
-   "reasons": [
-    "强事件词"
    ]
   },
   {

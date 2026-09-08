@@ -1,9 +1,54 @@
 {
- "generated_at": "2026-09-07T15:35:17",
- "adopt_total": 68,
- "review_total": 50,
- "leak_total": 2,
+ "generated_at": "2026-09-08T11:00:00",
+ "adopt_total": 67,
+ "review_total": 51,
+ "leak_total": 5,
  "leaks": [
+  {
+   "title": "“天下第一海斗大会” 09.07",
+   "url": "https://www.chuapp.com/article/291619.html",
+   "game": "全行业",
+   "src_name": "触乐网",
+   "verdict": "review",
+   "pubdate": null,
+   "date_unverified": false,
+   "n_src_cluster": 17,
+   "signal": 3,
+   "reasons": [
+    "多源印证(17家)",
+    "准入待复核被卡"
+   ]
+  },
+  {
+   "title": "陈威远14小时前0条评论 触乐怪话：治疗“文压抑” 唯一的解法，或许就是多写，写到歇斯底里为止。",
+   "url": "http://www.chuapp.com/article/291618.html",
+   "game": "全行业",
+   "src_name": "触乐网·分类新闻",
+   "verdict": "review",
+   "pubdate": null,
+   "date_unverified": false,
+   "n_src_cluster": 17,
+   "signal": 3,
+   "reasons": [
+    "多源印证(17家)",
+    "准入待复核被卡"
+   ]
+  },
+  {
+   "title": "周煜博14小时前0条评论 “天下第一海斗大会” 爱打海斗的人们，也有了自己的比赛。",
+   "url": "http://www.chuapp.com/article/291619.html",
+   "game": "全行业",
+   "src_name": "触乐网·分类新闻",
+   "verdict": "review",
+   "pubdate": null,
+   "date_unverified": false,
+   "n_src_cluster": 17,
+   "signal": 3,
+   "reasons": [
+    "多源印证(17家)",
+    "准入待复核被卡"
+   ]
+  },
   {
    "title": "PSVR《揭秘计划2：远古之战》发售 火星之战爆发",
    "url": "https://www.gamersky.com/news/201809/1102376.shtml",

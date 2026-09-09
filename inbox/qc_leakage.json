@@ -1,51 +1,51 @@
 {
- "generated_at": "2026-09-08T11:00:00",
- "adopt_total": 67,
- "review_total": 51,
+ "generated_at": "2026-09-09T10:47:37",
+ "adopt_total": 79,
+ "review_total": 46,
  "leak_total": 5,
  "leaks": [
   {
-   "title": "“天下第一海斗大会” 09.07",
-   "url": "https://www.chuapp.com/article/291619.html",
+   "title": "陈可安14小时前0条评论 触乐怪话：没有音乐的人会伤心 “就让这首歌，代替所有回答。”",
+   "url": "http://www.chuapp.com/article/291617.html",
    "game": "全行业",
-   "src_name": "触乐网",
+   "src_name": "触乐网·分类新闻",
    "verdict": "review",
    "pubdate": null,
    "date_unverified": false,
-   "n_src_cluster": 17,
+   "n_src_cluster": 3,
    "signal": 3,
    "reasons": [
-    "多源印证(17家)",
+    "多源印证(3家)",
     "准入待复核被卡"
    ]
   },
   {
-   "title": "陈威远14小时前0条评论 触乐怪话：治疗“文压抑” 唯一的解法，或许就是多写，写到歇斯底里为止。",
+   "title": "祝思齐16小时前0条评论 《旅行青蛙：中国之旅》宣布停服：8年之后的告别 也许蛙蛙只是可以真正外出闯荡了。",
+   "url": "http://www.chuapp.com/article/291621.html",
+   "game": "全行业",
+   "src_name": "触乐网·分类新闻",
+   "verdict": "adopt",
+   "pubdate": null,
+   "date_unverified": false,
+   "n_src_cluster": 3,
+   "signal": 5,
+   "reasons": [
+    "多源印证(3家)",
+    "强事件词"
+   ]
+  },
+  {
+   "title": "陈威远09月07日0条评论 触乐怪话：治疗“文压抑” 唯一的解法，或许就是多写，写到歇斯底里为止。",
    "url": "http://www.chuapp.com/article/291618.html",
    "game": "全行业",
    "src_name": "触乐网·分类新闻",
    "verdict": "review",
    "pubdate": null,
    "date_unverified": false,
-   "n_src_cluster": 17,
+   "n_src_cluster": 3,
    "signal": 3,
    "reasons": [
-    "多源印证(17家)",
-    "准入待复核被卡"
-   ]
-  },
-  {
-   "title": "周煜博14小时前0条评论 “天下第一海斗大会” 爱打海斗的人们，也有了自己的比赛。",
-   "url": "http://www.chuapp.com/article/291619.html",
-   "game": "全行业",
-   "src_name": "触乐网·分类新闻",
-   "verdict": "review",
-   "pubdate": null,
-   "date_unverified": false,
-   "n_src_cluster": 17,
-   "signal": 3,
-   "reasons": [
-    "多源印证(17家)",
+    "多源印证(3家)",
     "准入待复核被卡"
    ]
   },

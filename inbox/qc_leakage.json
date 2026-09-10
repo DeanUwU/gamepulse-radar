@@ -1,51 +1,36 @@
 {
- "generated_at": "2026-09-09T10:47:37",
- "adopt_total": 79,
- "review_total": 46,
- "leak_total": 5,
+ "generated_at": "2026-09-10T10:55:32",
+ "adopt_total": 77,
+ "review_total": 52,
+ "leak_total": 4,
  "leaks": [
   {
-   "title": "陈可安14小时前0条评论 触乐怪话：没有音乐的人会伤心 “就让这首歌，代替所有回答。”",
+   "title": "王琳茜15小时前0条评论 触乐怪话：期待9月10日 自己在期待某个时间的时候，能感受到别人也有类似的期待，便会觉得自己的期待似乎更有意义。",
+   "url": "http://www.chuapp.com/article/291623.html",
+   "game": "全行业",
+   "src_name": "触乐网·分类新闻",
+   "verdict": "review",
+   "pubdate": null,
+   "date_unverified": false,
+   "n_src_cluster": 4,
+   "signal": 3,
+   "reasons": [
+    "多源印证(4家)",
+    "准入待复核被卡"
+   ]
+  },
+  {
+   "title": "陈可安09月08日0条评论 触乐怪话：没有音乐的人会伤心 “就让这首歌，代替所有回答。”",
    "url": "http://www.chuapp.com/article/291617.html",
    "game": "全行业",
    "src_name": "触乐网·分类新闻",
    "verdict": "review",
    "pubdate": null,
    "date_unverified": false,
-   "n_src_cluster": 3,
+   "n_src_cluster": 4,
    "signal": 3,
    "reasons": [
-    "多源印证(3家)",
-    "准入待复核被卡"
-   ]
-  },
-  {
-   "title": "祝思齐16小时前0条评论 《旅行青蛙：中国之旅》宣布停服：8年之后的告别 也许蛙蛙只是可以真正外出闯荡了。",
-   "url": "http://www.chuapp.com/article/291621.html",
-   "game": "全行业",
-   "src_name": "触乐网·分类新闻",
-   "verdict": "adopt",
-   "pubdate": null,
-   "date_unverified": false,
-   "n_src_cluster": 3,
-   "signal": 5,
-   "reasons": [
-    "多源印证(3家)",
-    "强事件词"
-   ]
-  },
-  {
-   "title": "陈威远09月07日0条评论 触乐怪话：治疗“文压抑” 唯一的解法，或许就是多写，写到歇斯底里为止。",
-   "url": "http://www.chuapp.com/article/291618.html",
-   "game": "全行业",
-   "src_name": "触乐网·分类新闻",
-   "verdict": "review",
-   "pubdate": null,
-   "date_unverified": false,
-   "n_src_cluster": 3,
-   "signal": 3,
-   "reasons": [
-    "多源印证(3家)",
+    "多源印证(4家)",
     "准入待复核被卡"
    ]
   },

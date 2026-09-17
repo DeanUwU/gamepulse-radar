@@ -1,9 +1,68 @@
 {
- "generated_at": "2026-09-16T11:14:00",
- "adopt_total": 68,
- "review_total": 55,
- "leak_total": 2,
+ "generated_at": "2026-09-17T10:51:05",
+ "adopt_total": 71,
+ "review_total": 54,
+ "leak_total": 7,
  "leaks": [
+  {
+   "title": "米哈游宣布停运的AI数字人，被一群玩家“赛博永生”了 09.15",
+   "url": "https://www.chuapp.com/article/291639.html",
+   "game": "全行业",
+   "src_name": "触乐网",
+   "verdict": "review",
+   "pubdate": "2025-11-10",
+   "date_unverified": false,
+   "n_src_cluster": 3,
+   "signal": 5,
+   "reasons": [
+    "多源印证(3家)",
+    "强事件词",
+    "准入待复核被卡"
+   ]
+  },
+  {
+   "title": "林翔13小时前0条评论 《Warframe》持续长青的秘密，藏在这次玩家见面会上 越活越年轻。",
+   "url": "http://www.chuapp.com/article/291643.html",
+   "game": "全行业",
+   "src_name": "触乐网·分类新闻",
+   "verdict": "adopt",
+   "pubdate": null,
+   "date_unverified": false,
+   "n_src_cluster": 4,
+   "signal": 3,
+   "reasons": [
+    "多源印证(4家)"
+   ]
+  },
+  {
+   "title": "陈静17小时前0条评论 触乐怪话：有趣的叠加 同样以简单玩法做基底，加点别的行不行？",
+   "url": "http://www.chuapp.com/article/291641.html",
+   "game": "全行业",
+   "src_name": "触乐网·分类新闻",
+   "verdict": "review",
+   "pubdate": null,
+   "date_unverified": false,
+   "n_src_cluster": 4,
+   "signal": 3,
+   "reasons": [
+    "多源印证(4家)",
+    "准入待复核被卡"
+   ]
+  },
+  {
+   "title": "祝思齐09月15日0条评论 《inZOI》制作人群访：做得艰难但不后悔 希望玩家能在游戏中获得现实生活的勇气。",
+   "url": "http://www.chuapp.com/article/291633.html",
+   "game": "全行业",
+   "src_name": "触乐网·分类新闻",
+   "verdict": "adopt",
+   "pubdate": null,
+   "date_unverified": false,
+   "n_src_cluster": 4,
+   "signal": 3,
+   "reasons": [
+    "多源印证(4家)"
+   ]
+  },
   {
    "title": "PSVR《揭秘计划2：远古之战》发售 火星之战爆发",
    "url": "https://www.gamersky.com/news/201809/1102376.shtml",
@@ -16,6 +75,21 @@
    "signal": 2,
    "reasons": [
     "强事件词",
+    "准入待复核被卡"
+   ]
+  },
+  {
+   "title": "原创丨米哈游：一年沉淀，换来「高开神走」",
+   "url": "http://www.nadianshi.com/2026/07/413907",
+   "game": "全行业",
+   "src_name": "手游那点事",
+   "verdict": "review",
+   "pubdate": "2026-07-01",
+   "date_unverified": false,
+   "n_src_cluster": 3,
+   "signal": 3,
+   "reasons": [
+    "多源印证(3家)",
     "准入待复核被卡"
    ]
   },

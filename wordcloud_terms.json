@@ -1,275 +1,37 @@
 {
- "date": "2026-09-16",
- "terms": [
-  {
-   "term": "伊莫PC预下载开启",
-   "href": "https://www.bilibili.com/video/BV1Dve565ENK",
-   "cat": "游戏/新品",
-   "heat": 95,
-   "sources": [
-    "B站"
-   ]
-  },
-  {
-   "term": "崩坏星穹铁道 阿哈时刻",
-   "href": "https://www.bilibili.com/video/BV1cVej6MEiC",
-   "cat": "游戏/新品",
-   "heat": 90,
-   "sources": [
-    "B站"
-   ]
-  },
-  {
-   "term": "三角洲行动二周年彩蛋",
-   "href": "https://www.bilibili.com/video/BV1NuYy6DEtZ",
-   "cat": "游戏/新品",
-   "heat": 84,
-   "sources": [
-    "B站"
-   ]
-  },
-  {
-   "term": "王者万象棋王牌英雄企划",
-   "href": "https://www.bilibili.com/video/BV1w2Y46YEQS",
-   "cat": "游戏/新品",
-   "heat": 80,
-   "sources": [
-    "B站"
-   ]
-  },
-  {
-   "term": "第五人格新求生者神童",
-   "href": "https://www.bilibili.com/video/BV1woeE62E4h",
-   "cat": "游戏/新品",
-   "heat": 72,
-   "sources": [
-    "B站"
-   ]
-  },
-  {
-   "term": "未眠野首曝PV",
-   "href": "https://www.bilibili.com/video/BV18gtJ6LECq",
-   "cat": "游戏/新品",
-   "heat": 68,
-   "sources": [
-    "B站"
-   ]
-  },
-  {
-   "term": "百日成王 第25集完结",
-   "href": "https://www.bilibili.com/video/BV1iFth6QEyV",
-   "cat": "游戏/新品",
-   "heat": 46,
-   "sources": [
-    "B站"
-   ]
-  },
-  {
-   "term": "琵琶曲是什么梗",
-   "href": "https://www.bilibili.com/video/BV1JyeJ6CEWh",
-   "cat": "梗/社区",
-   "heat": 88,
-   "sources": [
-    "B站"
-   ]
-  },
-  {
-   "term": "一百万人一起吃火锅",
-   "href": "https://www.bilibili.com/video/BV1CSej6kETr",
-   "cat": "梗/社区",
-   "heat": 76,
-   "sources": [
-    "B站"
-   ]
-  },
-  {
-   "term": "人生被那道数学题毁了",
-   "href": "https://www.bilibili.com/video/BV1NLen6pEmF",
-   "cat": "梗/社区",
-   "heat": 66,
-   "sources": [
-    "B站"
-   ]
-  },
-  {
-   "term": "白垩纪遇盘古",
-   "href": "https://www.bilibili.com/video/BV1ufYC6tExe",
-   "cat": "梗/社区",
-   "heat": 58,
-   "sources": [
-    "B站"
-   ]
-  },
-  {
-   "term": "重播率百分百",
-   "href": "https://www.bilibili.com/video/BV15keV6DEjM",
-   "cat": "梗/社区",
-   "heat": 54,
-   "sources": [
-    "B站"
-   ]
-  },
-  {
-   "term": "掉水大棒大冒险",
-   "href": "https://www.bilibili.com/video/BV1PLen6pE4S",
-   "cat": "梗/社区",
-   "heat": 50,
-   "sources": [
-    "B站"
-   ]
-  },
-  {
-   "term": "嘉豪の小曲",
-   "href": "https://www.bilibili.com/video/BV1KeY466Ekf",
-   "cat": "梗/社区",
-   "heat": 40,
-   "sources": [
-    "B站"
-   ]
-  },
-  {
-   "term": "每说一个杰字文明倒退一次",
-   "href": "https://www.bilibili.com/video/BV1mcYH6oEGp",
-   "cat": "梗/社区",
-   "heat": 38,
-   "sources": [
-    "B站"
-   ]
-  },
-  {
-   "term": "中式恐怖 上大学不给买手机",
-   "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28364410&topic_name=%E4%B8%AD%E5%BC%8F%E6%81%90%E6%80%96",
-   "cat": "梗/社区",
-   "heat": 36,
-   "sources": [
-    "贴吧"
-   ]
-  },
-  {
-   "term": "蓝原三测 兔女郎拿捏",
-   "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28364423&topic_name=%E8%93%9D%E5%8E%9F%E4%B8%89%E6%B5%8B",
-   "cat": "游戏/新品",
-   "heat": 70,
-   "sources": [
-    "贴吧"
-   ]
-  },
-  {
-   "term": "互联网上亿条视频抢救计划",
-   "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28364350&topic_name=%E4%BA%92%E8%81%94%E7%BD%91%E4%B8%8A%E4%BA%BF%E6%9D%A1%E8%A7%86%E9%A2%91",
-   "cat": "行业/数据",
-   "heat": 48,
-   "sources": [
-    "贴吧"
-   ]
-  },
-  {
-   "term": "DeepSeek工程师自嘲被AI取代",
-   "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28364468&topic_name=deepseek%E5%B7%A5%E7%A8%8B%E5%B8%88",
-   "cat": "行业/数据",
-   "heat": 44,
-   "sources": [
-    "贴吧"
-   ]
-  },
-  {
-   "term": "任天堂发布会中文游戏汇总",
-   "href": "https://www.gamersky.com/news/202609/2206718.shtml",
-   "cat": "游戏/新品",
-   "heat": 86,
-   "sources": [
-    "游民星空"
-   ]
-  },
-  {
-   "term": "卡莉亚炼金工房宣传片",
-   "href": "https://www.gcores.com/articles/219428",
-   "cat": "游戏/新品",
-   "heat": 82,
-   "sources": [
-    "机核"
-   ]
-  },
-  {
-   "term": "雷顿教授蒸汽新世界新PV",
-   "href": "https://www.gamersky.com/news/202609/2206648.shtml",
-   "cat": "游戏/新品",
-   "heat": 74,
-   "sources": [
-    "游民星空"
-   ]
-  },
-  {
-   "term": "三角洲彦祖回归练练玩法",
-   "href": "https://store.steampowered.com/news/app/2507950/view/702153223322992751",
-   "cat": "游戏/新品",
-   "heat": 64,
-   "sources": [
-    "Steam"
-   ]
-  },
-  {
-   "term": "CS2 更新",
-   "href": "https://store.steampowered.com/news/app/730/view/692020124159312044",
-   "cat": "游戏/新品",
-   "heat": 62,
-   "sources": [
-    "Steam"
-   ]
-  },
-  {
-   "term": "萤火突击召回战友",
-   "href": "https://yhtj.163.com/news/update/20260909/36482_1313449.html",
-   "cat": "游戏/新品",
-   "heat": 42,
-   "sources": [
-    "网易"
-   ]
-  },
-  {
-   "term": "独游逆向破解上抖音",
-   "href": "http://www.gamelook.com.cn/2026/09/601797/",
-   "cat": "事件/风险",
-   "heat": 78,
-   "sources": [
-    "GameLook"
-   ]
-  },
-  {
-   "term": "Valorant 作弊者 Evil Tung Tung",
-   "href": "https://www.ign.com/articles/valorant-cheater-using-evil-tung-tung-tung-sahur-skin-banned-after-viral-video-sparks-backlash-against-riots-anti-cheat",
-   "cat": "事件/风险",
-   "heat": 60,
-   "sources": [
-    "IGN"
-   ]
-  },
-  {
-   "term": "永劫无间封禁公告",
-   "href": "https://www.yjwujian.cn/news/update/20260909/33456_1313410.html",
-   "cat": "事件/风险",
-   "heat": 52,
-   "sources": [
-    "永劫无间"
-   ]
-  },
-  {
-   "term": "暗区突围无限处罚公告",
-   "href": "https://store.steampowered.com/news/app/2073620/view/680761125088788526",
-   "cat": "事件/风险",
-   "heat": 34,
-   "sources": [
-    "Steam"
-   ]
-  },
-  {
-   "term": "巫师3 DLC 闭门演示",
-   "href": "https://www.pcgamer.com/gaming-industry/events-conferences/attendees-will-be-able-to-check-out-a-demo-of-the-witcher-3-dlc-songs-of-the-past-behind-closed-doors-at-pax-australia/",
-   "cat": "行业/数据",
-   "heat": 32,
-   "sources": [
-    "PC Gamer"
-   ]
-  }
- ]
+  "date": "2026-09-17",
+  "terms": [
+    { "term": "伊莫PC端今日上线", "href": "https://www.bilibili.com/video/BV1mxY16ZE2K", "cat": "游戏/新品", "heat": 92, "sources": ["B站"] },
+    { "term": "未眠野首曝PV", "href": "https://www.bilibili.com/video/BV18gtJ6LECq", "cat": "游戏/新品", "heat": 85, "sources": ["B站"] },
+    { "term": "伊莫PC端预下载开启", "href": "https://www.bilibili.com/video/BV1Dve565ENK", "cat": "游戏/新品", "heat": 88, "sources": ["B站"] },
+    { "term": "原神薇斯纳角色PV", "href": "https://www.bilibili.com/video/BV1sjen6QEQ7", "cat": "游戏/新品", "heat": 80, "sources": ["B站"] },
+    { "term": "鸣潮动画短片寻心", "href": "https://www.bilibili.com/video/BV1WAec6fE5N", "cat": "游戏/新品", "heat": 78, "sources": ["B站"] },
+    { "term": "战地风云6第4赛季", "href": "https://www.gamersky.com/news/202609/2209975.shtml", "cat": "游戏/新品", "heat": 77, "sources": ["游民星空"] },
+    { "term": "FPS黑马新游200万销量", "href": "https://www.gamersky.com/news/202609/2210412.shtml", "cat": "行业/数据", "heat": 75, "sources": ["游民星空"] },
+    { "term": "绝区零克拉蕾EP", "href": "https://www.bilibili.com/video/BV1C9b76cEks", "cat": "游戏/新品", "heat": 72, "sources": ["B站"] },
+    { "term": "Apex英雄VS街霸6联动", "href": "https://www.gcores.com/articles/219773", "cat": "游戏/新品", "heat": 69, "sources": ["机核"] },
+    { "term": "崩坏星穹铁道阿哈时刻", "href": "https://www.bilibili.com/video/BV1cVej6MEiC", "cat": "游戏/新品", "heat": 66, "sources": ["B站"] },
+    { "term": "王者万象棋王牌英雄企划", "href": "https://www.bilibili.com/video/BV1w2Y46YEQS", "cat": "游戏/新品", "heat": 70, "sources": ["B站"] },
+    { "term": "三角洲二周年彩蛋解密", "href": "https://www.bilibili.com/video/BV1NuYy6DEtZ", "cat": "游戏/新品", "heat": 62, "sources": ["B站"] },
+    { "term": "剑侠世界4无限10月15日公测", "href": "https://news.17173.com/content/09162026/104418406.shtml", "cat": "游戏/新品", "heat": 64, "sources": ["17173"] },
+    { "term": "地铁逃生真人大片幕后", "href": "https://www.bilibili.com/video/BV1PFtz69EdW", "cat": "游戏/新品", "heat": 50, "sources": ["B站"] },
+    { "term": "月行水上SR摆完挂机", "href": "https://www.bilibili.com/video/BV1U8tq6sEb2", "cat": "游戏/新品", "heat": 55, "sources": ["B站"] },
+    { "term": "阴阳师9月16日维护更新", "href": "https://yys.163.com/news/update/20260915/23024_1313918.html", "cat": "游戏/新品", "heat": 44, "sources": ["阴阳师官网"] },
+    { "term": "初音大战奥特曼", "href": "https://www.bilibili.com/video/BV1QUbx6iE6h", "cat": "梗/社区", "heat": 68, "sources": ["B站"] },
+    { "term": "哈基米是什么梗", "href": "https://www.bilibili.com/video/BV19ueP6HE5F", "cat": "梗/社区", "heat": 60, "sources": ["B站"] },
+    { "term": "琵琶曲是什么梗", "href": "https://www.bilibili.com/video/BV1cneE63ErK", "cat": "梗/社区", "heat": 58, "sources": ["B站"] },
+    { "term": "华强买瓜但死神来了", "href": "https://www.bilibili.com/video/BV1UBbL6YEtN", "cat": "梗/社区", "heat": 52, "sources": ["B站"] },
+    { "term": "鹰角海猫读评论是什么梗", "href": "https://www.bilibili.com/video/BV15Hec62EuD", "cat": "梗/社区", "heat": 50, "sources": ["B站"] },
+    { "term": "碧蓝贵有贵的道理", "href": "https://www.bilibili.com/video/BV1xEew6BE7p", "cat": "梗/社区", "heat": 45, "sources": ["B站"] },
+    { "term": "薇斯纳PV藏了多少个梗", "href": "https://www.bilibili.com/video/BV1zqeP6AEYe", "cat": "梗/社区", "heat": 48, "sources": ["B站"] },
+    { "term": "腾讯光子Higame扩招微恐", "href": "http://www.gamelook.com.cn/2026/09/602273/", "cat": "行业/数据", "heat": 60, "sources": ["GameLook"] },
+    { "term": "CDPR巫师索尼下架2077", "href": "http://www.gamelook.com.cn/2026/09/602305/", "cat": "行业/数据", "heat": 58, "sources": ["GameLook"] },
+    { "term": "王者万象棋畅销top5", "href": "https://www.youxituoluo.com/534880.html", "cat": "行业/数据", "heat": 56, "sources": ["游戏陀螺"] },
+    { "term": "吸血鬼幸存者中国IP短剧", "href": "https://www.youxituoluo.com/534884.html", "cat": "行业/数据", "heat": 47, "sources": ["游戏陀螺"] },
+    { "term": "半佛下一代孩子知道原神吗", "href": "https://www.bilibili.com/video/BV15GtZ6tEGS", "cat": "行业/数据", "heat": 54, "sources": ["B站"] },
+    { "term": "Steam Deck 2计划不受危机影响", "href": "https://www.eurogamer.net/valve-steam-deck-2-plans-component-crisis", "cat": "行业/数据", "heat": 53, "sources": ["Eurogamer"] },
+    { "term": "Skyblivion发布临近招募", "href": "https://www.pcgamer.com/games/the-elder-scrolls/as-skyblivions-launch-approaches-the-team-is-looking-for-help-to-get-the-word-out/", "cat": "游戏/新品", "heat": 46, "sources": ["PCGamer"] },
+    { "term": "Marvel's Wolverine PS5上线", "href": "https://www.pushsquare.com/news/2026/09/marvels-wolverine-ps5-launch-marked-with-celebratory-art-from-other-ps-studios", "cat": "游戏/新品", "heat": 42, "sources": ["PushSquare"] },
+    { "term": "BlizzCon 2026开幕礼汇总", "href": "https://gameinformer.com/blizzcon-2026/2026/09/12/everything-announced-at-the-blizzcon-2026-opening-ceremony", "cat": "事件/风险", "heat": 49, "sources": ["GameInformer"] }
+  ]
 }

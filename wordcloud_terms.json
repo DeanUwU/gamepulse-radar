@@ -1,35 +1,307 @@
 {
-  "date": "2026-09-18",
-  "terms": [
-    {"term": "伊莫 PC预下载开启", "href": "https://www.bilibili.com/video/BV1Dve565ENK", "cat": "游戏/新品", "heat": 82, "sources": ["B站", "伊莫"]},
-    {"term": "伊莫 首日Steam在线破12万", "href": "http://www.gamelook.com.cn/2026/09/602402/", "cat": "行业/数据", "heat": 88, "sources": ["GameLook", "伊莫"]},
-    {"term": "崩坏星穹铁道 阿哈时刻", "href": "https://www.bilibili.com/video/BV1cVej6MEiC", "cat": "游戏/新品", "heat": 60, "sources": ["B站", "崩坏星穹铁道"]},
-    {"term": "战狗WARDOGS 官宣200万销量", "href": "https://www.gamersky.com/news/202609/2210412.shtml", "cat": "行业/数据", "heat": 84, "sources": ["游民星空", "战狗"]},
-    {"term": "剑侠世界4无限 10月15公测", "href": "https://news.17173.com/content/09162026/104418406.shtml", "cat": "游戏/新品", "heat": 58, "sources": ["17173", "剑侠世界"]},
-    {"term": "战地风云6 第4赛季惊涛骇浪", "href": "https://www.gamersky.com/news/202609/2209975.shtml", "cat": "游戏/新品", "heat": 74, "sources": ["游民星空", "战地风云6"]},
-    {"term": "腾讯光子 Higame 微恐扩招", "href": "http://www.gamelook.com.cn/2026/09/602273/", "cat": "行业/数据", "heat": 68, "sources": ["GameLook", "腾讯"]},
-    {"term": "腾讯 海外广告平台", "href": "https://www.baijing.cn/article/56706", "cat": "行业/数据", "heat": 54, "sources": ["白鲸", "腾讯"]},
-    {"term": "永劫无间 违规封禁", "href": "https://www.yjwujian.cn/news/update/20260915/33456_1313947.html", "cat": "事件/风险", "heat": 46, "sources": ["永劫无间官方"]},
-    {"term": "Noroi Aya 时循环恐怖", "href": "https://www.gematsu.com/2026/09/time-loop-horror-action-adventure-game-noroi-ayashi-the-infinith-oddity-announced-for-switch-2-switch-and-pc", "cat": "游戏/新品", "heat": 50, "sources": ["Gematsu"]},
-    {"term": "KEMURI TGS2026", "href": "https://www.gematsu.com/2026/09/kemuri-welcome-back-to-the-chaos-tgs-2026-trailer", "cat": "游戏/新品", "heat": 48, "sources": ["Gematsu", "TGS"]},
-    {"term": "DOTA2 7.41f版本", "href": "https://store.steampowered.com/news/app/570/view/677383425371407609", "cat": "游戏/新品", "heat": 52, "sources": ["Steam", "DOTA2"]},
-    {"term": "华纳后悔毁掉斯奈德DC宇宙", "href": "https://www.ign.com/articles/warner-bros-reportedly-regrets-torching-zack-snyders-dc-universe-and-battling-with-him-on-justice-league", "cat": "事件/风险", "heat": 47, "sources": ["IGN", "华纳"]},
-    {"term": "Skyblivion 发售临近", "href": "https://www.pcgamer.com/games/the-elder-scrolls/as-skyblivions-launch-approaches-the-team-is-looking-for-help-to-get-the-word-out/", "cat": "游戏/新品", "heat": 55, "sources": ["PCGamer", "Skyblivion"]},
-    {"term": "Steam Deck 2 计划不受影响", "href": "https://www.eurogamer.net/valve-steam-deck-2-plans-component-crisis", "cat": "行业/数据", "heat": 64, "sources": ["Eurogamer", "Valve"]},
-    {"term": "暴雪 守望先锋皮肤疲劳", "href": "https://www.pcgamer.com/games/fps/blizzard-is-aware-overwatch-fans-are-tired-of-seeing-its-fanciest-skins-go-to-the-same-heroes-and-its-the-number-one-thing-its-working-to-fix-next/", "cat": "行业/数据", "heat": 50, "sources": ["PCGamer", "暴雪"]},
-    {"term": "Marvel Wolverine PS5", "href": "https://www.pushsquare.com/news/2026/09/marvels-wolverine-ps5-launch-marked-with-celebratory-art-from-other-ps-studios", "cat": "游戏/新品", "heat": 56, "sources": ["PushSquare", "漫威"]},
-    {"term": "骑士盘骑士 Steam试玩版", "href": "https://www.gcores.com/articles/219822", "cat": "游戏/新品", "heat": 55, "sources": ["机核", "骑士盘骑士"]},
-    {"term": "Steam周销 战狗WARDOGS登顶", "href": "https://www.gcores.com/articles/219774", "cat": "行业/数据", "heat": 62, "sources": ["机核", "Steam"]},
-    {"term": "被腾讯放弃后 FPS首日125万", "href": "https://www.youxituoluo.com/534888.html", "cat": "行业/数据", "heat": 82, "sources": ["游戏陀螺"]},
-    {"term": "影之刃零 联名手柄", "href": "https://www.gamersky.com/news/202609/2211129.shtml", "cat": "游戏/新品", "heat": 66, "sources": ["游民星空", "影之刃零"]},
-    {"term": "永劫无间 9月17更新", "href": "https://store.steampowered.com/news/app/1203220/view/695398457627639927", "cat": "游戏/新品", "heat": 50, "sources": ["Steam", "永劫无间"]},
-    {"term": "莉莉丝 塔塔冒险队 回国服", "href": "https://www.baijing.cn/article/56718", "cat": "行业/数据", "heat": 52, "sources": ["白鲸", "莉莉丝"]},
-    {"term": "WoW Forever BlizzCon", "href": "https://gameinformer.com/blizzcon-2026/2026/09/16/world-of-warcraft-forever-devs-answer-our-biggest-questions-at-blizzcon", "cat": "事件/风险", "heat": 48, "sources": ["GameInformer", "魔兽世界"]},
-    {"term": "原神 沃雅妮莎角色PV", "href": "https://www.bilibili.com/video/BV13Xew6LE7T", "cat": "游戏/新品", "heat": 76, "sources": ["B站", "原神"]},
-    {"term": "鸣潮 寻心动画短片", "href": "https://www.bilibili.com/video/BV1WAec6fE5N", "cat": "游戏/新品", "heat": 78, "sources": ["B站", "鸣潮"]},
-    {"term": "蓝色星原旅谣 枫糖PV", "href": "https://www.bilibili.com/video/BV1L7ec6JE5v", "cat": "游戏/新品", "heat": 60, "sources": ["B站", "蓝色星原旅谣"]},
-    {"term": "炽日将烬 无畏契约冠军赛主题曲", "href": "https://www.bilibili.com/video/BV1rtew6hEnF", "cat": "梗/社区", "heat": 58, "sources": ["B站", "无畏契约"]},
-    {"term": "东方梗指南", "href": "https://www.bilibili.com/video/BV1efeg6GEuK", "cat": "梗/社区", "heat": 44, "sources": ["B站", "东方Project"]},
-    {"term": "碧蓝梗指南 自爆卡车", "href": "https://www.bilibili.com/video/BV1Jper6MEhv", "cat": "梗/社区", "heat": 42, "sources": ["B站", "碧蓝航线"]}
-  ]
+ "date": "2026-09-22",
+ "terms": [
+  {
+   "term": "原神 薇斯纳角色预告",
+   "href": "https://www.bilibili.com/video/BV16Leq64Ei3",
+   "cat": "游戏/新品",
+   "heat": 94,
+   "sources": [
+    "B站",
+    "原神"
+   ]
+  },
+  {
+   "term": "异环 黑羽角色PV",
+   "href": "https://www.bilibili.com/video/BV1iWej6hEe6",
+   "cat": "游戏/新品",
+   "heat": 86,
+   "sources": [
+    "B站",
+    "异环"
+   ]
+  },
+  {
+   "term": "三角洲行动 二周年庆活动",
+   "href": "https://www.xiaoheihe.cn/app/bbs/link/191060441",
+   "cat": "游戏/新品",
+   "heat": 78,
+   "sources": [
+    "小黑盒",
+    "三角洲行动"
+   ]
+  },
+  {
+   "term": "原神HoYoFair 元素战争破晓",
+   "href": "https://www.bilibili.com/video/BV1woez6TECm",
+   "cat": "游戏/新品",
+   "heat": 66,
+   "sources": [
+    "B站",
+    "原神"
+   ]
+  },
+  {
+   "term": "无畏契约 捷风卡面韩国独占",
+   "href": "https://www.xiaoheihe.cn/app/bbs/link/191068899",
+   "cat": "游戏/新品",
+   "heat": 60,
+   "sources": [
+    "小黑盒",
+    "无畏契约"
+   ]
+  },
+  {
+   "term": "原神周年礼品 免费椅子",
+   "href": "https://www.bilibili.com/video/BV1Zkhk6aEpn",
+   "cat": "游戏/新品",
+   "heat": 58,
+   "sources": [
+    "B站",
+    "梗百科"
+   ]
+  },
+  {
+   "term": "Minecraft 改造MC的船",
+   "href": "https://www.bilibili.com/video/BV1Hjez6eEPv",
+   "cat": "游戏/新品",
+   "heat": 56,
+   "sources": [
+    "B站",
+    "Minecraft"
+   ]
+  },
+  {
+   "term": "Minecraft 村民发展6小时",
+   "href": "https://www.bilibili.com/video/BV1CRez6BEe9",
+   "cat": "游戏/新品",
+   "heat": 55,
+   "sources": [
+    "B站",
+    "Minecraft"
+   ]
+  },
+  {
+   "term": "战地风云6 第4赛季惊涛骇浪",
+   "href": "https://www.gamersky.com/news/202609/2209975.shtml",
+   "cat": "游戏/新品",
+   "heat": 70,
+   "sources": [
+    "游民星空"
+   ]
+  },
+  {
+   "term": "骑士盘骑士 Steam试玩版",
+   "href": "https://www.gcores.com/articles/219822",
+   "cat": "游戏/新品",
+   "heat": 52,
+   "sources": [
+    "机核"
+   ]
+  },
+  {
+   "term": "生化危机4重制版 结局解析",
+   "href": "https://news.17173.com/content/09182026/100803925.shtml",
+   "cat": "游戏/新品",
+   "heat": 50,
+   "sources": [
+    "17173"
+   ]
+  },
+  {
+   "term": "Skyblivion 发售临近",
+   "href": "https://www.pcgamer.com/games/the-elder-scrolls/as-skyblivions-launch-approaches-the-team-is-looking-for-help-to-get-the-word-out/",
+   "cat": "游戏/新品",
+   "heat": 52,
+   "sources": [
+    "PC Gamer"
+   ]
+  },
+  {
+   "term": "伊莫 首日Steam在线破12万",
+   "href": "http://www.gamelook.com.cn/2026/09/602402/",
+   "cat": "行业/数据",
+   "heat": 88,
+   "sources": [
+    "GameLook",
+    "伊莫"
+   ]
+  },
+  {
+   "term": "被腾讯放弃后 首日销量125万",
+   "href": "https://www.youxituoluo.com/534888.html",
+   "cat": "行业/数据",
+   "heat": 80,
+   "sources": [
+    "游戏陀螺"
+   ]
+  },
+  {
+   "term": "Steam周销量榜 战狗登顶",
+   "href": "https://www.gcores.com/articles/219774",
+   "cat": "行业/数据",
+   "heat": 74,
+   "sources": [
+    "机核",
+    "Steam"
+   ]
+  },
+  {
+   "term": "Steam秋促抢跑 新史低",
+   "href": "https://www.xiaoheihe.cn/app/bbs/link/190921357",
+   "cat": "行业/数据",
+   "heat": 72,
+   "sources": [
+    "小黑盒",
+    "Steam"
+   ]
+  },
+  {
+   "term": "官中+国区永降 在线暴涨335%",
+   "href": "https://www.xiaoheihe.cn/app/bbs/link/191062263",
+   "cat": "行业/数据",
+   "heat": 68,
+   "sources": [
+    "小黑盒"
+   ]
+  },
+  {
+   "term": "小岛秀夫致辞感谢Xbox",
+   "href": "https://www.gamersky.com/news/202609/2211776.shtml",
+   "cat": "行业/数据",
+   "heat": 64,
+   "sources": [
+    "游民星空"
+   ]
+  },
+  {
+   "term": "腾讯光子 Higame扩招",
+   "href": "http://www.gamelook.com.cn/2026/09/602273/",
+   "cat": "行业/数据",
+   "heat": 62,
+   "sources": [
+    "GameLook"
+   ]
+  },
+  {
+   "term": "Faker卡牌卖出165万",
+   "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28365112&topic_name=1%E5%BC%A0%E5%8D%A1%E9%A1%B6%E5%A5%97%E6%88%BF%2CFaker%E5%8D%A1%E7%89%8C%E5%8D%96165%E4%B8%87",
+   "cat": "行业/数据",
+   "heat": 60,
+   "sources": [
+    "百度贴吧"
+   ]
+  },
+  {
+   "term": "影之刃零 联名手柄899元",
+   "href": "https://www.gamersky.com/news/202609/2211129.shtml",
+   "cat": "行业/数据",
+   "heat": 58,
+   "sources": [
+    "游民星空"
+   ]
+  },
+  {
+   "term": "GTA6 临终父亲试玩申请被删",
+   "href": "https://www.xiaoheihe.cn/app/bbs/link/191079018",
+   "cat": "事件/风险",
+   "heat": 66,
+   "sources": [
+    "小黑盒",
+    "GTA6"
+   ]
+  },
+  {
+   "term": "小岛秀夫与彭博社 谁在说谎",
+   "href": "https://www.xiaoheihe.cn/app/bbs/link/191062428",
+   "cat": "事件/风险",
+   "heat": 58,
+   "sources": [
+    "小黑盒"
+   ]
+  },
+  {
+   "term": "CS主播茄子 变老赖",
+   "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28365113&topic_name=CS%E4%B8%BB%E6%92%AD%E8%8C%84%E5%AD%90%E8%BE%93%E5%85%89%E5%AE%B6%E4%BA%A7%E5%8F%98%E8%80%81%E8%B5%96",
+   "cat": "事件/风险",
+   "heat": 56,
+   "sources": [
+    "百度贴吧"
+   ]
+  },
+  {
+   "term": "守望先锋 皮肤分配争议",
+   "href": "https://www.pcgamer.com/games/fps/blizzard-is-aware-overwatch-fans-are-tired-of-seeing-its-fanciest-skins-go-to-the-same-heroes-and-its-the-number-one-thing-its-working-to-fix-next/",
+   "cat": "事件/风险",
+   "heat": 52,
+   "sources": [
+    "PC Gamer"
+   ]
+  },
+  {
+   "term": "琵琶曲（军训版）",
+   "href": "https://www.bilibili.com/video/BV1Qzhe6aE27",
+   "cat": "梗/社区",
+   "heat": 96,
+   "sources": [
+    "B站"
+   ]
+  },
+  {
+   "term": "闪身步是啥梗",
+   "href": "https://www.bilibili.com/video/BV1tihq6wENf",
+   "cat": "梗/社区",
+   "heat": 76,
+   "sources": [
+    "B站",
+    "梗百科"
+   ]
+  },
+  {
+   "term": "琵琶曲渲染大赛",
+   "href": "https://www.bilibili.com/video/BV1w9eq6hEYC",
+   "cat": "梗/社区",
+   "heat": 70,
+   "sources": [
+    "B站",
+    "网梗指南"
+   ]
+  },
+  {
+   "term": "每说一个瓜字 华强变美10%",
+   "href": "https://www.bilibili.com/video/BV1Lnev6LEim",
+   "cat": "梗/社区",
+   "heat": 64,
+   "sources": [
+    "B站"
+   ]
+  },
+  {
+   "term": "小时候害怕的事",
+   "href": "https://www.bilibili.com/video/BV1CMeq6wEtE",
+   "cat": "梗/社区",
+   "heat": 60,
+   "sources": [
+    "B站"
+   ]
+  },
+  {
+   "term": "AI全民制作人 状元郎",
+   "href": "https://www.bilibili.com/video/BV1CRez6BENV",
+   "cat": "梗/社区",
+   "heat": 58,
+   "sources": [
+    "B站"
+   ]
+  },
+  {
+   "term": "荒野独居2026 传奇耐熬王",
+   "href": "https://www.bilibili.com/video/BV1fCeb6NEEy",
+   "cat": "梗/社区",
+   "heat": 55,
+   "sources": [
+    "B站"
+   ]
+  }
+ ]
 }

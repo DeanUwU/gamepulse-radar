@@ -1,307 +1,36 @@
 {
- "date": "2026-09-22",
- "terms": [
-  {
-   "term": "原神 薇斯纳角色预告",
-   "href": "https://www.bilibili.com/video/BV16Leq64Ei3",
-   "cat": "游戏/新品",
-   "heat": 94,
-   "sources": [
-    "B站",
-    "原神"
-   ]
-  },
-  {
-   "term": "异环 黑羽角色PV",
-   "href": "https://www.bilibili.com/video/BV1iWej6hEe6",
-   "cat": "游戏/新品",
-   "heat": 86,
-   "sources": [
-    "B站",
-    "异环"
-   ]
-  },
-  {
-   "term": "三角洲行动 二周年庆活动",
-   "href": "https://www.xiaoheihe.cn/app/bbs/link/191060441",
-   "cat": "游戏/新品",
-   "heat": 78,
-   "sources": [
-    "小黑盒",
-    "三角洲行动"
-   ]
-  },
-  {
-   "term": "原神HoYoFair 元素战争破晓",
-   "href": "https://www.bilibili.com/video/BV1woez6TECm",
-   "cat": "游戏/新品",
-   "heat": 66,
-   "sources": [
-    "B站",
-    "原神"
-   ]
-  },
-  {
-   "term": "无畏契约 捷风卡面韩国独占",
-   "href": "https://www.xiaoheihe.cn/app/bbs/link/191068899",
-   "cat": "游戏/新品",
-   "heat": 60,
-   "sources": [
-    "小黑盒",
-    "无畏契约"
-   ]
-  },
-  {
-   "term": "原神周年礼品 免费椅子",
-   "href": "https://www.bilibili.com/video/BV1Zkhk6aEpn",
-   "cat": "游戏/新品",
-   "heat": 58,
-   "sources": [
-    "B站",
-    "梗百科"
-   ]
-  },
-  {
-   "term": "Minecraft 改造MC的船",
-   "href": "https://www.bilibili.com/video/BV1Hjez6eEPv",
-   "cat": "游戏/新品",
-   "heat": 56,
-   "sources": [
-    "B站",
-    "Minecraft"
-   ]
-  },
-  {
-   "term": "Minecraft 村民发展6小时",
-   "href": "https://www.bilibili.com/video/BV1CRez6BEe9",
-   "cat": "游戏/新品",
-   "heat": 55,
-   "sources": [
-    "B站",
-    "Minecraft"
-   ]
-  },
-  {
-   "term": "战地风云6 第4赛季惊涛骇浪",
-   "href": "https://www.gamersky.com/news/202609/2209975.shtml",
-   "cat": "游戏/新品",
-   "heat": 70,
-   "sources": [
-    "游民星空"
-   ]
-  },
-  {
-   "term": "骑士盘骑士 Steam试玩版",
-   "href": "https://www.gcores.com/articles/219822",
-   "cat": "游戏/新品",
-   "heat": 52,
-   "sources": [
-    "机核"
-   ]
-  },
-  {
-   "term": "生化危机4重制版 结局解析",
-   "href": "https://news.17173.com/content/09182026/100803925.shtml",
-   "cat": "游戏/新品",
-   "heat": 50,
-   "sources": [
-    "17173"
-   ]
-  },
-  {
-   "term": "Skyblivion 发售临近",
-   "href": "https://www.pcgamer.com/games/the-elder-scrolls/as-skyblivions-launch-approaches-the-team-is-looking-for-help-to-get-the-word-out/",
-   "cat": "游戏/新品",
-   "heat": 52,
-   "sources": [
-    "PC Gamer"
-   ]
-  },
-  {
-   "term": "伊莫 首日Steam在线破12万",
-   "href": "http://www.gamelook.com.cn/2026/09/602402/",
-   "cat": "行业/数据",
-   "heat": 88,
-   "sources": [
-    "GameLook",
-    "伊莫"
-   ]
-  },
-  {
-   "term": "被腾讯放弃后 首日销量125万",
-   "href": "https://www.youxituoluo.com/534888.html",
-   "cat": "行业/数据",
-   "heat": 80,
-   "sources": [
-    "游戏陀螺"
-   ]
-  },
-  {
-   "term": "Steam周销量榜 战狗登顶",
-   "href": "https://www.gcores.com/articles/219774",
-   "cat": "行业/数据",
-   "heat": 74,
-   "sources": [
-    "机核",
-    "Steam"
-   ]
-  },
-  {
-   "term": "Steam秋促抢跑 新史低",
-   "href": "https://www.xiaoheihe.cn/app/bbs/link/190921357",
-   "cat": "行业/数据",
-   "heat": 72,
-   "sources": [
-    "小黑盒",
-    "Steam"
-   ]
-  },
-  {
-   "term": "官中+国区永降 在线暴涨335%",
-   "href": "https://www.xiaoheihe.cn/app/bbs/link/191062263",
-   "cat": "行业/数据",
-   "heat": 68,
-   "sources": [
-    "小黑盒"
-   ]
-  },
-  {
-   "term": "小岛秀夫致辞感谢Xbox",
-   "href": "https://www.gamersky.com/news/202609/2211776.shtml",
-   "cat": "行业/数据",
-   "heat": 64,
-   "sources": [
-    "游民星空"
-   ]
-  },
-  {
-   "term": "腾讯光子 Higame扩招",
-   "href": "http://www.gamelook.com.cn/2026/09/602273/",
-   "cat": "行业/数据",
-   "heat": 62,
-   "sources": [
-    "GameLook"
-   ]
-  },
-  {
-   "term": "Faker卡牌卖出165万",
-   "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28365112&topic_name=1%E5%BC%A0%E5%8D%A1%E9%A1%B6%E5%A5%97%E6%88%BF%2CFaker%E5%8D%A1%E7%89%8C%E5%8D%96165%E4%B8%87",
-   "cat": "行业/数据",
-   "heat": 60,
-   "sources": [
-    "百度贴吧"
-   ]
-  },
-  {
-   "term": "影之刃零 联名手柄899元",
-   "href": "https://www.gamersky.com/news/202609/2211129.shtml",
-   "cat": "行业/数据",
-   "heat": 58,
-   "sources": [
-    "游民星空"
-   ]
-  },
-  {
-   "term": "GTA6 临终父亲试玩申请被删",
-   "href": "https://www.xiaoheihe.cn/app/bbs/link/191079018",
-   "cat": "事件/风险",
-   "heat": 66,
-   "sources": [
-    "小黑盒",
-    "GTA6"
-   ]
-  },
-  {
-   "term": "小岛秀夫与彭博社 谁在说谎",
-   "href": "https://www.xiaoheihe.cn/app/bbs/link/191062428",
-   "cat": "事件/风险",
-   "heat": 58,
-   "sources": [
-    "小黑盒"
-   ]
-  },
-  {
-   "term": "CS主播茄子 变老赖",
-   "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28365113&topic_name=CS%E4%B8%BB%E6%92%AD%E8%8C%84%E5%AD%90%E8%BE%93%E5%85%89%E5%AE%B6%E4%BA%A7%E5%8F%98%E8%80%81%E8%B5%96",
-   "cat": "事件/风险",
-   "heat": 56,
-   "sources": [
-    "百度贴吧"
-   ]
-  },
-  {
-   "term": "守望先锋 皮肤分配争议",
-   "href": "https://www.pcgamer.com/games/fps/blizzard-is-aware-overwatch-fans-are-tired-of-seeing-its-fanciest-skins-go-to-the-same-heroes-and-its-the-number-one-thing-its-working-to-fix-next/",
-   "cat": "事件/风险",
-   "heat": 52,
-   "sources": [
-    "PC Gamer"
-   ]
-  },
-  {
-   "term": "琵琶曲（军训版）",
-   "href": "https://www.bilibili.com/video/BV1Qzhe6aE27",
-   "cat": "梗/社区",
-   "heat": 96,
-   "sources": [
-    "B站"
-   ]
-  },
-  {
-   "term": "闪身步是啥梗",
-   "href": "https://www.bilibili.com/video/BV1tihq6wENf",
-   "cat": "梗/社区",
-   "heat": 76,
-   "sources": [
-    "B站",
-    "梗百科"
-   ]
-  },
-  {
-   "term": "琵琶曲渲染大赛",
-   "href": "https://www.bilibili.com/video/BV1w9eq6hEYC",
-   "cat": "梗/社区",
-   "heat": 70,
-   "sources": [
-    "B站",
-    "网梗指南"
-   ]
-  },
-  {
-   "term": "每说一个瓜字 华强变美10%",
-   "href": "https://www.bilibili.com/video/BV1Lnev6LEim",
-   "cat": "梗/社区",
-   "heat": 64,
-   "sources": [
-    "B站"
-   ]
-  },
-  {
-   "term": "小时候害怕的事",
-   "href": "https://www.bilibili.com/video/BV1CMeq6wEtE",
-   "cat": "梗/社区",
-   "heat": 60,
-   "sources": [
-    "B站"
-   ]
-  },
-  {
-   "term": "AI全民制作人 状元郎",
-   "href": "https://www.bilibili.com/video/BV1CRez6BENV",
-   "cat": "梗/社区",
-   "heat": 58,
-   "sources": [
-    "B站"
-   ]
-  },
-  {
-   "term": "荒野独居2026 传奇耐熬王",
-   "href": "https://www.bilibili.com/video/BV1fCeb6NEEy",
-   "cat": "梗/社区",
-   "heat": 55,
-   "sources": [
-    "B站"
-   ]
-  }
- ]
+  "date": "2026-09-23",
+  "terms": [
+    {"term": "原神沃雅妮莎", "href": "https://www.bilibili.com/video/BV1BqhB6nEdN", "cat": "游戏/新品", "heat": 88, "sources": ["哔哩哔哩"]},
+    {"term": "鸣潮寻心动画", "href": "https://www.bilibili.com/video/BV1WAec6fE5N", "cat": "游戏/新品", "heat": 92, "sources": ["哔哩哔哩"]},
+    {"term": "三角洲二周年彩蛋", "href": "https://www.bilibili.com/video/BV1NuYy6DEtZ", "cat": "事件/风险", "heat": 80, "sources": ["哔哩哔哩"]},
+    {"term": "魔兽世界无限", "href": "https://www.bilibili.com/video/BV1WQYd6DEgs", "cat": "游戏/新品", "heat": 85, "sources": ["哔哩哔哩"]},
+    {"term": "原神薇斯纳PV", "href": "https://www.bilibili.com/video/BV1sjen6QEQ7", "cat": "游戏/新品", "heat": 86, "sources": ["哔哩哔哩"]},
+    {"term": "MC人物指力", "href": "https://www.bilibili.com/video/BV1ZfY76aEae", "cat": "梗/社区", "heat": 62, "sources": ["哔哩哔哩"]},
+    {"term": "无畏契约冠军赛", "href": "https://www.bilibili.com/video/BV1rtew6hEnF", "cat": "事件/风险", "heat": 78, "sources": ["哔哩哔哩"]},
+    {"term": "第五人格神童", "href": "https://www.bilibili.com/video/BV1woeE62E4h", "cat": "游戏/新品", "heat": 65, "sources": ["哔哩哔哩"]},
+    {"term": "底特律变人DLSS5重制", "href": "https://www.bilibili.com/video/BV14mez6VEG9", "cat": "游戏/新品", "heat": 95, "sources": ["哔哩哔哩"]},
+    {"term": "CS2无声换弹", "href": "https://store.steampowered.com/news/app/730/view/531899128924008971", "cat": "事件/风险", "heat": 70, "sources": ["Steam"]},
+    {"term": "炉石酒馆全种族前瞻", "href": "https://www.bilibili.com/video/BV13KhB6rE7N", "cat": "游戏/新品", "heat": 60, "sources": ["哔哩哔哩"]},
+    {"term": "G胖开麦整活", "href": "https://www.bilibili.com/video/BV1BreB6tEWT", "cat": "行业/数据", "heat": 66, "sources": ["哔哩哔哩"]},
+    {"term": "嘉豪哥逃军训", "href": "https://www.bilibili.com/video/BV15aez6WEJd", "cat": "梗/社区", "heat": 58, "sources": ["哔哩哔哩"]},
+    {"term": "LOL水浒传爆改", "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28365380", "cat": "梗/社区", "heat": 55, "sources": ["百度贴吧"]},
+    {"term": "琵琶曲真人版", "href": "https://www.bilibili.com/video/BV1uzez6UEoP", "cat": "梗/社区", "heat": 72, "sources": ["哔哩哔哩"]},
+    {"term": "伊莫Steam在线12万", "href": "http://www.gamelook.com.cn/2026/09/602402/", "cat": "行业/数据", "heat": 82, "sources": ["GameLook"]},
+    {"term": "影之刃零愿望单第一", "href": "https://www.youxituoluo.com/534896.html", "cat": "游戏/新品", "heat": 84, "sources": ["游戏陀螺"]},
+    {"term": "暗黑破坏神5三故事", "href": "https://www.gamesradar.com/games/diablo/diablo-5-tells-three-stories-across-the-past-present-and-future-and-biomes-will-change-shape-depending-on-which-of-diablos-minions-is-in-charge/", "cat": "游戏/新品", "heat": 90, "sources": ["GamesRadar"]},
+    {"term": "GTA6限制MOD", "href": "https://www.eurogamer.net/gta-6-rockstar-games-mod-guidelines-restrictions", "cat": "事件/风险", "heat": 88, "sources": ["Eurogamer"]},
+    {"term": "宝可梦红蓝宝石HD", "href": "https://www.eurogamer.net/nintendo-switch-pokemon-ruby-sapphire-hd-port", "cat": "游戏/新品", "heat": 75, "sources": ["Eurogamer"]},
+    {"term": "命运2回库Marathon", "href": "https://gameinformer.com/2026/09/21/bungie-announces-plans-to-restore-vaulted-destiny-2-content-and-substantial-reworks-to", "cat": "事件/风险", "heat": 80, "sources": ["GameInformer"]},
+    {"term": "魔兽世界打击金币", "href": "https://www.pcgamer.com/games/world-of-warcraft/blizzard-warns-world-of-warcraft-forever-players-it-will-very-aggressively-punish-anyone-who-buys-gold-with-real-money/", "cat": "事件/风险", "heat": 64, "sources": ["PCGamer"]},
+    {"term": "寂静岭小镇陷落", "href": "https://www.videogameschronicle.com/guide/silent-hill-townfall-human-organ-transplant-box-puzzle-solution/", "cat": "游戏/新品", "heat": 70, "sources": ["VGC"]},
+    {"term": "羊蹄山之魂DLC更新", "href": "https://www.pushsquare.com/news/2026/09/huge-30gb-update-prepares-ghost-of-yotei-for-dlc-some-features-already-live-now", "cat": "事件/风险", "heat": 68, "sources": ["PushSquare"]},
+    {"term": "金刚狼销量鸵鸟", "href": "https://www.gamersky.com/news/202609/2214457.shtml", "cat": "行业/数据", "heat": 66, "sources": ["游民星空"]},
+    {"term": "小岛秀夫感谢Xbox", "href": "https://www.gamersky.com/news/202609/2211776.shtml", "cat": "事件/风险", "heat": 72, "sources": ["游民星空"]},
+    {"term": "RE4重制结局解析", "href": "https://news.17173.com/content/09182026/100803925.shtml", "cat": "游戏/新品", "heat": 60, "sources": ["17173"]},
+    {"term": "米哈游反舞弊通告", "href": "http://www.gamelook.com.cn/2026/09/602694/", "cat": "行业/数据", "heat": 74, "sources": ["GameLook"]},
+    {"term": "Steam战狗登顶周销", "href": "https://www.gcores.com/articles/219774", "cat": "行业/数据", "heat": 76, "sources": ["机核"]},
+    {"term": "PS会免十月首款", "href": "https://www.gamersky.com/news/202609/2214250.shtml", "cat": "行业/数据", "heat": 58, "sources": ["游民星空"]},
+    {"term": "索尼手柄付款专利", "href": "https://www.gamersky.com/news/202609/2214256.shtml", "cat": "行业/数据", "heat": 56, "sources": ["游民星空"]}
+  ]
 }

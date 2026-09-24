@@ -1,36 +1,50 @@
 {
- "generated_at": "2026-09-23T10:47:44",
- "adopt_total": 78,
- "review_total": 48,
- "leak_total": 4,
+ "generated_at": "2026-09-24T17:47:04",
+ "adopt_total": 67,
+ "review_total": 58,
+ "leak_total": 6,
  "leaks": [
   {
-   "title": "《记忆管理局》为何后劲儿大？ 09.18",
-   "url": "https://www.chuapp.com/article/291645.html",
+   "title": "米哈游反舞弊披露：员工被捕、供应商被查，涉案金额“特别巨大”",
+   "url": "https://www.youxituoluo.com/534901.html",
    "game": "全行业",
-   "src_name": "触乐网",
-   "verdict": "review",
-   "pubdate": "2025-11-10",
+   "src_name": "游戏陀螺",
+   "verdict": "adopt",
+   "pubdate": "2026-09-22",
    "date_unverified": false,
-   "n_src_cluster": 17,
+   "n_src_cluster": 4,
    "signal": 3,
    "reasons": [
-    "多源印证(17家)",
+    "多源印证(4家)"
+   ]
+  },
+  {
+   "title": "祝思齐22小时前0条评论 触乐怪话：沉浸其中 冒险总要有人传唱。",
+   "url": "http://www.chuapp.com/article/291657.html",
+   "game": "全行业",
+   "src_name": "触乐网·分类新闻",
+   "verdict": "review",
+   "pubdate": null,
+   "date_unverified": false,
+   "n_src_cluster": 3,
+   "signal": 3,
+   "reasons": [
+    "多源印证(3家)",
     "准入待复核被卡"
    ]
   },
   {
-   "title": "王琳茜12小时前0条评论 触乐怪话：花枝鼠听到自己要做肿瘤手术当然不会觉得荒谬 这个世界对老鼠真的是不公平！",
+   "title": "王琳茜09月22日0条评论 触乐怪话：花枝鼠听到自己要做肿瘤手术当然不会觉得荒谬 这个世界对老鼠真的是不公平！",
    "url": "http://www.chuapp.com/article/291655.html",
    "game": "全行业",
    "src_name": "触乐网·分类新闻",
    "verdict": "review",
    "pubdate": null,
    "date_unverified": false,
-   "n_src_cluster": 17,
+   "n_src_cluster": 3,
    "signal": 3,
    "reasons": [
-    "多源印证(17家)",
+    "多源印证(3家)",
     "准入待复核被卡"
    ]
   },
@@ -46,6 +60,21 @@
    "signal": 2,
    "reasons": [
     "强事件词",
+    "准入待复核被卡"
+   ]
+  },
+  {
+   "title": "原创丨米哈游：一年沉淀，换来「高开神走」",
+   "url": "http://www.nadianshi.com/2026/07/413907",
+   "game": "全行业",
+   "src_name": "手游那点事",
+   "verdict": "review",
+   "pubdate": "2026-07-01",
+   "date_unverified": false,
+   "n_src_cluster": 4,
+   "signal": 3,
+   "reasons": [
+    "多源印证(4家)",
     "准入待复核被卡"
    ]
   },

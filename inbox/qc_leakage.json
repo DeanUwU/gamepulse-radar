@@ -1,23 +1,9 @@
 {
- "generated_at": "2026-09-25T10:47:48",
- "adopt_total": 79,
- "review_total": 54,
- "leak_total": 6,
+ "generated_at": "2026-09-26T10:48:07",
+ "adopt_total": 72,
+ "review_total": 59,
+ "leak_total": 4,
  "leaks": [
-  {
-   "title": "消极游戏行为专项治理公告",
-   "url": "https://store.steampowered.com/news/app/2073620/view/678509959027098540",
-   "game": "暗区突围",
-   "src_name": "暗区突围 Steam 官方新闻",
-   "verdict": "adopt",
-   "pubdate": "2026-09-20",
-   "date_unverified": false,
-   "n_src_cluster": 25,
-   "signal": 3,
-   "reasons": [
-    "多源印证(25家)"
-   ]
-  },
   {
    "title": "米哈游反舞弊披露：员工被捕、供应商被查，涉案金额“特别巨大”",
    "url": "https://www.youxituoluo.com/534901.html",
@@ -26,25 +12,10 @@
    "verdict": "adopt",
    "pubdate": "2026-09-22",
    "date_unverified": false,
-   "n_src_cluster": 4,
-   "signal": 3,
+   "n_src_cluster": 2,
+   "signal": 2,
    "reasons": [
-    "多源印证(4家)"
-   ]
-  },
-  {
-   "title": "祝思齐09月23日0条评论 触乐怪话：沉浸其中 冒险总要有人传唱。",
-   "url": "http://www.chuapp.com/article/291657.html",
-   "game": "全行业",
-   "src_name": "触乐网·分类新闻",
-   "verdict": "review",
-   "pubdate": null,
-   "date_unverified": false,
-   "n_src_cluster": 25,
-   "signal": 3,
-   "reasons": [
-    "多源印证(25家)",
-    "准入待复核被卡"
+    "多源印证(2家)"
    ]
   },
   {
@@ -70,10 +41,10 @@
    "verdict": "review",
    "pubdate": "2026-07-01",
    "date_unverified": false,
-   "n_src_cluster": 4,
-   "signal": 3,
+   "n_src_cluster": 2,
+   "signal": 2,
    "reasons": [
-    "多源印证(4家)",
+    "多源印证(2家)",
     "准入待复核被卡"
    ]
   },

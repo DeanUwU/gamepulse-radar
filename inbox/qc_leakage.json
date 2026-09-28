@@ -1,37 +1,9 @@
 {
- "generated_at": "2026-09-27T10:47:01",
- "adopt_total": 77,
- "review_total": 54,
- "leak_total": 5,
+ "generated_at": "2026-09-28T10:52:42",
+ "adopt_total": 72,
+ "review_total": 52,
+ "leak_total": 3,
  "leaks": [
-  {
-   "title": "烽火世界杯",
-   "url": "https://df.qq.com/cp/W2025FHB/",
-   "game": "三角洲行动",
-   "src_name": "三角洲行动官方新闻",
-   "verdict": "adopt",
-   "pubdate": null,
-   "date_unverified": false,
-   "n_src_cluster": 24,
-   "signal": 3,
-   "reasons": [
-    "多源印证(24家)"
-   ]
-  },
-  {
-   "title": "米哈游反舞弊披露：员工被捕、供应商被查，涉案金额“特别巨大”",
-   "url": "https://www.youxituoluo.com/534901.html",
-   "game": "全行业",
-   "src_name": "游戏陀螺",
-   "verdict": "adopt",
-   "pubdate": "2026-09-22",
-   "date_unverified": false,
-   "n_src_cluster": 24,
-   "signal": 3,
-   "reasons": [
-    "多源印证(24家)"
-   ]
-  },
   {
    "title": "PSVR《揭秘计划2：远古之战》发售 火星之战爆发",
    "url": "https://www.gamersky.com/news/201809/1102376.shtml",
@@ -55,10 +27,10 @@
    "verdict": "review",
    "pubdate": "2026-07-01",
    "date_unverified": false,
-   "n_src_cluster": 24,
+   "n_src_cluster": 18,
    "signal": 3,
    "reasons": [
-    "多源印证(24家)",
+    "多源印证(18家)",
     "准入待复核被卡"
    ]
   },

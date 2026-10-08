@@ -1,83 +1,9 @@
 {
- "generated_at": "2026-09-30T10:49:16",
- "adopt_total": 70,
- "review_total": 56,
- "leak_total": 7,
+ "generated_at": "2026-10-08T11:13:10",
+ "adopt_total": 63,
+ "review_total": 52,
+ "leak_total": 2,
  "leaks": [
-  {
-   "title": "暴雪能否打破“星际争霸”系列的续作魔咒？ 09.28",
-   "url": "https://www.chuapp.com/article/291666.html",
-   "game": "全行业",
-   "src_name": "触乐网",
-   "verdict": "review",
-   "pubdate": "2025-11-10",
-   "date_unverified": false,
-   "n_src_cluster": 3,
-   "signal": 5,
-   "reasons": [
-    "多源印证(3家)",
-    "强事件词",
-    "准入待复核被卡"
-   ]
-  },
-  {
-   "title": "热门游戏排行",
-   "url": "https://www.gamersky.com/top/",
-   "game": "全行业",
-   "src_name": "游民星空 PC 资讯",
-   "verdict": "adopt",
-   "pubdate": null,
-   "date_unverified": false,
-   "n_src_cluster": 3,
-   "signal": 3,
-   "reasons": [
-    "多源印证(3家)"
-   ]
-  },
-  {
-   "title": "梅林粉杖15小时前0条评论 触乐怪话：游戏排队心理学 这是一种奇怪的心理学，越是具象化的排队越是让人不想排，看着就像在坐牢。",
-   "url": "http://www.chuapp.com/article/291664.html",
-   "game": "全行业",
-   "src_name": "触乐网·分类新闻",
-   "verdict": "adopt",
-   "pubdate": null,
-   "date_unverified": false,
-   "n_src_cluster": 3,
-   "signal": 3,
-   "reasons": [
-    "多源印证(3家)"
-   ]
-  },
-  {
-   "title": "林翔09月28日0条评论 触乐怪话：往往不完美，才是完美 有时候bug也能成为一种有趣的玩法。",
-   "url": "http://www.chuapp.com/article/291665.html",
-   "game": "全行业",
-   "src_name": "触乐网·分类新闻",
-   "verdict": "review",
-   "pubdate": null,
-   "date_unverified": false,
-   "n_src_cluster": 3,
-   "signal": 3,
-   "reasons": [
-    "多源印证(3家)",
-    "准入待复核被卡"
-   ]
-  },
-  {
-   "title": "NemoTheCaptain09月28日0条评论 暴雪能否打破“星际争霸”系列的续作魔咒？ 帝国起起落落，星球成住坏空，神灵亦死亦生。",
-   "url": "http://www.chuapp.com/article/291666.html",
-   "game": "全行业",
-   "src_name": "触乐网·分类新闻",
-   "verdict": "adopt",
-   "pubdate": null,
-   "date_unverified": false,
-   "n_src_cluster": 3,
-   "signal": 5,
-   "reasons": [
-    "多源印证(3家)",
-    "强事件词"
-   ]
-  },
   {
    "title": "PSVR《揭秘计划2：远古之战》发售 火星之战爆发",
    "url": "https://www.gamersky.com/news/201809/1102376.shtml",

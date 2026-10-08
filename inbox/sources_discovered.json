@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-09-24T10:56:03",
+ "generated_at": "2026-10-08T11:13:05",
  "summary": {
-  "candidates": 73,
-  "suggest": 24,
-  "maybe": 38,
-  "dead": 11,
+  "candidates": 80,
+  "suggest": 27,
+  "maybe": 45,
+  "dead": 8,
   "registered": 75
  },
  "items": [
@@ -361,7 +361,7 @@
   {
    "kind": "section",
    "game": "全行业",
-   "url": "https://www.gamesradar.com/news/live/blizzcon-2026-everything-announced/",
+   "url": "https://www.gamesradar.com/news/live/prime-day-lego-deals-and-savings-live-2026/",
    "from": "gamesradar",
    "status": 200,
    "type": "news_list",
@@ -370,12 +370,54 @@
     "已登记源[gamesradar]的同域栏目页，可直接入库"
    ],
    "suggest_id": "gamesradar_news",
-   "toml": "[[sources]]\nid = \"gamesradar_news\"\ngame = \"全行业\"\nname = \"全行业·news_list\"\ntype = \"news_list\"\nurl = \"https://www.gamesradar.com/news/live/blizzcon-2026-everything-announced/\"\nenabled = true\nmax_items = 5\n"
+   "toml": "[[sources]]\nid = \"gamesradar_news\"\ngame = \"全行业\"\nname = \"全行业·news_list\"\ntype = \"news_list\"\nurl = \"https://www.gamesradar.com/news/live/prime-day-lego-deals-and-savings-live-2026/\"\nenabled = true\nmax_items = 5\n"
   },
   {
    "kind": "section",
    "game": "全行业",
-   "url": "https://www.videogameschronicle.com/news/i-just-assume-someone-is-being-greedy-double-fines-tim-schafer-says-he-doesnt-know-why-the-industry-isnt-recovering/",
+   "url": "https://www.gamesradar.com/hardware/news/live/prime-day-retro-deals-october-2026/",
+   "from": "gamesradar",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "suggest",
+   "reasons": [
+    "已登记源[gamesradar]的同域栏目页，可直接入库"
+   ],
+   "suggest_id": "gamesradar_hardware",
+   "toml": "[[sources]]\nid = \"gamesradar_hardware\"\ngame = \"全行业\"\nname = \"全行业·news_list\"\ntype = \"news_list\"\nurl = \"https://www.gamesradar.com/hardware/news/live/prime-day-retro-deals-october-2026/\"\nenabled = true\nmax_items = 5\n"
+  },
+  {
+   "kind": "section",
+   "game": "全行业",
+   "url": "https://www.pcgamer.com/hardware/live/news/the-most-popular-october-prime-day-deals-2026",
+   "from": "pcgamer",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "suggest",
+   "reasons": [
+    "已登记源[pcgamer]的同域栏目页，可直接入库"
+   ],
+   "suggest_id": "pcgamer_hardware",
+   "toml": "[[sources]]\nid = \"pcgamer_hardware\"\ngame = \"全行业\"\nname = \"全行业·news_list\"\ntype = \"news_list\"\nurl = \"https://www.pcgamer.com/hardware/live/news/the-most-popular-october-prime-day-deals-2026\"\nenabled = true\nmax_items = 5\n"
+  },
+  {
+   "kind": "section",
+   "game": "全行业",
+   "url": "https://www.pcgamer.com/hardware/live/news/october-prime-day-2026-live-my-personal-deal-picks",
+   "from": "pcgamer",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "suggest",
+   "reasons": [
+    "已登记源[pcgamer]的同域栏目页，可直接入库"
+   ],
+   "suggest_id": "pcgamer_hardware2",
+   "toml": "[[sources]]\nid = \"pcgamer_hardware2\"\ngame = \"全行业\"\nname = \"全行业·news_list\"\ntype = \"news_list\"\nurl = \"https://www.pcgamer.com/hardware/live/news/october-prime-day-2026-live-my-personal-deal-picks\"\nenabled = true\nmax_items = 5\n"
+  },
+  {
+   "kind": "section",
+   "game": "全行业",
+   "url": "https://www.videogameschronicle.com/news/star-wars-zero-company-staff-returning-to-work-after-being-furloughed-pre-release/",
    "from": "vgc",
    "status": null,
    "type": "static",
@@ -389,7 +431,7 @@
   {
    "kind": "section",
    "game": "全行业",
-   "url": "https://www.videogameschronicle.com/news/controller-maker-ckrd-releases-the-atom-a-keychain-sized-controller-promising-no-stick-drift/",
+   "url": "https://www.videogameschronicle.com/news/google-officially-reveals-ai-game-creation-platform-playground/",
    "from": "vgc",
    "status": null,
    "type": "static",
@@ -403,7 +445,7 @@
   {
    "kind": "section",
    "game": "全行业",
-   "url": "https://www.gamespot.com/articles/all-the-major-xbox-changes-microsoft-announced-today-layoffs-halo-changing-hands-and-more/",
+   "url": "https://www.gamespot.com/articles/the-best-steam-autumn-sale-deals/",
    "from": "gamespot",
    "status": null,
    "type": "static",
@@ -417,7 +459,7 @@
   {
    "kind": "section",
    "game": "全行业",
-   "url": "https://www.gamespot.com/articles/activisions-halo-game-everything-we-know-so-far/",
+   "url": "https://www.gamespot.com/articles/turn-off-the-lights-and-play-these-11-new-horror-games-releasing-in-october/",
    "from": "gamespot",
    "status": null,
    "type": "static",
@@ -431,7 +473,7 @@
   {
    "kind": "section",
    "game": "全行业",
-   "url": "https://www.pushsquare.com/news/2026/09/final-fantasy-7-revelation-on-ps5-pro-offers-a-bespoke-4k-60fps-mode-thanks-to-pssr",
+   "url": "https://www.pushsquare.com/news/2026/10/gundam-rogue-orbit-drops-its-enthusiastically-narrated-ps5-gameplay-trailer",
    "from": "pushsquare",
    "status": null,
    "type": "static",
@@ -445,7 +487,7 @@
   {
    "kind": "section",
    "game": "全行业",
-   "url": "https://www.pushsquare.com/news/2026/09/digital-ps5-purchases-kicking-back-cash-to-more-and-more-players",
+   "url": "https://www.pushsquare.com/news/2026/10/ps5-to-integrate-anime-into-main-menu-as-sony-tightens-ties-with-crunchyroll",
    "from": "pushsquare",
    "status": null,
    "type": "static",
@@ -711,7 +753,7 @@
   {
    "kind": "external",
    "game": "主机/PC 大作",
-   "url": "https://www.eaplay.com/",
+   "url": "http://jackboxgames.com",
    "from": "xbox_wire",
    "status": 200,
    "type": "static",
@@ -753,7 +795,7 @@
   {
    "kind": "external",
    "game": "主机/PC 大作",
-   "url": "https://enso-order.acecombat.jp/",
+   "url": "https://ghelix.ggame.jp/",
    "from": "ps_blog_ja",
    "status": 200,
    "type": "static",
@@ -767,7 +809,7 @@
   {
    "kind": "external",
    "game": "主机/PC 大作",
-   "url": "https://www.ea.com/ja/games/ea-sports-fc/fc-27/news/pitch-notes-fc27-gameplay-deep-dive",
+   "url": "https://www.playstation.com/ja-jp/local/events/playstation-game-music-awards/",
    "from": "ps_blog_ja",
    "status": 200,
    "type": "news_list",
@@ -879,7 +921,7 @@
   {
    "kind": "external",
    "game": "全行业",
-   "url": "https://www.ign.com/articles/the-last-photograph-review-zack-snyder",
+   "url": "https://www.ign.com/articles/amazon-prime-big-deal-days-sale-2026",
    "from": "ign",
    "status": 200,
    "type": "news_list",
@@ -893,7 +935,7 @@
   {
    "kind": "external",
    "game": "全行业",
-   "url": "https://www.ign.com/articles/the-odyssey-movie-review-2026",
+   "url": "https://www.ign.com/articles/best-tvs-for-ps5",
    "from": "ign",
    "status": 200,
    "type": "news_list",
@@ -907,24 +949,10 @@
   {
    "kind": "external",
    "game": "全行业",
-   "url": "https://www.nintendolife.com/news/2022/05/its-official-metroid-dread-is-the-best-selling-game-in-the-metroid-series",
-   "from": "gamesradar",
-   "status": null,
-   "type": "static",
-   "verdict": "dead",
-   "reasons": [
-    "探活失败(HTTP None)"
-   ],
-   "suggest_id": "",
-   "toml": ""
-  },
-  {
-   "kind": "external",
-   "game": "全行业",
-   "url": "https://agekey.org/",
+   "url": "https://www.ign.com/articles/hideo-kojima-acknowledges-fan-made-pt-port-that-runs-natively-on-pc",
    "from": "gamesradar",
    "status": 200,
-   "type": "static",
+   "type": "news_list",
    "verdict": "maybe",
    "reasons": [
     "跨域站点，归属游戏待人工确认"
@@ -935,7 +963,49 @@
   {
    "kind": "external",
    "game": "全行业",
-   "url": "https://studiominus.nl/blog/status-ppg",
+   "url": "https://automaton-media.com/en/news/yoko-taro-says-he-already-achieved-his-game-development-dreams-with-drakengard-and-now-works-to-prevent-dementia/",
+   "from": "gamesradar",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-dmz-deep-dive-hajin",
+   "from": "eurogamer",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://arcraiders.com/news/play-for-free-weekend",
+   "from": "eurogamer",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://www.ftc.gov/news-events/news/press-releases/2006/06/makers-grand-theft-auto-san-andreas-settle-ftc-charges",
    "from": "pcgamer",
    "status": 200,
    "type": "news_list",
@@ -949,13 +1019,13 @@
   {
    "kind": "external",
    "game": "全行业",
-   "url": "https://apply.fbijobs.gov/",
+   "url": "https://variety.com/2026/gaming/news/skydance-games-experiences-products-leadership-1236903948/",
    "from": "pcgamer",
-   "status": null,
-   "type": "static",
-   "verdict": "dead",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "maybe",
    "reasons": [
-    "探活失败(HTTP None)"
+    "跨域站点，归属游戏待人工确认"
    ],
    "suggest_id": "",
    "toml": ""
@@ -963,8 +1033,36 @@
   {
    "kind": "external",
    "game": "全行业",
-   "url": "https://fox8.com/news/pokemon-collector-guilty-of-using-gps-tracker-to-follow-woman-stocking-the-cards/",
+   "url": "https://www.thehorrorgameawards.com/news/get-ready-for-harvest-of-terror",
    "from": "gamespot",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://www.halowaypoint.com/news/canon-fodder-heart-and-soell",
+   "from": "gamespot",
+   "status": 200,
+   "type": "news_list",
+   "verdict": "maybe",
+   "reasons": [
+    "跨域站点，归属游戏待人工确认"
+   ],
+   "suggest_id": "",
+   "toml": ""
+  },
+  {
+   "kind": "external",
+   "game": "全行业",
+   "url": "https://mp1st.com/news/report-new-killzone-project-in-very-early-stages-of-production",
+   "from": "pushsquare",
    "status": null,
    "type": "static",
    "verdict": "dead",
@@ -977,7 +1075,7 @@
   {
    "kind": "external",
    "game": "全行业",
-   "url": "https://www.ign.com/articles/xbox-tokyo-game-show-2026-everything-announced",
+   "url": "https://doublecounter.gg/blog/security-incident-october-2026",
    "from": "rps",
    "status": 200,
    "type": "news_list",
@@ -991,7 +1089,7 @@
   {
    "kind": "external",
    "game": "全行业",
-   "url": "https://www.edenproject.com/",
+   "url": "https://glossary.infil.net/?t=Delay-Based+Netcode",
    "from": "rps",
    "status": 200,
    "type": "static",
@@ -1005,10 +1103,10 @@
   {
    "kind": "external",
    "game": "全行业",
-   "url": "https://www.bungie.net/7/en/News/Article/nextchapterofbungie",
+   "url": "https://www.stonekite.com/",
    "from": "gameinformer",
    "status": 200,
-   "type": "news_list",
+   "type": "static",
    "verdict": "maybe",
    "reasons": [
     "跨域站点，归属游戏待人工确认"
@@ -1019,13 +1117,13 @@
   {
    "kind": "external",
    "game": "全行业",
-   "url": "https://www.bloomberg.com/news/articles/2026-09-11/hideo-kojima-s-physint-video-game-dropped-by-playstation-goes-to-xbox",
+   "url": "https://platform.stonekite.com/",
    "from": "gameinformer",
-   "status": null,
+   "status": 200,
    "type": "static",
-   "verdict": "dead",
+   "verdict": "maybe",
    "reasons": [
-    "探活失败(HTTP None)"
+    "跨域站点，归属游戏待人工确认"
    ],
    "suggest_id": "",
    "toml": ""

@@ -380,30 +380,8 @@ if os.path.exists(os.path.join(BASE, "events.json")):
         else:
             log("    " + (rp.stdout or "").strip())
 
-# ---------- ④-0 由 events.json 重建日历 section（注入 index.html） ----------
-# 注意：本步必须在 refresh_content（③-4.5）之后运行，因为两者都读/写 index.html；
-# gen_calendar 替换 #cal/#forward 区块，refresh_content 替换 masthead/brief/visual/TOP10/hot，
-# 区块不重叠，按序写入互不影响。
-if os.path.exists(os.path.join(BASE, "events.json")):
-    log("【④ 日历】运行 gen_calendar.py（events.json -> index.html #cal section）...")
-    r0 = subprocess.run([PY, "gen_calendar.py"], cwd=BASE, capture_output=True, text=True, encoding="utf-8", env=ENV)
-    if r0.returncode != 0:
-        problems.append(("日历", "events.json 生成失败", r0.stderr.strip()[:200], "红线③链接必匹配内容", "阻断", "检查 events.json 占位符/__SRC__ 是否完整"))
-    else:
-        log("    " + r0.stdout.strip())
-else:
-    log("【④ 日历】未找到 events.json，无法重建日历 section")
-    problems.append(("日历", "events.json 缺失", "无法从日历真源生成日历区块", "构建完整性", "阻断",
-                     "恢复 events.json 后重新生成，禁止沿用旧日历"))
-
-# ---------- ④-0 Steam 即将发售 ----------
-# 2026-08-18 停用：collector_steam_new.py 会把 Steam Coming Soon 原始列表整页塞进日历，
-# 全是无人关注的独立小游戏英文原名（"Néro & Sci ∫ Integral Edition" 之类），
-# 违背「检索互联网提炼有效信息」的要求，日历被刷屏。日历只保留有信息量的事件
-# （大作发售/版本更新/联动/赛事），Steam 原始列表不再自动写 events。
-log("【④Steam】已停用 Steam Coming Soon 自动写入（改为人工/新闻检索提炼大作发售，避免刷屏）")
-
-# ---------- ④-0b 新闻事件采集（互联网检索 -> events，供日历动态滚动） ----------
+# ---------- ④-0 新闻事件采集（互联网检索 -> events，供日历动态滚动） ----------
+# 必须先入库、后渲染日历：否则本轮新增事件会等到次日才出现在 #cal。
 # 非阻断：inbox 不存在/为空时跳过。每日自动化 Agent 负责 WebSearch 整理 inbox。
 if os.path.exists(os.path.join(BASE, "events.json")):
     log("【④新闻】运行 collector_news_events.py（news_events_inbox.json -> events.json）...")
@@ -415,6 +393,29 @@ if os.path.exists(os.path.join(BASE, "events.json")):
         log("    " + rn.stdout.strip())
 else:
     log("【④新闻】未找到 events.json，跳过新闻事件采集")
+
+# ---------- ④-1 由 events.json 重建日历 section（注入 index.html） ----------
+# 注意：本步必须在 refresh_content（③-4.5）之后运行，因为两者都读/写 index.html；
+# gen_calendar 替换 #cal/#forward 区块，refresh_content 替换 masthead/brief/visual/TOP10/hot，
+# 区块不重叠，按序写入互不影响。
+if os.path.exists(os.path.join(BASE, "events.json")):
+    log("【④日历】运行 gen_calendar.py（events.json -> index.html #cal section）...")
+    r0 = subprocess.run([PY, "gen_calendar.py"], cwd=BASE, capture_output=True, text=True, encoding="utf-8", env=ENV)
+    if r0.returncode != 0:
+        problems.append(("日历", "events.json 生成失败", r0.stderr.strip()[:200], "红线③链接必匹配内容", "阻断", "检查 events.json 占位符/__SRC__ 是否完整"))
+    else:
+        log("    " + r0.stdout.strip())
+else:
+    log("【④日历】未找到 events.json，无法重建日历 section")
+    problems.append(("日历", "events.json 缺失", "无法从日历真源生成日历区块", "构建完整性", "阻断",
+                     "恢复 events.json 后重新生成，禁止沿用旧日历"))
+
+# ---------- ④-1b Steam 即将发售 ----------
+# 2026-08-18 停用：collector_steam_new.py 会把 Steam Coming Soon 原始列表整页塞进日历，
+# 全是无人关注的独立小游戏英文原名（"Néro & Sci ∫ Integral Edition" 之类），
+# 违背「检索互联网提炼有效信息」的要求，日历被刷屏。日历只保留有信息量的事件
+# （大作发售/版本更新/联动/赛事），Steam 原始列表不再自动写 events。
+log("【④Steam】已停用 Steam Coming Soon 自动写入（改为人工/新闻检索提炼大作发售，避免刷屏）")
 
 # ---------- ④-1 视觉隐藏兜底（2026-08-17） ----------
 # 用户要求「视觉隐藏」某些臃肿板块（前瞻哨/源覆盖报告/词云32条预览/两个标题栏），

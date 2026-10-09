@@ -21,7 +21,7 @@
 热度口径：本脚本只写"原始播放量"，H 由后续 unify_heat.py 统一换算（保持单一职责，
          避免两个脚本各写一套 H 逻辑最后对不上）。
 """
-import io, os, re, json, datetime, time, html as _html, urllib.parse
+import io, os, re, json, datetime, time, html as _html, urllib.parse, urllib.request
 import datetime as dt
 
 EVENTS_JSON = os.path.join(os.path.dirname(os.path.abspath(__file__)), "events.json")
@@ -29,6 +29,44 @@ EVENTS_JSON = os.path.join(os.path.dirname(os.path.abspath(__file__)), "events.j
 BASE = os.path.dirname(os.path.abspath(__file__))
 TARGET = os.environ.get("RC_TARGET", os.path.join(BASE, "index.html"))
 COLLECTORS = os.environ.get("RC_COLLECTORS", os.path.join(BASE, "collectors"))
+COVER_CACHE = os.path.join(BASE, ".workbuddy", "article_cover_cache.json")
+_COVER_CACHE = None
+
+
+def article_cover(url):
+    """从文章页读取 og:image，供非视频头条复用真实封面。"""
+    global _COVER_CACHE
+    if not url or not url.startswith(("https://", "http://")):
+        return ""
+    if _COVER_CACHE is None:
+        try:
+            _COVER_CACHE = json.load(io.open(COVER_CACHE, encoding="utf-8"))
+        except Exception:
+            _COVER_CACHE = {}
+    if url in _COVER_CACHE:
+        return _COVER_CACHE[url]
+    cover = ""
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (GamePulse cover fetcher)"})
+        page = urllib.request.urlopen(req, timeout=12).read().decode("utf-8", "ignore")
+        for tag in re.findall(r"<meta\b[^>]*>", page, re.I):
+            prop = re.search(r'''(?:property|name)=["']og:image(?::secure_url)?["']''', tag, re.I)
+            content = re.search(r'''content=["']([^"']+)["']''', tag, re.I)
+            if prop and content and content.group(1).startswith(("https://", "http://")):
+                cover = _html.unescape(content.group(1))
+                break
+    except Exception:
+        pass
+    _COVER_CACHE[url] = cover
+    try:
+        os.makedirs(os.path.dirname(COVER_CACHE), exist_ok=True)
+        tmp = COVER_CACHE + ".tmp"
+        io.open(tmp, "w", encoding="utf-8").write(json.dumps(_COVER_CACHE, ensure_ascii=False, indent=1))
+        os.replace(tmp, COVER_CACHE)
+    except OSError:
+        pass
+    return cover
+
 
 # 鬼畜/破圈的分区归类
 KUSO_TNAMES = ("鬼畜", "调教", "音MAD", "鬼畜剧场")
@@ -1092,6 +1130,9 @@ def _podium_top1(data, date_s, exclude_urls=None):
                     if (not _t1_kw) and _weak and _weak in vt:
                         top1_img = v["pic"]
                         break
+                # 行业文章未必能在 B 站池中借到语义一致的图；此时直接使用原文 og:image。
+                if not top1_img:
+                    top1_img = article_cover(fe.get("source_url") or fe.get("url") or "")
                 return {
                     "rank": 1,
                     "url": fe.get("source_url") or fe.get("url") or "#",
@@ -1338,7 +1379,7 @@ def _podium_render_top1(e):
     return (
         f'<a class="pb-card-1" target="_blank" href="{esc(e["url"])}">'
         f'<img src="{img}" alt="{title}" loading="lazy" referrerpolicy="no-referrer" '
-        f'onerror="this.style.display=\'none\'">'
+        f'onerror="this.closest(\'.pb-card-1\').classList.add(\'pb-card-1-event\');this.remove()">'
         f'<div class="pb-cap-1">'
         f'<span class="pb-rank-1">TOP 1 · {tag}</span>'
         f'<i class="pb-tag-1" style="background:{color}"></i>'
@@ -2112,7 +2153,7 @@ def _masthead_fallback_event(data, exclude_urls=None):
     fake_v = {
         "title": title,
         "url": url,
-        "pic": "",
+        "pic": article_cover(url),
         "tname": src,
         "_origin": "事件源",
         "_verdict": verdict_label,
@@ -2192,7 +2233,7 @@ def build_masthead(data, exclude_urls=None):
         '<div class="masthead">'
         f'<img src="{esc(pic)}" alt="{esc(title)}" '
         'referrerpolicy="no-referrer" '
-        'onerror="this.style.display=\'none\'">'
+        'onerror="this.closest(\'.masthead\').classList.add(\'mh-event\');this.remove()">'
         '<div class="mh-inner">'
         '<div class="mh-txt">'
         f'<span class="mh-kicker">{esc(kicker)}</span>'

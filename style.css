@@ -254,6 +254,7 @@ details.fold-sec[open]>summary .fold-hint::before{content:"▾ 收起"}
   text-decoration:none;color:inherit;
 }
 .pb-card-1:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:var(--shadow-md);text-decoration:none}
+.pb-card-1.pb-card-1-event{background:linear-gradient(135deg,#ff5c39 0%,#ffb020 60%,#ff7a3d 100%)!important}
 .pb-card-1 img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s var(--ease-out-expo)}
 .pb-card-1:hover img{transform:scale(1.04)}
 .pb-card-1::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(6,9,14,.55) 60%,rgba(6,9,14,.96) 100%);z-index:1;pointer-events:none}

@@ -154,6 +154,21 @@ def hide_note(html, sid):
     return html[:abs_start] + new_note + html[abs_start + len(note):], True
 
 
+def harden_page(html):
+    """为最终生成页统一收口外链隔离与 B 站封面 HTTPS。"""
+    def _external_link(match):
+        tag = match.group(0)
+        rel = re.search(r'\srel="([^"]*)"', tag)
+        if rel:
+            values = set(rel.group(1).split())
+            values.update(("noopener", "noreferrer"))
+            return tag[:rel.start(1)] + " ".join(sorted(values)) + tag[rel.end(1):]
+        return tag[:-1] + ' rel="noopener noreferrer">'
+
+    html = re.sub(r'<a\b[^>]*\btarget="_blank"[^>]*>', _external_link, html)
+    return re.sub(r'(src=")http://(i\d+\.hdslb\.com/)', r'\1https://\2', html)
+
+
 def main():
     if not os.path.exists(INDEX_PATH):
         print("  [apply_hide] index.html 不存在，跳过")
@@ -176,6 +191,11 @@ def main():
         if ok:
             changed += 1
             print("  [apply_hide] 已隐藏 %s %s" % (kind, val))
+    hardened = harden_page(html)
+    if hardened != html:
+        html = hardened
+        changed += 1
+        print("  [apply_hide] 已收口外链隔离与 B 站封面 HTTPS")
     if changed:
         tmp = INDEX_PATH + ".ah.tmp"
         io.open(tmp, "w", encoding="utf-8").write(html)

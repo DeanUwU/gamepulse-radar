@@ -1,215 +1,34 @@
 {
- "date": "2026-10-09",
- "terms": [
-  {
-   "term": "原神六周年主题曲 风的来信",
-   "href": "https://www.bilibili.com/video/BV14Baa6JENd",
-   "cat": "游戏/新品",
-   "heat": 88,
-   "sources": ["B站"]
-  },
-  {
-   "term": "崩坏星穹铁道 真珠角色PV",
-   "href": "https://www.bilibili.com/video/BV1Rmh96ZEXh",
-   "cat": "游戏/新品",
-   "heat": 82,
-   "sources": ["B站"]
-  },
-  {
-   "term": "鸣潮 共鸣者「心」PV 梦阑珊",
-   "href": "https://www.bilibili.com/video/BV1s8aq6FEfJ",
-   "cat": "游戏/新品",
-   "heat": 80,
-   "sources": ["B站"]
-  },
-  {
-   "term": "第五人格亚运助威曲 追光逐梦",
-   "href": "https://www.bilibili.com/video/BV1X6ho6cEkQ",
-   "cat": "游戏/新品",
-   "heat": 70,
-   "sources": ["B站"]
-  },
-  {
-   "term": "弹丸论破 但是真人版",
-   "href": "https://www.bilibili.com/video/BV1mXaM6DErh",
-   "cat": "梗/社区",
-   "heat": 65,
-   "sources": ["B站"]
-  },
-  {
-   "term": "不烧心",
-   "href": "https://www.bilibili.com/video/BV1N2pc6gErK",
-   "cat": "梗/社区",
-   "heat": 72,
-   "sources": ["B站"]
-  },
-  {
-   "term": "雨中霸王龙",
-   "href": "https://www.bilibili.com/video/BV1Yapc6SEZ5",
-   "cat": "梗/社区",
-   "heat": 60,
-   "sources": ["B站"]
-  },
-  {
-   "term": "闪身步",
-   "href": "https://www.bilibili.com/video/BV1Yapc6SEZ5",
-   "cat": "梗/社区",
-   "heat": 55,
-   "sources": ["B站"]
-  },
-  {
-   "term": "太阳之子",
-   "href": "https://www.bilibili.com/video/BV1Yapc6SEZ5",
-   "cat": "梗/社区",
-   "heat": 52,
-   "sources": ["B站"]
-  },
-  {
-   "term": "奥特钥匙",
-   "href": "https://www.bilibili.com/video/BV1zmYP6aEdH",
-   "cat": "梗/社区",
-   "heat": 50,
-   "sources": ["B站"]
-  },
-  {
-   "term": "碎星杯 雀巢工作室大战",
-   "href": "https://www.bilibili.com/video/BV1THaA6BEK6",
-   "cat": "事件/风险",
-   "heat": 55,
-   "sources": ["B站"]
-  },
-  {
-   "term": "有用版新植物 情敌双发",
-   "href": "https://www.bilibili.com/video/BV1oqHW6DEGi",
-   "cat": "梗/社区",
-   "heat": 48,
-   "sources": ["B站"]
-  },
-  {
-   "term": "牢玩家偷塔",
-   "href": "https://www.bilibili.com/video/BV1aSHZ66ErJ",
-   "cat": "梗/社区",
-   "heat": 45,
-   "sources": ["B站"]
-  },
-  {
-   "term": "GTA6 云游戏串流权",
-   "href": "https://www.gcores.com/articles/220573",
-   "cat": "事件/风险",
-   "heat": 85,
-   "sources": ["机核"]
-  },
-  {
-   "term": "草蜢工作室脱离网易独立",
-   "href": "https://www.youxituoluo.com/534934.html",
-   "cat": "行业/数据",
-   "heat": 75,
-   "sources": ["游信"]
-  },
-  {
-   "term": "206款游戏获版号",
-   "href": "http://www.gamelook.com.cn/2026/10/603329/",
-   "cat": "行业/数据",
-   "heat": 90,
-   "sources": ["GameLook"]
-  },
-  {
-   "term": "GTA6 不能买房细节似RDR2",
-   "href": "https://www.gamersky.com/news/202610/2222790.shtml",
-   "cat": "游戏/新品",
-   "heat": 78,
-   "sources": ["游民星空"]
-  },
-  {
-   "term": "PS5 满分佳作外媒狂吹",
-   "href": "https://www.gamersky.com/news/202610/2222866.shtml",
-   "cat": "游戏/新品",
-   "heat": 68,
-   "sources": ["游民星空"]
-  },
-  {
-   "term": "影之刃零不出实体版",
-   "href": "https://www.gamersky.com/news/202610/2222798.shtml",
-   "cat": "事件/风险",
-   "heat": 72,
-   "sources": ["游民星空"]
-  },
-  {
-   "term": "土耳其游戏圈黄埔军校",
-   "href": "https://www.baijing.cn/article/56900",
-   "cat": "行业/数据",
-   "heat": 60,
-   "sources": ["白鲸"]
-  },
-  {
-   "term": "AI短剧产线5000万押注",
-   "href": "https://www.baijing.cn/article/56899",
-   "cat": "行业/数据",
-   "heat": 58,
-   "sources": ["白鲸"]
-  },
-  {
-   "term": "龙之信条2 黑暗降临",
-   "href": "https://www.pcgamer.com/games/rpg/heres-the-dragons-dogma-2-dark-arisen-release-time-for-your-region/",
-   "cat": "游戏/新品",
-   "heat": 62,
-   "sources": ["PCGamer"]
-  },
-  {
-   "term": "小岛秀夫分享P.T.原生PC移植",
-   "href": "https://www.gamesradar.com/games/silent-hill/hideo-kojima-shares-native-pc-port-of-p-t-leaving-the-modder-who-made-it-speechless/",
-   "cat": "事件/风险",
-   "heat": 66,
-   "sources": ["GamesRadar"]
-  },
-  {
-   "term": "Xbox Game Pass 10月阵容",
-   "href": "https://www.eurogamer.net/xbox-game-pass-lineup-october-2026",
-   "cat": "游戏/新品",
-   "heat": 64,
-   "sources": ["Eurogamer"]
-  },
-  {
-   "term": "Undead Labs 脱离Xbox",
-   "href": "https://www.eurogamer.net/undead-labs-xbox-layoffs-state-of-decay-3",
-   "cat": "行业/数据",
-   "heat": 56,
-   "sources": ["Eurogamer"]
-  },
-  {
-   "term": "谷歌AI游戏创作平台",
-   "href": "https://www.videogameschronicle.com/news/google-officially-reveals-ai-game-creation-platform-playground/",
-   "cat": "行业/数据",
-   "heat": 54,
-   "sources": ["VGC"]
-  },
-  {
-   "term": "B站捉宠新游首周流水5000万",
-   "href": "http://www.gamelook.com.cn/2026/10/602850/",
-   "cat": "行业/数据",
-   "heat": 73,
-   "sources": ["GameLook"]
-  },
-  {
-   "term": "《抵抗者》参展核聚变2026北京",
-   "href": "https://www.gcores.com/articles/220567",
-   "cat": "事件/风险",
-   "heat": 57,
-   "sources": ["机核"]
-  },
-  {
-   "term": "ANOMALITH demo上线",
-   "href": "https://www.gematsu.com/2026/10/anomalith-demo-now-available",
-   "cat": "游戏/新品",
-   "heat": 50,
-   "sources": ["Gematsu"]
-  },
-  {
-   "term": "Crunchyroll PS5专属中心",
-   "href": "https://www.gematsu.com/2026/10/crunchyroll-dedicated-hub-announced-for-ps5",
-   "cat": "游戏/新品",
-   "heat": 49,
-   "sources": ["Gematsu"]
-  }
- ]
+  "date": "2026-10-12",
+  "terms": [
+    {"term": "你好邻居 Mod逃离挑战", "href": "https://www.bilibili.com/video/BV1QmpE6aEA7", "cat": "游戏/新品", "heat": 76, "sources": ["B站" ]},
+    {"term": "阴阳师十周年双人舞", "href": "https://www.bilibili.com/video/BV1D9pu6qECf", "cat": "游戏/新品", "heat": 80, "sources": ["B站" ]},
+    {"term": "明日方舟×国家图书馆合作PV", "href": "https://www.bilibili.com/video/BV1Gmpu6rE4w", "cat": "游戏/新品", "heat": 75, "sources": ["B站" ]},
+    {"term": "原神帝君尘游记整活", "href": "https://www.bilibili.com/video/BV1YwpE6PEb5", "cat": "梗/社区", "heat": 55, "sources": ["B站" ]},
+    {"term": "迪迦与诺亚特摄合集", "href": "https://www.bilibili.com/video/BV1dxpG6pEEd", "cat": "梗/社区", "heat": 42, "sources": ["B站" ]},
+    {"term": "B站捉宠新游小程序发力", "href": "http://www.gamelook.com.cn/2026/10/602850/", "cat": "行业/数据", "heat": 78, "sources": ["GameLook" ]},
+    {"term": "草蜢工作室脱离网易", "href": "https://www.youxituoluo.com/534934.html", "cat": "事件/风险", "heat": 74, "sources": ["游戏陀螺", "白鲸出海" ]},
+    {"term": "微软获GTA6云游戏串流权", "href": "https://www.gcores.com/articles/220573", "cat": "行业/数据", "heat": 85, "sources": ["机核 GCORES" ]},
+    {"term": "CS2 官方更新", "href": "https://store.steampowered.com/news/app/730/view/675134162359814146", "cat": "游戏/新品", "heat": 57, "sources": ["Steam 官方新闻" ]},
+    {"term": "ANOMALITH Demo上线", "href": "https://www.gematsu.com/2026/10/anomalith-demo-now-available", "cat": "游戏/新品", "heat": 55, "sources": ["Gematsu" ]},
+    {"term": "Crunchyroll PS5专属中心", "href": "https://www.gematsu.com/2026/10/crunchyroll-dedicated-hub-announced-for-ps5", "cat": "行业/数据", "heat": 48, "sources": ["Gematsu" ]},
+    {"term": "DOTA2 探索惊世奇珍", "href": "https://store.steampowered.com/news/app/570/view/681888927386174386", "cat": "游戏/新品", "heat": 52, "sources": ["Steam 官方新闻" ]},
+    {"term": "游戏厂商押注AI短剧", "href": "https://www.baijing.cn/article/56899", "cat": "行业/数据", "heat": 58, "sources": ["白鲸出海" ]},
+    {"term": "小岛秀夫P.T.原生PC移植", "href": "https://www.gamesradar.com/games/silent-hill/hideo-kojima-shares-native-pc-port-of-p-t-leaving-the-modder-who-made-it-speechless/", "cat": "游戏/新品", "heat": 66, "sources": ["GamesRadar+" ]},
+    {"term": "Xbox Game Pass十月阵容", "href": "https://www.eurogamer.net/xbox-game-pass-lineup-october-2026", "cat": "游戏/新品", "heat": 68, "sources": ["Eurogamer" ]},
+    {"term": "Undead Labs脱离Xbox", "href": "https://www.eurogamer.net/undead-labs-xbox-layoffs-state-of-decay-3", "cat": "事件/风险", "heat": 62, "sources": ["Eurogamer" ]},
+    {"term": "龙之信条2黑暗觉者发售", "href": "https://www.pcgamer.com/games/rpg/heres-the-dragons-dogma-2-dark-arisen-release-time-for-your-region/", "cat": "游戏/新品", "heat": 66, "sources": ["PC Gamer" ]},
+    {"term": "星战Zero Company员工复工", "href": "https://www.videogameschronicle.com/news/star-wars-zero-company-staff-returning-to-work-after-being-furloughed-pre-release/", "cat": "事件/风险", "heat": 54, "sources": ["VGC" ]},
+    {"term": "谷歌发布AI游戏创作平台", "href": "https://www.videogameschronicle.com/news/google-officially-reveals-ai-game-creation-platform-playground/", "cat": "行业/数据", "heat": 65, "sources": ["VGC" ]},
+    {"term": "高达Rogue Orbit PS5实机预告", "href": "https://www.pushsquare.com/news/2026/10/gundam-rogue-orbit-drops-its-enthusiastically-narrated-ps5-gameplay-trailer", "cat": "游戏/新品", "heat": 52, "sources": ["Push Square" ]},
+    {"term": "Atmosfar公布抢先体验档期", "href": "https://www.rockpapershotgun.com/airborne-open-world-atmosfar-gets-an-early-access-release-date-and-a-trailer-full-of-flying-islands-cloud-cruisers-and-sky-taxis", "cat": "游戏/新品", "heat": 55, "sources": ["Rock Paper Shotgun" ]},
+    {"term": "Screamer单摇杆漂移更新", "href": "https://www.rockpapershotgun.com/anime-racer-screamer-no-longer-demands-you-retrain-your-fingers-with-a-fresh-patch-adding-single-stick-drift-controls", "cat": "游戏/新品", "heat": 50, "sources": ["Rock Paper Shotgun" ]},
+    {"term": "动视前CEO加入Skydance董事会", "href": "https://gameinformer.com/2026/10/07/bobby-kotick-former-activision-ceo-joins-skydance-board-of-directors", "cat": "行业/数据", "heat": 50, "sources": ["Game Informer" ]},
+    {"term": "龙窟破坏者Demo上线Steam", "href": "https://www.gcores.com/articles/220658", "cat": "游戏/新品", "heat": 62, "sources": ["机核 GCORES" ]},
+    {"term": "地平线6 PS5预购开启", "href": "https://www.gamersky.com/news/202610/2223978.shtml", "cat": "游戏/新品", "heat": 72, "sources": ["游民星空" ]},
+    {"term": "3i计划公布机械迷城2与逃脱者3", "href": "https://www.gamersky.com/news/202610/2223953.shtml", "cat": "游戏/新品", "heat": 68, "sources": ["游民星空" ]},
+    {"term": "谷歌Unity推出AI游戏研发平台", "href": "http://www.gamelook.com.cn/2026/10/603403/", "cat": "行业/数据", "heat": 70, "sources": ["GameLook" ]},
+    {"term": "蓝洞搜打撤PUBG项目终止", "href": "https://www.youxituoluo.com/534937.html", "cat": "事件/风险", "heat": 64, "sources": ["游戏陀螺" ]},
+    {"term": "永劫无间10月更新", "href": "https://store.steampowered.com/news/app/1203220/view/680763661892977561", "cat": "游戏/新品", "heat": 56, "sources": ["Steam 官方新闻" ]}
+  ]
 }

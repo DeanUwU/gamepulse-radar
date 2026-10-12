@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-10-09T10:53:32",
- "adopt_total": 72,
- "review_total": 50,
- "leak_total": 2,
+ "generated_at": "2026-10-12T15:42:43",
+ "adopt_total": 56,
+ "review_total": 41,
+ "leak_total": 1,
  "leaks": [
   {
    "title": "PSVR《揭秘计划2：远古之战》发售 火星之战爆发",
@@ -11,21 +11,6 @@
    "src_name": "游民星空·最新资讯",
    "verdict": "review",
    "pubdate": "2018-09-20",
-   "date_unverified": false,
-   "n_src_cluster": 1,
-   "signal": 2,
-   "reasons": [
-    "强事件词",
-    "准入待复核被卡"
-   ]
-  },
-  {
-   "title": "活动 | 三国杀王者之战神王战广州收官 《三国杀：承天之弈》重磅首发",
-   "url": "http://www.nadianshi.com/2026/06/413745",
-   "game": "全行业",
-   "src_name": "手游那点事",
-   "verdict": "review",
-   "pubdate": "2026-06-01",
    "date_unverified": false,
    "n_src_cluster": 1,
    "signal": 2,

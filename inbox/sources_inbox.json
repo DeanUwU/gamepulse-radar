@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-10-13T11:02:52",
+ "fetched_at": "2026-10-13T11:22:07",
  "summary": {
   "sources_total": 75,
-  "sources_alive": 72,
-  "items_total": 167,
-  "items_dated": 123
+  "sources_alive": 67,
+  "items_total": 143,
+  "items_dated": 106
  },
  "sources": [
   {
@@ -577,22 +577,22 @@
      "age_days": null
     },
     {
-     "title": "霸王茶姬全场买一送一幕后曝光！加盟商担成本",
-     "url": "https://www.gamersky.com/news/202610/2226427.shtml",
-     "pubdate": null,
-     "date_src": null,
-     "age_days": null
+     "title": "60岁\"小龙女\"一身白衣现身活死人墓：别人打卡我回家",
+     "url": "https://www.gamersky.com/news/202610/2226430.shtml",
+     "pubdate": "2026-10-13",
+     "date_src": "text",
+     "age_days": 0
     },
     {
-     "title": "LGBT魔爪Sweetbaby官网删光合作方！DEI金主跑了？",
-     "url": "https://www.gamersky.com/news/202610/2226424.shtml",
+     "title": "霸王茶姬全场买一送一幕后曝光！加盟商担成本",
+     "url": "https://www.gamersky.com/news/202610/2226427.shtml",
      "pubdate": "2026-10-13",
      "date_src": "text",
      "age_days": 0
     }
    ],
    "extraction": "extracted",
-   "dated_items": 1
+   "dated_items": 2
   },
   {
    "id": "chuapp",
@@ -706,6 +706,13 @@
    "error": null,
    "items": [
     {
+     "title": "Shin chan: Me and the Professor on Summer Vacation – The Endless Seven-Day Journey and Shin chan: Shiro and the Coal Town coming to Switch 2 on March 4, 2027",
+     "url": "https://www.gematsu.com/2026/10/shin-chan-me-and-the-professor-on-summer-vacation-the-endless-seven-day-journey-and-shin-chan-shiro-and-the-coal-town-coming-to-switch-2-on-march-4-2027",
+     "pubdate": "2026-10-13",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
      "title": "PS5 Digital Edition Midnight Black Japan-only model launches November 19",
      "url": "https://www.gematsu.com/2026/10/ps5-digital-edition-midnight-black-japan-only-model-launches-november-19",
      "pubdate": "2026-10-13",
@@ -715,13 +722,6 @@
     {
      "title": "Usual June delayed to January 20, 2027",
      "url": "https://www.gematsu.com/2026/10/usual-june-delayed-to-january-20-2027",
-     "pubdate": "2026-10-12",
-     "date_src": "feed",
-     "age_days": 1
-    },
-    {
-     "title": "Blind Descent launches in Early Access for PC on December 2",
-     "url": "https://www.gematsu.com/2026/10/blind-descent-launches-in-early-access-for-pc-on-december-2",
      "pubdate": "2026-10-12",
      "date_src": "feed",
      "age_days": 1
@@ -1154,47 +1154,9 @@
    "name": "GameLook",
    "type": "rss",
    "url": "http://www.gamelook.com.cn/feed",
-   "status": 200,
-   "error": null,
-   "items": [
-    {
-     "title": "9月全球手游收入与下载量排行榜TOP10：《ROBLOX》表现强劲，跻身全球收入榜前五",
-     "url": "http://www.gamelook.com.cn/2026/10/603800/",
-     "pubdate": "2026-10-13",
-     "date_src": "feed",
-     "age_days": 0
-    },
-    {
-     "title": "起大风了！虚拟主播手游月收入稳定破亿、成头部二游，下一款是打牌？",
-     "url": "http://www.gamelook.com.cn/2026/10/603706/",
-     "pubdate": "2026-10-13",
-     "date_src": "feed",
-     "age_days": 0
-    },
-    {
-     "title": "苹果慌了？拉反垄断专家“写中国报告邀功”，米哈游网易成“官网充值”案例",
-     "url": "http://www.gamelook.com.cn/2026/10/603704/",
-     "pubdate": "2026-10-13",
-     "date_src": "feed",
-     "age_days": 0
-    },
-    {
-     "title": "《火影忍者》官宣出海，老外欢呼“苦等10年”！魔方连出三牌迎来“赛点时刻”？",
-     "url": "http://www.gamelook.com.cn/2026/10/603738/",
-     "pubdate": "2026-10-13",
-     "date_src": "feed",
-     "age_days": 0
-    },
-    {
-     "title": "“战棋大佬紫龙”下场钓鱼，新游《极境：垂钓者》能打动赛博钓鱼佬吗？",
-     "url": "http://www.gamelook.com.cn/2026/10/603737/",
-     "pubdate": "2026-10-13",
-     "date_src": "feed",
-     "age_days": 0
-    }
-   ],
-   "extraction": "rss",
-   "dated_items": 5
+   "status": null,
+   "error": "<HTTPError 403: 'Forbidden'>",
+   "items": []
   },
   {
    "id": "youxituoluo",
@@ -1205,6 +1167,13 @@
    "status": 200,
    "error": null,
    "items": [
+    {
+     "title": "AI漫剧之后最大风口：零基础，6人爆肝4个月，做出赛道No.1产品",
+     "url": "https://www.youxituoluo.com/534950.html",
+     "pubdate": "2026-10-13",
+     "date_src": "feed",
+     "age_days": 0
+    },
     {
      "title": "在上海旧船厂，小红书和游戏厂商想做一个“开放世界冒险岛”",
      "url": "https://www.youxituoluo.com/534948.html",
@@ -1229,13 +1198,6 @@
     {
      "title": "独游开发者复盘：Steam 56万美元总流水，最终仅到手7.3万美元",
      "url": "https://www.youxituoluo.com/534945.html",
-     "pubdate": "2026-10-10",
-     "date_src": "feed",
-     "age_days": 3
-    },
-    {
-     "title": "10月新游清单来了！《剑侠世界4》《影之刃零》《霓虹深渊2》你选谁？",
-     "url": "https://www.youxituoluo.com/534944.html",
      "pubdate": "2026-10-10",
      "date_src": "feed",
      "age_days": 3
@@ -1400,40 +1362,9 @@
    "name": "触乐网·分类新闻",
    "type": "news_list",
    "url": "http://www.chuapp.com/Category/news/",
-   "status": 200,
-   "error": null,
-   "items": [
-    {
-     "title": "Ono1小时前0条评论 “巫师”系列制作人与中国策划在一起会聊什么 一位任务策划和《巫师4》关卡设计负责人及Fool's Theory工作室CEO的对谈。",
-     "url": "http://www.chuapp.com/article/291681.html",
-     "pubdate": null,
-     "date_src": null,
-     "age_days": null
-    },
-    {
-     "title": "王琳茜1小时前0条评论 触乐怪话：逛展该怎么逛？ 逛展真的有主线任务吗？",
-     "url": "http://www.chuapp.com/article/291685.html",
-     "pubdate": null,
-     "date_src": null,
-     "age_days": null
-    },
-    {
-     "title": "甄能达10月10日0条评论 触乐本周行业大事：《王者荣耀》中国队名古屋亚运会卫冕，《三角洲行动》官宣日活破5800万 还有两场大型线下综合ACG展会、网易自研游",
-     "url": "http://www.chuapp.com/article/291683.html",
-     "pubdate": null,
-     "date_src": null,
-     "age_days": null
-    },
-    {
-     "title": "林翔10月09日0条评论 为什么草莓音乐节会做一场游戏展？ 找到音乐和游戏的连结点。",
-     "url": "http://www.chuapp.com/article/291682.html",
-     "pubdate": null,
-     "date_src": null,
-     "age_days": null
-    }
-   ],
-   "extraction": "extracted",
-   "dated_items": 0
+   "status": null,
+   "error": "<HTTPError 403: 'Forbidden'>",
+   "items": []
   },
   {
    "id": "gamersky_zx",
@@ -1486,12 +1417,24 @@
    "error": null,
    "items": [
     {
+     "title": "跨境卖家的大机会来了，TikTok Shop打通12国互售，你的店铺能上车吗？",
+     "url": "https://www.baijing.cn/article/56974",
+     "pubdate": "2026-10-13",
+     "date_src": "feed",
+     "extra": {
+      "views": 1553,
+      "synopsis": "互相卖货的时代开启。",
+      "from": "兔克出海"
+     },
+     "age_days": 0
+    },
+    {
      "title": "Meta推出新一代AI模型Muse Wonder，月费最高200美元，寻求拓展广告以外营收渠道",
      "url": "https://www.baijing.cn/article/56973",
      "pubdate": "2026-10-13",
      "date_src": "feed",
      "extra": {
-      "views": 923,
+      "views": 2568,
       "synopsis": "Meta 周一推出最新人工智能模型 Muse Wonder，并称其是目前公司用于驱动数字助手的最先进模型。",
       "from": "智通财经App"
      },
@@ -1503,7 +1446,7 @@
      "pubdate": "2026-10-12",
      "date_src": "feed",
      "extra": {
-      "views": 30177,
+      "views": 30644,
       "synopsis": "从“被看见”到“被记住”。",
       "from": "白鲸出海"
      },
@@ -1515,7 +1458,7 @@
      "pubdate": "2026-10-12",
      "date_src": "feed",
      "extra": {
-      "views": 30962,
+      "views": 31492,
       "synopsis": "25 年没人挤进的游戏主机市场，他们连续三年卖断货。",
       "from": "Hardwire"
      },
@@ -1527,7 +1470,7 @@
      "pubdate": "2026-10-12",
      "date_src": "feed",
      "extra": {
-      "views": 26409,
+      "views": 26875,
       "synopsis": "半年收入比去年同期多出约 1235 万美元。下载量少了，收入却在涨，这笔增量来自哪里？",
       "from": "Enjoy出海开发者服务平台"
      },
@@ -1539,7 +1482,7 @@
      "pubdate": "2026-10-12",
      "date_src": "feed",
      "extra": {
-      "views": 26897,
+      "views": 27299,
       "synopsis": "下一代互动内容的入口。",
       "from": "游戏陀螺"
      },
@@ -1551,7 +1494,7 @@
      "pubdate": "2026-10-12",
      "date_src": "feed",
      "extra": {
-      "views": 26616,
+      "views": 27053,
       "synopsis": "它究竟做对了什么？",
       "from": "品牌方舟BrandArk"
      },
@@ -1563,21 +1506,9 @@
      "pubdate": "2026-10-12",
      "date_src": "feed",
      "extra": {
-      "views": 26235,
+      "views": 26690,
       "synopsis": "Mobge 计划把更多资源用于开发面向全球市场的动作类手游。",
       "from": "Enjoy出海开发者服务平台"
-     },
-     "age_days": 1
-    },
-    {
-     "title": "PineDrama下载破亿，字节想在海外再造一个红果",
-     "url": "https://www.baijing.cn/article/56965",
-     "pubdate": "2026-10-12",
-     "date_src": "feed",
-     "extra": {
-      "views": 30687,
-      "synopsis": "红果在国内跑通的这套免费模式玩法，到了海外还能继续奏效吗？",
-      "from": "增长工场"
      },
      "age_days": 1
     }
@@ -1657,47 +1588,9 @@
    "name": "手游那点事",
    "type": "news_list",
    "url": "http://www.nadianshi.com/category/news/",
-   "status": 200,
-   "error": null,
-   "items": [
-    {
-     "title": "VR/AR",
-     "url": "http://www.nadianshi.com/category/vr",
-     "pubdate": null,
-     "date_src": null,
-     "age_days": null
-    },
-    {
-     "title": "原创丨米哈游：一年沉淀，换来「高开神走」",
-     "url": "http://www.nadianshi.com/2026/07/413907",
-     "pubdate": "2026-07-01",
-     "date_src": "text",
-     "age_days": 104
-    },
-    {
-     "title": "活动 | 三国杀王者之战神王战广州收官 《三国杀：承天之弈》重磅首发",
-     "url": "http://www.nadianshi.com/2026/06/413745",
-     "pubdate": "2026-06-01",
-     "date_src": "text",
-     "age_days": 134
-    },
-    {
-     "title": "活动/会议",
-     "url": "http://www.nadianshi.com/category/ju",
-     "pubdate": null,
-     "date_src": null,
-     "age_days": null
-    },
-    {
-     "title": "原创丨终于等到了！和世界级射击IP坐一桌，三角洲凭什么？",
-     "url": "http://www.nadianshi.com/2026/06/413179",
-     "pubdate": "2026-06-01",
-     "date_src": "text",
-     "age_days": 134
-    }
-   ],
-   "extraction": "extracted",
-   "dated_items": 3
+   "status": null,
+   "error": "<HTTPError 403: 'Forbidden'>",
+   "items": []
   },
   {
    "id": "dataeye",
@@ -1796,47 +1689,9 @@
    "name": "GamesRadar+",
    "type": "rss",
    "url": "https://www.gamesradar.com/feeds/all",
-   "status": 200,
-   "error": null,
-   "items": [
-    {
-     "title": "The best early Black Friday PS5 deals in 2026: the biggest Sony savings so far",
-     "url": "https://www.gamesradar.com/platforms/ps5/the-best-early-black-friday-ps5-deals-in-australia-for-2026-the-biggest-sony-savings-so-far/",
-     "pubdate": "2026-10-13",
-     "date_src": "feed",
-     "age_days": 0
-    },
-    {
-     "title": "VisionQuest EP says people will \"feel the brotherly love\" when Wiccan and Speed appear in the MCU",
-     "url": "https://www.gamesradar.com/entertainment/marvel-tv-shows/visionquest-executive-producer-says-people-will-feel-the-brotherly-love-when-wiccan-and-speed-eventually-appear-together-in-the-mcu/",
-     "pubdate": "2026-10-12",
-     "date_src": "feed",
-     "age_days": 1
-    },
-    {
-     "title": "After Daredevil: Born Again cancellation, Charlie Cox hopes Matt Murdock will be in more Marvel movies",
-     "url": "https://www.gamesradar.com/entertainment/marvel-tv-shows/after-the-cancellation-of-daredevil-born-again-charlie-cox-hopes-matt-murdock-will-be-in-more-marvel-movies/",
-     "pubdate": "2026-10-12",
-     "date_src": "feed",
-     "age_days": 1
-    },
-    {
-     "title": "Stardew Valley creator is \"struggling\" with Haunted Chocolatier thanks to the precedent he accidentally set himself",
-     "url": "https://www.gamesradar.com/games/simulation/stardew-valley-creator-is-struggling-with-haunted-chocolatier-thanks-to-the-precedent-he-accidentally-set-himself-it-might-disappoint-millions-of-people/",
-     "pubdate": "2026-10-12",
-     "date_src": "feed",
-     "age_days": 1
-    },
-    {
-     "title": "Ahead of GTA 6, Rockstar narrative lead says the American Dream is \"more modest now\" but still \"out of reach\"",
-     "url": "https://www.gamesradar.com/games/grand-theft-auto/ahead-of-gta-6-rockstar-narrative-lead-says-the-american-dream-previous-grand-theft-auto-games-were-critical-of-is-more-modest-now-but-still-out-of-reach-for-the-average-person/",
-     "pubdate": "2026-10-12",
-     "date_src": "feed",
-     "age_days": 1
-    }
-   ],
-   "extraction": "rss",
-   "dated_items": 5
+   "status": null,
+   "error": "<HTTPError 403: 'Forbidden'>",
+   "items": []
   },
   {
    "id": "eurogamer",
@@ -1892,47 +1747,9 @@
    "name": "PC Gamer",
    "type": "rss",
    "url": "https://www.pcgamer.com/feeds/all",
-   "status": 200,
-   "error": null,
-   "items": [
-    {
-     "title": "'Our humble goal is to survive the AI revolution' says Epic Games CEO, as its Star Wars and Marvel crossover pivots to 'AI first' development",
-     "url": "https://www.pcgamer.com/gaming-industry/game-development/our-humble-goal-is-to-survive-the-ai-revolution-says-epic-games-ceo-as-its-star-wars-and-marvel-crossover-pivots-to-ai-first-development/",
-     "pubdate": "2026-10-12",
-     "date_src": "feed",
-     "age_days": 1
-    },
-    {
-     "title": "Does Blizzard's revival of its classic games signal a return of the 'old Blizzard?'",
-     "url": "https://www.pcgamer.com/games/rts/does-blizzards-revival-of-its-classic-games-signal-a-return-of-the-old-blizzard/",
-     "pubdate": "2026-10-12",
-     "date_src": "feed",
-     "age_days": 1
-    },
-    {
-     "title": "Why alts are part of World of Warcraft: Forever's core progression plans",
-     "url": "https://www.pcgamer.com/games/world-of-warcraft/why-alts-are-part-of-world-of-warcraft-forevers-core-progression-plans/",
-     "pubdate": "2026-10-12",
-     "date_src": "feed",
-     "age_days": 1
-    },
-    {
-     "title": "How to get an Emperor Modulator in Arc Raiders",
-     "url": "https://www.pcgamer.com/games/third-person-shooter/arc-raiders-emperor-modulator-location/",
-     "pubdate": "2026-10-12",
-     "date_src": "feed",
-     "age_days": 1
-    },
-    {
-     "title": "I don't know what Rick and Morty's about but I have turned GTA 5 into its perfect replica",
-     "url": "https://www.pcgamer.com/games/grand-theft-auto/i-dont-know-what-rick-and-mortys-about-but-i-have-turned-gta-5-into-its-perfect-replica/",
-     "pubdate": "2026-10-12",
-     "date_src": "feed",
-     "age_days": 1
-    }
-   ],
-   "extraction": "rss",
-   "dated_items": 5
+   "status": null,
+   "error": "<HTTPError 403: 'Forbidden'>",
+   "items": []
   },
   {
    "id": "vgc",

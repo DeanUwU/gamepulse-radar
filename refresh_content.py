@@ -101,7 +101,8 @@ BLOCK_TNAMES = (
     "音乐综合", "社科·法律·心理", "资讯", "军事", "财经商业", "人文历史",
     "校园学习", "职场", "家居房产", "健身", "美食侦探", "汽车生活",
     "明星综合", "娱乐粉丝创作", "亲子", "科学科普")
-MAX_AGE_DAYS = 3  # 红线①：B站项发布距今天数上限（2026-08-12 收紧至 3 天，与头条事件位一致）
+MAX_AGE_DAYS = 3  # 展示尾部的绝对时效上限；超过 3 天一律剔除
+CORE_AGE_DAYS = 1.0  # 头图与今日焦点 TOP2-5 只收近 24 小时素材；旧素材最多进入 TOP6-10
 
 def is_acg(v):
     """该 B站 视频是否游戏/ACG 强相关（红线②硬闸）。
@@ -164,7 +165,7 @@ def _pub_age(v):
     return (time.time() - ts) / 86400.0
 
 def fresh_bili(v):
-    """红线①+②合闸：游戏/ACG 语境 且 发布 ≤5天；无 pubdate 视为不可判定→剔除。"""
+    """红线①+②合闸：游戏/ACG 语境 且 发布 ≤3天；无 pubdate 视为不可判定→剔除。"""
     if not is_acg(v):
         return False
     a = _pub_age(v)
@@ -265,7 +266,21 @@ def top10_score(v):
         elif rank_pos <= 25:
             freshness = 1.15  # 上榜 = 有动量
     elif src == "周必看":
-        freshness = 1.0   # 持续热度，不额外加成也不 penalize
+        freshness = 1.0
+
+    # 小时级时效衰减：热门榜里的累计播放量不能让 2~3 天旧视频压住当天内容。
+    age = _pub_age(v)
+    if age is None:
+        age_factor = 0.2
+    elif age <= 0.5:
+        age_factor = 1.5
+    elif age <= CORE_AGE_DAYS:
+        age_factor = 1.25
+    elif age <= 2:
+        age_factor = 0.55
+    else:
+        age_factor = 0.25
+    freshness *= age_factor
 
     # --- 当日热度数 H（2026-08-20 新增）---
     # 读 wordcloud_terms.json 的 H 映射，标题归一化后双向匹配（与 masthead _h_of 同逻辑）。
@@ -1054,7 +1069,8 @@ def _podium_top1(data, date_s, exclude_urls=None):
     # 例行运维噪音关键词（2026-08-21）：封禁/处罚/违规等"运营处罚"类公告。
     # 注意：不含"停服"——停服是重大事件（暴雷），必须保留；也不含"公告"（太宽）。
     _routine_noise = re.compile(
-        r'违规|封禁|封号|处罚|禁言|黑名单|外挂|作弊|净化|整治|处罚通知|封禁公告|处罚名单')
+        r'违规|封禁|封号|处罚|禁言|黑名单|外挂|作弊|净化|整治|处罚通知|封禁公告|处罚名单|'
+        r'折扣|优惠|促销|Deals?|Prime\s?Day|Black\s?Friday|黑五')
     if not exclude_urls:
         exclude_urls = set()
     else:
@@ -1087,7 +1103,8 @@ def _podium_top1(data, date_s, exclude_urls=None):
             score, detail = _heat_score(title, data, date_s, age=age)
             scored.append((score, detail, fe))
         if scored:
-            scored.sort(key=lambda x: -x[0])
+            # 日报核心位先看日期，再看热度：当天稿永远排在昨日稿之前。
+            scored.sort(key=lambda x: (x[1].get("age") if x[1].get("age") is not None else 99, -x[0]))
             # 2026-08-21：头条准入「真实热度底线」——没热度的内容不硬凑头条。
             #   事件必须满足至少其一：tgmeng 提及≥1（行业媒体当热点）/ 多源≥2
             #   （多家报道）/ 跨平台热榜≥1 平台命中。只靠「新鲜度+关键词+权威源」
@@ -1097,8 +1114,11 @@ def _podium_top1(data, date_s, exclude_urls=None):
             for score, detail, fe in scored:
                 tg = detail.get("tgmeng_count", 0)
                 nsrc = detail.get("n_src", 0)
-                if not (tg >= 1 or nsrc >= 2):
-                    # 无行业提及/多源，再查跨平台热榜声量；也无则跳过
+                src_name = fe.get("source_name") or ""
+                is_today_authority = (detail.get("age") == 0 and any(
+                    s in src_name for s in ("机核", "GameLook", "游戏陀螺", "游民星空", "17173", "Gematsu")))
+                if not (tg >= 1 or nsrc >= 2 or is_today_authority):
+                    # 无行业提及/多源；仅当天权威源可作为日报新鲜事件进入核心位。
                     if _cross_platform_hits(fe.get("title") or "", date_s)[1] < 1:
                         continue
                 # 尝试从 meme 视频池找同事件的相关封面图（feed_events 本身无图片字段）
@@ -1211,6 +1231,71 @@ def _podium_video_to_dict(v, rank):
     }
 
 
+def _podium_recent_events(data, date_s, blocked_urls, limit=4):
+    """为 TOP2-5 选择今天/昨天的行业事件，避免用旧累计播放视频硬填核心位。
+
+    同一发布日期内优先采用当日人工策展词云的 H 热度，再比较自动热度信号；
+    这样既保留强时效，也不会让低价值周报/小众稿压过当日重点事件。
+    """
+    try:
+        ev = json.load(io.open(os.path.join(BASE, "events.json"), encoding="utf-8"))
+    except Exception:
+        return []
+    curated_heat = {}
+    curated_title = {}
+    try:
+        wc = json.load(io.open(os.path.join(BASE, "wordcloud_terms.json"), encoding="utf-8"))
+        if wc.get("date") == date_s:
+            curated_heat = {
+                str(t.get("href") or ""): int(t.get("heat") or 0)
+                for t in (wc.get("terms") or [])
+                if t.get("href")
+            }
+            curated_title = {
+                str(t.get("href") or ""): str(t.get("term") or "")
+                for t in (wc.get("terms") or [])
+                if t.get("href") and t.get("term")
+            }
+    except Exception:
+        pass
+    noise = re.compile(
+        r'违规|封禁|封号|处罚|外挂|作弊|折扣|优惠|促销|Deals?|Prime\s?Day|Black\s?Friday|黑五|'
+        r'naked|成人视频', re.I)
+    today = datetime.date.today()
+    scored = []
+    for fe in (ev.get("feed_events") or []):
+        title = fe.get("title") or ""
+        url = fe.get("source_url") or fe.get("url") or ""
+        pub = fe.get("pubdate") or ""
+        if not title or not url or url in blocked_urls or noise.search(title):
+            continue
+        try:
+            age = (today - datetime.date.fromisoformat(str(pub)[:10])).days
+        except Exception:
+            continue
+        if age < 0 or age > 1:
+            continue
+        score, detail = _heat_score(title, data, date_s, age=age)
+        editorial_h = curated_heat.get(url, 0)
+        scored.append((age, -editorial_h, -score, fe, detail))
+    scored.sort(key=lambda x: (x[0], x[1], x[2]))
+    out = []
+    for _age, _neg_h, _neg_score, fe, detail in scored[:limit]:
+        url = fe.get("source_url") or fe.get("url") or "#"
+        out.append({
+            "rank": len(out) + 2,
+            "url": url,
+            "title": curated_title.get(url) or fe.get("title") or "（无标题）",
+            "tag": "今日事件",
+            "color": "#4da3ff",
+            "img": article_cover(url),
+            "meta": "%s · %s" % (fe.get("source_name") or "行业信源", str(fe.get("pubdate") or "")[5:10]),
+            "is_event": False,
+            "_heat_detail": detail,
+        })
+    return out
+
+
 def build_podium(data, date_s, exclude_urls=None):
     """生成「今日焦点」#podium 板块（金字塔三档）。
     设计：TOP1 榜首大卡 + TOP2-5 中卡 + TOP6-10 小卡，全部去重自同一 pool。
@@ -1242,7 +1327,12 @@ def build_podium(data, date_s, exclude_urls=None):
          if fresh_bili(v) and _is_game_vertical(v) == "soft"
          and v["url"] not in exclude_urls],
         key=top10_score, reverse=True)
-    ranked_videos = (strong_pool + soft_pool)[:10]  # 强垂类优先，soft 仅兜底
+
+    # 核心位与尾部位分流：近24小时才有资格进 TOP2-5；1~3天素材只能补 TOP6-10。
+    core_videos = ([v for v in strong_pool if _pub_age(v) is not None and _pub_age(v) <= CORE_AGE_DAYS]
+                   + [v for v in soft_pool if _pub_age(v) is not None and _pub_age(v) <= CORE_AGE_DAYS])
+    tail_videos = ([v for v in strong_pool if _pub_age(v) is not None and _pub_age(v) > CORE_AGE_DAYS]
+                   + [v for v in soft_pool if _pub_age(v) is not None and _pub_age(v) > CORE_AGE_DAYS])
 
     # TOP1：头条事件（视频或文章），URL 可能跟 ranked_videos[0] 重合
     top1 = _podium_top1(data, date_s, exclude_urls=exclude_urls)
@@ -1272,24 +1362,35 @@ def build_podium(data, date_s, exclude_urls=None):
                                "n_src": n_src, "tgmeng": tg_cnt}
 
     # 排除 TOP1 的 URL（若 TOP1 来自视频池）
-    seen = set()
-    if top1 and top1["url"] in pool:
+    seen = set(exclude_urls)
+    if top1:
         seen.add(top1["url"])
 
-    # TOP2-10：从 ranked_videos 按顺序取 9 条（去重）
-    mids = []
+    # TOP2-5：优先今天/昨天的行业事件，再用近24小时视频补位。
+    mids = _podium_recent_events(data, date_s, seen, limit=4)
+    for e in mids:
+        seen.add(e["url"])
     smalls = []
-    for v in ranked_videos:
+    for v in core_videos:
         if v["url"] in seen:
             continue
         seen.add(v["url"])
-        d = _podium_video_to_dict(v, len(mids) + len(smalls) + 2)
         if len(mids) < 4:
-            mids.append(d)
+            mids.append(_podium_video_to_dict(v, len(mids) + 2))
         elif len(smalls) < 5:
-            smalls.append(d)
+            smalls.append(_podium_video_to_dict(v, 6 + len(smalls)))
         else:
             break
+
+    # TOP6-10：先接近24小时池剩余项，再允许1~3天旧素材低位补齐。
+    if len(smalls) < 5:
+        for v in tail_videos:
+            if v["url"] in seen:
+                continue
+            seen.add(v["url"])
+            smalls.append(_podium_video_to_dict(v, 6 + len(smalls)))
+            if len(smalls) >= 5:
+                break
 
     # 渲染三档
     cards_html = []
@@ -1915,10 +2016,9 @@ def _masthead_pick(data, exclude_urls=None):
         url = v.get("url") or ""
         if not v.get("pic"):
             continue
-        # 时效过滤：头图与 TOP10 统一为近 3 天（红线：不得出现陈旧内容）。
-        # 每周必看虽是周更，pubdate 天然偏旧，但「旧了就是旧了」，不能因是门面素材破例放宽。
+        # 头图是日报门面，只收近24小时；1~3天旧视频即使累计播放量高也不得上头图。
         a = _pub_age(v)
-        if a is not None and a > MAX_AGE_DAYS:
+        if a is None or a > CORE_AGE_DAYS:
             continue
         # 与 TOP10 去重（2026-08-17）
         if url in exclude_urls:
@@ -2048,8 +2148,12 @@ def _masthead_fallback_event(data, exclude_urls=None):
     # 事件排序由 _heat_score 真实热度负责（tgmeng 提及 + 多源 + 强事件 + 新鲜度），
     #   不再单独定义强/次事件正则做分级——分级统一交给 _signal_grade（多源+跨平台）。
     scored = []
+    _headline_noise = re.compile(
+        r'违规|封禁|封号|处罚|外挂|作弊|折扣|优惠|促销|Deals?|Prime\s?Day|Black\s?Friday|黑五', re.I)
     for fe in (ev.get("feed_events") or []):
         title = fe.get("title") or fe.get("game") or "（无标题）"
+        if _headline_noise.search(title):
+            continue
         url = fe.get("source_url") or fe.get("url") or "#"
         pd = fe.get("pubdate") or fe.get("first_seen") or ""
         # 去重：已在 TOP10 出现的事件不再上头图
@@ -2129,8 +2233,8 @@ def _masthead_fallback_event(data, exclude_urls=None):
     if not scored:
         return None
 
-    # 真实热度优先
-    scored.sort(key=lambda x: -x[0])
+    # 日报门面先看日期、再看热度：当天事件优先于昨日高累计分内容。
+    scored.sort(key=lambda x: (x[1].get("age") if x[1].get("age") is not None else 99, -x[0]))
     score, detail, fe = scored[0]
 
     title = fe.get("title") or fe.get("game") or "（无标题）"

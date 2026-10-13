@@ -9,7 +9,7 @@
      wordcloud.html 脚注写着「绝不生成 search.bilibili.com 搜索链接」是说明文案，非链接。
   ② masthead 检查要匹配 class="masthead"，不是字面 ".masthead"。
 """
-import json, re, sys, datetime, os
+import json, re, sys, datetime, os, time, html as html_lib
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 TODAY = datetime.date.today().strftime("%Y-%m-%d")
@@ -92,53 +92,125 @@ out = [(x["id"], x.get("pubdate")) for x in ev.get("feed_events", [])
        or (x.get("pubdate") and not (lo <= x["pubdate"] <= TODAY))]
 chk("feed_events 全在 7 天窗口", not out, f"共 {len(ev.get('feed_events', []))} 条，越窗 {out[:6]}")
 
-# ⑦b masthead 头条时效（阻断）：头条必须是「当日/近 3 天新闻」或「今天发售/上线」，
-#   不得用旧闻当"今日头条"。2026-08-24 治理：events[] 日历定档节点无 pubdate，
-#   曾把 8-13 发布的旧闻《月光光心慌慌》(9-08 发售)顶上头条。规则：
-#   · B站视频链接 → 通过（B站候选池已有时效闸 ≤MAX_AGE_DAYS）
-#   · feed_events 命中 → pubdate 须在 3 天窗口内
-#   · events[] 命中 → 有 pubdate 且 ≤3 天，或无 pubdate 但 date_start==今天
-#   · 均不命中 → FAIL（头条来源不在已知数据，无法判定时效）
+# ⑦b 核心内容分层时效（阻断）
+#   2026-10-13 治理："没有超过 3 天"只是尾部绝对红线，不代表有资格占据日报核心位。
+#   · masthead：文章必须是当天新闻/今天上线，B站视频必须在近 24 小时内；
+#   · 今日焦点 TOP1-5：文章最多昨天发布，B站视频必须在近 24 小时内；
+#   · 今日焦点 TOP6-10：允许近 3 天素材低位补充；
+#   · 所有内容都必须能在当日采集文件或 events.json 中反查，未知日期直接 FAIL。
+fe_by_url = {html_lib.unescape(e.get("source_url") or e.get("url") or ""): e
+             for e in ev.get("feed_events", [])}
+ev_by_url = {html_lib.unescape(e.get("source_url") or e.get("url") or ""): e
+             for e in ev.get("events", [])}
+
+
+def _walk_video_items(node):
+    if isinstance(node, dict):
+        u = node.get("url")
+        if u and node.get("pubdate"):
+            yield html_lib.unescape(str(u)), node
+        for value in node.values():
+            yield from _walk_video_items(value)
+    elif isinstance(node, list):
+        for value in node:
+            yield from _walk_video_items(value)
+
+
+collector_path = os.path.join(BASE, "collectors", f"meme_{TODAY.replace('-', '')}.json")
+try:
+    collector = json.load(open(collector_path, encoding="utf-8"))
+    video_by_url = dict(_walk_video_items(collector))
+    collector_error = ""
+except Exception as exc:
+    video_by_url = {}
+    collector_error = f"当日采集文件不可读: {exc}"
+
+
+def _video_age_hours(url):
+    item = video_by_url.get(html_lib.unescape(url))
+    if not item:
+        return None
+    try:
+        age = (time.time() - int(item.get("pubdate") or 0)) / 3600.0
+        return age if age >= 0 else None
+    except Exception:
+        return None
+
+
+def _article_age_days(url):
+    """返回 (发布日期距今天数, 描述)；今天上线但无 pubdate 的日历事件按 0 天处理。"""
+    url = html_lib.unescape(url)
+    item = fe_by_url.get(url) or ev_by_url.get(url)
+    if not item:
+        return None, "链接不在 feed_events/events 已知源内"
+    pd = str(item.get("pubdate") or "")[:10]
+    ds = str(item.get("date_start") or "")[:10]
+    if pd:
+        try:
+            age = (datetime.date.today() - datetime.date.fromisoformat(pd)).days
+        except ValueError:
+            return None, f"pubdate={pd} 无法解析"
+        if ds and ds > TODAY:
+            return None, f"未来定档预告 pubdate={pd} date_start={ds}"
+        return age, f"pubdate={pd}"
+    if ds == TODAY:
+        return 0, f"今日发售/上线 date_start={ds}"
+    return None, f"时效未知 pubdate={pd or None} date_start={ds or None}"
+
+
+def _freshness(url, article_days, video_hours):
+    """按链接类型检查时效，返回 (ok, detail)。"""
+    url = html_lib.unescape(url)
+    if "bilibili.com/video/" in url:
+        hours = _video_age_hours(url)
+        if hours is None:
+            return False, collector_error or "B站链接未在当日采集文件中找到/无 pubdate"
+        return hours <= video_hours, f"B站 age={hours:.1f}h，上限 {video_hours:g}h"
+    days, detail = _article_age_days(url)
+    return days is not None and 0 <= days <= article_days, f"文章 {detail}，上限 {article_days} 天"
+
+
 mh_m = re.search(r'class="masthead[^"]*".*?<h1>\s*<a[^>]+href="([^"]+)"', idx, re.S)
-mh_url = mh_m.group(1) if mh_m else None
+mh_url = html_lib.unescape(mh_m.group(1)) if mh_m else None
 if not mh_url:
     chk("masthead 头条链接可提取", False, "未找到 masthead <h1> 链接")
 else:
     chk("masthead 头条链接可提取", True, mh_url)
-    lo3 = (datetime.date.today() - datetime.timedelta(days=3)).strftime("%Y-%m-%d")
-    ok_mh = False
-    mh_detail = ""
-    if "bilibili.com/video/" in mh_url:
-        ok_mh = True
-        mh_detail = "B站视频(候选池已有时效闸)"
+    ok_mh, mh_detail = _freshness(mh_url, article_days=0, video_hours=24)
+    chk("masthead 当天文章 / 近24小时视频", ok_mh, mh_detail)
+
+# 提取今日焦点三档卡片并按 rank 校验。TOP1 结构中无 #1 文本，固定为 rank=1。
+podium_m = re.search(r'<section id="podium">(.*?)</section>', idx, re.S)
+podium_cards = []
+if podium_m:
+    card_re = re.compile(
+        r'<a class="pb-card-(1|mid|small)[^"]*"[^>]*href="([^"]+)"[^>]*>(.*?)</a>', re.S)
+    for tier, url, body in card_re.findall(podium_m.group(1)):
+        rank = 1 if tier == "1" else None
+        if rank is None:
+            rank_m = re.search(r'class="pb-rank-(?:mid|small)">#(\d+)</span>', body)
+            rank = int(rank_m.group(1)) if rank_m else None
+        podium_cards.append((rank, html_lib.unescape(url)))
+chk("今日焦点卡片 rank 可提取", bool(podium_cards) and all(r is not None for r, _ in podium_cards),
+    f"提取 {len(podium_cards)} 条: {[r for r, _ in podium_cards]}")
+
+core_bad = []
+tail_bad = []
+for rank, url in podium_cards:
+    if rank is None:
+        continue
+    if rank <= 5:
+        ok, detail = _freshness(url, article_days=1, video_hours=24)
+        if not ok:
+            core_bad.append((rank, detail, url))
     else:
-        fe_by_url = {e.get("source_url"): e for e in ev.get("feed_events", [])}
-        ev_by_url = {e.get("source_url"): e for e in ev.get("events", [])}
-        if mh_url in fe_by_url:
-            pd = fe_by_url[mh_url].get("pubdate")
-            if pd and lo3 <= pd <= TODAY:
-                ok_mh = True
-                mh_detail = f"feed_events pubdate={pd}"
-            else:
-                mh_detail = f"feed_events pubdate={pd} 越界/缺失"
-        elif mh_url in ev_by_url:
-            ce = ev_by_url[mh_url]
-            pd = ce.get("pubdate")
-            ds = ce.get("date_start")
-            # 2026-08-25 治理：即使 pubdate ≤3 天，date_start 在未来仍是定档预告，
-            #   不是「今日新闻」，不得上头图（影之刃零 10-29 发售霸榜即此漏洞）。
-            future_ds = bool(ds) and (str(ds) > TODAY)
-            if pd and lo3 <= pd <= TODAY and not future_ds:
-                ok_mh = True
-                mh_detail = f"events pubdate={pd}"
-            elif (not pd) and ds == TODAY:
-                ok_mh = True
-                mh_detail = f"events 今日发售 date_start={ds}"
-            else:
-                mh_detail = f"events 时效未知/预告 pubdate={pd} date_start={ds}"
-        else:
-            mh_detail = "头条链接不在 feed_events/events 已知源内"
-    chk("masthead 头条时效 ≤3 天（非旧闻）", ok_mh, mh_detail)
+        ok, detail = _freshness(url, article_days=3, video_hours=72)
+        if not ok:
+            tail_bad.append((rank, detail, url))
+chk("今日焦点 TOP1-5：文章≤1天 / 视频≤24小时", not core_bad,
+    f"异常 {core_bad[:4]}" if core_bad else "全部通过")
+chk("今日焦点 TOP6-10：已知时效≤3天", not tail_bad,
+    f"异常 {tail_bad[:4]}" if tail_bad else "全部通过")
 
 # ⑧ wordcloud_terms 校验
 w = json.load(open(os.path.join(BASE, "wordcloud_terms.json"), encoding="utf-8"))

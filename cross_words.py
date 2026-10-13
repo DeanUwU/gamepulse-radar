@@ -185,7 +185,7 @@ total = len(sorted_rows)
 # ===================== 溯源数据构建 =====================
 
 def _collect_all_source_items(date_str):
-    """收集当日所有可溯源条目（meme + hotlist），返回 [{title, url, source}]"""
+    """收集可溯源条目（当日 meme/hotlist + 近7天 feed_events）。"""
     items = []
     date_compact = date_str.replace("-", "")  # 2026-08-10 → 20260810
 
@@ -227,6 +227,28 @@ def _collect_all_source_items(date_str):
         except Exception as e:
             print(f"WARN: 读 hotlist 数据失败 ({hotlist_path}): {e}")
 
+    # 3. 近7天行业新闻（wordcloud_terms 允许使用 events.json.feed_events）
+    events_path = os.path.join(BASE, "events.json")
+    if os.path.exists(events_path):
+        try:
+            ed = json.load(io.open(events_path, encoding="utf-8"))
+            today = datetime.date.fromisoformat(date_str)
+            for item in ed.get("feed_events", []) or []:
+                title = item.get("title") or ""
+                url = item.get("source_url") or item.get("url") or ""
+                pub = item.get("pubdate")
+                if not title or not url or not pub:
+                    continue
+                try:
+                    age = (today - datetime.date.fromisoformat(str(pub)[:10])).days
+                except Exception:
+                    continue
+                if 0 <= age <= 7:
+                    items.append({"title": title, "url": url,
+                                  "source": item.get("source_name") or "行业信源"})
+        except Exception as e:
+            print(f"WARN: 读 feed_events 失败 ({events_path}): {e}")
+
     return items
 
 
@@ -243,7 +265,9 @@ def build_traceability(rows_list, date_str):
             url = src["url"]
             if url in seen:
                 continue
-            if word in src["title"]:
+            # 策展词常是原始标题的压缩改写；主链接完全一致时即视为强溯源，
+            # 其余来源仍用标题包含关系补充交叉印证。
+            if url == r["href"] or word in src["title"]:
                 matches.append(dict(src))
                 seen.add(url)
 

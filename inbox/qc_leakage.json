@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-10-13T11:23:02",
- "adopt_total": 57,
- "review_total": 41,
- "leak_total": 2,
+ "generated_at": "2026-10-14T10:52:57",
+ "adopt_total": 68,
+ "review_total": 58,
+ "leak_total": 5,
  "leaks": [
   {
    "title": "“巫师”系列制作人与中国策划在一起会聊什么 10.13",
@@ -10,12 +10,41 @@
    "game": "全行业",
    "src_name": "触乐网",
    "verdict": "review",
-   "pubdate": null,
+   "pubdate": "2025-11-10",
    "date_unverified": false,
-   "n_src_cluster": 9,
+   "n_src_cluster": 23,
    "signal": 3,
    "reasons": [
-    "多源印证(9家)",
+    "多源印证(23家)",
+    "准入待复核被卡"
+   ]
+  },
+  {
+   "title": "剑仙同款！魔域口袋版全新时装上线",
+   "url": "https://news.17173.com/content/10142026/100536052.shtml",
+   "game": "全行业",
+   "src_name": "17173 网游资讯",
+   "verdict": "adopt",
+   "pubdate": null,
+   "date_unverified": false,
+   "n_src_cluster": 1,
+   "signal": 2,
+   "reasons": [
+    "强事件词"
+   ]
+  },
+  {
+   "title": "王琳茜10月13日0条评论 触乐怪话：逛展该怎么逛？ 逛展真的有主线任务吗？",
+   "url": "http://www.chuapp.com/article/291685.html",
+   "game": "全行业",
+   "src_name": "触乐网·分类新闻",
+   "verdict": "review",
+   "pubdate": null,
+   "date_unverified": false,
+   "n_src_cluster": 23,
+   "signal": 3,
+   "reasons": [
+    "多源印证(23家)",
     "准入待复核被卡"
    ]
   },
@@ -26,6 +55,21 @@
    "src_name": "游民星空·最新资讯",
    "verdict": "review",
    "pubdate": "2018-09-20",
+   "date_unverified": false,
+   "n_src_cluster": 1,
+   "signal": 2,
+   "reasons": [
+    "强事件词",
+    "准入待复核被卡"
+   ]
+  },
+  {
+   "title": "活动 | 三国杀王者之战神王战广州收官 《三国杀：承天之弈》重磅首发",
+   "url": "http://www.nadianshi.com/2026/06/413745",
+   "game": "全行业",
+   "src_name": "手游那点事",
+   "verdict": "review",
+   "pubdate": "2026-06-01",
    "date_unverified": false,
    "n_src_cluster": 1,
    "signal": 2,

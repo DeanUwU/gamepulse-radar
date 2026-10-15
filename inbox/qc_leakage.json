@@ -1,51 +1,49 @@
 {
- "generated_at": "2026-10-14T10:52:57",
- "adopt_total": 68,
- "review_total": 58,
+ "generated_at": "2026-10-15T10:49:15",
+ "adopt_total": 83,
+ "review_total": 45,
  "leak_total": 5,
  "leaks": [
   {
-   "title": "“巫师”系列制作人与中国策划在一起会聊什么 10.13",
-   "url": "https://www.chuapp.com/article/291681.html",
+   "title": "《沙丘：觉醒》开发商创意总监：在游戏行业，唯一的不变就是变化 10.14",
+   "url": "https://www.chuapp.com/article/291688.html",
    "game": "全行业",
    "src_name": "触乐网",
-   "verdict": "review",
-   "pubdate": "2025-11-10",
-   "date_unverified": false,
-   "n_src_cluster": 23,
-   "signal": 3,
-   "reasons": [
-    "多源印证(23家)",
-    "准入待复核被卡"
-   ]
-  },
-  {
-   "title": "剑仙同款！魔域口袋版全新时装上线",
-   "url": "https://news.17173.com/content/10142026/100536052.shtml",
-   "game": "全行业",
-   "src_name": "17173 网游资讯",
    "verdict": "adopt",
    "pubdate": null,
    "date_unverified": false,
-   "n_src_cluster": 1,
-   "signal": 2,
+   "n_src_cluster": 4,
+   "signal": 3,
    "reasons": [
-    "强事件词"
+    "多源印证(4家)"
    ]
   },
   {
-   "title": "王琳茜10月13日0条评论 触乐怪话：逛展该怎么逛？ 逛展真的有主线任务吗？",
-   "url": "http://www.chuapp.com/article/291685.html",
+   "title": "陈可安1小时前0条评论 触乐怪话：在赛博世界开当铺 一回生二回熟，玩家在奸商之路上越走越远……",
+   "url": "http://www.chuapp.com/article/291687.html",
    "game": "全行业",
    "src_name": "触乐网·分类新闻",
-   "verdict": "review",
+   "verdict": "adopt",
    "pubdate": null,
    "date_unverified": false,
-   "n_src_cluster": 23,
+   "n_src_cluster": 4,
    "signal": 3,
    "reasons": [
-    "多源印证(23家)",
-    "准入待复核被卡"
+    "多源印证(4家)"
+   ]
+  },
+  {
+   "title": "等等14小时前0条评论 《沙丘：觉醒》开发商创意总监：在游戏行业，唯一的不变就是变化 商业模式和画面风格都在经历剧变。",
+   "url": "http://www.chuapp.com/article/291688.html",
+   "game": "全行业",
+   "src_name": "触乐网·分类新闻",
+   "verdict": "adopt",
+   "pubdate": null,
+   "date_unverified": false,
+   "n_src_cluster": 4,
+   "signal": 3,
+   "reasons": [
+    "多源印证(4家)"
    ]
   },
   {

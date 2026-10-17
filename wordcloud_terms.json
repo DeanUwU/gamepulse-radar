@@ -1,37 +1,275 @@
 {
-  "date": "2026-10-16",
-  "terms": [
-    { "term": "异环剧情过场", "href": "https://www.bilibili.com/video/BV1gHp46pER8", "cat": "游戏/新品", "heat": 80, "sources": ["B站热门"] },
-    { "term": "啦嗒铛1.0发售", "href": "https://www.bilibili.com/video/BV1gEps62E1e", "cat": "游戏/新品", "heat": 78, "sources": ["B站热门"] },
-    { "term": "绿梦时空之声公测", "href": "https://www.bilibili.com/video/BV1d4p26SE5n", "cat": "游戏/新品", "heat": 75, "sources": ["B站高热"] },
-    { "term": "原神芙芙", "href": "https://www.bilibili.com/video/BV15Up162EBT", "cat": "游戏/新品", "heat": 60, "sources": ["B站热门"] },
-    { "term": "三角洲鼠图梗", "href": "https://www.bilibili.com/video/BV1g4Jk6WEgC", "cat": "游戏/新品", "heat": 50, "sources": ["B站梗百科"] },
-    { "term": "NBA2K手游", "href": "https://www.bilibili.com/video/BV11RJr6LED8", "cat": "游戏/新品", "heat": 43, "sources": ["B站梗指南"] },
-    { "term": "美国CF乌兹克斯坦", "href": "https://www.bilibili.com/video/BV1g4WA6RECH", "cat": "梗/社区", "heat": 44, "sources": ["B站梗图bot"] },
-    { "term": "VUP薄皮豆沙包", "href": "https://www.bilibili.com/video/BV1vCJ16uEUF", "cat": "梗/社区", "heat": 45, "sources": ["B站梗知识"] },
-    { "term": "AI世界巡演梗", "href": "https://www.bilibili.com/video/BV1z1pm64EzW", "cat": "梗/社区", "heat": 40, "sources": ["B站网梗指南"] },
-    { "term": "S16开赛", "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28367276", "cat": "事件/风险", "heat": 55, "sources": ["百度贴吧"] },
-    { "term": "豆包虎扑女神", "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28367239", "cat": "梗/社区", "heat": 42, "sources": ["百度贴吧"] },
-    { "term": "绿龙地图辱华", "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28367230", "cat": "事件/风险", "heat": 58, "sources": ["百度贴吧"] },
-    { "term": "DeepSeek故障补偿", "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28367231", "cat": "事件/风险", "heat": 60, "sources": ["百度贴吧"] },
-    { "term": "老干妈AI赚54亿", "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28367216", "cat": "行业/数据", "heat": 56, "sources": ["百度贴吧"] },
-    { "term": "影之刃零发售倒计时", "href": "http://www.gamelook.com.cn/2026/10/603856/", "cat": "游戏/新品", "heat": 78, "sources": ["GameLook"] },
-    { "term": "赛博朋克2077联机公测", "href": "https://www.gamersky.com/news/202610/2226408.shtml", "cat": "游戏/新品", "heat": 80, "sources": ["游民星空"] },
-    { "term": "GTA6预告解析", "href": "https://www.gamesradar.com/games/grand-theft-auto/ahead-of-gta-6-rockstar-narrative-lead-says-the-american-dream-previous-grand-theft-auto-games-were-critical-of-is-more-modest-now-but-still-out-of-reach-for-the-average-person/", "cat": "游戏/新品", "heat": 85, "sources": ["GamesRadar"] },
-    { "term": "怪物猎人荒野NS2试玩", "href": "https://www.gematsu.com/2026/10/monster-hunter-wilds-prologue-demo-for-switch-2-launches-october-19", "cat": "游戏/新品", "heat": 65, "sources": ["Gematsu"] },
-    { "term": "蜡笔小新新版本", "href": "https://www.gamersky.com/news/202610/2227121.shtml", "cat": "游戏/新品", "heat": 47, "sources": ["游民星空"] },
-    { "term": "动物城咖啡店上线", "href": "https://www.gcores.com/articles/220821", "cat": "游戏/新品", "heat": 44, "sources": ["机核GCORES"] },
-    { "term": "灵犀Project63微恐测试", "href": "http://www.gamelook.com.cn/2026/10/603962/", "cat": "游戏/新品", "heat": 60, "sources": ["GameLook"] },
-    { "term": "风暴怕死队核聚变", "href": "https://www.gcores.com/articles/220904", "cat": "游戏/新品", "heat": 44, "sources": ["机核GCORES"] },
-    { "term": "萤火突击黑鸦", "href": "https://yhtj.163.com/news/update/20261014/36482_1316606.html", "cat": "游戏/新品", "heat": 45, "sources": ["网易萤火突击"] },
-    { "term": "多人小游戏AI换皮", "href": "https://www.youxituoluo.com/534959.html", "cat": "行业/数据", "heat": 50, "sources": ["游戏陀螺"] },
-    { "term": "3人团队踩缝纫机Steam前十", "href": "https://www.baijing.cn/article/57006", "cat": "行业/数据", "heat": 55, "sources": ["白鲸出海"] },
-    { "term": "Epic AI优先开发", "href": "https://www.pcgamer.com/gaming-industry/game-development/our-humble-goal-is-to-survive-the-ai-revolution-says-epic-games-ceo-as-its-star-wars-and-marvel-crossover-pivots-to-ai-first-development/", "cat": "行业/数据", "heat": 55, "sources": ["PCGamer"] },
-    { "term": "Xbox Labs AI模组", "href": "https://www.videogameschronicle.com/news/asha-sharma-forms-xbox-labs-in-response-to-explosion-of-ai-powered-mods-and-ports/", "cat": "行业/数据", "heat": 50, "sources": ["VGC"] },
-    { "term": "Epic怼Steam vibe-coding", "href": "https://www.eurogamer.net/epic-throws-shade-steam-vibe-coding-games-launcher-ai", "cat": "行业/数据", "heat": 52, "sources": ["Eurogamer"] },
-    { "term": "漫威Tōkon DLC", "href": "https://gameinformer.com/2026/10/12/jane-foster-venom-and-jubilee-will-join-marvel-tokon-fighting-souls-as-year-1-dlc", "cat": "游戏/新品", "heat": 49, "sources": ["GameInformer"] },
-    { "term": "Mick Gordon怼AI", "href": "https://news.17173.com/content/10122026/120627389.shtml", "cat": "事件/风险", "heat": 48, "sources": ["17173"] },
-    { "term": "恶魔城贝蒙德诅咒发售", "href": "https://www.gematsu.com/2026/10/this-weeks-japanese-game-releases-castlevania-belmonts-curse-ratatan-more", "cat": "游戏/新品", "heat": 50, "sources": ["Gematsu"] },
-    { "term": "战地6全解锁30刀", "href": "https://www.gamespot.com/articles/battlefield-6-now-lets-you-instantly-unlock-all-guns-at-100-mastery-for-30/", "cat": "游戏/新品", "heat": 55, "sources": ["GameSpot"] }
-  ]
+ "date": "2026-10-17",
+ "terms": [
+  {
+   "term": "动物城咖啡店 上线",
+   "href": "https://www.gcores.com/articles/220821",
+   "cat": "游戏/新品",
+   "heat": 52,
+   "sources": [
+    "机核"
+   ]
+  },
+  {
+   "term": "赛博朋克2077 联机模组公测",
+   "href": "https://www.gamersky.com/news/202610/2226408.shtml",
+   "cat": "游戏/新品",
+   "heat": 68,
+   "sources": [
+    "游民星空"
+   ]
+  },
+  {
+   "term": "影之刃零 发售倒计时",
+   "href": "http://www.gamelook.com.cn/2026/10/603856/",
+   "cat": "游戏/新品",
+   "heat": 84,
+   "sources": [
+    "GameLook"
+   ]
+  },
+  {
+   "term": "蜡笔小新 新版本官宣",
+   "href": "https://www.gamersky.com/news/202610/2227121.shtml",
+   "cat": "游戏/新品",
+   "heat": 48,
+   "sources": [
+    "游民星空"
+   ]
+  },
+  {
+   "term": "永劫无间 封禁公告",
+   "href": "https://www.yjwujian.cn/news/update/20261013/33456_1316513.html",
+   "cat": "事件/风险",
+   "heat": 45,
+   "sources": [
+    "永劫无间官方"
+   ]
+  },
+  {
+   "term": "阴阳师 维护更新",
+   "href": "https://yys.163.com/news/update/20261013/23024_1316520.html",
+   "cat": "事件/风险",
+   "heat": 42,
+   "sources": [
+    "阴阳师官方"
+   ]
+  },
+  {
+   "term": "萤火突击 新干员黑鸦",
+   "href": "https://yhtj.163.com/news/update/20261014/36482_1316606.html",
+   "cat": "游戏/新品",
+   "heat": 50,
+   "sources": [
+    "萤火突击官方"
+   ]
+  },
+  {
+   "term": "灵犀 Project63 海外测试",
+   "href": "http://www.gamelook.com.cn/2026/10/603962/",
+   "cat": "游戏/新品",
+   "heat": 56,
+   "sources": [
+    "GameLook"
+   ]
+  },
+  {
+   "term": "多人小游戏 AI换皮泛滥",
+   "href": "https://www.youxituoluo.com/534959.html",
+   "cat": "行业/数据",
+   "heat": 64,
+   "sources": [
+    "游戏陀螺"
+   ]
+  },
+  {
+   "term": "踩缝纫机 3人团队 Steam前十",
+   "href": "https://www.baijing.cn/article/57006",
+   "cat": "行业/数据",
+   "heat": 60,
+   "sources": [
+    "白鲸出海"
+   ]
+  },
+  {
+   "term": "风暴怕死队 核聚变参展",
+   "href": "https://www.gcores.com/articles/220904",
+   "cat": "事件/风险",
+   "heat": 46,
+   "sources": [
+    "机核"
+   ]
+  },
+  {
+   "term": "怪物猎人荒野 NS2 Demo",
+   "href": "https://www.gematsu.com/2026/10/monster-hunter-wilds-prologue-demo-for-switch-2-launches-october-19",
+   "cat": "游戏/新品",
+   "heat": 78,
+   "sources": [
+    "Gematsu"
+   ]
+  },
+  {
+   "term": "Xbox Labs AI模组",
+   "href": "https://www.videogameschronicle.com/news/asha-sharma-forms-xbox-labs-in-response-to-explosion-of-ai-powered-mods-and-ports/",
+   "cat": "行业/数据",
+   "heat": 54,
+   "sources": [
+    "VGC"
+   ]
+  },
+  {
+   "term": "战地6 全枪解锁",
+   "href": "https://www.gamespot.com/articles/battlefield-6-now-lets-you-instantly-unlock-all-guns-at-100-mastery-for-30/",
+   "cat": "游戏/新品",
+   "heat": 66,
+   "sources": [
+    "GameSpot"
+   ]
+  },
+  {
+   "term": "艾休克的梦 Portal2 Mod",
+   "href": "https://www.rockpapershotgun.com/eschers-dream-is-a-portal-2-mod-inspired-by-the-non-euclidian-works-of-the-classic-artist-that-will-leave-you-feeling-only-a-little-bit-nauseated",
+   "cat": "游戏/新品",
+   "heat": 44,
+   "sources": [
+    "RPS"
+   ]
+  },
+  {
+   "term": "黑五 PS5 优惠",
+   "href": "https://www.gamesradar.com/platforms/ps5/the-best-early-black-friday-ps5-deals-in-australia-for-2026-the-biggest-sony-savings-so-far/",
+   "cat": "行业/数据",
+   "heat": 50,
+   "sources": [
+    "GamesRadar"
+   ]
+  },
+  {
+   "term": "Steam 成就系统大改",
+   "href": "https://www.pcgamer.com/software/platforms/steam-achievements-are-getting-a-huge-overhaul-with-separate-sets-for-dlc-and-season-passes-and-an-easy-way-to-compare-with-friends/",
+   "cat": "行业/数据",
+   "heat": 58,
+   "sources": [
+    "PCGamer"
+   ]
+  },
+  {
+   "term": "GTA6 预告解析",
+   "href": "https://www.gamespot.com/videos/gta-6-launch-trailer-breakdown-and-theories/",
+   "cat": "游戏/新品",
+   "heat": 88,
+   "sources": [
+    "GameSpot"
+   ]
+  },
+  {
+   "term": "最终幻想 Resonance PS5评测",
+   "href": "https://www.pushsquare.com/news/2026/10/first-final-fantasy-resonance-ps5-review-released-rough-campaign-length-revealed",
+   "cat": "游戏/新品",
+   "heat": 62,
+   "sources": [
+    "PushSquare"
+   ]
+  },
+  {
+   "term": "玩具总动员3 完整版 PS5",
+   "href": "https://www.pushsquare.com/reviews/ps5/toy-story-3-complete-edition",
+   "cat": "游戏/新品",
+   "heat": 46,
+   "sources": [
+    "PushSquare"
+   ]
+  },
+  {
+   "term": "绝区零 菲欧妮角色展示",
+   "href": "https://www.bilibili.com/video/BV1d5JQ6pEFS",
+   "cat": "游戏/新品",
+   "heat": 72,
+   "sources": [
+    "哔哩哔哩"
+   ]
+  },
+  {
+   "term": "啦嗒铛 正式发售",
+   "href": "https://www.bilibili.com/video/BV1gEps62E1e",
+   "cat": "游戏/新品",
+   "heat": 58,
+   "sources": [
+    "哔哩哔哩"
+   ]
+  },
+  {
+   "term": "英雄联盟全球总决赛2026",
+   "href": "https://www.bilibili.com/video/BV1DRHU6LELy",
+   "cat": "事件/风险",
+   "heat": 95,
+   "sources": [
+    "哔哩哔哩"
+   ]
+  },
+  {
+   "term": "阴阳师十周年",
+   "href": "https://www.bilibili.com/video/BV1D9pu6qECf",
+   "cat": "事件/风险",
+   "heat": 80,
+   "sources": [
+    "哔哩哔哩"
+   ]
+  },
+  {
+   "term": "异环 剧情过场",
+   "href": "https://www.bilibili.com/video/BV1gHp46pER8",
+   "cat": "游戏/新品",
+   "heat": 66,
+   "sources": [
+    "哔哩哔哩"
+   ]
+  },
+  {
+   "term": "明日方舟终末地 祀EP",
+   "href": "https://www.bilibili.com/video/BV19ZJ66sEYZ",
+   "cat": "游戏/新品",
+   "heat": 70,
+   "sources": [
+    "哔哩哔哩"
+   ]
+  },
+  {
+   "term": "宝可梦 向也龙道歉梗",
+   "href": "https://www.bilibili.com/video/BV1eRpi6DEWX",
+   "cat": "梗/社区",
+   "heat": 60,
+   "sources": [
+    "哔哩哔哩"
+   ]
+  },
+  {
+   "term": "崩坏星穹铁道 4.6梗百科",
+   "href": "https://www.bilibili.com/video/BV1kLJt6vEZf",
+   "cat": "梗/社区",
+   "heat": 62,
+   "sources": [
+    "哔哩哔哩"
+   ]
+  },
+  {
+   "term": "新番 超条前辈",
+   "href": "https://www.bilibili.com/video/BV1Hop26cERm",
+   "cat": "梗/社区",
+   "heat": 55,
+   "sources": [
+    "哔哩哔哩"
+   ]
+  },
+  {
+   "term": "世界巡演是什么梗",
+   "href": "https://www.bilibili.com/video/BV1z1pm64EzW",
+   "cat": "梗/社区",
+   "heat": 50,
+   "sources": [
+    "哔哩哔哩"
+   ]
+  }
+ ]
 }

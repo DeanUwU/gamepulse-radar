@@ -1,22 +1,112 @@
 {
- "date": "2026-10-17",
+ "date": "2026-10-18",
  "terms": [
   {
-   "term": "动物城咖啡店 上线",
-   "href": "https://www.gcores.com/articles/220821",
+   "term": "黑神话钟馗 走进现实",
+   "href": "https://www.bilibili.com/video/BV18XJC6sE7i",
    "cat": "游戏/新品",
-   "heat": 52,
+   "heat": 70,
    "sources": [
-    "机核"
+    "哔哩哔哩"
    ]
   },
   {
-   "term": "赛博朋克2077 联机模组公测",
-   "href": "https://www.gamersky.com/news/202610/2226408.shtml",
+   "term": "我是人类 单机游戏",
+   "href": "https://www.bilibili.com/video/BV1gKJ86JEuP",
    "cat": "游戏/新品",
-   "heat": 68,
+   "heat": 58,
    "sources": [
-    "游民星空"
+    "哔哩哔哩"
+   ]
+  },
+  {
+   "term": "绿宝石模组 即将下线",
+   "href": "https://www.bilibili.com/video/BV1uaJ96SE72",
+   "cat": "游戏/新品",
+   "heat": 60,
+   "sources": [
+    "哔哩哔哩"
+   ]
+  },
+  {
+   "term": "使命召唤23 现代战争4 全战役",
+   "href": "https://www.bilibili.com/video/BV1seJb63ENu",
+   "cat": "游戏/新品",
+   "heat": 66,
+   "sources": [
+    "哔哩哔哩"
+   ]
+  },
+  {
+   "term": "侠盗猎车手V 终极鉴赏2026",
+   "href": "https://www.bilibili.com/video/BV1ZUJQ6FE4B",
+   "cat": "游戏/新品",
+   "heat": 64,
+   "sources": [
+    "哔哩哔哩"
+   ]
+  },
+  {
+   "term": "当我每次操作同步改变世界区块",
+   "href": "https://www.bilibili.com/video/BV1AfJD6eE3W",
+   "cat": "游戏/新品",
+   "heat": 56,
+   "sources": [
+    "哔哩哔哩"
+   ]
+  },
+  {
+   "term": "英雄联盟全球总决赛2026 主题曲",
+   "href": "https://www.bilibili.com/video/BV1DRHU6LELy",
+   "cat": "事件/风险",
+   "heat": 95,
+   "sources": [
+    "哔哩哔哩"
+   ]
+  },
+  {
+   "term": "阴阳师十周年 双人舞",
+   "href": "https://www.bilibili.com/video/BV1D9pu6qECf",
+   "cat": "事件/风险",
+   "heat": 80,
+   "sources": [
+    "哔哩哔哩"
+   ]
+  },
+  {
+   "term": "异环 剧情过场 God Knows",
+   "href": "https://www.bilibili.com/video/BV1gHp46pER8",
+   "cat": "游戏/新品",
+   "heat": 66,
+   "sources": [
+    "哔哩哔哩"
+   ]
+  },
+  {
+   "term": "明日方舟终末地 祀EP",
+   "href": "https://www.bilibili.com/video/BV19ZJ66sEYZ",
+   "cat": "游戏/新品",
+   "heat": 70,
+   "sources": [
+    "哔哩哔哩"
+   ]
+  },
+  {
+   "term": "逃离闪电侠 你好邻居Mod",
+   "href": "https://www.bilibili.com/video/BV1QmpE6aEA7",
+   "cat": "游戏/新品",
+   "heat": 58,
+   "sources": [
+    "哔哩哔哩"
+   ]
+  },
+  {
+   "term": "在冬夜一块蛋糕两个冻人",
+   "href": "https://www.bilibili.com/video/BV1uYWA6DEVV",
+   "cat": "游戏/新品",
+   "heat": 48,
+   "sources": [
+    "哔哩哔哩"
    ]
   },
   {
@@ -92,15 +182,6 @@
    ]
   },
   {
-   "term": "风暴怕死队 核聚变参展",
-   "href": "https://www.gcores.com/articles/220904",
-   "cat": "事件/风险",
-   "heat": 46,
-   "sources": [
-    "机核"
-   ]
-  },
-  {
    "term": "怪物猎人荒野 NS2 Demo",
    "href": "https://www.gematsu.com/2026/10/monster-hunter-wilds-prologue-demo-for-switch-2-launches-october-19",
    "cat": "游戏/新品",
@@ -110,48 +191,12 @@
    ]
   },
   {
-   "term": "Xbox Labs AI模组",
-   "href": "https://www.videogameschronicle.com/news/asha-sharma-forms-xbox-labs-in-response-to-explosion-of-ai-powered-mods-and-ports/",
+   "term": "Epic 嘲讽 Steam vibe-coding",
+   "href": "https://www.eurogamer.net/epic-throws-shade-steam-vibe-coding-games-launcher-ai",
    "cat": "行业/数据",
    "heat": 54,
    "sources": [
-    "VGC"
-   ]
-  },
-  {
-   "term": "战地6 全枪解锁",
-   "href": "https://www.gamespot.com/articles/battlefield-6-now-lets-you-instantly-unlock-all-guns-at-100-mastery-for-30/",
-   "cat": "游戏/新品",
-   "heat": 66,
-   "sources": [
-    "GameSpot"
-   ]
-  },
-  {
-   "term": "艾休克的梦 Portal2 Mod",
-   "href": "https://www.rockpapershotgun.com/eschers-dream-is-a-portal-2-mod-inspired-by-the-non-euclidian-works-of-the-classic-artist-that-will-leave-you-feeling-only-a-little-bit-nauseated",
-   "cat": "游戏/新品",
-   "heat": 44,
-   "sources": [
-    "RPS"
-   ]
-  },
-  {
-   "term": "黑五 PS5 优惠",
-   "href": "https://www.gamesradar.com/platforms/ps5/the-best-early-black-friday-ps5-deals-in-australia-for-2026-the-biggest-sony-savings-so-far/",
-   "cat": "行业/数据",
-   "heat": 50,
-   "sources": [
-    "GamesRadar"
-   ]
-  },
-  {
-   "term": "Steam 成就系统大改",
-   "href": "https://www.pcgamer.com/software/platforms/steam-achievements-are-getting-a-huge-overhaul-with-separate-sets-for-dlc-and-season-passes-and-an-easy-way-to-compare-with-friends/",
-   "cat": "行业/数据",
-   "heat": 58,
-   "sources": [
-    "PCGamer"
+    "Eurogamer"
    ]
   },
   {
@@ -182,91 +227,64 @@
    ]
   },
   {
-   "term": "绝区零 菲欧妮角色展示",
-   "href": "https://www.bilibili.com/video/BV1d5JQ6pEFS",
-   "cat": "游戏/新品",
-   "heat": 72,
-   "sources": [
-    "哔哩哔哩"
-   ]
-  },
-  {
-   "term": "啦嗒铛 正式发售",
-   "href": "https://www.bilibili.com/video/BV1gEps62E1e",
-   "cat": "游戏/新品",
+   "term": "Steam 成就系统大改",
+   "href": "https://www.pcgamer.com/software/platforms/steam-achievements-are-getting-a-huge-overhaul-with-separate-sets-for-dlc-and-season-passes-and-an-easy-way-to-compare-with-friends/",
+   "cat": "行业/数据",
    "heat": 58,
    "sources": [
-    "哔哩哔哩"
+    "PCGamer"
    ]
   },
   {
-   "term": "英雄联盟全球总决赛2026",
-   "href": "https://www.bilibili.com/video/BV1DRHU6LELy",
-   "cat": "事件/风险",
-   "heat": 95,
-   "sources": [
-    "哔哩哔哩"
-   ]
-  },
-  {
-   "term": "阴阳师十周年",
-   "href": "https://www.bilibili.com/video/BV1D9pu6qECf",
-   "cat": "事件/风险",
-   "heat": 80,
-   "sources": [
-    "哔哩哔哩"
-   ]
-  },
-  {
-   "term": "异环 剧情过场",
-   "href": "https://www.bilibili.com/video/BV1gHp46pER8",
+   "term": "羊蹄山之魂 销量破540万",
+   "href": "https://www.gamersky.com/news/202610/2230033.shtml",
    "cat": "游戏/新品",
-   "heat": 66,
+   "heat": 76,
    "sources": [
-    "哔哩哔哩"
+    "游民星空"
    ]
   },
   {
-   "term": "明日方舟终末地 祀EP",
-   "href": "https://www.bilibili.com/video/BV19ZJ66sEYZ",
+   "term": "隔离区 国产丧尸 定档11月6日",
+   "href": "https://www.gcores.com/articles/221031",
    "cat": "游戏/新品",
-   "heat": 70,
-   "sources": [
-    "哔哩哔哩"
-   ]
-  },
-  {
-   "term": "宝可梦 向也龙道歉梗",
-   "href": "https://www.bilibili.com/video/BV1eRpi6DEWX",
-   "cat": "梗/社区",
    "heat": 60,
    "sources": [
-    "哔哩哔哩"
+    "机核"
    ]
   },
   {
-   "term": "崩坏星穹铁道 4.6梗百科",
-   "href": "https://www.bilibili.com/video/BV1kLJt6vEZf",
-   "cat": "梗/社区",
+   "term": "9月新游数据 王者万象棋 塔塔冒险队",
+   "href": "https://www.baijing.cn/article/57033",
+   "cat": "行业/数据",
    "heat": 62,
    "sources": [
-    "哔哩哔哩"
+    "白鲸出海"
    ]
   },
   {
-   "term": "新番 超条前辈",
-   "href": "https://www.bilibili.com/video/BV1Hop26cERm",
-   "cat": "梗/社区",
-   "heat": 55,
-   "sources": [
-    "哔哩哔哩"
-   ]
-  },
-  {
-   "term": "世界巡演是什么梗",
+   "term": "全网都在魔改的世界巡演是什么梗",
    "href": "https://www.bilibili.com/video/BV1z1pm64EzW",
    "cat": "梗/社区",
    "heat": 50,
+   "sources": [
+    "哔哩哔哩"
+   ]
+  },
+  {
+   "term": "网上各种爆笑沙雕图 第784期",
+   "href": "https://www.bilibili.com/video/BV1ymJq6eEfv",
+   "cat": "梗/社区",
+   "heat": 50,
+   "sources": [
+    "哔哩哔哩"
+   ]
+  },
+  {
+   "term": "黄维是个外行是什么梗",
+   "href": "https://www.bilibili.com/video/BV1LqJX64Esn",
+   "cat": "梗/社区",
+   "heat": 48,
    "sources": [
     "哔哩哔哩"
    ]

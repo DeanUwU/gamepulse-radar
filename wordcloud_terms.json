@@ -1,284 +1,37 @@
 {
-  "date": "2026-10-19",
+  "date": "2026-10-20",
   "terms": [
-    {
-      "term": "黑神话钟馗",
-      "href": "https://www.bilibili.com/video/BV18XJC6sE7i",
-      "cat": "游戏/新品",
-      "heat": 84,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "使命召唤23现代战争4",
-      "href": "https://www.bilibili.com/video/BV1seJb63ENu",
-      "cat": "游戏/新品",
-      "heat": 72,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "英雄联盟全球总决赛S16",
-      "href": "https://www.bilibili.com/video/BV1DRHU6LELy",
-      "cat": "事件/风险",
-      "heat": 88,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "阴阳师十周年",
-      "href": "https://www.bilibili.com/video/BV1D9pu6qECf",
-      "cat": "游戏/新品",
-      "heat": 66,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "异环",
-      "href": "https://www.bilibili.com/video/BV1gHp46pER8",
-      "cat": "游戏/新品",
-      "heat": 62,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "长乐夜未央未央城",
-      "href": "https://www.bilibili.com/video/BV186Jq6uEFu",
-      "cat": "游戏/新品",
-      "heat": 54,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "你好邻居Mod黄金费德熊",
-      "href": "https://www.bilibili.com/video/BV1QmpE6aEA7",
-      "cat": "梗/社区",
-      "heat": 50,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "牧神记",
-      "href": "https://www.bilibili.com/video/BV1WwJY6SEug",
-      "cat": "游戏/新品",
-      "heat": 56,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "文化输出靠二游",
-      "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28367690&topic_name=%E6%96%87%E5%8C%96%E8%BE%93%E5%87%BA%E9%9D%A0%E4%BA%8C%E6%B8%B8%2C%E5%90%A7%E5%8F%8B%E9%9A%BE%E7%BB%B7",
-      "cat": "梗/社区",
-      "heat": 64,
-      "sources": [
-        "贴吧"
-      ]
-    },
-    {
-      "term": "大肥鱼鲸鱼娘",
-      "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28367596&topic_name=AI%E7%94%BB%E5%A4%A7%E8%82%A5%E9%B1%BC%E7%BF%BB%E8%BD%A6%2C%E9%B2%B8%E9%B1%BC%E5%A8%98%E9%81%AD%E6%AE%83",
-      "cat": "梗/社区",
-      "heat": 67,
-      "sources": [
-        "贴吧"
-      ]
-    },
-    {
-      "term": "王扁是谁",
-      "href": "https://www.bilibili.com/video/BV1kGn36xE9k",
-      "cat": "梗/社区",
-      "heat": 47,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "司机の噩梦",
-      "href": "https://www.bilibili.com/video/BV1rxp86jEYH",
-      "cat": "梗/社区",
-      "heat": 49,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "这款游戏太超前",
-      "href": "https://www.bilibili.com/video/BV1nFJ66PE1K",
-      "cat": "游戏/新品",
-      "heat": 46,
-      "sources": [
-        "B站"
-      ]
-    },
-    {
-      "term": "影之刃零Steam销量47万",
-      "href": "https://www.gamersky.com/news/202610/2230272.shtml",
-      "cat": "游戏/新品",
-      "heat": 74,
-      "sources": [
-        "游民星空"
-      ]
-    },
-    {
-      "term": "俄罗斯轮盘赌酒游戏取消试玩",
-      "href": "https://news.17173.com/content/10182026/080632004.shtml",
-      "cat": "事件/风险",
-      "heat": 50,
-      "sources": [
-        "17173"
-      ]
-    },
-    {
-      "term": "羊蹄山之魂销量破540万",
-      "href": "https://www.gamersky.com/news/202610/2230033.shtml",
-      "cat": "游戏/新品",
-      "heat": 76,
-      "sources": [
-        "游民星空"
-      ]
-    },
-    {
-      "term": "地平线剧情赛车游戏",
-      "href": "https://www.gcores.com/articles/221055",
-      "cat": "游戏/新品",
-      "heat": 53,
-      "sources": [
-        "机核"
-      ]
-    },
-    {
-      "term": "巫师3RE DLSS5",
-      "href": "https://www.gamersky.com/news/202610/2230255.shtml",
-      "cat": "游戏/新品",
-      "heat": 58,
-      "sources": [
-        "游民星空"
-      ]
-    },
-    {
-      "term": "9月新游数据王者万象棋",
-      "href": "https://www.baijing.cn/article/57033",
-      "cat": "行业/数据",
-      "heat": 61,
-      "sources": [
-        "白鲸"
-      ]
-    },
-    {
-      "term": "搜撤大风歌赛季",
-      "href": "https://www.yjwujian.cn/news/update/20261016/33456_1316865.html",
-      "cat": "游戏/新品",
-      "heat": 48,
-      "sources": [
-        "觉维"
-      ]
-    },
-    {
-      "term": "终末地畅销榜第4绿梦公测",
-      "href": "http://www.gamelook.com.cn/2026/10/604033/",
-      "cat": "游戏/新品",
-      "heat": 65,
-      "sources": [
-        "GameLook"
-      ]
-    },
-    {
-      "term": "隔离区定档11月6日",
-      "href": "https://www.gcores.com/articles/221031",
-      "cat": "游戏/新品",
-      "heat": 56,
-      "sources": [
-        "机核"
-      ]
-    },
-    {
-      "term": "GTA6 launch trailer",
-      "href": "https://www.gamespot.com/videos/gta-6-launch-trailer-breakdown-and-theories/",
-      "cat": "事件/风险",
-      "heat": 90,
-      "sources": [
-        "GameSpot"
-      ]
-    },
-    {
-      "term": "怪物猎人荒野序章Demo NS2",
-      "href": "https://www.gematsu.com/2026/10/monster-hunter-wilds-prologue-demo-for-switch-2-launches-october-19",
-      "cat": "游戏/新品",
-      "heat": 78,
-      "sources": [
-        "Gematsu"
-      ]
-    },
-    {
-      "term": "勇者斗恶龙怪兽枯萎世界",
-      "href": "https://www.gematsu.com/2026/10/dragon-quest-monsters-the-withered-world-details-online-content-offline-battle-arena-and-wranglers-gauntlet",
-      "cat": "游戏/新品",
-      "heat": 50,
-      "sources": [
-        "Gematsu"
-      ]
-    },
-    {
-      "term": "塞尔达时之笛重制 NS2",
-      "href": "https://www.videogameschronicle.com/blog/podcast/podcast-zelda-ocarina-of-time-remake-impressions-a-chat-with-control-resonant-actor/",
-      "cat": "游戏/新品",
-      "heat": 70,
-      "sources": [
-        "VGC"
-      ]
-    },
-    {
-      "term": "红升电影改编立项",
-      "href": "https://news.17173.com/content/10172026/080656458.shtml",
-      "cat": "行业/数据",
-      "heat": 45,
-      "sources": [
-        "17173"
-      ]
-    },
-    {
-      "term": "血族血魔外传重制传闻",
-      "href": "https://www.eurogamer.net/vampire-the-masquerade-bloodlines-remaster-rumour",
-      "cat": "游戏/新品",
-      "heat": 44,
-      "sources": [
-        "Eurogamer"
-      ]
-    },
-    {
-      "term": "GTA6不采用PS5 QSSR",
-      "href": "https://www.pushsquare.com/news/2026/10/i-dont-think-were-seeing-it-here-gta-6-launch-trailer-not-using-ps5s-new-qssr-upscaler",
-      "cat": "事件/风险",
-      "heat": 55,
-      "sources": [
-        "PushSquare"
-      ]
-    },
-    {
-      "term": "灵犀Project63多人微恐海外测试",
-      "href": "http://www.gamelook.com.cn/2026/10/603962/",
-      "cat": "游戏/新品",
-      "heat": 54,
-      "sources": [
-        "GameLook"
-      ]
-    },
-    {
-      "term": "AI同人抢跑官方追番党忧心",
-      "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28367613&topic_name=AI%E5%90%8C%E4%BA%BA%E6%8A%A2%E8%B7%91%E5%AE%98%E6%96%B9%2C%E8%BF%BD%E7%95%AA%E5%85%9A%E5%BF%A7%E5%BF%83",
-      "cat": "梗/社区",
-      "heat": 52,
-      "sources": [
-        "贴吧"
-      ]
-    }
+    {"term": "灵犀入局「多人微恐」《Project63》海外测试", "href": "http://www.gamelook.com.cn/2026/10/603962/", "cat": "行业/数据", "heat": 72, "sources": ["GameLook"]},
+    {"term": "多人小游戏跟风AI换皮山寨泛滥快被玩坏", "href": "https://www.youxituoluo.com/534959.html", "cat": "行业/数据", "heat": 64, "sources": ["游悉途裸"]},
+    {"term": "3人团队踩缝纫机首日冲进Steam全球畅销前十", "href": "https://www.baijing.cn/article/57006", "cat": "行业/数据", "heat": 68, "sources": ["白鲸出海"]},
+    {"term": "外表像塔防的小游戏四个月创收超4亿", "href": "https://www.youxituoluo.com/534964.html", "cat": "行业/数据", "heat": 66, "sources": ["游悉途裸"]},
+    {"term": "9月新游数据 腾讯《王者万象棋》双端登顶", "href": "https://www.baijing.cn/article/57033", "cat": "行业/数据", "heat": 70, "sources": ["白鲸出海"]},
+    {"term": "国产丧尸游戏《隔离区》正式版定档11月6日", "href": "https://www.gcores.com/articles/221031", "cat": "事件/风险", "heat": 60, "sources": ["机核"]},
+    {"term": "曝《羊蹄山之魂》销量破540万", "href": "https://www.gamersky.com/news/202610/2230033.shtml", "cat": "行业/数据", "heat": 75, "sources": ["游民星空"]},
+    {"term": "二游《终末地》畅销榜第4《绿梦》公测", "href": "http://www.gamelook.com.cn/2026/10/604033/", "cat": "游戏/新品", "heat": 64, "sources": ["GameLook"]},
+    {"term": "《影之刃零》Steam预估销量47万收入近1.9亿", "href": "https://www.gamersky.com/news/202610/2230272.shtml", "cat": "行业/数据", "heat": 73, "sources": ["游民星空"]},
+    {"term": "DLSS5《巫师3RE》润唇好逼真", "href": "https://www.gamersky.com/news/202610/2230255.shtml", "cat": "游戏/新品", "heat": 56, "sources": ["游民星空"]},
+    {"term": "《博德之门3》万圣节主题更新新增19个Mod", "href": "https://www.gamersky.com/news/202610/2230228.shtml", "cat": "游戏/新品", "heat": 55, "sources": ["游民星空"]},
+    {"term": "担忧AI抄袭 俄罗轮盘赌酒游戏取消Steam试玩", "href": "https://news.17173.com/content/10182026/080632004.shtml", "cat": "事件/风险", "heat": 52, "sources": ["17173"]},
+    {"term": "Vampire Bloodlines remaster传闻", "href": "https://www.eurogamer.net/vampire-the-masquerade-bloodlines-remaster-rumour", "cat": "游戏/新品", "heat": 50, "sources": ["Eurogamer"]},
+    {"term": "Sega下架Total War: Shogun 2陷AI争议", "href": "https://www.eurogamer.net/total-war-shogun-2-complete-edition-pulled-from-sale", "cat": "事件/风险", "heat": 54, "sources": ["Eurogamer"]},
+    {"term": "GTA6首发预告不用PS5新QSSR升频", "href": "https://www.pushsquare.com/news/2026/10/i-dont-think-were-seeing-it-here-gta-6-launch-trailer-not-using-ps5s-new-qssr-upscaler", "cat": "游戏/新品", "heat": 78, "sources": ["Push Square"]},
+    {"term": "35+款PS5/PS Plus游戏下周发售", "href": "https://www.pushsquare.com/guides/these-35plus-ps5-and-ps-plus-games-are-coming-out-next-week-19th-25th-october", "cat": "游戏/新品", "heat": 56, "sources": ["Push Square"]},
+    {"term": "Rain98 赛博前Y2K Lain风视觉小说", "href": "https://www.rockpapershotgun.com/rain98-is-a-blue-hued-pre-y2k-serial-experiments-lain-inspired-visual-novel-about-time-travelling-to-the-past-to-end-the-world", "cat": "游戏/新品", "heat": 48, "sources": ["Rock Paper Shotgun"]},
+    {"term": "本周日厂新游 COD MW4/FF Resonance/NS Sports", "href": "https://www.gematsu.com/2026/10/this-weeks-japanese-game-releases-call-of-duty-modern-warfare-4-final-fantasy-resonance-nintendo-switch-sports-resort-stupid-never-dies-more", "cat": "游戏/新品", "heat": 62, "sources": ["Gematsu"]},
+    {"term": "The Wolf Among Us Remastered NS版延期", "href": "https://www.gematsu.com/2026/10/the-wolf-among-us-remastered-for-switch-delayed-to-unannounced-date", "cat": "事件/风险", "heat": 47, "sources": ["Gematsu"]},
+    {"term": "Don Bradman Cricket Jr 公布", "href": "https://www.ign.com/articles/don-bradman-cricket-jr-announced-for-pc-and-consoles", "cat": "游戏/新品", "heat": 45, "sources": ["IGN"]},
+    {"term": "Anthropic泄露AI安全法案", "href": "https://www.pcgamer.com/software/ai/leaked-ai-safety-bill-from-anthropic-only-lets-government-act-if-50-deaths-or-usd1-billion-are-on-the-line/", "cat": "事件/风险", "heat": 50, "sources": ["PC Gamer"]},
+    {"term": "Tenebris Somnia 2D+真人恐怖", "href": "https://www.gamespot.com/articles/tenebris-somnia-blends-2d-visuals-with-live-action-horror-scenes-and-its-already-on-sale-at-launch/", "cat": "游戏/新品", "heat": 46, "sources": ["GameSpot"]},
+    {"term": "Stranger Than Heaven Snoop Dogg教Rap", "href": "https://gameinformer.com/2026/10/16/stranger-than-heaven-snoop-dogg-teaches-protagonist-makoto-how-to-rap-in-new-story", "cat": "游戏/新品", "heat": 52, "sources": ["Game Informer"]},
+    {"term": "FF7 Revelation开篇预告", "href": "https://www.gamespot.com/videos/ff7-revelations-opening-invites-deeply-intriguing-questions-about-the-trilogys-conclusion-preview/", "cat": "游戏/新品", "heat": 57, "sources": ["GameSpot"]},
+    {"term": "《地平线》老兵请《皮囊》编剧做剧情赛车", "href": "https://www.gcores.com/articles/221055", "cat": "游戏/新品", "heat": 49, "sources": ["机核"]},
+    {"term": "萤火突击 新干员黑鸦上线", "href": "https://yhtj.163.com/news/update/20261014/36482_1316606.html", "cat": "游戏/新品", "heat": 51, "sources": ["萤火突击官方"]},
+    {"term": "暗区突围无限 大风歌赛季公告", "href": "https://www.yjwujian.cn/news/update/20261016/33456_1316865.html", "cat": "游戏/新品", "heat": 53, "sources": ["暗区突围无限官方"]},
+    {"term": "英雄联盟K/DA官方MV FIRESTARTER燃", "href": "https://www.bilibili.com/video/BV1j5nj68E48", "cat": "梗/社区", "heat": 71, "sources": ["B站"]},
+    {"term": "米哈游名留青史", "href": "https://www.bilibili.com/video/BV1CCJ963E5M", "cat": "梗/社区", "heat": 60, "sources": ["B站"]},
+    {"term": "今汐川蜷是什么梗（鸣潮）", "href": "https://www.bilibili.com/video/BV1dKnc6SEYc", "cat": "梗/社区", "heat": 52, "sources": ["B站"]},
+    {"term": "炉石顶流复活 赌狗归来", "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28367772&topic_name=%E8%B5%8C%E7%8B%97%E5%BD%92%E6%9D%A5%2C%E7%82%89%E7%9F%B3%E9%A1%B6%E6%B5%81%E5%A4%8D%E6%B4%BB", "cat": "梗/社区", "heat": 54, "sources": ["百度贴吧"]},
+    {"term": "咒回虎杖悠仁人物志", "href": "https://www.bilibili.com/video/BV1NsJi6hEqC", "cat": "梗/社区", "heat": 55, "sources": ["B站"]}
   ]
 }

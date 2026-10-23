@@ -1,36 +1,275 @@
 {
-  "date": "2026-10-22",
-  "terms": [
-    { "term": "人间异想计划", "href": "https://www.bilibili.com/video/BV1Ranw6DEYW", "cat": "游戏/新品", "heat": 70, "sources": ["B站"] },
-    { "term": "绝区零 菲欧妮", "href": "https://www.bilibili.com/video/BV1SknF6KE5g", "cat": "游戏/新品", "heat": 62, "sources": ["B站"] },
-    { "term": "终末地 烟火深渊", "href": "https://www.bilibili.com/video/BV19Wnz6QEam", "cat": "梗/社区", "heat": 55, "sources": ["B站"] },
-    { "term": "阴阳师 十周年", "href": "https://www.bilibili.com/video/BV1D9pu6qECf", "cat": "游戏/新品", "heat": 58, "sources": ["B站"] },
-    { "term": "异环 明音凛", "href": "https://www.bilibili.com/video/BV1gHp46pER8", "cat": "游戏/新品", "heat": 56, "sources": ["B站"] },
-    { "term": "明日方舟终末地 祀", "href": "https://www.bilibili.com/video/BV19ZJ66sEYZ", "cat": "游戏/新品", "heat": 52, "sources": ["B站"] },
-    { "term": "LOL S赛主题曲 以我之名", "href": "https://www.bilibili.com/video/BV1DRHU6LELy", "cat": "事件/风险", "heat": 68, "sources": ["B站"] },
-    { "term": "你好邻居 Mod", "href": "https://www.bilibili.com/video/BV1QmpE6aEA7", "cat": "游戏/新品", "heat": 40, "sources": ["B站"] },
-    { "term": "碧蓝航线 梗百科", "href": "https://www.bilibili.com/video/BV1mQnB6CE2c", "cat": "梗/社区", "heat": 45, "sources": ["B站"] },
-    { "term": "米哈游 外网梗图", "href": "https://www.bilibili.com/video/BV1nDnz6PEqS", "cat": "梗/社区", "heat": 48, "sources": ["B站"] },
-    { "term": "大肥鱼 人是猫", "href": "https://www.bilibili.com/video/BV1fYpn6SEk9", "cat": "梗/社区", "heat": 50, "sources": ["B站"] },
-    { "term": "中文已死", "href": "https://www.bilibili.com/video/BV1gsnq65Ejg", "cat": "梗/社区", "heat": 44, "sources": ["B站"] },
-    { "term": "沙雕图 788期", "href": "https://www.bilibili.com/video/BV1oin66aEfQ", "cat": "梗/社区", "heat": 42, "sources": ["B站"] },
-    { "term": "边缘行者2 翻车", "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28367871", "cat": "事件/风险", "heat": 60, "sources": ["贴吧"] },
-    { "term": "显卡断供 DIY", "href": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28367880", "cat": "行业/数据", "heat": 43, "sources": ["贴吧"] },
-    { "term": "逃出布迪秀", "href": "https://www.bilibili.com/video/BV1KgnP6yEoN", "cat": "游戏/新品", "heat": 46, "sources": ["B站"] },
-    { "term": "PCL MC联机", "href": "https://www.bilibili.com/video/BV1nCnA6AEYB", "cat": "梗/社区", "heat": 36, "sources": ["B站"] },
-    { "term": "影之刃零 销量47万", "href": "https://www.gamersky.com/news/202610/2230272.shtml", "cat": "行业/数据", "heat": 72, "sources": ["游民星空"] },
-    { "term": "隔离区 定档11.6", "href": "https://www.gcores.com/articles/221031", "cat": "游戏/新品", "heat": 54, "sources": ["机核"] },
-    { "term": "终末地 畅销榜第4", "href": "http://www.gamelook.com.cn/2026/10/604033/", "cat": "游戏/新品", "heat": 60, "sources": ["GameLook"] },
-    { "term": "艾希 众筹3700万", "href": "http://www.gamelook.com.cn/2026/10/604275/", "cat": "行业/数据", "heat": 50, "sources": ["GameLook"] },
-    { "term": "边缘行者2 口碑炸裂", "href": "https://www.gamersky.com/news/202610/2231433.shtml", "cat": "事件/风险", "heat": 64, "sources": ["游民星空"] },
-    { "term": "超时空要塞 官宣买断", "href": "https://www.gamersky.com/news/202610/2232118.shtml", "cat": "游戏/新品", "heat": 58, "sources": ["游民星空"] },
-    { "term": "永劫无间 封禁公告", "href": "https://www.yjwujian.cn/news/update/20261020/33456_1317158.html", "cat": "事件/风险", "heat": 38, "sources": ["永劫无间官方"] },
-    { "term": "GTA 6 首发预告", "href": "https://www.pushsquare.com/news/2026/10/i-dont-think-were-seeing-it-here-gta-6-launch-trailer-not-using-ps5s-new-qssr-upscaler", "cat": "游戏/新品", "heat": 78, "sources": ["PushSquare"] },
-    { "term": "博德之门3 万圣节", "href": "https://www.gamersky.com/news/202610/2230228.shtml", "cat": "游戏/新品", "heat": 52, "sources": ["游民星空"] },
-    { "term": "库洛投AI 终末地Top3", "href": "https://www.youxituoluo.com/534971.html", "cat": "行业/数据", "heat": 56, "sources": ["游戏陀螺"] },
-    { "term": "9月新游数据 王者万象棋", "href": "https://www.baijing.cn/article/57033", "cat": "行业/数据", "heat": 62, "sources": ["白鲸出海"] },
-    { "term": "俄式轮盘酒游戏 取消试玩", "href": "https://news.17173.com/content/10182026/080632004.shtml", "cat": "事件/风险", "heat": 44, "sources": ["17173"] },
-    { "term": "Xbox再裁员", "href": "https://www.pushsquare.com/news/2026/10/xbox-to-slash-even-more-jobs-this-month-with-further-cuts-in-november-and-january", "cat": "行业/数据", "heat": 55, "sources": ["PushSquare"] },
-    { "term": "游戏反编译站关闭", "href": "https://www.videogameschronicle.com/news/one-of-the-biggest-game-decompilation-sites-is-closing-because-ai-has-broken-the-community-aspect/", "cat": "事件/风险", "heat": 46, "sources": ["VGC"] }
-  ]
+ "date": "2026-10-23",
+ "terms": [
+  {
+   "term": "影之刃零",
+   "href": "https://www.bilibili.com/video/BV1AHnB6NEhM",
+   "cat": "游戏/新品",
+   "heat": 92,
+   "sources": [
+    "B站视频"
+   ]
+  },
+  {
+   "term": "人间异想计划 实机首曝",
+   "href": "https://www.bilibili.com/video/BV1Ranw6DEYW",
+   "cat": "游戏/新品",
+   "heat": 86,
+   "sources": [
+    "B站视频"
+   ]
+  },
+  {
+   "term": "代号神不言 UFSH2026",
+   "href": "https://www.bilibili.com/video/BV1fNnv6EEon",
+   "cat": "游戏/新品",
+   "heat": 82,
+   "sources": [
+    "B站视频"
+   ]
+  },
+  {
+   "term": "边缘行者2",
+   "href": "https://www.gamersky.com/news/202610/2231433.shtml",
+   "cat": "游戏/新品",
+   "heat": 84,
+   "sources": [
+    "游民星空新闻"
+   ]
+  },
+  {
+   "term": "超时空要塞 主机新游",
+   "href": "https://www.gamersky.com/news/202610/2232118.shtml",
+   "cat": "游戏/新品",
+   "heat": 79,
+   "sources": [
+    "游民星空 PC 资讯"
+   ]
+  },
+  {
+   "term": "上古卷轴OL 第二季",
+   "href": "https://www.gcores.com/articles/221301",
+   "cat": "游戏/新品",
+   "heat": 76,
+   "sources": [
+    "机核 GCORES"
+   ]
+  },
+  {
+   "term": "海贼王 新游",
+   "href": "https://www.gamersky.com/news/202610/2232883.shtml",
+   "cat": "游戏/新品",
+   "heat": 73,
+   "sources": [
+    "游民星空 PC 资讯"
+   ]
+  },
+  {
+   "term": "Cyberpunk 2077 边缘行者2",
+   "href": "https://www.rockpapershotgun.com/cyberpunk-2077s-edgerunners-2-update-adds-two-new-quests-handgun-dual-wielding-and-the-ability-to-pimp-your-mantis-blades",
+   "cat": "游戏/新品",
+   "heat": 66,
+   "sources": [
+    "Rock Paper Shotgun"
+   ]
+  },
+  {
+   "term": "Final Fantasy Resonance",
+   "href": "https://gameinformer.com/review/final-fantasy-resonance/on-its-own-wavelength",
+   "cat": "游戏/新品",
+   "heat": 63,
+   "sources": [
+    "Game Informer"
+   ]
+  },
+  {
+   "term": "吉考斯工业×艾尔登法环 联名",
+   "href": "https://www.gcores.com/articles/221113",
+   "cat": "游戏/新品",
+   "heat": 71,
+   "sources": [
+    "机核 GCORES"
+   ]
+  },
+  {
+   "term": "阴阳师十周年 特别演绎",
+   "href": "https://www.bilibili.com/video/BV1D9pu6qECf",
+   "cat": "游戏/新品",
+   "heat": 70,
+   "sources": [
+    "B站视频"
+   ]
+  },
+  {
+   "term": "异环 God Knows Cover",
+   "href": "https://www.bilibili.com/video/BV1gHp46pER8",
+   "cat": "游戏/新品",
+   "heat": 67,
+   "sources": [
+    "B站视频"
+   ]
+  },
+  {
+   "term": "英雄联盟S赛主题曲 以我之名",
+   "href": "https://www.bilibili.com/video/BV1DRHU6LELy",
+   "cat": "梗/社区",
+   "heat": 84,
+   "sources": [
+    "B站视频"
+   ]
+  },
+  {
+   "term": "大肥鱼",
+   "href": "https://www.bilibili.com/video/BV1vWnT6aExJ",
+   "cat": "梗/社区",
+   "heat": 88,
+   "sources": [
+    "B站视频"
+   ]
+  },
+  {
+   "term": "中文已死 反讽",
+   "href": "https://www.bilibili.com/video/BV1gsnq65Ejg",
+   "cat": "梗/社区",
+   "heat": 80,
+   "sources": [
+    "B站视频"
+   ]
+  },
+  {
+   "term": "曼从中间劈开是MAN",
+   "href": "https://www.bilibili.com/video/BV1Coni6aEiU",
+   "cat": "梗/社区",
+   "heat": 77,
+   "sources": [
+    "B站视频"
+   ]
+  },
+  {
+   "term": "沙雕图 第789期",
+   "href": "https://www.bilibili.com/video/BV1iUnW6JErj",
+   "cat": "梗/社区",
+   "heat": 74,
+   "sources": [
+    "B站视频"
+   ]
+  },
+  {
+   "term": "紫色苍蝇",
+   "href": "https://www.bilibili.com/video/BV1ednW6yEte",
+   "cat": "梗/社区",
+   "heat": 70,
+   "sources": [
+    "B站视频"
+   ]
+  },
+  {
+   "term": "大圣风采依旧",
+   "href": "https://www.bilibili.com/video/BV1RgnH6qEnG",
+   "cat": "梗/社区",
+   "heat": 62,
+   "sources": [
+    "B站视频"
+   ]
+  },
+  {
+   "term": "燕云×1818黄金眼",
+   "href": "https://www.bilibili.com/video/BV1nHn16EEkL",
+   "cat": "梗/社区",
+   "heat": 64,
+   "sources": [
+    "B站视频"
+   ]
+  },
+  {
+   "term": "寂静岭画风×周处除三害",
+   "href": "https://www.bilibili.com/video/BV1Cdni6AEQB",
+   "cat": "梗/社区",
+   "heat": 68,
+   "sources": [
+    "B站视频"
+   ]
+  },
+  {
+   "term": "明日方舟终末地 祀EP",
+   "href": "https://www.bilibili.com/video/BV19ZJ66sEYZ",
+   "cat": "梗/社区",
+   "heat": 69,
+   "sources": [
+    "B站视频"
+   ]
+  },
+  {
+   "term": "艾希 众筹3700万",
+   "href": "http://www.gamelook.com.cn/2026/10/604275/",
+   "cat": "行业/数据",
+   "heat": 78,
+   "sources": [
+    "GameLook"
+   ]
+  },
+  {
+   "term": "库洛投AI 终末地畅销Top3",
+   "href": "https://www.youxituoluo.com/534971.html",
+   "cat": "行业/数据",
+   "heat": 75,
+   "sources": [
+    "游戏陀螺"
+   ]
+  },
+  {
+   "term": "Supercell 收购 Metacore",
+   "href": "https://www.youxituoluo.com/534976.html",
+   "cat": "行业/数据",
+   "heat": 72,
+   "sources": [
+    "游戏陀螺"
+   ]
+  },
+  {
+   "term": "Xbox 再裁员",
+   "href": "https://www.pushsquare.com/news/2026/10/xbox-to-slash-even-more-jobs-this-month-with-further-cuts-in-november-and-january",
+   "cat": "行业/数据",
+   "heat": 65,
+   "sources": [
+    "Push Square"
+   ]
+  },
+  {
+   "term": "休闲游戏 新赛道",
+   "href": "https://www.baijing.cn/article/57054",
+   "cat": "行业/数据",
+   "heat": 60,
+   "sources": [
+    "白鲸出海"
+   ]
+  },
+  {
+   "term": "永劫无间 封禁公告",
+   "href": "https://www.yjwujian.cn/news/update/20261020/33456_1317158.html",
+   "cat": "事件/风险",
+   "heat": 66,
+   "sources": [
+    "永劫无间官方更新"
+   ]
+  },
+  {
+   "term": "阴阳师 违规处罚",
+   "href": "https://yys.163.com/news/update/20261020/23024_1317168.html",
+   "cat": "事件/风险",
+   "heat": 59,
+   "sources": [
+    "阴阳师版本更新"
+   ]
+  },
+  {
+   "term": "WarDogs 新赛季停摆",
+   "href": "http://www.gamelook.com.cn/2026/10/604554/",
+   "cat": "事件/风险",
+   "heat": 67,
+   "sources": [
+    "GameLook"
+   ]
+  }
+ ]
 }

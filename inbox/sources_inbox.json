@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-10-22T11:34:36",
+ "fetched_at": "2026-10-22T14:40:00",
  "summary": {
   "sources_total": 75,
-  "sources_alive": 12,
-  "items_total": 13,
-  "items_dated": 6
+  "sources_alive": 73,
+  "items_total": 167,
+  "items_dated": 124
  },
  "sources": [
   {
@@ -251,9 +251,11 @@
    "name": "暗黑破坏神不朽官方新闻",
    "type": "rss",
    "url": "https://news.blizzard.com/en-us/feed/diablo-immortal",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [],
+   "extraction": "rss",
+   "dated_items": 0
   },
   {
    "id": "pvp",
@@ -261,9 +263,47 @@
    "name": "王者荣耀官方新闻",
    "type": "json_api",
    "url": "https://www.cunyuapi.top/hero_news?id=1",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "10月20日体验服不停机更新公告",
+     "url": "https://pvp.qq.com/web201706/newsdetail.shtml?tid=811297",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    },
+    {
+     "title": "10月16日体验服不停机更新公告",
+     "url": "https://pvp.qq.com/web201706/newsdetail.shtml?tid=811123",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    },
+    {
+     "title": "进一步加强外挂及\"演员\"违规行为 打击力度的公示公告",
+     "url": "https://pvp.qq.com/web201706/newsdetail.shtml?tid=811038",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    },
+    {
+     "title": "10月13日体验服不停机更新公告",
+     "url": "https://pvp.qq.com/web201706/newsdetail.shtml?tid=810899",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    },
+    {
+     "title": "10月10日体验服不停机更新公告",
+     "url": "https://pvp.qq.com/web201706/newsdetail.shtml?tid=810733",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    }
+   ],
+   "extraction": "json_api",
+   "dated_items": 0
   },
   {
    "id": "cs2",
@@ -271,9 +311,11 @@
    "name": "CS2 官方新闻",
    "type": "news_list",
    "url": "https://www.counter-strike.net/news",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [],
+   "extraction": "js_rendered (manual curation)",
+   "dated_items": 0
   },
   {
    "id": "id5",
@@ -281,9 +323,26 @@
    "name": "第五人格官方新闻",
    "type": "news_list",
    "url": "https://id5.163.com/news/official/",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "COA深渊的呼唤",
+     "url": "https://id5.163.com/sshh7/",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    },
+    {
+     "title": "IVS亚洲对抗赛",
+     "url": "https://id5.163.com/2021/ivs/cn/",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    }
+   ],
+   "extraction": "extracted",
+   "dated_items": 0
   },
   {
    "id": "yys",
@@ -291,9 +350,26 @@
    "name": "阴阳师官方公告",
    "type": "news_list",
    "url": "https://yys.163.com/news/official/",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "【式神】 谛观天运，逆转因果，SSR不相狐禅玩家实测解析在此奉上",
+     "url": "https://yys.163.com/skill/shishen/20260727/23027_1309228.html",
+     "pubdate": "2026-07-27",
+     "date_src": "url",
+     "age_days": 87
+    },
+    {
+     "title": "【式神】 承千斤之重，报万顷福鸣，SSR毗沙门天玩家实测解析在此奉上→",
+     "url": "https://yys.163.com/news/official/20260702/22592_1306396.html",
+     "pubdate": "2026-07-02",
+     "date_src": "url",
+     "age_days": 112
+    }
+   ],
+   "extraction": "extracted",
+   "dated_items": 2
   },
   {
    "id": "df",
@@ -301,9 +377,26 @@
    "name": "三角洲行动官方新闻",
    "type": "news_list",
    "url": "https://df.qq.com/cp/a20240906main/newslist.html",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "烽火职业联赛",
+     "url": "https://df.qq.com/cp/DFPL",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    },
+    {
+     "title": "烽火世界杯",
+     "url": "https://df.qq.com/cp/W2025FHB/",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    }
+   ],
+   "extraction": "extracted",
+   "dated_items": 0
   },
   {
    "id": "gp",
@@ -311,9 +404,11 @@
    "name": "和平精英官方新闻",
    "type": "static",
    "url": "https://gp.qq.com/main.shtml",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [],
+   "extraction": "liveness_only",
+   "dated_items": 0
   },
   {
    "id": "aqtw",
@@ -321,9 +416,19 @@
    "name": "暗区突围官方资讯",
    "type": "news_list",
    "url": "https://aqtw.qq.com/web202206/?tv=news",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "大赢家物资赛",
+     "url": "https://aqtw.qq.com/cp/a20221107match/",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    }
+   ],
+   "extraction": "extracted",
+   "dated_items": 0
   },
   {
    "id": "jcc",
@@ -331,9 +436,11 @@
    "name": "金铲铲之战官方",
    "type": "static",
    "url": "https://jcc.qq.com/",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [],
+   "extraction": "liveness_only",
+   "dated_items": 0
   },
   {
    "id": "mdnf",
@@ -341,9 +448,11 @@
    "name": "DNF手游官方",
    "type": "static",
    "url": "https://mdnf.qq.com/",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [],
+   "extraction": "liveness_only",
+   "dated_items": 0
   },
   {
    "id": "dota2",
@@ -351,9 +460,11 @@
    "name": "DOTA2 官方",
    "type": "static",
    "url": "https://www.dota2.com/",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [],
+   "extraction": "liveness_only",
+   "dated_items": 0
   },
   {
    "id": "coa",
@@ -361,9 +472,11 @@
    "name": "晶核官方",
    "type": "static",
    "url": "https://coa.nvsgames.cn/main",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [],
+   "extraction": "liveness_only",
+   "dated_items": 0
   },
   {
    "id": "ds",
@@ -371,9 +484,11 @@
    "name": "蛋仔派对官方",
    "type": "static",
    "url": "https://ds.163.com/",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [],
+   "extraction": "liveness_only",
+   "dated_items": 0
   },
   {
    "id": "valorant",
@@ -381,9 +496,11 @@
    "name": "无畏契约腾讯新闻源",
    "type": "news_list",
    "url": "https://news.qq.com/omn/author/20614111",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [],
+   "extraction": "js_rendered (manual curation)",
+   "dated_items": 0
   },
   {
    "id": "steam_new",
@@ -391,9 +508,11 @@
    "name": "Steam 即将发售",
    "type": "html",
    "url": "https://store.steampowered.com/search/?filter=comingsoon&supportedlang=schinese&cc=CN&l=schinese",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [],
+   "extraction": "liveness_only",
+   "dated_items": 0
   },
   {
    "id": "chinajoy",
@@ -401,9 +520,11 @@
    "name": "ChinaJoy 官网",
    "type": "static",
    "url": "https://www.chinajoy.net/",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [],
+   "extraction": "liveness_only",
+   "dated_items": 0
   },
   {
    "id": "gcores",
@@ -411,9 +532,33 @@
    "name": "机核 GCORES",
    "type": "rss",
    "url": "https://www.gcores.com/rss",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "语音念咒 + 实时卡牌对战 |《叨叨巫师》展位介绍",
+     "url": "https://www.gcores.com/articles/221266",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
+     "title": "《上古卷轴OL》第二季“天际回响”现已上线",
+     "url": "https://www.gcores.com/articles/221301",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
+     "title": "【抽奖】核聚变首发！清大光德 Switch2 护眼膜 ×10 免费抽",
+     "url": "https://www.gcores.com/articles/221300",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "age_days": 0
+    }
+   ],
+   "extraction": "rss",
+   "dated_items": 3
   },
   {
    "id": "gamersky",
@@ -421,9 +566,33 @@
    "name": "游民星空新闻",
    "type": "news_list",
    "url": "https://www.gamersky.com/news/",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "Steam",
+     "url": "https://www.gamersky.com/steam/",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    },
+    {
+     "title": "《影之刃零》玩前必看！15个你可能不知道的细节",
+     "url": "https://www.gamersky.com/news/202610/2233040.shtml",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    },
+    {
+     "title": "《影之刃零》预告给老玩家看潮了！系列杀招重现江湖",
+     "url": "https://www.gamersky.com/news/202610/2233162.shtml",
+     "pubdate": "2026-10-22",
+     "date_src": "text",
+     "age_days": 0
+    }
+   ],
+   "extraction": "extracted",
+   "dated_items": 1
   },
   {
    "id": "chuapp",
@@ -431,9 +600,33 @@
    "name": "触乐网",
    "type": "news_list",
    "url": "https://www.chuapp.com/",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "裁员潮席卷游戏行业，独立作曲家怎样渡过难关？ 10.21",
+     "url": "https://www.chuapp.com/article/291705.html",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    },
+    {
+     "title": "和宫崎英高畅聊，寻找“类魂”游戏的魂 10.21",
+     "url": "https://www.chuapp.com/article/291701.html",
+     "pubdate": "2025-11-10",
+     "date_src": "text",
+     "age_days": 346
+    },
+    {
+     "title": "《THE FINALS》国服《终极角逐》正式定档11月18日 《终极角逐》国服正式官宣定档11月18日。",
+     "url": "https://www.chuapp.com/article/290968.html",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    }
+   ],
+   "extraction": "extracted",
+   "dated_items": 1
   },
   {
    "id": "vgtime",
@@ -441,9 +634,33 @@
    "name": "VGtime 游戏时光",
    "type": "news_list",
    "url": "https://www.vgtime.com/",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "玩出突破，共赴“罗技江湖”！ 2026罗技G趣玩日开启，与中国玩家共创游戏盛宴",
+     "url": "https://www.vgtime.com/game/GkeWesM0gJP3nfNm+4/2rA==",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    },
+    {
+     "title": "​告别打工式游戏！《长安幻想》全新合宠·轻享版本升级来袭！",
+     "url": "https://www.vgtime.com/game/Hd0UWfDYoIi8k9IotpyU1w==",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    },
+    {
+     "title": "无畏契约手游「生死无暇」上线，新特工「禁灭」登场，欢乐谷、海底捞联动开启",
+     "url": "https://www.vgtime.com/game/7FDzLaYGPWZvTJKuA315IA==",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    }
+   ],
+   "extraction": "extracted",
+   "dated_items": 0
   },
   {
    "id": "news17173",
@@ -451,9 +668,33 @@
    "name": "17173 网游资讯",
    "type": "news_list",
    "url": "https://news.17173.com/",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "游戏X博士",
+     "url": "https://news.17173.com/xboshi/",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    },
+    {
+     "title": "3分钟试玩",
+     "url": "https://news.17173.com/media/",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    },
+    {
+     "title": "“我们当时正在开发一款伟大的游戏”——EA 关闭 BioWare 后，前 Mass Effect 5 编剧打破沉默",
+     "url": "https://news.17173.com/content/10222026/140633753.shtml",
+     "pubdate": "2026-10-22",
+     "date_src": "text",
+     "age_days": 0
+    }
+   ],
+   "extraction": "extracted",
+   "dated_items": 1
   },
   {
    "id": "gematsu",
@@ -461,9 +702,33 @@
    "name": "Gematsu 新作情报",
    "type": "rss",
    "url": "https://www.gematsu.com/feed",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "Do Not Feed the Monkeys 2099 for PS4, Switch now available",
+     "url": "https://www.gematsu.com/2026/10/do-not-feed-the-monkeys-2099-for-ps4-switch-now-available",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
+     "title": "Pocket Mirror: GoldenerTraum now available for PS5, PS4, and Switch",
+     "url": "https://www.gematsu.com/2026/10/pocket-mirror-goldenertraum-now-available-for-ps5-ps4-and-switch",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
+     "title": "Is It Wrong to Try to Pick Up Girls in a Dungeon? Frontier Zero announced for PC, iOS, and Android",
+     "url": "https://www.gematsu.com/2026/10/is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-frontier-zero-announced-for-pc-ios-and-android",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "age_days": 0
+    }
+   ],
+   "extraction": "rss",
+   "dated_items": 3
   },
   {
    "id": "hyrz_news",
@@ -471,9 +736,11 @@
    "name": "火影忍者手游新闻列表",
    "type": "news_list",
    "url": "https://hyrz.qq.com/web202003/newsList.html",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [],
+   "extraction": "js_rendered (manual curation)",
+   "dated_items": 0
   },
   {
    "id": "yjwujian_match",
@@ -481,9 +748,47 @@
    "name": "永劫无间赛事资讯",
    "type": "news_list",
    "url": "https://www.yjwujian.cn/news/match/index.html",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "永劫无间亚运赛",
+     "url": "https://www.yjwujian.cn/asiadqualifiers/",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    },
+    {
+     "title": "NBPL职业联赛",
+     "url": "https://www.yjwujian.cn/match/",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    },
+    {
+     "title": "世界观资料站",
+     "url": "https://www.yjwujian.cn/world/",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    },
+    {
+     "title": "玩家交流群",
+     "url": "https://www.yjwujian.cn/addgroup/",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    },
+    {
+     "title": "永劫无间职业联赛 (NARAKA:BLADEPOINT PRO LEAGUE) 赛事规则 秋季赛 [09-30]",
+     "url": "https://www.yjwujian.cn/news/match/20260930/36478_1315619.html",
+     "pubdate": "2026-09-30",
+     "date_src": "url",
+     "age_days": 22
+    }
+   ],
+   "extraction": "extracted",
+   "dated_items": 1
   },
   {
    "id": "yhtj_official",
@@ -491,9 +796,11 @@
    "name": "萤火突击官方公告",
    "type": "news_list",
    "url": "https://yhtj.163.com/news/official/",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [],
+   "extraction": "js_rendered (manual curation)",
+   "dated_items": 0
   },
   {
    "id": "id5_update",
@@ -501,9 +808,47 @@
    "name": "第五人格版本更新",
    "type": "news_list",
    "url": "https://id5.163.com/news/update/",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "COA深渊的呼唤",
+     "url": "https://id5.163.com/sshh7/",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    },
+    {
+     "title": "IVS亚洲对抗赛",
+     "url": "https://id5.163.com/2021/ivs/cn/",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    },
+    {
+     "title": "公告 《第五人格》违规名单公示（2026年7月） 2026-07-22",
+     "url": "https://id5.163.com/news/update/20260722/26477_1308605.html",
+     "pubdate": "2026-07-22",
+     "date_src": "url",
+     "age_days": 92
+    },
+    {
+     "title": "公告 《第五人格》违规名单公示（2025年12月） 2026-01-08",
+     "url": "https://id5.163.com/news/update/20260108/26477_1280936.html",
+     "pubdate": "2026-01-08",
+     "date_src": "url",
+     "age_days": 287
+    },
+    {
+     "title": "公告 小米渠道角色资产找回公告 2025-12-29",
+     "url": "https://id5.163.com/news/update/20251226/26477_1278864.html",
+     "pubdate": "2025-12-26",
+     "date_src": "url",
+     "age_days": 300
+    }
+   ],
+   "extraction": "extracted",
+   "dated_items": 3
   },
   {
    "id": "yys_update",
@@ -511,9 +856,47 @@
    "name": "阴阳师版本更新",
    "type": "news_list",
    "url": "https://yys.163.com/news/update/index.html",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "10-21 《阴阳师》违规处罚公告（10月21日 下） 《阴阳师》致力于打造一个公平、健康、良好的游戏环境。 目前有部分玩家采取“自动挂机”的手段实现持续刷取资",
+     "url": "https://yys.163.com/news/update/20261021/23024_1317347.html",
+     "pubdate": "2026-10-21",
+     "date_src": "url",
+     "age_days": 1
+    },
+    {
+     "title": "10-21 《阴阳师》违规处罚公告（10月21日 上） 《阴阳师》致力于打造一个公平、健康、良好的游戏环境。 目前有部分玩家采取“自动挂机”的手段实现持续刷取资",
+     "url": "https://yys.163.com/news/update/20261021/23024_1317329.html",
+     "pubdate": "2026-10-21",
+     "date_src": "url",
+     "age_days": 1
+    },
+    {
+     "title": "10-20 《阴阳师》手游10月21日维护更新公告 ※维护时间 2026年10月21日7:30-9:00 ※亲爱的阴阳师大人： 为了给大家带来更好的游戏体验，服",
+     "url": "https://yys.163.com/news/update/20261020/23024_1317168.html",
+     "pubdate": "2026-10-20",
+     "date_src": "url",
+     "age_days": 2
+    },
+    {
+     "title": "10-13 《阴阳师》手游10月14日维护更新公告 ※维护时间 2026年10月14日7:30-9:00 ※亲爱的阴阳师大人： 为了给大家带来更好的游戏体验，服",
+     "url": "https://yys.163.com/news/update/20261013/23024_1316520.html",
+     "pubdate": "2026-10-13",
+     "date_src": "url",
+     "age_days": 9
+    },
+    {
+     "title": "10-09 《阴阳师》手游10月10日维护更新公告 ※维护时间 2026年10月10日7:00-9:00 ※亲爱的阴阳师大人： 为了给大家带来更好的游戏体验，服",
+     "url": "https://yys.163.com/news/update/20261009/23024_1316181.html",
+     "pubdate": "2026-10-09",
+     "date_src": "url",
+     "age_days": 13
+    }
+   ],
+   "extraction": "extracted",
+   "dated_items": 5
   },
   {
    "id": "df_match",
@@ -521,9 +904,11 @@
    "name": "三角洲行动赛事",
    "type": "news_list",
    "url": "https://df.qq.com/match/index.html",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [],
+   "extraction": "js_rendered (manual curation)",
+   "dated_items": 0
   },
   {
    "id": "aqtw_match",
@@ -531,9 +916,19 @@
    "name": "暗区突围赛事",
    "type": "news_list",
    "url": "https://aqtw.qq.com/web202206/sub/match/page.html",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "大赢家物资赛",
+     "url": "https://aqtw.qq.com/cp/a20221107match/",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    }
+   ],
+   "extraction": "extracted",
+   "dated_items": 0
   },
   {
    "id": "steam_news",
@@ -541,9 +936,33 @@
    "name": "Steam 新闻中心",
    "type": "rss",
    "url": "https://store.steampowered.com/feeds/daily_news.cgi",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "Team Fortress 2 Update Released",
+     "url": "https://store.steampowered.com/news/286827/",
+     "pubdate": "2026-10-16",
+     "date_src": "feed",
+     "age_days": 6
+    },
+    {
+     "title": "Team Fortress 2 Update Released",
+     "url": "https://store.steampowered.com/news/285796/",
+     "pubdate": "2026-10-12",
+     "date_src": "feed",
+     "age_days": 10
+    },
+    {
+     "title": "Team Fortress 2 Update Released",
+     "url": "https://store.steampowered.com/news/285564/",
+     "pubdate": "2026-10-05",
+     "date_src": "feed",
+     "age_days": 17
+    }
+   ],
+   "extraction": "rss",
+   "dated_items": 3
   },
   {
    "id": "dota2_steam",
@@ -551,9 +970,40 @@
    "name": "DOTA2 Steam 官方新闻",
    "type": "rss",
    "url": "https://store.steampowered.com/feeds/news/app/570/?cc=CN&l=schinese",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "探索惊世奇珍",
+     "url": "https://store.steampowered.com/news/app/570/view/681888927386174386",
+     "pubdate": "2026-10-07",
+     "date_src": "feed",
+     "age_days": 15
+    },
+    {
+     "title": "7.41f 游戏性版本",
+     "url": "https://store.steampowered.com/news/app/570/view/677383425371407609",
+     "pubdate": "2026-09-15",
+     "date_src": "feed",
+     "age_days": 37
+    },
+    {
+     "title": "2026年国际邀请赛总冠军",
+     "url": "https://store.steampowered.com/news/app/570/view/680759856779493378",
+     "pubdate": "2026-08-27",
+     "date_src": "feed",
+     "age_days": 56
+    },
+    {
+     "title": "国际邀请赛主赛事",
+     "url": "https://store.steampowered.com/news/app/570/view/680758587997293716",
+     "pubdate": "2026-08-19",
+     "date_src": "feed",
+     "age_days": 64
+    }
+   ],
+   "extraction": "rss",
+   "dated_items": 4
   },
   {
    "id": "cs2_steam",
@@ -561,9 +1011,40 @@
    "name": "CS2 Steam 官方新闻",
    "type": "rss",
    "url": "https://store.steampowered.com/feeds/news/app/730/?cc=CN&l=schinese",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "Counter-Strike 2 Update",
+     "url": "https://store.steampowered.com/news/app/730/view/687519694976975304",
+     "pubdate": "2026-10-14",
+     "date_src": "feed",
+     "age_days": 8
+    },
+    {
+     "title": "《反恐精英》更新",
+     "url": "https://store.steampowered.com/news/app/730/view/675134162359814146",
+     "pubdate": "2026-10-08",
+     "date_src": "feed",
+     "age_days": 14
+    },
+    {
+     "title": "《反恐精英》更新",
+     "url": "https://store.steampowered.com/news/app/730/view/675133527946168308",
+     "pubdate": "2026-10-05",
+     "date_src": "feed",
+     "age_days": 17
+    },
+    {
+     "title": "《反恐精英》更新",
+     "url": "https://store.steampowered.com/news/app/730/view/675133527946167652",
+     "pubdate": "2026-10-02",
+     "date_src": "feed",
+     "age_days": 20
+    }
+   ],
+   "extraction": "rss",
+   "dated_items": 4
   },
   {
    "id": "yjwujian_steam",
@@ -571,9 +1052,33 @@
    "name": "永劫无间 Steam 官方新闻",
    "type": "rss",
    "url": "https://store.steampowered.com/feeds/news/app/1203220/?cc=CN&l=schinese",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "《永劫无间》10月21日更新公告",
+     "url": "https://store.steampowered.com/news/app/1203220/view/683016095346461413",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "10月20日《永劫无间》违规玩家封禁公告",
+     "url": "https://store.steampowered.com/news/app/1203220/view/683016095346460777",
+     "pubdate": "2026-10-20",
+     "date_src": "feed",
+     "age_days": 2
+    },
+    {
+     "title": "10月13日《永劫无间》违规玩家封禁公告",
+     "url": "https://store.steampowered.com/news/app/1203220/view/680763661892980063",
+     "pubdate": "2026-10-13",
+     "date_src": "feed",
+     "age_days": 9
+    }
+   ],
+   "extraction": "rss",
+   "dated_items": 3
   },
   {
    "id": "df_steam",
@@ -581,9 +1086,33 @@
    "name": "三角洲行动 Steam 官方新闻",
    "type": "rss",
    "url": "https://store.steampowered.com/feeds/news/app/2507950/?cc=CN&l=schinese",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "10月15日更新公告丨黑潮爆破＆干员平衡性调整",
+     "url": "https://store.steampowered.com/news/app/2507950/view/672882996184875611",
+     "pubdate": "2026-10-15",
+     "date_src": "feed",
+     "age_days": 7
+    },
+    {
+     "title": "G.T.I. Security | Penalties for RMT",
+     "url": "https://store.steampowered.com/news/app/2507950/view/689770861148769741",
+     "pubdate": "2026-10-12",
+     "date_src": "feed",
+     "age_days": 10
+    },
+    {
+     "title": "G.T.I. Security | 违规处罚通知",
+     "url": "https://store.steampowered.com/news/app/2507950/view/689770861148769739",
+     "pubdate": "2026-10-12",
+     "date_src": "feed",
+     "age_days": 10
+    }
+   ],
+   "extraction": "rss",
+   "dated_items": 3
   },
   {
    "id": "aqtw_steam",
@@ -591,9 +1120,33 @@
    "name": "暗区突围 Steam 官方新闻",
    "type": "rss",
    "url": "https://store.steampowered.com/feeds/news/app/2073620/?cc=CN&l=schinese",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "第三期优秀巡查员公示",
+     "url": "https://store.steampowered.com/news/app/2073620/view/742688880388474893",
+     "pubdate": "2026-10-20",
+     "date_src": "feed",
+     "age_days": 2
+    },
+    {
+     "title": "10月15日少女前线2：追放联动开启，联动多重福利正式公布！",
+     "url": "https://store.steampowered.com/news/app/2073620/view/693148560867200526",
+     "pubdate": "2026-10-14",
+     "date_src": "feed",
+     "age_days": 8
+    },
+    {
+     "title": "《暗区突围：无限》违规行为处罚公告（0928-1011）",
+     "url": "https://store.steampowered.com/news/app/2073620/view/693148560867200524",
+     "pubdate": "2026-10-14",
+     "date_src": "feed",
+     "age_days": 8
+    }
+   ],
+   "extraction": "rss",
+   "dated_items": 3
   },
   {
    "id": "gamelook",
@@ -601,9 +1154,47 @@
    "name": "GameLook",
    "type": "rss",
    "url": "http://www.gamelook.com.cn/feed",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "《无畏契约》冠军夜刀光落定，电竞之都上海带来别样秋日周末",
+     "url": "http://www.gamelook.com.cn/2026/10/604572/",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
+     "title": "离大谱！《WarDogs》新赛季上线3天就要停？CEO认错：“我们确实搞砸了”",
+     "url": "http://www.gamelook.com.cn/2026/10/604554/",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
+     "title": "不是二游！腾讯轻怪谈都市开放世界亮相，制作人来自网易？",
+     "url": "http://www.gamelook.com.cn/2026/10/604492/",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
+     "title": "吹哥亲述“疯狂十年”！自研语言、自研引擎、烧光2亿，“下款游戏会容易点”",
+     "url": "http://www.gamelook.com.cn/2026/10/604485/",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
+     "title": "集体上头！《深空当铺》Steam测试爆红，3万赛博店主“沉迷讨价还价”",
+     "url": "http://www.gamelook.com.cn/2026/10/604455/",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "age_days": 0
+    }
+   ],
+   "extraction": "rss",
+   "dated_items": 5
   },
   {
    "id": "youxituoluo",
@@ -611,9 +1202,47 @@
    "name": "游戏陀螺",
    "type": "rss",
    "url": "https://www.youxituoluo.com/feed",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "前网易制作人领衔：腾讯开放世界新作押宝“癫味赛道”？",
+     "url": "https://www.youxituoluo.com/534980.html",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
+     "title": "Supercell正式全资收购Metacore，《庄园合合》累计流水近50亿元",
+     "url": "https://www.youxituoluo.com/534976.html",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "米哈游的新作，看了不会“烧心”",
+     "url": "https://www.youxituoluo.com/534975.html",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "怕AI“抄太快”，游戏人不敢在Steam新品节放试玩了",
+     "url": "https://www.youxituoluo.com/534974.html",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "深圳南山区国资出手，游戏赛道再添战略资本",
+     "url": "https://www.youxituoluo.com/534973.html",
+     "pubdate": "2026-10-20",
+     "date_src": "feed",
+     "age_days": 2
+    }
+   ],
+   "extraction": "rss",
+   "dated_items": 5
   },
   {
    "id": "xbox_wire",
@@ -621,9 +1250,33 @@
    "name": "Xbox Wire",
    "type": "rss",
    "url": "https://news.xbox.com/en-us/feed/",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "Cloud Playtime Now Available to Test with XBOX Insiders",
+     "url": "https://news.xbox.com/en-us/2026/10/21/cloud-playtime-now-available-to-test-with-xbox-insiders/",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "Thirty Years of Lara Croft",
+     "url": "https://news.xbox.com/en-us/2026/10/21/thirty-years-of-lara-croft/",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "Think You’ve Beaten Fountains? Prove it in the Gauntlet",
+     "url": "https://news.xbox.com/en-us/2026/10/20/think-youve-beaten-fountains/",
+     "pubdate": "2026-10-20",
+     "date_src": "feed",
+     "age_days": 2
+    }
+   ],
+   "extraction": "rss",
+   "dated_items": 3
   },
   {
    "id": "gamersky_pc",
@@ -631,9 +1284,40 @@
    "name": "游民星空 PC 资讯",
    "type": "news_list",
    "url": "https://www.gamersky.com/news/pc/zx/",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "热门游戏排行",
+     "url": "https://www.gamersky.com/top/",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    },
+    {
+     "title": "《赛博朋克2077》重大更新内容官宣！新任务+双枪等",
+     "url": "https://www.gamersky.com/news/202610/2232884.shtml",
+     "pubdate": "2026-10-21",
+     "date_src": "text",
+     "age_days": 1
+    },
+    {
+     "title": "《海贼王》新游IGN 6分！不是粉丝没必要急着玩",
+     "url": "https://www.gamersky.com/news/202610/2232883.shtml",
+     "pubdate": "2026-10-22",
+     "date_src": "text",
+     "age_days": 0
+    },
+    {
+     "title": "《赛博朋克2077》现已支持XPA！买一份送一份",
+     "url": "https://www.gamersky.com/news/202610/2232882.shtml",
+     "pubdate": "2026-10-21",
+     "date_src": "text",
+     "age_days": 1
+    }
+   ],
+   "extraction": "extracted",
+   "dated_items": 3
   },
   {
    "id": "gp_match",
@@ -641,9 +1325,33 @@
    "name": "和平精英赛事资讯",
    "type": "news_list",
    "url": "https://gp.qq.com/act/a20210207match_data/match.html",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "前往主题站",
+     "url": "https://gp.qq.com/act/a20210207match_data/pc_live.html",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    },
+    {
+     "title": "和平精英X东北超联动“燃动沈阳”，打造今夏最IN线下盛宴 当电竞的潮流脉搏与东北工业重镇的硬核气质相遇，会碰撞出怎样的火花？",
+     "url": "https://gp.qq.com/gicp/news/775/18789931.html",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    },
+    {
+     "title": "峡谷争锋，精英制胜！和平精英联手携程旅行、安徽霍山大峡谷漂流打造实景吃鸡新体验 「峡谷争锋?精英制胜」线下挑战赛，创新打造漂流实景吃鸡全新玩法！",
+     "url": "https://gp.qq.com/gicp/news/775/18808499.html",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    }
+   ],
+   "extraction": "extracted",
+   "dated_items": 0
   },
   {
    "id": "ps_blog_ja",
@@ -651,9 +1359,40 @@
    "name": "PlayStation Blog 中文",
    "type": "rss",
    "url": "https://blog.ja.playstation.com/feed/",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "『Call of Duty: Modern Warfare 4』明日10月23日発売！ 現代戦をテーマにしたFPSシリーズの新章が開幕",
+     "url": "https://blog.ja.playstation.com/2026/10/22/20261022-codmw4-launch-reminder-s/",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
+     "title": "『STRANGER THAN HEAVEN』試遊レポート＆インタビュー！ バトルやショービジネスを通して描かれる大東真の人生",
+     "url": "https://blog.ja.playstation.com/2026/10/21/20261021-stranger-than-heaven-hands-on-preview-s/",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "『薬屋のひとりごと ～偽りの皇弟～』2027年3月18日（木）発売決定！ パッケージ版の予約受付を開始",
+     "url": "https://blog.ja.playstation.com/2026/10/21/20261021-kusuriyanohitorigoto-release-date-reveal-o/",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "『FINAL FANTASY RESONANCE』明日10月22日発売！ HD-2Dで描かれるクリスタルを巡る物語",
+     "url": "https://blog.ja.playstation.com/2026/10/21/20261021-ffrs-launch-reminder-s/",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    }
+   ],
+   "extraction": "rss",
+   "dated_items": 4
   },
   {
    "id": "chuapp_category",
@@ -661,9 +1400,40 @@
    "name": "触乐网·分类新闻",
    "type": "news_list",
    "url": "http://www.chuapp.com/Category/news/",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "周烨2小时前0条评论 《荒野乱斗》LCQ，与一款“小众游戏”共赴金票之旅 拿好你的金票，让我们出发吧。",
+     "url": "http://www.chuapp.com/article/291704.html",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    },
+    {
+     "title": "赵雨20小时前0条评论 触乐怪话：勇闯二手游戏圈 经营咸鱼，何尝不是一种模拟经营游戏。",
+     "url": "http://www.chuapp.com/article/291702.html",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    },
+    {
+     "title": "等等20小时前0条评论 裁员潮席卷游戏行业，独立作曲家怎样渡过难关？ 对许多自由职业者来说，在游戏公司谋求一份全职工作，或许已经不再是终极目标。",
+     "url": "http://www.chuapp.com/article/291705.html",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    },
+    {
+     "title": "祝佳音23小时前0条评论 《皇牌空战8：希孚之翼》：祖宗之法基础上的微创新 这是一个目标用户很明确地知道自己想要什么，开发者也很明确地知道目标用户想要什么的游戏",
+     "url": "http://www.chuapp.com/article/291703.html",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    }
+   ],
+   "extraction": "extracted",
+   "dated_items": 0
   },
   {
    "id": "gamersky_zx",
@@ -671,9 +1441,40 @@
    "name": "游民星空·最新资讯",
    "type": "news_list",
    "url": "https://www.gamersky.com/news/tv/zx/",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "《对马之魂》采访：有难度选择，所有玩家都可上手",
+     "url": "https://www.gamersky.com/news/201809/1103639.shtml",
+     "pubdate": "2018-09-23",
+     "date_src": "text",
+     "age_days": 2951
+    },
+    {
+     "title": "《无双大蛇3》将加入简体中文 发售日上线PS4补丁",
+     "url": "https://www.gamersky.com/news/201809/1103627.shtml",
+     "pubdate": "2018-09-23",
+     "date_src": "text",
+     "age_days": 2951
+    },
+    {
+     "title": "玩过《荒野大镖客2》之后，我整理了很多需知的细节",
+     "url": "https://www.gamersky.com/news/201809/1102822.shtml",
+     "pubdate": "2018-09-21",
+     "date_src": "text",
+     "age_days": 2953
+    },
+    {
+     "title": "PSVR《揭秘计划2：远古之战》发售 火星之战爆发",
+     "url": "https://www.gamersky.com/news/201809/1102376.shtml",
+     "pubdate": "2018-09-20",
+     "date_src": "text",
+     "age_days": 2954
+    }
+   ],
+   "extraction": "extracted",
+   "dated_items": 4
   },
   {
    "id": "baijing",
@@ -681,9 +1482,108 @@
    "name": "白鲸出海",
    "type": "json_api",
    "url": "https://www.baijing.cn/index/ajax/get_article/",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "GTC2026 全球流量大会（上海）即将启幕，Decodo德口多诚邀您共话全球化未来",
+     "url": "https://www.baijing.cn/article/57098",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "extra": {
+      "views": 465,
+      "synopsis": "Decodo（德口多）作为高质量的数据收集基础设施，将重磅亮相 GTC2026 全球流量大会（上海）。",
+      "from": "Decodo"
+     },
+     "age_days": 0
+    },
+    {
+     "title": "亚马逊突发，IOR核查升级，你的货可能卡在美国",
+     "url": "https://www.baijing.cn/article/57097",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "extra": {
+      "views": 1396,
+      "synopsis": "建议紧急自查。",
+      "from": "雨果网"
+     },
+     "age_days": 0
+    },
+    {
+     "title": "全面开放，TikTok Shop美区上线直播「砍价」和「拼团」玩法",
+     "url": "https://www.baijing.cn/article/57096",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "extra": {
+      "views": 3732,
+      "synopsis": "TikTok 直播间，又开始“热闹”起来。",
+      "from": "TT123跨境电商"
+     },
+     "age_days": 0
+    },
+    {
+     "title": "Grab收购中国台湾foodpanda被岛内监管否了",
+     "url": "https://www.baijing.cn/article/57095",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "extra": {
+      "views": 10271,
+      "synopsis": "这次 Grab 接手，市场仍然保留两家主要竞争者，为什么也没有通过？",
+      "from": "墨腾创投"
+     },
+     "age_days": 0
+    },
+    {
+     "title": "迈向4000亿美元大关，AI会是东南亚数字经济的下一个增长引擎么？",
+     "url": "https://www.baijing.cn/article/57094",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "extra": {
+      "views": 11503,
+      "synopsis": "AI 成为贯穿多个领域的重要观察方向。",
+      "from": "动点出海"
+     },
+     "age_days": 0
+    },
+    {
+     "title": "TikTok Shop流量四国登顶，Shopee还在较劲",
+     "url": "https://www.baijing.cn/article/57093",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "extra": {
+      "views": 11554,
+      "synopsis": "东南亚依旧是出海热门。",
+      "from": "兔克出海"
+     },
+     "age_days": 0
+    },
+    {
+     "title": "AI代理赛道再添新玩家，Anthropic推出Claude Duet预览版挑战OpenAI与Meta",
+     "url": "https://www.baijing.cn/article/57092",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "extra": {
+      "views": 11270,
+      "synopsis": "Anthropic 周三宣布推出 Claude Duet 预览版。",
+      "from": "智通财经App"
+     },
+     "age_days": 0
+    },
+    {
+     "title": "微软拟2027年发布Xbox掌机，下一代主机2028年推出且售价或高达1800美元",
+     "url": "https://www.baijing.cn/article/57091",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "extra": {
+      "views": 11381,
+      "synopsis": "微软正加速布局下一代游戏硬件矩阵。",
+      "from": "智通财经App"
+     },
+     "age_days": 0
+    }
+   ],
+   "extraction": "json_api",
+   "dated_items": 8
   },
   {
    "id": "weibo_hotlist",
@@ -692,7 +1592,7 @@
    "type": "static",
    "url": "https://weibo.com/ajax/statuses/hot_band",
    "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
+   "error": "<HTTPError 403: 'Forbidden'>",
    "items": []
   },
   {
@@ -702,7 +1602,7 @@
    "type": "static",
    "url": "https://www.zhihu.com/hot",
    "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
+   "error": "<HTTPError 403: 'Forbidden'>",
    "items": []
   },
   {
@@ -711,19 +1611,23 @@
    "name": "抖音热榜",
    "type": "static",
    "url": "https://www.douyin.com/hot",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [],
+   "extraction": "liveness_only",
+   "dated_items": 0
   },
   {
    "id": "bilibili_hotsearch",
    "game": "全行业",
    "name": "B站热搜（全网）",
    "type": "static",
-   "url": "https://search.bilibili.com/all?keyword=游戏",
-   "status": null,
-   "error": "UnicodeEncodeError('ascii', 'GET /all?keyword=游戏 HTTP/1.1', 17, 19, 'ordinal not in range(128)')",
-   "items": []
+   "url": "https://api.bilibili.com/x/web-interface/search/square?limit=20",
+   "status": 200,
+   "error": null,
+   "items": [],
+   "extraction": "liveness_only",
+   "dated_items": 0
   },
   {
    "id": "xiaohongshu_hotlist",
@@ -731,9 +1635,11 @@
    "name": "小红书热榜",
    "type": "static",
    "url": "https://www.xiaohongshu.com/explore",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [],
+   "extraction": "liveness_only",
+   "dated_items": 0
   },
   {
    "id": "coreesports",
@@ -741,9 +1647,11 @@
    "name": "竞核",
    "type": "static",
    "url": "https://cgames.com/",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [],
+   "extraction": "liveness_only",
+   "dated_items": 0
   },
   {
    "id": "nadianshi",
@@ -751,9 +1659,47 @@
    "name": "手游那点事",
    "type": "news_list",
    "url": "http://www.nadianshi.com/category/news/",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "VR/AR",
+     "url": "http://www.nadianshi.com/category/vr",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    },
+    {
+     "title": "原创丨米哈游：一年沉淀，换来「高开神走」",
+     "url": "http://www.nadianshi.com/2026/07/413907",
+     "pubdate": "2026-07-01",
+     "date_src": "text",
+     "age_days": 113
+    },
+    {
+     "title": "活动 | 三国杀王者之战神王战广州收官 《三国杀：承天之弈》重磅首发",
+     "url": "http://www.nadianshi.com/2026/06/413745",
+     "pubdate": "2026-06-01",
+     "date_src": "text",
+     "age_days": 143
+    },
+    {
+     "title": "活动/会议",
+     "url": "http://www.nadianshi.com/category/ju",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    },
+    {
+     "title": "原创丨终于等到了！和世界级射击IP坐一桌，三角洲凭什么？",
+     "url": "http://www.nadianshi.com/2026/06/413179",
+     "pubdate": "2026-06-01",
+     "date_src": "text",
+     "age_days": 143
+    }
+   ],
+   "extraction": "extracted",
+   "dated_items": 3
   },
   {
    "id": "dataeye",
@@ -761,9 +1707,11 @@
    "name": "DataEye",
    "type": "static",
    "url": "https://www.dataeye.com/",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [],
+   "extraction": "liveness_only",
+   "dated_items": 0
   },
   {
    "id": "tgmeng",
@@ -771,9 +1719,11 @@
    "name": "糖果梦 AI 游戏日报",
    "type": "json_api",
    "url": "https://tgmeng.com/daily/game",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [],
+   "extraction": "json_api (empty)",
+   "dated_items": 0
   },
   {
    "id": "xiaoheihe_hot",
@@ -781,9 +1731,11 @@
    "name": "小黑盒每日热点",
    "type": "json_api",
    "url": "https://api.xiaoheihe.cn/bbs/app/content_collection/menu?collection_id=68c528455c6766e13a7ce675",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [],
+   "extraction": "json_api (empty)",
+   "dated_items": 0
   },
   {
    "id": "ign",
@@ -791,9 +1743,54 @@
    "name": "IGN",
    "type": "rss",
    "url": "https://feeds.feedburner.com/ign/all",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "'We Were Working on a Great Game' — Former Mass Effect 5 Writers Speak Out After EA Shuts Down BioWare",
+     "url": "https://www.ign.com/articles/we-were-working-on-a-great-game-former-mass-effect-5-writers-speak-out-after-ea-shuts-down-bioware",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
+     "title": "Dragon Ball Xenoverse 3 Narrows Release Window Following Player Feedback",
+     "url": "https://www.ign.com/articles/dragon-ball-xenoverse-3-narrows-release-window-following-player-feedback",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
+     "title": "Brandon Sanderson Wants to Know Who Really Wrote the Mr. Beast Book",
+     "url": "https://www.ign.com/articles/brandon-sanderson-wants-to-know-who-really-wrote-the-mr-beast-book",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
+     "title": "GTA 6's Fast Food Restaurant, Burger Shot, Is Coming to Real Life in the Miami Heat's Arena",
+     "url": "https://www.ign.com/articles/gta-6s-fast-food-restaurant-burger-shot-is-coming-to-real-life-in-the-miami-heats-arena",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "Call of Duty: Modern Warfare 4 DMZ Review So Far",
+     "url": "https://www.ign.com/articles/call-of-duty-modern-warfare-4-dmz-review",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "Chris Pratt Reaffirms Star-Lord Will Return in the MCU and Plans Are Being Made Right Now",
+     "url": "https://www.ign.com/articles/chris-pratt-reaffirms-star-lord-will-return-in-the-mcu-and-plans-are-being-made-right-now",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    }
+   ],
+   "extraction": "rss",
+   "dated_items": 6
   },
   {
    "id": "gamesradar",
@@ -801,9 +1798,47 @@
    "name": "GamesRadar+",
    "type": "rss",
    "url": "https://www.gamesradar.com/feeds/all",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "Ex-Blizzard boss says an $1,800 Xbox \"will never sell\" and current-gen is \"fine for 99%\" of people",
+     "url": "https://www.gamesradar.com/platforms/xbox/ex-blizzard-boss-says-an-usd1800-xbox-will-never-sell-and-current-gen-consoles-are-fine-for-99-percent-of-the-audience-anyway/",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
+     "title": "Batman is \"around\" during the events of Clayface, confirms DC Studios co-CEO: \"This is the introduction to the live-action Gotham\"",
+     "url": "https://www.gamesradar.com/entertainment/dc-movies/batman-is-around-during-the-events-of-clayface-confirms-dc-studios-co-ceo-this-is-the-introduction-to-the-live-action-gotham/",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "Penguin showrunner to produce DC Poison Ivy TV show, won't be set in Matt Reeves Batman universe",
+     "url": "https://www.gamesradar.com/entertainment/dc-tv-shows/the-penguin-showrunner-is-in-talks-to-produce-dcs-live-action-poison-ivy-tv-show-but-it-wont-be-set-in-the-matt-reeves-batman-universe/",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "Star Wars: Battlefront 3 reportedly in the works at Respawn and Dice",
+     "url": "https://www.gamesradar.com/games/action/star-wars-battlefront-3-reportedly-in-the-works-at-respawn-and-dice-in-the-wake-of-eas-bioware-shutdown/",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "The Witcher and Cyberpunk 2077 devs join creators mourning BioWare",
+     "url": "https://www.gamesradar.com/games/rpg/the-witcher-and-cyberpunk-2077-devs-join-creators-mourning-bioware-baldurs-gate-1-and-2-shaped-my-imagination-and-the-desire-to-create-games/",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    }
+   ],
+   "extraction": "rss",
+   "dated_items": 5
   },
   {
    "id": "eurogamer",
@@ -811,9 +1846,47 @@
    "name": "Eurogamer",
    "type": "rss",
    "url": "https://www.eurogamer.net/feed",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "EA cancels unannounced The Sims project, trims the Skate team and reportedly plans to lay off 400 workers: \"We're the number one publisher in Western HD gaming\"",
+     "url": "https://www.eurogamer.net/ea-cancels-sims-skate-400-layoffs",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "BioWare is closing down and Mass Effect 5 is cancelled, months after Saudi Arabia's $55bn EA buyout",
+     "url": "https://www.eurogamer.net/bioware-closing-down-mass-effect-5-cancelled",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "First-person Soulslike Valor Mortis is already making a profit after seven days, despite launching against some stiff competition",
+     "url": "https://www.eurogamer.net/soulslike-valor-mortis-making-profit-seven-days",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "CD Projekt Red details new Cyberpunk 2077 update - adding dual-wielding, cross-platform mods, Edgerunners story quests, and more",
+     "url": "https://www.eurogamer.net/cyberpunk-2077-update-edgerunners-2-mod-support",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "Beyond Good & Evil 2 reportedly still in development 18 years after being announced, now a \"solo-first\" adventure",
+     "url": "https://www.eurogamer.net/beyond-good-and-evil-bge2-report-ubisoft",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    }
+   ],
+   "extraction": "rss",
+   "dated_items": 5
   },
   {
    "id": "pcgamer",
@@ -821,9 +1894,47 @@
    "name": "PC Gamer",
    "type": "rss",
    "url": "https://www.pcgamer.com/feeds/all",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "The next Mass Effect would have had 'a level of autonomy and choice that no other game has been able to match', according to BioWare veteran",
+     "url": "https://www.pcgamer.com/games/mass-effect/the-next-mass-effect-would-have-had-a-level-of-autonomy-and-choice-that-no-other-game-has-been-able-to-match-according-to-bioware-veteran/",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
+     "title": "Can you identify the horror game by its horrors?",
+     "url": "https://www.pcgamer.com/games/can-you-identify-the-horror-game-by-its-horrors/",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
+     "title": "Holy crap, they're making Serious Sam: The Third Encounter",
+     "url": "https://www.pcgamer.com/games/fps/holy-crap-theyre-making-serious-sam-the-third-encounter/",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
+     "title": "Machinarium AI tribute cops a flogging from studio: 'This looks disgusting and has nothing to do with us or our craft'",
+     "url": "https://www.pcgamer.com/gaming-industry/machinarium-ai-tribute-cops-a-flogging-from-studio-this-looks-disgusting-and-has-nothing-to-do-with-us-or-our-craft/",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "CD Projekt boss pays tribute to BioWare for helping bring The Witcher to life 20 years ago: 'BioWare has been a massive part of CDPR history'",
+     "url": "https://www.pcgamer.com/gaming-industry/cd-projekt-boss-pays-tribute-to-bioware-for-helping-bring-the-witcher-to-life-20-years-ago-bioware-has-been-a-massive-part-of-cdpr-history/",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    }
+   ],
+   "extraction": "rss",
+   "dated_items": 5
   },
   {
    "id": "vgc",
@@ -831,9 +1942,47 @@
    "name": "Video Games Chronicle",
    "type": "rss",
    "url": "https://www.videogameschronicle.com/feed/",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "‘Many’ staff gone from Skate studio Full Circle as part of EA layoffs",
+     "url": "https://www.videogameschronicle.com/news/many-staff-gone-from-skate-studio-full-circle-as-part-of-ea-layoffs/",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "EA is closing BioWare and cancelling the next Mass Effect",
+     "url": "https://www.videogameschronicle.com/news/ea-is-closing-bioware-and-cancelling-the-next-mass-effect/",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "Cyberpunk 2077 is getting another big update, 2 years after CD Projekt claimed it was finished",
+     "url": "https://www.videogameschronicle.com/news/cyberpunk-2077-is-getting-yet-another-big-update-2-years-cd-projekt-claimed-it-was-finished/",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "A remaster of the Shrek 2 game from 2004 has been announced via a GTA-like trailer",
+     "url": "https://www.videogameschronicle.com/news/a-remaster-of-the-shrek-2-game-from-2004-has-been-announced-via-a-gta-like-trailer/",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "Ace Driver Victory Lap is the next polygonal Namco arcade racer getting its first ever home release",
+     "url": "https://www.videogameschronicle.com/news/ace-driver-victory-lap-is-the-next-polygonal-namco-arcade-racer-getting-its-first-ever-home-release/",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    }
+   ],
+   "extraction": "rss",
+   "dated_items": 5
   },
   {
    "id": "gamespot",
@@ -841,9 +1990,47 @@
    "name": "GameSpot",
    "type": "rss",
    "url": "https://www.gamespot.com/feeds/mashup/",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "EA Cancels New Mass Effect, Pauses New Sims Game, And All The Other  Big EA News That Just Happened",
+     "url": "https://www.gamespot.com/articles/ea-kills-bioware-cancels-new-mass-effect-pauses-new-sims-game-and-all-the-other-big-ea-news-that-just-happened/",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "Your Favorite Video Games Will Always Be Influenced By Manga",
+     "url": "https://www.gamespot.com/articles/your-favorite-video-games-will-always-be-influenced-by-manga/",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "Max Miller’s Tasting History Is Coming To Your Tabletop With A New Board Game",
+     "url": "https://www.gamespot.com/articles/max-millers-tasting-history-is-coming-to-your-tabletop-with-a-new-board-game/",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "The Halo We Grew Up With Is Never Coming Back",
+     "url": "https://www.gamespot.com/articles/the-halo-we-grew-up-with-is-never-coming-back/",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "Star Wars Battlefront 3 Reportedly In Development By EA’s Top Shooter Studios",
+     "url": "https://www.gamespot.com/articles/star-wars-battlefront-3-reportedly-in-development-by-eas-top-shooter-studios/",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    }
+   ],
+   "extraction": "rss",
+   "dated_items": 5
   },
   {
    "id": "pushsquare",
@@ -851,9 +2038,40 @@
    "name": "Push Square",
    "type": "rss",
    "url": "https://www.pushsquare.com/feeds/latest",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "Do Not Miss This PlayStation All-Timer While It Costs Less Than a Frothy Coffee",
+     "url": "https://www.pushsquare.com/news/2026/10/do-not-miss-this-playstation-all-timer-while-it-costs-less-than-a-frothy-coffee",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
+     "title": "All PS Plus Deluxe Members in Korea Get a Free Upgrade as Cloud Streaming Arrives",
+     "url": "https://www.pushsquare.com/news/2026/10/all-ps-plus-deluxe-members-in-korea-get-a-free-upgrade-as-cloud-streaming-arrives",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "Sony's Revamped PS5 Pulse Headset Launches Alongside GTA 6, on 19th November",
+     "url": "https://www.pushsquare.com/news/2026/10/sonys-revamped-ps5-pulse-headset-launches-alongside-gta-6-on-19th-november",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "Star Wars Battlefront 3 in Dev at DICE and Respawn, Multiple Sources Say",
+     "url": "https://www.pushsquare.com/news/2026/10/star-wars-battlefront-3-in-dev-at-dice-and-respawn-multiple-sources-say",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    }
+   ],
+   "extraction": "rss",
+   "dated_items": 4
   },
   {
    "id": "rps",
@@ -861,9 +2079,40 @@
    "name": "Rock Paper Shotgun",
    "type": "rss",
    "url": "https://www.rockpapershotgun.com/feed",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "Cyberpunk 2077's Edgerunners 2 update adds two new quests, handgun dual wielding and the ability to pimp your mantis blades",
+     "url": "https://www.rockpapershotgun.com/cyberpunk-2077s-edgerunners-2-update-adds-two-new-quests-handgun-dual-wielding-and-the-ability-to-pimp-your-mantis-blades",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "A puzzle game where you must avoid the doing the most awkward of things: facing someone while riding an elevator",
+     "url": "https://www.rockpapershotgun.com/a-puzzle-game-where-you-must-avoid-the-doing-the-most-awkward-of-things-facing-someone-while-riding-an-elevator",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "I keep embarrassing myself in front of the nature gods in handpainted 2D roguelike Talaka, whose colourful, combative demo is out now",
+     "url": "https://www.rockpapershotgun.com/i-keep-embarrassing-myself-in-front-of-the-nature-gods-in-handpainted-2d-roguelike-talaka-whose-colourful-combative-demo-is-out-now",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "\"I want room to make a wrong turn\": Following Samson dev's bankruptcy, its founder is considering how AI might factor into new studio plans",
+     "url": "https://www.rockpapershotgun.com/i-want-room-to-make-a-wrong-turn-following-samson-devs-bankruptcy-its-founder-is-considering-how-ai-might-factor-into-new-studio-plans",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    }
+   ],
+   "extraction": "rss",
+   "dated_items": 4
   },
   {
    "id": "gameinformer",
@@ -871,9 +2120,40 @@
    "name": "Game Informer",
    "type": "rss",
    "url": "https://www.gameinformer.com/rss.xml",
-   "status": null,
-   "error": "URLError(gaierror(11001, 'getaddrinfo failed'))",
-   "items": []
+   "status": 200,
+   "error": null,
+   "items": [
+    {
+     "title": "The Oral History Of BioWare",
+     "url": "https://gameinformer.com/feature/2026/10/21/doctors-dragons",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "EA Is Closing Down Legendary Studio BioWare Amid More Job Cuts",
+     "url": "https://gameinformer.com/2026/10/21/ea-is-shutting-down-legendary-rpg-studio-bioware-amid-new-round-of-layoffs",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "Stranger Than Heaven Is One Man's Story Of Biculturalism, Music, Fitting In, And Fighting, Told Over 50 Years",
+     "url": "https://gameinformer.com/preview/2026/10/21/one-mans-story-of-biculturalism-music-fitting-in-and-fighting-told-over-50-years",
+     "pubdate": "2026-10-21",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "Here's A Recap Of The October 2026 ID@Xbox Showcase",
+     "url": "https://gameinformer.com/2026/10/20/heres-a-recap-of-the-october-2026-idxbox-showcase",
+     "pubdate": "2026-10-20",
+     "date_src": "feed",
+     "age_days": 2
+    }
+   ],
+   "extraction": "rss",
+   "dated_items": 4
   }
  ]
 }

@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-10-22T14:40:00",
+ "fetched_at": "2026-10-23T16:45:50",
  "summary": {
   "sources_total": 75,
   "sources_alive": 73,
@@ -191,7 +191,7 @@
      "url": "https://www.yjwujian.cn/news/update/20261010/33456_1316267.html",
      "pubdate": "2026-10-10",
      "date_src": "url",
-     "age_days": 12
+     "age_days": 13
     }
    ],
    "extraction": "extracted",
@@ -211,35 +211,35 @@
      "url": "https://yhtj.163.com/news/update/20261021/36482_1317337.html",
      "pubdate": "2026-10-21",
      "date_src": "url",
-     "age_days": 1
+     "age_days": 2
     },
     {
      "title": "公告 1014 - 更新公告|新干员黑鸦上线，机械军团加入战场！ 亲爱的萤火虫特遣队员们： 《萤火突击》将于2026年10月15日06:00（UTC+8）开始进",
      "url": "https://yhtj.163.com/news/update/20261014/36482_1316606.html",
      "pubdate": "2026-10-14",
      "date_src": "url",
-     "age_days": 8
+     "age_days": 9
     },
     {
      "title": "公告 0928 - 萤火突击9月28日SS10新赛季重启公告 亲爱的萤火虫特遣队员们： 《萤火突击》将于2026年9月28日23:30（UTC+8）开始进行维护",
      "url": "https://yhtj.163.com/news/update/20260928/36482_1315263.html",
      "pubdate": "2026-09-28",
      "date_src": "url",
-     "age_days": 24
+     "age_days": 25
     },
     {
      "title": "公告 0909 - 更新公告|召回战友送金龙、第三商会-地下回收活动明日开启！ 亲爱的萤火虫特遣队员们： 《萤火突击》将于2026年9月10日06:00（UTC",
      "url": "https://yhtj.163.com/news/update/20260909/36482_1313449.html",
      "pubdate": "2026-09-09",
      "date_src": "url",
-     "age_days": 43
+     "age_days": 44
     },
     {
      "title": "公告 0819 - 更新公告|暑期流萤活动启程、镭钻工厂返场！ 亲爱的萤火虫特遣队员们： 《萤火突击》将于2026年8月20日06:00（UTC+8）开始进行维",
      "url": "https://yhtj.163.com/news/update/20260819/36482_1311689.html",
      "pubdate": "2026-08-19",
      "date_src": "url",
-     "age_days": 64
+     "age_days": 65
     }
    ],
    "extraction": "extracted",
@@ -358,14 +358,14 @@
      "url": "https://yys.163.com/skill/shishen/20260727/23027_1309228.html",
      "pubdate": "2026-07-27",
      "date_src": "url",
-     "age_days": 87
+     "age_days": 88
     },
     {
      "title": "【式神】 承千斤之重，报万顷福鸣，SSR毗沙门天玩家实测解析在此奉上→",
      "url": "https://yys.163.com/news/official/20260702/22592_1306396.html",
      "pubdate": "2026-07-02",
      "date_src": "url",
-     "age_days": 112
+     "age_days": 113
     }
    ],
    "extraction": "extracted",
@@ -536,23 +536,23 @@
    "error": null,
    "items": [
     {
-     "title": "语音念咒 + 实时卡牌对战 |《叨叨巫师》展位介绍",
-     "url": "https://www.gcores.com/articles/221266",
-     "pubdate": "2026-10-22",
+     "title": "北京站逛展攻略请查收｜BOE电竞高阶联盟邀你一起开玩！",
+     "url": "https://www.gcores.com/articles/221361",
+     "pubdate": "2026-10-23",
      "date_src": "feed",
      "age_days": 0
     },
     {
-     "title": "《上古卷轴OL》第二季“天际回响”现已上线",
-     "url": "https://www.gcores.com/articles/221301",
-     "pubdate": "2026-10-22",
+     "title": "燕云十六声丨核聚变参展情报",
+     "url": "https://www.gcores.com/articles/221360",
+     "pubdate": "2026-10-23",
      "date_src": "feed",
      "age_days": 0
     },
     {
-     "title": "【抽奖】核聚变首发！清大光德 Switch2 护眼膜 ×10 免费抽",
-     "url": "https://www.gcores.com/articles/221300",
-     "pubdate": "2026-10-22",
+     "title": "致态参展核聚变游戏嘉年华北京站",
+     "url": "https://www.gcores.com/articles/221310",
+     "pubdate": "2026-10-23",
      "date_src": "feed",
      "age_days": 0
     }
@@ -577,22 +577,22 @@
      "age_days": null
     },
     {
-     "title": "《影之刃零》玩前必看！15个你可能不知道的细节",
-     "url": "https://www.gamersky.com/news/202610/2233040.shtml",
-     "pubdate": null,
-     "date_src": null,
-     "age_days": null
+     "title": "王源模仿者遭\"爆头\" 明星模仿者爆火粉丝应该愤怒吗",
+     "url": "https://www.gamersky.com/news/202610/2233847.shtml",
+     "pubdate": "2026-10-23",
+     "date_src": "text",
+     "age_days": 0
     },
     {
-     "title": "《影之刃零》预告给老玩家看潮了！系列杀招重现江湖",
-     "url": "https://www.gamersky.com/news/202610/2233162.shtml",
-     "pubdate": "2026-10-22",
+     "title": "为《影之刃零》发售放假一天！国产厂商严肃学习",
+     "url": "https://www.gamersky.com/news/202610/2233846.shtml",
+     "pubdate": "2026-10-23",
      "date_src": "text",
      "age_days": 0
     }
    ],
    "extraction": "extracted",
-   "dated_items": 1
+   "dated_items": 2
   },
   {
    "id": "chuapp",
@@ -604,18 +604,18 @@
    "error": null,
    "items": [
     {
-     "title": "裁员潮席卷游戏行业，独立作曲家怎样渡过难关？ 10.21",
-     "url": "https://www.chuapp.com/article/291705.html",
+     "title": "Eternal Summer访谈：《极乐迪斯科》精神最激进的继承者是怎么想的？ 10.22",
+     "url": "https://www.chuapp.com/article/291706.html",
      "pubdate": null,
      "date_src": null,
      "age_days": null
     },
     {
-     "title": "和宫崎英高畅聊，寻找“类魂”游戏的魂 10.21",
-     "url": "https://www.chuapp.com/article/291701.html",
+     "title": "裁员潮席卷游戏行业，独立作曲家怎样渡过难关？ 10.21",
+     "url": "https://www.chuapp.com/article/291705.html",
      "pubdate": "2025-11-10",
      "date_src": "text",
-     "age_days": 346
+     "age_days": 347
     },
     {
      "title": "《THE FINALS》国服《终极角逐》正式定档11月18日 《终极角逐》国服正式官宣定档11月18日。",
@@ -686,15 +686,15 @@
      "age_days": null
     },
     {
-     "title": "“我们当时正在开发一款伟大的游戏”——EA 关闭 BioWare 后，前 Mass Effect 5 编剧打破沉默",
-     "url": "https://news.17173.com/content/10222026/140633753.shtml",
-     "pubdate": "2026-10-22",
-     "date_src": "text",
-     "age_days": 0
+     "title": "《原神》千星奇域的第一年：10万创作者聚集，生态逐步成型",
+     "url": "https://news.17173.com/content/10232026/155514075.shtml",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
     }
    ],
    "extraction": "extracted",
-   "dated_items": 1
+   "dated_items": 0
   },
   {
    "id": "gematsu",
@@ -706,23 +706,23 @@
    "error": null,
    "items": [
     {
-     "title": "Do Not Feed the Monkeys 2099 for PS4, Switch now available",
-     "url": "https://www.gematsu.com/2026/10/do-not-feed-the-monkeys-2099-for-ps4-switch-now-available",
-     "pubdate": "2026-10-22",
+     "title": "Romancing SaGa 2: Revenge of the Seven shipments and digital sales top one million",
+     "url": "https://www.gematsu.com/2026/10/romancing-saga-2-revenge-of-the-seven-shipments-and-digital-sales-top-one-million",
+     "pubdate": "2026-10-23",
      "date_src": "feed",
      "age_days": 0
     },
     {
-     "title": "Pocket Mirror: GoldenerTraum now available for PS5, PS4, and Switch",
-     "url": "https://www.gematsu.com/2026/10/pocket-mirror-goldenertraum-now-available-for-ps5-ps4-and-switch",
-     "pubdate": "2026-10-22",
+     "title": "Azur Promilia launches November 26 in Japan, South Korea, Taiwan, and China",
+     "url": "https://www.gematsu.com/2026/10/azur-promilia-launches-november-26-in-japan-south-korea-taiwan-and-china",
+     "pubdate": "2026-10-23",
      "date_src": "feed",
      "age_days": 0
     },
     {
-     "title": "Is It Wrong to Try to Pick Up Girls in a Dungeon? Frontier Zero announced for PC, iOS, and Android",
-     "url": "https://www.gematsu.com/2026/10/is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-frontier-zero-announced-for-pc-ios-and-android",
-     "pubdate": "2026-10-22",
+     "title": "Next: The Portopia Serial Murder Case launches March 4, 2027 in Japan",
+     "url": "https://www.gematsu.com/2026/10/next-the-portopia-serial-murder-case-launches-march-4-2027-in-japan",
+     "pubdate": "2026-10-23",
      "date_src": "feed",
      "age_days": 0
     }
@@ -780,11 +780,11 @@
      "age_days": null
     },
     {
-     "title": "永劫无间职业联赛 (NARAKA:BLADEPOINT PRO LEAGUE) 赛事规则 秋季赛 [09-30]",
-     "url": "https://www.yjwujian.cn/news/match/20260930/36478_1315619.html",
-     "pubdate": "2026-09-30",
+     "title": "永劫无间职业联赛 (NARAKA:BLADEPOINT PRO LEAGUE) 赛事规则 秋季赛 [10-22]",
+     "url": "https://www.yjwujian.cn/news/match/20261022/36478_1317514.html",
+     "pubdate": "2026-10-22",
      "date_src": "url",
-     "age_days": 22
+     "age_days": 1
     }
    ],
    "extraction": "extracted",
@@ -830,21 +830,21 @@
      "url": "https://id5.163.com/news/update/20260722/26477_1308605.html",
      "pubdate": "2026-07-22",
      "date_src": "url",
-     "age_days": 92
+     "age_days": 93
     },
     {
      "title": "公告 《第五人格》违规名单公示（2025年12月） 2026-01-08",
      "url": "https://id5.163.com/news/update/20260108/26477_1280936.html",
      "pubdate": "2026-01-08",
      "date_src": "url",
-     "age_days": 287
+     "age_days": 288
     },
     {
      "title": "公告 小米渠道角色资产找回公告 2025-12-29",
      "url": "https://id5.163.com/news/update/20251226/26477_1278864.html",
      "pubdate": "2025-12-26",
      "date_src": "url",
-     "age_days": 300
+     "age_days": 301
     }
    ],
    "extraction": "extracted",
@@ -864,35 +864,35 @@
      "url": "https://yys.163.com/news/update/20261021/23024_1317347.html",
      "pubdate": "2026-10-21",
      "date_src": "url",
-     "age_days": 1
+     "age_days": 2
     },
     {
      "title": "10-21 《阴阳师》违规处罚公告（10月21日 上） 《阴阳师》致力于打造一个公平、健康、良好的游戏环境。 目前有部分玩家采取“自动挂机”的手段实现持续刷取资",
      "url": "https://yys.163.com/news/update/20261021/23024_1317329.html",
      "pubdate": "2026-10-21",
      "date_src": "url",
-     "age_days": 1
+     "age_days": 2
     },
     {
      "title": "10-20 《阴阳师》手游10月21日维护更新公告 ※维护时间 2026年10月21日7:30-9:00 ※亲爱的阴阳师大人： 为了给大家带来更好的游戏体验，服",
      "url": "https://yys.163.com/news/update/20261020/23024_1317168.html",
      "pubdate": "2026-10-20",
      "date_src": "url",
-     "age_days": 2
+     "age_days": 3
     },
     {
      "title": "10-13 《阴阳师》手游10月14日维护更新公告 ※维护时间 2026年10月14日7:30-9:00 ※亲爱的阴阳师大人： 为了给大家带来更好的游戏体验，服",
      "url": "https://yys.163.com/news/update/20261013/23024_1316520.html",
      "pubdate": "2026-10-13",
      "date_src": "url",
-     "age_days": 9
+     "age_days": 10
     },
     {
      "title": "10-09 《阴阳师》手游10月10日维护更新公告 ※维护时间 2026年10月10日7:00-9:00 ※亲爱的阴阳师大人： 为了给大家带来更好的游戏体验，服",
      "url": "https://yys.163.com/news/update/20261009/23024_1316181.html",
      "pubdate": "2026-10-09",
      "date_src": "url",
-     "age_days": 13
+     "age_days": 14
     }
    ],
    "extraction": "extracted",
@@ -944,21 +944,21 @@
      "url": "https://store.steampowered.com/news/286827/",
      "pubdate": "2026-10-16",
      "date_src": "feed",
-     "age_days": 6
+     "age_days": 7
     },
     {
      "title": "Team Fortress 2 Update Released",
      "url": "https://store.steampowered.com/news/285796/",
      "pubdate": "2026-10-12",
      "date_src": "feed",
-     "age_days": 10
+     "age_days": 11
     },
     {
      "title": "Team Fortress 2 Update Released",
      "url": "https://store.steampowered.com/news/285564/",
      "pubdate": "2026-10-05",
      "date_src": "feed",
-     "age_days": 17
+     "age_days": 18
     }
    ],
    "extraction": "rss",
@@ -978,28 +978,28 @@
      "url": "https://store.steampowered.com/news/app/570/view/681888927386174386",
      "pubdate": "2026-10-07",
      "date_src": "feed",
-     "age_days": 15
+     "age_days": 16
     },
     {
      "title": "7.41f 游戏性版本",
      "url": "https://store.steampowered.com/news/app/570/view/677383425371407609",
      "pubdate": "2026-09-15",
      "date_src": "feed",
-     "age_days": 37
+     "age_days": 38
     },
     {
      "title": "2026年国际邀请赛总冠军",
      "url": "https://store.steampowered.com/news/app/570/view/680759856779493378",
      "pubdate": "2026-08-27",
      "date_src": "feed",
-     "age_days": 56
+     "age_days": 57
     },
     {
      "title": "国际邀请赛主赛事",
      "url": "https://store.steampowered.com/news/app/570/view/680758587997293716",
      "pubdate": "2026-08-19",
      "date_src": "feed",
-     "age_days": 64
+     "age_days": 65
     }
    ],
    "extraction": "rss",
@@ -1015,32 +1015,32 @@
    "error": null,
    "items": [
     {
-     "title": "Counter-Strike 2 Update",
+     "title": "《反恐精英》更新",
+     "url": "https://store.steampowered.com/news/app/730/view/694275728822244199",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "《反恐精英》更新",
      "url": "https://store.steampowered.com/news/app/730/view/687519694976975304",
      "pubdate": "2026-10-14",
      "date_src": "feed",
-     "age_days": 8
+     "age_days": 9
     },
     {
      "title": "《反恐精英》更新",
      "url": "https://store.steampowered.com/news/app/730/view/675134162359814146",
      "pubdate": "2026-10-08",
      "date_src": "feed",
-     "age_days": 14
+     "age_days": 15
     },
     {
      "title": "《反恐精英》更新",
      "url": "https://store.steampowered.com/news/app/730/view/675133527946168308",
      "pubdate": "2026-10-05",
      "date_src": "feed",
-     "age_days": 17
-    },
-    {
-     "title": "《反恐精英》更新",
-     "url": "https://store.steampowered.com/news/app/730/view/675133527946167652",
-     "pubdate": "2026-10-02",
-     "date_src": "feed",
-     "age_days": 20
+     "age_days": 18
     }
    ],
    "extraction": "rss",
@@ -1060,21 +1060,21 @@
      "url": "https://store.steampowered.com/news/app/1203220/view/683016095346461413",
      "pubdate": "2026-10-21",
      "date_src": "feed",
-     "age_days": 1
+     "age_days": 2
     },
     {
      "title": "10月20日《永劫无间》违规玩家封禁公告",
      "url": "https://store.steampowered.com/news/app/1203220/view/683016095346460777",
      "pubdate": "2026-10-20",
      "date_src": "feed",
-     "age_days": 2
+     "age_days": 3
     },
     {
      "title": "10月13日《永劫无间》违规玩家封禁公告",
      "url": "https://store.steampowered.com/news/app/1203220/view/680763661892980063",
      "pubdate": "2026-10-13",
      "date_src": "feed",
-     "age_days": 9
+     "age_days": 10
     }
    ],
    "extraction": "rss",
@@ -1090,25 +1090,25 @@
    "error": null,
    "items": [
     {
+     "title": "10月22日更新公告丨惊喜渡鸦＆捣蛋鬼商店活动开启",
+     "url": "https://store.steampowered.com/news/app/2507950/view/678513130127495433",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
      "title": "10月15日更新公告丨黑潮爆破＆干员平衡性调整",
      "url": "https://store.steampowered.com/news/app/2507950/view/672882996184875611",
      "pubdate": "2026-10-15",
      "date_src": "feed",
-     "age_days": 7
+     "age_days": 8
     },
     {
      "title": "G.T.I. Security | Penalties for RMT",
      "url": "https://store.steampowered.com/news/app/2507950/view/689770861148769741",
      "pubdate": "2026-10-12",
      "date_src": "feed",
-     "age_days": 10
-    },
-    {
-     "title": "G.T.I. Security | 违规处罚通知",
-     "url": "https://store.steampowered.com/news/app/2507950/view/689770861148769739",
-     "pubdate": "2026-10-12",
-     "date_src": "feed",
-     "age_days": 10
+     "age_days": 11
     }
    ],
    "extraction": "rss",
@@ -1128,21 +1128,21 @@
      "url": "https://store.steampowered.com/news/app/2073620/view/742688880388474893",
      "pubdate": "2026-10-20",
      "date_src": "feed",
-     "age_days": 2
+     "age_days": 3
     },
     {
      "title": "10月15日少女前线2：追放联动开启，联动多重福利正式公布！",
      "url": "https://store.steampowered.com/news/app/2073620/view/693148560867200526",
      "pubdate": "2026-10-14",
      "date_src": "feed",
-     "age_days": 8
+     "age_days": 9
     },
     {
      "title": "《暗区突围：无限》违规行为处罚公告（0928-1011）",
      "url": "https://store.steampowered.com/news/app/2073620/view/693148560867200524",
      "pubdate": "2026-10-14",
      "date_src": "feed",
-     "age_days": 8
+     "age_days": 9
     }
    ],
    "extraction": "rss",
@@ -1158,37 +1158,37 @@
    "error": null,
    "items": [
     {
-     "title": "《无畏契约》冠军夜刀光落定，电竞之都上海带来别样秋日周末",
-     "url": "http://www.gamelook.com.cn/2026/10/604572/",
-     "pubdate": "2026-10-22",
+     "title": "游戏人诉苦：游戏收入56万美元，到手仅7.3万，“等于5年月薪8000”",
+     "url": "http://www.gamelook.com.cn/2026/10/604664/",
+     "pubdate": "2026-10-23",
      "date_src": "feed",
      "age_days": 0
     },
     {
-     "title": "离大谱！《WarDogs》新赛季上线3天就要停？CEO认错：“我们确实搞砸了”",
-     "url": "http://www.gamelook.com.cn/2026/10/604554/",
-     "pubdate": "2026-10-22",
+     "title": "“没故事可讲”的游戏股，跌了一整年！",
+     "url": "http://www.gamelook.com.cn/2026/10/604599/",
+     "pubdate": "2026-10-23",
      "date_src": "feed",
      "age_days": 0
     },
     {
-     "title": "不是二游！腾讯轻怪谈都市开放世界亮相，制作人来自网易？",
-     "url": "http://www.gamelook.com.cn/2026/10/604492/",
-     "pubdate": "2026-10-22",
+     "title": "1人4小时开发，“AI投胎人生模拟游戏”火了！",
+     "url": "http://www.gamelook.com.cn/2026/10/604620/",
+     "pubdate": "2026-10-23",
      "date_src": "feed",
      "age_days": 0
     },
     {
-     "title": "吹哥亲述“疯狂十年”！自研语言、自研引擎、烧光2亿，“下款游戏会容易点”",
-     "url": "http://www.gamelook.com.cn/2026/10/604485/",
-     "pubdate": "2026-10-22",
+     "title": "叠纸不画饼：姚润昊机器人公司来了，纸片人老公真要“走出屏幕”？",
+     "url": "http://www.gamelook.com.cn/2026/10/604651/",
+     "pubdate": "2026-10-23",
      "date_src": "feed",
      "age_days": 0
     },
     {
-     "title": "集体上头！《深空当铺》Steam测试爆红，3万赛博店主“沉迷讨价还价”",
-     "url": "http://www.gamelook.com.cn/2026/10/604455/",
-     "pubdate": "2026-10-22",
+     "title": "《地铁跑酷》老板分享：15年，零买量，为何还能有1.5亿MAU？",
+     "url": "http://www.gamelook.com.cn/2026/10/604597/",
+     "pubdate": "2026-10-23",
      "date_src": "feed",
      "age_days": 0
     }
@@ -1206,39 +1206,39 @@
    "error": null,
    "items": [
     {
-     "title": "前网易制作人领衔：腾讯开放世界新作押宝“癫味赛道”？",
-     "url": "https://www.youxituoluo.com/534980.html",
-     "pubdate": "2026-10-22",
+     "title": "《杖剑传说》16个月流水破48亿元，卢竑岩：我们不赛马，只养马群​",
+     "url": "https://www.youxituoluo.com/534990.html",
+     "pubdate": "2026-10-23",
      "date_src": "feed",
      "age_days": 0
     },
     {
-     "title": "Supercell正式全资收购Metacore，《庄园合合》累计流水近50亿元",
-     "url": "https://www.youxituoluo.com/534976.html",
-     "pubdate": "2026-10-21",
+     "title": "深职大“极智游戏设计工坊”启动：政校企协共探“AI+游戏”人才培养",
+     "url": "https://www.youxituoluo.com/534988.html",
+     "pubdate": "2026-10-23",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
+     "title": "暴死的二游们，想靠单机“秽土转生”",
+     "url": "https://www.youxituoluo.com/534986.html",
+     "pubdate": "2026-10-23",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
+     "title": "EA关闭BioWare，取消《质量效应》新作，全球裁员约400人",
+     "url": "https://www.youxituoluo.com/534984.html",
+     "pubdate": "2026-10-22",
      "date_src": "feed",
      "age_days": 1
     },
     {
-     "title": "米哈游的新作，看了不会“烧心”",
-     "url": "https://www.youxituoluo.com/534975.html",
-     "pubdate": "2026-10-21",
+     "title": "大伟哥的“脑机梦”醒了？米哈游退出零唯一思股东行列",
+     "url": "https://www.youxituoluo.com/534983.html",
+     "pubdate": "2026-10-22",
      "date_src": "feed",
      "age_days": 1
-    },
-    {
-     "title": "怕AI“抄太快”，游戏人不敢在Steam新品节放试玩了",
-     "url": "https://www.youxituoluo.com/534974.html",
-     "pubdate": "2026-10-21",
-     "date_src": "feed",
-     "age_days": 1
-    },
-    {
-     "title": "深圳南山区国资出手，游戏赛道再添战略资本",
-     "url": "https://www.youxituoluo.com/534973.html",
-     "pubdate": "2026-10-20",
-     "date_src": "feed",
-     "age_days": 2
     }
    ],
    "extraction": "rss",
@@ -1254,25 +1254,25 @@
    "error": null,
    "items": [
     {
-     "title": "Cloud Playtime Now Available to Test with XBOX Insiders",
-     "url": "https://news.xbox.com/en-us/2026/10/21/cloud-playtime-now-available-to-test-with-xbox-insiders/",
-     "pubdate": "2026-10-21",
+     "title": "How More Than 40 New Traits Change Your Strategy in Becastled",
+     "url": "https://news.xbox.com/en-us/2026/10/22/how-more-than-40-new-traits-change-your-strategy/",
+     "pubdate": "2026-10-22",
      "date_src": "feed",
      "age_days": 1
     },
     {
-     "title": "Thirty Years of Lara Croft",
-     "url": "https://news.xbox.com/en-us/2026/10/21/thirty-years-of-lara-croft/",
-     "pubdate": "2026-10-21",
+     "title": "The Power of PEAK Friendship, Coming to XBOX Today",
+     "url": "https://news.xbox.com/en-us/2026/10/22/peak-friendship-coming-to-xbox-today/",
+     "pubdate": "2026-10-22",
      "date_src": "feed",
      "age_days": 1
     },
     {
-     "title": "Think You’ve Beaten Fountains? Prove it in the Gauntlet",
-     "url": "https://news.xbox.com/en-us/2026/10/20/think-youve-beaten-fountains/",
-     "pubdate": "2026-10-20",
+     "title": "Call of Duty: Modern Warfare 4 w/Devs – Campaign, Multiplayer, DMZ, and More | Official XBOX Podcast",
+     "url": "https://news.xbox.com/en-us/2026/10/22/call-of-duty-modern-warfare-4-w-devs-campaign-multiplayer-dmz-and-more-official-xbox-podcast/",
+     "pubdate": "2026-10-22",
      "date_src": "feed",
-     "age_days": 2
+     "age_days": 1
     }
    ],
    "extraction": "rss",
@@ -1295,23 +1295,23 @@
      "age_days": null
     },
     {
-     "title": "《赛博朋克2077》重大更新内容官宣！新任务+双枪等",
-     "url": "https://www.gamersky.com/news/202610/2232884.shtml",
-     "pubdate": "2026-10-21",
+     "title": "《命运石之门重制》团队谈新作：想重制《混沌之脑》",
+     "url": "https://www.gamersky.com/news/202610/2233554.shtml",
+     "pubdate": "2026-10-22",
      "date_src": "text",
      "age_days": 1
     },
     {
-     "title": "《海贼王》新游IGN 6分！不是粉丝没必要急着玩",
-     "url": "https://www.gamersky.com/news/202610/2232883.shtml",
+     "title": "使命召唤\"高军官\"人气飙升 演员履历盘点曾演多部美剧",
+     "url": "https://www.gamersky.com/news/202610/2233551.shtml",
      "pubdate": "2026-10-22",
      "date_src": "text",
-     "age_days": 0
+     "age_days": 1
     },
     {
-     "title": "《赛博朋克2077》现已支持XPA！买一份送一份",
-     "url": "https://www.gamersky.com/news/202610/2232882.shtml",
-     "pubdate": "2026-10-21",
+     "title": "小岛秀夫谈《死亡搁浅》争议：只有云玩家才跟风黑！",
+     "url": "https://www.gamersky.com/news/202610/2233550.shtml",
+     "pubdate": "2026-10-22",
      "date_src": "text",
      "age_days": 1
     }
@@ -1363,32 +1363,32 @@
    "error": null,
    "items": [
     {
+     "title": "2026年9月のPS Storeダウンロードランキング！ PS5®では『鬼武者 Way of the Sword』が第1位！",
+     "url": "https://blog.ja.playstation.com/2026/10/23/20261023-monthly-ps-store-ranking-s/",
+     "pubdate": "2026-10-23",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
+     "title": "ハロウィンシーズンに遊びたい、おすすめのインディーホラーゲーム8選！",
+     "url": "https://blog.ja.playstation.com/2026/10/23/20261023-horror-indie-game-deep-dive-feature-o/",
+     "pubdate": "2026-10-23",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
      "title": "『Call of Duty: Modern Warfare 4』明日10月23日発売！ 現代戦をテーマにしたFPSシリーズの新章が開幕",
      "url": "https://blog.ja.playstation.com/2026/10/22/20261022-codmw4-launch-reminder-s/",
      "pubdate": "2026-10-22",
      "date_src": "feed",
-     "age_days": 0
+     "age_days": 1
     },
     {
      "title": "『STRANGER THAN HEAVEN』試遊レポート＆インタビュー！ バトルやショービジネスを通して描かれる大東真の人生",
      "url": "https://blog.ja.playstation.com/2026/10/21/20261021-stranger-than-heaven-hands-on-preview-s/",
      "pubdate": "2026-10-21",
      "date_src": "feed",
-     "age_days": 1
-    },
-    {
-     "title": "『薬屋のひとりごと ～偽りの皇弟～』2027年3月18日（木）発売決定！ パッケージ版の予約受付を開始",
-     "url": "https://blog.ja.playstation.com/2026/10/21/20261021-kusuriyanohitorigoto-release-date-reveal-o/",
-     "pubdate": "2026-10-21",
-     "date_src": "feed",
-     "age_days": 1
-    },
-    {
-     "title": "『FINAL FANTASY RESONANCE』明日10月22日発売！ HD-2Dで描かれるクリスタルを巡る物語",
-     "url": "https://blog.ja.playstation.com/2026/10/21/20261021-ffrs-launch-reminder-s/",
-     "pubdate": "2026-10-21",
-     "date_src": "feed",
-     "age_days": 1
+     "age_days": 2
     }
    ],
    "extraction": "rss",
@@ -1404,29 +1404,29 @@
    "error": null,
    "items": [
     {
-     "title": "周烨2小时前0条评论 《荒野乱斗》LCQ，与一款“小众游戏”共赴金票之旅 拿好你的金票，让我们出发吧。",
+     "title": "酱油妹4小时前0条评论 2026北京亦庄·未来游戏电竞科技大会成功举办 现场发布“2026游戏电竞十大科技创新应用场景”，推动北京亦庄游戏电竞产业生态合作项目集",
+     "url": "http://www.chuapp.com/article/291710.html",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    },
+    {
+     "title": "祝思齐21小时前0条评论 Eternal Summer访谈：《极乐迪斯科》精神最激进的继承者是怎么想的？ 最糟糕的事就是相信“别无选择”。",
+     "url": "http://www.chuapp.com/article/291706.html",
+     "pubdate": null,
+     "date_src": null,
+     "age_days": null
+    },
+    {
+     "title": "周烨10月22日0条评论 《荒野乱斗》LCQ，与一款“小众游戏”共赴金票之旅 拿好你的金票，让我们出发吧。",
      "url": "http://www.chuapp.com/article/291704.html",
      "pubdate": null,
      "date_src": null,
      "age_days": null
     },
     {
-     "title": "赵雨20小时前0条评论 触乐怪话：勇闯二手游戏圈 经营咸鱼，何尝不是一种模拟经营游戏。",
+     "title": "赵雨10月21日0条评论 触乐怪话：勇闯二手游戏圈 经营咸鱼，何尝不是一种模拟经营游戏。",
      "url": "http://www.chuapp.com/article/291702.html",
-     "pubdate": null,
-     "date_src": null,
-     "age_days": null
-    },
-    {
-     "title": "等等20小时前0条评论 裁员潮席卷游戏行业，独立作曲家怎样渡过难关？ 对许多自由职业者来说，在游戏公司谋求一份全职工作，或许已经不再是终极目标。",
-     "url": "http://www.chuapp.com/article/291705.html",
-     "pubdate": null,
-     "date_src": null,
-     "age_days": null
-    },
-    {
-     "title": "祝佳音23小时前0条评论 《皇牌空战8：希孚之翼》：祖宗之法基础上的微创新 这是一个目标用户很明确地知道自己想要什么，开发者也很明确地知道目标用户想要什么的游戏",
-     "url": "http://www.chuapp.com/article/291703.html",
      "pubdate": null,
      "date_src": null,
      "age_days": null
@@ -1449,28 +1449,28 @@
      "url": "https://www.gamersky.com/news/201809/1103639.shtml",
      "pubdate": "2018-09-23",
      "date_src": "text",
-     "age_days": 2951
+     "age_days": 2952
     },
     {
      "title": "《无双大蛇3》将加入简体中文 发售日上线PS4补丁",
      "url": "https://www.gamersky.com/news/201809/1103627.shtml",
      "pubdate": "2018-09-23",
      "date_src": "text",
-     "age_days": 2951
+     "age_days": 2952
     },
     {
      "title": "玩过《荒野大镖客2》之后，我整理了很多需知的细节",
      "url": "https://www.gamersky.com/news/201809/1102822.shtml",
      "pubdate": "2018-09-21",
      "date_src": "text",
-     "age_days": 2953
+     "age_days": 2954
     },
     {
      "title": "PSVR《揭秘计划2：远古之战》发售 火星之战爆发",
      "url": "https://www.gamersky.com/news/201809/1102376.shtml",
      "pubdate": "2018-09-20",
      "date_src": "text",
-     "age_days": 2954
+     "age_days": 2955
     }
    ],
    "extraction": "extracted",
@@ -1486,98 +1486,98 @@
    "error": null,
    "items": [
     {
-     "title": "GTC2026 全球流量大会（上海）即将启幕，Decodo德口多诚邀您共话全球化未来",
-     "url": "https://www.baijing.cn/article/57098",
-     "pubdate": "2026-10-22",
+     "title": "新增21城，美团Keeta为何在巴西提速",
+     "url": "https://www.baijing.cn/article/57116",
+     "pubdate": "2026-10-23",
      "date_src": "feed",
      "extra": {
-      "views": 465,
-      "synopsis": "Decodo（德口多）作为高质量的数据收集基础设施，将重磅亮相 GTC2026 全球流量大会（上海）。",
-      "from": "Decodo"
+      "views": 2185,
+      "synopsis": "Keeta 在巴西是怎么一步步打开局面乃至提速的？",
+      "from": "增长工场"
      },
      "age_days": 0
     },
     {
-     "title": "亚马逊突发，IOR核查升级，你的货可能卡在美国",
-     "url": "https://www.baijing.cn/article/57097",
-     "pubdate": "2026-10-22",
+     "title": "Side收购成都美术工作室Roboto，这个全球游戏服务商把美术决策中枢放到中国西部",
+     "url": "https://www.baijing.cn/article/57119",
+     "pubdate": "2026-10-23",
      "date_src": "feed",
      "extra": {
-      "views": 1396,
-      "synopsis": "建议紧急自查。",
-      "from": "雨果网"
+      "views": 4353,
+      "synopsis": "全球游戏服务提供商 Side 于 10 月 21 日正式宣布，收购成都精品游戏美术工作室 Roboto Entertainment，并以此为基础成立 Side 成都工作室。",
+      "from": "游戏茶馆"
      },
      "age_days": 0
     },
     {
-     "title": "全面开放，TikTok Shop美区上线直播「砍价」和「拼团」玩法",
-     "url": "https://www.baijing.cn/article/57096",
-     "pubdate": "2026-10-22",
+     "title": "巴西RMG禁令后的冲击波：三大平台集体收紧，3500人被裁只是第一波？",
+     "url": "https://www.baijing.cn/article/57117",
+     "pubdate": "2026-10-23",
      "date_src": "feed",
      "extra": {
-      "views": 3732,
-      "synopsis": "TikTok 直播间，又开始“热闹”起来。",
+      "views": 5015,
+      "synopsis": "持牌产品上诉，最新到哪一步？",
+      "from": "大声出海"
+     },
+     "age_days": 0
+    },
+    {
+     "title": "Shopee悄悄开新站，母公司扔出大招",
+     "url": "https://www.baijing.cn/article/57115",
+     "pubdate": "2026-10-23",
+     "date_src": "feed",
+     "extra": {
+      "views": 6798,
+      "synopsis": "跨境卖家又能进军新市场？",
+      "from": "东南亚电商观察"
+     },
+     "age_days": 0
+    },
+    {
+     "title": "番茄征集海外AI短剧剧本，欧美保底3万、拉美2万",
+     "url": "https://www.baijing.cn/article/57114",
+     "pubdate": "2026-10-23",
+     "date_src": "feed",
+     "extra": {
+      "views": 8312,
+      "synopsis": "番茄发布海外 AI 短剧剧本征稿，面向拉美、欧美市场征集 AI 仿真人对话型剧本。",
+      "from": "DataEye短剧出海"
+     },
+     "age_days": 0
+    },
+    {
+     "title": "上架2年突然爆单，国产彩绘盘在TikTok 4周卖420万",
+     "url": "https://www.baijing.cn/article/57113",
+     "pubdate": "2026-10-23",
+     "date_src": "feed",
+     "extra": {
+      "views": 11698,
+      "synopsis": "国产彩绘盘 28 天成交 420 万+。",
       "from": "TT123跨境电商"
      },
      "age_days": 0
     },
     {
-     "title": "Grab收购中国台湾foodpanda被岛内监管否了",
-     "url": "https://www.baijing.cn/article/57095",
-     "pubdate": "2026-10-22",
+     "title": "老外来中国疯狂扫货，出海生意开始反转了？",
+     "url": "https://www.baijing.cn/article/57112",
+     "pubdate": "2026-10-23",
      "date_src": "feed",
      "extra": {
-      "views": 10271,
-      "synopsis": "这次 Grab 接手，市场仍然保留两家主要竞争者，为什么也没有通过？",
-      "from": "墨腾创投"
+      "views": 12746,
+      "synopsis": "外国人的行李箱里，装着哪些中国品牌？",
+      "from": "WaveGlocal"
      },
      "age_days": 0
     },
     {
-     "title": "迈向4000亿美元大关，AI会是东南亚数字经济的下一个增长引擎么？",
-     "url": "https://www.baijing.cn/article/57094",
-     "pubdate": "2026-10-22",
+     "title": "30天74万美元，不起眼的一口锅，怎么成了印尼好生意？",
+     "url": "https://www.baijing.cn/article/57111",
+     "pubdate": "2026-10-23",
      "date_src": "feed",
      "extra": {
-      "views": 11503,
-      "synopsis": "AI 成为贯穿多个领域的重要观察方向。",
-      "from": "动点出海"
-     },
-     "age_days": 0
-    },
-    {
-     "title": "TikTok Shop流量四国登顶，Shopee还在较劲",
-     "url": "https://www.baijing.cn/article/57093",
-     "pubdate": "2026-10-22",
-     "date_src": "feed",
-     "extra": {
-      "views": 11554,
-      "synopsis": "东南亚依旧是出海热门。",
+      "views": 11934,
+      "synopsis": "内容电商也是消费者生活的倒影。",
       "from": "兔克出海"
-     },
-     "age_days": 0
-    },
-    {
-     "title": "AI代理赛道再添新玩家，Anthropic推出Claude Duet预览版挑战OpenAI与Meta",
-     "url": "https://www.baijing.cn/article/57092",
-     "pubdate": "2026-10-22",
-     "date_src": "feed",
-     "extra": {
-      "views": 11270,
-      "synopsis": "Anthropic 周三宣布推出 Claude Duet 预览版。",
-      "from": "智通财经App"
-     },
-     "age_days": 0
-    },
-    {
-     "title": "微软拟2027年发布Xbox掌机，下一代主机2028年推出且售价或高达1800美元",
-     "url": "https://www.baijing.cn/article/57091",
-     "pubdate": "2026-10-22",
-     "date_src": "feed",
-     "extra": {
-      "views": 11381,
-      "synopsis": "微软正加速布局下一代游戏硬件矩阵。",
-      "from": "智通财经App"
      },
      "age_days": 0
     }
@@ -1674,14 +1674,14 @@
      "url": "http://www.nadianshi.com/2026/07/413907",
      "pubdate": "2026-07-01",
      "date_src": "text",
-     "age_days": 113
+     "age_days": 114
     },
     {
      "title": "活动 | 三国杀王者之战神王战广州收官 《三国杀：承天之弈》重磅首发",
      "url": "http://www.nadianshi.com/2026/06/413745",
      "pubdate": "2026-06-01",
      "date_src": "text",
-     "age_days": 143
+     "age_days": 144
     },
     {
      "title": "活动/会议",
@@ -1695,7 +1695,7 @@
      "url": "http://www.nadianshi.com/2026/06/413179",
      "pubdate": "2026-06-01",
      "date_src": "text",
-     "age_days": 143
+     "age_days": 144
     }
    ],
    "extraction": "extracted",
@@ -1747,46 +1747,46 @@
    "error": null,
    "items": [
     {
-     "title": "'We Were Working on a Great Game' — Former Mass Effect 5 Writers Speak Out After EA Shuts Down BioWare",
-     "url": "https://www.ign.com/articles/we-were-working-on-a-great-game-former-mass-effect-5-writers-speak-out-after-ea-shuts-down-bioware",
-     "pubdate": "2026-10-22",
+     "title": "Avatar: Seven Havens Episodes 7-9 Recap and Review",
+     "url": "https://www.ign.com/articles/avatar-seven-havens-episodes-7-9-recap-and-review",
+     "pubdate": "2026-10-23",
      "date_src": "feed",
      "age_days": 0
     },
     {
-     "title": "Dragon Ball Xenoverse 3 Narrows Release Window Following Player Feedback",
-     "url": "https://www.ign.com/articles/dragon-ball-xenoverse-3-narrows-release-window-following-player-feedback",
-     "pubdate": "2026-10-22",
+     "title": "The Battlestar Galactica Board Game Is Making a Surprise Comeback Next Year",
+     "url": "https://www.ign.com/articles/the-battlestar-galactica-board-game-is-making-a-surprise-comeback-next-year",
+     "pubdate": "2026-10-23",
      "date_src": "feed",
      "age_days": 0
     },
     {
-     "title": "Brandon Sanderson Wants to Know Who Really Wrote the Mr. Beast Book",
-     "url": "https://www.ign.com/articles/brandon-sanderson-wants-to-know-who-really-wrote-the-mr-beast-book",
-     "pubdate": "2026-10-22",
+     "title": "Clayface Ending Explained",
+     "url": "https://www.ign.com/articles/clayface-ending-explained-batman-dcu",
+     "pubdate": "2026-10-23",
      "date_src": "feed",
      "age_days": 0
     },
     {
-     "title": "GTA 6's Fast Food Restaurant, Burger Shot, Is Coming to Real Life in the Miami Heat's Arena",
-     "url": "https://www.ign.com/articles/gta-6s-fast-food-restaurant-burger-shot-is-coming-to-real-life-in-the-miami-heats-arena",
-     "pubdate": "2026-10-21",
+     "title": "Wo Long 2: Wings of Ember Gets Wuxia… and Let Me Fight a Horrific Spider Thing | IGN Preview",
+     "url": "https://www.ign.com/articles/wo-long-2-wings-of-ember-gets-wuxia-and-let-me-fight-a-horrific-spider-thing-ign-preview",
+     "pubdate": "2026-10-23",
      "date_src": "feed",
-     "age_days": 1
+     "age_days": 0
     },
     {
-     "title": "Call of Duty: Modern Warfare 4 DMZ Review So Far",
-     "url": "https://www.ign.com/articles/call-of-duty-modern-warfare-4-dmz-review",
-     "pubdate": "2026-10-21",
+     "title": "Save $50 Off the Endlessly Useful ASUS ZenScreen 16\" 1080p Portable USB Monitor Ahead of Black Friday",
+     "url": "https://www.ign.com/articles/asus-zenscreen-usb-portable-monitor-deal-october-2026",
+     "pubdate": "2026-10-23",
      "date_src": "feed",
-     "age_days": 1
+     "age_days": 0
     },
     {
-     "title": "Chris Pratt Reaffirms Star-Lord Will Return in the MCU and Plans Are Being Made Right Now",
-     "url": "https://www.ign.com/articles/chris-pratt-reaffirms-star-lord-will-return-in-the-mcu-and-plans-are-being-made-right-now",
-     "pubdate": "2026-10-21",
+     "title": "The Acer Nitro  RX 9060 XT Gaming PC Offers Great 1440p Gaming Performance for Just $1,200",
+     "url": "https://www.ign.com/articles/acer-nitro-radeon-rx-9060-xt-gaming-pc-deal-october-2026",
+     "pubdate": "2026-10-23",
      "date_src": "feed",
-     "age_days": 1
+     "age_days": 0
     }
    ],
    "extraction": "rss",
@@ -1802,37 +1802,37 @@
    "error": null,
    "items": [
     {
-     "title": "Ex-Blizzard boss says an $1,800 Xbox \"will never sell\" and current-gen is \"fine for 99%\" of people",
-     "url": "https://www.gamesradar.com/platforms/xbox/ex-blizzard-boss-says-an-usd1800-xbox-will-never-sell-and-current-gen-consoles-are-fine-for-99-percent-of-the-audience-anyway/",
-     "pubdate": "2026-10-22",
+     "title": "Clayface Easter eggs: 17 DC and Batman references you might have missed",
+     "url": "https://www.gamesradar.com/entertainment/dc-movies/clayface-easter-eggs-dc-references-batman/",
+     "pubdate": "2026-10-23",
      "date_src": "feed",
      "age_days": 0
     },
     {
-     "title": "Batman is \"around\" during the events of Clayface, confirms DC Studios co-CEO: \"This is the introduction to the live-action Gotham\"",
-     "url": "https://www.gamesradar.com/entertainment/dc-movies/batman-is-around-during-the-events-of-clayface-confirms-dc-studios-co-ceo-this-is-the-introduction-to-the-live-action-gotham/",
-     "pubdate": "2026-10-21",
+     "title": "Dragon Age vet says most of The Veilguard team \"had little or no say in the things you disliked\"",
+     "url": "https://www.gamesradar.com/games/dragon-age/bioware-veteran-goes-to-bat-for-dragon-age-the-veilguards-dev-team-says-most-of-them-had-little-or-no-say-in-the-things-you-disliked-about-the-rpg/",
+     "pubdate": "2026-10-22",
      "date_src": "feed",
      "age_days": 1
     },
     {
-     "title": "Penguin showrunner to produce DC Poison Ivy TV show, won't be set in Matt Reeves Batman universe",
-     "url": "https://www.gamesradar.com/entertainment/dc-tv-shows/the-penguin-showrunner-is-in-talks-to-produce-dcs-live-action-poison-ivy-tv-show-but-it-wont-be-set-in-the-matt-reeves-batman-universe/",
-     "pubdate": "2026-10-21",
+     "title": "Masters of the Universe director doesn't know if a sequel is on the way after streaming success",
+     "url": "https://www.gamesradar.com/entertainment/fantasy-movies/masters-of-the-universe-director-still-doesnt-know-if-a-sequel-is-on-the-way-after-the-he-man-movies-massive-streaming-success-these-sorts-of-decisions-are-out-of-our-control/",
+     "pubdate": "2026-10-22",
      "date_src": "feed",
      "age_days": 1
     },
     {
-     "title": "Star Wars: Battlefront 3 reportedly in the works at Respawn and Dice",
-     "url": "https://www.gamesradar.com/games/action/star-wars-battlefront-3-reportedly-in-the-works-at-respawn-and-dice-in-the-wake-of-eas-bioware-shutdown/",
-     "pubdate": "2026-10-21",
+     "title": "Epic wants to pay you $50,000 to vibe code an AI slop game",
+     "url": "https://www.gamesradar.com/games/epic-wants-to-pay-you-usd50-000-to-vibe-code-an-ai-slop-game/",
+     "pubdate": "2026-10-22",
      "date_src": "feed",
      "age_days": 1
     },
     {
-     "title": "The Witcher and Cyberpunk 2077 devs join creators mourning BioWare",
-     "url": "https://www.gamesradar.com/games/rpg/the-witcher-and-cyberpunk-2077-devs-join-creators-mourning-bioware-baldurs-gate-1-and-2-shaped-my-imagination-and-the-desire-to-create-games/",
-     "pubdate": "2026-10-21",
+     "title": "Only one person on Earth can play this Steam game at a time: \"You control it for one minute\"",
+     "url": "https://www.gamesradar.com/games/platformer/only-one-person-on-earth-can-play-this-steam-game-at-a-time-when-it-is-your-turn-you-control-it-for-one-minute/",
+     "pubdate": "2026-10-22",
      "date_src": "feed",
      "age_days": 1
     }
@@ -1850,37 +1850,37 @@
    "error": null,
    "items": [
     {
-     "title": "EA cancels unannounced The Sims project, trims the Skate team and reportedly plans to lay off 400 workers: \"We're the number one publisher in Western HD gaming\"",
-     "url": "https://www.eurogamer.net/ea-cancels-sims-skate-400-layoffs",
-     "pubdate": "2026-10-21",
+     "title": "Smash Bros. director Masahiro Sakurai thinks gen-AI will cause a surge of unoriginal games, but says human creativity can't be replicated",
+     "url": "https://www.eurogamer.net/smash-bros-masahiro-sakurai-generative-ai-unoriginal-games",
+     "pubdate": "2026-10-22",
      "date_src": "feed",
      "age_days": 1
     },
     {
-     "title": "BioWare is closing down and Mass Effect 5 is cancelled, months after Saudi Arabia's $55bn EA buyout",
-     "url": "https://www.eurogamer.net/bioware-closing-down-mass-effect-5-cancelled",
-     "pubdate": "2026-10-21",
+     "title": "Farewell BioWare, you inspired so many of us, and you deserved so much better than this",
+     "url": "https://www.eurogamer.net/farewell-bioware-closed-ea",
+     "pubdate": "2026-10-22",
      "date_src": "feed",
      "age_days": 1
     },
     {
-     "title": "First-person Soulslike Valor Mortis is already making a profit after seven days, despite launching against some stiff competition",
-     "url": "https://www.eurogamer.net/soulslike-valor-mortis-making-profit-seven-days",
-     "pubdate": "2026-10-21",
+     "title": "Final Fantasy 14, Umamusume: Pretty Derby, and more impacted as PHP vulnerability outages hit games around the globe",
+     "url": "https://www.eurogamer.net/video-games-down-php-vulnerability",
+     "pubdate": "2026-10-22",
      "date_src": "feed",
      "age_days": 1
     },
     {
-     "title": "CD Projekt Red details new Cyberpunk 2077 update - adding dual-wielding, cross-platform mods, Edgerunners story quests, and more",
-     "url": "https://www.eurogamer.net/cyberpunk-2077-update-edgerunners-2-mod-support",
-     "pubdate": "2026-10-21",
+     "title": "BioWare's cancelled Mass Effect game would've learned from Baldur's Gate 3 and The Witcher to deliver \"a level of autonomy and choice that no other game has\"",
+     "url": "https://www.eurogamer.net/cancelled-mass-effect-bioware-unprecedented-levels-of-autonomy",
+     "pubdate": "2026-10-22",
      "date_src": "feed",
      "age_days": 1
     },
     {
-     "title": "Beyond Good & Evil 2 reportedly still in development 18 years after being announced, now a \"solo-first\" adventure",
-     "url": "https://www.eurogamer.net/beyond-good-and-evil-bge2-report-ubisoft",
-     "pubdate": "2026-10-21",
+     "title": "Despite its mixed reception, Marvel's Wolverine was September's top-selling new game in the US, making Sony launch revenues it hasn't seen since Helldivers 2",
+     "url": "https://www.eurogamer.net/marvels-wolverine-top-seling-september-us-circana",
+     "pubdate": "2026-10-22",
      "date_src": "feed",
      "age_days": 1
     }
@@ -1898,37 +1898,37 @@
    "error": null,
    "items": [
     {
-     "title": "The next Mass Effect would have had 'a level of autonomy and choice that no other game has been able to match', according to BioWare veteran",
-     "url": "https://www.pcgamer.com/games/mass-effect/the-next-mass-effect-would-have-had-a-level-of-autonomy-and-choice-that-no-other-game-has-been-able-to-match-according-to-bioware-veteran/",
+     "title": "My GOTY is $7 and has 253 Steam reviews",
+     "url": "https://www.pcgamer.com/games/racing/my-goty-is-usd7-and-has-253-steam-reviews/",
      "pubdate": "2026-10-22",
-     "date_src": "feed",
-     "age_days": 0
-    },
-    {
-     "title": "Can you identify the horror game by its horrors?",
-     "url": "https://www.pcgamer.com/games/can-you-identify-the-horror-game-by-its-horrors/",
-     "pubdate": "2026-10-22",
-     "date_src": "feed",
-     "age_days": 0
-    },
-    {
-     "title": "Holy crap, they're making Serious Sam: The Third Encounter",
-     "url": "https://www.pcgamer.com/games/fps/holy-crap-theyre-making-serious-sam-the-third-encounter/",
-     "pubdate": "2026-10-22",
-     "date_src": "feed",
-     "age_days": 0
-    },
-    {
-     "title": "Machinarium AI tribute cops a flogging from studio: 'This looks disgusting and has nothing to do with us or our craft'",
-     "url": "https://www.pcgamer.com/gaming-industry/machinarium-ai-tribute-cops-a-flogging-from-studio-this-looks-disgusting-and-has-nothing-to-do-with-us-or-our-craft/",
-     "pubdate": "2026-10-21",
      "date_src": "feed",
      "age_days": 1
     },
     {
-     "title": "CD Projekt boss pays tribute to BioWare for helping bring The Witcher to life 20 years ago: 'BioWare has been a massive part of CDPR history'",
-     "url": "https://www.pcgamer.com/gaming-industry/cd-projekt-boss-pays-tribute-to-bioware-for-helping-bring-the-witcher-to-life-20-years-ago-bioware-has-been-a-massive-part-of-cdpr-history/",
-     "pubdate": "2026-10-21",
+     "title": "A new Fallout 4 mod adds an entire town, but more importantly, it lets you join a gang",
+     "url": "https://www.pcgamer.com/games/fallout/a-new-fallout-4-mod-adds-an-entire-town-but-more-importantly-it-lets-you-join-a-gang/",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "Epic announces game jam where you have to use AI, then walks back the requirement",
+     "url": "https://www.pcgamer.com/software/ai/epic-announces-game-jam-where-you-have-to-use-ai/",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "Canadian politician calls on government to help BioWare employees buy the studio and run it themselves",
+     "url": "https://www.pcgamer.com/games/mass-effect/canadian-politician-calls-on-government-to-help-bioware-employees-buy-the-studio-and-run-it-themselves/",
+     "pubdate": "2026-10-22",
+     "date_src": "feed",
+     "age_days": 1
+    },
+    {
+     "title": "Half-Life 3 re-re-re-confirmed: A Valve dev just said 'HLX' out loud",
+     "url": "https://www.pcgamer.com/games/fps/half-life-3-re-re-re-confirmed-a-valve-dev-just-said-hlx-out-loud/",
+     "pubdate": "2026-10-22",
      "date_src": "feed",
      "age_days": 1
     }
@@ -1946,37 +1946,37 @@
    "error": null,
    "items": [
     {
-     "title": "‘Many’ staff gone from Skate studio Full Circle as part of EA layoffs",
-     "url": "https://www.videogameschronicle.com/news/many-staff-gone-from-skate-studio-full-circle-as-part-of-ea-layoffs/",
-     "pubdate": "2026-10-21",
+     "title": "Half-Life 3 speculation grows as Valve developer mentions ‘HLX’ during stage panel",
+     "url": "https://www.videogameschronicle.com/news/half-life-3-speculation-grows-as-valve-developer-mentions-hlx-during-stage-panel/",
+     "pubdate": "2026-10-23",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
+     "title": "Three more Game Boy games are coming to Switch Online, including one produced by Shigeru Miyamoto",
+     "url": "https://www.videogameschronicle.com/news/three-more-game-boy-games-are-coming-to-switch-online-including-one-produced-by-shigeru-miyamoto/",
+     "pubdate": "2026-10-23",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
+     "title": "Mass Effect Universe trailer leaks online, showcases what BioWare was working on before being shut down",
+     "url": "https://www.videogameschronicle.com/news/mass-effect-universe-trailer-leaks-online-showcases-what-bioware-was-working-on-before-being-shut-down/",
+     "pubdate": "2026-10-22",
      "date_src": "feed",
      "age_days": 1
     },
     {
-     "title": "EA is closing BioWare and cancelling the next Mass Effect",
-     "url": "https://www.videogameschronicle.com/news/ea-is-closing-bioware-and-cancelling-the-next-mass-effect/",
-     "pubdate": "2026-10-21",
+     "title": "Atari is ending support for its 2021 VCS console, will release a Homebrew App to let players keep making and adding games",
+     "url": "https://www.videogameschronicle.com/news/atari-is-ending-support-for-its-2021-vcs-console-will-release-a-homebrew-app-to-let-players-keep-making-and-adding-games/",
+     "pubdate": "2026-10-22",
      "date_src": "feed",
      "age_days": 1
     },
     {
-     "title": "Cyberpunk 2077 is getting another big update, 2 years after CD Projekt claimed it was finished",
-     "url": "https://www.videogameschronicle.com/news/cyberpunk-2077-is-getting-yet-another-big-update-2-years-cd-projekt-claimed-it-was-finished/",
-     "pubdate": "2026-10-21",
-     "date_src": "feed",
-     "age_days": 1
-    },
-    {
-     "title": "A remaster of the Shrek 2 game from 2004 has been announced via a GTA-like trailer",
-     "url": "https://www.videogameschronicle.com/news/a-remaster-of-the-shrek-2-game-from-2004-has-been-announced-via-a-gta-like-trailer/",
-     "pubdate": "2026-10-21",
-     "date_src": "feed",
-     "age_days": 1
-    },
-    {
-     "title": "Ace Driver Victory Lap is the next polygonal Namco arcade racer getting its first ever home release",
-     "url": "https://www.videogameschronicle.com/news/ace-driver-victory-lap-is-the-next-polygonal-namco-arcade-racer-getting-its-first-ever-home-release/",
-     "pubdate": "2026-10-21",
+     "title": "Beyond Good & Evil 2 is ‘still in pre-production’ after 18 years as its vision keeps changing, report claims",
+     "url": "https://www.videogameschronicle.com/news/beyond-good-evil-2-is-still-in-pre-production-after-18-years-as-its-vision-keeps-changing-report-claims/",
+     "pubdate": "2026-10-22",
      "date_src": "feed",
      "age_days": 1
     }
@@ -1994,37 +1994,37 @@
    "error": null,
    "items": [
     {
-     "title": "EA Cancels New Mass Effect, Pauses New Sims Game, And All The Other  Big EA News That Just Happened",
-     "url": "https://www.gamespot.com/articles/ea-kills-bioware-cancels-new-mass-effect-pauses-new-sims-game-and-all-the-other-big-ea-news-that-just-happened/",
-     "pubdate": "2026-10-21",
+     "title": "CoD: Modern Warfare 4 Has a Thrilling Campaign, Exciting DMZ, Strong Multiplayer",
+     "url": "https://www.gamespot.com/reviews/call-of-duty-modern-warfare-4-campaign-review/",
+     "pubdate": "2026-10-16",
+     "date_src": "feed",
+     "age_days": 7
+    },
+    {
+     "title": "Call of Duty Modern Warfare 4 Full Review (Campaign, DMZ, Multiplayer)",
+     "url": "https://www.gamespot.com/videos/call-of-duty-modern-warfare-4-full-review-campaign-dmz-multiplayer/",
+     "pubdate": "2026-10-23",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
+     "title": "Call Of Duty: Modern Warfare 4 Tips For Multiplayer",
+     "url": "https://www.gamespot.com/articles/call-of-duty-modern-warfare-4-tips-for-multiplayer/",
+     "pubdate": "2026-10-23",
+     "date_src": "feed",
+     "age_days": 0
+    },
+    {
+     "title": "To Start The New Cyberpunk 2077 Edgerunners 2 Quest, Do These Two Things First",
+     "url": "https://www.gamespot.com/articles/cyberpunk-2077-edgerunners-2-mission-clampdown-how-to-start/",
+     "pubdate": "2026-10-22",
      "date_src": "feed",
      "age_days": 1
     },
     {
-     "title": "Your Favorite Video Games Will Always Be Influenced By Manga",
-     "url": "https://www.gamespot.com/articles/your-favorite-video-games-will-always-be-influenced-by-manga/",
-     "pubdate": "2026-10-21",
-     "date_src": "feed",
-     "age_days": 1
-    },
-    {
-     "title": "Max Miller’s Tasting History Is Coming To Your Tabletop With A New Board Game",
-     "url": "https://www.gamespot.com/articles/max-millers-tasting-history-is-coming-to-your-tabletop-with-a-new-board-game/",
-     "pubdate": "2026-10-21",
-     "date_src": "feed",
-     "age_days": 1
-    },
-    {
-     "title": "The Halo We Grew Up With Is Never Coming Back",
-     "url": "https://www.gamespot.com/articles/the-halo-we-grew-up-with-is-never-coming-back/",
-     "pubdate": "2026-10-21",
-     "date_src": "feed",
-     "age_days": 1
-    },
-    {
-     "title": "Star Wars Battlefront 3 Reportedly In Development By EA’s Top Shooter Studios",
-     "url": "https://www.gamespot.com/articles/star-wars-battlefront-3-reportedly-in-development-by-eas-top-shooter-studios/",
-     "pubdate": "2026-10-21",
+     "title": "BioWare Did Something Very Rare For The Time: It Took Star Wars Seriously",
+     "url": "https://www.gamespot.com/articles/bioware-did-something-very-rare-for-the-time-it-took-star-wars-seriously/",
+     "pubdate": "2026-10-22",
      "date_src": "feed",
      "age_days": 1
     }
@@ -2042,30 +2042,30 @@
    "error": null,
    "items": [
     {
-     "title": "Do Not Miss This PlayStation All-Timer While It Costs Less Than a Frothy Coffee",
-     "url": "https://www.pushsquare.com/news/2026/10/do-not-miss-this-playstation-all-timer-while-it-costs-less-than-a-frothy-coffee",
+     "title": "Leaked Mass Effect 5 Trailer Is Real, Offers Glimpse of Cancelled Game",
+     "url": "https://www.pushsquare.com/news/2026/10/leaked-mass-effect-5-trailer-is-real-offers-glimpse-of-cancelled-game",
      "pubdate": "2026-10-22",
      "date_src": "feed",
-     "age_days": 0
+     "age_days": 1
     },
     {
-     "title": "All PS Plus Deluxe Members in Korea Get a Free Upgrade as Cloud Streaming Arrives",
-     "url": "https://www.pushsquare.com/news/2026/10/all-ps-plus-deluxe-members-in-korea-get-a-free-upgrade-as-cloud-streaming-arrives",
-     "pubdate": "2026-10-21",
+     "title": "Gears of War: E-Day, Cancelled Last-Minute for PS5, May Have Cost Half a Billion to Make",
+     "url": "https://www.pushsquare.com/news/2026/10/gears-of-war-e-day-cancelled-last-minute-for-ps5-may-have-cost-half-a-billion-to-make",
+     "pubdate": "2026-10-22",
      "date_src": "feed",
      "age_days": 1
     },
     {
-     "title": "Sony's Revamped PS5 Pulse Headset Launches Alongside GTA 6, on 19th November",
-     "url": "https://www.pushsquare.com/news/2026/10/sonys-revamped-ps5-pulse-headset-launches-alongside-gta-6-on-19th-november",
-     "pubdate": "2026-10-21",
+     "title": "Promising Sci-Fi RPG Exodus Changes Its Main Character's Face After Fan Criticism",
+     "url": "https://www.pushsquare.com/news/2026/10/promising-sci-fi-rpg-exodus-changes-its-main-characters-face-after-fan-criticism",
+     "pubdate": "2026-10-22",
      "date_src": "feed",
      "age_days": 1
     },
     {
-     "title": "Star Wars Battlefront 3 in Dev at DICE and Respawn, Multiple Sources Say",
-     "url": "https://www.pushsquare.com/news/2026/10/star-wars-battlefront-3-in-dev-at-dice-and-respawn-multiple-sources-say",
-     "pubdate": "2026-10-21",
+     "title": "Hellraiser 'Performing Extremely Well' Says Saber Boss in Bid for Return of AA Games",
+     "url": "https://www.pushsquare.com/news/2026/10/hellraiser-performing-extremely-well-says-saber-boss-in-bid-for-return-of-aa-games",
+     "pubdate": "2026-10-22",
      "date_src": "feed",
      "age_days": 1
     }
@@ -2083,30 +2083,30 @@
    "error": null,
    "items": [
     {
-     "title": "Cyberpunk 2077's Edgerunners 2 update adds two new quests, handgun dual wielding and the ability to pimp your mantis blades",
-     "url": "https://www.rockpapershotgun.com/cyberpunk-2077s-edgerunners-2-update-adds-two-new-quests-handgun-dual-wielding-and-the-ability-to-pimp-your-mantis-blades",
-     "pubdate": "2026-10-21",
+     "title": "A Line Held Tight is a charcoal visual novel about a miner's strike in the 32nd century and choosing your relationships wisely",
+     "url": "https://www.rockpapershotgun.com/a-line-held-tight-is-a-charcoal-visual-novel-about-a-miners-strike-in-the-32nd-century-and-choosing-your-relationships-wisely",
+     "pubdate": "2026-10-22",
      "date_src": "feed",
      "age_days": 1
     },
     {
-     "title": "A puzzle game where you must avoid the doing the most awkward of things: facing someone while riding an elevator",
-     "url": "https://www.rockpapershotgun.com/a-puzzle-game-where-you-must-avoid-the-doing-the-most-awkward-of-things-facing-someone-while-riding-an-elevator",
-     "pubdate": "2026-10-21",
+     "title": "Robot smashing catharsis game Virtue and a Sledgehammer is out next week, but there's an experimental visual novella prologue you can play right now",
+     "url": "https://www.rockpapershotgun.com/robot-smashing-catharsis-game-virtue-and-a-sledgehammer-is-out-next-week-but-theres-an-experimental-visual-novella-prologue-you-can-play-right-now",
+     "pubdate": "2026-10-22",
      "date_src": "feed",
      "age_days": 1
     },
     {
-     "title": "I keep embarrassing myself in front of the nature gods in handpainted 2D roguelike Talaka, whose colourful, combative demo is out now",
-     "url": "https://www.rockpapershotgun.com/i-keep-embarrassing-myself-in-front-of-the-nature-gods-in-handpainted-2d-roguelike-talaka-whose-colourful-combative-demo-is-out-now",
-     "pubdate": "2026-10-21",
+     "title": "An internal Mass Effect 5 trailer has reportedly leaked, offering you a glimpse at the sequel you'll never get to play",
+     "url": "https://www.rockpapershotgun.com/an-internal-mass-effect-5-trailer-has-reportedly-leaked-offering-you-a-glimpse-at-the-sequel-youll-never-get-to-play",
+     "pubdate": "2026-10-22",
      "date_src": "feed",
      "age_days": 1
     },
     {
-     "title": "\"I want room to make a wrong turn\": Following Samson dev's bankruptcy, its founder is considering how AI might factor into new studio plans",
-     "url": "https://www.rockpapershotgun.com/i-want-room-to-make-a-wrong-turn-following-samson-devs-bankruptcy-its-founder-is-considering-how-ai-might-factor-into-new-studio-plans",
-     "pubdate": "2026-10-21",
+     "title": "Dispatch celebrates its first anniversary with commentary and storyboard modes for every single episode, if you've got the deluxe edition anyway",
+     "url": "https://www.rockpapershotgun.com/dispatch-celebrates-its-first-anniversary-with-commentary-and-storyboard-modes-for-every-single-episode-if-youve-got-the-deluxe-edition-anyway",
+     "pubdate": "2026-10-22",
      "date_src": "feed",
      "age_days": 1
     }
@@ -2124,32 +2124,32 @@
    "error": null,
    "items": [
     {
-     "title": "The Oral History Of BioWare",
-     "url": "https://gameinformer.com/feature/2026/10/21/doctors-dragons",
-     "pubdate": "2026-10-21",
+     "title": "Call of Duty: Modern Warfare 4 Review - Silver Bullet",
+     "url": "https://gameinformer.com/review/call-of-duty-modern-warfare-4/silver-bullet",
+     "pubdate": "2026-10-22",
      "date_src": "feed",
      "age_days": 1
     },
     {
-     "title": "EA Is Closing Down Legendary Studio BioWare Amid More Job Cuts",
-     "url": "https://gameinformer.com/2026/10/21/ea-is-shutting-down-legendary-rpg-studio-bioware-amid-new-round-of-layoffs",
-     "pubdate": "2026-10-21",
+     "title": "A Mass Effect 5 Trailer Featuring Liara Appears To Have Leaked Following BioWare's Closure",
+     "url": "https://gameinformer.com/report/2026/10/22/a-mass-effect-5-trailer-featuring-liara-appears-to-have-leaked-following-biowares",
+     "pubdate": "2026-10-22",
      "date_src": "feed",
      "age_days": 1
     },
     {
-     "title": "Stranger Than Heaven Is One Man's Story Of Biculturalism, Music, Fitting In, And Fighting, Told Over 50 Years",
-     "url": "https://gameinformer.com/preview/2026/10/21/one-mans-story-of-biculturalism-music-fitting-in-and-fighting-told-over-50-years",
-     "pubdate": "2026-10-21",
+     "title": "Tenebris Somnia Review – A Hair-Raising And Entertaining Throwback",
+     "url": "https://gameinformer.com/review/tenebris-somnia/a-hair-raising-and-entertaining-throwback",
+     "pubdate": "2026-10-22",
      "date_src": "feed",
      "age_days": 1
     },
     {
-     "title": "Here's A Recap Of The October 2026 ID@Xbox Showcase",
-     "url": "https://gameinformer.com/2026/10/20/heres-a-recap-of-the-october-2026-idxbox-showcase",
-     "pubdate": "2026-10-20",
+     "title": "Dispatch's Anniversary Update Brings Commentary Track, Storyboard Mode, And Mobile Port",
+     "url": "https://gameinformer.com/2026/10/22/dispatchs-anniversary-update-brings-commentary-track-storyboard-mode-and-mobile-port",
+     "pubdate": "2026-10-22",
      "date_src": "feed",
-     "age_days": 2
+     "age_days": 1
     }
    ],
    "extraction": "rss",

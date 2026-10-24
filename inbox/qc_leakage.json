@@ -1,81 +1,50 @@
 {
- "generated_at": "2026-10-23T10:53:56",
- "adopt_total": 71,
- "review_total": 55,
- "leak_total": 6,
+ "generated_at": "2026-10-24T10:48:51",
+ "adopt_total": 78,
+ "review_total": 50,
+ "leak_total": 4,
  "leaks": [
   {
-   "title": "裁员潮席卷游戏行业，独立作曲家怎样渡过难关？ 10.21",
-   "url": "https://www.chuapp.com/article/291705.html",
+   "title": "Eternal Summer访谈：《极乐迪斯科》精神最激进的继承者是怎么想的？ 10.22",
+   "url": "https://www.chuapp.com/article/291706.html",
    "game": "全行业",
    "src_name": "触乐网",
    "verdict": "adopt",
    "pubdate": null,
    "date_unverified": false,
-   "n_src_cluster": 24,
-   "signal": 5,
-   "reasons": [
-    "多源印证(24家)",
-    "强事件词"
-   ]
-  },
-  {
-   "title": "周烨2小时前0条评论 《荒野乱斗》LCQ，与一款“小众游戏”共赴金票之旅 拿好你的金票，让我们出发吧。",
-   "url": "http://www.chuapp.com/article/291704.html",
-   "game": "全行业",
-   "src_name": "触乐网·分类新闻",
-   "verdict": "adopt",
-   "pubdate": null,
-   "date_unverified": false,
-   "n_src_cluster": 24,
+   "n_src_cluster": 12,
    "signal": 3,
    "reasons": [
-    "多源印证(24家)"
+    "多源印证(12家)"
    ]
   },
   {
-   "title": "等等20小时前0条评论 裁员潮席卷游戏行业，独立作曲家怎样渡过难关？ 对许多自由职业者来说，在游戏公司谋求一份全职工作，或许已经不再是终极目标。",
-   "url": "http://www.chuapp.com/article/291705.html",
+   "title": "裁员潮席卷游戏行业，独立作曲家怎样渡过难关？ 10.21",
+   "url": "https://www.chuapp.com/article/291705.html",
    "game": "全行业",
-   "src_name": "触乐网·分类新闻",
-   "verdict": "adopt",
-   "pubdate": null,
-   "date_unverified": false,
-   "n_src_cluster": 24,
-   "signal": 5,
-   "reasons": [
-    "多源印证(24家)",
-    "强事件词"
-   ]
-  },
-  {
-   "title": "玩过《荒野大镖客2》之后，我整理了很多需知的细节",
-   "url": "https://www.gamersky.com/news/201809/1102822.shtml",
-   "game": "全行业",
-   "src_name": "游民星空·最新资讯",
+   "src_name": "触乐网",
    "verdict": "review",
-   "pubdate": "2018-09-21",
-   "date_unverified": false,
-   "n_src_cluster": 2,
-   "signal": 2,
-   "reasons": [
-    "多源印证(2家)",
-    "准入待复核被卡"
-   ]
-  },
-  {
-   "title": "PSVR《揭秘计划2：远古之战》发售 火星之战爆发",
-   "url": "https://www.gamersky.com/news/201809/1102376.shtml",
-   "game": "全行业",
-   "src_name": "游民星空·最新资讯",
-   "verdict": "review",
-   "pubdate": "2018-09-20",
+   "pubdate": "2025-11-10",
    "date_unverified": false,
    "n_src_cluster": 1,
    "signal": 2,
    "reasons": [
     "强事件词",
     "准入待复核被卡"
+   ]
+  },
+  {
+   "title": "祝思齐21小时前0条评论 Eternal Summer访谈：《极乐迪斯科》精神最激进的继承者是怎么想的？ 最糟糕的事就是相信“别无选择”。",
+   "url": "http://www.chuapp.com/article/291706.html",
+   "game": "全行业",
+   "src_name": "触乐网·分类新闻",
+   "verdict": "adopt",
+   "pubdate": null,
+   "date_unverified": false,
+   "n_src_cluster": 12,
+   "signal": 3,
+   "reasons": [
+    "多源印证(12家)"
    ]
   },
   {

@@ -1,15 +1,17 @@
 {
- "generated_at": "2026-10-25T10:42:14",
+ "generated_at": "2026-10-26T10:54:43",
  "summary": {
   "total": 160,
   "adopt": 78,
-  "review": 50,
-  "reject": 32,
+  "review": 49,
+  "reject": 33,
   "stale_rejected": 28,
   "dated": 124,
-  "new_reject": 0
+  "new_reject": 1
  },
- "new_rejects": [],
+ "new_rejects": [
+  "https://pvp.qq.com/web201706/newsdetail.shtml?tid=811123"
+ ],
  "items": [
   {
    "game": "三国志·战略版",
@@ -213,14 +215,16 @@
    "game": "王者荣耀",
    "title": "10月16日体验服不停机更新公告",
    "url": "https://pvp.qq.com/web201706/newsdetail.shtml?tid=811123",
-   "status": 200,
+   "status": null,
    "src_id": "pvp",
    "src_name": "王者荣耀官方新闻",
    "pubdate": null,
    "age_days": null,
    "date_src": null,
-   "verdict": "review",
-   "reasons": []
+   "verdict": "reject",
+   "reasons": [
+    "链接不可达(HTTP None)"
+   ]
   },
   {
    "game": "王者荣耀",
@@ -1078,14 +1082,16 @@
    "game": "全行业",
    "title": "《地铁跑酷》老板分享：15年，零买量，为何还能有1.5亿MAU？",
    "url": "http://www.gamelook.com.cn/2026/10/604597/",
-   "status": 200,
+   "status": null,
    "src_id": "gamelook",
    "src_name": "GameLook",
    "pubdate": "2026-10-23",
    "age_days": 0,
    "date_src": "feed",
    "verdict": "adopt",
-   "reasons": []
+   "reasons": [
+    "链接探活未过(疑似反爬/超时，RSS 已确认存活)"
+   ]
   },
   {
    "game": "全行业",

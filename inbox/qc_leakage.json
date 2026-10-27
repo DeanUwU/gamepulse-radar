@@ -1,50 +1,37 @@
 {
- "generated_at": "2026-10-26T10:54:51",
- "adopt_total": 78,
- "review_total": 49,
- "leak_total": 4,
+ "generated_at": "2026-10-27T11:30:20",
+ "adopt_total": 68,
+ "review_total": 58,
+ "leak_total": 3,
  "leaks": [
   {
-   "title": "Eternal Summer访谈：《极乐迪斯科》精神最激进的继承者是怎么想的？ 10.22",
-   "url": "https://www.chuapp.com/article/291706.html",
-   "game": "全行业",
-   "src_name": "触乐网",
-   "verdict": "adopt",
-   "pubdate": null,
-   "date_unverified": false,
-   "n_src_cluster": 12,
-   "signal": 3,
-   "reasons": [
-    "多源印证(12家)"
-   ]
-  },
-  {
-   "title": "裁员潮席卷游戏行业，独立作曲家怎样渡过难关？ 10.21",
-   "url": "https://www.chuapp.com/article/291705.html",
+   "title": "日活破11年纪录、畅销榜第2，《率土之滨》新十年开门红是怎么打出来的 10.23",
+   "url": "https://www.chuapp.com/article/291708.html",
    "game": "全行业",
    "src_name": "触乐网",
    "verdict": "review",
    "pubdate": "2025-11-10",
    "date_unverified": false,
-   "n_src_cluster": 1,
-   "signal": 2,
+   "n_src_cluster": 27,
+   "signal": 3,
    "reasons": [
-    "强事件词",
+    "多源印证(27家)",
     "准入待复核被卡"
    ]
   },
   {
-   "title": "祝思齐21小时前0条评论 Eternal Summer访谈：《极乐迪斯科》精神最激进的继承者是怎么想的？ 最糟糕的事就是相信“别无选择”。",
-   "url": "http://www.chuapp.com/article/291706.html",
+   "title": "许艺丹10月23日0条评论 触乐怪话：玩恋爱本，天降一爹 有点意思！",
+   "url": "http://www.chuapp.com/article/291711.html",
    "game": "全行业",
    "src_name": "触乐网·分类新闻",
-   "verdict": "adopt",
+   "verdict": "review",
    "pubdate": null,
    "date_unverified": false,
-   "n_src_cluster": 12,
+   "n_src_cluster": 27,
    "signal": 3,
    "reasons": [
-    "多源印证(12家)"
+    "多源印证(27家)",
+    "准入待复核被卡"
    ]
   },
   {

@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="zh-CN" data-gp-reading="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GamePulse · 热词词云</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/wordcloud@1.2.2/src/wordcloud2.min.js"></script>
+<style>
+/* ---- wordcloud2.js 词云页专属样式 ---- */
+.wc-main{display:flex;gap:var(--space-lg);align-items:flex-start;margin:var(--space-md) 0}
+.wc-canvas-wrap{flex:1;min-width:0;background:var(--panel);border:1px solid var(--border);
+  border-radius:var(--radius-lg);padding:var(--space-sm);text-align:center}
+#wc-canvas{display:block;margin:0 auto;max-width:100%;height:auto}
+.wc-canvas-hint{font-size:var(--text-xs);color:var(--dim);margin-top:var(--space-xs)}
+
+/* ---- 溯源侧边栏 ---- */
+.wc-trace{width:320px;flex:none;background:var(--panel);border:1px solid var(--border);
+  border-radius:var(--radius-lg);overflow:hidden;position:sticky;top:70px;
+  max-height:calc(100vh - 90px);display:flex;flex-direction:column;opacity:.65;
+  transition:opacity .25s var(--ease-out-quart),border-color .25s var(--ease-out-quart)}
+.wc-trace.active{opacity:1;border-color:var(--gold)}
+.wc-trace-header{padding:var(--space-sm) var(--space-md);border-bottom:1px solid var(--border);
+  font-size:var(--text-sm);color:var(--sub);display:flex;align-items:center;gap:var(--space-xs);flex-wrap:wrap}
+.wc-trace-word{color:var(--txt);font-weight:800;font-size:var(--text-lg)}
+.wc-trace-badge{font-size:var(--text-xs);border-radius:99px;padding:1px 8px;font-weight:600;
+  border:1px solid;white-space:nowrap}
+.wc-trace-list{flex:1;overflow-y:auto;padding:var(--space-xs) 0}
+.wc-trace-empty{padding:var(--space-2xl) var(--space-md);text-align:center;color:var(--dim);
+  font-size:var(--text-sm);line-height:1.7}
+.wc-trace-item{display:block;padding:var(--space-sm) var(--space-md);border-bottom:1px solid var(--border);
+  text-decoration:none;transition:background .15s;font-size:var(--text-sm);line-height:1.45}
+.wc-trace-item:last-child{border-bottom:none}
+.wc-trace-item:hover{background:var(--panel2);text-decoration:none}
+.wc-trace-item .ts-title{color:var(--txt);display:block;margin-bottom:2px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.wc-trace-item .ts-meta{font-size:var(--text-xs);color:var(--dim);display:flex;gap:var(--space-xs);align-items:center}
+.wc-trace-item .ts-source{color:var(--sub);border:1px solid var(--border);
+  border-radius:3px;padding:0 5px;white-space:nowrap}
+.wc-trace-item .ts-primary{color:var(--gold);font-size:10px;font-weight:700;text-transform:uppercase}
+.wc-trace-footer{padding:var(--space-xs) var(--space-md);border-top:1px solid var(--border);
+  font-size:var(--text-xs);color:var(--dim)}
+
+/* ---- wordcloud2.js canvas 区 tooltip ---- */
+.wc-tooltip{position:absolute;background:rgba(22,27,34,.96);border:1px solid var(--border);
+  border-radius:var(--radius-md);padding:var(--space-sm) var(--space-md);pointer-events:none;
+  font-size:var(--text-sm);color:var(--txt);z-index:99;white-space:nowrap;
+  box-shadow:var(--shadow-md);transition:opacity .15s}
+.wc-tooltip b{display:block;font-size:var(--text-md)}
+.wc-tooltip span{color:var(--sub);font-size:var(--text-xs)}
+
+/* 移动端适配 */
+@media(max-width:900px){.wc-main{flex-direction:column}.wc-trace{width:100%;max-height:400px;position:static}}
+
+/* 保留旧版 legend / preview 样式兼容 */
+.wc-legend{margin-top:var(--space-sm);font-size:11px;color:var(--sub)}
+.wc-legend span{display:inline-block;margin-right:14px}
+.wc-legend i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:4px;vertical-align:middle}
+.wc-preview{display:flex;flex-wrap:wrap;gap:4px 12px;padding:var(--space-sm) 0;border-top:1px solid var(--border);max-height:160px;overflow-y:auto}
+.wc-preview-item{display:inline-flex;align-items:center;gap:3px;font-size:var(--text-xs);text-decoration:none;padding:2px 6px;border-radius:3px;transition:background .15s}
+.wc-preview-item:hover{background:var(--panel2);text-decoration:none}
+.wc-pv-word{font-weight:700}
+.wc-pv-h{font-size:9px;opacity:.65;font-weight:600;font-variant-numeric:tabular-nums}
+.wc-list{margin-top:12px;border-top:1px solid var(--border);padding-top:8px}
+.wc-list .row{display:flex;gap:8px;padding:5px 0;font-size:12px;border-bottom:1px dashed var(--border)}
+.wc-list .row:last-child{border-bottom:none}
+.wc-list .w{flex:none;width:118px;font-weight:700}
+.wc-list .why{color:var(--sub)}
+</style>
+<!-- GP-READING:START --><style>
+:root{--bg:#101525!important;--panel:#182238!important;--panel2:#202d46!important;--border:#304363!important;--txt:#edf3fc!important;--text:#edf3fc!important;--sub:#a8b8d0!important;--dim:#a0b3cf!important;--accent:#8BDFFF!important;--pulse:#3478FF!important;--blue:#8BDFFF!important;--green:#8BDFFF!important;--purple:#8BDFFF!important;--gold:#f3d174!important;--sidebar:#131c30!important;--surface:#182238!important;--surface2:#202d46!important;--line:#304363!important;--mint:#8BDFFF!important;--muted:#a8b8d0!important;--hover:#243b60!important;--shadow-color:3,8,12;--font:"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;--text-xs:.75rem;--text-sm:.8125rem}
+html[data-gp-reading] body{background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+html[data-gp-reading] body::after{display:none!important}
+html[data-gp-reading] header{background:#101525f5;backdrop-filter:none!important}
+html[data-gp-reading] a{color:#8BDFFF}
+html[data-gp-reading] a:focus-visible,html[data-gp-reading] button:focus-visible{outline:2px solid #8BDFFF;outline-offset:3px}
+html[data-gp-reading] .sidebar{background:#131c30;border-color:#304363}
+html[data-gp-reading] .brand-mark{background:#8BDFFF;color:white}
+html[data-gp-reading] .filter-chip.active{background:#183968;color:#d8efff;border-color:#3478FF}
+html[data-gp-reading] .nav button.active{background:#183968;color:#d8efff}
+html[data-gp-reading] .nav button,html[data-gp-reading] .side-follow button{color:#b8bfd1}
+
+html[data-gp-reading] .filter-panel,html[data-gp-reading] .campaign,html[data-gp-reading] .detail-note,html[data-gp-reading] .review-material,html[data-gp-reading] .campaign-review,html[data-gp-reading] .report-media-card{background:#182238;border-color:#304363;box-shadow:none}
+html[data-gp-reading] input,html[data-gp-reading] select,html[data-gp-reading] textarea{background:#111c30;border-color:#3b5477;color:#edf3fc;color-scheme:dark}
+html[data-gp-reading] .primary{background:#8BDFFF;color:#182238}
+html[data-gp-reading] .secondary{background:#17345c;color:#8BDFFF;border-color:#3b5477}
+html[data-gp-reading] .latest{background:#142037;border-color:#304363}
+html[data-gp-reading] .card-summary,html[data-gp-reading] .card-foot,html[data-gp-reading] .latest-label,html[data-gp-reading] .source-publisher{color:#a8b8d0}
+
+html[data-gp-reading] .card-title{color:#edf3fc}
+html[data-gp-reading] .tag,html[data-gp-reading] .pill{background:#202d46;border-color:#3b5477;color:#b8c1d6}
+html[data-gp-reading] .tag.personal{background:#17345c;color:#cbefff;border-color:#3478FF}
+html[data-gp-reading] .cover.has-cover .product-label,html[data-gp-reading] .cover.has-cover .star{color:#182238}
+html[data-gp-reading] .cover.has-cover .pill{background:#1d2038e0;border-color:#ffffff35;color:#182238}
+html[data-gp-reading] .cover-credit{color:#182238;background:#1d2038e0}
+html[data-gp-reading] dialog{background:#182238;color:#edf3fc;border-color:#304363}
+html[data-gp-reading] dialog::backdrop{background:#0c0d18c4;backdrop-filter:none!important}
+html[data-gp-reading] .drawer-header,html[data-gp-reading] .modal-head{background:#1b2a45;border-color:#304363;color:#b8c4df}
+html[data-gp-reading] .detail-hero{background:#182743;color:#edf3fc}
+html[data-gp-reading] .detail-title h2{color:#edf3fc}
+
+html[data-gp-reading] .review-head h3{color:#edf3fc}
+html[data-gp-reading] .review-verdict{color:#edf3fc}
+html[data-gp-reading] .concept-note{background:#162d4c;color:#cbefff;border-color:#3b5477;}
+html[data-gp-reading] .concept-map{border-color:#304363;background:#1b2a45}
+html[data-gp-reading] .concept-from{border-color:#304363}
+html[data-gp-reading] .concept-map p,html[data-gp-reading] .concept-tags p,html[data-gp-reading] .review-piece p,html[data-gp-reading] .review-material p,html[data-gp-reading] .content-review .review-deep li,html[data-gp-reading] .report-media-caption p{color:#c2d0e4}
+html[data-gp-reading] .review-piece>h4{color:#edf3fc}
+html[data-gp-reading] .review-ref,html[data-gp-reading] .source{color:#8BDFFF;}
+html[data-gp-reading] small,html[data-gp-reading] .review-scope,html[data-gp-reading] .review-head span,html[data-gp-reading] .concept-map small,html[data-gp-reading] .report-media-caption small{color:#a8b8d0;}
+html[data-gp-reading] .report-media-caption h4{color:#edf3fc}
+html[data-gp-reading] .report-media-note{color:#a8b8d0!important;}
+html[data-gp-reading] .report-media-button,html[data-gp-reading] .cover-evidence>img{background:#121c30}
+html[data-gp-reading] .gp-media-preview-head{background:#1b2a45;border-color:#304363}
+html[data-gp-reading] .gp-media-preview-head button{background:#17345c;color:#8BDFFF;border-color:#3b5477}
+html[data-gp-reading] .gp-media-preview-caption small{color:#a8b8d0}
+html[data-gp-reading] .gp-media-preview-caption a{color:#8BDFFF}
+html[data-gp-reading] .gp-media-preview .preview-source-image{background:#121c30}
+html[data-gp-reading] .gp-campaign-panel{background:#182238!important;border-color:#304363!important}
+html[data-gp-reading] .gp-campaign-row{color:#edf3fc!important;border-color:#304363!important}
+html[data-gp-reading] .gp-campaign-row span,html[data-gp-reading] .gp-campaign-info{color:#a8b8d0!important}
+html[data-gp-reading] .gp-home-toolbar button,html[data-gp-reading] #gp-relevance button{background:#182238;color:#b8bfd1;border-color:#3b5477}
+html[data-gp-reading] .gp-home-toolbar button[aria-pressed=true],html[data-gp-reading] #gp-relevance button[aria-pressed=true]{background:#183968;color:#d8efff;border-color:#3478FF}
+html[data-gp-reading] .masthead.mh-event{background:#182743!important;border-bottom:1px solid #304363}
+html[data-gp-reading] .masthead.mh-event::after{background:none}
+html[data-gp-reading] .masthead.mh-event .mh-txt h1,html[data-gp-reading] .masthead.mh-event .mh-txt h1 a{color:#edf3fc;text-shadow:none}
+html[data-gp-reading] .masthead.mh-event .mh-txt p{color:#a8b8d0;text-shadow:none}
+html[data-gp-reading] .masthead.mh-event .mh-kicker{color:#cbefff;border-color:#3478FF;background:#17345c}
+html[data-gp-reading] .masthead:not(.mh-event) .mh-txt h1 a{color:#fff}
+
+html[data-gp-reading] .pb-card-1.pb-card-1-event{background:#182238!important;border-color:#3478FF}
+html[data-gp-reading] .pb-card-1-event::before{background:none}
+html[data-gp-reading] .pb-card-1-event .pb-title-1{color:#edf3fc;text-shadow:none}
+html[data-gp-reading] .pb-card-1-event .pb-meta-1{color:#a8b8d0}
+
+html[data-gp-reading] #gp-home{background:#8BDFFF;color:#182238;border-color:#8BDFFF}
+
+html[data-gp-reading] .drawer{width:min(1120px,96vw);max-width:96vw}
+html[data-gp-reading]{color-scheme:dark}
+html[data-gp-reading] .brand-mark,html[data-gp-reading] .primary,html[data-gp-reading] #gp-home,html[data-gp-reading] .campaign-layout button[aria-pressed=true]{color:#101525}
+html[data-gp-reading] .cover.has-cover .product-label,html[data-gp-reading] .cover.has-cover .star,html[data-gp-reading] .cover.has-cover .pill,html[data-gp-reading] .cover-credit{color:#fff}
+html[data-gp-reading] .concept-review .concept-tags .tag{background:#17345c;border-color:#3478FF;color:#dcf5ff}
+html[data-gp-reading] .concept-review .concept-tags .tag:hover{background:#204778}
+html[data-gp-reading] .table-scroll,html[data-gp-reading] .method-grid article{background:#182238;border-color:#304363}
+html[data-gp-reading] th,html[data-gp-reading] td{border-color:#304363}
+html[data-gp-reading] th{background:#202d46;color:#a8b8d0}
+html[data-gp-reading] td small,html[data-gp-reading] header small{color:#a8b8d0}
+html[data-gp-reading] td b{color:#8BDFFF}
+html[data-gp-reading] .method-grid p{color:#c2d0e4}
+html[data-gp-reading] .gp-home-entry{display:flex;justify-content:flex-end;width:min(1200px,calc(100% - 64px));margin:22px auto 18px;box-sizing:border-box}
+html[data-gp-reading] .gp-home-entry a{display:inline-flex;align-items:center;gap:24px;padding:12px 19px;border:1px solid #3b6292;border-radius:12px;background:#17345c;color:#edf3fc;font-size:15px;font-weight:650;text-decoration:none;box-shadow:0 4px 16px #10132225;transition:background .18s,transform .18s}
+html[data-gp-reading] .gp-home-entry a:hover{background:#204778;transform:translateY(-1px)}
+html[data-gp-reading] .gp-home-entry span{color:#8BDFFF;font-size:19px}
+html[data-gp-reading] #gp-focus-controls button[aria-pressed=true]{background:#183968;color:#d8efff;border-color:#3478FF}
+
+
+html[data-gp-reading] .masthead{margin-top:0!important}
+@media(max-width:700px){html[data-gp-reading] .gp-home-entry{width:calc(100% - 32px);margin:16px auto 14px}html[data-gp-reading] .gp-home-entry a{padding:10px 15px;font-size:14px;gap:18px}}
+
+html[data-gp-reading] .pb-verify-ok,html[data-gp-reading] .fresh,html[data-gp-reading] .level-A .level,html[data-gp-reading] .kbadge.wx,html[data-gp-reading] .tgmeng-concept-matched,html[data-gp-reading] .intel-chips .chip.cat-green{color:#cbefff;background:#8BDFFF16;border-color:#8BDFFF55}
+html[data-gp-reading] [style*="color:#7ce3be"],html[data-gp-reading] [style*="color:#3fd68f"],html[data-gp-reading] [style*="color: #3fd68f"]{color:#cbefff!important}
+
+/* Local visual trial: accents and decorative layers, no content/image changes. */
+html[data-gp-reading] body:has(#glance){--accent:#8bdfff;--mint:#93d7ff;--blue:#80baff}
+html[data-gp-reading] .masthead.gp-lead{background:linear-gradient(105deg,#10172e 0%,#122344 55%,var(--gp-lead-tone,#293149) 100%)}
+html[data-gp-reading] .masthead.gp-lead::before{display:block!important;content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse at 16% 0%,#3478ff38 0%,#3478ff12 34%,transparent 64%)}
+html[data-gp-reading] .gp-lead-copy>small{color:#b8e8ff!important;border-color:#75c7ff66;background:#174b8c40}
+html[data-gp-reading] .masthead.gp-lead::after{background:linear-gradient(90deg,#0d1529e8 0%,#101d38b8 36%,#132a4733 74%,#10162412 100%),linear-gradient(0deg,var(--bg) 0%,transparent 50%)}
+html[data-gp-reading] #gp-category-observation .gp-observe-head{position:relative;isolation:isolate;min-height:82px;overflow:hidden;padding:18px 20px;border:1px solid #3478ff66;border-radius:12px;background:linear-gradient(105deg,#122344 0%,#17488f 60%,#246bff 100%);margin-bottom:14px}
+html[data-gp-reading] .gp-observe-head::before{content:"";position:absolute;z-index:-1;pointer-events:none;width:300px;height:220px;right:8%;top:-70px;border-radius:50%;background:radial-gradient(ellipse at 60% 55%,#a7edffbd 0%,#76caff73 18%,#3478ff50 36%,transparent 66%);transform:rotate(-23deg)}
+html[data-gp-reading] .gp-observe-head::after{content:"";position:absolute;inset:-18px 0 -18px 52%;z-index:-1;pointer-events:none;background:repeating-linear-gradient(90deg,#071b491f 0px,#071b4978 5px,#b4eaff65 6px,#2c8dff0d 8px,#081e466b 14px);-webkit-mask-image:radial-gradient(ellipse at 55% 55%,#000 5%,transparent 73%);mask-image:radial-gradient(ellipse at 55% 55%,#000 5%,transparent 73%);transform:skewX(-9deg)}
+html[data-gp-reading] .gp-observe-head h2{position:relative;z-index:1;color:#f3f8ff;font-size:21px;letter-spacing:.025em}
+html[data-gp-reading] .gp-observe-head>a{position:relative;z-index:1;background:#102b5e;color:#dcefff;padding:8px 11px;border:1px solid #9bdfff70;border-radius:7px;text-decoration:none}
+html[data-gp-reading] .gp-observe-head>a:hover{background:#174384;border-color:#b2e9ff}
+html[data-gp-reading] .gp-observe-card:hover{border-color:#8bdfff;box-shadow:0 0 0 1px #3478ff25}
+html[data-gp-reading] #gp-focus-controls button[aria-pressed=true],html[data-gp-reading] .gp-home-toolbar button[aria-pressed=true],html[data-gp-reading] #gp-relevance button[aria-pressed=true]{background:#194a9c;color:#edf6ff;border-color:#518dec}
+html[data-gp-reading] #gp-focus-controls button:hover,html[data-gp-reading] .gp-home-toolbar button:hover,html[data-gp-reading] #gp-relevance button:hover,html[data-gp-reading] #gp-focus-more button:hover{border-color:#80cfff}
+html[data-gp-reading] #gp-focus-more button{color:#bce7ff;border-color:#3c628c}
+
+html[data-gp-reading] .gp-focus-links a,html[data-gp-reading] #gp-category-observation .gp-observe-card small{color:#9edcff!important}
+html[data-gp-reading] #gp-home{background:#245dc7;border-color:#518dec;color:#f0f6ff}
+@media(max-width:550px){html[data-gp-reading] #gp-category-observation .gp-observe-head{min-height:72px;padding:15px}html[data-gp-reading] .gp-observe-head h2{font-size:20px}html[data-gp-reading] .gp-observe-head::before{right:0}html[data-gp-reading] .gp-observe-head::after{left:42%}html[data-gp-reading] .masthead.gp-lead::after{background:linear-gradient(90deg,#0c1735c9,#142c5162),linear-gradient(0deg,var(--bg),transparent 85%)}}
+@media(prefers-reduced-motion:reduce){html[data-gp-reading] .gp-observe-card{transition:none;transform:none}}
+
+/* Approved shared palette: navy, electric blue, ice blue, mist white. */
+html[data-gp-reading] .gp-focus-featured .gp-video-rank{background:#173968;color:#dcf5ff;border:1px solid #3478FF}
+html[data-gp-reading] .brand-mark,html[data-gp-reading] .primary{background:#3478FF;color:#fff;font-weight:650}
+html[data-gp-reading] .gp-news-tabs button[aria-pressed=true]{background:#183968;color:#dcf5ff;border-color:#3478FF}
+html[data-gp-reading] .gp-video-rank{color:#8BDFFF}
+html[data-gp-reading] .gp-news-save[aria-pressed=true],html[data-gp-reading] .gp-focus-save[aria-pressed=true],html[data-gp-reading] .star.active{color:#f3d174}
+
+html[data-gp-reading] .primary{background:#173968;color:#edf3fc;border-color:#3478FF}
+
+html[data-gp-reading] .brand-mark[data-gp-brand]{background:#0754ed;overflow:hidden;flex-shrink:0}
+html[data-gp-reading] .brand-mark[data-gp-brand]>img{display:block;width:100%;height:100%;object-fit:contain;border-radius:inherit}
+</style><!-- GP-READING:END --><link rel="icon" type="image/png" sizes="64x64" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAW9ElEQVR42oV6WY+k2XHdOXHvt2RmZdbWe88+bM5wzCEJSqQES7AMCbAMWbBeLFii/Ow3wfAv8F/wPxBsvfjREmzRhgSJMCjTi0xyyOEMOZytZ6Z7umuvXL/txvFDbZlV1VQ+dH/1LfdGxI0b90TEIb6VAIAAAJ39q7M7J4/OrwVIEGDnt87e0eogy2NqaRDh8ocAfPXp8nRcvbg0oxSvmeP8a/JioOVPlydYmU8Ar5kMq9a5qva1umlVcC1NcaEV48pnWlJXvN5aPFP4GjNzRR+/ThNekfKSFXhJmiUtfOmxnz6IK2Px7Or0mpcNc24wrd7RdSY/m4sEz7660F0Xj068ckU3rXqSeGG71QniM21zSXpe9w6vubi8Tg45tOylBhpo8AQlSEAGO1fjGkPwdO+RFzqc2TpeeNWFO/Kyp+IXeQK5vKkgAel0VBjyzNcHNsx81NewZ4NMRaYQaVAv5+GcT4/xzmPOxkAGC6eDXDY2cbpSIGzFxYg/SIBO5b42FFwr+slQJ6ZxwM88PmJYYqPUVs83120tSzc3bFiimncWYicFQ+tMCdE8RhYZR31C/Mmn+s67PDwCMliEX42HV6USABF/mK5KdmVXrHj/icnlQAKIXg/D0u9v4UZfmyP2M6TOs9yaOsVodSOHjHFRecwRySQ1LUEMCiXHeg+J4R/ck4HfeVd/8w6Pj2ADuD9jg527zIkw+MN0urlOvUEXbqFrFDPCE+AoSr14Q89tY1RqvYfkIBTAyVxZzqpRiEY6wC5Z3ahXKAvWNMmiRYqGupXELMDgozVG46u3GIi/+D7/8sdktiS5zs12JpMtnwPnCl11naXlowTQGwzW8Np9f+2uG0ObfFajdR5MHGAIyIyWtOiYQ1kGwLqULNjGGj952q2txXnlRY5hwapF2ykQjauZ2q11++njbjQI/+Z3+eaL+vd/QZ77ElejxPIOxLfSiqWfERMJqAMM//hLXhYqcgxL7E6QB8TAtkmtQt1xrVRpmizUK61zNIlMXuQGuSCLQa0zMEYpyUUDQgTNCG9b5dECVJT61q/FP/2O/sNfMQyQ/FyqpXhztjIGf/ZJefYzSjWeu6l/8auJ5jFyXunhLkaF5rXmleouUL7VT3I8OiQj540MKDOtj6zIZZFFbhHeK1lGRWPnlODBmsS28a5DEZFHxMh+GX78qf7ha4g9uJY9g1fi+PJBdinqnzsb4Qt+/TX/wh3tTDnqYVqhSqEIPqsZAkNAap3Gcc1BrsI07IWmVWGoHZ6w6BCJeaVgHNe6scZFpcwQM9atd87JDAympOQa9m13pjzwGy+j39N4ToYrsUgXMCSebWdd6/0EvMavf8WLHPsTDAt/dBB6Md0Y8rMj9guYo+7QL0NqfJSncRXubGHnyHsFRXQC3fuFNY3nkU1CSmxaPJ0YArxNZqFLXZGHxdxp6Bd0OTp8vIdXb7GIS1jjWtAhxHNUdHHEn+0YI7zDN15XFjTKdVyFj/f00nZatPbxLh7c1e7UTLqzzYOpBjn2J2FrTfsLrveVyNncARy2SIdugZCaDnlGc5mha50W6tbBMKsFEq5Z5UVAllvXaW+KYLaCWXAFxQB2AblWo5AZPOGVu/rCLV8f8MM9AvriHXx8GKatXr2DTw5se6AbIzzaFUUnt4aoOh5MOK746NBbsU7oQAFyiZCx7XBYcVqhlbk7jEYVkYFyF2BtZ7OFuzMndBI0hWuQwdm5ZJdd/8RzKO8wHOg33tCjIz7c0xfvoHP85BFe3NJ6iXce86Vt0fjRDl65w/VSTw5wNMbnh9jqadZAwqLGtEbbCUQrNulkMrojGpTUJXVCCKwadB1itEB3eAgsMx3OMWsuB82LdTi7aRfQYvmBM0T85hv+44/Vy/nSNt59BBCv39WTI+xM7Vdf9feecrzANx/wf7+nnQlmNbNMkwrzWlULgpBoJNl07BwpoUsA0CXAoECXIaFzxEAau85dNEc/w2ZPkxrzGWgQr+YqF2DOrqLzE9T0pfveJrx8m8czf+8JH9xF6vzDPbu55q9ud3/zjv3yy+oX+PZbev0u9scYZP7wwG6PUHXsQJGdg4ARIYBQIAW43Ix0KakoGE1ZQJFrrcCo5K11xIy9XC/f4F//iO5n2IBXcsOzX7w2dQoZHtyBwHcf6+aQdzf1s88xyOz+uk9r+/QQv/NV/5/vsZN+5RW8+wiLFvc2+WSOugWMJeWd3ILcCWbhBAjLSAMlZZFFIOVljyFAUm7KAtf7LDPv5/zP3+fPHpMl3K+EoNWMihc5sc72bo1f/7L3C+1N7bkNHcw0rvjcNvaPMW34wqbKDA/3sD0EgPc+43M3lRvf29XLtzivsWjViygzuiTpBK72ytDUnmUg0nAQmJRFlDmbxhPQL2hCm1S1PFzYu59h95AszrIIXQ9tzoDFH6UlbQBh2NM3HygQefQPd2yjj/W+Hu5zY4Av3OIPHuqNu/j5Uxgwb3B/Ux/v2GgAQU2DLEOWwRPa1jeGBldZoDQByrNQN55FtmJTa9FyXMloxxUWtaqO85rzGkiAwcIZClrOj3kpQxSAlZyYBm9wYx231/XJHh8dhZdv+MEMH+3wpZvKC/sf7+r3vo7/8hZf2fJGTJ3eexrubWjn2IeF9ftyR6DWB+gXZnIXJwu0tP0JjqZYpDCrsOiYEpBWt6SdhcUc0qr0p1bntcnamQudLAehhN/5WjpcIAtY7+HjPeYBd9f90bFFw5fv4/sfYWsNwbBzxM0R9iaIhEuDEiA2+troo231+MA+PcTBnPOG6JZx1amgPEXzEFfS98vVAD4DpJ1qpbiCNx2jNTUd7owwrvBwj1sDufDBfnhw03cnfLSPEHlzqL99H19+Th881r0b2J9y2ENGbAyx0cOPH/JnT8JisSRrtoQmzyH9st+eQf1rMM21tZYLdH2ChXQBmG8OcWcTP3sMEC/e0JNjesIL2/r5U764jeTKDD9+jDfu6OdPcWsDH+7wpW1ViXe2UAR9+we2d0Rkp56A8yz5iqwS4Jf8GTDAYDwBFkvKrNQWuHQSX6oLATfXfHfGrSEgfPDEN4csejieq1/anXX/9o/sH31RnxxyXGkz988O7P6GpjVeuY3M9Gf/16qGVkA4hcEn1RTpNG++qE0EFBGDAqO+jDQDqUWNwwUXNbwCBGSnS+darXOsZrlxpeQTwcCcPu3scOJ3tqxqOZ55B84WerhrX3sJjw7UNkxEjHZ35FUK97f4wqb+0/esamk5XGfbqYP8VNxerlGfa4U2e9gcYK3QRp/9HtpWkm/0kOcGqAiY1Dia49N9/OhTPN6jBJYXmfBVPBfP10iCBazlmtY2mevOJo8WnFW+2efWkHWr+UK7R0rk9sD3ZjR6XdtwoAe38YOHfLLH0EfyC2/cXscXbunuOvoZ+jkkL4tTjDRvANPuWAQDMalkUb0MlOeRm329fo+/+3U+OdR//SF+8CERQTvXQafYmQAQ8Oa/O48JRaYXbkDCqM/Px5a6dHsz1B3aVvszc8f2kBKSmFo1HdfXcGOIO+v68/9nraizmoU6vHLbf/+b/tym+gUCMGsgw7RS64YAM3TJez1TSp2Yl0FJXYIFzFvuT/HZISWMBviXv8Lbm3jrI3YJtNVM5aywdXFEB+Ow8KrDkyMO85SX8fGR56atTYtRTYeq0v6cRYaiZBSr1l+5hc8OOJnQeqfHvoSY49dex97YQwyThQ96AUiBLHvWdsmIhSwaj6YookGqK5+1vLGG93Z4d13TBRnx/h66pzia659+lQ/u+B//ia0UHXVaArXlCJUF1Qm7E45KX6Swc5C2ehiWmFRqE5sOZY/DUhIOppT7IMegtI8P7Lz6ebKSg8KHPbrFaaVeGcbzlBfBiKbzThwv6InjCo/HejKxo8qOFjie4emRZpWqRodzTBYaTzCe63Cuv3wHz2/zX/+2fA6zZVBN8GxVTm51jjJio4edmVG+PcS0xrRm09Iokm3CwdSmNUhFer/QsNDuGCLkFydOkdui8iRUnfYmCbTjaTqs7MkR9ibcnfDxkXZnNACuRYvxgk2raQMC+1PUHdoOg1Igfv6Yx3P/aBe/91UMNpDS0hngJ4GXKx2B1lU32ujBjDsTZhHrPa0V6kVEKkbe3cRzW1gvFWLIjJFq2sul35RUFpzX3im0HUQeL/Dk0Cu3WY0ktJ1S7U1r04Xqlk2HJmFaU5KDmSGJO2NrW3vtjnbH2J0BxJsvCC2MK9PZBUYl5AKY55gtNG+x0YcnHc5tf4KjipNak7lmNeYNCFKegBCZxWty7bYDyK5JAuu6CxZM3iZ1YhJbEUYixczcXZKC5QF1x7pVK3OH4MOe3nuiMvCTPfzsc715T+hO49D1+YDAqgWkEG1YYjJ1xDAsvJfZINc0YyBSJQEMBGjAqORmH/CljJponO6Cw40GdAqp7RhD18mMTUIMSAmgVZUDKAvWXdo55t0N7M+5XnqXdNRYDIrR9mcqGuYZ1/uAXcYWdtEGINoOEt2ChOOp+v0wylLdcjzHzhj7M85q8KyaKbHtULd6+RappRqmYTrHvOa9IUY55YiGmFlKHoxGQVhUilQZ0cvV753sRG6ucdZwkOtgxrpjL/MEFERmWu/5vFYIutyww2pSnxyBKM3d0S8Nwrg2M5SZhn32cmSRswbjOaqWeVTV8dND/NJLOm1HLRnnr95G63z5Bu9uWpnDImNkP2K90P1hemELN4e42U/bQyuZ8sD1kpnJEwiuZZ5H1A1MgpBnfHqEoxmCnWTaSx4j2fmRdnK6TSp0sCJTciw6ZBHuTELdyoBBge01rvdQBExqxgxHczy4jVeehxoYT090BOxN+R+/y//zIaLh3ghrmd/fwKgnGqetfX7Mn3xmn43jeo9ZDBl8ukDToMywqGSRBIqM05rHlR8vsNZDniHYarQgzypzS3B6WnNr4HnGqtEgU+uWkuoWXWKT0CQcz73MuJZrLUfd6Okx9ub849/Sv/0TWn7Rp2FEcnzvp/y7j7G9hjyzquG0QuX07hTxf7gLd+VBVWeeBHLaMkaI7JKKiLKg3NpOiwaTCmagrVa4Vg4yAMCsQRZQBkiqOsoVDKMeRj1sDXR76Pe2OMj9aIpHhxyVWDR4+xGe2+a/+i2kGSSYnSUrhBVoHU+O+MmO7Rxx3tAdMCAAgGWwoEVn80adq00yl4i6TlmGTqyqk5I11koB6GfQeWam8yh0ptDJ/wdTJvJ44W2ytYJt6/MaXTJJRuwqHM51Y2DP3/AkfLTPF7d1MNFPn+A3vsiU9Gd/x3l1CutPm4taQsIJAGLEWqF+prtbyAwLVxbRtIwRcHZ1l5VxXqmMzoyAZjWN6Dopv1qePg+jJz0aw9EMbY21wrpOVQOBDm6teZMsC7i/kerOOtePPrFoenBb48qOZv7+Ex1N7Zdf4s2R3nqI955yvFArQsgM0bRWaNRjL3qv4LCEmWLgvObR1LNo3imaOoWYuo6RnY96J7jEjexl6kU0iXZihuWW60VCw7OaSofPjvnqTc0rdoIL66WOZ2wcW33//NiOxhrPcf+G1gu98zlf3PbOuWiwO/XdmY1K/NLLeHDLO2FWKwmpUx5AYlZ5iFZ3aBLmCwYDqbW+TRZqHcMes5A+H4cbA59WqFrkEXm0jN46j2fKDHVnVwoTSytwHqEeH+LeBtaHyKi9GSYVt9eABhb49if4xkvYGnLnSJ8f2qs3vXNOK+TUpGERvG7ZtsozkysLCB0W4HGN+UIxs+iSs2po0ElEaZoUzEY9dc5pY1+4pbce8Y2bWnQUAUcFy0K6t211o9NO2Wq5xVbjKhiwP+aiZdvqcM61nLdH2p+xyNS0ePN57Ez0w4d4+RY3+3h6iOM51nuaNCaHi8dz1IlVq+nCjytNO1WdPHm/h8zUtUhAUTigsmAe1S+5NUQvxyDXVt8f7uE3X/Of71vnWtRKjjJoWFjVcW+KNvGCQqGL4i5POtLLXet3H2HUt15Gyg8WHPVR1z6uuTP2SW3/5E3/wafITFnOjTUez0Mv9wDNawaDAU3jIjuxE0NAVliIFMmIjCozDocm937JLGfXalBwvcd+wS/f11//xF7aVpssGAe5HLY3Rtvp1kYQLzray/WkFb6ICwzYPebuGObdcR0I9IOGfRsGf/2eFUHf/4g3R+j3eFxxWqFX+MGEk9ZurPm8pUvu1jh7EUUEjQbFyCJDkVHBSBSmtZ6BKDJsDwnDpMW8wuN9vnqT8xqCMsOnB4S8l6PtRPisOmu3LgFSW8bWEHAG699+hKIXIC+C1Z2O58oy/u17Wi91a4N3RnrrI9xYgxHvP+XzN9Q26aePLRq6xEGJXgYENJ3cFSM9KRJl0PoAWSShee3jBY/G+mhXOxNULVqH5Rg3mjXoBcw7vLCt4xmKDEI4nml3IvjVpP5K50wOC5hM+ZPP8OA2nhz7zSGOE/OSX7yLNmH3CE+Nv/01fOcdZAV//YH/t7fxlefDnXXNWxzNQWnaosgZSDNM5yBRCfPmtLLkZBaRm7rITOiE+QIikiOYQmDVYdTHtMX2kPNao57f3bTvfcjLhTpiqbR4xbfkeP2+7ox0MEMZncF6OffGur+Fea23PrPf/wa++z7aBq/dxcEMTa1kHBbqR1cMkihv3eQqIh1sO0loOraAuwdalxRPADFNckGgBVeRY9Zg2CO9KzJbL9Um/vn3wwljSJfDKK9pEThA4qePGAK2+5o1YT3XvNGDu3x/R+78Z1/xP/2u/fNv4ONdPDnEpMWDW5q2rGp0nS1cFIo8pKQukYKZC2ZUkaNtvMysa9yM7gjRPKnq2CuYEjzBGxQRKXkeQzSN+vzvb1tKYLYkvc5X4Frqly5yti/d85trmrbo90JTe1kgQh/v20s3/eE+68Q37+vzY7QNaEzSRolOsmCZqXXWtUcDjHUti3bWsfbMMGsYiGBwp4gsICUvc1LKI0Jg33zU5w8/tbc/MQvyK01Lu54Atsrt+sln9sGODUtr6tS16DocLHhrQxYo4xt3/H99wEi0jrsb6hekgbC60aJF1SrRZNZ1pzg5Uu7eJtYtixx5RCCyoGEpqivyoDaNSqz3uVF6FvG9D+zth+Sy9Ms5JP4gXYGkV3rehBI2+3rlDoqgReObQ+uSL9z6OY8nXvZss4d3H2lzgOTmUGHuZhGS2BFBItm6U8wC88yNaBvAmBwhoIyoGu+XISDlGSLYgbtjvP0J59UZ4tE1fLvLLaZnsbROsoUYsdX3V28hz9B23ji3BjheoJfr8+Pw/LYfz2xrqOOZj/rheJbMLA9oaYZkYuOUe04ksU0qInITQAsyoohwsXHMG/t0D08nrBen/DTpCkHzLIVdUoDXNaRW+zcn5eUYsdnTC1socmVBZaZJa+sDHE6hxHmrGyM+PfL1HhMQIINCDG3neaAB/QJKciHLBLBtNKs5Tzic2eEU05ZtAzhgOGFJSNfJc9EVWN7El1iI13G9TqlrDgC9QlsDbQ3QCdtrjJSdodpO2ixRVa4YIE8JHQ2O1tkmzRvUNRYtpzXmNeqOF6QZntZApcv5+7VsIOKP0jWl96vE2UtEv9VGixliRC9TFkAghpNmv05KjlUHkItaKbFNULrinbZUb9MS6Y+4nkyzktBcpYWuEEi54l28TOs8sZYLTYOm5cprl7D7GbuRYZUSukzTxS9kS17K76AzvpCeQWElL++KK50Sne+qcyueN4t0OWLonPZ2ybq8PoJfw9u79POT8jqv++wqd5HPoL0s0wnPf+kZRGP8oq71NSJeFV3LLG7Fv4ccerXRyb+PUM3r5uMVzjIuM3+eSVa9dtizP+NJwFqR4xKp6NJy+xXQcS69nu0Vv0AxPYOVjeto4pdf4/8HpW/whL3995oAAAAASUVORK5CYII=" data-gp-brand="g-v1"></head>
+<body>
+<header><div class="hbar"><div class="logo">&#127918; GamePulse<em>·雷达</em></div><span class="chip">&#9729; 词云</span><span class="chip fresh">2026-10-26</span><nav><a href="index.html" target="_top">&#8962; 主站</a><a href="history.html">历史回顾</a></nav></div></header>
+<!--mh--><div class="masthead"><img src="https://cdn.mos.cms.futurecdn.net/yahuXPTagjdzTcSmrSZhrc-1920-80.jpg" alt="Hunter&#x27;s Moon：第一人称民俗恐怖游戏发售（17世纪英格兰猎巫背景）" referrerpolicy="no-referrer" onerror="this.closest('.masthead').classList.add('mh-event');this.remove()"><div class="mh-inner"><div class="mh-txt"><span class="mh-kicker">今日头条 · B 级信号</span><h1><a target="_blank" href="https://www.gamesradar.com/upcoming-ps5-games/" rel="noopener noreferrer">Hunter&#x27;s Moon：第一人称民俗恐怖游戏发售（17世纪英格兰猎巫背景）</a></h1><p>Hunter&#x27;s Moon 将于 2026-10-26：第一人称民俗恐怖游戏发售（17世纪英格兰猎巫背景）（GamesRadar） · 事件源</p></div><div class="mh-logo"><svg class="gp-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 110"><text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="Arial Black,PingFang SC,Microsoft YaHei,sans-serif" font-size="76" font-weight="900" letter-spacing="1">GamePulse</text></svg><span class="mh-wm">@DeanOvO</span></div></div></div><!--/mh-->
+<div class="wrap">
+<div class="hero"><h1>讨论热词词云</h1><p>玩家社区真实讨论热词（B站热搜 / 贴吧 / 梗雷达六路）+ 网站已收录参考。已过滤媒体·公众号名、宽泛行业词、非游戏内容；分类仅四色：事件炸点 / 行业议题 / 版本新品 / 梗社区（无舆情风险）。<b>字号=热度 H(0-100)</b>，<b>点击词条</b>可在右侧面板查看该词当日所有原始标题与链接（词条溯源）。</p></div>
+<section id="stat">
+<div class="sec-title"><span class="bar"></span>今日游戏圈讨论热词 <small>2026-10-26 · 32 词 · 热度数 H(0-100) 统一口径 · AI 阅读理解当日标题提炼</small></div>
+<div class="panel">
+<p class="note">热词来源：由 AI 直接阅读当日真实采集的标题（B站热门 / 每周必看 / 梗百科账号 / 行业媒体稿 / 贴吧玩家讨论），理解语义后提炼出游戏行业热词，每条都溯源到它实际出现过的真实来源链接（B站视频 / 媒体文章 / 官方公告 / 社区话题）。<b>绝不生成 search.bilibili.com 搜索链接、绝不跳 Steam 等商店购买页</b>；无真实来源链接的词不会进入词云。<b>热度数 H（0–100 全站统一口径）</b>：每条热词展示 H，原始评分仅作附注，禁止用来源字面热度值充当热度本身（自洽红线①）。</p>
+
+<!-- wordcloud2.js 词云主区域 -->
+<div class="wc-main">
+  <div class="wc-canvas-wrap" id="wc-canvas-wrap">
+    <canvas id="wc-canvas" width="800" height="520"></canvas>
+    <div class="wc-canvas-hint">词云由 wordcloud2.js 实时渲染 · 字号 = H 值 (0-100) 映射 · 颜色 = 分类编码</div>
+  </div>
+  <aside class="wc-trace" id="wc-trace">
+    <div class="wc-trace-header">
+      词条溯源 <span class="wc-trace-word" id="wc-trace-word"></span>
+      <span class="wc-trace-badge" id="wc-trace-badge" style="display:none"></span>
+    </div>
+    <div class="wc-trace-list" id="wc-trace-list">
+      <p class="wc-trace-empty">&#128070; 点击词云中的任意词条<br>查看该词当日所有原始标题与链接<br><small style="color:var(--dim)">约 30/32 词有溯源数据（共 32 条）</small></p>
+    </div>
+    <div class="wc-trace-footer">溯源数据来自当日 meme / hotlist 原始采集标题</div>
+  </aside>
+</div>
+
+<div class="wc-legend"><span><i style="background:#ff5c39"></i>事件/风险</span><span><i style="background:#9b6dff"></i>游戏/新品</span><span><i style="background:#4dabf7"></i>行业/数据</span><span><i style="background:#3fd68f"></i>梗/社区</span><span><i style="background:#a0aec0"></i>厂商/平台</span><span style="opacity:.7">共 32 条 · wordcloud2.js 实时渲染 · 字号=H(0-100) · 下方全量预览</span></div>
+<div class="wc-preview"><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1fjHP6eECY" target="_blank" title="热度数 H=100 ｜ 来源：哔哩哔哩 ｜ 原始：92" style="color:#b388ff"><span class="wc-pv-word">明日方舟感谢庆典</span><span class="wc-pv-h">H100</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1gVHA6mEbS" target="_blank" title="热度数 H=98 ｜ 来源：哔哩哔哩 ｜ 原始：90" style="color:#3fd68f"><span class="wc-pv-word">大肥鱼</span><span class="wc-pv-h">H98</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1AHnB6NEhM" target="_blank" title="热度数 H=96 ｜ 来源：哔哩哔哩 ｜ 原始：88" style="color:#b388ff"><span class="wc-pv-word">影之刃零最终预告</span><span class="wc-pv-h">H96</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1p8nh61Efm" target="_blank" title="热度数 H=89 ｜ 来源：哔哩哔哩 ｜ 原始：82" style="color:#b388ff"><span class="wc-pv-word">鸣潮世界观PV超验</span><span class="wc-pv-h">H89</span></a><a class="wc-preview-item" href="https://news.17173.com/content/10222026/140633753.shtml" target="_blank" title="热度数 H=89 ｜ 来源：17173 ｜ 原始：82" style="color:#ff6b4a"><span class="wc-pv-word">EA关闭BioWare</span><span class="wc-pv-h">H89</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1U3n46GEzY" target="_blank" title="热度数 H=87 ｜ 来源：哔哩哔哩 ｜ 原始：80" style="color:#b388ff"><span class="wc-pv-word">绝区零先导演示挽昼</span><span class="wc-pv-h">H87</span></a><a class="wc-preview-item" href="https://www.videogameschronicle.com/news/half-life-3-speculation-grows-as-valve-developer-mentions-hlx-during-stage-panel/" target="_blank" title="热度数 H=86 ｜ 来源：VGC ｜ 原始：79" style="color:#b388ff"><span class="wc-pv-word">Half-Life3传闻升温</span><span class="wc-pv-h">H86</span></a><a class="wc-preview-item" href="https://www.pushsquare.com/news/2026/10/leaked-mass-effect-5-trailer-is-real-offers-glimpse-of-cancelled-game" target="_blank" title="热度数 H=84 ｜ 来源：Push Square ｜ 原始：77" style="color:#b388ff"><span class="wc-pv-word">质量效应5泄露预告</span><span class="wc-pv-h">H84</span></a><a class="wc-preview-item" href="http://www.gamelook.com.cn/2026/10/604554/" target="_blank" title="热度数 H=83 ｜ 来源：GameLook ｜ 原始：76" style="color:#ff6b4a"><span class="wc-pv-word">WarDogs新赛季停服</span><span class="wc-pv-h">H83</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1j5nj68E48" target="_blank" title="热度数 H=82 ｜ 来源：哔哩哔哩 ｜ 原始：75" style="color:#b388ff"><span class="wc-pv-word">K/DA FIRESTARTER</span><span class="wc-pv-h">H82</span></a><a class="wc-preview-item" href="https://www.ign.com/articles/dragon-ball-xenoverse-3-narrows-release-window-following-player-feedback" target="_blank" title="热度数 H=80 ｜ 来源：IGN ｜ 原始：74" style="color:#b388ff"><span class="wc-pv-word">龙珠超宇宙3发售窗口</span><span class="wc-pv-h">H80</span></a><a class="wc-preview-item" href="https://www.gamespot.com/articles/cyberpunk-2077-edgerunners-2-mission-clampdown-how-to-start/" target="_blank" title="热度数 H=79 ｜ 来源：GameSpot ｜ 原始：73" style="color:#b388ff"><span class="wc-pv-word">赛博朋克2077边缘行者2</span><span class="wc-pv-h">H79</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV126nt6GE4W" target="_blank" title="热度数 H=78 ｜ 来源：哔哩哔哩 ｜ 原始：72" style="color:#3fd68f"><span class="wc-pv-word">鱼灾复盘</span><span class="wc-pv-h">H78</span></a><a class="wc-preview-item" href="https://www.gamersky.com/news/202610/2233846.shtml" target="_blank" title="热度数 H=78 ｜ 来源：游民星空 ｜ 原始：72" style="color:#ff6b4a"><span class="wc-pv-word">影之刃零发售放假</span><span class="wc-pv-h">H78</span></a><a class="wc-preview-item" href="https://www.pushsquare.com/news/2026/10/gears-of-war-e-day-cancelled-last-minute-for-ps5-may-have-cost-half-a-billion-to-make" target="_blank" title="热度数 H=77 ｜ 来源：Push Square ｜ 原始：71" style="color:#ff6b4a"><span class="wc-pv-word">战争机器E-Day取消</span><span class="wc-pv-h">H77</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1R8nF65Eme" target="_blank" title="热度数 H=76 ｜ 来源：哔哩哔哩 ｜ 原始：70" style="color:#b388ff"><span class="wc-pv-word">鸣潮锁暝PV契阔</span><span class="wc-pv-h">H76</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1YcHG62E5j" target="_blank" title="热度数 H=76 ｜ 来源：哔哩哔哩 ｜ 原始：70" style="color:#3fd68f"><span class="wc-pv-word">love me是什么梗</span><span class="wc-pv-h">H76</span></a><a class="wc-preview-item" href="http://www.gamelook.com.cn/2026/10/604620/" target="_blank" title="热度数 H=76 ｜ 来源：GameLook ｜ 原始：70" style="color:#4dabf7"><span class="wc-pv-word">AI投胎人生模拟火了</span><span class="wc-pv-h">H76</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1JPnU64ECB" target="_blank" title="热度数 H=74 ｜ 来源：哔哩哔哩 ｜ 原始：68" style="color:#3fd68f"><span class="wc-pv-word">沙雕图792期</span><span class="wc-pv-h">H74</span></a><a class="wc-preview-item" href="https://www.youxituoluo.com/534990.html" target="_blank" title="热度数 H=74 ｜ 来源：游戏陀螺 ｜ 原始：68" style="color:#4dabf7"><span class="wc-pv-word">杖剑传说流水48亿</span><span class="wc-pv-h">H74</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1UnHN6SECP" target="_blank" title="热度数 H=72 ｜ 来源：哔哩哔哩 ｜ 原始：66" style="color:#3fd68f"><span class="wc-pv-word">MC爆改成别的游戏</span><span class="wc-pv-h">H72</span></a><a class="wc-preview-item" href="https://www.gcores.com/articles/221301" target="_blank" title="热度数 H=71 ｜ 来源：机核 ｜ 原始：65" style="color:#b388ff"><span class="wc-pv-word">上古卷轴OL天际回响</span><span class="wc-pv-h">H71</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1oXnU6XE5i" target="_blank" title="热度数 H=70 ｜ 来源：哔哩哔哩 ｜ 原始：64" style="color:#3fd68f"><span class="wc-pv-word">崩铁素材库</span><span class="wc-pv-h">H70</span></a><a class="wc-preview-item" href="https://www.gamersky.com/news/202610/2232883.shtml" target="_blank" title="热度数 H=68 ｜ 来源：游民星空 ｜ 原始：63" style="color:#4dabf7"><span class="wc-pv-word">海贼王新游IGN6分</span><span class="wc-pv-h">H68</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1m9HG6gE4g" target="_blank" title="热度数 H=67 ｜ 来源：哔哩哔哩 ｜ 原始：62" style="color:#3fd68f"><span class="wc-pv-word">罗德岛学院早八</span><span class="wc-pv-h">H67</span></a><a class="wc-preview-item" href="https://www.gamersky.com/news/202610/2233554.shtml" target="_blank" title="热度数 H=66 ｜ 来源：游民星空 ｜ 原始：61" style="color:#b388ff"><span class="wc-pv-word">命运石之门重制谈新作</span><span class="wc-pv-h">H66</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV18Enc6kE1d" target="_blank" title="热度数 H=65 ｜ 来源：哔哩哔哩 ｜ 原始：60" style="color:#3fd68f"><span class="wc-pv-word">生化危机6里昂</span><span class="wc-pv-h">H65</span></a><a class="wc-preview-item" href="https://www.youxituoluo.com/534976.html" target="_blank" title="热度数 H=65 ｜ 来源：游戏陀螺 ｜ 原始：60" style="color:#4dabf7"><span class="wc-pv-word">Supercell收购Metacore</span><span class="wc-pv-h">H65</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV11kn86mEjg" target="_blank" title="热度数 H=63 ｜ 来源：哔哩哔哩 ｜ 原始：58" style="color:#3fd68f"><span class="wc-pv-word">派大星跳伞</span><span class="wc-pv-h">H63</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1DaHw6yEj4" target="_blank" title="热度数 H=62 ｜ 来源：哔哩哔哩 ｜ 原始：57" style="color:#b388ff"><span class="wc-pv-word">战锤24年</span><span class="wc-pv-h">H62</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1tnHN6SEC1" target="_blank" title="热度数 H=60 ｜ 来源：哔哩哔哩 ｜ 原始：55" style="color:#3fd68f"><span class="wc-pv-word">暗粥野排现状</span><span class="wc-pv-h">H60</span></a><a class="wc-preview-item" href="https://www.bilibili.com/video/BV1i5nz6ZEZv" target="_blank" title="热度数 H=57 ｜ 来源：哔哩哔哩 ｜ 原始：52" style="color:#3fd68f"><span class="wc-pv-word">FPS两大焚诀</span><span class="wc-pv-h">H57</span></a></div>
+<h3 style="margin-top:16px">TOP8 为什么热</h3><div class="wc-list"><div class="row"><span class="w" style="color:#b388ff">鸣潮世界观PV超验</span><span class="why">H=89（全站第 1 位）· 命中来源：哔哩哔哩 · 当日采集信号</span></div><div class="row"><span class="w" style="color:#b388ff">绝区零先导演示挽昼</span><span class="why">H=87（全站第 2 位）· 命中来源：哔哩哔哩 · 当日采集信号</span></div><div class="row"><span class="w" style="color:#b388ff">明日方舟感谢庆典</span><span class="why">H=100（全站第 3 位）· 命中来源：哔哩哔哩 · 当日采集信号</span></div><div class="row"><span class="w" style="color:#b388ff">影之刃零最终预告</span><span class="why">H=96（全站第 4 位）· 命中来源：哔哩哔哩 · 当日采集信号</span></div><div class="row"><span class="w" style="color:#b388ff">鸣潮锁暝PV契阔</span><span class="why">H=76（全站第 5 位）· 命中来源：哔哩哔哩 · 当日采集信号</span></div><div class="row"><span class="w" style="color:#b388ff">K/DA FIRESTARTER</span><span class="why">H=82（全站第 6 位）· 命中来源：哔哩哔哩 · 当日采集信号</span></div><div class="row"><span class="w" style="color:#3fd68f">罗德岛学院早八</span><span class="why">H=67（全站第 7 位）· 命中来源：哔哩哔哩 · 当日采集信号</span></div><div class="row"><span class="w" style="color:#3fd68f">大肥鱼</span><span class="why">H=98（全站第 8 位）· 命中来源：哔哩哔哩 · 当日采集信号</span></div></div>
+</div>
+</section>
+</div>
+<footer>GamePulse · 2026-10-26 · 模块化站点，每个页面可独立迭代</footer>
+
+<script id="wc-data" type="application/json">[["明日方舟感谢庆典", 92, "#b388ff", "游戏/新品", 100], ["大肥鱼", 90, "#3fd68f", "梗/社区", 98], ["影之刃零最终预告", 88, "#b388ff", "游戏/新品", 96], ["鸣潮世界观PV超验", 82, "#b388ff", "游戏/新品", 89], ["EA关闭BioWare", 82, "#ff6b4a", "事件/风险", 89], ["绝区零先导演示挽昼", 80, "#b388ff", "游戏/新品", 87], ["Half-Life3传闻升温", 79, "#b388ff", "游戏/新品", 86], ["质量效应5泄露预告", 77, "#b388ff", "游戏/新品", 84], ["WarDogs新赛季停服", 76, "#ff6b4a", "事件/风险", 83], ["K/DA FIRESTARTER", 75, "#b388ff", "游戏/新品", 82], ["龙珠超宇宙3发售窗口", 74, "#b388ff", "游戏/新品", 80], ["赛博朋克2077边缘行者2", 73, "#b388ff", "游戏/新品", 79], ["鱼灾复盘", 72, "#3fd68f", "梗/社区", 78], ["影之刃零发售放假", 72, "#ff6b4a", "事件/风险", 78], ["战争机器E-Day取消", 71, "#ff6b4a", "事件/风险", 77], ["鸣潮锁暝PV契阔", 70, "#b388ff", "游戏/新品", 76], ["love me是什么梗", 70, "#3fd68f", "梗/社区", 76], ["AI投胎人生模拟火了", 70, "#4dabf7", "行业/数据", 76], ["沙雕图792期", 68, "#3fd68f", "梗/社区", 74], ["杖剑传说流水48亿", 68, "#4dabf7", "行业/数据", 74], ["MC爆改成别的游戏", 66, "#3fd68f", "梗/社区", 72], ["上古卷轴OL天际回响", 65, "#b388ff", "游戏/新品", 71], ["崩铁素材库", 64, "#3fd68f", "梗/社区", 70], ["海贼王新游IGN6分", 63, "#4dabf7", "行业/数据", 68], ["罗德岛学院早八", 62, "#3fd68f", "梗/社区", 67], ["命运石之门重制谈新作", 61, "#b388ff", "游戏/新品", 66], ["生化危机6里昂", 60, "#3fd68f", "梗/社区", 65], ["Supercell收购Metacore", 60, "#4dabf7", "行业/数据", 65], ["派大星跳伞", 58, "#3fd68f", "梗/社区", 63], ["战锤24年", 57, "#b388ff", "游戏/新品", 62], ["暗粥野排现状", 55, "#3fd68f", "梗/社区", 60], ["FPS两大焚诀", 52, "#3fd68f", "梗/社区", 57]]</script>
+<script id="wc-trace-data" type="application/json">{"明日方舟感谢庆典": {"H": 100, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.bilibili.com/video/BV1fjHP6eECY", "sources": [{"title": "《明日方舟》2026「感谢庆典」活动宣传PV", "url": "https://www.bilibili.com/video/BV1fjHP6eECY", "source": "B站·热门"}]}, "大肥鱼": {"H": 98, "color": "#3fd68f", "cat": "梗/社区", "primary_url": "https://www.bilibili.com/video/BV1gVHA6mEbS", "sources": [{"title": "新角色：大肥鱼", "url": "https://www.bilibili.com/video/BV1gVHA6mEbS", "source": "B站·热门"}, {"title": "什么是“鱼灾”？B站大肥鱼一周爆发始末全复盘【附安全养鱼指南】", "url": "https://www.bilibili.com/video/BV126nt6GE4W", "source": "B站·热门"}, {"title": "大肥鱼闹智械危机?吧友打假", "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28368018&amp;topic_name=%E5%A4%A7%E8%82%A5%E9%B1%BC%E9%97%B9%E6%99%BA%E6%A2%B0%E5%8D%B1%E6%9C%BA%3F%E5%90%A7%E5%8F%8B%E6%89%93%E5%81%87", "source": "贴吧热议"}]}, "影之刃零最终预告": {"H": 96, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.bilibili.com/video/BV1AHnB6NEhM", "sources": [{"title": "《影之刃零》最终预告", "url": "https://www.bilibili.com/video/BV1AHnB6NEhM", "source": "B站·每周必看"}]}, "鸣潮世界观PV超验": {"H": 89, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.bilibili.com/video/BV1p8nh61Efm", "sources": [{"title": "《鸣潮》世界观PV | 超验TRANSCENDO", "url": "https://www.bilibili.com/video/BV1p8nh61Efm", "source": "B站·热门"}]}, "EA关闭BioWare": {"H": 89, "color": "#ff6b4a", "cat": "事件/风险", "primary_url": "https://news.17173.com/content/10222026/140633753.shtml", "sources": [{"title": "“我们当时正在开发一款伟大的游戏”——EA 关闭 BioWare 后，前 Mass Effect 5 编剧打破沉默", "url": "https://news.17173.com/content/10222026/140633753.shtml", "source": "17173 网游资讯"}]}, "绝区零先导演示挽昼": {"H": 87, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.bilibili.com/video/BV1U3n46GEzY", "sources": [{"title": "《绝区零》先导演示丨挽昼", "url": "https://www.bilibili.com/video/BV1U3n46GEzY", "source": "B站·热门"}]}, "Half-Life3传闻升温": {"H": 86, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.videogameschronicle.com/news/half-life-3-speculation-grows-as-valve-developer-mentions-hlx-during-stage-panel/", "sources": [{"title": "Half-Life 3 speculation grows as Valve developer mentions ‘HLX’ during stage panel", "url": "https://www.videogameschronicle.com/news/half-life-3-speculation-grows-as-valve-developer-mentions-hlx-during-stage-panel/", "source": "Video Games Chronicle"}]}, "质量效应5泄露预告": {"H": 84, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.pushsquare.com/news/2026/10/leaked-mass-effect-5-trailer-is-real-offers-glimpse-of-cancelled-game", "sources": [{"title": "Leaked Mass Effect 5 Trailer Is Real, Offers Glimpse of Cancelled Game", "url": "https://www.pushsquare.com/news/2026/10/leaked-mass-effect-5-trailer-is-real-offers-glimpse-of-cancelled-game", "source": "Push Square"}]}, "WarDogs新赛季停服": {"H": 83, "color": "#ff6b4a", "cat": "事件/风险", "primary_url": "http://www.gamelook.com.cn/2026/10/604554/", "sources": [{"title": "离大谱！《WarDogs》新赛季上线3天就要停？CEO认错：“我们确实搞砸了”", "url": "http://www.gamelook.com.cn/2026/10/604554/", "source": "GameLook"}]}, "K/DA FIRESTARTER": {"H": 82, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.bilibili.com/video/BV1j5nj68E48", "sources": [{"title": "【英雄联盟】K/DA官方MV - “FIRESTARTER（燃）”正式上线", "url": "https://www.bilibili.com/video/BV1j5nj68E48", "source": "B站·每周必看"}]}, "龙珠超宇宙3发售窗口": {"H": 80, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.ign.com/articles/dragon-ball-xenoverse-3-narrows-release-window-following-player-feedback", "sources": []}, "赛博朋克2077边缘行者2": {"H": 79, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.gamespot.com/articles/cyberpunk-2077-edgerunners-2-mission-clampdown-how-to-start/", "sources": [{"title": "To Start The New Cyberpunk 2077 Edgerunners 2 Quest, Do These Two Things First", "url": "https://www.gamespot.com/articles/cyberpunk-2077-edgerunners-2-mission-clampdown-how-to-start/", "source": "GameSpot"}]}, "鱼灾复盘": {"H": 78, "color": "#3fd68f", "cat": "梗/社区", "primary_url": "https://www.bilibili.com/video/BV126nt6GE4W", "sources": [{"title": "什么是“鱼灾”？B站大肥鱼一周爆发始末全复盘【附安全养鱼指南】", "url": "https://www.bilibili.com/video/BV126nt6GE4W", "source": "B站·热门"}]}, "影之刃零发售放假": {"H": 78, "color": "#ff6b4a", "cat": "事件/风险", "primary_url": "https://www.gamersky.com/news/202610/2233846.shtml", "sources": [{"title": "为《影之刃零》发售放假一天！国产厂商严肃学习", "url": "https://www.gamersky.com/news/202610/2233846.shtml", "source": "游民星空新闻"}]}, "战争机器E-Day取消": {"H": 77, "color": "#ff6b4a", "cat": "事件/风险", "primary_url": "https://www.pushsquare.com/news/2026/10/gears-of-war-e-day-cancelled-last-minute-for-ps5-may-have-cost-half-a-billion-to-make", "sources": [{"title": "Gears of War: E-Day, Cancelled Last-Minute for PS5, May Have Cost Half a Billion to Make", "url": "https://www.pushsquare.com/news/2026/10/gears-of-war-e-day-cancelled-last-minute-for-ps5-may-have-cost-half-a-billion-to-make", "source": "Push Square"}]}, "鸣潮锁暝PV契阔": {"H": 76, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.bilibili.com/video/BV1R8nF65Eme", "sources": [{"title": "《鸣潮》共鸣者「锁暝」PV | 契阔", "url": "https://www.bilibili.com/video/BV1R8nF65Eme", "source": "B站·每周必看"}]}, "love me是什么梗": {"H": 76, "color": "#3fd68f", "cat": "梗/社区", "primary_url": "https://www.bilibili.com/video/BV1YcHG62E5j", "sources": []}, "AI投胎人生模拟火了": {"H": 76, "color": "#4dabf7", "cat": "行业/数据", "primary_url": "http://www.gamelook.com.cn/2026/10/604620/", "sources": [{"title": "1人4小时开发，“AI投胎人生模拟游戏”火了！", "url": "http://www.gamelook.com.cn/2026/10/604620/", "source": "GameLook"}]}, "沙雕图792期": {"H": 74, "color": "#3fd68f", "cat": "梗/社区", "primary_url": "https://www.bilibili.com/video/BV1JPnU64ECB", "sources": [{"title": "网上各种爆笑的沙雕图和有趣梗~(∠・ω&lt; )⌒☆第792期", "url": "https://www.bilibili.com/video/BV1JPnU64ECB", "source": "B站·梗指南"}]}, "杖剑传说流水48亿": {"H": 74, "color": "#4dabf7", "cat": "行业/数据", "primary_url": "https://www.youxituoluo.com/534990.html", "sources": [{"title": "《杖剑传说》16个月流水破48亿元，卢竑岩：我们不赛马，只养马群​", "url": "https://www.youxituoluo.com/534990.html", "source": "游戏陀螺"}]}, "MC爆改成别的游戏": {"H": 72, "color": "#3fd68f", "cat": "梗/社区", "primary_url": "https://www.bilibili.com/video/BV1UnHN6SECP", "sources": [{"title": "我花了3个月！把MC爆改成别的游戏！！", "url": "https://www.bilibili.com/video/BV1UnHN6SECP", "source": "B站·热门"}]}, "上古卷轴OL天际回响": {"H": 71, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.gcores.com/articles/221301", "sources": [{"title": "《上古卷轴OL》第二季“天际回响”现已上线", "url": "https://www.gcores.com/articles/221301", "source": "机核 GCORES"}]}, "崩铁素材库": {"H": 70, "color": "#3fd68f", "cat": "梗/社区", "primary_url": "https://www.bilibili.com/video/BV1oXnU6XE5i", "sources": [{"title": "崩铁日常被当素材库！想复刻破圈梗爻一爻！效仿联动茶百道结果数据不堪入目！树海：崩铁自己都复刻不了的成功！可遇而不可求！", "url": "https://www.bilibili.com/video/BV1oXnU6XE5i", "source": "B站·梗指南"}]}, "海贼王新游IGN6分": {"H": 68, "color": "#4dabf7", "cat": "行业/数据", "primary_url": "https://www.gamersky.com/news/202610/2232883.shtml", "sources": [{"title": "《海贼王》新游IGN 6分！不是粉丝没必要急着玩", "url": "https://www.gamersky.com/news/202610/2232883.shtml", "source": "游民星空 PC 资讯"}]}, "罗德岛学院早八": {"H": 67, "color": "#3fd68f", "cat": "梗/社区", "primary_url": "https://www.bilibili.com/video/BV1m9HG6gE4g", "sources": [{"title": "《罗德岛学院》——早八！", "url": "https://www.bilibili.com/video/BV1m9HG6gE4g", "source": "B站·热门"}]}, "命运石之门重制谈新作": {"H": 66, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.gamersky.com/news/202610/2233554.shtml", "sources": [{"title": "《命运石之门重制》团队谈新作：想重制《混沌之脑》", "url": "https://www.gamersky.com/news/202610/2233554.shtml", "source": "游民星空 PC 资讯"}]}, "生化危机6里昂": {"H": 65, "color": "#3fd68f", "cat": "梗/社区", "primary_url": "https://www.bilibili.com/video/BV18Enc6kE1d", "sources": [{"title": "主角比反派还抽象逆天？他到底有多离谱？生化危机6里昂【游戏放大镜05】", "url": "https://www.bilibili.com/video/BV18Enc6kE1d", "source": "B站·热门"}]}, "Supercell收购Metacore": {"H": 65, "color": "#4dabf7", "cat": "行业/数据", "primary_url": "https://www.youxituoluo.com/534976.html", "sources": [{"title": "Supercell正式全资收购Metacore，《庄园合合》累计流水近50亿元", "url": "https://www.youxituoluo.com/534976.html", "source": "游戏陀螺"}]}, "派大星跳伞": {"H": 63, "color": "#3fd68f", "cat": "梗/社区", "primary_url": "https://www.bilibili.com/video/BV11kn86mEjg", "sources": [{"title": "派大星跳伞是什么梗【梗指南】", "url": "https://www.bilibili.com/video/BV11kn86mEjg", "source": "B站·热门"}]}, "战锤24年": {"H": 62, "color": "#b388ff", "cat": "游戏/新品", "primary_url": "https://www.bilibili.com/video/BV1DaHw6yEj4", "sources": [{"title": "穿越战锤24年，你终靠实力拿下星球总督王座，你的余生会如何度过？", "url": "https://www.bilibili.com/video/BV1DaHw6yEj4", "source": "B站·热门"}]}, "暗粥野排现状": {"H": 60, "color": "#3fd68f", "cat": "梗/社区", "primary_url": "https://www.bilibili.com/video/BV1tnHN6SEC1", "sources": [{"title": "暗粥野排现状", "url": "https://www.bilibili.com/video/BV1tnHN6SEC1", "source": "B站·热门"}]}, "FPS两大焚诀": {"H": 57, "color": "#3fd68f", "cat": "梗/社区", "primary_url": "https://www.bilibili.com/video/BV1i5nz6ZEZv", "sources": [{"title": "FPS游戏必学两大焚诀，学会胜率直接飙升！", "url": "https://www.bilibili.com/video/BV1i5nz6ZEZv", "source": "B站·每周必看"}]}}</script>
+<script>
+(function() {
+  var canvas = document.getElementById('wc-canvas');
+  if (!canvas || typeof WordCloud === 'undefined') {
+    console.error('wordcloud2.js 未加载或 canvas 不存在');
+    return;
+  }
+
+  // ---- 读取内联数据 ----
+  var wcList = JSON.parse(document.getElementById('wc-data').textContent);
+  var traceMap = JSON.parse(document.getElementById('wc-trace-data').textContent);
+
+  // 构建 color lookup
+  var colorMap = {};
+  wcList.forEach(function(item) { colorMap[item[0]] = item[2]; });
+
+  // 构建 category lookup
+  var catMap = {};
+  wcList.forEach(function(item) { catMap[item[0]] = item[3]; });
+
+  // 构建 H lookup
+  var hMap = {};
+  wcList.forEach(function(item) { hMap[item[0]] = item[4]; });
+
+  // 构建 wordcloud2.js 兼容的列表：[word, weight]
+  var wordList = wcList.map(function(item) {
+    return [item[0], item[1]];
+  });
+
+  // ---- wordcloud2.js 配置 ----
+  var options = {
+    list: wordList,
+    gridSize: 9,
+    weightFactor: function(w) {
+      // 映射 H=100 → ~52px, H=30 → ~16px, 产生明显字号落差
+      return Math.pow(w, 0.65) * 3.2;
+    },
+    fontFamily: '"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif',
+    color: function(word, weight, fontSize, distance, theta) {
+      return colorMap[word] || '#3fd68f';
+    },
+    backgroundColor: '#161b22',
+    rotateRatio: 0,            /* 2026-08-13 与主站统一：全员水平排版，不再随机竖排 */
+    shape: 'square',
+    ellipticity: 0.72,
+    minSize: 11,
+    weightMode: 'size',
+    clearCanvas: true,
+    shrinkToFit: true,
+    drawOutOfBound: false,
+    hover: function(item, dimension, event) {
+      if (!item) return;
+      var word = item[0];
+      canvas.style.cursor = 'pointer';
+      // 移除非当前 tooltip
+      var old = document.querySelector('.wc-tooltip');
+      if (old) old.remove();
+      var tip = document.createElement('div');
+      tip.className = 'wc-tooltip';
+      var h = hMap[word] || '--';
+      var cat = catMap[word] || '梗/社区';
+      tip.innerHTML = '<b>' + word + '</b><span>H=' + h + ' · ' + cat + '</span>';
+      document.getElementById('wc-canvas-wrap').appendChild(tip);
+      var rect = canvas.getBoundingClientRect();
+      var wrapRect = document.getElementById('wc-canvas-wrap').getBoundingClientRect();
+      tip.style.left = (event.clientX - wrapRect.left + 14) + 'px';
+      tip.style.top = (event.clientY - wrapRect.top - 48) + 'px';
+    },
+    click: function(item, dimension, event) {
+      if (!item) return;
+      var word = item[0];
+      showTrace(word);
+    },
+    abortThreshold: 0,
+    wait: 8
+  };
+
+  WordCloud(canvas, options);
+
+  // 移除 hover 时 tooltip
+  canvas.addEventListener('mouseleave', function() {
+    canvas.style.cursor = 'default';
+    var tip = document.querySelector('.wc-tooltip');
+    if (tip) tip.remove();
+  });
+
+  // ---- 溯源侧边栏交互 ----
+  function showTrace(word) {
+    var traceEl = document.getElementById('wc-trace');
+    var wordEl = document.getElementById('wc-trace-word');
+    var badgeEl = document.getElementById('wc-trace-badge');
+    var listEl = document.getElementById('wc-trace-list');
+
+    wordEl.textContent = word;
+    traceEl.classList.add('active');
+
+    var info = traceMap[word];
+    if (!info || !info.sources || info.sources.length === 0) {
+      // 显示主链接作为回退
+      badgeEl.style.display = 'inline-block';
+      badgeEl.textContent = 'H=' + (info ? info.H : '--');
+      badgeEl.style.color = info ? info.color : 'var(--sub)';
+      badgeEl.style.borderColor = info ? info.color : 'var(--border)';
+      badgeEl.style.background = info ? info.color + '18' : 'var(--panel2)';
+
+      var html = '';
+      if (info && info.primary_url) {
+        html += '<a class="wc-trace-item" href="' + info.primary_url + '" target="_blank">'
+             + '<span class="ts-title">' + word + '</span>'
+             + '<span class="ts-meta"><span class="ts-primary">主源</span>'
+             + '<span class="ts-source">策展输入</span></span></a>';
+      }
+      html += '<p class="wc-trace-empty" style="padding-top:var(--space-md)">该词当日未匹配到额外溯源标题<br><small>溯源基于 meme / hotlist 原始采集交叉比对</small></p>';
+      listEl.innerHTML = html;
+      return;
+    }
+
+    badgeEl.style.display = 'inline-block';
+    badgeEl.textContent = 'H=' + info.H + ' · ' + info.sources.length + '条溯源';
+    badgeEl.style.color = info.color;
+    badgeEl.style.borderColor = info.color;
+    badgeEl.style.background = info.color + '18';
+
+    var items = info.sources.map(function(src, idx) {
+      var isPrimary = info.primary_url && src.url === info.primary_url;
+      return '<a class="wc-trace-item" href="' + src.url + '" target="_blank">'
+           + '<span class="ts-title">' + src.title + '</span>'
+           + '<span class="ts-meta">'
+           + (isPrimary ? '<span class="ts-primary">主源</span>' : '')
+           + '<span class="ts-source">' + src.source + '</span></span></a>';
+    });
+    listEl.innerHTML = items.join('');
+
+    // 平滑滚动到顶部
+    listEl.scrollTop = 0;
+  }
+
+  // 页面加载后预选第一个高热词显示溯源
+  setTimeout(function() {
+    if (wcList.length > 0) {
+      showTrace(wcList[0][0]);
+    }
+  }, 600);
+})();
+</script>
+
+</body></html>

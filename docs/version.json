@@ -1,0 +1,15 @@
+{
+  "source_revision": "2026-10-26T142315_0800-753d3dba",
+  "prepared_at": "2026-10-27T14:17:11+08:00",
+  "files": {
+    "index.html": "4e41cd744e6e53172438a4ec15e3ba127dae150f5f6ee86dcd093100bd09502e",
+    "campaigns.html": "05f9e1400c87be3812b52c0cc4136d533ff71d18ee0f4c471d77100bd18592a8",
+    "history.html": "e063d8aea325a8d487aeea1a2337dde4356265c1bebc373543d6ad2a790f696c",
+    "wordcloud.html": "04bd02c0e877310cd7d91ee3f71e3cd34475786c630d0d934a5d4c5b32775724",
+    "weekly.html": "5f519a2c3b3ffc8188e858b58d7a27ff0425ce3711b50c86c33d3c911de28f28",
+    "style.css": "92ba3c291d35d90ea7de96a91bb7cf189cc3c1682389b76288950f80a5d8a403",
+    "wordcloud2.js": "5e73f5e253023a8de48e3633ffbdabb28b89de7805a31f687af5c137b018eaf6",
+    "favicon.png": "a876aef95229593346ee4c432c2a4627ca7d6dcde482024e558a4c054be8b8ae",
+    "favicon.ico": "65430ec5360f44b44fc2c1fedd7d66d9c48480865ce800e3cc119eb289c4884d"
+  }
+}

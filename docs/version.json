@@ -1,12 +1,12 @@
 {
-  "source_revision": "2026-10-27T215317_0800-e02d152f",
-  "prepared_at": "2026-10-27T22:00:38+08:00",
+  "source_revision": "2026-10-28T112213_0800-ec35c239",
+  "prepared_at": "2026-10-28T11:22:21+08:00",
   "files": {
-    "index.html": "f31ed20a647a9ea827fdfa670b89fadbdb8d255285b5481473747d73503a6aea",
-    "campaigns.html": "5b0db3177dcd0677831a9007db3fad2c08ff31be32d0bb4f3e02deb015fe908f",
+    "index.html": "437d96e301361feb8a6f671a6da17f024d9940d7e4cca021254c4e79b3adce8c",
+    "campaigns.html": "2f4ddb29cc7b21eb026e6b6ed84b90cef7131d7c1c23598cb3ce55663828f2ab",
     "history.html": "e063d8aea325a8d487aeea1a2337dde4356265c1bebc373543d6ad2a790f696c",
-    "wordcloud.html": "60ca611410ff4ff9552fc7546bf989fc8ea09287e112594ba3030fc19bdd210f",
-    "weekly.html": "031ad8c599284b36e3fc566dc660cc5531e43b880bf674a0dfc73bb50864ae79",
+    "wordcloud.html": "100abbd521fe9eab285e385954da806bf670bfbea73f52a63978a5ea3c0f0411",
+    "weekly.html": "c0a9f30520148276605d0c66c7171d309ebacbfb03a30f990d1c325e69616385",
     "style.css": "e56cf3037b52479565dcddae11b61cab7c6a4a68255c889760bf8d5391482681",
     "wordcloud2.js": "5f0b247c4ffd149fc0a9fdd3b6586f26383f795c8825e2195a9f43effc855a51",
     "favicon.png": "a876aef95229593346ee4c432c2a4627ca7d6dcde482024e558a4c054be8b8ae",

@@ -1,39 +1,9 @@
 {
- "generated_at": "2026-10-27T11:30:20",
- "adopt_total": 68,
+ "generated_at": "2026-10-28T10:43:08",
+ "adopt_total": 63,
  "review_total": 58,
- "leak_total": 3,
+ "leak_total": 1,
  "leaks": [
-  {
-   "title": "日活破11年纪录、畅销榜第2，《率土之滨》新十年开门红是怎么打出来的 10.23",
-   "url": "https://www.chuapp.com/article/291708.html",
-   "game": "全行业",
-   "src_name": "触乐网",
-   "verdict": "review",
-   "pubdate": "2025-11-10",
-   "date_unverified": false,
-   "n_src_cluster": 27,
-   "signal": 3,
-   "reasons": [
-    "多源印证(27家)",
-    "准入待复核被卡"
-   ]
-  },
-  {
-   "title": "许艺丹10月23日0条评论 触乐怪话：玩恋爱本，天降一爹 有点意思！",
-   "url": "http://www.chuapp.com/article/291711.html",
-   "game": "全行业",
-   "src_name": "触乐网·分类新闻",
-   "verdict": "review",
-   "pubdate": null,
-   "date_unverified": false,
-   "n_src_cluster": 27,
-   "signal": 3,
-   "reasons": [
-    "多源印证(27家)",
-    "准入待复核被卡"
-   ]
-  },
   {
    "title": "活动 | 三国杀王者之战神王战广州收官 《三国杀：承天之弈》重磅首发",
    "url": "http://www.nadianshi.com/2026/06/413745",

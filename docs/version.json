@@ -1,8 +1,8 @@
 {
-  "source_revision": "2026-11-02T164529_0800-4638659f",
-  "prepared_at": "2026-11-02T16:47:03+08:00",
+  "source_revision": "2026-11-02T165057_0800-cc16fa26",
+  "prepared_at": "2026-11-02T16:52:31+08:00",
   "files": {
-    "index.html": "30882d890ab2743e077508ec466ecb80e2bb2ab680cbdae5a3371a897bb72e06",
+    "index.html": "0ff390057e8bc842a9edced80472aa46cf5030d2d708dac47cb36486f02d0795",
     "campaigns.html": "647976f25e104bb1e85566cd56623d9feba95bef18cf28399a0a16c96d565475",
     "history.html": "15e194960afcba023c49ce58b5baf42b8b22b174f4d0d8b2a63b690ef5309a17",
     "wordcloud.html": "b81cac8233ec3e4f91f2b0c23300d85c927862de8a746400b94ef75cf17dca28",

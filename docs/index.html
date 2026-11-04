@@ -148,15 +148,15 @@ document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('[da
  }if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init()})();
 </script><!-- GP-NEWS:END --><!-- GP-HOME-WORDS:START -->
 <style>
-#wc-cloud{min-height:0;overflow:visible;padding:18px 0 24px}
+#wc-cloud{min-height:0;overflow:visible;padding:10px 0 16px}
 #wc-canvas{display:none!important}
 /* The cloud already provides the terms and detail interaction. */
 .wc-preview,.wc-legend{display:none!important}
-.gp-word-field{position:relative;width:100%;max-width:1160px;margin:0 auto;padding:0}
-.gp-word-field button{position:absolute;display:block;border:0;background:transparent;padding:0;white-space:normal;max-width:100%;font:600 20px/1.25 "PingFang SC","Microsoft YaHei",sans-serif;cursor:pointer;text-align:center;overflow-wrap:anywhere;transition:opacity .15s}
+.gp-word-field{position:relative;width:100%;max-width:1040px;margin:0 auto;padding:0}
+.gp-word-field button{position:absolute;display:block;border:0;background:transparent;padding:0;white-space:normal;max-width:100%;font:600 16px/1.2 "PingFang SC","Microsoft YaHei",sans-serif;cursor:pointer;text-align:center;overflow-wrap:anywhere;transition:opacity .15s}
 .gp-word-field button:hover{text-decoration:underline;text-underline-offset:6px}
 .gp-word-field button:focus-visible{outline:2px solid currentColor;outline-offset:5px;border-radius:3px}
-@media(max-width:760px){.gp-word-field button{line-height:1.3}#wc-cloud{padding:12px 0 18px}}
+@media(max-width:760px){.gp-word-field button{line-height:1.24}#wc-cloud{padding:8px 0 12px}}
 </style>
 <script>function renderFullHomeCloud(canvas,options){
  let field=document.getElementById('gp-word-field');
@@ -171,14 +171,18 @@ document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('[da
   for(const [rank,item] of list.entries()){
    const b=document.createElement('button'),ratio=hi===lo?0.5:((Number(item[1])||0)-lo)/(hi-lo);
    b.type='button';b.textContent=item[0];b.dataset.word=item[0];b.dataset.heat=item[1];b.dataset.rank=rank;
-   b.style.fontSize=((mobile?15:17)+Math.pow(ratio,1.4)*(mobile?17:31)).toFixed(1)+'px';
+   const length=[...item[0]].reduce((n,c)=>n+(/[\x00-\x7F]/.test(c)?0.55:1),0);
+   const lengthScale=Math.min(1,Math.max(.62,Math.sqrt((mobile?11:16)/Math.max(1,length))));
+   b.style.fontSize=Math.max(mobile?11.5:13.5,((mobile?12:14)+Math.pow(ratio,1.35)*(mobile?11:18))*lengthScale).toFixed(1)+'px';
    const source=JSON.parse(document.getElementById('wc-cloud-data').textContent),entry=source.list.find(x=>x[0]===item[0]),cat=entry?.[3]||source.trace?.[item[0]]?.cat||'';
-   const tones={'事件/风险':'#F7D447','游戏/新品':'#F3F0E7','行业/数据':'#E7C787','梗/社区':'#FFF0B5','厂商/平台':'#B8C2D1'};
-   b.dataset.category=cat;b.style.color=tones[cat]||'#F3F0E7';b.style.maxWidth=(W-12)+'px';
+   const heatBand=ratio>=.75?'hot':ratio>=.45?'warm':ratio>=.2?'mid':'quiet';
+   const tones={hot:'#F7D447',warm:'#E7C787',mid:'#F3E8C8',quiet:'#B8C2D1'};
+   b.dataset.category=cat;b.dataset.heatBand=heatBand;b.style.color=tones[heatBand];b.style.fontWeight=heatBand==='hot'?'700':'600';
+   b.style.maxWidth=Math.min(W-12,mobile?250:480)+'px';
    b.addEventListener('click',e=>{e.stopPropagation();opts.click?.(item)});field.append(b);
    const box=b.getBoundingClientRect();nodes.push({b,w:Math.ceil(box.width)+4,h:Math.ceil(box.height)+3});
   }
-  let H=mobile?Math.max(520,list.length*19):Math.max(340,Math.ceil(list.length/6)*57),placed=[];
+  let H=mobile?Math.max(320,list.length*11):Math.max(240,Math.ceil(list.length/7)*42),placed=[];
   for(let attempt=0;attempt<7;attempt++){
    placed=[];
    for(const n of nodes){
@@ -193,10 +197,13 @@ document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('[da
    }
    if(placed.length===nodes.length)break;H=Math.ceil(H*1.22);
   }
-  // Any very long tail remains visible in a separate continuation, never shrunk away.
-  let tailY=H;
-  for(const n of nodes){const p=placed.find(p=>p.b===n.b);if(p){n.b.style.left=(p.x+2)+'px';n.b.style.top=(p.y+1.5)+'px'}else{n.b.style.left='6px';n.b.style.top=tailY+'px';tailY+=n.h}}
-  field.style.height=Math.max(H,tailY)+'px';
+  // Preserve every term; trim empty space around the packed shape.
+  let tailY=Math.max(0,...placed.map(p=>p.y+p.h))+5;
+  for(const n of nodes){if(!placed.some(p=>p.b===n.b)){placed.push({...n,x:Math.max(0,(W-n.w)/2),y:tailY});tailY+=n.h+4}}
+  const top=Math.min(...placed.map(p=>p.y)),bottom=Math.max(...placed.map(p=>p.y+p.h));
+  const height=Math.max(mobile?280:220,bottom-top+20),offset=(height-(bottom-top))/2;
+  for(const p of placed){p.b.style.left=(p.x+2)+'px';p.b.style.top=(p.y-top+offset)+'px'}
+  field.style.height=Math.ceil(height)+'px';
   canvas.dataset.visibleWords=String(list.length);canvas.dataset.renderedWords=String(list.length);canvas.setAttribute('aria-hidden','true');
  }
  field._cloudLayout=layout;layout();

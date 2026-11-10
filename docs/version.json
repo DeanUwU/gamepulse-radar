@@ -1,11 +1,11 @@
 {
-  "source_revision": "2026-11-10T143512_0800-65d89ad2",
-  "prepared_at": "2026-11-10T14:35:49+08:00",
+  "source_revision": "2026-11-10T151934_0800-d5bde25c",
+  "prepared_at": "2026-11-10T15:20:58+08:00",
   "files": {
-    "index.html": "38e1b0b010525b86cb14284019497bd344463fa3f0ec2ab3b1f8720572f5aa94",
+    "index.html": "9cfe256078a47064a3135771a411b9b1311a7906732e474b6c0437212714ed60",
     "campaigns.html": "10d0c764451b40239b5a28745518f7cffa7be6e085cbc0e54806690e3b10a922",
     "history.html": "15e194960afcba023c49ce58b5baf42b8b22b174f4d0d8b2a63b690ef5309a17",
-    "wordcloud.html": "2f4a46d067649cbdedcb79470d4deab44eb417986f210e84b926ffcdc63c28a5",
+    "wordcloud.html": "bcc371e1e8dba0743bcc39b385c4d7bb52622cae8962980b0bf22ec40be83c65",
     "weekly.html": "d4e8ce4b910d7881072dc5ce687bd7c94a9687d431dd8010c781693065ae2744",
     "style.css": "e56cf3037b52479565dcddae11b61cab7c6a4a68255c889760bf8d5391482681",
     "wordcloud2.js": "5f0b247c4ffd149fc0a9fdd3b6586f26383f795c8825e2195a9f43effc855a51",

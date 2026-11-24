@@ -1,9 +1,9 @@
 {
-  "source_revision": "2026-11-24T152129_0800-f7c5b7ca",
-  "prepared_at": "2026-11-24T15:23:55+08:00",
+  "source_revision": "2026-11-24T161522_0800-d9151af7",
+  "prepared_at": "2026-11-24T16:16:32+08:00",
   "files": {
     "index.html": "9d6c844f86ec36145d614725175b6b64294a53ea5c3630894fd9b4608548d076",
-    "campaigns.html": "8febf609e66237eb50d543982e51d2b8ab27dee18c95b22a408f0456ca7b93b0",
+    "campaigns.html": "9cb43e78532c452433cc06b2fb106e4b5a8dadfa2eb80fd0057923bacc54d9a7",
     "history.html": "15e194960afcba023c49ce58b5baf42b8b22b174f4d0d8b2a63b690ef5309a17",
     "wordcloud.html": "b3728834f27729dff5748281d355d9dbf25f9faeb3d70d11fd70f6936ce8f715",
     "weekly.html": "0756235cae18531d4e5c713a37165c1256d8f2d30b324955c1d80e6c161176d2",
@@ -25,7 +25,7 @@
     "reports/GamePulse-genshin-72-202610.html": "f3a5d88fa5905f578aebf49ba6094dbaa8269ebdf5044f55b5807674ef19f707",
     "reports/GamePulse-heartopia-mlp2-202611.html": "cadeac45dd2df01d7cbeb89de22dcc2373e0694d51391d06d91d8a476bc73afe",
     "reports/GamePulse-hok-anniversary-202610.html": "0eb7697f0c4bbb23addd3284828fd4a01f373b45111879af7cb59f08f448193a",
-    "reports/GamePulse-intake-discovered-5a04b291f080-e568f7fb1b16.html": "1c68d6ad429432c6124944944369507c4d73bb69517db7019a85f9da30bb8c3d",
+    "reports/GamePulse-intake-discovered-5a04b291f080-e568f7fb1b16.html": "b36120e603004c93df35b595a1bac028a4c3e49095bc26d7fc3327f87f5aa844",
     "reports/GamePulse-intake-endfield-cn-538d65ee419f.html": "fe15aa2b3243446d3b09eca0e33d7db3f8f550b7d3da111efe729cbd12e91646",
     "reports/GamePulse-intake-endfield-cn-e8f18711ced0.html": "58f9781c14b5461c794046b5e722f748d4096be536f11088efdd01291d63cdcd",
     "reports/GamePulse-intake-genshin-8dd2a01a869e.html": "d7e9b5b1f6fc90b37b47e5dcaba4a73600d1913a67041c79f712beda36bd4e25",
